@@ -2,8 +2,8 @@
 
 - Scenario count: `2`
 
-- `FAIL_EXPLAINABILITY`: `1`
-- `FAIL_FN`: `1`
+- `FAIL_EXPLAINABILITY`: `2`
+- `FAIL_FN`: `0`
 - `FAIL_FP`: `0`
 - `FAIL_REF_STATE`: `0`
 - `INVALID_SCENARIO`: `0`

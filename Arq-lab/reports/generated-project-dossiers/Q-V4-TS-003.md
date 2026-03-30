@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Node`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node`
-- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-20260330t134454z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-20260330t173131z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -449,7 +449,7 @@ customer-portal-node
 | src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
 | src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | yes | no | yes | yes | no |
-| src/modules/security/legacySha1Digest.ts | live-code | 2 | Runtime business module contributing to Legacy Sha1Digest. | no | no | no | yes | yes | no |
+| src/modules/security/legacySha1Digest.ts | live-code | 2 | Runtime business module contributing to Legacy Sha1Digest. | no | yes | no | yes | yes | no |
 | src/modules/security/secureDigest.ts | live-code | 2 | Runtime business module contributing to Secure Digest. | no | yes | no | yes | yes | no |
 | src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
 | src/modules/tokens/tokens.service.ts | live-code | 2 | Runtime business service implementing Tokens.Service logic. | no | no | no | yes | yes | no |
@@ -461,7 +461,7 @@ customer-portal-node
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2732 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1024 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1037 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 231 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -484,6 +484,7 @@ customer-portal-node
 
 - `README.md`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/modules/security/legacySha1Digest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/security/secureDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -924,6 +925,18 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 ```text
 0001: import { createHash } from 'crypto';
 0002: export function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }
+```
+
+### `src/modules/security/legacySha1Digest.ts`
+
+- Why this file matters: `live-code` file with expectation `may_find_review`.
+- Detailed summary: Runtime business module contributing to Legacy Sha1Digest. It is executable/live in the assembled repository.
+- Key constructs: negative or realism-supporting surface; near-real=`True`; protected=`False`.
+- Representative excerpt:
+
+```text
+0001: import { createHash } from 'crypto';
+0002: export function digestSha1(value: string): string { return createHash('sha1').update(value).digest('hex'); }
 ```
 
 ### `src/modules/security/secureDigest.ts`

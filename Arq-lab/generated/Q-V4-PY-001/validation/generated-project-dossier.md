@@ -9,7 +9,7 @@
 - language / stack: `Python / FastAPI`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\notification-signer-python`
-- repo remote URL in Gitea: `http://localhost:3001/arq/notification-signer-python-20260330t134454z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/notification-signer-python-20260330t173131z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -756,7 +756,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
+- Current run already demonstrated this risk: verdict=`FAIL_FP`.
 
 ## 16. Realism Justification
 

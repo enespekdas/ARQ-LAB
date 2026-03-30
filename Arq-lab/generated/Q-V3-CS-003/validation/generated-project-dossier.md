@@ -9,7 +9,7 @@
 - language / stack: `C# / .NET 8`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\billing-sdk-csharp`
-- repo remote URL in Gitea: `http://localhost:3001/arq/billing-sdk-csharp-20260330t134315z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/billing-sdk-csharp-20260330t172941z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -373,7 +373,7 @@ billing-sdk-csharp
 | src/Library/Partners/PartnersRegistry.cs | live-code | 1 | Runtime business module contributing to Partners Registry. | no | no | no | yes | no | no |
 | src/Library/Security/LegacyCipherService.cs | live-code | 1 | Runtime business service implementing Legacy Cipher Service logic. | yes | yes | no | yes | no | no |
 | src/Library/Security/LegacyHashService.cs | live-code | 1 | Runtime business service implementing Legacy Hash Service logic. | yes | yes | no | yes | no | no |
-| src/Library/Security/OtpTokenService.cs | live-code | 1 | Runtime business service implementing Otp Token Service logic. | no | no | no | yes | no | no |
+| src/Library/Security/OtpTokenService.cs | live-code | 1 | Runtime business service implementing Otp Token Service logic. | no | yes | no | yes | no | no |
 | src/Library/Security/SecureOtpTokenService.cs | live-code | 1 | Runtime business service implementing Secure Otp Token Service logic. | no | yes | no | yes | no | no |
 | src/Library/Tokens/TokensRegistry.cs | live-code | 1 | Runtime business module contributing to Tokens Registry. | no | no | no | yes | no | no |
 | tests/AppHost.Tests/AppHost.Tests.csproj | test | 1 | Automated test surface covering App Host.Tests behavior. | no | no | yes | no | yes | no |
@@ -384,7 +384,7 @@ billing-sdk-csharp
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2298 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 705 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 717 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 185 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 11 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -419,6 +419,7 @@ billing-sdk-csharp
 
 - `src/Library/Security/LegacyCipherService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/Library/Security/LegacyHashService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/Library/Security/OtpTokenService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/Library/Security/SecureOtpTokenService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -599,6 +600,17 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyHashService { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); public static byte[] Sha1(byte[] value) => SHA1.Create().ComputeHash(value); }
 ```
 
+### `src/Library/Security/OtpTokenService.cs`
+
+- Why this file matters: `live-code` file with expectation `may_find_review`.
+- Detailed summary: Runtime business service implementing Otp Token Service logic. It is executable/live in the assembled repository.
+- Key constructs: negative or realism-supporting surface; near-real=`True`; protected=`False`.
+- Representative excerpt:
+
+```text
+0001: using System; namespace Arq.Lab.Library.Security; public static class OtpTokenService { public static int IssueCode() => new Random().Next(100000, 999999); }
+```
+
 ### `src/Library/Security/SecureOtpTokenService.cs`
 
 - Why this file matters: `live-code` file with expectation `must_not_find`.
@@ -689,7 +701,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
+- Current run already demonstrated this risk: verdict=`FAIL_FP`.
 
 ## 16. Realism Justification
 

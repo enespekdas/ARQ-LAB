@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Node`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\customer-portal-node-tls`
-- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-tls-20260330t134749z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-tls-20260330t173443z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

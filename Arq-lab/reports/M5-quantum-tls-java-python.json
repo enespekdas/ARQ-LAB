@@ -1,38 +1,38 @@
 {
   "byMilestone": {
     "M5": {
-      "cleanExpectedMatches": 2,
-      "explainabilityFailures": 4,
+      "cleanExpectedMatches": 6,
+      "explainabilityFailures": 0,
       "mayFindReview": 0,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 0,
-      "noiseCount": 10,
+      "noiseCount": 14,
       "refStateFailures": 0,
-      "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 10,
+      "sameFileDifferentSignalFindings": 6,
+      "sameSurfaceExtraFindings": 8,
       "scenarios": 3,
-      "unexpectedFindings": 10,
-      "unexpectedRegexOnlyFindings": 10,
+      "unexpectedFindings": 14,
+      "unexpectedRegexOnlyFindings": 3,
       "verdicts": {
-        "FAIL_EXPLAINABILITY": 2,
+        "FAIL_EXPLAINABILITY": 0,
         "FAIL_FN": 0,
         "FAIL_FP": 0,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
         "PASS_CLEAN": 1,
-        "PASS_WITH_NOISE": 0
+        "PASS_WITH_NOISE": 2
       }
     }
   },
   "byScenario": {
     "Q-V5-JAVA-001": {
-      "cleanExpectedMatches": 0,
+      "cleanExpectedMatches": 2,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-001\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 2,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.7030157779109247,
-      "finalVerdict": "FAIL_EXPLAINABILITY",
-      "finalVerdictReason": "2 expected finding(s) had candidates but failed semantic explainability requirements; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=2, regex-only=2)",
+      "finalVerdict": "PASS_CLEAN",
+      "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -55,11 +55,11 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 2,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 2
+        "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 2,
+      "noiseCount": 0,
       "normalizationStats": {
         "collapsedDuplicates": 0,
         "normalizedFindings": 2,
@@ -78,11 +78,11 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\partner-client-java\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 2,
-      "unexpectedFindings": 2,
-      "unexpectedRegexOnlyFindings": 2,
-      "verdict": "FAIL_EXPLAINABILITY",
-      "verdictClass": "FAIL_EXPLAINABILITY"
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 0,
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "PASS_CLEAN",
+      "verdictClass": "PASS_CLEAN"
     },
     "Q-V5-JAVA-003": {
       "cleanExpectedMatches": 2,
@@ -90,8 +90,8 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-003\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.7007764284292256,
-      "finalVerdict": "PASS_CLEAN",
-      "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "2 unexpected/noisy finding(s) remained after matching (same-surface-extra=2, regex-only=2)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-003\\validation\\generated-tree.txt",
       "locComposition": {
@@ -114,15 +114,15 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 0,
+        "sameSurfaceExtraFindings": 2,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 0
+        "unexpectedRegexOnlyFindings": 2
       },
-      "noiseCount": 0,
+      "noiseCount": 2,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 2,
-        "rawFindings": 2
+        "normalizedFindings": 4,
+        "rawFindings": 4
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\gateway-config-java\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\gateway-config-java\\validation\\generated-project-dossier.md",
@@ -137,20 +137,20 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\gateway-config-java\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 0,
-      "unexpectedFindings": 0,
-      "unexpectedRegexOnlyFindings": 0,
-      "verdict": "PASS_CLEAN",
-      "verdictClass": "PASS_CLEAN"
+      "sameSurfaceExtraFindings": 2,
+      "unexpectedFindings": 2,
+      "unexpectedRegexOnlyFindings": 2,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     },
     "Q-V5-PY-002": {
-      "cleanExpectedMatches": 0,
+      "cleanExpectedMatches": 2,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 2,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.9370047543581617,
-      "finalVerdict": "FAIL_EXPLAINABILITY",
-      "finalVerdictReason": "2 expected finding(s) had candidates but failed semantic explainability requirements; 8 unexpected/noisy finding(s) remained after matching (same-surface-extra=8, regex-only=8)",
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "12 unexpected/noisy finding(s) remained after matching (same-surface-extra=6, same-file-different-signal=6, regex-only=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -172,16 +172,16 @@
       "mustNotFindViolations": 0,
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
-        "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 8,
+        "sameFileDifferentSignalFindings": 6,
+        "sameSurfaceExtraFindings": 6,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 8
+        "unexpectedRegexOnlyFindings": 1
       },
-      "noiseCount": 8,
+      "noiseCount": 12,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 8,
-        "rawFindings": 8
+        "normalizedFindings": 14,
+        "rawFindings": 14
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\data-sync-python\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\data-sync-python\\validation\\generated-project-dossier.md",
@@ -195,22 +195,22 @@
         "test": "passed"
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\data-sync-python\\validation\\runnability-logs",
-      "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 8,
-      "unexpectedFindings": 8,
-      "unexpectedRegexOnlyFindings": 8,
-      "verdict": "FAIL_EXPLAINABILITY",
-      "verdictClass": "FAIL_EXPLAINABILITY"
+      "sameFileDifferentSignalFindings": 6,
+      "sameSurfaceExtraFindings": 6,
+      "unexpectedFindings": 12,
+      "unexpectedRegexOnlyFindings": 1,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     }
   },
   "scenarioCount": 3,
   "verdicts": {
-    "FAIL_EXPLAINABILITY": 2,
+    "FAIL_EXPLAINABILITY": 0,
     "FAIL_FN": 0,
     "FAIL_FP": 0,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
     "PASS_CLEAN": 1,
-    "PASS_WITH_NOISE": 0
+    "PASS_WITH_NOISE": 2
   }
 }

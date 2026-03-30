@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\legacy-payment-crypto-java`
-- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-payment-crypto-java-20260330t134315z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-payment-crypto-java-20260330t172941z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -388,7 +388,7 @@ legacy-payment-crypto-java
 | src/main/java/com/arq/legacypaymentcryptojava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java | live-code | 3 | Runtime business module contributing to Batch Reconciliation Cipher. | yes | yes | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java | live-code | 3 | Runtime business module contributing to Legacy Envelope Cipher. | yes | yes | no | yes | yes | no |
-| src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java | live-code | 3 | Runtime business module contributing to Legacy Password Factory. | no | no | no | yes | yes | no |
+| src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java | live-code | 3 | Runtime business module contributing to Legacy Password Factory. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java | live-code | 3 | Runtime business module contributing to Secure Envelope Cipher. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/service/DisputeService.java | live-code | 19 | Runtime business service implementing Dispute Service logic. | no | no | no | yes | yes | no |
@@ -421,7 +421,7 @@ legacy-payment-crypto-java
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2494 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 774 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 790 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 207 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -449,6 +449,7 @@ legacy-payment-crypto-java
 
 - `src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -672,6 +673,19 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0003: public class LegacyEnvelopeCipher { public Cipher cipher() throws Exception { return Cipher.getInstance("DESede/ECB/PKCS5Padding"); } }
 ```
 
+### `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java`
+
+- Why this file matters: `live-code` file with expectation `may_find_review`.
+- Detailed summary: Runtime business module contributing to Legacy Password Factory. It is executable/live in the assembled repository.
+- Key constructs: negative or realism-supporting surface; near-real=`True`; protected=`False`.
+- Representative excerpt:
+
+```text
+0001: package com.arq.legacypaymentcryptojava.security;
+0002: import javax.crypto.SecretKeyFactory;
+0003: public class LegacyPasswordFactory { public SecretKeyFactory factory() throws Exception { return SecretKeyFactory.getInstance("PBEWithMD5AndDES"); } }
+```
+
 ### `src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java`
 
 - Why this file matters: `live-code` file with expectation `must_not_find`.
@@ -733,7 +747,9 @@ Inflation disclosure:
 
 ### may_find_review
 
-- None in the current run.
+- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java` => `quantum.arq-q-0106-java` (INVENTORY/INFO)
+- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java` => `quantum.arq-q-0107-java` (INVENTORY/INFO)
+- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java` => `quantum.arq-q-0108-java` (INVENTORY/INFO)
 
 ## 14. Explainability Expectations
 
@@ -758,7 +774,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
+- Current run already demonstrated this risk: verdict=`FAIL_FP`.
 
 ## 16. Realism Justification
 

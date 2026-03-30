@@ -9,7 +9,7 @@
 - language / stack: `Java + config wiring`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\gateway-config-java`
-- repo remote URL in Gitea: `http://localhost:3001/arq/gateway-config-java-20260330t134618z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/gateway-config-java-20260330t173320z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -353,8 +353,8 @@ gateway-config-java
 | sql/reference/reference-31.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-32.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | src/main/java/com/arq/gatewayconfigjava/GatewayconfigjavaApplication.java | live-code | 11 | Runtime process bootstrap and application entrypoint. | no | no | no | yes | yes | yes |
-| src/main/java/com/arq/gatewayconfigjava/config/PartnerTlsProperties.java | live-code | 15 | Runtime business module contributing to Partner Tls Properties. | yes | no | no | yes | yes | no |
-| src/main/java/com/arq/gatewayconfigjava/config/PartnerTrustManager.java | live-code | 19 | Runtime business module contributing to Partner Trust Manager. | yes | no | no | yes | yes | no |
+| src/main/java/com/arq/gatewayconfigjava/config/PartnerTlsProperties.java | live-code | 15 | Runtime business module contributing to Partner Tls Properties. | yes | yes | no | yes | yes | no |
+| src/main/java/com/arq/gatewayconfigjava/config/PartnerTrustManager.java | live-code | 19 | Runtime business module contributing to Partner Trust Manager. | yes | yes | no | yes | yes | no |
 | src/main/java/com/arq/gatewayconfigjava/domain/BalanceRecord.java | live-code | 33 | Runtime business module contributing to Balance Record. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/gatewayconfigjava/domain/DisputeRecord.java | live-code | 33 | Runtime business module contributing to Dispute Record. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/gatewayconfigjava/domain/InvoiceRecord.java | live-code | 33 | Runtime business module contributing to Invoice Record. | no | no | no | yes | yes | no |
@@ -419,7 +419,7 @@ gateway-config-java
 | validation/expected-findings.json | generated | 28 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2480 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 787 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 790 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 206 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -445,6 +445,8 @@ gateway-config-java
 
 ## 7. Near-Real Negative Surfaces
 
+- `src/main/java/com/arq/gatewayconfigjava/config/PartnerTlsProperties.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/main/java/com/arq/gatewayconfigjava/config/PartnerTrustManager.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/resources/application-dev.yml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -647,7 +649,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Partner Tls Properties. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -669,7 +671,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Partner Trust Manager. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -772,6 +774,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

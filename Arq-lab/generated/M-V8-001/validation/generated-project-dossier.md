@@ -9,7 +9,7 @@
 - language / stack: `Java + Node + Python monorepo`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/internal-platform-monorepo-20260330t135123z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/internal-platform-monorepo-20260330t173733z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -1131,11 +1131,11 @@ internal-platform-monorepo
 
 Branches:
 
-- `main` tip: `72e934e0a5b67df5ab00413d8a8402b5d235ea68`
+- `main` tip: `e7c6b80f1115ccdaba04c3e2a25bd92dd53490d6`
 
 Commit order:
 
-- `72e934e0a5b67df5ab00413d8a8402b5d235ea68` `bootstrap M-V8-001`: initial clean or baseline assembly.
+- `e7c6b80f1115ccdaba04c3e2a25bd92dd53490d6` `bootstrap M-V8-001`: initial clean or baseline assembly.
 
 Expected final head/history state:
 

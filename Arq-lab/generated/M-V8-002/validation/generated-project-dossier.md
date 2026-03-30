@@ -9,7 +9,7 @@
 - language / stack: `App + infra + CI`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t135123z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t173733z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
@@ -410,7 +410,7 @@ infra-app-mixed-repo
 | app/services/retry_service.py | live-code | 4 | Runtime business service implementing Retry Service logic. | no | no | no | yes | no | no |
 | app/services/routing_service.py | live-code | 4 | Runtime business service implementing Routing Service logic. | no | no | no | yes | no | no |
 | app/services/templates_service.py | live-code | 4 | Runtime business service implementing Templates Service logic. | no | no | no | yes | no | no |
-| deploy/envoy.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Envoy. | yes | no | no | yes | no | no |
+| deploy/envoy.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Envoy. | yes | yes | no | yes | no | no |
 | docs/architecture/section-01.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-02.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-03.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
@@ -679,7 +679,7 @@ infra-app-mixed-repo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 4216 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 2690 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 2691 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 345 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 37 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 41 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -720,6 +720,7 @@ infra-app-mixed-repo
 
 ## 7. Near-Real Negative Surfaces
 
+- `deploy/envoy.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `ops/console/src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -897,15 +898,15 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `0e1d3a56370ce617bf0720022d4cc4e265684085`; diverges from `main` at `70a2eb37bcfeca24b6f2f18e1e9d23630ccdced6`
-- `main` tip: `70a2eb37bcfeca24b6f2f18e1e9d23630ccdced6`
-- `release/2026.04` tip: `b09c486b074c1245ab0ca6ac6319e2eeebf4ff1f`; diverges from `main` at `70a2eb37bcfeca24b6f2f18e1e9d23630ccdced6`
+- `feature/hotfix-ssl` tip: `8cc9c1fe504c8bfb0ec2bebfbbf1c1130079e509`; diverges from `main` at `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8`
+- `main` tip: `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8`
+- `release/2026.04` tip: `00f40b56afab1c2200e2c3086fd5d5ba65d41340`; diverges from `main` at `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8`
 
 Commit order:
 
-- `70a2eb37bcfeca24b6f2f18e1e9d23630ccdced6` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `b09c486b074c1245ab0ca6ac6319e2eeebf4ff1f` `c003 release branch clean`: removes or neutralizes a prior signal.
-- `0e1d3a56370ce617bf0720022d4cc4e265684085` `c002 temporary hotfix secret`: introduces an intended signal.
+- `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `8cc9c1fe504c8bfb0ec2bebfbbf1c1130079e509` `c002 temporary hotfix secret`: introduces an intended signal.
+- `00f40b56afab1c2200e2c3086fd5d5ba65d41340` `c003 release branch clean`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -1002,7 +1003,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-config` file with expectation `must_find`.
 - Detailed summary: Runtime configuration carrying environment or deployment settings for Envoy. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -2674,7 +2675,7 @@ Explainability failure definition:
 - False negatives are most likely on runtime config files where the detector must bind a weak TLS knob out of YAML or env syntax.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FN`.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 
