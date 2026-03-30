@@ -9,7 +9,7 @@
 - language / stack: `C# / .NET 8`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\admin-integrations-csharp`
-- repo remote URL in Gitea: `http://localhost:3001/arq/admin-integrations-csharp-20260330t105448z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/admin-integrations-csharp-20260330t134749z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

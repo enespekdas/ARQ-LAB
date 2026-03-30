@@ -9,7 +9,7 @@
 - language / stack: `Config-heavy repo`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\legacy-admin-config`
-- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-admin-config-20260330t104610z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-admin-config-20260330t133856z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

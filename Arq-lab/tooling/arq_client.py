@@ -26,6 +26,7 @@ class ArqClient:
         *,
         payload: dict[str, Any] | None = None,
         params: dict[str, Any] | None = None,
+        allow_reauth: bool = True,
     ) -> Any:
         if not self._authenticated and path != "/api/v2/auth/login":
             self.login()
@@ -43,6 +44,11 @@ class ArqClient:
                 return json.loads(body) if body else None
         except urllib.error.HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")
+            if exc.code == 401 and path != "/api/v2/auth/login" and allow_reauth:
+                self._authenticated = False
+                self._cookie_jar.clear()
+                self.login()
+                return self._request(method, path, payload=payload, params=params, allow_reauth=False)
             raise RuntimeError(f"ARQ {method} {url} failed: HTTP {exc.code} {body}") from exc
 
     def login(self) -> dict[str, Any]:

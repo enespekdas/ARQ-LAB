@@ -1,0 +1,199 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-TS-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.48770656993147926,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-TS-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-TS-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 26,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4840,
+      "tests": 16,
+      "total": 9924,
+      "vendor/generated": 239
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\customer-portal-node\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-TS-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\customer-portal-node\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [
+    {
+      "candidates": [
+        {
+          "branchName": "main",
+          "detectionSource": "REGEX",
+          "evidenceExcerpt": "export function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }",
+          "exposureScope": "HEAD_ONLY",
+          "findingId": "6baadfb0-d3b0-4c19-afc1-7ea94a16945b",
+          "findingKind": "VULNERABILITY",
+          "module": "quantum",
+          "presentInHistory": false,
+          "presentOnHead": true,
+          "primaryFilePath": "src/modules/security/legacyDigest.ts",
+          "queryFamily": null,
+          "rawEvidenceJson": null,
+          "resolutionScope": null,
+          "resolvedValue": null,
+          "ruleKey": "quantum.arq-q-0613-typescript",
+          "ruleName": "Weak Hash (MD5)",
+          "scanMode": "HEAD_SNAPSHOT",
+          "scanPlanName": "quantum-head",
+          "semanticKey": null,
+          "severity": "HIGH"
+        }
+      ],
+      "expected": "md5",
+      "pathContains": "legacyDigest.ts",
+      "regexOnlyCandidates": [
+        {
+          "branchName": "main",
+          "detectionSource": "REGEX",
+          "evidenceExcerpt": "export function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }",
+          "exposureScope": "HEAD_ONLY",
+          "findingId": "6baadfb0-d3b0-4c19-afc1-7ea94a16945b",
+          "findingKind": "VULNERABILITY",
+          "module": "quantum",
+          "presentInHistory": false,
+          "presentOnHead": true,
+          "primaryFilePath": "src/modules/security/legacyDigest.ts",
+          "queryFamily": null,
+          "rawEvidenceJson": null,
+          "resolutionScope": null,
+          "resolvedValue": null,
+          "ruleKey": "quantum.arq-q-0613-typescript",
+          "ruleName": "Weak Hash (MD5)",
+          "scanMode": "HEAD_SNAPSHOT",
+          "scanPlanName": "quantum-head",
+          "semanticKey": null,
+          "severity": "HIGH"
+        }
+      ],
+      "required": [
+        {
+          "detectionSourceContains": null,
+          "key": "md5",
+          "pathContains": "legacyDigest.ts",
+          "queryFamilyContains": "typescript",
+          "resolutionScopeContains": null,
+          "resolvedValueContains": "MD5"
+        }
+      ]
+    }
+  ],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_EXPLAINABILITY",
+  "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 0,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 1,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 1
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "export function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6baadfb0-d3b0-4c19-afc1-7ea94a16945b",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/legacyDigest.ts",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "scenarioId": "Q-V4-TS-003",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "export function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6baadfb0-d3b0-4c19-afc1-7ea94a16945b",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/legacyDigest.ts",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "export function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6baadfb0-d3b0-4c19-afc1-7ea94a16945b",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/legacyDigest.ts",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "verdict": "FAIL_EXPLAINABILITY",
+  "verdictClass": "FAIL_EXPLAINABILITY"
+}

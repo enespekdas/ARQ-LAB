@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from .utils import ensure_dir, write_json, write_text
+from .verdict_proof import PROOF_SCENARIO_ID, build_pass_with_noise_proof
 
 STANDARD_VERDICTS = (
     "PASS_CLEAN",
@@ -52,7 +53,9 @@ def _scenario_summary(comparison: dict[str, Any]) -> dict[str, Any]:
     return {
         "milestone": comparison["milestone"],
         "verdict": comparison["verdict"],
+        "finalVerdict": comparison.get("finalVerdict") or _verdict_class(comparison),
         "verdictClass": _verdict_class(comparison),
+        "runnability": comparison.get("runnability", {}),
         "cleanExpectedMatches": comparison.get("cleanExpectedMatches", comparison.get("mustFindMatched", 0)),
         "mustFindExpected": comparison.get("mustFindExpected", 0),
         "mustFindMissing": _count(comparison, "mustFindMissing"),
@@ -92,6 +95,7 @@ def render_scenario_report(scenario: dict[str, Any], comparison: dict[str, Any],
         f"- Milestone: `{scenario['milestone']}`",
         f"- Module: `{scenario['module']}`",
         f"- Verdict: `{comparison['verdict']}`",
+        f"- Final verdict: `{comparison.get('finalVerdict') or _verdict_class(comparison)}`",
         f"- Verdict class: `{_verdict_class(comparison)}`",
         f"- Stack: `{scenario['stack']}`",
         f"- Domain: {scenario['domain']}",
@@ -116,10 +120,12 @@ def render_scenario_report(scenario: dict[str, Any], comparison: dict[str, Any],
             f"- sameSurfaceExtraFindings: `{_count(comparison, 'sameSurfaceExtraFindings')}`",
             f"- sameFileDifferentSignalFindings: `{_count(comparison, 'sameFileDifferentSignalFindings')}`",
             f"- unexpectedRegexOnlyFindings: `{_count(comparison, 'unexpectedRegexOnlyFindings')}`",
+            f"- mayFindReview: `{_count(comparison, 'mayFindReview')}`",
             f"- explainabilityFailures: `{_count(comparison, 'explainabilityFailures')}`",
             f"- refStateFailures: `{_count(comparison, 'refStateFailures')}`",
             f"- noiseCount: `{comparison.get('noiseCount', 0)}`",
             f"- noiseBreakdown: `{_noise_breakdown_text(comparison)}`",
+            f"- finalVerdict: `{comparison.get('finalVerdict') or _verdict_class(comparison)}`",
             f"- finalVerdictReason: {comparison.get('finalVerdictReason', 'n/a')}",
             "",
             "## Normalization",
@@ -138,6 +144,39 @@ def render_scenario_report(scenario: dict[str, Any], comparison: dict[str, Any],
 
 def write_scenario_report(destination: Path, scenario: dict[str, Any], comparison: dict[str, Any], scans: list[dict[str, Any]]) -> None:
     write_text(destination, render_scenario_report(scenario, comparison, scans))
+
+
+def _write_verdict_proof_artifacts(root: Path) -> dict[str, str]:
+    proof_root = root / "verdict-proofs"
+    ensure_dir(proof_root)
+    proof = build_pass_with_noise_proof()
+    comparison_path = proof_root / "pass-with-noise-comparison.json"
+    report_path = proof_root / "pass-with-noise-scenario-report.md"
+    summary_path = proof_root / "pass-with-noise-summary.md"
+    write_json(comparison_path, proof["comparison"])
+    write_text(report_path, render_scenario_report(proof["scenario"], proof["comparison"], proof["scans"]))
+    summary_lines = [
+        f"# {PROOF_SCENARIO_ID}",
+        "",
+        "Synthetic comparator proof that `PASS_WITH_NOISE` is reachable without relaxing strictness.",
+        "",
+        f"- finalVerdict: `{proof['proofChecks']['finalVerdict']}`",
+        f"- cleanExpectedMatches: `{proof['proofChecks']['cleanExpectedMatches']}`",
+        f"- missingExpectedFindings: `{proof['proofChecks']['missingExpectedFindings']}`",
+        f"- mustNotFindViolations: `{proof['proofChecks']['mustNotFindViolations']}`",
+        f"- explainabilityFailures: `{proof['proofChecks']['explainabilityFailures']}`",
+        f"- noiseCount: `{proof['proofChecks']['noiseCount']}`",
+        f"- sameSurfaceExtraFindings: `{proof['proofChecks']['sameSurfaceExtraFindings']}`",
+        f"- unexpectedRegexOnlyFindings: `{proof['proofChecks']['unexpectedRegexOnlyFindings']}`",
+        f"- reportPath: `{report_path}`",
+        f"- comparisonPath: `{comparison_path}`",
+    ]
+    write_text(summary_path, "\n".join(summary_lines).rstrip() + "\n")
+    return {
+        "passWithNoiseComparisonPath": str(comparison_path),
+        "passWithNoiseReportPath": str(report_path),
+        "passWithNoiseSummaryPath": str(summary_path),
+    }
 
 
 def aggregate_comparisons(comparisons: list[dict[str, Any]]) -> dict[str, Any]:
@@ -195,6 +234,8 @@ def aggregate_comparisons(comparisons: list[dict[str, Any]]) -> dict[str, Any]:
 def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> None:
     ensure_dir(root)
     aggregate = aggregate_comparisons(comparisons)
+    proof_artifacts = _write_verdict_proof_artifacts(root)
+    aggregate["proofArtifacts"] = proof_artifacts
     write_json(root / "aggregate-summary.json", aggregate)
 
     markdown_lines = [
@@ -206,6 +247,14 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
     ]
     for verdict, count in sorted(aggregate["verdicts"].items()):
         markdown_lines.append(f"- `{verdict}`: `{count}`")
+    markdown_lines.extend(
+        [
+            "",
+            "## Verdict Proofs",
+            f"- `PASS_WITH_NOISE` proof summary: `{proof_artifacts['passWithNoiseSummaryPath']}`",
+            f"- `PASS_WITH_NOISE` proof report: `{proof_artifacts['passWithNoiseReportPath']}`",
+        ]
+    )
     markdown_lines.extend(["", "## Milestones"])
     for milestone, summary in sorted(aggregate["byMilestone"].items()):
         verdict_text = ", ".join(f"{verdict}={count}" for verdict, count in sorted(summary["verdicts"].items()))
@@ -216,7 +265,7 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
     for scenario_id, summary in sorted(aggregate["byScenario"].items()):
         loc = summary.get("locComposition", {})
         markdown_lines.append(
-            f"- `{scenario_id}`: verdict=`{summary['verdictClass']}`, cleanMatches=`{summary['cleanExpectedMatches']}`/`{summary['mustFindExpected']}`, unexpected=`{summary['unexpectedFindings']}`, sameSurface=`{summary['sameSurfaceExtraFindings']}`, regexOnly=`{summary['unexpectedRegexOnlyFindings']}`, noise=`{summary['noiseCount']}`, realism=`{summary.get('realismScore', 'n/a')}`, fillerRatio=`{summary.get('fillerRatio', 0.0):.2%}`, dossierMissing=`{summary.get('dossierMissing', True)}`, dossier=`{summary.get('reportDossierPath', 'n/a')}`, logs=`{summary.get('persistedLogsPath', 'n/a')}`, liveCode=`{loc.get('live business code', 0)}`, liveConfig=`{loc.get('live config', 0)}`, tests=`{loc.get('tests', 0)}`, filler=`{loc.get('synthetic filler / inflation content', 0)}`"
+            f"- `{scenario_id}`: finalVerdict=`{summary['finalVerdict']}`, cleanMatches=`{summary['cleanExpectedMatches']}`/`{summary['mustFindExpected']}`, unexpected=`{summary['unexpectedFindings']}`, sameSurface=`{summary['sameSurfaceExtraFindings']}`, sameFile=`{summary['sameFileDifferentSignalFindings']}`, regexOnly=`{summary['unexpectedRegexOnlyFindings']}`, review=`{summary['mayFindReview']}`, explainability=`{summary['explainabilityFailures']}`, noise=`{summary['noiseCount']}`, runnability=`build:{summary.get('runnability', {}).get('build', 'n/a')},test:{summary.get('runnability', {}).get('test', 'n/a')},smoke:{summary.get('runnability', {}).get('smoke', 'n/a')}`, realism=`{summary.get('realismScore', 'n/a')}`, fillerRatio=`{summary.get('fillerRatio', 0.0):.2%}`, dossierMissing=`{summary.get('dossierMissing', True)}`, dossier=`{summary.get('reportDossierPath', 'n/a')}`, logs=`{summary.get('persistedLogsPath', 'n/a')}`, liveCode=`{loc.get('live business code', 0)}`, liveConfig=`{loc.get('live config', 0)}`, tests=`{loc.get('tests', 0)}`, filler=`{loc.get('synthetic filler / inflation content', 0)}`"
         )
     markdown_lines.extend(["", "## Noisy And Failed Scenarios"])
     noisy_or_failed = [
@@ -239,7 +288,9 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
             "scenarioId",
             "milestone",
             "verdict",
+            "finalVerdict",
             "verdictClass",
+            "runnability",
             "cleanExpectedMatches",
             "mustFindExpected",
             "missingExpectedFindings",
@@ -277,7 +328,11 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
                 "scenarioId": scenario_id,
                 "milestone": summary["milestone"],
                 "verdict": summary["verdict"],
+                "finalVerdict": summary["finalVerdict"],
                 "verdictClass": summary["verdictClass"],
+                "runnability": ",".join(
+                    f"{stage}:{state}" for stage, state in sorted(summary.get("runnability", {}).items())
+                ),
                 "cleanExpectedMatches": summary["cleanExpectedMatches"],
                 "mustFindExpected": summary["mustFindExpected"],
                 "missingExpectedFindings": summary["missingExpectedFindings"],
@@ -314,12 +369,15 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
             "scenarioId": comparison["scenarioId"],
             "milestone": comparison["milestone"],
             "verdict": comparison["verdict"],
+            "finalVerdict": comparison.get("finalVerdict") or _verdict_class(comparison),
             "verdictClass": _verdict_class(comparison),
             "missingExpectedFindings": _count(comparison, "missingExpectedFindings") or _count(comparison, "mustFindMissing"),
             "mustNotFindViolations": _count(comparison, "mustNotFindViolations"),
             "unexpectedFindings": _count(comparison, "unexpectedFindings") or _count(comparison, "extraFindings"),
             "sameSurfaceExtraFindings": _count(comparison, "sameSurfaceExtraFindings"),
+            "sameFileDifferentSignalFindings": _count(comparison, "sameFileDifferentSignalFindings"),
             "unexpectedRegexOnlyFindings": _count(comparison, "unexpectedRegexOnlyFindings"),
+            "mayFindReview": _count(comparison, "mayFindReview"),
             "explainabilityFailures": _count(comparison, "explainabilityFailures"),
             "refStateFailures": _count(comparison, "refStateFailures"),
             "noiseCount": int(comparison.get("noiseCount", 0)),
@@ -340,7 +398,7 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
         tuning_lines.append("- None.")
     for bucket in fail_buckets:
         tuning_lines.append(
-            f"- `{bucket['scenarioId']}` / `{bucket['verdictClass']}`: missing=`{bucket['missingExpectedFindings']}`, fp=`{bucket['mustNotFindViolations']}`, unexpected=`{bucket['unexpectedFindings']}`, sameSurface=`{bucket['sameSurfaceExtraFindings']}`, regexOnly=`{bucket['unexpectedRegexOnlyFindings']}`, explainability=`{bucket['explainabilityFailures']}`, ref-state=`{bucket['refStateFailures']}`, noise=`{bucket['noiseCount']}`. Reason: {bucket['finalVerdictReason']}"
+            f"- `{bucket['scenarioId']}` / `{bucket['verdictClass']}`: missing=`{bucket['missingExpectedFindings']}`, fp=`{bucket['mustNotFindViolations']}`, unexpected=`{bucket['unexpectedFindings']}`, sameSurface=`{bucket['sameSurfaceExtraFindings']}`, sameFile=`{bucket['sameFileDifferentSignalFindings']}`, review=`{bucket['mayFindReview']}`, regexOnly=`{bucket['unexpectedRegexOnlyFindings']}`, explainability=`{bucket['explainabilityFailures']}`, ref-state=`{bucket['refStateFailures']}`, noise=`{bucket['noiseCount']}`. Reason: {bucket['finalVerdictReason']}"
         )
     write_text(root / "tuning-backlog-seed.md", "\n".join(tuning_lines).rstrip() + "\n")
 
@@ -365,6 +423,10 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
         final_lines.append(f"- `{verdict}`: `{count}`")
     final_lines.extend(
         [
+            "",
+            "## Verdict Proofs",
+            f"- `PASS_WITH_NOISE` proof summary: `{proof_artifacts['passWithNoiseSummaryPath']}`",
+            f"- `PASS_WITH_NOISE` proof report: `{proof_artifacts['passWithNoiseReportPath']}`",
             "",
             "## Strengths and gaps",
             "- Strengths: `PASS_CLEAN` scenarios met the declared contract without residual noise.",

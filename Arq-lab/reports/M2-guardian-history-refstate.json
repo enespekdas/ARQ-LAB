@@ -14,7 +14,13 @@
       "unexpectedFindings": 0,
       "unexpectedRegexOnlyFindings": 0,
       "verdicts": {
-        "PASS_CLEAN": 3
+        "FAIL_EXPLAINABILITY": 0,
+        "FAIL_FN": 0,
+        "FAIL_FP": 0,
+        "FAIL_REF_STATE": 0,
+        "INVALID_SCENARIO": 0,
+        "PASS_CLEAN": 3,
+        "PASS_WITH_NOISE": 0
       }
     }
   },
@@ -25,6 +31,7 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-001\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.7035778532880271,
+      "finalVerdict": "PASS_CLEAN",
       "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-001\\validation\\generated-tree.txt",
@@ -58,11 +65,17 @@
         "normalizedFindings": 1,
         "rawFindings": 1
       },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\payments-history-lineage\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\payments-history-lineage\\validation\\generated-project-dossier.md",
       "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 3,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-001.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\payments-history-lineage\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 0,
@@ -77,6 +90,7 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-002\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.4875591820288103,
+      "finalVerdict": "PASS_CLEAN",
       "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-002\\validation\\generated-tree.txt",
@@ -110,11 +124,17 @@
         "normalizedFindings": 1,
         "rawFindings": 1
       },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\partner-branch-divergence\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\partner-branch-divergence\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
       "realismScore": 2,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-002.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\partner-branch-divergence\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 0,
@@ -129,6 +149,7 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.9347826086956522,
+      "finalVerdict": "PASS_CLEAN",
       "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-tree.txt",
@@ -162,11 +183,17 @@
         "normalizedFindings": 3,
         "rawFindings": 3
       },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\pem-rotation-lineage\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\pem-rotation-lineage\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 1,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-003.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\pem-rotation-lineage\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 0,
@@ -178,6 +205,12 @@
   },
   "scenarioCount": 3,
   "verdicts": {
-    "PASS_CLEAN": 3
+    "FAIL_EXPLAINABILITY": 0,
+    "FAIL_FN": 0,
+    "FAIL_FP": 0,
+    "FAIL_REF_STATE": 0,
+    "INVALID_SCENARIO": 0,
+    "PASS_CLEAN": 3,
+    "PASS_WITH_NOISE": 0
   }
 }

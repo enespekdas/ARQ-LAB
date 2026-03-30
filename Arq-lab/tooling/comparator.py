@@ -606,6 +606,7 @@ def compare_scenario(
         "noiseCount": noise_count,
         "noiseBreakdown": noise_breakdown,
         "verdict": verdict,
+        "finalVerdict": verdict,
         "verdictClass": verdict,
         "finalVerdictReason": final_verdict_reason,
         "followUpAction": "none" if verdict == "PASS_CLEAN" else "review findings",

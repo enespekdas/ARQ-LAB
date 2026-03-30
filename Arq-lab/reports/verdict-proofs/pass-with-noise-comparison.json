@@ -1,0 +1,148 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "locComposition": {},
+    "reportDossierPath": "n/a (synthetic proof fixture)",
+    "runnabilityLogRootPath": "n/a (synthetic proof fixture)"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_WITH_NOISE",
+  "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "SEMANTIC",
+        "evidenceExcerpt": "return createHash('md5').update(value).digest('hex');",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "proof-semantic-match",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/security/legacyDigest.ts",
+        "queryFamily": "crypto.typescript.hash",
+        "rawEvidenceJson": {
+          "findingId": "proof-semantic-match",
+          "proof": true
+        },
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0613-typescript",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": null,
+        "scanPlanName": null,
+        "semanticKey": "md5-call",
+        "severity": "HIGH"
+      },
+      "expected": "proof-md5"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M0",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 1,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 1
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "return createHash('md5').update(value).digest('hex');",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "proof-regex-noise",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/security/legacyDigest.ts",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": null,
+      "scanPlanName": null,
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "scenarioId": "PROOF-PASS-WITH-NOISE",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "return createHash('md5').update(value).digest('hex');",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "proof-regex-noise",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/security/legacyDigest.ts",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": null,
+      "scanPlanName": null,
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "return createHash('md5').update(value).digest('hex');",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "proof-regex-noise",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/security/legacyDigest.ts",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": null,
+      "scanPlanName": null,
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "verdict": "PASS_WITH_NOISE",
+  "verdictClass": "PASS_WITH_NOISE"
+}

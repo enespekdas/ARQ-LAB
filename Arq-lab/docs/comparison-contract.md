@@ -31,6 +31,7 @@
   "noiseCount": 0,
   "noiseBreakdown": {},
   "verdict": "PASS_CLEAN",
+  "finalVerdict": "PASS_CLEAN",
   "verdictClass": "PASS_CLEAN",
   "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
   "followUpAction": "none"
@@ -55,3 +56,15 @@ Prefer comparison against:
 - explainability field presence
 
 Regex-only Quantum hits must not satisfy a semantic-required expectation by themselves. When a scenario declares an explainability contract, expected positives should only be counted as clean matches if the exported finding carries real explainability signal.
+
+`aggregate-summary.json` mirrors the final verdict model at scenario level and should surface at least:
+- `finalVerdict`
+- `finalVerdictReason`
+- `cleanExpectedMatches`
+- `unexpectedFindings`
+- `unexpectedRegexOnlyFindings`
+- `sameSurfaceExtraFindings`
+- `sameFileDifferentSignalFindings`
+- `mayFindReview`
+- `persistedLogsPath`
+- `runnability`

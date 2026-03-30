@@ -1,0 +1,209 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9678064387122576,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 7,
+      "scripts": 2,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5001,
+      "vendor/generated": 129
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\edge-gateway-config\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CONFIG-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\edge-gateway-config\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [
+    {
+      "candidates": [
+        {
+          "branchName": "main",
+          "detectionSource": "REGEX",
+          "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+          "exposureScope": "HEAD_ONLY",
+          "findingId": "1b7ed842-c4f3-429f-822c-c9e7eebd8f32",
+          "findingKind": "VULNERABILITY",
+          "module": "quantum",
+          "presentInHistory": false,
+          "presentOnHead": true,
+          "primaryFilePath": "runtime/.env",
+          "queryFamily": null,
+          "rawEvidenceJson": null,
+          "resolutionScope": null,
+          "resolvedValue": null,
+          "ruleKey": "quantum.arq-q-0949-config",
+          "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+          "scanMode": "HEAD_SNAPSHOT",
+          "scanPlanName": "quantum-head",
+          "semanticKey": null,
+          "severity": "CRITICAL"
+        }
+      ],
+      "expected": "node-env-disable",
+      "pathContains": "runtime/.env",
+      "regexOnlyCandidates": [
+        {
+          "branchName": "main",
+          "detectionSource": "REGEX",
+          "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+          "exposureScope": "HEAD_ONLY",
+          "findingId": "1b7ed842-c4f3-429f-822c-c9e7eebd8f32",
+          "findingKind": "VULNERABILITY",
+          "module": "quantum",
+          "presentInHistory": false,
+          "presentOnHead": true,
+          "primaryFilePath": "runtime/.env",
+          "queryFamily": null,
+          "rawEvidenceJson": null,
+          "resolutionScope": null,
+          "resolvedValue": null,
+          "ruleKey": "quantum.arq-q-0949-config",
+          "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+          "scanMode": "HEAD_SNAPSHOT",
+          "scanPlanName": "quantum-head",
+          "semanticKey": null,
+          "severity": "CRITICAL"
+        }
+      ],
+      "required": [
+        {
+          "detectionSourceContains": null,
+          "key": "node-env-disable",
+          "pathContains": "runtime/.env",
+          "queryFamilyContains": null,
+          "resolutionScopeContains": null,
+          "resolvedValueContains": "NODE_TLS_REJECT_UNAUTHORIZED=0"
+        }
+      ]
+    }
+  ],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "1 expected finding(s) were not detected at all; 1 expected finding(s) had candidates but failed semantic explainability requirements; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [
+    {
+      "expected": "envoy-untrusted",
+      "pathContains": "deploy/envoy.yaml"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "envoy-untrusted",
+      "pathContains": "deploy/envoy.yaml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 1,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 1
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1b7ed842-c4f3-429f-822c-c9e7eebd8f32",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "runtime/.env",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0949-config",
+      "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "CRITICAL"
+    }
+  ],
+  "scenarioId": "Q-V6-CONFIG-003",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1b7ed842-c4f3-429f-822c-c9e7eebd8f32",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "runtime/.env",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0949-config",
+      "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1b7ed842-c4f3-429f-822c-c9e7eebd8f32",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "runtime/.env",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0949-config",
+      "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "CRITICAL"
+    }
+  ],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

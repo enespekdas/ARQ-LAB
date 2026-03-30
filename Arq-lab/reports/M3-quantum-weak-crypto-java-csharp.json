@@ -14,7 +14,13 @@
       "unexpectedFindings": 17,
       "unexpectedRegexOnlyFindings": 17,
       "verdicts": {
-        "FAIL_EXPLAINABILITY": 3
+        "FAIL_EXPLAINABILITY": 3,
+        "FAIL_FN": 0,
+        "FAIL_FP": 0,
+        "FAIL_REF_STATE": 0,
+        "INVALID_SCENARIO": 0,
+        "PASS_CLEAN": 0,
+        "PASS_WITH_NOISE": 0
       }
     }
   },
@@ -25,6 +31,7 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 3,
       "fillerRatio": 0.9599365331217771,
+      "finalVerdict": "FAIL_EXPLAINABILITY",
       "finalVerdictReason": "3 expected finding(s) had candidates but failed semantic explainability requirements; 11 unexpected/noisy finding(s) remained after matching (same-surface-extra=11, regex-only=11)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-tree.txt",
@@ -58,11 +65,17 @@
         "normalizedFindings": 11,
         "rawFindings": 11
       },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\billing-sdk-csharp\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\billing-sdk-csharp\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 1,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-CS-003.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\billing-sdk-csharp\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 11,
@@ -77,6 +90,7 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 3,
       "fillerRatio": 0.6979972238746778,
+      "finalVerdict": "FAIL_EXPLAINABILITY",
       "finalVerdictReason": "3 expected finding(s) had candidates but failed semantic explainability requirements; 3 unexpected/noisy finding(s) remained after matching (same-surface-extra=3, regex-only=3)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-tree.txt",
@@ -110,11 +124,17 @@
         "normalizedFindings": 3,
         "rawFindings": 3
       },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\identity-gateway-java\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\identity-gateway-java\\validation\\generated-project-dossier.md",
       "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 3,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-JAVA-001.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\identity-gateway-java\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 3,
@@ -129,6 +149,7 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-002\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 2,
       "fillerRatio": 0.7021743466985837,
+      "finalVerdict": "FAIL_EXPLAINABILITY",
       "finalVerdictReason": "2 expected finding(s) had candidates but failed semantic explainability requirements; 3 unexpected/noisy finding(s) remained after matching (same-surface-extra=3, regex-only=3)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-002\\validation\\generated-tree.txt",
@@ -162,11 +183,17 @@
         "normalizedFindings": 3,
         "rawFindings": 3
       },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\legacy-payment-crypto-java\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\legacy-payment-crypto-java\\validation\\generated-project-dossier.md",
       "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 3,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-JAVA-002.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\legacy-payment-crypto-java\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 3,
@@ -178,6 +205,12 @@
   },
   "scenarioCount": 3,
   "verdicts": {
-    "FAIL_EXPLAINABILITY": 3
+    "FAIL_EXPLAINABILITY": 3,
+    "FAIL_FN": 0,
+    "FAIL_FP": 0,
+    "FAIL_REF_STATE": 0,
+    "INVALID_SCENARIO": 0,
+    "PASS_CLEAN": 0,
+    "PASS_WITH_NOISE": 0
   }
 }

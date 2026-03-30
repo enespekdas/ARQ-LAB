@@ -11,6 +11,10 @@ ARQ-SEC validation summary generated from current milestone runs.
 - `PASS_CLEAN`: `11`
 - `PASS_WITH_NOISE`: `0`
 
+## Verdict Proofs
+- `PASS_WITH_NOISE` proof summary: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\verdict-proofs\pass-with-noise-summary.md`
+- `PASS_WITH_NOISE` proof report: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\verdict-proofs\pass-with-noise-scenario-report.md`
+
 ## Strengths and gaps
 - Strengths: `PASS_CLEAN` scenarios met the declared contract without residual noise.
 - Noise: `PASS_WITH_NOISE` scenarios matched the contract but still emitted unexpected or review-only residue.
