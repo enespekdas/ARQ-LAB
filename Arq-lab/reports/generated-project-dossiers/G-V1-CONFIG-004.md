@@ -9,7 +9,7 @@
 - language / stack: `Config-heavy repo`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\legacy-admin-config`
-- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-admin-config-20260330t200214z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-admin-config-20260330t214320z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -373,7 +373,7 @@ legacy-admin-config
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 16 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -637,9 +637,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5031`
+- Total LOC considered for authored/generated project content: `5025`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `96.20%`
+- Synthetic filler ratio: `96.32%`
 
 | category | LOC |
 | --- | ---: |
@@ -649,7 +649,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 149 |
+| vendor/generated | 143 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:

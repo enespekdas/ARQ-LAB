@@ -9,7 +9,7 @@
 - language / stack: `App + infra + CI`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t201432z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t215417z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
@@ -898,15 +898,15 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `0b10b8ba8d6909dfe015e149fc08953288c797cc`; diverges from `main` at `d0f334151e8527813a6d3bfd49ca2210b895cca6`
-- `main` tip: `d0f334151e8527813a6d3bfd49ca2210b895cca6`
-- `release/2026.04` tip: `2b43f5b82a30727842ad02218a6cf8d28d4bbec4`; diverges from `main` at `d0f334151e8527813a6d3bfd49ca2210b895cca6`
+- `feature/hotfix-ssl` tip: `1213f1756e61b146dba46285e4e5757fca045d49`; diverges from `main` at `784d7dde0e54cbc34a627a6b1c7846c6bb5b28a7`
+- `main` tip: `784d7dde0e54cbc34a627a6b1c7846c6bb5b28a7`
+- `release/2026.04` tip: `40fd6ad2e7f14693d7d008334ff6394dd74b8ca2`; diverges from `main` at `784d7dde0e54cbc34a627a6b1c7846c6bb5b28a7`
 
 Commit order:
 
-- `d0f334151e8527813a6d3bfd49ca2210b895cca6` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `0b10b8ba8d6909dfe015e149fc08953288c797cc` `c002 temporary hotfix secret`: introduces an intended signal.
-- `2b43f5b82a30727842ad02218a6cf8d28d4bbec4` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `784d7dde0e54cbc34a627a6b1c7846c6bb5b28a7` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `1213f1756e61b146dba46285e4e5757fca045d49` `c002 temporary hotfix secret`: introduces an intended signal.
+- `40fd6ad2e7f14693d7d008334ff6394dd74b8ca2` `c003 release branch clean`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -2675,7 +2675,7 @@ Explainability failure definition:
 - False negatives are most likely on runtime config files where the detector must bind a weak TLS knob out of YAML or env syntax.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
+- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

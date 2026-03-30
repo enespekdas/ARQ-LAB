@@ -9,7 +9,7 @@
 - language / stack: `Python + ops config`
 - repoType: `history`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage`
-- repo remote URL in Gitea: `http://localhost:3001/arq/pem-rotation-lineage-20260330t200417z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/pem-rotation-lineage-20260330t214509z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -549,16 +549,16 @@ pem-rotation-lineage
 
 Branches:
 
-- `main` tip: `9516dbdb25f30892c8a5e4255a8c535845c25442`
+- `main` tip: `7a94a0eaa3c8fe93be8900dfada51bff24f31e63`
 
 Commit order:
 
-- `47dc6a398adc63cda6926e85f63f6af7048c57aa` `c001 bootstrap`: initial clean or baseline assembly.
-- `79bea143e5f04f16b90553dd0744ecff28934308` `c002 add PEM A`: introduces an intended signal.
-- `bd201c7c9e45256a8303b00132c2620f8d2bc031` `c003 formatting change`: scenario state change.
-- `3ce752951dcacd00c1852e182f76c9c773cb2c66` `c004 rotate to PEM B`: replaces one signal with another.
-- `ce91bef5f7d2f71011b8ecbbb5dff50090b013fc` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
-- `9516dbdb25f30892c8a5e4255a8c535845c25442` `c006 safe cleanup`: removes or neutralizes a prior signal.
+- `34f6cabcd2f9f33986a05d474f1920adaa9431a2` `c001 bootstrap`: initial clean or baseline assembly.
+- `f51925845aa66c08e8157106735745cb6e7bd01b` `c002 add PEM A`: introduces an intended signal.
+- `69b8ac36ca3c32a28c7e59d006f9acd003d4df5c` `c003 formatting change`: scenario state change.
+- `68b456ee6e9f834836acd5f69b7a627317666f15` `c004 rotate to PEM B`: replaces one signal with another.
+- `fd2d49c4f9a134b296088f0f22d1ec5ab260c163` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
+- `7a94a0eaa3c8fe93be8900dfada51bff24f31e63` `c006 safe cleanup`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

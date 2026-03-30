@@ -1,8 +1,8 @@
 {
   "byMilestone": {
     "M8": {
-      "cleanExpectedMatches": 8,
-      "explainabilityFailures": 2,
+      "cleanExpectedMatches": 10,
+      "explainabilityFailures": 0,
       "mayFindReview": 0,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 0,
@@ -12,27 +12,27 @@
       "sameSurfaceExtraFindings": 9,
       "scenarios": 2,
       "unexpectedFindings": 34,
-      "unexpectedRegexOnlyFindings": 30,
+      "unexpectedRegexOnlyFindings": 28,
       "verdicts": {
-        "FAIL_EXPLAINABILITY": 2,
+        "FAIL_EXPLAINABILITY": 0,
         "FAIL_FN": 0,
         "FAIL_FP": 0,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
         "PASS_CLEAN": 0,
-        "PASS_WITH_NOISE": 0
+        "PASS_WITH_NOISE": 2
       }
     }
   },
   "byScenario": {
     "M-V8-001": {
-      "cleanExpectedMatches": 5,
+      "cleanExpectedMatches": 6,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 1,
-      "fillerRatio": 0.5464187420285964,
-      "finalVerdict": "FAIL_EXPLAINABILITY",
-      "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 32 unexpected/noisy finding(s) remained after matching (same-surface-extra=8, same-file-different-signal=24, regex-only=29)",
+      "explainabilityFailures": 0,
+      "fillerRatio": 0.5461987519291418,
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "32 unexpected/noisy finding(s) remained after matching (same-surface-extra=8, same-file-different-signal=24, regex-only=28)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -43,8 +43,8 @@
         "scripts": 1,
         "synthetic filler / inflation content": 8140,
         "tests": 0,
-        "total": 14897,
-        "vendor/generated": 366
+        "total": 14903,
+        "vendor/generated": 372
       },
       "mayFindReview": 0,
       "milestone": "M8",
@@ -57,13 +57,13 @@
         "sameFileDifferentSignalFindings": 24,
         "sameSurfaceExtraFindings": 8,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 29
+        "unexpectedRegexOnlyFindings": 28
       },
       "noiseCount": 32,
       "normalizationStats": {
         "collapsedDuplicates": 3,
-        "normalizedFindings": 37,
-        "rawFindings": 40
+        "normalizedFindings": 38,
+        "rawFindings": 41
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\generated-project-dossier.md",
@@ -80,18 +80,18 @@
       "sameFileDifferentSignalFindings": 24,
       "sameSurfaceExtraFindings": 8,
       "unexpectedFindings": 32,
-      "unexpectedRegexOnlyFindings": 29,
-      "verdict": "FAIL_EXPLAINABILITY",
-      "verdictClass": "FAIL_EXPLAINABILITY"
+      "unexpectedRegexOnlyFindings": 28,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     },
     "M-V8-002": {
-      "cleanExpectedMatches": 3,
+      "cleanExpectedMatches": 4,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 1,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.5875067729700442,
-      "finalVerdict": "FAIL_EXPLAINABILITY",
-      "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=1, regex-only=1)",
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "2 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -116,13 +116,13 @@
         "sameFileDifferentSignalFindings": 1,
         "sameSurfaceExtraFindings": 1,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 1
+        "unexpectedRegexOnlyFindings": 0
       },
       "noiseCount": 2,
       "normalizationStats": {
-        "collapsedDuplicates": 8,
-        "normalizedFindings": 6,
-        "rawFindings": 14
+        "collapsedDuplicates": 10,
+        "normalizedFindings": 7,
+        "rawFindings": 17
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\generated-project-dossier.md",
@@ -139,19 +139,19 @@
       "sameFileDifferentSignalFindings": 1,
       "sameSurfaceExtraFindings": 1,
       "unexpectedFindings": 2,
-      "unexpectedRegexOnlyFindings": 1,
-      "verdict": "FAIL_EXPLAINABILITY",
-      "verdictClass": "FAIL_EXPLAINABILITY"
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     }
   },
   "scenarioCount": 2,
   "verdicts": {
-    "FAIL_EXPLAINABILITY": 2,
+    "FAIL_EXPLAINABILITY": 0,
     "FAIL_FN": 0,
     "FAIL_FP": 0,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
     "PASS_CLEAN": 0,
-    "PASS_WITH_NOISE": 0
+    "PASS_WITH_NOISE": 2
   }
 }

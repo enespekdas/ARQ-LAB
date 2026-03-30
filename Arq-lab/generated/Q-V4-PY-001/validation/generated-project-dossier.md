@@ -9,7 +9,7 @@
 - language / stack: `Python / FastAPI`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\notification-signer-python`
-- repo remote URL in Gitea: `http://localhost:3001/arq/notification-signer-python-20260330t200814z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/notification-signer-python-20260330t214838z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -408,7 +408,7 @@ notification-signer-python
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 44 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -682,9 +682,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5062`
+- Total LOC considered for authored/generated project content: `5056`
 - Synthetic filler / inflation LOC: `4730`
-- Synthetic filler ratio: `93.44%`
+- Synthetic filler ratio: `93.55%`
 
 | category | LOC |
 | --- | ---: |
@@ -694,7 +694,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 175 |
+| vendor/generated | 169 |
 | synthetic filler / inflation content | 4730 |
 
 Inflation disclosure:

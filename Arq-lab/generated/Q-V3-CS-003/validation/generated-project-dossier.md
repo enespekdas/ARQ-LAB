@@ -9,7 +9,7 @@
 - language / stack: `C# / .NET 8`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\billing-sdk-csharp`
-- repo remote URL in Gitea: `http://localhost:3001/arq/billing-sdk-csharp-20260330t200639z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/billing-sdk-csharp-20260330t214708z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
