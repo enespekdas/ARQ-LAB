@@ -1,0 +1,72 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9678064387122576,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 7,
+      "scripts": 2,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5001,
+      "vendor/generated": 129
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\edge-gateway-config\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CONFIG-003.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "ae5019fe-c358-4b64-8e0c-f671c0cfd423",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "runtime/.env",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0949-config",
+        "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "node-env-disable"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 1,
+  "mustFindMissing": [
+    {
+      "expected": "envoy-untrusted",
+      "pathContains": "deploy/envoy.yaml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V6-CONFIG-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

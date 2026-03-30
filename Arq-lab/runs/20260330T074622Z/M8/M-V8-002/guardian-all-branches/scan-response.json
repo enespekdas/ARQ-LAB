@@ -1,0 +1,66 @@
+{
+  "applicationId": "75f47ae3-fb94-4262-87ab-58b9ae7f53f8",
+  "applicationKey": "arq-lab-20260330t074622z-m-v8-002",
+  "applicationName": "infra-app-mixed-repo-20260330t074622z",
+  "branchScope": "ALL_BRANCHES",
+  "commitSha": null,
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-30T07:48:57.686905Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/infra-app-mixed-repo-20260330t074622z.git @release/2026.04",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 265,
+  "filesTotal": 265,
+  "finishedAt": "2026-03-30T07:49:11.776600Z",
+  "id": "a78cd084-86a7-4d45-8740-d3cdb058612f",
+  "modules": [
+    {
+      "findingCount": 2,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": null,
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": null,
+  "startedAt": "2026-03-30T07:48:59.034076Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 2,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 2,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 4,
+    "refCount": 3,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main",
+      "feature/hotfix-ssl",
+      "release/2026.04"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

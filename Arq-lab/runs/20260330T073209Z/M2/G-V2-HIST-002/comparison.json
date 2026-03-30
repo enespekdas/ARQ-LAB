@@ -1,0 +1,67 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-002\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.4875591820288103,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-002\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-002\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 22,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4840,
+      "tests": 16,
+      "total": 9927,
+      "vendor/generated": 246
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\partner-branch-divergence\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 2,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-002.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "feature/partner-hotfix",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "0ff75b31-a487-4c1b-8a75-ac8a3cf88228",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/modules/partner/bootstrap/branchLeak.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "feature-branch-secret"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "module": "guardian",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V2-HIST-002",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

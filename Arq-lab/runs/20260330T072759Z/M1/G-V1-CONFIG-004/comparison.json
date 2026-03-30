@@ -1,0 +1,130 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-CONFIG-004\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.96318407960199,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-CONFIG-004\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-CONFIG-004\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 19,
+      "scripts": 2,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5025,
+      "vendor/generated": 143
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M1\\legacy-admin-config\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V1-CONFIG-004.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5396de6f-01e1-40bc-b147-36e27f14c8a0",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "config/runtime/admin-prod.yaml",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "ops-runtime"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a1e6a976-9f59-4e88-b4c8-b9c15626c3aa",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/runtime/portal.env",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "service-account"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9142b33e-6194-46f7-89f0-f0a896adfef5",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "config/keys/admin_portal.pem",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "private-key"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b2ec04a7-0ec4-43d3-bc4f-195ec211516c",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/prod/admin.properties",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "active-properties"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "module": "guardian",
+  "mustFindExpected": 4,
+  "mustFindMatched": 4,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V1-CONFIG-004",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

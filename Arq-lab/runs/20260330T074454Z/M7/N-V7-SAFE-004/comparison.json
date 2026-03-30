@@ -1,0 +1,45 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\N-V7-SAFE-004\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9448661606072712,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\N-V7-SAFE-004\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\N-V7-SAFE-004\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 93,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4730,
+      "tests": 32,
+      "total": 5006,
+      "vendor/generated": 124
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M7\\safe-wrapper-playground\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\N-V7-SAFE-004.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M7",
+  "module": "both",
+  "mustFindExpected": 0,
+  "mustFindMatched": 0,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "N-V7-SAFE-004",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

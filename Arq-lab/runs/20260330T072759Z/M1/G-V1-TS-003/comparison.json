@@ -1,0 +1,130 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-TS-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.4853590052146009,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-TS-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-TS-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 31,
+      "live config": 1,
+      "scripts": 2,
+      "synthetic filler / inflation content": 4840,
+      "tests": 16,
+      "total": 9972,
+      "vendor/generated": 280
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M1\\partner-api-node\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V1-TS-003.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "98b0e460-5f41-4c61-9a9c-6869cfe08b55",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/config/secrets.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "active-secret"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "71e892c0-ffe9-4cac-b7ba-694c56f44b33",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "config/production.json",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "prod-json"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "1c5efc4a-100c-45a9-9658-34ae1ccd7870",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/modules/partners/bootstrap/partnerKeyLoader.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "key-material"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "40eb2d4f-aebf-4ed7-b37e-7ca2c6d61510",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "scripts/bootstrap-partner.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "bootstrap-script"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "module": "guardian",
+  "mustFindExpected": 4,
+  "mustFindMatched": 4,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V1-TS-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

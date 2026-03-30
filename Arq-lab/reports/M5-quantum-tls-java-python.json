@@ -9,6 +9,95 @@
       "scenarios": 3
     }
   },
+  "byScenario": {
+    "Q-V5-JAVA-001": {
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-001\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "extraFindings": 0,
+      "fillerRatio": 0.7030157779109247,
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-001\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-001\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 11,
+        "fixtures": 0,
+        "live business code": 1209,
+        "live config": 3,
+        "scripts": 1,
+        "synthetic filler / inflation content": 3520,
+        "tests": 104,
+        "total": 5007,
+        "vendor/generated": 132
+      },
+      "milestone": "M5",
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\partner-client-java\\validation\\generated-project-dossier.md",
+      "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 3,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-JAVA-001.md",
+      "verdict": "PASS"
+    },
+    "Q-V5-JAVA-003": {
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-003\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "extraFindings": 0,
+      "fillerRatio": 0.7007764284292256,
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-003\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-003\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 11,
+        "fixtures": 0,
+        "live business code": 1237,
+        "live config": 9,
+        "scripts": 1,
+        "synthetic filler / inflation content": 3520,
+        "tests": 104,
+        "total": 5023,
+        "vendor/generated": 114
+      },
+      "milestone": "M5",
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\gateway-config-java\\validation\\generated-project-dossier.md",
+      "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 3,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-JAVA-003.md",
+      "verdict": "PASS"
+    },
+    "Q-V5-PY-002": {
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "extraFindings": 0,
+      "fillerRatio": 0.9370047543581617,
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 11,
+        "fixtures": 0,
+        "live business code": 95,
+        "live config": 0,
+        "scripts": 1,
+        "synthetic filler / inflation content": 4730,
+        "tests": 32,
+        "total": 5048,
+        "vendor/generated": 164
+      },
+      "milestone": "M5",
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M5\\data-sync-python\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 1,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-PY-002.md",
+      "verdict": "PASS"
+    }
+  },
   "scenarioCount": 3,
   "verdicts": {
     "PASS": 3

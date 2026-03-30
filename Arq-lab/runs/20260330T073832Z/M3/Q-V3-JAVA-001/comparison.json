@@ -1,0 +1,109 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6979972238746778,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 1218,
+      "live config": 3,
+      "scripts": 1,
+      "synthetic filler / inflation content": 3520,
+      "tests": 104,
+      "total": 5043,
+      "vendor/generated": 159
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\identity-gateway-java\\validation\\generated-project-dossier.md",
+    "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 3,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-JAVA-001.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "db0ce6b7-63cb-4222-bbb5-15fbea0254df",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0072-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "md5"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8102166a-5837-4e1d-a456-9257cdc51147",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0177-java",
+        "ruleName": "Weak Hash",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "sha1"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "17ec8f38-bc90-42a7-add0-80b7afcb0ac7",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0013-java",
+        "ruleName": "AES Mode",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "aes-ecb"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "module": "quantum",
+  "mustFindExpected": 3,
+  "mustFindMatched": 3,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V3-JAVA-001",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

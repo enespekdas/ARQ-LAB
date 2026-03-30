@@ -1,0 +1,207 @@
+legacy-payment-crypto-java
+|-- docs
+|   `-- architecture
+|       |-- section-01.md
+|       |-- section-02.md
+|       |-- section-03.md
+|       |-- section-04.md
+|       |-- section-05.md
+|       |-- section-06.md
+|       |-- section-07.md
+|       |-- section-08.md
+|       |-- section-09.md
+|       |-- section-10.md
+|       |-- section-11.md
+|       |-- section-12.md
+|       |-- section-13.md
+|       |-- section-14.md
+|       |-- section-15.md
+|       |-- section-16.md
+|       |-- section-17.md
+|       |-- section-18.md
+|       |-- section-19.md
+|       |-- section-20.md
+|       |-- section-21.md
+|       |-- section-22.md
+|       |-- section-23.md
+|       |-- section-24.md
+|       |-- section-25.md
+|       |-- section-26.md
+|       |-- section-27.md
+|       |-- section-28.md
+|       |-- section-29.md
+|       |-- section-30.md
+|       |-- section-31.md
+|       `-- section-32.md
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       |-- runbook-06.md
+|       |-- runbook-07.md
+|       |-- runbook-08.md
+|       |-- runbook-09.md
+|       |-- runbook-10.md
+|       |-- runbook-11.md
+|       |-- runbook-12.md
+|       |-- runbook-13.md
+|       |-- runbook-14.md
+|       |-- runbook-15.md
+|       |-- runbook-16.md
+|       |-- runbook-17.md
+|       |-- runbook-18.md
+|       |-- runbook-19.md
+|       |-- runbook-20.md
+|       |-- runbook-21.md
+|       |-- runbook-22.md
+|       |-- runbook-23.md
+|       |-- runbook-24.md
+|       |-- runbook-25.md
+|       |-- runbook-26.md
+|       |-- runbook-27.md
+|       |-- runbook-28.md
+|       |-- runbook-29.md
+|       |-- runbook-30.md
+|       |-- runbook-31.md
+|       `-- runbook-32.md
+|-- scripts
+|   `-- smoke.ps1
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       |-- reference-06.sql
+|       |-- reference-07.sql
+|       |-- reference-08.sql
+|       |-- reference-09.sql
+|       |-- reference-10.sql
+|       |-- reference-11.sql
+|       |-- reference-12.sql
+|       |-- reference-13.sql
+|       |-- reference-14.sql
+|       |-- reference-15.sql
+|       |-- reference-16.sql
+|       |-- reference-17.sql
+|       |-- reference-18.sql
+|       |-- reference-19.sql
+|       |-- reference-20.sql
+|       |-- reference-21.sql
+|       |-- reference-22.sql
+|       |-- reference-23.sql
+|       |-- reference-24.sql
+|       |-- reference-25.sql
+|       |-- reference-26.sql
+|       |-- reference-27.sql
+|       |-- reference-28.sql
+|       |-- reference-29.sql
+|       |-- reference-30.sql
+|       |-- reference-31.sql
+|       `-- reference-32.sql
+|-- src
+|   |-- main
+|   |   |-- java
+|   |   |   `-- com
+|   |   |       `-- arq
+|   |   |           `-- legacypaymentcryptojava
+|   |   |               |-- domain
+|   |   |               |   |-- BalanceRecord.java
+|   |   |               |   |-- DisputeRecord.java
+|   |   |               |   |-- InvoiceRecord.java
+|   |   |               |   |-- LedgerRecord.java
+|   |   |               |   |-- PartnerRecord.java
+|   |   |               |   |-- PayoutRecord.java
+|   |   |               |   |-- RefundRecord.java
+|   |   |               |   `-- SettlementRecord.java
+|   |   |               |-- dto
+|   |   |               |   |-- BalanceRequest.java
+|   |   |               |   |-- BalanceResponse.java
+|   |   |               |   |-- DisputeRequest.java
+|   |   |               |   |-- DisputeResponse.java
+|   |   |               |   |-- InvoiceRequest.java
+|   |   |               |   |-- InvoiceResponse.java
+|   |   |               |   |-- LedgerRequest.java
+|   |   |               |   |-- LedgerResponse.java
+|   |   |               |   |-- PartnerRequest.java
+|   |   |               |   |-- PartnerResponse.java
+|   |   |               |   |-- PayoutRequest.java
+|   |   |               |   |-- PayoutResponse.java
+|   |   |               |   |-- RefundRequest.java
+|   |   |               |   |-- RefundResponse.java
+|   |   |               |   |-- SettlementRequest.java
+|   |   |               |   `-- SettlementResponse.java
+|   |   |               |-- repository
+|   |   |               |   |-- BalanceRepository.java
+|   |   |               |   |-- DisputeRepository.java
+|   |   |               |   |-- InvoiceRepository.java
+|   |   |               |   |-- LedgerRepository.java
+|   |   |               |   |-- PartnerRepository.java
+|   |   |               |   |-- PayoutRepository.java
+|   |   |               |   |-- RefundRepository.java
+|   |   |               |   `-- SettlementRepository.java
+|   |   |               |-- security
+|   |   |               |   |-- BatchReconciliationCipher.java
+|   |   |               |   |-- LegacyEnvelopeCipher.java
+|   |   |               |   |-- LegacyPasswordFactory.java
+|   |   |               |   `-- SecureEnvelopeCipher.java
+|   |   |               |-- service
+|   |   |               |   |-- BalanceService.java
+|   |   |               |   |-- DisputeService.java
+|   |   |               |   |-- InvoiceService.java
+|   |   |               |   |-- LedgerService.java
+|   |   |               |   |-- PartnerService.java
+|   |   |               |   |-- PayoutService.java
+|   |   |               |   |-- RefundService.java
+|   |   |               |   `-- SettlementService.java
+|   |   |               |-- web
+|   |   |               |   |-- BalanceController.java
+|   |   |               |   |-- DisputeController.java
+|   |   |               |   |-- InvoiceController.java
+|   |   |               |   |-- LedgerController.java
+|   |   |               |   |-- PartnerController.java
+|   |   |               |   |-- PayoutController.java
+|   |   |               |   |-- RefundController.java
+|   |   |               |   `-- SettlementController.java
+|   |   |               `-- LegacypaymentcryptojavaApplication.java
+|   |   `-- resources
+|   |       `-- application.yml
+|   `-- test
+|       `-- java
+|           `-- com
+|               `-- arq
+|                   `-- legacypaymentcryptojava
+|                       `-- service
+|                           |-- BalanceServiceTest.java
+|                           |-- DisputeServiceTest.java
+|                           |-- InvoiceServiceTest.java
+|                           |-- LedgerServiceTest.java
+|                           |-- PartnerServiceTest.java
+|                           |-- PayoutServiceTest.java
+|                           |-- RefundServiceTest.java
+|                           `-- SettlementServiceTest.java
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- explainability-contract.json
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- .gitignore
+|-- mvnw
+|-- mvnw.cmd
+|-- pom.xml
+`-- README.md

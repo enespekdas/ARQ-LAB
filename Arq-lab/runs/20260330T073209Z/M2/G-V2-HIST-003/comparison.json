@@ -1,0 +1,88 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9347826086956522,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 13,
+      "fixtures": 0,
+      "live business code": 87,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4730,
+      "tests": 32,
+      "total": 5060,
+      "vendor/generated": 182
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M2\\pem-rotation-lineage\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-003.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HISTORY_ONLY",
+        "findingId": "a3c15936-ef31-431a-81a1-37caa2252124",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": false,
+        "primaryFilePath": "ops/keys/service-a.pem",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "REF_HISTORY",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rotated-key-a"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_AND_HISTORY",
+        "findingId": "fcd77647-3012-496a-87e5-730f3263cd3b",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/keys/service-b.pem",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "REF_HISTORY",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rotated-key-b"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "module": "guardian",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V2-HIST-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

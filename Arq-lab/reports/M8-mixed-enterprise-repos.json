@@ -9,6 +9,66 @@
       "scenarios": 2
     }
   },
+  "byScenario": {
+    "M-V8-001": {
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "extraFindings": 0,
+      "fillerRatio": 0.5464187420285964,
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 44,
+        "fixtures": 0,
+        "live business code": 1552,
+        "live config": 5,
+        "scripts": 1,
+        "synthetic filler / inflation content": 8140,
+        "tests": 0,
+        "total": 14897,
+        "vendor/generated": 366
+      },
+      "milestone": "M8",
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\generated-project-dossier.md",
+      "realismJustification": "contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 3,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-001.md",
+      "verdict": "PASS"
+    },
+    "M-V8-002": {
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "extraFindings": 0,
+      "fillerRatio": 0.5875067729700442,
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 22,
+        "fixtures": 0,
+        "live business code": 204,
+        "live config": 3,
+        "scripts": 2,
+        "synthetic filler / inflation content": 7590,
+        "tests": 32,
+        "total": 12919,
+        "vendor/generated": 277
+      },
+      "milestone": "M8",
+      "mustFindMissing": 1,
+      "mustNotFindViolations": 0,
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 2,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-002.md",
+      "verdict": "FAIL_FN"
+    }
+  },
   "scenarioCount": 2,
   "verdicts": {
     "FAIL_FN": 1,

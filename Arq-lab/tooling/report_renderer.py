@@ -9,14 +9,16 @@ from .utils import ensure_dir, write_json, write_text
 
 
 def render_scenario_report(scenario: dict[str, Any], comparison: dict[str, Any], scans: list[dict[str, Any]]) -> str:
+    audit = comparison.get("auditArtifacts", {})
     lines = [
-        f"# {scenario['id']} — {scenario['repo_name']}",
+        f"# {scenario['id']} - {scenario['repo_name']}",
         "",
         f"- Milestone: `{scenario['milestone']}`",
         f"- Module: `{scenario['module']}`",
         f"- Verdict: `{comparison['verdict']}`",
         f"- Stack: `{scenario['stack']}`",
         f"- Domain: {scenario['domain']}",
+        f"- Dossier: `{audit.get('reportDossierPath', 'n/a')}`",
         "",
         "## Scan summary",
     ]
@@ -50,6 +52,7 @@ def write_scenario_report(destination: Path, scenario: dict[str, Any], compariso
 def aggregate_comparisons(comparisons: list[dict[str, Any]]) -> dict[str, Any]:
     verdict_counts: dict[str, int] = {}
     by_milestone: dict[str, dict[str, Any]] = {}
+    by_scenario: dict[str, dict[str, Any]] = {}
     for comparison in comparisons:
         verdict = comparison["verdict"]
         verdict_counts[verdict] = verdict_counts.get(verdict, 0) + 1
@@ -70,7 +73,28 @@ def aggregate_comparisons(comparisons: list[dict[str, Any]]) -> dict[str, Any]:
         milestone_summary["extraFindings"] += len(comparison["extraFindings"])
         milestone_summary["explainabilityFailures"] += len(comparison["explainabilityFailures"])
         milestone_summary["refStateFailures"] += len(comparison["refStateFailures"])
-    return {"scenarioCount": len(comparisons), "verdicts": verdict_counts, "byMilestone": by_milestone}
+        audit = comparison.get("auditArtifacts", {})
+        loc = audit.get("locComposition", {})
+        by_scenario[comparison["scenarioId"]] = {
+            "milestone": comparison["milestone"],
+            "verdict": comparison["verdict"],
+            "mustFindMissing": len(comparison["mustFindMissing"]),
+            "mustNotFindViolations": len(comparison["mustNotFindViolations"]),
+            "extraFindings": len(comparison["extraFindings"]),
+            "explainabilityFailures": len(comparison["explainabilityFailures"]),
+            "refStateFailures": len(comparison["refStateFailures"]),
+            "dossierPath": audit.get("dossierPath", ""),
+            "projectLocalDossierPath": audit.get("projectLocalDossierPath", ""),
+            "reportDossierPath": audit.get("reportDossierPath", ""),
+            "generatedManifestPath": audit.get("generatedManifestPath", ""),
+            "generatedTreePath": audit.get("generatedTreePath", ""),
+            "dossierMissing": audit.get("dossierMissing", True),
+            "fillerRatio": audit.get("fillerRatio", 0.0),
+            "realismScore": audit.get("realismScore"),
+            "realismJustification": audit.get("realismJustification", ""),
+            "locComposition": loc,
+        }
+    return {"scenarioCount": len(comparisons), "verdicts": verdict_counts, "byMilestone": by_milestone, "byScenario": by_scenario}
 
 
 def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> None:
@@ -87,22 +111,72 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
     ]
     for verdict, count in sorted(aggregate["verdicts"].items()):
         markdown_lines.append(f"- `{verdict}`: `{count}`")
-    markdown_lines.append("")
-    markdown_lines.append("## Milestones")
+    markdown_lines.extend(["", "## Milestones"])
     for milestone, summary in sorted(aggregate["byMilestone"].items()):
         markdown_lines.append(
             f"- `{milestone}`: scenarios=`{summary['scenarios']}`, missing=`{summary['mustFindMissing']}`, fp=`{summary['mustNotFindViolations']}`, noise=`{summary['extraFindings']}`, explainability=`{summary['explainabilityFailures']}`, ref-state=`{summary['refStateFailures']}`"
+        )
+    markdown_lines.extend(["", "## Scenario Auditability"])
+    for scenario_id, summary in sorted(aggregate["byScenario"].items()):
+        loc = summary.get("locComposition", {})
+        markdown_lines.append(
+            f"- `{scenario_id}`: verdict=`{summary['verdict']}`, realism=`{summary.get('realismScore', 'n/a')}`, fillerRatio=`{summary.get('fillerRatio', 0.0):.2%}`, dossierMissing=`{summary.get('dossierMissing', True)}`, dossier=`{summary.get('reportDossierPath', 'n/a')}`, liveCode=`{loc.get('live business code', 0)}`, liveConfig=`{loc.get('live config', 0)}`, tests=`{loc.get('tests', 0)}`, filler=`{loc.get('synthetic filler / inflation content', 0)}`"
         )
     write_text(root / "aggregate-summary.md", "\n".join(markdown_lines).rstrip() + "\n")
 
     csv_buffer = StringIO()
     writer = csv.DictWriter(
         csv_buffer,
-        fieldnames=["milestone", "scenarios", "mustFindMissing", "mustNotFindViolations", "extraFindings", "explainabilityFailures", "refStateFailures"],
+        fieldnames=[
+            "scenarioId",
+            "milestone",
+            "verdict",
+            "mustFindMissing",
+            "mustNotFindViolations",
+            "extraFindings",
+            "explainabilityFailures",
+            "refStateFailures",
+            "dossierMissing",
+            "fillerRatio",
+            "realismScore",
+            "dossierPath",
+            "liveBusinessCode",
+            "liveConfig",
+            "tests",
+            "docs",
+            "scripts",
+            "fixtures",
+            "vendorGenerated",
+            "syntheticFiller",
+        ],
     )
     writer.writeheader()
-    for milestone, summary in sorted(aggregate["byMilestone"].items()):
-        writer.writerow({"milestone": milestone, **summary})
+    for scenario_id, summary in sorted(aggregate["byScenario"].items()):
+        loc = summary.get("locComposition", {})
+        writer.writerow(
+            {
+                "scenarioId": scenario_id,
+                "milestone": summary["milestone"],
+                "verdict": summary["verdict"],
+                "mustFindMissing": summary["mustFindMissing"],
+                "mustNotFindViolations": summary["mustNotFindViolations"],
+                "extraFindings": summary["extraFindings"],
+                "explainabilityFailures": summary["explainabilityFailures"],
+                "refStateFailures": summary["refStateFailures"],
+                "dossierMissing": summary["dossierMissing"],
+                "fillerRatio": summary["fillerRatio"],
+                "realismScore": summary["realismScore"],
+                "dossierPath": summary["reportDossierPath"],
+                "liveBusinessCode": loc.get("live business code", 0),
+                "liveConfig": loc.get("live config", 0),
+                "tests": loc.get("tests", 0),
+                "docs": loc.get("docs", 0),
+                "scripts": loc.get("scripts", 0),
+                "fixtures": loc.get("fixtures", 0),
+                "vendorGenerated": loc.get("vendor/generated", 0),
+                "syntheticFiller": loc.get("synthetic filler / inflation content", 0),
+            }
+        )
     write_text(root / "aggregate-summary.csv", csv_buffer.getvalue())
 
     fail_buckets = [
@@ -115,21 +189,18 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
             "extraFindings": len(comparison["extraFindings"]),
             "explainabilityFailures": len(comparison["explainabilityFailures"]),
             "refStateFailures": len(comparison["refStateFailures"]),
+            "reportDossierPath": comparison.get("auditArtifacts", {}).get("reportDossierPath", ""),
+            "dossierMissing": comparison.get("auditArtifacts", {}).get("dossierMissing", True),
         }
         for comparison in comparisons
         if comparison["verdict"] != "PASS"
     ]
     write_json(root / "fail-buckets.json", fail_buckets)
 
-    tuning_lines = [
-        "# Tuning Backlog Seed",
-        "",
-        "Generated from current scenario comparison buckets.",
-        "",
-    ]
+    tuning_lines = ["# Tuning Backlog Seed", "", "Generated from current scenario comparison buckets.", ""]
     for bucket in fail_buckets:
         tuning_lines.append(
-            f"- `{bucket['scenarioId']}` / `{bucket['verdict']}`: missing=`{bucket['mustFindMissing']}`, fp=`{bucket['mustNotFindViolations']}`, noise=`{bucket['extraFindings']}`, explainability=`{bucket['explainabilityFailures']}`, ref-state=`{bucket['refStateFailures']}`"
+            f"- `{bucket['scenarioId']}` / `{bucket['verdict']}`: missing=`{bucket['mustFindMissing']}`, fp=`{bucket['mustNotFindViolations']}`, noise=`{bucket['extraFindings']}`, explainability=`{bucket['explainabilityFailures']}`, ref-state=`{bucket['refStateFailures']}`, dossier=`{bucket['reportDossierPath']}`"
         )
     write_text(root / "tuning-backlog-seed.md", "\n".join(tuning_lines).rstrip() + "\n")
 
@@ -141,6 +212,7 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
     ]
     write_text(root / "explainability-scorecard.md", "\n".join(explainability_lines).rstrip() + "\n")
 
+    dossier_count = sum(1 for item in comparisons if not item.get("auditArtifacts", {}).get("dossierMissing", True))
     final_lines = [
         "# FINAL VALIDATION STATUS",
         "",
@@ -157,6 +229,7 @@ def write_aggregate_reports(root: Path, comparisons: list[dict[str, Any]]) -> No
             "- Strengths: scenarios with `PASS` indicate the current detector and explainability path met the declared contract.",
             "- Noise: scenarios with `PASS_WITH_NOISE` surfaced additional findings beyond the expected contract.",
             "- Gaps: `FAIL_FN`, `FAIL_FP`, `FAIL_EXPLAINABILITY`, and `FAIL_REF_STATE` scenarios require follow-up.",
+            f"- Dossier coverage: `{dossier_count}` / `{aggregate['scenarioCount']}` scenarios have required dossier, manifest, and tree artifacts.",
         ]
     )
     write_text(root / "FINAL_VALIDATION_STATUS.md", "\n".join(final_lines).rstrip() + "\n")

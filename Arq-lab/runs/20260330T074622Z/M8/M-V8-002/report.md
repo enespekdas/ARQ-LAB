@@ -1,0 +1,27 @@
+# M-V8-002 - infra-app-mixed-repo
+
+- Milestone: `M8`
+- Module: `both`
+- Verdict: `FAIL_FN`
+- Stack: `App + infra + CI`
+- Domain: Infra-heavy app repository with hotfix and release branch.
+- Dossier: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\generated-project-dossiers\M-V8-002.md`
+
+## Scan summary
+- `guardian-head-main`: `SUCCEEDED` on `main`
+- `quantum-head-main`: `SUCCEEDED` on `main`
+- `guardian-ref-history-main`: `SUCCEEDED` on `main`
+- `guardian-all-branches`: `SUCCEEDED` on `n/a`
+
+## Comparison
+- mustFindMatched: `3` / `4`
+- mustFindMissing: `1`
+- mustNotFindViolations: `0`
+- extraFindings: `0`
+- explainabilityFailures: `0`
+- refStateFailures: `0`
+
+## Runnability
+- build: `passed`
+- test: `passed`
+- smoke: `passed`

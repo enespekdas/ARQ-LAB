@@ -1,0 +1,114 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5875067729700442,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 22,
+      "fixtures": 0,
+      "live business code": 204,
+      "live config": 3,
+      "scripts": 2,
+      "synthetic filler / inflation content": 7590,
+      "tests": 32,
+      "total": 12919,
+      "vendor/generated": 277
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 2,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-002.md"
+  },
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f9f86836-8467-4dba-9ea0-4b7c8b87815e",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/config/production.env",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "guardian-active-secret"
+    },
+    {
+      "actual": {
+        "branchName": "feature/hotfix-ssl",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "6dbc60ad-0046-4cf4-8702-27742b6c4b79",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/hotfix/feature-secret.txt",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "guardian-hotfix-secret"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "4461dfb5-dcf8-4639-a22d-34dfb27d6345",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/console/src/modules/security/legacyDigest.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0613-typescript",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "quantum-app-md5"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "module": "both",
+  "mustFindExpected": 4,
+  "mustFindMatched": 3,
+  "mustFindMissing": [
+    {
+      "expected": "quantum-config-trust",
+      "pathContains": "deploy/envoy.yaml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "M-V8-002",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

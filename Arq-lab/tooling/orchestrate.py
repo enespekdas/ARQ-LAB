@@ -12,6 +12,7 @@ from .gitea_client import GiteaClient
 from .git_factory import GitFactory
 from .logging_utils import log_event
 from .models import BuildStatus, ScenarioSpec
+from .project_dossier import write_project_dossier
 from .report_renderer import aggregate_comparisons, write_aggregate_reports, write_scenario_report
 from .repo_builders import materialize_scenario
 from .scan_runner import run_scan_plan
@@ -31,29 +32,43 @@ MILESTONE_REPORT_NAMES = {
 }
 
 
-def _command_records(results: list[CommandResult]) -> list[dict[str, Any]]:
-    return [
-        {
-            "command": result.command,
-            "cwd": result.cwd,
-            "returncode": result.returncode,
-            "stdout": result.stdout,
-            "stderr": result.stderr,
-        }
-        for result in results
-    ]
-
-
-def _execute_plan(plan: list[list[str]], repo_root: Path) -> BuildStatus:
+def _execute_plan(plan: list[list[str]], repo_root: Path, *, stage: str, log_root: Path) -> BuildStatus:
     if not plan:
         return BuildStatus(state="skipped", commands=[])
-    results: list[CommandResult] = []
-    for command in plan:
+    command_records: list[dict[str, Any]] = []
+    for index, command in enumerate(plan, start=1):
         result = run_command(command, repo_root, check=False)
-        results.append(result)
+        log_path = ensure_dir(log_root) / f"{stage}-{index:02d}.log"
+        write_text(
+            log_path,
+            "\n".join(
+                [
+                    f"command: {' '.join(result.command)}",
+                    f"cwd: {result.cwd}",
+                    f"returncode: {result.returncode}",
+                    "",
+                    "[stdout]",
+                    result.stdout,
+                    "",
+                    "[stderr]",
+                    result.stderr,
+                ]
+            ).rstrip()
+            + "\n",
+        )
+        command_records.append(
+            {
+                "command": result.command,
+                "cwd": result.cwd,
+                "returncode": result.returncode,
+                "stdout": result.stdout,
+                "stderr": result.stderr,
+                "logPath": str(log_path),
+            }
+        )
         if result.returncode != 0:
-            return BuildStatus(state="failed", commands=_command_records(results))
-    return BuildStatus(state="passed", commands=_command_records(results))
+            return BuildStatus(state="failed", commands=command_records)
+    return BuildStatus(state="passed", commands=command_records)
 
 
 def _bootstrap_foundation(config) -> None:
@@ -143,10 +158,11 @@ def _load_all_existing_comparisons(config) -> list[dict[str, Any]]:
 
 def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bool, arq: ArqClient | None, gitea: GiteaClient | None, git_factory: GitFactory) -> dict[str, Any]:
     repo_root, repo_metadata = materialize_scenario(config, scenario, git_factory)
-    build_status = _execute_plan(scenario.build_plan.build, repo_root)
-    test_status = _execute_plan(scenario.build_plan.test, repo_root)
-    smoke_status = _execute_plan(scenario.build_plan.smoke, repo_root)
     scenario_run_root = ensure_dir(run_root / scenario.id)
+    runnability_log_root = ensure_dir(repo_root / "validation" / "runnability-logs")
+    build_status = _execute_plan(scenario.build_plan.build, repo_root, stage="build", log_root=runnability_log_root)
+    test_status = _execute_plan(scenario.build_plan.test, repo_root, stage="test", log_root=runnability_log_root)
+    smoke_status = _execute_plan(scenario.build_plan.smoke, repo_root, stage="smoke", log_root=runnability_log_root)
     runnability = {"build": build_status.state, "test": test_status.state, "smoke": smoke_status.state}
     application = None
     gitea_metadata = None
@@ -198,6 +214,21 @@ def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bo
             )
 
     comparison = compare_scenario(scenario, actual_findings, runnability=runnability)
+    comparison.update(
+        {
+            "auditArtifacts": write_project_dossier(
+                config=config,
+                scenario=scenario,
+                repo_root=repo_root,
+                repo_metadata=repo_metadata,
+                gitea_metadata=gitea_metadata,
+                build_status=build_status,
+                test_status=test_status,
+                smoke_status=smoke_status,
+                comparison=comparison,
+            )
+        }
+    )
     write_json(scenario_run_root / "scenario-metadata.json", {"scenario": _scenario_dict(scenario), "repoMetadata": repo_metadata})
     write_json(scenario_run_root / "gitea-repository.json", gitea_metadata or {})
     write_json(scenario_run_root / "application.json", application or {})
