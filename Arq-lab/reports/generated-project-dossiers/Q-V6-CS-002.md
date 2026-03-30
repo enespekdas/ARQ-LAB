@@ -9,7 +9,7 @@
 - language / stack: `C# / .NET 8`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\admin-integrations-csharp`
-- repo remote URL in Gitea: `http://localhost:3001/arq/admin-integrations-csharp-20260330t074334z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/admin-integrations-csharp-20260330t105448z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -380,7 +380,7 @@ admin-integrations-csharp
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2270 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 672 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 673 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 183 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 11 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -522,25 +522,25 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `dotnet restore src/AppHost/AppHost.csproj`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\dotnet\dotnet.exe restore src/AppHost/AppHost.csproj`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\admin-integrations-csharp\validation\runnability-logs\build-01.log`
-- Command: `dotnet build src/AppHost/AppHost.csproj -c Release`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\dotnet\dotnet.exe build src/AppHost/AppHost.csproj -c Release`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\admin-integrations-csharp\validation\runnability-logs\build-02.log`
 
 ### Test
 
-- Command: `dotnet test tests/AppHost.Tests/AppHost.Tests.csproj -c Release --no-build`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\dotnet\dotnet.exe test tests/AppHost.Tests/AppHost.Tests.csproj -c Release --no-build`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\admin-integrations-csharp\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `dotnet run --project src/AppHost/AppHost.csproj -- --smoke`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\dotnet\dotnet.exe run --project src/AppHost/AppHost.csproj -- --smoke`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\admin-integrations-csharp\validation\runnability-logs\smoke-01.log`
@@ -592,9 +592,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8069`
+- Total LOC considered for authored/generated project content: `4998`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `59.98%`
+- Synthetic filler ratio: `96.84%`
 
 | category | LOC |
 | --- | ---: |
@@ -604,7 +604,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 0 |
 | fixtures | 0 |
-| vendor/generated | 3197 |
+| vendor/generated | 126 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -657,6 +657,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 

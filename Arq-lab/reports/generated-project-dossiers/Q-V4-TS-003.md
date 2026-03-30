@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Node`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node`
-- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-20260330t074019z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-20260330t105155z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -448,7 +448,7 @@ customer-portal-node
 | src/modules/invites/invites.service.ts | live-code | 2 | Runtime business service implementing Invites.Service logic. | no | no | no | yes | yes | no |
 | src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
-| src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | no | no | yes | yes | no |
+| src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | yes | no | yes | yes | no |
 | src/modules/security/legacySha1Digest.ts | live-code | 2 | Runtime business module contributing to Legacy Sha1Digest. | no | no | no | yes | yes | no |
 | src/modules/security/secureDigest.ts | live-code | 2 | Runtime business module contributing to Secure Digest. | no | yes | no | yes | yes | no |
 | src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
@@ -461,7 +461,7 @@ customer-portal-node
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2732 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1022 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1024 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 231 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -483,6 +483,7 @@ customer-portal-node
 ## 7. Near-Real Negative Surfaces
 
 - `README.md`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/security/secureDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -630,25 +631,25 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `npm install --silent`
+- Command: `C:\Program Files\nodejs\npm.cmd install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\build-01.log`
-- Command: `npm run build`
+- Command: `C:\Program Files\nodejs\npm.cmd run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\build-02.log`
 
 ### Test
 
-- Command: `npm test -- --runInBand`
+- Command: `C:\Program Files\nodejs\npm.cmd test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `node dist/scripts/smoke.js`
+- Command: `C:\Program Files\nodejs\node.exe dist/scripts/smoke.js`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\smoke-01.log`
@@ -917,7 +918,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Digest. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -939,9 +940,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `13855`
+- Total LOC considered for authored/generated project content: `9924`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `34.93%`
+- Synthetic filler ratio: `48.77%`
 
 | category | LOC |
 | --- | ---: |
@@ -951,7 +952,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 4170 |
+| vendor/generated | 239 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -1007,13 +1008,14 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully.
+- What makes it feel real: build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `2/5`
+- Realism score: `1/5`
 
 ## 17. Final Reviewer Summary
 

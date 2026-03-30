@@ -9,7 +9,7 @@
 - language / stack: `Java + Node + Python monorepo`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/internal-platform-monorepo-20260330t074622z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/internal-platform-monorepo-20260330t110030z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -545,7 +545,7 @@ internal-platform-monorepo
 | apps/admin-api/src/modules/invites/invites.service.ts | live-code | 2 | Runtime business service implementing Invites.Service logic. | no | no | no | yes | yes | no |
 | apps/admin-api/src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | apps/admin-api/src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
-| apps/admin-api/src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | no | no | yes | yes | no |
+| apps/admin-api/src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | yes | no | yes | yes | no |
 | apps/admin-api/src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
 | apps/admin-api/src/modules/tokens/tokens.service.ts | live-code | 2 | Runtime business service implementing Tokens.Service logic. | no | no | no | yes | yes | no |
 | apps/admin-api/src/server.ts | live-code | 4 | Runtime business module contributing to Server. | no | no | no | yes | yes | no |
@@ -738,7 +738,7 @@ internal-platform-monorepo
 | services/platform-java/src/main/java/com/arq/platformjava/repository/PayoutRepository.java | live-code | 21 | Persistence or data-access helper for Payout Repository. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
-| services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java | live-code | 3 | Runtime business service implementing Legacy Cipher Service logic. | yes | no | no | yes | yes | no |
+| services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java | live-code | 3 | Runtime business service implementing Legacy Cipher Service logic. | yes | yes | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/service/DisputeService.java | live-code | 19 | Runtime business service implementing Dispute Service logic. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/service/InvoiceService.java | live-code | 19 | Runtime business service implementing Invoice Service logic. | no | no | no | yes | yes | no |
@@ -846,7 +846,7 @@ internal-platform-monorepo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5420 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1588 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1591 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 460 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -933,6 +933,8 @@ internal-platform-monorepo
 
 ## 7. Near-Real Negative Surfaces
 
+- `apps/admin-api/src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/app/clients/insecure_partner.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_audit_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_delivery_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
@@ -1129,11 +1131,11 @@ internal-platform-monorepo
 
 Branches:
 
-- `main` tip: `7015fb4c113a0cef396010eb7ae822536fe1027d`
+- `main` tip: `9695e12a309875d6980d1400fcf874ccf3a3efca`
 
 Commit order:
 
-- `7015fb4c113a0cef396010eb7ae822536fe1027d` `bootstrap M-V8-001`: initial clean or baseline assembly.
+- `9695e12a309875d6980d1400fcf874ccf3a3efca` `bootstrap M-V8-001`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1148,41 +1150,41 @@ Expected final head/history state:
 
 ### Build
 
-- Command: `mvn -q -f services/platform-java/pom.xml -DskipTests compile`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q -f services/platform-java/pom.xml -DskipTests compile`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\build-01.log`
-- Command: `powershell -NoProfile -Command Set-Location 'apps/admin-api'; npm install --silent`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'apps/admin-api'; npm install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\build-02.log`
-- Command: `powershell -NoProfile -Command Set-Location 'apps/admin-api'; npm run build`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'apps/admin-api'; npm run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\build-03.log`
-- Command: `python -m compileall workers/sync-worker/app workers/sync-worker/tests workers/sync-worker/scripts`
+- Command: `C:\Python313\python.EXE -m compileall workers/sync-worker/app workers/sync-worker/tests workers/sync-worker/scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\build-04.log`
 
 ### Test
 
-- Command: `mvn -q -f services/platform-java/pom.xml test`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q -f services/platform-java/pom.xml test`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\test-01.log`
-- Command: `powershell -NoProfile -Command Set-Location 'apps/admin-api'; npm test -- --runInBand`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'apps/admin-api'; npm test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\test-02.log`
-- Command: `powershell -NoProfile -Command Set-Location 'workers/sync-worker'; python -m pytest -q tests`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'workers/sync-worker'; python -m pytest -q tests`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\test-03.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo\validation\runnability-logs\smoke-01.log`
@@ -1226,7 +1228,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Digest. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -1281,7 +1283,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Cipher Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -1478,9 +1480,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `22311`
+- Total LOC considered for authored/generated project content: `14897`
 - Synthetic filler / inflation LOC: `8140`
-- Synthetic filler ratio: `36.48%`
+- Synthetic filler ratio: `54.64%`
 
 | category | LOC |
 | --- | ---: |
@@ -1490,7 +1492,7 @@ Expected final head/history state:
 | docs | 44 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 7780 |
+| vendor/generated | 366 |
 | synthetic filler / inflation content | 8140 |
 
 Inflation disclosure:
@@ -1573,13 +1575,14 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout.
+- What makes it feel real: contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `4/5`
+- Realism score: `3/5`
 
 ## 17. Final Reviewer Summary
 

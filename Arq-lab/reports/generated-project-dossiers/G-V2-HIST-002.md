@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Node`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence`
-- repo remote URL in Gitea: `http://localhost:3001/arq/partner-branch-divergence-20260330t073209z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/partner-branch-divergence-20260330t104800z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
@@ -619,17 +619,17 @@ partner-branch-divergence
 
 Branches:
 
-- `feature/docs-refresh` tip: `68841be07991b0cbb85718afed8449aabe75a28f`; diverges from `main` at `3b4849fd9407bd51b00bae1dea0b80c7c2de4107`
-- `feature/partner-hotfix` tip: `e92065a8b450a4cf659d124c47af4372ad3526b4`; diverges from `main` at `3b4849fd9407bd51b00bae1dea0b80c7c2de4107`
-- `main` tip: `3b4849fd9407bd51b00bae1dea0b80c7c2de4107`
-- `release/2026.04` tip: `5921f8756455037675393909fe204bc53db44632`; diverges from `main` at `3b4849fd9407bd51b00bae1dea0b80c7c2de4107`
+- `feature/docs-refresh` tip: `becd459fbdb9e3dffe9bd6f727615116643f651c`; diverges from `main` at `ddecb2921ab33623c4c33887587ab46f69915c7d`
+- `feature/partner-hotfix` tip: `47a11965b269ca9f3479c2d8eac08dc55345ece1`; diverges from `main` at `ddecb2921ab33623c4c33887587ab46f69915c7d`
+- `main` tip: `ddecb2921ab33623c4c33887587ab46f69915c7d`
+- `release/2026.04` tip: `9bb6259e1c1232264e0fa2ebacfe6d2080f18a9c`; diverges from `main` at `ddecb2921ab33623c4c33887587ab46f69915c7d`
 
 Commit order:
 
-- `3b4849fd9407bd51b00bae1dea0b80c7c2de4107` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `e92065a8b450a4cf659d124c47af4372ad3526b4` `c002 temporary secret on feature branch`: introduces an intended signal.
-- `5921f8756455037675393909fe204bc53db44632` `c003 release branch clean state`: removes or neutralizes a prior signal.
-- `68841be07991b0cbb85718afed8449aabe75a28f` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
+- `9bb6259e1c1232264e0fa2ebacfe6d2080f18a9c` `c003 release branch clean state`: removes or neutralizes a prior signal.
+- `ddecb2921ab33623c4c33887587ab46f69915c7d` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `47a11965b269ca9f3479c2d8eac08dc55345ece1` `c002 temporary secret on feature branch`: introduces an intended signal.
+- `becd459fbdb9e3dffe9bd6f727615116643f651c` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 
@@ -639,25 +639,25 @@ Expected final head/history state:
 
 ### Build
 
-- Command: `npm install --silent`
+- Command: `C:\Program Files\nodejs\npm.cmd install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\build-01.log`
-- Command: `npm run build`
+- Command: `C:\Program Files\nodejs\npm.cmd run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\build-02.log`
 
 ### Test
 
-- Command: `npm test -- --runInBand`
+- Command: `C:\Program Files\nodejs\npm.cmd test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `node dist/scripts/smoke.js`
+- Command: `C:\Program Files\nodejs\node.exe dist/scripts/smoke.js`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\smoke-01.log`
@@ -739,9 +739,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `13599`
+- Total LOC considered for authored/generated project content: `9927`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `35.59%`
+- Synthetic filler ratio: `48.76%`
 
 | category | LOC |
 | --- | ---: |
@@ -751,7 +751,7 @@ Expected final head/history state:
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3918 |
+| vendor/generated | 246 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -795,9 +795,9 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout.
+- What makes it feel real: build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `3/5`
+- Realism score: `2/5`
 
 ## 17. Final Reviewer Summary
 

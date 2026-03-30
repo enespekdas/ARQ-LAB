@@ -9,7 +9,7 @@
 - language / stack: `Go`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\device-provisioning-go`
-- repo remote URL in Gitea: `http://localhost:3001/arq/device-provisioning-go-20260330t074019z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/device-provisioning-go-20260330t105155z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -526,21 +526,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `go test ./... -run TestBuildSmoke -count=1`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\go\bin\go.exe test ./... -run TestBuildSmoke -count=1`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\device-provisioning-go\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `go test ./... -count=1`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\go\bin\go.exe test ./... -count=1`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\device-provisioning-go\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `go run ./cmd/service --smoke`
+- Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\go\bin\go.exe run ./cmd/service --smoke`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\device-provisioning-go\validation\runnability-logs\smoke-01.log`
@@ -615,9 +615,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8201`
+- Total LOC considered for authored/generated project content: `5072`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `59.02%`
+- Synthetic filler ratio: `95.43%`
 
 | category | LOC |
 | --- | ---: |
@@ -627,7 +627,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 0 |
 | fixtures | 0 |
-| vendor/generated | 3271 |
+| vendor/generated | 142 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:

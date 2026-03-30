@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-30T10:48:42.171220400Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "d6fbce2a-fa7d-4b51-a856-cee61aa8917c",
+      "applicationKey": "arq-lab-20260330t104800z-g-v2-hist-001",
+      "applicationName": "payments-history-lineage-20260330t104800z",
+      "branchName": "main",
+      "commitSha": "c2de05573b1921a27167a72da92c4628d3bdfdfc",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HISTORY_ONLY",
+      "findingId": "cf069e09-597b-40e1-96e7-59cec292b336",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-03-30T10:48:39.075946Z",
+      "lastSeenAt": "2026-03-30T10:48:39.075946Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": true,
+      "presentOnHead": false,
+      "primaryFilePath": "src/main/java/com/arq/paymentshistorylineage/history/bootstrap/PartnerTokenArchive.java",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "4ae1fee9-21c6-4408-9ca6-bba7e4631844",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "REF_HISTORY",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

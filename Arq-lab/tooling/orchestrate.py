@@ -31,6 +31,8 @@ MILESTONE_REPORT_NAMES = {
     "M8": "M8-mixed-enterprise-repos",
 }
 
+NON_FAILING_VERDICTS = {"PASS", "PASS_CLEAN", "PASS_WITH_NOISE"}
+
 
 def _execute_plan(plan: list[list[str]], repo_root: Path, *, stage: str, log_root: Path) -> BuildStatus:
     if not plan:
@@ -261,7 +263,7 @@ def main() -> None:
     parser.add_argument("--all", action="store_true", help="Run all milestones")
     parser.add_argument("--dry-run", action="store_true", help="Generate repositories and manifests without Gitea/ARQ execution")
     parser.add_argument("--report-only", action="store_true", help="Rebuild aggregate reports from existing comparisons")
-    parser.add_argument("--resume-last-failed", action="store_true", help="Resume milestones that had non-PASS verdicts in the last manifest")
+    parser.add_argument("--resume-last-failed", action="store_true", help="Resume milestones that had failing verdicts in the last manifest")
     args = parser.parse_args()
 
     config = load_config()
@@ -291,7 +293,7 @@ def main() -> None:
 
     existing = _load_all_existing_comparisons(config)
     write_aggregate_reports(config.reports_root, existing)
-    failed_milestones = sorted({item["milestone"] for item in existing if item.get("verdict") not in {"PASS"}})
+    failed_milestones = sorted({item["milestone"] for item in existing if item.get("verdict") not in NON_FAILING_VERDICTS})
     write_json(config.manifests_root / "last-run.json", {"failedMilestones": failed_milestones, "completedMilestones": milestones})
 
 

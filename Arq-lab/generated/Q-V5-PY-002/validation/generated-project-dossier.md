@@ -9,7 +9,7 @@
 - language / stack: `Python / worker service`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\data-sync-python`
-- repo remote URL in Gitea: `http://localhost:3001/arq/data-sync-python-20260330t074203z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/data-sync-python-20260330t105324z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -404,7 +404,7 @@ data-sync-python
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2466 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 764 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 765 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 192 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 45 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -555,21 +555,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `python -m compileall app tests scripts`
+- Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\data-sync-python\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `python -m pytest -q`
+- Command: `C:\Python313\python.EXE -m pytest -q`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\data-sync-python\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `python scripts/smoke.py`
+- Command: `C:\Python313\python.EXE scripts/smoke.py`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\data-sync-python\validation\runnability-logs\smoke-01.log`
@@ -678,9 +678,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8416`
+- Total LOC considered for authored/generated project content: `5048`
 - Synthetic filler / inflation LOC: `4730`
-- Synthetic filler ratio: `56.20%`
+- Synthetic filler ratio: `93.70%`
 
 | category | LOC |
 | --- | ---: |
@@ -690,7 +690,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3532 |
+| vendor/generated | 164 |
 | synthetic filler / inflation content | 4730 |
 
 Inflation disclosure:
@@ -749,6 +749,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 

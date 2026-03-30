@@ -15,14 +15,24 @@
     "smoke": "passed"
   },
   "mustFindExpected": 3,
+  "cleanExpectedMatches": 3,
   "mustFindMatched": 3,
   "mustFindMissing": [],
+  "missingExpectedFindings": [],
   "mustNotFindViolations": [],
+  "sameSurfaceExtraFindings": [],
+  "sameFileDifferentSignalFindings": [],
+  "unexpectedFindings": [],
   "extraFindings": [],
   "mayFindReview": [],
+  "unexpectedRegexOnlyFindings": [],
   "explainabilityFailures": [],
   "refStateFailures": [],
-  "verdict": "PASS",
+  "noiseCount": 0,
+  "noiseBreakdown": {},
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
   "followUpAction": "none"
 }
 ```
@@ -43,3 +53,5 @@ Prefer comparison against:
 - query family
 - resolved value (where stable enough)
 - explainability field presence
+
+Regex-only Quantum hits must not satisfy a semantic-required expectation by themselves. When a scenario declares an explainability contract, expected positives should only be counted as clean matches if the exported finding carries real explainability signal.

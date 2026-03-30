@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Express`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\partner-api-node`
-- repo remote URL in Gitea: `http://localhost:3001/arq/partner-api-node-20260330t073032z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/partner-api-node-20260330t104610z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -649,25 +649,25 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `npm install --silent`
+- Command: `C:\Program Files\nodejs\npm.cmd install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\partner-api-node\validation\runnability-logs\build-01.log`
-- Command: `npm run build`
+- Command: `C:\Program Files\nodejs\npm.cmd run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\partner-api-node\validation\runnability-logs\build-02.log`
 
 ### Test
 
-- Command: `npm test -- --runInBand`
+- Command: `C:\Program Files\nodejs\npm.cmd test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\partner-api-node\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `node dist/scripts/smoke.js`
+- Command: `C:\Program Files\nodejs\node.exe dist/scripts/smoke.js`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\partner-api-node\validation\runnability-logs\smoke-01.log`
@@ -774,9 +774,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `13746`
+- Total LOC considered for authored/generated project content: `9972`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `35.21%`
+- Synthetic filler ratio: `48.54%`
 
 | category | LOC |
 | --- | ---: |
@@ -786,7 +786,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 4054 |
+| vendor/generated | 280 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -851,9 +851,9 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully.
+- What makes it feel real: build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `2/5`
+- Realism score: `1/5`
 
 ## 17. Final Reviewer Summary
 

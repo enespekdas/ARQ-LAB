@@ -1,21 +1,32 @@
 {
   "byMilestone": {
     "M6": {
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
-      "mustFindMissing": 1,
+      "cleanExpectedMatches": 0,
+      "explainabilityFailures": 4,
+      "mayFindReview": 0,
+      "missingExpectedFindings": 1,
       "mustNotFindViolations": 0,
+      "noiseCount": 8,
       "refStateFailures": 0,
-      "scenarios": 3
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 8,
+      "scenarios": 3,
+      "unexpectedFindings": 8,
+      "unexpectedRegexOnlyFindings": 8,
+      "verdicts": {
+        "FAIL_EXPLAINABILITY": 2,
+        "FAIL_FN": 1
+      }
     }
   },
   "byScenario": {
     "Q-V6-CONFIG-003": {
+      "cleanExpectedMatches": 0,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
+      "explainabilityFailures": 1,
       "fillerRatio": 0.9678064387122576,
+      "finalVerdictReason": "1 expected finding(s) were not detected at all; 1 expected finding(s) had candidates but failed semantic explainability requirements; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-tree.txt",
       "locComposition": {
@@ -29,22 +40,45 @@
         "total": 5001,
         "vendor/generated": 129
       },
+      "mayFindReview": 0,
       "milestone": "M6",
+      "missingExpectedFindings": 1,
+      "mustFindExpected": 2,
       "mustFindMissing": 1,
       "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 1,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 1
+      },
+      "noiseCount": 1,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 1,
+        "rawFindings": 1
+      },
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\edge-gateway-config\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 1,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CONFIG-003.md",
-      "verdict": "FAIL_FN"
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\edge-gateway-config\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 1,
+      "unexpectedFindings": 1,
+      "unexpectedRegexOnlyFindings": 1,
+      "verdict": "FAIL_FN",
+      "verdictClass": "FAIL_FN"
     },
     "Q-V6-CS-002": {
+      "cleanExpectedMatches": 0,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-002\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
+      "explainabilityFailures": 1,
       "fillerRatio": 0.9683873549419768,
+      "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 5 unexpected/noisy finding(s) remained after matching (same-surface-extra=5, regex-only=5)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -58,22 +92,45 @@
         "total": 4998,
         "vendor/generated": 126
       },
+      "mayFindReview": 0,
       "milestone": "M6",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 1,
       "mustFindMissing": 0,
       "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 5,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 5
+      },
+      "noiseCount": 5,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 5,
+        "rawFindings": 5
+      },
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\admin-integrations-csharp\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 1,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CS-002.md",
-      "verdict": "PASS"
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\admin-integrations-csharp\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 5,
+      "unexpectedFindings": 5,
+      "unexpectedRegexOnlyFindings": 5,
+      "verdict": "FAIL_EXPLAINABILITY",
+      "verdictClass": "FAIL_EXPLAINABILITY"
     },
     "Q-V6-TS-001": {
+      "cleanExpectedMatches": 0,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-001\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
+      "explainabilityFailures": 2,
       "fillerRatio": 0.486529955770004,
+      "finalVerdictReason": "2 expected finding(s) had candidates but failed semantic explainability requirements; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=2, regex-only=2)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -87,20 +144,42 @@
         "total": 9948,
         "vendor/generated": 263
       },
+      "mayFindReview": 0,
       "milestone": "M6",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 2,
       "mustFindMissing": 0,
       "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 2,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 2
+      },
+      "noiseCount": 2,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 2,
+        "rawFindings": 2
+      },
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\customer-portal-node-tls\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
       "realismScore": 1,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-TS-001.md",
-      "verdict": "PASS"
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\customer-portal-node-tls\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 2,
+      "unexpectedFindings": 2,
+      "unexpectedRegexOnlyFindings": 2,
+      "verdict": "FAIL_EXPLAINABILITY",
+      "verdictClass": "FAIL_EXPLAINABILITY"
     }
   },
   "scenarioCount": 3,
   "verdicts": {
-    "FAIL_FN": 1,
-    "PASS": 2
+    "FAIL_EXPLAINABILITY": 2,
+    "FAIL_FN": 1
   }
 }

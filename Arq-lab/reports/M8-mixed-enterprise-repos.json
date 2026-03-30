@@ -1,21 +1,32 @@
 {
   "byMilestone": {
     "M8": {
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
-      "mustFindMissing": 1,
+      "cleanExpectedMatches": 5,
+      "explainabilityFailures": 4,
+      "mayFindReview": 0,
+      "missingExpectedFindings": 1,
       "mustNotFindViolations": 0,
+      "noiseCount": 30,
       "refStateFailures": 0,
-      "scenarios": 2
+      "sameFileDifferentSignalFindings": 23,
+      "sameSurfaceExtraFindings": 7,
+      "scenarios": 2,
+      "unexpectedFindings": 30,
+      "unexpectedRegexOnlyFindings": 30,
+      "verdicts": {
+        "FAIL_EXPLAINABILITY": 1,
+        "FAIL_FN": 1
+      }
     }
   },
   "byScenario": {
     "M-V8-001": {
+      "cleanExpectedMatches": 3,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
+      "explainabilityFailures": 3,
       "fillerRatio": 0.5464187420285964,
+      "finalVerdictReason": "3 expected finding(s) had candidates but failed semantic explainability requirements; 29 unexpected/noisy finding(s) remained after matching (same-surface-extra=6, same-file-different-signal=23, regex-only=29)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -29,22 +40,45 @@
         "total": 14897,
         "vendor/generated": 366
       },
+      "mayFindReview": 0,
       "milestone": "M8",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 6,
       "mustFindMissing": 0,
       "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 23,
+        "sameSurfaceExtraFindings": 6,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 29
+      },
+      "noiseCount": 29,
+      "normalizationStats": {
+        "collapsedDuplicates": 3,
+        "normalizedFindings": 32,
+        "rawFindings": 35
+      },
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\generated-project-dossier.md",
       "realismJustification": "contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
       "realismScore": 3,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-001.md",
-      "verdict": "PASS"
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 23,
+      "sameSurfaceExtraFindings": 6,
+      "unexpectedFindings": 29,
+      "unexpectedRegexOnlyFindings": 29,
+      "verdict": "FAIL_EXPLAINABILITY",
+      "verdictClass": "FAIL_EXPLAINABILITY"
     },
     "M-V8-002": {
+      "cleanExpectedMatches": 2,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 0,
-      "extraFindings": 0,
+      "explainabilityFailures": 1,
       "fillerRatio": 0.5875067729700442,
+      "finalVerdictReason": "1 expected finding(s) were not detected at all; 1 expected finding(s) had candidates but failed semantic explainability requirements; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -58,20 +92,42 @@
         "total": 12919,
         "vendor/generated": 277
       },
+      "mayFindReview": 0,
       "milestone": "M8",
+      "missingExpectedFindings": 1,
+      "mustFindExpected": 4,
       "mustFindMissing": 1,
       "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 1,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 1
+      },
+      "noiseCount": 1,
+      "normalizationStats": {
+        "collapsedDuplicates": 4,
+        "normalizedFindings": 4,
+        "rawFindings": 8
+      },
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
       "realismScore": 2,
       "refStateFailures": 0,
       "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-002.md",
-      "verdict": "FAIL_FN"
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 1,
+      "unexpectedFindings": 1,
+      "unexpectedRegexOnlyFindings": 1,
+      "verdict": "FAIL_FN",
+      "verdictClass": "FAIL_FN"
     }
   },
   "scenarioCount": 2,
   "verdicts": {
-    "FAIL_FN": 1,
-    "PASS": 1
+    "FAIL_EXPLAINABILITY": 1,
+    "FAIL_FN": 1
   }
 }

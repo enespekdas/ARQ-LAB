@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\identity-gateway-java`
-- repo remote URL in Gitea: `http://localhost:3001/arq/identity-gateway-java-20260330t073832z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/identity-gateway-java-20260330t105024z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -387,11 +387,11 @@ identity-gateway-java
 | src/main/java/com/arq/identitygatewayjava/repository/PayoutRepository.java | live-code | 21 | Persistence or data-access helper for Payout Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
-| src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java | live-code | 3 | Runtime business service implementing Legacy Digest Service logic. | yes | no | no | yes | yes | no |
+| src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java | live-code | 3 | Runtime business service implementing Legacy Digest Service logic. | yes | yes | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java | live-code | 3 | Runtime business module contributing to Password Key Factory. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/ResetTokenService.java | live-code | 3 | Runtime business service implementing Reset Token Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/SecureDigestService.java | live-code | 3 | Runtime business service implementing Secure Digest Service logic. | no | yes | no | yes | yes | no |
-| src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java | live-code | 3 | Runtime business service implementing Token Cipher Service logic. | yes | no | no | yes | yes | no |
+| src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java | live-code | 3 | Runtime business service implementing Token Cipher Service logic. | yes | yes | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/service/DisputeService.java | live-code | 19 | Runtime business service implementing Dispute Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/service/InvoiceService.java | live-code | 19 | Runtime business service implementing Invoice Service logic. | no | no | no | yes | yes | no |
@@ -423,7 +423,7 @@ identity-gateway-java
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2508 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 788 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 791 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 208 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -455,7 +455,9 @@ identity-gateway-java
 
 ## 7. Near-Real Negative Surfaces
 
+- `src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/identitygatewayjava/security/SecureDigestService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -558,21 +560,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `mvn -q -DskipTests compile`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q -DskipTests compile`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\identity-gateway-java\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `mvn -q test`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q test`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\identity-gateway-java\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\identity-gateway-java\validation\runnability-logs\smoke-01.log`
@@ -658,7 +660,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Digest Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -683,7 +685,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Token Cipher Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -693,9 +695,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8493`
+- Total LOC considered for authored/generated project content: `5043`
 - Synthetic filler / inflation LOC: `3520`
-- Synthetic filler ratio: `41.45%`
+- Synthetic filler ratio: `69.80%`
 
 | category | LOC |
 | --- | ---: |
@@ -705,7 +707,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3609 |
+| vendor/generated | 159 |
 | synthetic filler / inflation content | 3520 |
 
 Inflation disclosure:
@@ -773,13 +775,14 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully.
+- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `4/5`
+- Realism score: `3/5`
 
 ## 17. Final Reviewer Summary
 

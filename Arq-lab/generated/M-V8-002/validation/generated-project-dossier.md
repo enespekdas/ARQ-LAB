@@ -9,7 +9,7 @@
 - language / stack: `App + infra + CI`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t074622z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t110030z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
@@ -519,7 +519,7 @@ infra-app-mixed-repo
 | ops/console/src/modules/invites/invites.service.ts | live-code | 2 | Runtime business service implementing Invites.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
-| ops/console/src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | no | no | yes | yes | no |
+| ops/console/src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | yes | no | yes | yes | no |
 | ops/console/src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/modules/tokens/tokens.service.ts | live-code | 2 | Runtime business service implementing Tokens.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/server.ts | live-code | 4 | Runtime business module contributing to Server. | no | no | no | yes | yes | no |
@@ -720,7 +720,7 @@ infra-app-mixed-repo
 
 ## 7. Near-Real Negative Surfaces
 
-- No near-real negative surfaces were declared for this scenario.
+- `ops/console/src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -897,15 +897,15 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `da121744014cfb95c57bcd60b4f54244857fb91e`; diverges from `main` at `411bcf3b9af1b2e3daf06d4a1e8a967aca46cb6e`
-- `main` tip: `411bcf3b9af1b2e3daf06d4a1e8a967aca46cb6e`
-- `release/2026.04` tip: `6376bcb793d56b2010770e6a0f4e639958dbdd4c`; diverges from `main` at `411bcf3b9af1b2e3daf06d4a1e8a967aca46cb6e`
+- `feature/hotfix-ssl` tip: `d62e9c4fa8490ac66fa8b6bed7ca48be0a7a0427`; diverges from `main` at `e9b34d03a623f70dce0e029e93ee0cb06cf728e0`
+- `main` tip: `e9b34d03a623f70dce0e029e93ee0cb06cf728e0`
+- `release/2026.04` tip: `95ddfe7d1f14dafe9011d071e056ca425bd9a17f`; diverges from `main` at `e9b34d03a623f70dce0e029e93ee0cb06cf728e0`
 
 Commit order:
 
-- `6376bcb793d56b2010770e6a0f4e639958dbdd4c` `c003 release branch clean`: removes or neutralizes a prior signal.
-- `411bcf3b9af1b2e3daf06d4a1e8a967aca46cb6e` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `da121744014cfb95c57bcd60b4f54244857fb91e` `c002 temporary hotfix secret`: introduces an intended signal.
+- `e9b34d03a623f70dce0e029e93ee0cb06cf728e0` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `95ddfe7d1f14dafe9011d071e056ca425bd9a17f` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `d62e9c4fa8490ac66fa8b6bed7ca48be0a7a0427` `c002 temporary hotfix secret`: introduces an intended signal.
 
 Expected final head/history state:
 
@@ -918,33 +918,33 @@ Expected final head/history state:
 
 ### Build
 
-- Command: `python -m compileall app tests scripts`
+- Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\build-01.log`
-- Command: `powershell -NoProfile -Command Set-Location 'ops/console'; npm install --silent`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'ops/console'; npm install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\build-02.log`
-- Command: `powershell -NoProfile -Command Set-Location 'ops/console'; npm run build`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'ops/console'; npm run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\build-03.log`
 
 ### Test
 
-- Command: `python -m pytest -q tests`
+- Command: `C:\Python313\python.EXE -m pytest -q tests`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\test-01.log`
-- Command: `powershell -NoProfile -Command Set-Location 'ops/console'; npm test -- --runInBand`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'ops/console'; npm test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\test-02.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\smoke-01.log`
@@ -2544,7 +2544,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Digest. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -2593,9 +2593,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `20116`
+- Total LOC considered for authored/generated project content: `12919`
 - Synthetic filler / inflation LOC: `7590`
-- Synthetic filler ratio: `37.73%`
+- Synthetic filler ratio: `58.75%`
 
 | category | LOC |
 | --- | ---: |
@@ -2605,7 +2605,7 @@ Expected final head/history state:
 | docs | 22 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 7474 |
+| vendor/generated | 277 |
 | synthetic filler / inflation content | 7590 |
 
 Inflation disclosure:
@@ -2679,9 +2679,9 @@ Explainability failure definition:
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout.
+- What makes it feel real: build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `3/5`
+- Realism score: `2/5`
 
 ## 17. Final Reviewer Summary
 

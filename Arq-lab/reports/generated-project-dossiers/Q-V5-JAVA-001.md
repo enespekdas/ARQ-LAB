@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\partner-client-java`
-- repo remote URL in Gitea: `http://localhost:3001/arq/partner-client-java-20260330t074203z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/partner-client-java-20260330t105324z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -377,8 +377,8 @@ partner-client-java
 | src/main/java/com/arq/partnerclientjava/dto/RefundResponse.java | live-code | 25 | Runtime business module contributing to Refund Response. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/partnerclientjava/dto/SettlementRequest.java | live-code | 28 | Runtime business module contributing to Settlement Request. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/partnerclientjava/dto/SettlementResponse.java | live-code | 25 | Runtime business module contributing to Settlement Response. | no | no | no | yes | yes | no |
-| src/main/java/com/arq/partnerclientjava/http/InsecureHostnameVerifier.java | live-code | 2 | Runtime business module contributing to Insecure Hostname Verifier. | yes | no | no | yes | yes | no |
-| src/main/java/com/arq/partnerclientjava/http/InsecureTrustManager.java | live-code | 2 | Runtime business module contributing to Insecure Trust Manager. | yes | no | no | yes | yes | no |
+| src/main/java/com/arq/partnerclientjava/http/InsecureHostnameVerifier.java | live-code | 2 | Runtime business module contributing to Insecure Hostname Verifier. | yes | yes | no | yes | yes | no |
+| src/main/java/com/arq/partnerclientjava/http/InsecureTrustManager.java | live-code | 2 | Runtime business module contributing to Insecure Trust Manager. | yes | yes | no | yes | yes | no |
 | src/main/java/com/arq/partnerclientjava/http/SecurePartnerClientFactory.java | live-code | 2 | Outbound integration client for Secure Partner Client Factory behavior. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/partnerclientjava/repository/BalanceRepository.java | live-code | 21 | Persistence or data-access helper for Balance Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/partnerclientjava/repository/DisputeRepository.java | live-code | 21 | Persistence or data-access helper for Dispute Repository. | no | no | no | yes | yes | no |
@@ -419,7 +419,7 @@ partner-client-java
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2480 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 944 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 947 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 206 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -445,6 +445,8 @@ partner-client-java
 
 ## 7. Near-Real Negative Surfaces
 
+- `src/main/java/com/arq/partnerclientjava/http/InsecureHostnameVerifier.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `src/main/java/com/arq/partnerclientjava/http/InsecureTrustManager.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/partnerclientjava/http/SecurePartnerClientFactory.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -548,21 +550,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `mvn -q -DskipTests compile`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q -DskipTests compile`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\partner-client-java\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `mvn -q test`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q test`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\partner-client-java\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\partner-client-java\validation\runnability-logs\smoke-01.log`
@@ -648,7 +650,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Insecure Hostname Verifier. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -660,7 +662,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Insecure Trust Manager. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -858,9 +860,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8583`
+- Total LOC considered for authored/generated project content: `5007`
 - Synthetic filler / inflation LOC: `3520`
-- Synthetic filler ratio: `41.01%`
+- Synthetic filler ratio: `70.30%`
 
 | category | LOC |
 | --- | ---: |
@@ -870,7 +872,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3708 |
+| vendor/generated | 132 |
 | synthetic filler / inflation content | 3520 |
 
 Inflation disclosure:
@@ -929,13 +931,14 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
+- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully.
+- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `4/5`
+- Realism score: `3/5`
 
 ## 17. Final Reviewer Summary
 

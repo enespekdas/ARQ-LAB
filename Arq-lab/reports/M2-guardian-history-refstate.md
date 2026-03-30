@@ -2,4 +2,4 @@
 
 - Scenario count: `3`
 
-- `PASS`: `3`
+- `PASS_CLEAN`: `3`

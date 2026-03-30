@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot / Maven`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\payments-service-java`
-- repo remote URL in Gitea: `http://localhost:3001/arq/payments-service-java-20260330t073032z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/payments-service-java-20260330t104610z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -574,21 +574,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `mvn -q -DskipTests compile`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q -DskipTests compile`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\payments-service-java\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `mvn -q test`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q test`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\payments-service-java\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\payments-service-java\validation\runnability-logs\smoke-01.log`
@@ -755,9 +755,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8565`
+- Total LOC considered for authored/generated project content: `5040`
 - Synthetic filler / inflation LOC: `3520`
-- Synthetic filler ratio: `41.10%`
+- Synthetic filler ratio: `69.84%`
 
 | category | LOC |
 | --- | ---: |
@@ -767,7 +767,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 14 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3687 |
+| vendor/generated | 162 |
 | synthetic filler / inflation content | 3520 |
 
 Inflation disclosure:
@@ -832,9 +832,9 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully.
+- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `4/5`
+- Realism score: `3/5`
 
 ## 17. Final Reviewer Summary
 

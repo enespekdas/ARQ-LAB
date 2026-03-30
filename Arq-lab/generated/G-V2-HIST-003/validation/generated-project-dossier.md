@@ -9,7 +9,7 @@
 - language / stack: `Python + ops config`
 - repoType: `history`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage`
-- repo remote URL in Gitea: `http://localhost:3001/arq/pem-rotation-lineage-20260330t073209z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/pem-rotation-lineage-20260330t104800z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -549,16 +549,16 @@ pem-rotation-lineage
 
 Branches:
 
-- `main` tip: `513eeabfa8600b83ffaff4e7f19360933cab577f`
+- `main` tip: `9e8d2614edb858edbc97f0c30ac00f50f4191c72`
 
 Commit order:
 
-- `a0cc7a4e1a4c4ccb838ca29e936d4220e7fec95f` `c001 bootstrap`: initial clean or baseline assembly.
-- `78128a42a93abebd8dfcba3efb2988cae4c36fe6` `c002 add PEM A`: introduces an intended signal.
-- `166380e06106544a9ff180afeecab1af40ce8f7f` `c003 formatting change`: scenario state change.
-- `3b328c2eab36881aa2f6b586acda45d34b2ab6ec` `c004 rotate to PEM B`: replaces one signal with another.
-- `a4a73c0cebb630eed8869633abf0953a5378e5ba` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
-- `513eeabfa8600b83ffaff4e7f19360933cab577f` `c006 safe cleanup`: removes or neutralizes a prior signal.
+- `a756579bcc26ae7a2a6599c82d453ac071578ed3` `c001 bootstrap`: initial clean or baseline assembly.
+- `c74a696b4f1ad5432bb476afa216290de5848b60` `c002 add PEM A`: introduces an intended signal.
+- `e9d732df8853a559c13ef84ce2192061be6217d6` `c003 formatting change`: scenario state change.
+- `4d5c0de7d031a07453f5a7072bb9b2498ffc0644` `c004 rotate to PEM B`: replaces one signal with another.
+- `aab3f865735cd954ded1036274b9dc3e163fdf0f` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
+- `9e8d2614edb858edbc97f0c30ac00f50f4191c72` `c006 safe cleanup`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -569,21 +569,21 @@ Expected final head/history state:
 
 ### Build
 
-- Command: `python -m compileall app tests scripts`
+- Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `python -m pytest -q`
+- Command: `C:\Python313\python.EXE -m pytest -q`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `python scripts/smoke.py`
+- Command: `C:\Python313\python.EXE scripts/smoke.py`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\runnability-logs\smoke-01.log`
@@ -682,9 +682,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8401`
+- Total LOC considered for authored/generated project content: `5060`
 - Synthetic filler / inflation LOC: `4730`
-- Synthetic filler ratio: `56.30%`
+- Synthetic filler ratio: `93.48%`
 
 | category | LOC |
 | --- | ---: |
@@ -694,7 +694,7 @@ Expected final head/history state:
 | docs | 13 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3523 |
+| vendor/generated | 182 |
 | synthetic filler / inflation content | 4730 |
 
 Inflation disclosure:

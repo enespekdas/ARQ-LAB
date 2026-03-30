@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-30T10:56:02.296300700Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "7dc45037-fca2-426d-aa9e-3dbbfa11d834",
+      "applicationKey": "arq-lab-20260330t105448z-q-v6-config-003",
+      "applicationName": "edge-gateway-config-20260330t105448z",
+      "branchName": "main",
+      "commitSha": "1c7229fd3514bd8b9f70bc14f63470a8439e6de5",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8f47ba51-6400-43d8-928f-606bbfa41789",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-03-30T10:56:00.011633Z",
+      "lastSeenAt": "2026-03-30T10:56:00.011633Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "runtime/.env",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "4ae1fee9-21c6-4408-9ca6-bba7e4631844",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0949-config",
+      "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

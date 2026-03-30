@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot`
 - repoType: `history`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\payments-history-lineage`
-- repo remote URL in Gitea: `http://localhost:3001/arq/payments-history-lineage-20260330t073209z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/payments-history-lineage-20260330t104800z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -537,15 +537,15 @@ payments-history-lineage
 
 Branches:
 
-- `main` tip: `584406f45e8fc200a1330ae86cc9b8304ae8fa1e`
+- `main` tip: `f1e482f5ae758bf221f41692c5166ab774552ce8`
 
 Commit order:
 
-- `6f6967575c0e0d9ca0066da0edfdd25d536eff3a` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `a3c012baab68980070f0037786d48d936018396b` `c002 add live partner access token`: introduces an intended signal.
-- `ece518cee44d0cd5eb372b7926342288dfe32d59` `c003 add docs noise`: introduces an intended signal.
-- `1cae1ca4040f73e21e77c76490b01ee4535e4c97` `c004 remove token and replace with safe reference`: removes or neutralizes a prior signal.
-- `584406f45e8fc200a1330ae86cc9b8304ae8fa1e` `c005 unrelated refactor`: scenario state change.
+- `1eb6cbc87661b636e5ef90be7f1bb3c426db1a16` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `c2de05573b1921a27167a72da92c4628d3bdfdfc` `c002 add live partner access token`: introduces an intended signal.
+- `1ba6cd3300c2dabc314d897acee13b96a543d801` `c003 add docs noise`: introduces an intended signal.
+- `a715d3f2b338a4bc03dd3e2c4562d5b1d81be5ff` `c004 remove token and replace with safe reference`: removes or neutralizes a prior signal.
+- `f1e482f5ae758bf221f41692c5166ab774552ce8` `c005 unrelated refactor`: scenario state change.
 
 Expected final head/history state:
 
@@ -555,21 +555,21 @@ Expected final head/history state:
 
 ### Build
 
-- Command: `mvn -q -DskipTests compile`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q -DskipTests compile`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\payments-history-lineage\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `mvn -q test`
+- Command: `C:\maven\apache-maven-3.9.12\bin\mvn.cmd -q test`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\payments-history-lineage\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\payments-history-lineage\validation\runnability-logs\smoke-01.log`
@@ -657,9 +657,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8345`
+- Total LOC considered for authored/generated project content: `5003`
 - Synthetic filler / inflation LOC: `3520`
-- Synthetic filler ratio: `42.18%`
+- Synthetic filler ratio: `70.36%`
 
 | category | LOC |
 | --- | ---: |
@@ -669,7 +669,7 @@ Expected final head/history state:
 | docs | 12 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3471 |
+| vendor/generated | 129 |
 | synthetic filler / inflation content | 3520 |
 
 Inflation disclosure:
@@ -713,9 +713,9 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully.
+- What makes it feel real: contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `4/5`
+- Realism score: `3/5`
 
 ## 17. Final Reviewer Summary
 

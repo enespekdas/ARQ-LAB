@@ -2,4 +2,4 @@
 
 - Scenario count: `3`
 
-- `PASS`: `3`
+- `FAIL_EXPLAINABILITY`: `3`

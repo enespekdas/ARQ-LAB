@@ -9,7 +9,7 @@
 - language / stack: `Config-heavy repo`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\legacy-admin-config`
-- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-admin-config-20260330t073032z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/legacy-admin-config-20260330t104610z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -523,21 +523,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `python scripts/validate_repo.py`
+- Command: `C:\Python313\python.EXE scripts/validate_repo.py`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\legacy-admin-config\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `python -m pytest -q`
+- Command: `C:\Python313\python.EXE -m pytest -q`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\legacy-admin-config\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `powershell -ExecutionPolicy Bypass -File scripts/smoke.ps1`
+- Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\legacy-admin-config\validation\runnability-logs\smoke-01.log`
@@ -637,9 +637,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8068`
+- Total LOC considered for authored/generated project content: `5025`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `59.99%`
+- Synthetic filler ratio: `96.32%`
 
 | category | LOC |
 | --- | ---: |
@@ -649,7 +649,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 3186 |
+| vendor/generated | 143 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:

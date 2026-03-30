@@ -9,7 +9,7 @@
 - language / stack: `Secure wrappers`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\safe-wrapper-playground`
-- repo remote URL in Gitea: `http://localhost:3001/arq/safe-wrapper-playground-20260330t074454z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/safe-wrapper-playground-20260330t105603z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -540,21 +540,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `python -m compileall app tests scripts`
+- Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\safe-wrapper-playground\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `python -m pytest -q`
+- Command: `C:\Python313\python.EXE -m pytest -q`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\safe-wrapper-playground\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `python scripts/smoke.py`
+- Command: `C:\Python313\python.EXE scripts/smoke.py`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\safe-wrapper-playground\validation\runnability-logs\smoke-01.log`
@@ -665,9 +665,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8338`
+- Total LOC considered for authored/generated project content: `5006`
 - Synthetic filler / inflation LOC: `4730`
-- Synthetic filler ratio: `56.73%`
+- Synthetic filler ratio: `94.49%`
 
 | category | LOC |
 | --- | ---: |
@@ -677,7 +677,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 3456 |
+| vendor/generated | 124 |
 | synthetic filler / inflation content | 4730 |
 
 Inflation disclosure:

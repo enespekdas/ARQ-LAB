@@ -9,7 +9,7 @@
 - language / stack: `Tests / fixtures`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\test-mocks-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/test-mocks-repo-20260330t074454z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/test-mocks-repo-20260330t105603z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -401,7 +401,7 @@ test-mocks-repo
 | validation/expected-findings.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2438 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 864 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 842 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 191 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 40 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -540,21 +540,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### Build
 
-- Command: `python -m compileall app tests scripts`
+- Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\test-mocks-repo\validation\runnability-logs\build-01.log`
 
 ### Test
 
-- Command: `python -m pytest -q`
+- Command: `C:\Python313\python.EXE -m pytest -q`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\test-mocks-repo\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
-- Command: `python scripts/smoke.py`
+- Command: `C:\Python313\python.EXE scripts/smoke.py`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\test-mocks-repo\validation\runnability-logs\smoke-01.log`
@@ -762,9 +762,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `8436`
+- Total LOC considered for authored/generated project content: `4997`
 - Synthetic filler / inflation LOC: `4730`
-- Synthetic filler ratio: `56.07%`
+- Synthetic filler ratio: `94.66%`
 
 | category | LOC |
 | --- | ---: |
@@ -774,7 +774,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 3 |
-| vendor/generated | 3559 |
+| vendor/generated | 120 |
 | synthetic filler / inflation content | 4730 |
 
 Inflation disclosure:
@@ -802,29 +802,7 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0220-cpp` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0238-scala` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0239-scala` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0241-scala` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0402-python` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0566-csharp` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0569-csharp` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0588-go` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0608-javascript` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0628-typescript` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0646-kotlin` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0647-kotlin` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0649-kotlin` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0669-ruby` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0687-php` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0704-rust` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0735-erlang` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0831-c` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0884-groovy` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0885-groovy` (INVENTORY/INFO)
-- `mocks/certificates/mock.pem` => `quantum.arq-q-0887-groovy` (INVENTORY/INFO)
+- None in the current run.
 
 ## 14. Explainability Expectations
 

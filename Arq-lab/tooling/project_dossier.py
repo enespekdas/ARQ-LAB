@@ -210,7 +210,14 @@ def _matched_absent_paths(scenario: ScenarioSpec, relative_path: str) -> list[An
 
 def _review_paths(comparison: dict[str, Any]) -> set[str]:
     paths: set[str] = set()
-    for collection_name in ("mayFindReview", "extraFindings", "unexpectedRegexOnlyFindings"):
+    for collection_name in (
+        "mayFindReview",
+        "extraFindings",
+        "unexpectedFindings",
+        "sameSurfaceExtraFindings",
+        "sameFileDifferentSignalFindings",
+        "unexpectedRegexOnlyFindings",
+    ):
         for item in comparison.get(collection_name, []):
             path = item.get("primaryFilePath")
             if path:
@@ -592,7 +599,14 @@ def _critical_paths(rows: list[dict[str, Any]], scenario: ScenarioSpec, comparis
         selected.update(_matching_paths(rows, expected.path_contains))
     for expected in scenario.expected_absent:
         selected.update(_matching_paths(rows, expected.path_contains))
-    for collection_name in ("mayFindReview", "extraFindings", "unexpectedRegexOnlyFindings"):
+    for collection_name in (
+        "mayFindReview",
+        "extraFindings",
+        "unexpectedFindings",
+        "sameSurfaceExtraFindings",
+        "sameFileDifferentSignalFindings",
+        "unexpectedRegexOnlyFindings",
+    ):
         for item in comparison.get(collection_name, []):
             path = item.get("primaryFilePath")
             if path:
@@ -770,7 +784,7 @@ def _risk_notes(scenario: ScenarioSpec, comparison: dict[str, Any]) -> list[str]
         lines.append("- False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.")
     lines.append("- Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.")
     lines.append("- Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.")
-    if comparison.get("verdict") != "PASS":
+    if comparison.get("verdict") not in {"PASS", "PASS_CLEAN"}:
         lines.append(f"- Current run already demonstrated this risk: verdict=`{comparison.get('verdict')}`.")
     lines.append("")
     return lines
@@ -1105,6 +1119,7 @@ def write_project_dossier(
         "reportDossierPath": str(report_dossier_path),
         "generatedManifestPath": str(alias_manifest_path),
         "generatedTreePath": str(alias_tree_path),
+        "runnabilityLogRootPath": str(repo_root / "validation" / "runnability-logs"),
         "locComposition": composition,
         "fillerRatio": filler_ratio,
         "realismScore": realism_score,
