@@ -9,7 +9,7 @@
 - language / stack: `Python / FastAPI worker`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M1\notification-worker-python`
-- repo remote URL in Gitea: `http://localhost:3001/arq/notification-worker-python-20260330t172527z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/notification-worker-python-20260330t200214z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

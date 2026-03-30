@@ -214,11 +214,19 @@ def _match_explainability_contract(expected: ExplainabilityExpectation, item: di
 
 
 def _contracts_for_expected(expected: ExpectedFinding, scenario: ScenarioSpec) -> list[ExplainabilityExpectation]:
+    if expected.key:
+        keyed_contracts = [
+            contract
+            for contract in scenario.explainability_expectations
+            if contract.key == expected.key
+        ]
+        if keyed_contracts:
+            return keyed_contracts
+
     return [
         contract
         for contract in scenario.explainability_expectations
-        if contract.key == expected.key
-        or _path_matches(expected.path_contains, contract.path_contains)
+        if _path_matches(expected.path_contains, contract.path_contains)
         or _path_matches(contract.path_contains, expected.path_contains)
     ]
 

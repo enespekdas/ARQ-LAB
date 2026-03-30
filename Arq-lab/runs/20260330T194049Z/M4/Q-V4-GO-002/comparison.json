@@ -1,0 +1,252 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-002\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9542586750788643,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-002\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-002\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 68,
+      "live config": 0,
+      "scripts": 0,
+      "synthetic filler / inflation content": 4840,
+      "tests": 0,
+      "total": 5072,
+      "vendor/generated": 142
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\device-provisioning-go\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-GO-002.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\device-provisioning-go\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [
+    {
+      "candidates": [
+        {
+          "branchName": "main",
+          "detectionSource": "AST",
+          "evidenceExcerpt": "left := md5.New()",
+          "exposureScope": "HEAD_ONLY",
+          "findingId": "16fde11a-9439-495f-9f64-991a3e1b6121",
+          "findingKind": "VULNERABILITY",
+          "module": "quantum",
+          "presentInHistory": false,
+          "presentOnHead": true,
+          "primaryFilePath": "internal/security/legacy_hash.go",
+          "queryFamily": "go.crypto",
+          "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"md5.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"go\"}",
+          "resolutionScope": "SAME_FUNCTION",
+          "resolvedValue": "MD5",
+          "ruleKey": "quantum.arq-q-0572-go",
+          "ruleName": "Weak Hash (MD5)",
+          "scanMode": "HEAD_SNAPSHOT",
+          "scanPlanName": "quantum-head",
+          "semanticKey": "go:crypto:md5.New:MD5",
+          "severity": "HIGH"
+        }
+      ],
+      "expected": "md5",
+      "pathContains": "legacy_hash.go",
+      "regexOnlyCandidates": [],
+      "required": [
+        {
+          "detectionSourceContains": null,
+          "key": "md5",
+          "pathContains": "legacy_hash.go",
+          "queryFamilyContains": "go",
+          "resolutionScopeContains": null,
+          "resolvedValueContains": "MD5"
+        },
+        {
+          "detectionSourceContains": null,
+          "key": "sha1",
+          "pathContains": "legacy_hash.go",
+          "queryFamilyContains": null,
+          "resolutionScopeContains": null,
+          "resolvedValueContains": "SHA1"
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "branchName": "main",
+          "detectionSource": "AST",
+          "evidenceExcerpt": "right := sha1.New()",
+          "exposureScope": "HEAD_ONLY",
+          "findingId": "02fc08c2-da9a-4964-8c9d-2e1a0069fb37",
+          "findingKind": "VULNERABILITY",
+          "module": "quantum",
+          "presentInHistory": false,
+          "presentOnHead": true,
+          "primaryFilePath": "internal/security/legacy_hash.go",
+          "queryFamily": "go.crypto",
+          "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"sha1.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"go\"}",
+          "resolutionScope": "SAME_FUNCTION",
+          "resolvedValue": "SHA1",
+          "ruleKey": "quantum.arq-q-0573-go",
+          "ruleName": "Weak Hash (SHA1)",
+          "scanMode": "HEAD_SNAPSHOT",
+          "scanPlanName": "quantum-head",
+          "semanticKey": "go:crypto:sha1.New:SHA1",
+          "severity": "MEDIUM"
+        }
+      ],
+      "expected": "sha1",
+      "pathContains": "legacy_hash.go",
+      "regexOnlyCandidates": [],
+      "required": [
+        {
+          "detectionSourceContains": null,
+          "key": "md5",
+          "pathContains": "legacy_hash.go",
+          "queryFamilyContains": "go",
+          "resolutionScopeContains": null,
+          "resolvedValueContains": "MD5"
+        },
+        {
+          "detectionSourceContains": null,
+          "key": "sha1",
+          "pathContains": "legacy_hash.go",
+          "queryFamilyContains": null,
+          "resolutionScopeContains": null,
+          "resolvedValueContains": "SHA1"
+        }
+      ]
+    }
+  ],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_EXPLAINABILITY",
+  "finalVerdictReason": "2 expected finding(s) had candidates but failed semantic explainability requirements; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=2)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 0,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 2,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 2,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "left := md5.New()",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "16fde11a-9439-495f-9f64-991a3e1b6121",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "internal/security/legacy_hash.go",
+      "queryFamily": "go.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"md5.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"go\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "MD5",
+      "ruleKey": "quantum.arq-q-0572-go",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "go:crypto:md5.New:MD5",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "right := sha1.New()",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "02fc08c2-da9a-4964-8c9d-2e1a0069fb37",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "internal/security/legacy_hash.go",
+      "queryFamily": "go.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"sha1.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"go\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "SHA1",
+      "ruleKey": "quantum.arq-q-0573-go",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "go:crypto:sha1.New:SHA1",
+      "severity": "MEDIUM"
+    }
+  ],
+  "scenarioId": "Q-V4-GO-002",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "left := md5.New()",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "16fde11a-9439-495f-9f64-991a3e1b6121",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "internal/security/legacy_hash.go",
+      "queryFamily": "go.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"md5.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"go\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "MD5",
+      "ruleKey": "quantum.arq-q-0572-go",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "go:crypto:md5.New:MD5",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "right := sha1.New()",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "02fc08c2-da9a-4964-8c9d-2e1a0069fb37",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "internal/security/legacy_hash.go",
+      "queryFamily": "go.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"sha1.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"go\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "SHA1",
+      "ruleKey": "quantum.arq-q-0573-go",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "go:crypto:sha1.New:SHA1",
+      "severity": "MEDIUM"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_EXPLAINABILITY",
+  "verdictClass": "FAIL_EXPLAINABILITY"
+}

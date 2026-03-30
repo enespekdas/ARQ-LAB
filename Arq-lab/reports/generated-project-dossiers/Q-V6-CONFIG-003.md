@@ -9,7 +9,7 @@
 - language / stack: `Config-heavy repo`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\edge-gateway-config`
-- repo remote URL in Gitea: `http://localhost:3001/arq/edge-gateway-config-20260330t173443z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/edge-gateway-config-20260330t201122z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -312,7 +312,7 @@ edge-gateway-config
 | ops/playbooks/runbook-42.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-43.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-44.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| runtime/.env | live-config | 1 | Runtime configuration carrying environment or deployment settings for .Env. | yes | yes | no | yes | yes | no |
+| runtime/.env | live-config | 1 | Runtime configuration carrying environment or deployment settings for .Env. | yes | no | no | yes | yes | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -366,7 +366,7 @@ edge-gateway-config
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2186 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 689 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 688 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 174 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -394,7 +394,6 @@ edge-gateway-config
 
 - `deploy/envoy.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `helm/examples/values.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `runtime/.env`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -582,7 +581,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-config` file with expectation `must_find`.
 - Detailed summary: Runtime configuration carrying environment or deployment settings for .Env. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -673,7 +672,7 @@ Explainability failure definition:
 - False negatives are most likely on runtime config files where the detector must bind a weak TLS knob out of YAML or env syntax.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
+- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

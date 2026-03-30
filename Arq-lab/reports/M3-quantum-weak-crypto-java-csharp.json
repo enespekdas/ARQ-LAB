@@ -1,17 +1,17 @@
 {
   "byMilestone": {
     "M3": {
-      "cleanExpectedMatches": 4,
-      "explainabilityFailures": 4,
+      "cleanExpectedMatches": 6,
+      "explainabilityFailures": 2,
       "mayFindReview": 7,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 19,
-      "noiseCount": 62,
+      "noiseCount": 60,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 48,
+      "sameSurfaceExtraFindings": 46,
       "scenarios": 3,
-      "unexpectedFindings": 62,
+      "unexpectedFindings": 60,
       "unexpectedRegexOnlyFindings": 36,
       "verdicts": {
         "FAIL_EXPLAINABILITY": 0,
@@ -85,13 +85,13 @@
       "verdictClass": "FAIL_FP"
     },
     "Q-V3-JAVA-001": {
-      "cleanExpectedMatches": 1,
+      "cleanExpectedMatches": 3,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 2,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.6979972238746778,
       "finalVerdict": "FAIL_FP",
-      "finalVerdictReason": "8 must-not-find violation(s) hit protected or declared-clean surfaces; 2 expected finding(s) had candidates but failed semantic explainability requirements; 20 unexpected/noisy finding(s) remained after matching (same-surface-extra=15, totally-unexpected=1, review-only=4, regex-only=14)",
+      "finalVerdictReason": "8 must-not-find violation(s) hit protected or declared-clean surfaces; 18 unexpected/noisy finding(s) remained after matching (same-surface-extra=13, totally-unexpected=1, review-only=4, regex-only=14)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -114,11 +114,11 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 4,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 15,
+        "sameSurfaceExtraFindings": 13,
         "totallyUnexpectedFindings": 1,
         "unexpectedRegexOnlyFindings": 14
       },
-      "noiseCount": 20,
+      "noiseCount": 18,
       "normalizationStats": {
         "collapsedDuplicates": 0,
         "normalizedFindings": 29,
@@ -137,8 +137,8 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M3\\identity-gateway-java\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 15,
-      "unexpectedFindings": 20,
+      "sameSurfaceExtraFindings": 13,
+      "unexpectedFindings": 18,
       "unexpectedRegexOnlyFindings": 14,
       "verdict": "FAIL_FP",
       "verdictClass": "FAIL_FP"

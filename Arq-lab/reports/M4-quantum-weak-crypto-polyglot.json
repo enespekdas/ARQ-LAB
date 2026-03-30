@@ -1,38 +1,38 @@
 {
   "byMilestone": {
     "M4": {
-      "cleanExpectedMatches": 2,
-      "explainabilityFailures": 3,
+      "cleanExpectedMatches": 4,
+      "explainabilityFailures": 1,
       "mayFindReview": 0,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 1,
-      "noiseCount": 25,
+      "noiseCount": 23,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 1,
-      "sameSurfaceExtraFindings": 23,
+      "sameSurfaceExtraFindings": 21,
       "scenarios": 3,
-      "unexpectedFindings": 25,
+      "unexpectedFindings": 23,
       "unexpectedRegexOnlyFindings": 11,
       "verdicts": {
-        "FAIL_EXPLAINABILITY": 2,
+        "FAIL_EXPLAINABILITY": 1,
         "FAIL_FN": 0,
         "FAIL_FP": 1,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
-        "PASS_CLEAN": 0,
+        "PASS_CLEAN": 1,
         "PASS_WITH_NOISE": 0
       }
     }
   },
   "byScenario": {
     "Q-V4-GO-002": {
-      "cleanExpectedMatches": 0,
+      "cleanExpectedMatches": 2,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-002\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 2,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.9542586750788643,
-      "finalVerdict": "FAIL_EXPLAINABILITY",
-      "finalVerdictReason": "2 expected finding(s) had candidates but failed semantic explainability requirements; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=2)",
+      "finalVerdict": "PASS_CLEAN",
+      "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -55,11 +55,11 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 2,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 0,
         "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 2,
+      "noiseCount": 0,
       "normalizationStats": {
         "collapsedDuplicates": 0,
         "normalizedFindings": 2,
@@ -78,18 +78,18 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\device-provisioning-go\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 2,
-      "unexpectedFindings": 2,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 0,
       "unexpectedRegexOnlyFindings": 0,
-      "verdict": "FAIL_EXPLAINABILITY",
-      "verdictClass": "FAIL_EXPLAINABILITY"
+      "verdict": "PASS_CLEAN",
+      "verdictClass": "PASS_CLEAN"
     },
     "Q-V4-PY-001": {
       "cleanExpectedMatches": 2,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-PY-001\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
-      "fillerRatio": 0.9355221518987342,
+      "fillerRatio": 0.9344132753852232,
       "finalVerdict": "FAIL_FP",
       "finalVerdictReason": "1 must-not-find violation(s) hit protected or declared-clean surfaces; 21 unexpected/noisy finding(s) remained after matching (same-surface-extra=20, same-file-different-signal=1, regex-only=9)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-PY-001\\validation\\generated-file-manifest.json",
@@ -102,8 +102,8 @@
         "scripts": 1,
         "synthetic filler / inflation content": 4730,
         "tests": 32,
-        "total": 5056,
-        "vendor/generated": 169
+        "total": 5062,
+        "vendor/generated": 175
       },
       "mayFindReview": 0,
       "milestone": "M4",
@@ -205,12 +205,12 @@
   },
   "scenarioCount": 3,
   "verdicts": {
-    "FAIL_EXPLAINABILITY": 2,
+    "FAIL_EXPLAINABILITY": 1,
     "FAIL_FN": 0,
     "FAIL_FP": 1,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
-    "PASS_CLEAN": 0,
+    "PASS_CLEAN": 1,
     "PASS_WITH_NOISE": 0
   }
 }

@@ -1,38 +1,38 @@
 {
   "byMilestone": {
     "M6": {
-      "cleanExpectedMatches": 1,
-      "explainabilityFailures": 4,
+      "cleanExpectedMatches": 2,
+      "explainabilityFailures": 3,
       "mayFindReview": 0,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 2,
-      "noiseCount": 11,
+      "noiseCount": 10,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 3,
-      "sameSurfaceExtraFindings": 8,
+      "sameSurfaceExtraFindings": 7,
       "scenarios": 3,
-      "unexpectedFindings": 11,
+      "unexpectedFindings": 10,
       "unexpectedRegexOnlyFindings": 7,
       "verdicts": {
-        "FAIL_EXPLAINABILITY": 2,
+        "FAIL_EXPLAINABILITY": 1,
         "FAIL_FN": 0,
         "FAIL_FP": 1,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
         "PASS_CLEAN": 0,
-        "PASS_WITH_NOISE": 0
+        "PASS_WITH_NOISE": 1
       }
     }
   },
   "byScenario": {
     "Q-V6-CONFIG-003": {
-      "cleanExpectedMatches": 1,
+      "cleanExpectedMatches": 2,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 1,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.9678064387122576,
-      "finalVerdict": "FAIL_EXPLAINABILITY",
-      "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=1)",
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-tree.txt",
       "locComposition": {
@@ -55,11 +55,11 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 1,
-        "sameSurfaceExtraFindings": 1,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 0,
         "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 2,
+      "noiseCount": 1,
       "normalizationStats": {
         "collapsedDuplicates": 0,
         "normalizedFindings": 3,
@@ -78,11 +78,11 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\edge-gateway-config\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 1,
-      "sameSurfaceExtraFindings": 1,
-      "unexpectedFindings": 2,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 1,
       "unexpectedRegexOnlyFindings": 0,
-      "verdict": "FAIL_EXPLAINABILITY",
-      "verdictClass": "FAIL_EXPLAINABILITY"
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     },
     "Q-V6-CS-002": {
       "cleanExpectedMatches": 0,
@@ -205,12 +205,12 @@
   },
   "scenarioCount": 3,
   "verdicts": {
-    "FAIL_EXPLAINABILITY": 2,
+    "FAIL_EXPLAINABILITY": 1,
     "FAIL_FN": 0,
     "FAIL_FP": 1,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
     "PASS_CLEAN": 0,
-    "PASS_WITH_NOISE": 0
+    "PASS_WITH_NOISE": 1
   }
 }

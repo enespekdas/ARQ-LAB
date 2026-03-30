@@ -1,0 +1,64 @@
+{
+  "applicationId": "7071b8ac-ead8-4628-b3d2-5dcabdb41e1f",
+  "applicationKey": "arq-lab-20260330t201248z-n-v7-safe-004",
+  "applicationName": "safe-wrapper-playground-20260330t201248z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "481af244e4ea3627d0a2c27ae6a6cd048dbc3b9f",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-30T20:14:10.783336Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/safe-wrapper-playground-20260330t201248z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 162,
+  "filesTotal": 162,
+  "finishedAt": "2026-03-30T20:14:16.645870Z",
+  "id": "7e3ffdb9-8bd1-47a0-823a-99e20688aa8a",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-30T20:14:13.529762Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot`
 - repoType: `history`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\payments-history-lineage`
-- repo remote URL in Gitea: `http://localhost:3001/arq/payments-history-lineage-20260330t172732z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/payments-history-lineage-20260330t200417z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -537,15 +537,15 @@ payments-history-lineage
 
 Branches:
 
-- `main` tip: `374c301a3361fdc65128a87f7ee7b54851333ec4`
+- `main` tip: `eb626129e77451a8f0ef25e745c29a311d76c8d4`
 
 Commit order:
 
-- `7754595074a1d4c47d571576d6eeded1834d4a98` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `cfbce37fd52e9627f1726f90209c9fe3d92b0f71` `c002 add live partner access token`: introduces an intended signal.
-- `52f487da362c4eeb460bae40583612de4082dfee` `c003 add docs noise`: introduces an intended signal.
-- `1528cd39296fab52c545c5ddd9582ec8aeeaa084` `c004 remove token and replace with safe reference`: removes or neutralizes a prior signal.
-- `374c301a3361fdc65128a87f7ee7b54851333ec4` `c005 unrelated refactor`: scenario state change.
+- `b85a97292eb61b19c9a9547355ab88f3b6a241be` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `45f82820050d868bcc7109f91db9ee6b2f1c35a1` `c002 add live partner access token`: introduces an intended signal.
+- `1f461b20b32ca15e787848f4b7d019dd41b57fe8` `c003 add docs noise`: introduces an intended signal.
+- `6f518bffaaffedb01c7befdb358573905ab0936d` `c004 remove token and replace with safe reference`: removes or neutralizes a prior signal.
+- `eb626129e77451a8f0ef25e745c29a311d76c8d4` `c005 unrelated refactor`: scenario state change.
 
 Expected final head/history state:
 

@@ -9,7 +9,7 @@
 - language / stack: `App + infra + CI`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t173733z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260330t201432z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
@@ -898,15 +898,15 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `8cc9c1fe504c8bfb0ec2bebfbbf1c1130079e509`; diverges from `main` at `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8`
-- `main` tip: `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8`
-- `release/2026.04` tip: `00f40b56afab1c2200e2c3086fd5d5ba65d41340`; diverges from `main` at `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8`
+- `feature/hotfix-ssl` tip: `0b10b8ba8d6909dfe015e149fc08953288c797cc`; diverges from `main` at `d0f334151e8527813a6d3bfd49ca2210b895cca6`
+- `main` tip: `d0f334151e8527813a6d3bfd49ca2210b895cca6`
+- `release/2026.04` tip: `2b43f5b82a30727842ad02218a6cf8d28d4bbec4`; diverges from `main` at `d0f334151e8527813a6d3bfd49ca2210b895cca6`
 
 Commit order:
 
-- `d8b5c3fa6aaa33feb1af5975d2ccbf0099535fa8` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `8cc9c1fe504c8bfb0ec2bebfbbf1c1130079e509` `c002 temporary hotfix secret`: introduces an intended signal.
-- `00f40b56afab1c2200e2c3086fd5d5ba65d41340` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `d0f334151e8527813a6d3bfd49ca2210b895cca6` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `0b10b8ba8d6909dfe015e149fc08953288c797cc` `c002 temporary hotfix secret`: introduces an intended signal.
+- `2b43f5b82a30727842ad02218a6cf8d28d4bbec4` `c003 release branch clean`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

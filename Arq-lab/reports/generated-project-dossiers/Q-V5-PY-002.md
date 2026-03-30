@@ -9,7 +9,7 @@
 - language / stack: `Python / worker service`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M5\data-sync-python`
-- repo remote URL in Gitea: `http://localhost:3001/arq/data-sync-python-20260330t173320z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/data-sync-python-20260330t200956z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

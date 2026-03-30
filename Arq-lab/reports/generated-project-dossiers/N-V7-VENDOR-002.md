@@ -9,7 +9,7 @@
 - language / stack: `Vendor / generated`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M7\vendor-generated-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/vendor-generated-repo-20260330t173609z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/vendor-generated-repo-20260330t201248z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

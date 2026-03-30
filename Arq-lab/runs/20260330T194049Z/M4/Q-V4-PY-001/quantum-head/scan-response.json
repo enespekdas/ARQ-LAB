@@ -1,0 +1,578 @@
+{
+  "applicationId": "055083fc-c933-452a-a218-04ad6ae80042",
+  "applicationKey": "arq-lab-20260330t194049z-q-v4-py-001",
+  "applicationName": "notification-signer-python-20260330t194049z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "5a35d621bcb175ee942967a8bca99443779b4927",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-30T19:40:58.187230Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/notification-signer-python-20260330t194049z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 162,
+  "filesTotal": 162,
+  "finishedAt": "2026-03-30T19:41:06.631595Z",
+  "id": "7dedd682-d578-4fcf-836d-fe03d4604b86",
+  "modules": [
+    {
+      "findingCount": 24,
+      "module": "quantum",
+      "occurrenceCount": 24,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-30T19:41:02.322876Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 24,
+    "keptCount": 24,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "quantum": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 24,
+        "keptCount": 24,
+        "occurrenceCount": 24,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 24,
+    "occurrenceCount": 24,
+    "projectContext": {
+      "applicability": {
+        "appliesCount": 44,
+        "byLanguage": {
+          "abap": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 1,
+            "notApplicableCount": 0,
+            "unknownCount": 1
+          },
+          "c": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "config": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 24,
+            "notApplicableCount": 0,
+            "unknownCount": 24
+          },
+          "cpp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "csharp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 158,
+            "notApplicableCount": 0,
+            "unknownCount": 158
+          },
+          "elixir": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 11,
+            "notApplicableCount": 0,
+            "unknownCount": 11
+          },
+          "erlang": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 10,
+            "notApplicableCount": 0,
+            "unknownCount": 10
+          },
+          "go": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "groovy": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "java": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 191,
+            "notApplicableCount": 0,
+            "unknownCount": 191
+          },
+          "javascript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "jcl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 7,
+            "notApplicableCount": 0,
+            "unknownCount": 7
+          },
+          "kotlin": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "lua": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          },
+          "objectivec": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "perl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 9,
+            "notApplicableCount": 0,
+            "unknownCount": 9
+          },
+          "php": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "plsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 4,
+            "notApplicableCount": 0,
+            "unknownCount": 4
+          },
+          "powershell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "python": {
+            "appliesCount": 44,
+            "evaluatedRuleCount": 152,
+            "notApplicableCount": 108,
+            "unknownCount": 0
+          },
+          "ruby": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "rust": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "scala": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "shell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 12,
+            "notApplicableCount": 0,
+            "unknownCount": 12
+          },
+          "swift": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "tsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 5,
+            "notApplicableCount": 0,
+            "unknownCount": 5
+          },
+          "typescript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "zig": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          }
+        },
+        "evaluatedRuleCount": 805,
+        "mode": "SHADOW",
+        "notApplicableCount": 108,
+        "reasonBreakdown": {
+          "LANGUAGE_AND_VERSION_MATCH": 44,
+          "NO_LANGUAGE_CONTEXT": 653,
+          "VERSION_ABOVE_MAX": 25,
+          "VERSION_BELOW_MIN": 83
+        },
+        "sampleNotApplicableRules": [
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0245-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0246-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0247-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0248-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0250-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0252-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0253-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0254-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0255-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0256-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0257-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0258-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0260-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0261-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0262-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0263-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0264-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0265-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0266-python",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "2.7",
+            "applicableMinVersion": "2",
+            "language": "python",
+            "projectVersions": [
+              ">=3.11"
+            ],
+            "reasonCode": "VERSION_ABOVE_MAX",
+            "ruleKey": "quantum.arq-q-0267-python",
+            "status": "NOT_APPLICABLE"
+          }
+        ],
+        "sampleUnknownRules": [
+          {
+            "applicableMaxVersion": "8",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0005-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0006-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0007-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0008-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0009-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0010-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0011-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0012-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0013-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "11",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0014-java",
+            "status": "UNKNOWN"
+          }
+        ],
+        "unknownCount": 653
+      },
+      "ecosystems": [
+        "python"
+      ],
+      "frameworkHints": [],
+      "languageVersions": {
+        "python": [
+          ">=3.11"
+        ]
+      },
+      "manifestCount": 1,
+      "manifests": [
+        {
+          "ecosystem": "python",
+          "frameworkHints": [],
+          "kind": "PYPROJECT_TOML",
+          "languageVersions": [
+            ">=3.11"
+          ],
+          "parseStatus": "PARSED",
+          "path": "pyproject.toml"
+        }
+      ],
+      "parsedManifestCount": 1,
+      "status": "AVAILABLE",
+      "warnings": []
+    },
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

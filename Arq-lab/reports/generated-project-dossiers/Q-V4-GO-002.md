@@ -9,7 +9,7 @@
 - language / stack: `Go`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\device-provisioning-go`
-- repo remote URL in Gitea: `http://localhost:3001/arq/device-provisioning-go-20260330t173131z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/device-provisioning-go-20260330t200814z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -287,7 +287,7 @@ device-provisioning-go
 | internal/manifests/manifests_test.go | live-code | 3 | Runtime business module contributing to Manifests Test. | no | no | no | yes | yes | no |
 | internal/policies/policies.go | live-code | 5 | Runtime business module contributing to Policies. | no | no | no | yes | yes | no |
 | internal/policies/policies_test.go | live-code | 3 | Runtime business module contributing to Policies Test. | no | no | no | yes | yes | no |
-| internal/security/legacy_hash.go | live-code | 14 | Runtime business module contributing to Legacy Hash. | yes | yes | no | yes | yes | no |
+| internal/security/legacy_hash.go | live-code | 14 | Runtime business module contributing to Legacy Hash. | yes | no | no | yes | yes | no |
 | internal/security/secure_hmac.go | live-code | 3 | Runtime business module contributing to Secure Hmac. | no | yes | no | yes | yes | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -383,7 +383,7 @@ device-provisioning-go
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2298 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 703 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 701 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 183 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 16 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -409,7 +409,6 @@ device-provisioning-go
 
 ## 7. Near-Real Negative Surfaces
 
-- `internal/security/legacy_hash.go`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `internal/security/secure_hmac.go`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -586,7 +585,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Hash. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -687,7 +686,6 @@ Explainability failure definition:
 - False negatives are most likely in Go crypto helpers where weak algorithms are simple constructor calls with little surrounding context.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 

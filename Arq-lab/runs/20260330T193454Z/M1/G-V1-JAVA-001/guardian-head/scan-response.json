@@ -1,0 +1,64 @@
+{
+  "applicationId": "d05b3eb1-8a90-47e7-b20d-f94f317d69ba",
+  "applicationKey": "arq-lab-20260330t193454z-g-v1-java-001",
+  "applicationName": "payments-service-java-20260330t193454z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "2bdae5dc7529110745ef71dbf6a4fedde2a3b727",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-30T19:35:16.646454Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/payments-service-java-20260330t193454z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 167,
+  "filesTotal": 167,
+  "finishedAt": "2026-03-30T19:35:24.355060Z",
+  "id": "97849448-1ed7-45f9-8b25-471a75f15686",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-30T19:35:21.228322Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

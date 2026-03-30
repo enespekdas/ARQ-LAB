@@ -378,6 +378,59 @@ def test_semantic_required_regex_only_not_counted_as_success() -> None:
     assert len(comparison["unexpectedRegexOnlyFindings"]) == 1
 
 
+def test_explainability_contracts_do_not_cross_match_same_path_expectations() -> None:
+    scenario = _scenario(
+        module="quantum",
+        expected_findings=[
+            ExpectedFinding(key="md5", path_contains="legacy_hash.go", resolved_value_contains="MD5"),
+            ExpectedFinding(key="sha1", path_contains="legacy_hash.go", resolved_value_contains="SHA1"),
+        ],
+        explainability_expectations=[
+            ExplainabilityExpectation(
+                key="md5",
+                path_contains="legacy_hash.go",
+                resolved_value_contains="MD5",
+                query_family_contains="go",
+            ),
+            ExplainabilityExpectation(
+                key="sha1",
+                path_contains="legacy_hash.go",
+                resolved_value_contains="SHA1",
+                query_family_contains="go",
+            ),
+        ],
+    )
+    comparison = _compare(
+        scenario,
+        [
+            _finding(
+                finding_id="go-md5",
+                path="internal/security/legacy_hash.go",
+                rule_key="quantum.arq-q-0572-go",
+                rule_name="Weak Hash (MD5)",
+                detection_source="AST",
+                resolved_value="MD5",
+                query_family="go.crypto",
+                semantic_key="go:crypto:md5.New:MD5",
+            ),
+            _finding(
+                finding_id="go-sha1",
+                path="internal/security/legacy_hash.go",
+                rule_key="quantum.arq-q-0573-go",
+                rule_name="Weak Hash (SHA1)",
+                detection_source="AST",
+                resolved_value="SHA1",
+                query_family="go.crypto",
+                semantic_key="go:crypto:sha1.New:SHA1",
+            ),
+        ],
+    )
+
+    assert comparison["finalVerdict"] == "PASS_CLEAN"
+    assert comparison["cleanExpectedMatches"] == 2
+    assert comparison["explainabilityFailures"] == []
+
+
 @pytest.mark.parametrize(
     ("scenario", "findings", "expected_verdict"),
     [

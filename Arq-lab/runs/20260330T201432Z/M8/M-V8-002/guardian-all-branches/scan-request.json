@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "ALL_BRANCHES",
+    "modules": [
+      "guardian"
+    ],
+    "name": "guardian-all-branches",
+    "refName": null,
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "a5a08f1e-4556-4f39-aa6c-c48ad850b666",
+    "applicationKey": "arq-lab-20260330t201432z-m-v8-002",
+    "applicationName": "infra-app-mixed-repo-20260330t201432z",
+    "branchScope": "ALL_BRANCHES",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-03-30T20:17:30.421805500Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "http://localhost:3001/arq/infra-app-mixed-repo-20260330t201432z.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "84258bd0-0b33-48d7-b9e3-7b1d611e1973",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "guardian",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": null,
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}
