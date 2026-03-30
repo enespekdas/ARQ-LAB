@@ -1,0 +1,7 @@
+build:
+  - ./mvnw -q -DskipTests compile
+test:
+  - ./mvnw -q test
+smoke:
+  - ./validation/smoke.sh
+timeoutSeconds: 900

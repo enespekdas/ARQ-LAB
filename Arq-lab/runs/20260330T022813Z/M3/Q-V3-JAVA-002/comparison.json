@@ -1,0 +1,90 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "75970cbc-0053-4ee2-8730-5a5f750d6d5b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0186-java",
+        "ruleName": "Weak Symmetric Cipher",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "desede"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "63822cbb-a622-4dbd-9ca5-d1cab9071a4a",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0012-java",
+        "ruleName": "AES Mode",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "aes-ecb"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "module": "quantum",
+  "mustFindExpected": 3,
+  "mustFindMatched": 2,
+  "mustFindMissing": [
+    {
+      "expected": "pbe-md5-des",
+      "pathContains": "LegacyPasswordFactory.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V3-JAVA-002",
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8495db86-32ff-4cf0-800f-100721a9c026",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0188-java",
+      "ruleName": "Weak Symmetric Cipher",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "verdict": "FAIL_FN"
+}

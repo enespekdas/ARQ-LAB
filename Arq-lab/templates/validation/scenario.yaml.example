@@ -1,0 +1,45 @@
+scenarioId: EXAMPLE-001
+name: example-scenario
+milestone: M1
+modules:
+  - guardian
+language: java
+stack: spring-boot
+
+repoRealism:
+  targetTotalLinesMin: 5000
+  targetTotalLinesMax: 9000
+  targetSourceFilesMin: 25
+  targetTestFilesMin: 10
+  targetConfigFilesMin: 6
+
+scanPlan:
+  - name: main-head
+    scanMode: HEAD_SNAPSHOT
+    branchScope: SINGLE_BRANCH
+    refName: main
+    modules:
+      - guardian
+
+runnability:
+  build:
+    - ./mvnw -q -DskipTests compile
+  test:
+    - ./mvnw -q test
+  smoke:
+    - ./validation/smoke.sh
+
+pathClasses:
+  live:
+    - src/main/**
+    - config/**
+  protectedNegative:
+    - docs/**
+    - src/test/**
+    - tests/**
+    - fixtures/**
+    - examples/**
+
+notes:
+  - Keep realistic framework wiring.
+  - Include both positives and negatives.

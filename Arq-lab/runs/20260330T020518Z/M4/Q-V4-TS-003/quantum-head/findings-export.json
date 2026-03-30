@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-30T02:06:56.248162400Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "83b99a7f-8eee-4d8f-b0d7-cae670276867",
+      "applicationKey": "arq-lab-20260330t020518z-q-v4-ts-003",
+      "applicationName": "customer-portal-node-20260330t020518z",
+      "branchName": "main",
+      "commitSha": "690e8cf1db3fb3602458b2565d456022e4d25a3b",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "cdfd29ad-0b28-44c4-b47b-2a1cacf3e561",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-03-30T02:06:56.110110Z",
+      "lastSeenAt": "2026-03-30T02:06:56.110110Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/legacyDigest.ts",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "4ae1fee9-21c6-4408-9ca6-bba7e4631844",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

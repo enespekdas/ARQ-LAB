@@ -1,0 +1,50 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5610565f-224a-410e-b16c-19a3cf09dfdf",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "runtime/.env",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0949-config",
+        "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "node-env-disable"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 1,
+  "mustFindMissing": [
+    {
+      "expected": "envoy-untrusted",
+      "pathContains": "deploy/envoy.yaml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V6-CONFIG-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

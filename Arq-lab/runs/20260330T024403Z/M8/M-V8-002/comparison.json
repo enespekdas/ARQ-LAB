@@ -1,0 +1,92 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3fc80592-09af-4c25-b06c-ab5b0022f740",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/config/production.env",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "guardian-active-secret"
+    },
+    {
+      "actual": {
+        "branchName": "feature/hotfix-ssl",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a13021ce-eaa8-4916-b601-f0203b8ce9c7",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/hotfix/feature-secret.txt",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "guardian-hotfix-secret"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "897e6069-f9a8-4191-bd6d-0de16a4bbb6c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/console/src/modules/security/legacyDigest.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0613-typescript",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "quantum-app-md5"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "module": "both",
+  "mustFindExpected": 4,
+  "mustFindMatched": 3,
+  "mustFindMissing": [
+    {
+      "expected": "quantum-config-trust",
+      "pathContains": "deploy/envoy.yaml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "failed",
+    "smoke": "passed",
+    "test": "failed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "M-V8-002",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-30T02:09:29.176442300Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "9df7d54b-31e4-45e1-b0ab-0c92cc0b9fed",
+      "applicationKey": "arq-lab-20260330t020847z-q-v6-ts-001",
+      "applicationName": "customer-portal-node-tls-20260330t020847z",
+      "branchName": "main",
+      "commitSha": "d90967a77c95f3ea56685bb1c198adc1c2d064ee",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "5457a1e3-765a-4acb-9f80-94622b4cd454",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-03-30T02:09:26.756822Z",
+      "lastSeenAt": "2026-03-30T02:09:26.756822Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/http/insecureAgentFactory.ts",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "4ae1fee9-21c6-4408-9ca6-bba7e4631844",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0611-typescript",
+      "ruleName": "TLS Trust Bypass",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

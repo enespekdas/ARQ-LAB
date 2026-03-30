@@ -1,0 +1,41 @@
+{
+  "explainabilityFailures": [
+    {
+      "expected": "runtime-trust-bypass",
+      "pathContains": "PartnerTlsProperties.java"
+    },
+    {
+      "expected": "active-prod-flag",
+      "pathContains": "application-prod.yml"
+    }
+  ],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M5",
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "runtime-trust-bypass",
+      "pathContains": "PartnerTlsProperties.java"
+    },
+    {
+      "expected": "active-prod-flag",
+      "pathContains": "application-prod.yml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V5-JAVA-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

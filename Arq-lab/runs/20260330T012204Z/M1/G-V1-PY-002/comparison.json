@@ -1,0 +1,40 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "module": "guardian",
+  "mustFindExpected": 4,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "runtime-token",
+      "pathContains": "app/config/runtime_settings.py"
+    },
+    {
+      "expected": "prod-env",
+      "pathContains": "deploy/k8s/notification-prod.env"
+    },
+    {
+      "expected": "webhook-key",
+      "pathContains": "app/clients/webhook_client.py"
+    },
+    {
+      "expected": "jwt-secret",
+      "pathContains": "app/security/jwt_bootstrap.py"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V1-PY-002",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

@@ -1,0 +1,19 @@
+{
+  "mustFind": [
+    {
+      "id": "EX-001",
+      "module": "guardian",
+      "anchor": {
+        "path": "src/main/resources/keys/partner_rsa.pem",
+        "ruleKey": "guardian.private-key",
+        "branchName": "main"
+      },
+      "assert": {
+        "presentOnHead": true,
+        "presentInHistory": false,
+        "exposureScope": "HEAD_ONLY"
+      }
+    }
+  ],
+  "mayFindReview": []
+}

@@ -1,0 +1,50 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5e91b3bd-1f00-4a0f-b6b1-53f2300e2c17",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/modules/http/insecureAgentFactory.ts",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0611-typescript",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "reject-unauthorized"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 1,
+  "mustFindMissing": [
+    {
+      "expected": "axios-insecure",
+      "pathContains": "insecureBillingClient.ts"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V6-TS-001",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

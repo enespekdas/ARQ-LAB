@@ -1,0 +1,45 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HISTORY_ONLY",
+        "findingId": "843a9610-5738-4b14-a2a4-741427b0a6e8",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": false,
+        "primaryFilePath": "src/main/java/com/arq/paymentshistorylineage/history/bootstrap/PartnerTokenArchive.java",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "REF_HISTORY",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "history-only-token"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "module": "guardian",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V2-HIST-001",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

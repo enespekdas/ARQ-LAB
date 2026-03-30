@@ -1,0 +1,41 @@
+{
+  "explainabilityFailures": [
+    {
+      "expected": "envoy-untrusted",
+      "pathContains": "listener.yaml"
+    },
+    {
+      "expected": "node-env-disable",
+      "pathContains": "active.env"
+    }
+  ],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "envoy-untrusted",
+      "pathContains": "listener.yaml"
+    },
+    {
+      "expected": "node-env-disable",
+      "pathContains": "active.env"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V6-CONFIG-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

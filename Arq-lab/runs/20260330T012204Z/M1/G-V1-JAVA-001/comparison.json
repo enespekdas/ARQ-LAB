@@ -1,0 +1,40 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "module": "guardian",
+  "mustFindExpected": 4,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "prod-secret",
+      "pathContains": "src/main/resources/application-prod.yml"
+    },
+    {
+      "expected": "private-key",
+      "pathContains": "src/main/resources/keys/partner_rsa.pem"
+    },
+    {
+      "expected": "bootstrap-key",
+      "pathContains": "PartnerCredentialBootstrap.java"
+    },
+    {
+      "expected": "seed-token",
+      "pathContains": "src/main/resources/db/seed/live-connector.properties"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V1-JAVA-001",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

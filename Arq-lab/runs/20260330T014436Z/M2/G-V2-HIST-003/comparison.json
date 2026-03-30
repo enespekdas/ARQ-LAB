@@ -1,0 +1,66 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HISTORY_ONLY",
+        "findingId": "d9d87f6c-73d5-4d62-a9e6-42341c780fb3",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": false,
+        "primaryFilePath": "ops/keys/service-a.pem",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "REF_HISTORY",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rotated-key-a"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "exposureScope": "HEAD_AND_HISTORY",
+        "findingId": "7b497c53-2413-4a9a-87b3-5978bf2d9a3d",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/keys/service-b.pem",
+        "queryFamily": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "REF_HISTORY",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rotated-key-b"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "module": "guardian",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V2-HIST-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS"
+}

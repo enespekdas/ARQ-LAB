@@ -1,0 +1,175 @@
+{
+  "explainabilityFailures": [
+    {
+      "expected": "md5",
+      "pathContains": "LegacyDigestService.java"
+    },
+    {
+      "expected": "sha1",
+      "pathContains": "LegacyDigestService.java"
+    },
+    {
+      "expected": "aes-ecb",
+      "pathContains": "TokenCipherService.java"
+    },
+    {
+      "expected": "weak-rng",
+      "pathContains": "ResetTokenService.java"
+    },
+    {
+      "expected": "legacy-kdf",
+      "pathContains": "PasswordKeyFactory.java"
+    }
+  ],
+  "extraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "adfae608-70f5-41a2-bb65-360442991141",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0072-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "17aa9fdf-5dd1-404c-929e-a3918260c748",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0177-java",
+      "ruleName": "Weak Hash",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1d9c889b-63d0-49e6-900d-19ba9c962fe9",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0013-java",
+      "ruleName": "AES Mode",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "module": "quantum",
+  "mustFindExpected": 5,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "md5",
+      "pathContains": "LegacyDigestService.java"
+    },
+    {
+      "expected": "sha1",
+      "pathContains": "LegacyDigestService.java"
+    },
+    {
+      "expected": "aes-ecb",
+      "pathContains": "TokenCipherService.java"
+    },
+    {
+      "expected": "weak-rng",
+      "pathContains": "ResetTokenService.java"
+    },
+    {
+      "expected": "legacy-kdf",
+      "pathContains": "PasswordKeyFactory.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V3-JAVA-001",
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "adfae608-70f5-41a2-bb65-360442991141",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0072-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "17aa9fdf-5dd1-404c-929e-a3918260c748",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0177-java",
+      "ruleName": "Weak Hash",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1d9c889b-63d0-49e6-900d-19ba9c962fe9",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0013-java",
+      "ruleName": "AES Mode",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "verdict": "FAIL_FN"
+}

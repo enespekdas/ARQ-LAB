@@ -1,0 +1,40 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "module": "guardian",
+  "mustFindExpected": 4,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "active-secret",
+      "pathContains": "src/config/secrets.ts"
+    },
+    {
+      "expected": "prod-json",
+      "pathContains": "config/production.json"
+    },
+    {
+      "expected": "key-material",
+      "pathContains": "partnerKeyLoader.ts"
+    },
+    {
+      "expected": "bootstrap-script",
+      "pathContains": "scripts/bootstrap-partner.ts"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V1-TS-003",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

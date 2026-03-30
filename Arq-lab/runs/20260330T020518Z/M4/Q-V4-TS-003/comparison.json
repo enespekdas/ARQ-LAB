@@ -1,0 +1,87 @@
+{
+  "explainabilityFailures": [
+    {
+      "expected": "md5",
+      "pathContains": "legacyDigest.ts"
+    },
+    {
+      "expected": "math-random",
+      "pathContains": "resetCodeFactory.ts"
+    },
+    {
+      "expected": "aes-ecb",
+      "pathContains": "legacyCipher.ts"
+    }
+  ],
+  "extraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "cdfd29ad-0b28-44c4-b47b-2a1cacf3e561",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/legacyDigest.ts",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "module": "quantum",
+  "mustFindExpected": 3,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "md5",
+      "pathContains": "legacyDigest.ts"
+    },
+    {
+      "expected": "math-random",
+      "pathContains": "resetCodeFactory.ts"
+    },
+    {
+      "expected": "aes-ecb",
+      "pathContains": "legacyCipher.ts"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V4-TS-003",
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "cdfd29ad-0b28-44c4-b47b-2a1cacf3e561",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/legacyDigest.ts",
+      "queryFamily": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "semanticKey": null,
+      "severity": "HIGH"
+    }
+  ],
+  "verdict": "FAIL_FN"
+}

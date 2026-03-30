@@ -1,0 +1,66 @@
+{
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "cac6edf58593feee29b5b2e70755b16dc185caa2"
+      },
+      "head": "cac6edf58593feee29b5b2e70755b16dc185caa2",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:46:35+03:00",
+          "message": "c006 safe cleanup",
+          "sha": "cac6edf58593feee29b5b2e70755b16dc185caa2"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:46:34+03:00",
+          "message": "c005 docs example PEM",
+          "sha": "f6af59e5fdc34d54c81e7074a556f3645d49bba0"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:46:34+03:00",
+          "message": "c004 rotate to PEM B",
+          "sha": "f7b99edc24fad47da8decf4df174f905c9643c61"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:46:34+03:00",
+          "message": "c003 formatting change",
+          "sha": "40759d11958fdb015022220d4e97d4ebc5afe84a"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:46:34+03:00",
+          "message": "c002 add PEM A",
+          "sha": "946634ec7123335fa85042a2c8d7f639166ae9bf"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:46:34+03:00",
+          "message": "c001 bootstrap",
+          "sha": "2a12d4c13f573f36c72c4756eec858faa55cf34c"
+        }
+      ]
+    },
+    "lineCount": 5972,
+    "repoName": "pem-rotation-lineage",
+    "scenarioId": "G-V2-HIST-003"
+  },
+  "scenario": {
+    "domain": "PEM rotation and dedup lineage validation.",
+    "id": "G-V2-HIST-003",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "pem-rotation-lineage",
+    "stack": "Python + ops config"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "explainabilityFailures": [
+    {
+      "expected": "md5",
+      "pathContains": "legacy_hash.go"
+    },
+    {
+      "expected": "sha1",
+      "pathContains": "legacy_hash.go"
+    }
+  ],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "md5",
+      "pathContains": "legacy_hash.go"
+    },
+    {
+      "expected": "sha1",
+      "pathContains": "legacy_hash.go"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "Q-V4-GO-002",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

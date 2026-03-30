@@ -1,0 +1,40 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "module": "guardian",
+  "mustFindExpected": 4,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "ops-runtime",
+      "pathContains": "config/runtime/admin-prod.yaml"
+    },
+    {
+      "expected": "service-account",
+      "pathContains": "ops/runtime/portal.env"
+    },
+    {
+      "expected": "private-key",
+      "pathContains": "config/keys/admin_portal.pem"
+    },
+    {
+      "expected": "active-properties",
+      "pathContains": "deploy/prod/admin.properties"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V1-CONFIG-004",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

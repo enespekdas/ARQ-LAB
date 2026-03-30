@@ -1,0 +1,61 @@
+{
+  "repoMetadata": {
+    "builderMetadata": {
+      "packageName": "com.arq.paymentshistorylineage"
+    },
+    "git": {
+      "branches": {
+        "main": "8ed5ffcb127847b3ef8ecacea8045bc04c214e23"
+      },
+      "head": "8ed5ffcb127847b3ef8ecacea8045bc04c214e23",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:44:39+03:00",
+          "message": "c005 unrelated refactor",
+          "sha": "8ed5ffcb127847b3ef8ecacea8045bc04c214e23"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:44:39+03:00",
+          "message": "c004 remove token and replace with safe reference",
+          "sha": "c5bc27008b0aa3b994d87fc20982bdf3d9b11c49"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:44:39+03:00",
+          "message": "c003 add docs noise",
+          "sha": "b8993544b78bb5a35025923101c663e257359945"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:44:38+03:00",
+          "message": "c002 add live partner access token",
+          "sha": "6992641f4f9b450e00ac029a74620491cd6374d2"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-30T04:44:38+03:00",
+          "message": "c001 bootstrap repo",
+          "sha": "87c8158a288f308d0ea745e53f35982b0c9151b8"
+        }
+      ]
+    },
+    "lineCount": 5961,
+    "repoName": "payments-history-lineage",
+    "scenarioId": "G-V2-HIST-001"
+  },
+  "scenario": {
+    "domain": "Payments repo with a history-only secret on main.",
+    "id": "G-V2-HIST-001",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "payments-history-lineage",
+    "stack": "Java / Spring Boot"
+  }
+}

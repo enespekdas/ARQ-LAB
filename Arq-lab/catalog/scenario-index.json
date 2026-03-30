@@ -1,0 +1,202 @@
+[
+  {
+    "id": "G-V1-JAVA-001",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "payments-service-java",
+    "stack": "Java / Spring Boot / Maven",
+    "summary": "Guardian live secret surfaces in a realistic Java payments service."
+  },
+  {
+    "id": "G-V1-PY-002",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "notification-worker-python",
+    "stack": "Python / FastAPI worker",
+    "summary": "Guardian live secret surfaces in a realistic Python notification worker."
+  },
+  {
+    "id": "G-V1-TS-003",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "partner-api-node",
+    "stack": "TypeScript / Express",
+    "summary": "Guardian live secret surfaces in a realistic TypeScript partner API."
+  },
+  {
+    "id": "G-V1-CONFIG-004",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "legacy-admin-config",
+    "stack": "Config-heavy repo",
+    "summary": "Guardian live secret surfaces in a config-heavy operations repository."
+  },
+  {
+    "id": "G-V2-HIST-001",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "payments-history-lineage",
+    "stack": "Java / Spring Boot",
+    "summary": "Guardian history-only secret exposure modelling on main branch."
+  },
+  {
+    "id": "G-V2-HIST-002",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "partner-branch-divergence",
+    "stack": "TypeScript / Node",
+    "summary": "Guardian single-branch versus all-branches branch divergence handling."
+  },
+  {
+    "id": "G-V2-HIST-003",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "pem-rotation-lineage",
+    "stack": "Python + ops config",
+    "summary": "Guardian PEM rotation, canonicalization and dedup continuity."
+  },
+  {
+    "id": "Q-V3-JAVA-001",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "identity-gateway-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum weak crypto patterns in Java identity services."
+  },
+  {
+    "id": "Q-V3-JAVA-002",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "legacy-payment-crypto-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum weak crypto patterns in legacy Java payment utilities."
+  },
+  {
+    "id": "Q-V3-CS-003",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "billing-sdk-csharp",
+    "stack": "C# / .NET 8",
+    "summary": "Quantum weak crypto patterns in a realistic C# billing SDK."
+  },
+  {
+    "id": "Q-V4-PY-001",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "notification-signer-python",
+    "stack": "Python / FastAPI",
+    "summary": "Quantum weak crypto patterns in Python signing helpers."
+  },
+  {
+    "id": "Q-V4-GO-002",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "device-provisioning-go",
+    "stack": "Go",
+    "summary": "Quantum weak crypto patterns in a realistic Go provisioning service."
+  },
+  {
+    "id": "Q-V4-TS-003",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "customer-portal-node",
+    "stack": "TypeScript / Node",
+    "summary": "Quantum weak crypto patterns in a realistic Node portal backend."
+  },
+  {
+    "id": "Q-V5-JAVA-001",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "partner-client-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum TLS trust bypass patterns in Java HTTP clients."
+  },
+  {
+    "id": "Q-V5-PY-002",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "data-sync-python",
+    "stack": "Python / worker service",
+    "summary": "Quantum TLS trust bypass patterns in Python clients."
+  },
+  {
+    "id": "Q-V5-JAVA-003",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "gateway-config-java",
+    "stack": "Java + config wiring",
+    "summary": "Quantum runtime-wired TLS config misuse in a Java gateway service."
+  },
+  {
+    "id": "Q-V6-TS-001",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "customer-portal-node-tls",
+    "stack": "TypeScript / Node",
+    "summary": "Quantum TLS trust bypass patterns in Node HTTP clients."
+  },
+  {
+    "id": "Q-V6-CS-002",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "admin-integrations-csharp",
+    "stack": "C# / .NET 8",
+    "summary": "Quantum trust bypass patterns in C# HttpClient registration."
+  },
+  {
+    "id": "Q-V6-CONFIG-003",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "edge-gateway-config",
+    "stack": "Config-heavy repo",
+    "summary": "Quantum active runtime TLS config misuse versus dormant examples."
+  },
+  {
+    "id": "N-V7-DOCS-001",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "docs-samples-repo",
+    "stack": "Docs / snippets",
+    "summary": "Adversarial docs-only surfaces should stay clean."
+  },
+  {
+    "id": "N-V7-VENDOR-002",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "vendor-generated-repo",
+    "stack": "Vendor / generated",
+    "summary": "Generated and vendor noise should stay clean."
+  },
+  {
+    "id": "N-V7-TESTS-003",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "test-mocks-repo",
+    "stack": "Tests / fixtures",
+    "summary": "Tests, mocks and fixtures should stay clean."
+  },
+  {
+    "id": "N-V7-SAFE-004",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "safe-wrapper-playground",
+    "stack": "Secure wrappers",
+    "summary": "Secure wrappers should stay clean despite naming traps."
+  },
+  {
+    "id": "M-V8-001",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "internal-platform-monorepo",
+    "stack": "Java + Node + Python monorepo",
+    "summary": "Mixed enterprise monorepo with both Guardian and Quantum signals."
+  },
+  {
+    "id": "M-V8-002",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "infra-app-mixed-repo",
+    "stack": "App + infra + CI",
+    "summary": "Mixed infra/application repository with Guardian and Quantum across app and config."
+  }
+]

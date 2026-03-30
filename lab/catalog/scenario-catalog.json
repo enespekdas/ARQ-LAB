@@ -1,0 +1,267 @@
+{
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Guardian realistic live surfaces",
+      "scenarios": [
+        {
+          "id": "G-V1-JAVA-001",
+          "repo": "payments-service-java",
+          "module": "guardian",
+          "stack": "Java / Spring Boot / PostgreSQL",
+          "lineTarget": "5000-9000",
+          "positives": [
+            "hardcoded client secret",
+            "private key PEM",
+            "generic API key"
+          ],
+          "negatives": [
+            "README example",
+            "masked logs",
+            "src/test/resources/example.env",
+            ".env.example"
+          ]
+        },
+        {
+          "id": "G-V1-PY-002",
+          "repo": "notification-worker-python",
+          "module": "guardian",
+          "stack": "Python / FastAPI / Celery-like worker",
+          "lineTarget": "5000-8000",
+          "positives": [
+            "runtime token",
+            "real-looking DSN/token in active settings"
+          ],
+          "negatives": [
+            "tests/fixtures",
+            "comment-only samples",
+            "masked DSN"
+          ]
+        },
+        {
+          "id": "G-V1-TS-003",
+          "repo": "partner-api-node",
+          "module": "guardian",
+          "stack": "TypeScript / NestJS or Express",
+          "lineTarget": "5000-8000",
+          "positives": [
+            "live config secret",
+            "production JSON key",
+            "certificate/key material"
+          ],
+          "negatives": [
+            "README",
+            "__tests__/fixtures",
+            ".env.example"
+          ]
+        },
+        {
+          "id": "G-V1-CONFIG-004",
+          "repo": "legacy-admin-config",
+          "module": "guardian",
+          "stack": "Config-heavy repo / YAML / properties / shell / terraform",
+          "lineTarget": "5000-7000",
+          "positives": [
+            "ops config secret",
+            "live properties secret",
+            "private key"
+          ],
+          "negatives": [
+            "sample tfvars",
+            "template configs",
+            "docs blocks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "Guardian history ref-state dedup",
+      "scenarios": [
+        {
+          "id": "G-V2-HIST-001",
+          "repo": "payments-history-lineage",
+          "module": "guardian",
+          "stack": "Java / Spring Boot",
+          "focus": "history only"
+        },
+        {
+          "id": "G-V2-HIST-002",
+          "repo": "partner-branch-divergence",
+          "module": "guardian",
+          "stack": "Node / TypeScript",
+          "focus": "all branches vs single branch"
+        },
+        {
+          "id": "G-V2-HIST-003",
+          "repo": "pem-rotation-lineage",
+          "module": "guardian",
+          "stack": "Python + ops config",
+          "focus": "rotation, canonicalization, dedup"
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Quantum weak crypto Java CSharp",
+      "scenarios": [
+        {
+          "id": "Q-V3-JAVA-001",
+          "repo": "identity-gateway-java",
+          "module": "quantum",
+          "stack": "Java / Spring Boot",
+          "focus": "MD5, SHA1, ECB, legacy KDF"
+        },
+        {
+          "id": "Q-V3-JAVA-002",
+          "repo": "legacy-payment-crypto-java",
+          "module": "quantum",
+          "stack": "Java / Spring Boot",
+          "focus": "DES/3DES, PBEWithMD5AndDES, weak keystore patterns"
+        },
+        {
+          "id": "Q-V3-CS-003",
+          "repo": "billing-sdk-csharp",
+          "module": "quantum",
+          "stack": "C# / .NET",
+          "focus": "MD5.Create, SHA1.Create, ECB, Random() in security path"
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Quantum weak crypto Python Go Node",
+      "scenarios": [
+        {
+          "id": "Q-V4-PY-001",
+          "repo": "notification-signer-python",
+          "module": "quantum",
+          "stack": "Python / FastAPI",
+          "focus": "hashlib.md5, weak token generation"
+        },
+        {
+          "id": "Q-V4-GO-002",
+          "repo": "device-provisioning-go",
+          "module": "quantum",
+          "stack": "Go",
+          "focus": "md5/sha1, weak PBKDF2, insecure auth helper"
+        },
+        {
+          "id": "Q-V4-TS-003",
+          "repo": "customer-portal-node",
+          "module": "quantum",
+          "stack": "TypeScript / Node",
+          "focus": "md5, Math.random security misuse, aes-128-ecb"
+        }
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "Quantum TLS trust config Java Python",
+      "scenarios": [
+        {
+          "id": "Q-V5-JAVA-001",
+          "repo": "partner-client-java",
+          "module": "quantum",
+          "stack": "Java / Spring Boot",
+          "focus": "trust-all manager, hostname verification off"
+        },
+        {
+          "id": "Q-V5-PY-002",
+          "repo": "data-sync-python",
+          "module": "quantum",
+          "stack": "Python / FastAPI worker",
+          "focus": "verify=False, ssl context disable"
+        },
+        {
+          "id": "Q-V5-JAVA-003",
+          "repo": "gateway-config-java",
+          "module": "quantum",
+          "stack": "Java + config wiring",
+          "focus": "insecure TLS config wired via YAML/properties"
+        }
+      ]
+    },
+    {
+      "id": "M6",
+      "title": "Quantum TLS trust config Node CSharp Config",
+      "scenarios": [
+        {
+          "id": "Q-V6-TS-001",
+          "repo": "customer-portal-node-tls",
+          "module": "quantum",
+          "stack": "TypeScript / Node",
+          "focus": "rejectUnauthorized false"
+        },
+        {
+          "id": "Q-V6-CS-002",
+          "repo": "admin-integrations-csharp",
+          "module": "quantum",
+          "stack": "C# / .NET",
+          "focus": "ServerCertificateCustomValidationCallback bypass"
+        },
+        {
+          "id": "Q-V6-CONFIG-003",
+          "repo": "edge-gateway-config",
+          "module": "quantum",
+          "stack": "Config-heavy repo",
+          "focus": "inventory-only vs runtime-wired insecure config"
+        }
+      ]
+    },
+    {
+      "id": "M7",
+      "title": "Adversarial negatives",
+      "scenarios": [
+        {
+          "id": "N-V7-DOCS-001",
+          "repo": "docs-samples-repo",
+          "module": "both",
+          "stack": "Docs/snippets",
+          "focus": "docs should stay clean"
+        },
+        {
+          "id": "N-V7-VENDOR-002",
+          "repo": "vendor-generated-repo",
+          "module": "both",
+          "stack": "vendor/generated",
+          "focus": "generated noise suppression"
+        },
+        {
+          "id": "N-V7-TESTS-003",
+          "repo": "test-mocks-repo",
+          "module": "both",
+          "stack": "tests/fixtures",
+          "focus": "test-only insecure-looking code"
+        },
+        {
+          "id": "N-V7-SAFE-004",
+          "repo": "safe-wrapper-playground",
+          "module": "both",
+          "stack": "safe wrappers",
+          "focus": "secure patterns should stay clean"
+        }
+      ]
+    },
+    {
+      "id": "M8",
+      "title": "Mixed enterprise repos",
+      "scenarios": [
+        {
+          "id": "M-V8-001",
+          "repo": "internal-platform-monorepo",
+          "module": "both",
+          "stack": "Java + Node + Python monorepo",
+          "focus": "mixed findings with bounded noise"
+        },
+        {
+          "id": "M-V8-002",
+          "repo": "infra-app-mixed-repo",
+          "module": "both",
+          "stack": "App + infra + CI",
+          "focus": "app and config together"
+        }
+      ]
+    }
+  ]
+}

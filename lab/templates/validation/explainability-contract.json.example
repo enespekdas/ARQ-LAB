@@ -1,0 +1,20 @@
+{
+  "mustHave": [
+    "detectionSource",
+    "semanticKey",
+    "resolvedValue",
+    "resolutionScope",
+    "queryFamily"
+  ],
+  "rules": [
+    {
+      "anchor": {
+        "path": "src/main/java/com/acme/security/LegacyTokenCipher.java"
+      },
+      "assert": {
+        "queryFamily": "java.jca",
+        "resolutionScope": "SAME_METHOD"
+      }
+    }
+  ]
+}

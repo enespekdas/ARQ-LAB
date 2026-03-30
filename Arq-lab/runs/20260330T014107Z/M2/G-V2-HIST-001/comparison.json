@@ -1,0 +1,28 @@
+{
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "module": "guardian",
+  "mustFindExpected": 1,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "history-only-token",
+      "pathContains": "src/main/java/com/arq/history/bootstrap/PartnerTokenArchive.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "scenarioId": "G-V2-HIST-001",
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN"
+}

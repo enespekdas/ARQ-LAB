@@ -1,0 +1,18 @@
+defaultBranch: main
+commits:
+  - id: c001
+    branch: main
+    message: bootstrap repository
+    apply:
+      - overlays/001-bootstrap
+  - id: c002
+    branch: main
+    message: add live secret
+    apply:
+      - overlays/002-live-secret
+  - id: c003
+    branch: feature/sample
+    parent: c001
+    message: add branch-only change
+    apply:
+      - overlays/003-feature-only
