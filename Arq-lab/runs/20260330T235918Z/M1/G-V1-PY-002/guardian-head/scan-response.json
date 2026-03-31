@@ -1,0 +1,64 @@
+{
+  "applicationId": "f8d5f6ed-8570-45ce-b62e-13ed40d16ef4",
+  "applicationKey": "arq-lab-20260330t235918z-g-v1-py-002",
+  "applicationName": "notification-worker-python-20260330t235918z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "7e5a1ed42a70c661f9082ec6ae5204eead4a643f",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-31T00:00:04.426736Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/notification-worker-python-20260330t235918z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 164,
+  "filesTotal": 164,
+  "finishedAt": "2026-03-31T00:00:10.831658Z",
+  "id": "66854b1c-9f10-4a46-8403-74d99a920635",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-31T00:00:08.818299Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 1,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 1,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

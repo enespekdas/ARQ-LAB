@@ -1,0 +1,64 @@
+{
+  "applicationId": "e8e0531a-683c-4ad1-8f39-dab095b94ae1",
+  "applicationKey": "arq-lab-20260331t000135z-g-v2-hist-003",
+  "applicationName": "pem-rotation-lineage-20260331t000135z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "2f7dd35cd157f1c0d8d973b3b9ac902120a3ef7e",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-31T00:03:39.858177Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/pem-rotation-lineage-20260331t000135z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 0,
+  "filesTotal": 0,
+  "finishedAt": "2026-03-31T00:03:46.853703Z",
+  "id": "331cf299-bbc7-4a45-abe0-26ed2277bad7",
+  "modules": [
+    {
+      "findingCount": 2,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "REF_HISTORY",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-31T00:03:44.465564Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 2,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 2,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,64 @@
+{
+  "applicationId": "d6f16ab7-9c78-42b7-a005-3701ac8a28a9",
+  "applicationKey": "arq-lab-20260330t231021z-n-v7-tests-003",
+  "applicationName": "test-mocks-repo-20260330t231021z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "d4fd5a131dc813cabcfeda64a25828573c0df648",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-30T23:11:29.438084Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/test-mocks-repo-20260330t231021z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 161,
+  "filesTotal": 161,
+  "finishedAt": "2026-03-30T23:11:31.926050Z",
+  "id": "73e5e72a-8465-4f65-b5a7-e698405acefb",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-30T23:11:29.667324Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

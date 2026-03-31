@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Node`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence`
-- repo remote URL in Gitea: `http://localhost:3001/arq/partner-branch-divergence-20260330t214509z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/partner-branch-divergence-20260331t000135z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
@@ -619,17 +619,17 @@ partner-branch-divergence
 
 Branches:
 
-- `feature/docs-refresh` tip: `ba235638bcfad263c052d2cabde66276d15c87e1`; diverges from `main` at `0d0befabbe44a9daf13f4a124897437f727fdcf3`
-- `feature/partner-hotfix` tip: `5fb2f110551a4894ed284cccf7a6ac2549147eb2`; diverges from `main` at `0d0befabbe44a9daf13f4a124897437f727fdcf3`
-- `main` tip: `0d0befabbe44a9daf13f4a124897437f727fdcf3`
-- `release/2026.04` tip: `ee5b7a06ebab06a3a50bfc44f742deba1998a3bd`; diverges from `main` at `0d0befabbe44a9daf13f4a124897437f727fdcf3`
+- `feature/docs-refresh` tip: `2178b78f4d57dfe89d254c69ef88c5e4176b5205`; diverges from `main` at `a2406b9723519c8091d56114319ea1f75fd81f33`
+- `feature/partner-hotfix` tip: `745e7b66e2a5905586cb8c963c211f35d28c3876`; diverges from `main` at `a2406b9723519c8091d56114319ea1f75fd81f33`
+- `main` tip: `a2406b9723519c8091d56114319ea1f75fd81f33`
+- `release/2026.04` tip: `39c865e3f3049068862f5b795bffb77095439809`; diverges from `main` at `a2406b9723519c8091d56114319ea1f75fd81f33`
 
 Commit order:
 
-- `0d0befabbe44a9daf13f4a124897437f727fdcf3` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `ee5b7a06ebab06a3a50bfc44f742deba1998a3bd` `c003 release branch clean state`: removes or neutralizes a prior signal.
-- `5fb2f110551a4894ed284cccf7a6ac2549147eb2` `c002 temporary secret on feature branch`: introduces an intended signal.
-- `ba235638bcfad263c052d2cabde66276d15c87e1` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
+- `a2406b9723519c8091d56114319ea1f75fd81f33` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `39c865e3f3049068862f5b795bffb77095439809` `c003 release branch clean state`: removes or neutralizes a prior signal.
+- `745e7b66e2a5905586cb8c963c211f35d28c3876` `c002 temporary secret on feature branch`: introduces an intended signal.
+- `2178b78f4d57dfe89d254c69ef88c5e4176b5205` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 

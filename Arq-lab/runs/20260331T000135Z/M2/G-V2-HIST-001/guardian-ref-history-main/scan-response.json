@@ -1,0 +1,64 @@
+{
+  "applicationId": "5f291cba-c549-41a0-acdd-8c98f514d5bc",
+  "applicationKey": "arq-lab-20260331t000135z-g-v2-hist-001",
+  "applicationName": "payments-history-lineage-20260331t000135z",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "779cdcd3d5bd56fd8f46cf124d38215b481d24e4",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-03-31T00:02:09.687253Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "http://localhost:3001/arq/payments-history-lineage-20260331t000135z.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 0,
+  "filesTotal": 0,
+  "finishedAt": "2026-03-31T00:02:16.775840Z",
+  "id": "5e448d30-41d7-412c-812a-91eb3373eebb",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 3
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "REF_HISTORY",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-03-31T00:02:14.155302Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 3,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 3,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 3
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 3
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

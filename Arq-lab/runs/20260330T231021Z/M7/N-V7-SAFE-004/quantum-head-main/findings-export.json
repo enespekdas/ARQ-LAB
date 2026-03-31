@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-30T23:12:04.443753900Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "b48ed960-173d-4002-bb4c-96add6aa31b2",
+      "applicationKey": "arq-lab-20260330t231021z-n-v7-safe-004",
+      "applicationName": "safe-wrapper-playground-20260330t231021z",
+      "branchName": "main",
+      "commitSha": "b80c6897cd4e46fb66e13b61964016592e53d285",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "afb04afd-8994-4da2-bd59-1d3f01c2194e",
+      "findingKind": "INVENTORY",
+      "firstSeenAt": "2026-03-30T23:12:03.171597Z",
+      "lastSeenAt": "2026-03-30T23:12:03.171597Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/security/secure_hashing.py",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "08d330cf-72d9-471d-910b-621a5fdd846a",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0267-python",
+      "ruleName": "Import: hashlib",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "INFO",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

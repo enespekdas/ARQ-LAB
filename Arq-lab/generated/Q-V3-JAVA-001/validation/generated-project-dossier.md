@@ -9,7 +9,7 @@
 - language / stack: `Java / Spring Boot`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M3\identity-gateway-java`
-- repo remote URL in Gitea: `http://localhost:3001/arq/identity-gateway-java-20260330t214708z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/identity-gateway-java-20260331t000351z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`

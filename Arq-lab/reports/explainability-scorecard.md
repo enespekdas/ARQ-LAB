@@ -1,5 +1,5 @@
 # Explainability Scorecard
 
 - Total scenarios: `25`
-- Scenarios with explainability failures: `4`
+- Scenarios with explainability failures: `2`
 - Unexpected regex-only findings total: `81`

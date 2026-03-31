@@ -117,9 +117,9 @@
   },
   {
     "dossierMissing": false,
-    "explainabilityFailures": 1,
-    "finalVerdict": "FAIL_EXPLAINABILITY",
-    "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 4 unexpected/noisy finding(s) remained after matching (same-surface-extra=2, totally-unexpected=2)",
+    "explainabilityFailures": 0,
+    "finalVerdict": "PASS_WITH_NOISE",
+    "finalVerdictReason": "3 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, totally-unexpected=2)",
     "mayFindReview": 0,
     "milestone": "M4",
     "missingExpectedFindings": 0,
@@ -127,22 +127,22 @@
     "noiseBreakdown": {
       "reviewOnlyFindings": 0,
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 2,
+      "sameSurfaceExtraFindings": 1,
       "totallyUnexpectedFindings": 2,
       "unexpectedRegexOnlyFindings": 0
     },
-    "noiseCount": 4,
+    "noiseCount": 3,
     "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\customer-portal-node\\validation\\runnability-logs",
     "refStateFailures": 0,
     "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-TS-003.md",
     "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M4\\customer-portal-node\\validation\\runnability-logs",
     "sameFileDifferentSignalFindings": 0,
-    "sameSurfaceExtraFindings": 2,
+    "sameSurfaceExtraFindings": 1,
     "scenarioId": "Q-V4-TS-003",
-    "unexpectedFindings": 4,
+    "unexpectedFindings": 3,
     "unexpectedRegexOnlyFindings": 0,
-    "verdict": "FAIL_EXPLAINABILITY",
-    "verdictClass": "FAIL_EXPLAINABILITY"
+    "verdict": "PASS_WITH_NOISE",
+    "verdictClass": "PASS_WITH_NOISE"
   },
   {
     "dossierMissing": false,
@@ -201,35 +201,6 @@
     "unexpectedRegexOnlyFindings": 2,
     "verdict": "PASS_WITH_NOISE",
     "verdictClass": "PASS_WITH_NOISE"
-  },
-  {
-    "dossierMissing": false,
-    "explainabilityFailures": 1,
-    "finalVerdict": "FAIL_EXPLAINABILITY",
-    "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1)",
-    "mayFindReview": 0,
-    "milestone": "M6",
-    "missingExpectedFindings": 0,
-    "mustNotFindViolations": 0,
-    "noiseBreakdown": {
-      "reviewOnlyFindings": 0,
-      "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 1,
-      "totallyUnexpectedFindings": 0,
-      "unexpectedRegexOnlyFindings": 0
-    },
-    "noiseCount": 1,
-    "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\customer-portal-node-tls\\validation\\runnability-logs",
-    "refStateFailures": 0,
-    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-TS-001.md",
-    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M6\\customer-portal-node-tls\\validation\\runnability-logs",
-    "sameFileDifferentSignalFindings": 0,
-    "sameSurfaceExtraFindings": 1,
-    "scenarioId": "Q-V6-TS-001",
-    "unexpectedFindings": 1,
-    "unexpectedRegexOnlyFindings": 0,
-    "verdict": "FAIL_EXPLAINABILITY",
-    "verdictClass": "FAIL_EXPLAINABILITY"
   },
   {
     "dossierMissing": false,

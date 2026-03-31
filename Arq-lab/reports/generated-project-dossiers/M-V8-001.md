@@ -9,7 +9,7 @@
 - language / stack: `Java + Node + Python monorepo`
 - repoType: `mixed`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\internal-platform-monorepo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/internal-platform-monorepo-20260330t215417z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/internal-platform-monorepo-20260331t001147z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -856,7 +856,7 @@ internal-platform-monorepo
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | validation/runnability-logs/test-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/test-02.log | generated | 34 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/runnability-logs/test-03.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-03.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | workers/sync-worker/.gitignore | generated | 8 | Generated or derived project artifact related to .Gitignore. | no | no | yes | no | yes | no |
@@ -1131,11 +1131,11 @@ internal-platform-monorepo
 
 Branches:
 
-- `main` tip: `34b4b01ff484363ce4dc51b1d30e6dab2dbadbee`
+- `main` tip: `5570bafdd31fdfe7ec883e2a8b7174651156111c`
 
 Commit order:
 
-- `34b4b01ff484363ce4dc51b1d30e6dab2dbadbee` `bootstrap M-V8-001`: initial clean or baseline assembly.
+- `5570bafdd31fdfe7ec883e2a8b7174651156111c` `bootstrap M-V8-001`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1480,9 +1480,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `14903`
+- Total LOC considered for authored/generated project content: `14897`
 - Synthetic filler / inflation LOC: `8140`
-- Synthetic filler ratio: `54.62%`
+- Synthetic filler ratio: `54.64%`
 
 | category | LOC |
 | --- | ---: |
@@ -1492,7 +1492,7 @@ Expected final head/history state:
 | docs | 44 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 372 |
+| vendor/generated | 366 |
 | synthetic filler / inflation content | 8140 |
 
 Inflation disclosure:

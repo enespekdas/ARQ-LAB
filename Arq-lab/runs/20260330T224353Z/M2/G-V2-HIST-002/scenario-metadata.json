@@ -1,0 +1,55 @@
+{
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/docs-refresh": "c1e4fd1c46ec341537a04c30ffc184901bb20d64",
+        "feature/partner-hotfix": "cc0afa86969c7b023500ab34b83472f712325ce8",
+        "main": "4296a450f6a80dcd2711cc3d60be45837a4eee44",
+        "release/2026.04": "13eca6322fc47ab5a30b6baac5c978b9db3b0f46"
+      },
+      "head": "4296a450f6a80dcd2711cc3d60be45837a4eee44",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T01:44:41+03:00",
+          "message": "c004 noise-only docs branch",
+          "sha": "c1e4fd1c46ec341537a04c30ffc184901bb20d64"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T01:44:41+03:00",
+          "message": "c002 temporary secret on feature branch",
+          "sha": "cc0afa86969c7b023500ab34b83472f712325ce8"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T01:44:41+03:00",
+          "message": "c003 release branch clean state",
+          "sha": "13eca6322fc47ab5a30b6baac5c978b9db3b0f46"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T01:44:40+03:00",
+          "message": "c001 main clean baseline",
+          "sha": "4296a450f6a80dcd2711cc3d60be45837a4eee44"
+        }
+      ]
+    },
+    "lineCount": 6004,
+    "repoName": "partner-branch-divergence",
+    "scenarioId": "G-V2-HIST-002"
+  },
+  "scenario": {
+    "domain": "Branch divergence with main clean and feature branch leaked.",
+    "id": "G-V2-HIST-002",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "partner-branch-divergence",
+    "stack": "TypeScript / Node"
+  }
+}

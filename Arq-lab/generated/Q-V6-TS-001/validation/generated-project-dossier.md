@@ -9,7 +9,7 @@
 - language / stack: `TypeScript / Node`
 - repoType: `snapshot`
 - repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M6\customer-portal-node-tls`
-- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-tls-20260330t215130z`
+- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-tls-20260331t000829z`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
@@ -445,7 +445,7 @@ customer-portal-node-tls
 | src/modules/audit/audit.service.ts | live-code | 2 | Runtime business service implementing Audit.Service logic. | no | no | no | yes | yes | no |
 | src/modules/compliance/compliance.service.ts | live-code | 2 | Runtime business service implementing Compliance.Service logic. | no | no | no | yes | yes | no |
 | src/modules/events/events.service.ts | live-code | 2 | Runtime business service implementing Events.Service logic. | no | no | no | yes | yes | no |
-| src/modules/http/insecureAgentFactory.ts | live-code | 2 | Runtime business module contributing to Insecure Agent Factory. | yes | yes | no | yes | yes | no |
+| src/modules/http/insecureAgentFactory.ts | live-code | 2 | Runtime business module contributing to Insecure Agent Factory. | yes | no | no | yes | yes | no |
 | src/modules/http/insecureBillingClient.ts | live-code | 2 | Outbound integration client for Insecure Billing Client behavior. | yes | no | no | yes | yes | no |
 | src/modules/http/secureAgentFactory.ts | live-code | 2 | Runtime business module contributing to Secure Agent Factory. | no | yes | no | yes | yes | no |
 | src/modules/invites/invites.service.ts | live-code | 2 | Runtime business service implementing Invites.Service logic. | no | no | no | yes | yes | no |
@@ -461,7 +461,7 @@ customer-portal-node-tls
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2732 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 838 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 836 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 231 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -489,7 +489,6 @@ customer-portal-node-tls
 ## 7. Near-Real Negative Surfaces
 
 - `README.md`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `src/modules/http/insecureAgentFactory.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/http/secureAgentFactory.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -717,7 +716,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Insecure Agent Factory. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -822,7 +821,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
 
 ## 16. Realism Justification
 
