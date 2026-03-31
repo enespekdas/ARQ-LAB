@@ -1,0 +1,35 @@
+{
+  "authSchemes": [
+    {
+      "scheme": "Bearer",
+      "status": 401
+    },
+    {
+      "scheme": "token",
+      "status": 401
+    }
+  ],
+  "gitBaseUrl": "https://github.com",
+  "org": "ARQ-Sec",
+  "orgPublicProbe": {
+    "id": 272453536,
+    "login": "ARQ-Sec"
+  },
+  "orgPublicProbeError": "",
+  "probeExecution": {
+    "commitSha": "b99a2e58162be661925e0d90148ce7e92d8c2078",
+    "createStatus": "failed",
+    "error": "GitHub GET https://api.github.com/repos/ARQ-Sec/arq-lab-github-auth-probe failed: HTTP 401 {\r\n  \"message\": \"Bad credentials\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"401\"\r\n}",
+    "htmlUrl": "https://github.com/ARQ-Sec/arq-lab-github-auth-probe",
+    "localPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\arq-lab-github-auth-probe",
+    "originUrl": "https://github.com/ARQ-Sec/arq-lab-github-auth-probe.git",
+    "pushStatus": "skipped"
+  },
+  "probeRepo": {
+    "cloneUrl": "https://github.com/ARQ-Sec/arq-lab-github-auth-probe.git",
+    "htmlUrl": "https://github.com/ARQ-Sec/arq-lab-github-auth-probe",
+    "name": "arq-lab-github-auth-probe"
+  },
+  "viewer": null,
+  "viewerError": "GitHub GET https://api.github.com/user failed: HTTP 401 {\r\n  \"message\": \"Bad credentials\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"401\"\r\n}"
+}

@@ -24,6 +24,13 @@ def _resolve_root(explicit_root: Path | None = None) -> Path:
     return explicit_root or Path(__file__).resolve().parents[1]
 
 
+def _merge_env_values(target: dict[str, str], source: dict[str, str]) -> None:
+    for key, value in source.items():
+        if value == "" and target.get(key):
+            continue
+        target[key] = value
+
+
 def _resolve_path(root: Path, raw_value: str) -> Path:
     candidate = Path(raw_value)
     if not candidate.is_absolute():
@@ -40,13 +47,14 @@ def load_config(explicit_root: Path | None = None) -> LabConfig:
         root.parent / "lab" / ".env",
         root.parent / "lab" / ".env.example",
     ]:
-        env_values.update(_read_env_file(candidate))
-    env_values.update(
+        _merge_env_values(env_values, _read_env_file(candidate))
+    _merge_env_values(
+        env_values,
         {
             key: value
             for key, value in os.environ.items()
             if key.startswith(("ARQ_", "GITEA_", "SCAN_", "FINDINGS_", "GIT_", "REPOSITORIES_"))
-        }
+        },
     )
 
     def value(name: str, default: str) -> str:
