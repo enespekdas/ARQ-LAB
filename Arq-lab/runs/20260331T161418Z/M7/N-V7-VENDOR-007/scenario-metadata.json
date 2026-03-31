@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/bundle-lockfile-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/bundle-lockfile-repo",
+    "html_url": "https://github.com/ARQ-Sec/bundle-lockfile-repo",
+    "name": "bundle-lockfile-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "32be0967d80a32f3549a86f2d9c5079ff47f5084"
+      },
+      "head": "32be0967d80a32f3549a86f2d9c5079ff47f5084",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:17:13+03:00",
+          "message": "bootstrap N-V7-VENDOR-007",
+          "sha": "32be0967d80a32f3549a86f2d9c5079ff47f5084"
+        }
+      ]
+    },
+    "lineCount": 5951,
+    "repoName": "bundle-lockfile-repo",
+    "scenarioId": "N-V7-VENDOR-007"
+  },
+  "scenario": {
+    "domain": "Dependency-heavy repo with bundled artifacts, generated code, and lockfiles containing secret-looking strings.",
+    "id": "N-V7-VENDOR-007",
+    "milestone": "M7",
+    "module": "both",
+    "repo_name": "bundle-lockfile-repo",
+    "stack": "Vendor / generated / lockfile"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "counts": {
+    "PASS_CLEAN": 2,
+    "FAIL_FP": 1,
+    "PASS_WITH_NOISE": 5
+  },
+  "scenarios": [
+    {
+      "scenarioId": "Q-V4-GO-002",
+      "milestone": "M4",
+      "verdict": "PASS_CLEAN",
+      "noiseCount": 0,
+      "applicationId": "4f1be1fb-cd6a-4d0a-9e79-24ad97995d83",
+      "applicationKey": "arq-lab-20260331t123422z-q-v4-go-002",
+      "repositorySource": {
+        "repositorySourceId": "0ad680a8-13b4-42c1-9e30-1c83494f8ffb",
+        "applicationId": "4f1be1fb-cd6a-4d0a-9e79-24ad97995d83",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/device-provisioning-go.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 1,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/device-provisioning-go.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/device-provisioning-go",
+        "html_url": "https://github.com/ARQ-Sec/device-provisioning-go",
+        "name": "device-provisioning-go",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/device-provisioning-go",
+        "html_url": "https://github.com/ARQ-Sec/device-provisioning-go",
+        "clone_url": "https://github.com/ARQ-Sec/device-provisioning-go.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "Q-V4-PY-001",
+      "milestone": "M4",
+      "verdict": "FAIL_FP",
+      "noiseCount": 21,
+      "applicationId": "4992dcdb-1e30-4c68-b383-c79fc4f70cd1",
+      "applicationKey": "arq-lab-20260331t123422z-q-v4-py-001",
+      "repositorySource": {
+        "repositorySourceId": "7ac77731-de58-4209-b203-b74da2423ac5",
+        "applicationId": "4992dcdb-1e30-4c68-b383-c79fc4f70cd1",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/notification-signer-python.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 1,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/notification-signer-python.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/notification-signer-python",
+        "html_url": "https://github.com/ARQ-Sec/notification-signer-python",
+        "name": "notification-signer-python",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/notification-signer-python",
+        "html_url": "https://github.com/ARQ-Sec/notification-signer-python",
+        "clone_url": "https://github.com/ARQ-Sec/notification-signer-python.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "Q-V4-TS-003",
+      "milestone": "M4",
+      "verdict": "PASS_WITH_NOISE",
+      "noiseCount": 3,
+      "applicationId": "8c3d8c27-ff61-4b0b-9d42-68f90e7a817d",
+      "applicationKey": "arq-lab-20260331t123422z-q-v4-ts-003",
+      "repositorySource": {
+        "repositorySourceId": "31991eb2-9128-4a11-8180-6391f923f1d0",
+        "applicationId": "8c3d8c27-ff61-4b0b-9d42-68f90e7a817d",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/customer-portal-node.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 1,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/customer-portal-node.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/customer-portal-node",
+        "html_url": "https://github.com/ARQ-Sec/customer-portal-node",
+        "name": "customer-portal-node",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/customer-portal-node",
+        "html_url": "https://github.com/ARQ-Sec/customer-portal-node",
+        "clone_url": "https://github.com/ARQ-Sec/customer-portal-node.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "Q-V5-JAVA-001",
+      "milestone": "M5",
+      "verdict": "PASS_CLEAN",
+      "noiseCount": 0,
+      "applicationId": "a7cb12eb-e2e5-4ce3-ae2e-b792a01f9d24",
+      "applicationKey": "arq-lab-20260331t123641z-q-v5-java-001",
+      "repositorySource": {
+        "repositorySourceId": "4d7ee8e0-bdfe-4d8d-8c59-2aa4647c1757",
+        "applicationId": "a7cb12eb-e2e5-4ce3-ae2e-b792a01f9d24",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/partner-client-java.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 1,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/partner-client-java.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/partner-client-java",
+        "html_url": "https://github.com/ARQ-Sec/partner-client-java",
+        "name": "partner-client-java",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/partner-client-java",
+        "html_url": "https://github.com/ARQ-Sec/partner-client-java",
+        "clone_url": "https://github.com/ARQ-Sec/partner-client-java.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "Q-V5-JAVA-003",
+      "milestone": "M5",
+      "verdict": "PASS_WITH_NOISE",
+      "noiseCount": 2,
+      "applicationId": "8e595c58-f139-4fe4-9519-1d3d71217150",
+      "applicationKey": "arq-lab-20260331t123641z-q-v5-java-003",
+      "repositorySource": {
+        "repositorySourceId": "b42db67f-bea5-4c9b-818f-c43c2672056c",
+        "applicationId": "8e595c58-f139-4fe4-9519-1d3d71217150",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/gateway-config-java.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 1,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/gateway-config-java.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/gateway-config-java",
+        "html_url": "https://github.com/ARQ-Sec/gateway-config-java",
+        "name": "gateway-config-java",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/gateway-config-java",
+        "html_url": "https://github.com/ARQ-Sec/gateway-config-java",
+        "clone_url": "https://github.com/ARQ-Sec/gateway-config-java.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "Q-V5-PY-002",
+      "milestone": "M5",
+      "verdict": "PASS_WITH_NOISE",
+      "noiseCount": 12,
+      "applicationId": "db2e03d0-1128-442b-b0a1-f0382d94e2ae",
+      "applicationKey": "arq-lab-20260331t123641z-q-v5-py-002",
+      "repositorySource": {
+        "repositorySourceId": "f8f2b540-b948-45b9-ad1a-cc1c46caf2fb",
+        "applicationId": "db2e03d0-1128-442b-b0a1-f0382d94e2ae",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/data-sync-python.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 1,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/data-sync-python.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/data-sync-python",
+        "html_url": "https://github.com/ARQ-Sec/data-sync-python",
+        "name": "data-sync-python",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/data-sync-python",
+        "html_url": "https://github.com/ARQ-Sec/data-sync-python",
+        "clone_url": "https://github.com/ARQ-Sec/data-sync-python.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "M-V8-001",
+      "milestone": "M8",
+      "verdict": "PASS_WITH_NOISE",
+      "noiseCount": 32,
+      "applicationId": "9d69af11-0579-4aca-b52c-1b2fc45f8fed",
+      "applicationKey": "arq-lab-20260331t123819z-m-v8-001",
+      "repositorySource": {
+        "repositorySourceId": "cb6a174a-7911-4ae1-8024-840bad3aae16",
+        "applicationId": "9d69af11-0579-4aca-b52c-1b2fc45f8fed",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/internal-platform-monorepo.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 2,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/internal-platform-monorepo.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/internal-platform-monorepo",
+        "html_url": "https://github.com/ARQ-Sec/internal-platform-monorepo",
+        "name": "internal-platform-monorepo",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/internal-platform-monorepo",
+        "html_url": "https://github.com/ARQ-Sec/internal-platform-monorepo",
+        "clone_url": "https://github.com/ARQ-Sec/internal-platform-monorepo.git",
+        "default_branch": "main"
+      }
+    },
+    {
+      "scenarioId": "M-V8-002",
+      "milestone": "M8",
+      "verdict": "PASS_WITH_NOISE",
+      "noiseCount": 2,
+      "applicationId": "98771a21-31bc-47f4-b3c6-0b5a05dbf56d",
+      "applicationKey": "arq-lab-20260331t123819z-m-v8-002",
+      "repositorySource": {
+        "repositorySourceId": "8afcbe4e-6a9a-423c-bf96-2707bae33a46",
+        "applicationId": "98771a21-31bc-47f4-b3c6-0b5a05dbf56d",
+        "providerType": "GENERIC_GIT",
+        "repositoryLocator": "https://github.com/ARQ-Sec/infra-app-mixed-repo.git",
+        "defaultBranch": "main",
+        "active": true,
+        "connectorImport": null
+      },
+      "scanCount": 4,
+      "publishedRepository": {
+        "clone_url": "https://github.com/ARQ-Sec/infra-app-mixed-repo.git",
+        "default_branch": "main",
+        "full_name": "ARQ-Sec/infra-app-mixed-repo",
+        "html_url": "https://github.com/ARQ-Sec/infra-app-mixed-repo",
+        "name": "infra-app-mixed-repo",
+        "owner": {
+          "html_url": "https://github.com/ARQ-Sec",
+          "login": "ARQ-Sec"
+        },
+        "private": false,
+        "provider": "github",
+        "visibility": "public"
+      },
+      "githubRepo": {
+        "full_name": "ARQ-Sec/infra-app-mixed-repo",
+        "html_url": "https://github.com/ARQ-Sec/infra-app-mixed-repo",
+        "clone_url": "https://github.com/ARQ-Sec/infra-app-mixed-repo.git",
+        "default_branch": "main"
+      }
+    }
+  ]
+}

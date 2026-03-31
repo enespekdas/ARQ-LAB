@@ -8,12 +8,13 @@
 - targetModule: `Guardian`
 - language / stack: `Python + ops config`
 - repoType: `history`
-- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage`
-- repo remote URL in Gitea: `http://localhost:3001/arq/pem-rotation-lineage-20260331t000135z`
+- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage`
+- repo remote provider: `github`
+- repo remote URL: `https://github.com/ARQ-Sec/pem-rotation-lineage`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
-- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\generated-project-dossier.md`
+- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage\validation\generated-project-dossier.md`
 - required alias dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\G-V2-HIST-003\validation\generated-project-dossier.md`
 - central dossier report path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\generated-project-dossiers\G-V2-HIST-003.md`
 
@@ -98,15 +99,7 @@ pem-rotation-lineage
 |   |   |-- section-32.md
 |   |   |-- section-33.md
 |   |   |-- section-34.md
-|   |   |-- section-35.md
-|   |   |-- section-36.md
-|   |   |-- section-37.md
-|   |   |-- section-38.md
-|   |   |-- section-39.md
-|   |   |-- section-40.md
-|   |   |-- section-41.md
-|   |   |-- section-42.md
-|   |   `-- section-43.md
+|   |   `-- section-35.md
 |   `-- examples
 |       `-- pem-reference.md
 |-- ops
@@ -147,15 +140,7 @@ pem-rotation-lineage
 |       |-- runbook-32.md
 |       |-- runbook-33.md
 |       |-- runbook-34.md
-|       |-- runbook-35.md
-|       |-- runbook-36.md
-|       |-- runbook-37.md
-|       |-- runbook-38.md
-|       |-- runbook-39.md
-|       |-- runbook-40.md
-|       |-- runbook-41.md
-|       |-- runbook-42.md
-|       `-- runbook-43.md
+|       `-- runbook-35.md
 |-- scripts
 |   `-- smoke.py
 |-- sql
@@ -194,15 +179,7 @@ pem-rotation-lineage
 |       |-- reference-32.sql
 |       |-- reference-33.sql
 |       |-- reference-34.sql
-|       |-- reference-35.sql
-|       |-- reference-36.sql
-|       |-- reference-37.sql
-|       |-- reference-38.sql
-|       |-- reference-39.sql
-|       |-- reference-40.sql
-|       |-- reference-41.sql
-|       |-- reference-42.sql
-|       `-- reference-43.sql
+|       `-- reference-35.sql
 |-- tests
 |   |-- test_audit_service.py
 |   |-- test_delivery_service.py
@@ -292,14 +269,6 @@ pem-rotation-lineage
 | docs/architecture/section-33.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-34.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-35.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-36.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-37.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-38.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-39.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-40.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-41.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-42.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-43.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/examples/pem-reference.md | docs | 2 | Documentation or explanatory material for Pem Reference. | no | no | yes | no | no | no |
 | ops/keys/service-b.pem | generated | 10 | Generated or derived project artifact related to Service B. | yes | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -337,14 +306,6 @@ pem-rotation-lineage
 | ops/playbooks/runbook-33.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-34.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-35.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-36.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-37.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-38.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-39.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-40.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-41.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-42.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-43.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | pyproject.toml | build/deploy | 7 | Build or deployment definition shaping how Pyproject is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | scripts/smoke.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -382,14 +343,6 @@ pem-rotation-lineage
 | sql/reference/reference-33.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-34.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-35.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-36.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-37.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-38.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-39.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-40.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-41.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-42.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-43.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/test_audit_service.py | test | 4 | Automated test surface covering Test Audit Service behavior. | no | no | yes | yes | yes | no |
 | tests/test_delivery_service.py | test | 4 | Automated test surface covering Test Delivery Service behavior. | no | no | yes | yes | yes | no |
 | tests/test_dispatch_service.py | test | 4 | Automated test surface covering Test Dispatch Service behavior. | no | no | yes | yes | yes | no |
@@ -402,9 +355,9 @@ pem-rotation-lineage
 | validation/expected-absent.json | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 28 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 2452 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 751 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 192 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 2116 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 688 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 168 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 56 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 42 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -470,14 +423,6 @@ pem-rotation-lineage
 | docs/architecture/section-33.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-34.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-35.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-36.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-37.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-38.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-39.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-40.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-41.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-42.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-43.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/examples/pem-reference.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | ops/keys/service-b.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -515,14 +460,6 @@ pem-rotation-lineage
 | sql/reference/reference-33.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-34.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-35.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-36.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-37.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-38.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-39.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-40.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-41.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-42.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-43.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_audit_service.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_delivery_service.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_dispatch_service.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -549,16 +486,16 @@ pem-rotation-lineage
 
 Branches:
 
-- `main` tip: `2f7dd35cd157f1c0d8d973b3b9ac902120a3ef7e`
+- `main` tip: `96219656ee4b05aaaa16adb13df97dcd3f8f79a3`
 
 Commit order:
 
-- `55a866551693238e65f5b6b7ec3032c2931505fe` `c001 bootstrap`: initial clean or baseline assembly.
-- `a3080b1ecac4be47130d21ebf51f45ac9d0c821b` `c002 add PEM A`: introduces an intended signal.
-- `4dff79095b49bb9bd169589692387e218b067587` `c003 formatting change`: scenario state change.
-- `034c8d116d4c8dc68846dd503af567d377fa8867` `c004 rotate to PEM B`: replaces one signal with another.
-- `5552155cc5c1f8570e7238e8a00a9fe3b10b9168` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
-- `2f7dd35cd157f1c0d8d973b3b9ac902120a3ef7e` `c006 safe cleanup`: removes or neutralizes a prior signal.
+- `18110a581da6d6f17b4484f9f27d24f4f8af5ebf` `c001 bootstrap`: initial clean or baseline assembly.
+- `e0bfaafeb452eb249eb2cdbeb2f9962f31d0172e` `c002 add PEM A`: introduces an intended signal.
+- `f387759ce55c399813fab74c891794cddc47b54f` `c003 formatting change`: scenario state change.
+- `d7630bb16833a7f13a496f29f0fb2eb87ffe7b45` `c004 rotate to PEM B`: replaces one signal with another.
+- `83d0aafcb2c1f9ca022fd26ec2bef0158fa7e8aa` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
+- `96219656ee4b05aaaa16adb13df97dcd3f8f79a3` `c006 safe cleanup`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -572,21 +509,21 @@ Expected final head/history state:
 - Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\runnability-logs\build-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage\validation\runnability-logs\build-01.log`
 
 ### Test
 
 - Command: `C:\Python313\python.EXE -m pytest -q`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\runnability-logs\test-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
 - Command: `C:\Python313\python.EXE scripts/smoke.py`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\runnability-logs\smoke-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage\validation\runnability-logs\smoke-01.log`
 
 ## 11. Critical Generated Content Detail
 
@@ -682,9 +619,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5060`
-- Synthetic filler / inflation LOC: `4730`
-- Synthetic filler ratio: `93.48%`
+- Total LOC considered for authored/generated project content: `4180`
+- Synthetic filler / inflation LOC: `3850`
+- Synthetic filler ratio: `92.11%`
 
 | category | LOC |
 | --- | ---: |
@@ -695,7 +632,7 @@ Expected final head/history state:
 | scripts | 1 |
 | fixtures | 0 |
 | vendor/generated | 182 |
-| synthetic filler / inflation content | 4730 |
+| synthetic filler / inflation content | 3850 |
 
 Inflation disclosure:
 
@@ -748,4 +685,4 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 
 - What this scenario is proving: `Guardian PEM rotation, canonicalization and dedup continuity.`
 - What it is not proving: comprehensive customer architecture fidelity beyond the declared validation contract.
-- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\pem-rotation-lineage\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.
+- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\pem-rotation-lineage\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.

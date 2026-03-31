@@ -34,6 +34,10 @@ MILESTONE_REPORT_NAMES = {
 NON_FAILING_VERDICTS = {"PASS", "PASS_CLEAN", "PASS_WITH_NOISE"}
 
 
+def _application_key_for_scenario(scenario: ScenarioSpec) -> str:
+    return f"arq-lab-{scenario.id.lower()}"
+
+
 def _execute_plan(plan: list[list[str]], repo_root: Path, *, stage: str, log_root: Path) -> BuildStatus:
     if not plan:
         return BuildStatus(state="skipped", commands=[])
@@ -181,7 +185,6 @@ def _run_scenario(
     actual_findings: list[dict[str, Any]] = []
 
     if not dry_run and arq and publisher:
-        run_label = run_root.parent.name.lower()
         run_repo_name = scenario.repo_name
         repo_payload = publisher.ensure_repo(run_repo_name, scenario.summary)
         git_factory.set_remote(repo_root, "origin", publisher.clone_url(run_repo_name))
@@ -192,7 +195,7 @@ def _run_scenario(
         project = arq.ensure_project(config.arq_lab_project_key, config.arq_lab_project_name, "ARQ Lab Validation")
         application = arq.ensure_application(
             project_id=project["projectId"],
-            key=f"arq-lab-{run_label}-{scenario.id.lower()}",
+            key=_application_key_for_scenario(scenario),
             name=run_repo_name,
             description=scenario.summary,
             repository_locator=publisher.clone_url(run_repo_name),

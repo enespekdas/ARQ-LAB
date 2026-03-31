@@ -1,0 +1,75 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/payments-history-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/payments-history-lineage",
+    "html_url": "https://github.com/ARQ-Sec/payments-history-lineage",
+    "name": "payments-history-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "packageName": "com.arq.paymentshistorylineage"
+    },
+    "git": {
+      "branches": {
+        "main": "a7c1484a4fcdd8845e6813e846939af935a17775"
+      },
+      "head": "a7c1484a4fcdd8845e6813e846939af935a17775",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T16:00:23+03:00",
+          "message": "c005 unrelated refactor",
+          "sha": "a7c1484a4fcdd8845e6813e846939af935a17775"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T16:00:22+03:00",
+          "message": "c004 remove token and replace with safe reference",
+          "sha": "3570b8cc2a06b6d2b0b0182f79988775085ae2f1"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T16:00:22+03:00",
+          "message": "c003 add docs noise",
+          "sha": "44ce3ed67b6eb6fb340cf5b33091aad5059f4ee5"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T16:00:22+03:00",
+          "message": "c002 add live partner access token",
+          "sha": "6628eb423e7c567bc8d8e03d772cb3a32d27fb90"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T16:00:22+03:00",
+          "message": "c001 bootstrap repo",
+          "sha": "d2bf6fe3112fd3d7b781e7f32481bb90f6e35e81"
+        }
+      ]
+    },
+    "lineCount": 5961,
+    "repoName": "payments-history-lineage",
+    "scenarioId": "G-V2-HIST-001"
+  },
+  "scenario": {
+    "domain": "Payments repo with a history-only secret on main.",
+    "id": "G-V2-HIST-001",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "payments-history-lineage",
+    "stack": "Java / Spring Boot"
+  }
+}

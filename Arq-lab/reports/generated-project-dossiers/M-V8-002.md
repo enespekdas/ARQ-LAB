@@ -8,12 +8,13 @@
 - targetModule: `Both`
 - language / stack: `App + infra + CI`
 - repoType: `mixed`
-- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo`
-- repo remote URL in Gitea: `http://localhost:3001/arq/infra-app-mixed-repo-20260331t001147z`
+- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo`
+- repo remote provider: `github`
+- repo remote URL: `https://github.com/ARQ-Sec/infra-app-mixed-repo`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
-- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\generated-project-dossier.md`
+- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\generated-project-dossier.md`
 - required alias dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M-V8-002\validation\generated-project-dossier.md`
 - central dossier report path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\generated-project-dossiers\M-V8-002.md`
 
@@ -519,7 +520,7 @@ infra-app-mixed-repo
 | ops/console/src/modules/invites/invites.service.ts | live-code | 2 | Runtime business service implementing Invites.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
-| ops/console/src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | yes | no | yes | yes | no |
+| ops/console/src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | no | no | yes | yes | no |
 | ops/console/src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/modules/tokens/tokens.service.ts | live-code | 2 | Runtime business service implementing Tokens.Service logic. | no | no | no | yes | yes | no |
 | ops/console/src/server.ts | live-code | 4 | Runtime business module contributing to Server. | no | no | no | yes | yes | no |
@@ -721,7 +722,6 @@ infra-app-mixed-repo
 ## 7. Near-Real Negative Surfaces
 
 - `deploy/envoy.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `ops/console/src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -898,15 +898,15 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `5a7bb2d20c8f6eba237372b7cb51a16c22d5716a`; diverges from `main` at `015bc4349f6464bbadef43ed4410eb891017ee6e`
-- `main` tip: `015bc4349f6464bbadef43ed4410eb891017ee6e`
-- `release/2026.04` tip: `261ba5a51457b4fdbce9fb96f6c214addc3c6e3b`; diverges from `main` at `015bc4349f6464bbadef43ed4410eb891017ee6e`
+- `feature/hotfix-ssl` tip: `01811a3639473aa939c04e6b52f584ccb0aceafc`; diverges from `main` at `924dda71e6f728d78e4c79e3f23cbdd89e87c313`
+- `main` tip: `924dda71e6f728d78e4c79e3f23cbdd89e87c313`
+- `release/2026.04` tip: `e43ac2f8b04858f2967090ec8fda70c6e32eb095`; diverges from `main` at `924dda71e6f728d78e4c79e3f23cbdd89e87c313`
 
 Commit order:
 
-- `015bc4349f6464bbadef43ed4410eb891017ee6e` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `261ba5a51457b4fdbce9fb96f6c214addc3c6e3b` `c003 release branch clean`: removes or neutralizes a prior signal.
-- `5a7bb2d20c8f6eba237372b7cb51a16c22d5716a` `c002 temporary hotfix secret`: introduces an intended signal.
+- `924dda71e6f728d78e4c79e3f23cbdd89e87c313` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `01811a3639473aa939c04e6b52f584ccb0aceafc` `c002 temporary hotfix secret`: introduces an intended signal.
+- `e43ac2f8b04858f2967090ec8fda70c6e32eb095` `c003 release branch clean`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -922,33 +922,33 @@ Expected final head/history state:
 - Command: `C:\Python313\python.EXE -m compileall app tests scripts`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\build-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs\build-01.log`
 - Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'ops/console'; npm install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\build-02.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs\build-02.log`
 - Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'ops/console'; npm run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\build-03.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs\build-03.log`
 
 ### Test
 
 - Command: `C:\Python313\python.EXE -m pytest -q tests`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\test-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs\test-01.log`
 - Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command Set-Location 'ops/console'; npm test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\test-02.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs\test-02.log`
 
 ### Smoke
 
 - Command: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts/smoke.ps1`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\runnability-logs\smoke-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs\smoke-01.log`
 
 ## 11. Critical Generated Content Detail
 
@@ -2545,7 +2545,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Digest. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -2688,4 +2688,4 @@ Explainability failure definition:
 
 - What this scenario is proving: `Mixed infra/application repository with Guardian and Quantum across app and config.`
 - What it is not proving: comprehensive customer architecture fidelity beyond the declared validation contract.
-- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M8\infra-app-mixed-repo\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.
+- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.

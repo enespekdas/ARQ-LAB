@@ -66,6 +66,44 @@ PRIVATE_KEY_BLOCK_A_REWRAPPED = textwrap.dedent(
     """
 )
 
+PUBLIC_CERT_CHAIN = textwrap.dedent(
+    """\
+    -----BEGIN CERTIFICATE-----
+    MIIDdzCCAl+gAwIBAgIUXYPublicChainOnly000000000000000000MA0GCSqGSIb3
+    DQEBCwUAMFoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMx
+    FTATBgNVBAsMDEFycSBTYWZlIFBLSTEUMBIGA1UEAwwLZXhhbXBsZS5sb2NhbDAe
+    Fw0yNjAzMzEwMDAwMDBaFw0zNjAzMjkwMDAwMDBaMFoxCzAJBgNVBAYTAlVTMRYw
+    FAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMxFTATBgNVBAsMDEFycSBTYWZlIFBLSTEUMBIGA1UE
+    AwwLZXhhbXBsZS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+    ALD3u7xS3afe4Lacertchainonlyblock7rJb3Bv7H4qXyD9Xv6m3L7m0s2V7D5P8
+    2C0tD8yM1mL0vN2fQ3sJ8hK6pR4wT7yN3fV5qB2dL9cT1vH6mP0xZ4nQ3sF8kM2pR
+    7tV1yQ9dM6cJ2pN5wR8hV3mL6qT0yC9fK2sN5bR8xW1vQ4dP7kL0mN3sH6tY9pQ2
+    0C0fA6pL9vQ5nT2rW8mK4dS1yF6qP3xV0bL7cN2hR5mJ8wK6tQ1xZ4nM7vP0sC3f
+    K6mR9tV2yW5pL8nQ1dH4sJ7xC0vB3mN6pR9tY2wF5hK8dL1qS4vN7xC0bP3mT6yR
+    9w0CAwEAAaNTMFEwHQYDVR0OBBYEFO9PublicChainOnly000000000000000000
+    MB8GA1UdIwQYMBaAFO9PublicChainOnly000000000000000000MA8GA1UdEwEB
+    /wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAG1chainonlysample4Lh8fQ2mV7
+    dP0xN5rK8sT1yW4pL7mQ0dF3hJ6kL9vC2xZ5nM8qR1tY4wF7hK0dL3qS6vN9xC2bP
+    4mT7yR0wQ3pD6fG9hJ2kL5nQ8tV1yC4mR7pL0xN3qS6vW9zC2bF5hJ8kL1nQ4tY7
+    -----END CERTIFICATE-----
+    """
+)
+
+CSR_SAMPLE = textwrap.dedent(
+    """\
+    -----BEGIN CERTIFICATE REQUEST-----
+    MIICjDCCAXQCAQAwVzELMAkGA1UEBhMCVVMxFjAUBgNVBAoMDUFSUS1MQUIgU2Ft
+    cGxlMRUwEwYDVQQLDAxBcnEgU2FmZSBQS0kxETAPBgNVBAMMCGNhLmxvY2FsMIIB
+    IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxSafeCSRExample000000000
+    0QmL7vS4pT1yR6mN9qW2fD5hJ8kL0nQ3tV6yC9mR2pL5xN8qS1vW4zB7cF0hJ3kL6
+    pQ9tY2wF5hK8dL1qS4vN7xC0bP3mT6yR9wQ2dF5hJ8kL1nQ4tY7wC0vB3mN6pR9tY
+    2wF5hK8dL1qS4vN7xC0bP3mT6yR9wQIDAQABoAAwDQYJKoZIhvcNAQELBQADggEB
+    AD5safeCSRexample0000000000000000mR7tV0yQ3dF6hJ9kL2nQ5tY8wC1vB4mN
+    7pR0tY3wF6hK9dL2qS5vN8xC1bP4mT7yR0wQ3pD6fG9hJ2kL5nQ8tV1yC4mR7pL0x
+    -----END CERTIFICATE REQUEST-----
+    """
+)
+
 
 def _to_dict(item: Any) -> dict[str, Any]:
     return {name: getattr(item, name) for name in getattr(item, "__slots__", [])}
@@ -594,10 +632,28 @@ def _apply_java_variant(repo_root: Path, scenario: ScenarioSpec, package_name: s
         write_text(package_root / "security" / "LegacyPasswordFactory.java", f"package {package_name}.security;\nimport javax.crypto.SecretKeyFactory;\npublic class LegacyPasswordFactory {{ public SecretKeyFactory factory() throws Exception {{ return SecretKeyFactory.getInstance(\"PBEWithMD5AndDES\"); }} }}\n")
         write_text(package_root / "security" / "BatchReconciliationCipher.java", f"package {package_name}.security;\nimport javax.crypto.Cipher;\npublic class BatchReconciliationCipher {{ public Cipher cipher() throws Exception {{ return Cipher.getInstance(\"AES/ECB\"); }} }}\n")
         write_text(package_root / "security" / "SecureEnvelopeCipher.java", f"package {package_name}.security;\nimport javax.crypto.Cipher;\npublic class SecureEnvelopeCipher {{ public Cipher cipher() throws Exception {{ return Cipher.getInstance(\"AES/GCM/NoPadding\"); }} }}\n")
+    elif scenario.id == "Q-V3-JAVA-004":
+        write_text(package_root / "security" / "LegacyRequestSigner.java", f"package {package_name}.security;\nimport java.security.MessageDigest;\npublic class LegacyRequestSigner {{ public byte[] sign(byte[] value) throws Exception {{ return MessageDigest.getInstance(\"MD5\").digest(value); }} }}\n")
+        write_text(package_root / "security" / "DigestInventoryRegistry.java", f"package {package_name}.security;\nimport java.security.MessageDigest;\npublic class DigestInventoryRegistry {{ public String supported() throws Exception {{ return MessageDigest.getInstance(\"SHA-256\").getAlgorithm(); }} }}\n")
+        write_text(package_root / "security" / "ScaryButSafeDigestFacade.java", f"package {package_name}.security;\nimport java.security.MessageDigest;\npublic class ScaryButSafeDigestFacade {{ public byte[] secure(byte[] value) throws Exception {{ return MessageDigest.getInstance(\"SHA-256\").digest(value); }} }}\n")
     elif scenario.id == "Q-V5-JAVA-001":
         write_text(package_root / "http" / "InsecureTrustManager.java", f"package {package_name}.http;\nimport java.security.cert.X509Certificate; import javax.net.ssl.X509TrustManager; public class InsecureTrustManager implements X509TrustManager {{ public void checkClientTrusted(X509Certificate[] c, String a) {{ }} public void checkServerTrusted(X509Certificate[] c, String a) {{ }} public X509Certificate[] getAcceptedIssuers() {{ return new X509Certificate[0]; }} }}\n")
         write_text(package_root / "http" / "InsecureHostnameVerifier.java", f"package {package_name}.http;\nimport javax.net.ssl.HostnameVerifier; import javax.net.ssl.SSLSession; public class InsecureHostnameVerifier implements HostnameVerifier {{ public boolean verify(String host, SSLSession session) {{ return true; }} }}\n")
         write_text(package_root / "http" / "SecurePartnerClientFactory.java", f"package {package_name}.http;\npublic class SecurePartnerClientFactory {{ public boolean enabled() {{ return true; }} }}\n")
+    elif scenario.id == "Q-V5-JAVA-004":
+        write_text(
+            package_root / "http" / "PartnerTlsBuilder.java",
+            textwrap.dedent(
+                f"""\n                package {package_name}.http;\n\n                import javax.net.ssl.HostnameVerifier;\n                import javax.net.ssl.SSLSession;\n\n                public class PartnerTlsBuilder {{\n                    public HostnameVerifier buildHostnameVerifier() {{\n                        return new HostnameVerifier() {{\n                            @Override\n                            public boolean verify(String hostname, SSLSession session) {{\n                                return true;\n                            }}\n                        }};\n                    }}\n                }}\n                """
+            ),
+        )
+        write_text(
+            package_root / "http" / "BuilderTrustManager.java",
+            textwrap.dedent(
+                f"""\n                package {package_name}.http;\n\n                import java.security.cert.X509Certificate;\n                import javax.net.ssl.X509TrustManager;\n\n                public class BuilderTrustManager implements X509TrustManager {{\n                    @Override\n                    public void checkClientTrusted(X509Certificate[] chain, String authType) {{\n                    }}\n\n                    @Override\n                    public void checkServerTrusted(X509Certificate[] chain, String authType) {{\n                    }}\n\n                    @Override\n                    public X509Certificate[] getAcceptedIssuers() {{\n                        return new X509Certificate[0];\n                    }}\n                }}\n                """
+            ),
+        )
+        write_text(package_root / "http" / "SafePartnerTlsBuilder.java", f"package {package_name}.http;\nimport javax.net.ssl.HostnameVerifier; import javax.net.ssl.SSLSession; public class SafePartnerTlsBuilder {{ public HostnameVerifier build() {{ return new HostnameVerifier() {{ @Override public boolean verify(String hostname, SSLSession session) {{ return hostname != null && !hostname.isBlank(); }} }}; }} }}\n")
     elif scenario.id == "Q-V5-JAVA-003":
         write_text(
             package_root / "config" / "PartnerTlsProperties.java",
@@ -662,6 +718,10 @@ def _apply_python_variant(repo_root: Path, scenario: ScenarioSpec) -> None:
         write_text(repo_root / "app" / "security" / "secure_signature.py", "import hashlib\n\ndef sign(payload: bytes) -> str:\n    return hashlib.sha256(payload).hexdigest()\n")
         write_text(repo_root / "app" / "security" / "legacy_signature.py", "import hashlib\n\ndef sign(payload: bytes) -> str:\n    return hashlib.md5(payload).hexdigest()\n")
         write_text(repo_root / "app" / "security" / "token_factory.py", "import random\n\ndef issue_code() -> str:\n    generator = random.Random()\n    return f\"{generator.randint(100000, 999999)}\"\n")
+    elif scenario.id == "Q-V4-PY-004":
+        write_text(repo_root / "app" / "security" / "legacy_nonce.py", "import random\n\ndef issue_nonce() -> str:\n    generator = random.Random()\n    return f\"nonce-{generator.randint(100000, 999999)}\"\n")
+        write_text(repo_root / "app" / "security" / "scary_random_wrapper.py", "import secrets\n\ndef random_or_not(value: bytes) -> str:\n    return secrets.token_hex(16)\n")
+        write_text(repo_root / "app" / "security" / "hash_inventory.py", "import hashlib\n\ndef supported_algorithms() -> tuple[str, ...]:\n    return ('sha256', 'sha512')\n")
     elif scenario.id == "Q-V5-PY-002":
         write_text(repo_root / "app" / "clients" / "partner_pull_client.py", "import requests\n\ndef fetch_payload(url: str) -> str:\n    return requests.get(url, verify=False, timeout=5).text\n")
         write_text(repo_root / "app" / "security" / "unverified_ssl_context.py", "import ssl\n\ndef build_context():\n    return ssl._create_unverified_context()\n")
@@ -698,6 +758,12 @@ def _apply_config_variant(repo_root: Path, scenario: ScenarioSpec) -> None:
         write_text(repo_root / "deploy" / "envoy.yaml", "tls_minimum_protocol_version: TLSv1_0\ntrust_chain_verification: ACCEPT_UNTRUSTED\n")
         write_text(repo_root / "runtime" / ".env", "NODE_TLS_REJECT_UNAUTHORIZED=0\n")
         write_text(repo_root / "helm" / "examples" / "values.yaml", "tls:\n  verify: true\n")
+    elif scenario.id == "Q-V6-CONFIG-004":
+        write_text(repo_root / "deploy" / "live" / "envoy.yaml", "tls_minimum_protocol_version: TLSv1_2\ntrust_chain_verification: ACCEPT_UNTRUSTED\n")
+        write_text(repo_root / "runtime" / ".env", "NODE_TLS_REJECT_UNAUTHORIZED=0\n")
+        write_text(repo_root / "helm" / "examples" / "values.yaml", "tls:\n  trust_chain_verification: ACCEPT_UNTRUSTED\n")
+        write_text(repo_root / "docs" / "runtime-notes.md", "# Runtime notes\n# Example override only: NODE_TLS_REJECT_UNAUTHORIZED=0\n")
+        write_text(repo_root / "tests" / "fixtures" / "runtime.env", "NODE_TLS_REJECT_UNAUTHORIZED=0\n")
 
 
 def _apply_go_variant(repo_root: Path, scenario: ScenarioSpec) -> None:
@@ -800,19 +866,39 @@ def _build_guardian_history_java(repo_root: Path, scenario: ScenarioSpec, git_fa
     metadata = _populate_java_common(repo_root, scenario)
     package_name = metadata["packageName"]
     package_root = ensure_dir(_package_dir(repo_root, package_name))
-    target = package_root / "history" / "bootstrap" / "PartnerTokenArchive.java"
-    write_text(target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenArchive {{ private static final String PARTNER_TOKEN = \"safe-reference\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
-    _inflate_repository(repo_root, scenario)
     git_factory.init(repo_root)
-    _commit_current_state(git_factory, repo_root, "c001 bootstrap repo")
-    write_text(target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenArchive {{ private static final String PARTNER_TOKEN = \"{GENERIC_SECRET_GOLF}\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
-    _commit_current_state(git_factory, repo_root, "c002 add live partner access token")
-    write_text(repo_root / "docs" / "noise.md", "masked-token=****\n")
-    _commit_current_state(git_factory, repo_root, "c003 add docs noise")
-    write_text(target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenArchive {{ private static final String PARTNER_TOKEN = \"safe-reference\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
-    _commit_current_state(git_factory, repo_root, "c004 remove token and replace with safe reference")
-    write_text(package_root / "service" / "HistoryRefactor.java", f"package {package_name}.service;\npublic class HistoryRefactor {{ public boolean enabled() {{ return true; }} }}\n")
-    _commit_current_state(git_factory, repo_root, "c005 unrelated refactor")
+    if scenario.id == "G-V2-HIST-004":
+        source_target = package_root / "history" / "bootstrap" / "PartnerTokenBootstrap.java"
+        moved_target = package_root / "history" / "archive" / "PartnerCredentialArchive.java"
+        write_text(source_target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenBootstrap {{ private static final String PARTNER_TOKEN = \"safe-reference\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _inflate_repository(repo_root, scenario)
+        _commit_current_state(git_factory, repo_root, "c001 bootstrap repo")
+        write_text(source_target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenBootstrap {{ private static final String PARTNER_TOKEN = \"{GENERIC_SECRET_GOLF}\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c002 add transient partner token")
+        ensure_dir(moved_target.parent)
+        if source_target.exists():
+            source_target.replace(moved_target)
+        write_text(moved_target, f"package {package_name}.history.archive;\npublic class PartnerCredentialArchive {{ private static final String PARTNER_TOKEN = \"{GENERIC_SECRET_GOLF}\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c003 move token archive into history package")
+        write_text(repo_root / "docs" / "rename-plan.md", "masked_token=****\n")
+        _commit_current_state(git_factory, repo_root, "c004 add rename plan noise")
+        write_text(moved_target, f"package {package_name}.history.archive;\npublic class PartnerCredentialArchive {{ private static final String PARTNER_TOKEN = \"safe-reference\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c005 remove token after archive migration")
+        write_text(package_root / "service" / "HistoryRefactor.java", f"package {package_name}.service;\npublic class HistoryRefactor {{ public boolean enabled() {{ return true; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c006 unrelated refactor")
+    else:
+        target = package_root / "history" / "bootstrap" / "PartnerTokenArchive.java"
+        write_text(target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenArchive {{ private static final String PARTNER_TOKEN = \"safe-reference\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _inflate_repository(repo_root, scenario)
+        _commit_current_state(git_factory, repo_root, "c001 bootstrap repo")
+        write_text(target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenArchive {{ private static final String PARTNER_TOKEN = \"{GENERIC_SECRET_GOLF}\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c002 add live partner access token")
+        write_text(repo_root / "docs" / "noise.md", "masked-token=****\n")
+        _commit_current_state(git_factory, repo_root, "c003 add docs noise")
+        write_text(target, f"package {package_name}.history.bootstrap;\npublic class PartnerTokenArchive {{ private static final String PARTNER_TOKEN = \"safe-reference\"; public String current() {{ return PARTNER_TOKEN; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c004 remove token and replace with safe reference")
+        write_text(package_root / "service" / "HistoryRefactor.java", f"package {package_name}.service;\npublic class HistoryRefactor {{ public boolean enabled() {{ return true; }} }}\n")
+        _commit_current_state(git_factory, repo_root, "c005 unrelated refactor")
     return metadata
 
 
@@ -840,38 +926,71 @@ def _build_guardian_history_node(repo_root: Path, scenario: ScenarioSpec, git_fa
 def _build_guardian_history_python(repo_root: Path, scenario: ScenarioSpec, git_factory: GitFactory) -> dict[str, Any]:
     _populate_python_common(repo_root, scenario)
     write_text(repo_root / "app" / "security" / "rotation_state.py", "def state() -> str:\n    return 'safe'\n")
-    _inflate_repository(repo_root, scenario)
     git_factory.init(repo_root)
+    _inflate_repository(repo_root, scenario)
     _commit_current_state(git_factory, repo_root, "c001 bootstrap")
-    write_text(repo_root / "ops" / "keys" / "service-a.pem", PRIVATE_KEY_BLOCK_A_REWRAPPED)
-    _commit_current_state(git_factory, repo_root, "c002 add PEM A")
-    write_text(repo_root / "ops" / "keys" / "service-a.pem", PRIVATE_KEY_BLOCK_A)
-    _commit_current_state(git_factory, repo_root, "c003 formatting change")
-    if (repo_root / "ops" / "keys" / "service-a.pem").exists():
-        (repo_root / "ops" / "keys" / "service-a.pem").unlink()
-    write_text(repo_root / "ops" / "keys" / "service-b.pem", PRIVATE_KEY_BLOCK_B)
-    _commit_current_state(git_factory, repo_root, "c004 rotate to PEM B")
-    write_text(repo_root / "docs" / "examples" / "pem-reference.md", "-----BEGIN PRIVATE KEY-----\nexample\n")
-    _commit_current_state(git_factory, repo_root, "c005 docs example PEM")
-    write_text(repo_root / "app" / "security" / "rotation_state.py", "def state() -> str:\n    return 'rotated-b'\n")
-    _commit_current_state(git_factory, repo_root, "c006 safe cleanup")
+    if scenario.id == "G-V2-HIST-005":
+        write_text(repo_root / "ops" / "runtime" / "partner_runtime.env", f"PARTNER_RUNTIME_TOKEN={GENERIC_SECRET_BRAVO}\n")
+        _commit_current_state(git_factory, repo_root, "c002 add runtime token")
+        write_text(repo_root / "ops" / "runtime" / "partner_runtime.env", f"PARTNER_RUNTIME_TOKEN = \"{GENERIC_SECRET_BRAVO}\"\n")
+        _commit_current_state(git_factory, repo_root, "c003 reformat runtime token")
+        ensure_dir(repo_root / "ops" / "archive")
+        if (repo_root / "ops" / "runtime" / "partner_runtime.env").exists():
+            (repo_root / "ops" / "runtime" / "partner_runtime.env").replace(repo_root / "ops" / "archive" / "partner_runtime.env")
+        _commit_current_state(git_factory, repo_root, "c004 move runtime token to archive")
+        write_text(repo_root / "docs" / "examples" / "runtime-reference.md", "PARTNER_RUNTIME_TOKEN=example-value\n")
+        _commit_current_state(git_factory, repo_root, "c005 add runtime docs example")
+        write_text(repo_root / "ops" / "archive" / "partner_runtime.env", "PARTNER_RUNTIME_TOKEN=safe-reference\n")
+        _commit_current_state(git_factory, repo_root, "c006 remove runtime token and keep safe placeholder")
+    else:
+        write_text(repo_root / "ops" / "keys" / "service-a.pem", PRIVATE_KEY_BLOCK_A_REWRAPPED)
+        _commit_current_state(git_factory, repo_root, "c002 add PEM A")
+        write_text(repo_root / "ops" / "keys" / "service-a.pem", PRIVATE_KEY_BLOCK_A)
+        _commit_current_state(git_factory, repo_root, "c003 formatting change")
+        if (repo_root / "ops" / "keys" / "service-a.pem").exists():
+            (repo_root / "ops" / "keys" / "service-a.pem").unlink()
+        write_text(repo_root / "ops" / "keys" / "service-b.pem", PRIVATE_KEY_BLOCK_B)
+        _commit_current_state(git_factory, repo_root, "c004 rotate to PEM B")
+        write_text(repo_root / "docs" / "examples" / "pem-reference.md", "-----BEGIN PRIVATE KEY-----\nexample\n")
+        _commit_current_state(git_factory, repo_root, "c005 docs example PEM")
+        write_text(repo_root / "app" / "security" / "rotation_state.py", "def state() -> str:\n    return 'rotated-b'\n")
+        _commit_current_state(git_factory, repo_root, "c006 safe cleanup")
     return {}
 
 
 def _build_negative_repo(repo_root: Path, scenario: ScenarioSpec, git_factory: GitFactory) -> dict[str, Any]:
     _populate_python_common(repo_root, scenario)
     if scenario.family == "negative_docs":
-        write_text(repo_root / "docs" / "runbooks" / "samples.md", "Token example: token=example-value\nverify=false is a documentation string only\n")
+        if scenario.id == "N-V7-DOCS-005":
+            write_text(repo_root / "docs" / "tutorials" / "quickstart.md", "export const apiToken = 'sample-token-only';\nverify=false appears in fenced docs only.\n")
+            write_text(repo_root / "examples" / "quickstart" / ".env.sample", "NOTIFICATION_TOKEN=example-value\n")
+            write_text(repo_root / "docs" / "snippets" / "tls.md", "client = requests.get(url, verify=False)  # tutorial snippet only\n")
+        elif scenario.id == "N-V7-DOCS-006":
+            write_text(repo_root / "docs" / "certs" / "public-chain.pem", PUBLIC_CERT_CHAIN)
+            write_text(repo_root / "examples" / "csr" / "service.csr", CSR_SAMPLE)
+            write_text(repo_root / "docs" / "pki" / "rotation.md", "Public chain and CSR examples live here; no private key material is shipped.\n")
+        else:
+            write_text(repo_root / "docs" / "runbooks" / "samples.md", "Token example: token=example-value\nverify=false is a documentation string only\n")
     elif scenario.family == "negative_vendor":
-        write_text(repo_root / "vendor" / "bundle.js", "var sample='md5 example text'; var tls='rejectUnauthorized false text';\n")
-        write_text(repo_root / "generated" / "client.ts", "export const sample = 'AES/ECB example';\n")
+        if scenario.id == "N-V7-VENDOR-007":
+            write_text(repo_root / "vendor" / "bundle.min.js", "var a='md5 demo text';var b='NODE_TLS_REJECT_UNAUTHORIZED=0';var c='-----BEGIN PRIVATE KEY----- docs';\n")
+            write_text(repo_root / "generated" / "openapi" / "client.ts", "export const insecureExample = 'rejectUnauthorized false';\n")
+            write_text(repo_root / "package-lock.json", "{\"packages\":{\"\":{\"integrity\":\"sha512-placeholder-integrity-value-only\"}}}\n")
+        else:
+            write_text(repo_root / "vendor" / "bundle.js", "var sample='md5 example text'; var tls='rejectUnauthorized false text';\n")
+            write_text(repo_root / "generated" / "client.ts", "export const sample = 'AES/ECB example';\n")
     elif scenario.family == "negative_tests":
         write_text(repo_root / "fixtures" / "tokens.json", '{"token":"example-value","certificate":"-----BEGIN PRIVATE KEY----- example"}\n')
         write_text(repo_root / "mocks" / "certificates" / "mock.pem", "-----BEGIN PRIVATE KEY-----\nexample\n")
     elif scenario.family == "negative_safe":
-        write_text(repo_root / "app" / "security" / "secure_hashing.py", "import hashlib\n\ndef digest(value: bytes) -> str:\n    return hashlib.sha256(value).hexdigest()\n")
-        write_text(repo_root / "app" / "security" / "secure_tls.py", "def verify_enabled() -> bool:\n    return True\n")
-        write_text(repo_root / "app" / "security" / "secure_key_loader.py", "def key_reference() -> str:\n    return 'vault://platform/key'\n")
+        if scenario.id == "N-V7-SAFE-008":
+            write_text(repo_root / "app" / "security" / "masked_values.py", "MASKED_TOKEN = 'ghp_xxxxMASKEDxxxx1234'\nPUBLIC_SAMPLE = 'sk_live_example_only_placeholder'\n")
+            write_text(repo_root / "app" / "security" / "placeholder_env.py", "def runtime_locator() -> str:\n    return 'vault://example/runtime-token'\n")
+            write_text(repo_root / "docs" / "safe-placeholders.md", "Use ONLY masked examples like ghp_xxxxMASKEDxxxx1234 in docs and runbooks.\n")
+        else:
+            write_text(repo_root / "app" / "security" / "secure_hashing.py", "import hashlib\n\ndef digest(value: bytes) -> str:\n    return hashlib.sha256(value).hexdigest()\n")
+            write_text(repo_root / "app" / "security" / "secure_tls.py", "def verify_enabled() -> bool:\n    return True\n")
+            write_text(repo_root / "app" / "security" / "secure_key_loader.py", "def key_reference() -> str:\n    return 'vault://platform/key'\n")
     _inflate_repository(repo_root, scenario)
     git_factory.init(repo_root)
     _commit_current_state(git_factory, repo_root, f"bootstrap {scenario.id}")
@@ -894,6 +1013,12 @@ def _build_mixed_monorepo(repo_root: Path, scenario: ScenarioSpec, git_factory: 
     write_text(package_root / "security" / "LegacyCipherService.java", f"package {package_name}.security;\nimport javax.crypto.Cipher;\npublic class LegacyCipherService {{ public Cipher cipher() throws Exception {{ return Cipher.getInstance(\"AES/ECB/PKCS5Padding\"); }} }}\n")
     write_text(node_root / "src" / "modules" / "security" / "legacyDigest.ts", "import { createHash } from 'crypto';\nexport function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }\n")
     write_text(python_root / "app" / "clients" / "insecure_partner.py", "import requests\n\ndef fetch_payload(url: str) -> str:\n    return requests.get(url, verify=False, timeout=5).text\n")
+    if scenario.id == "M-V8-003":
+        write_text(repo_root / "shared" / "config" / "keys" / "mesh_service.pem", PRIVATE_KEY_BLOCK_B)
+        write_text(repo_root / "vendor" / "third-party-sdk.js", "var secret='example-only'; var weak='md5 example';\n")
+        write_text(repo_root / "generated" / "openapi" / "mesh-client.ts", "export const generatedExample = 'verify=false';\n")
+        write_text(repo_root / "packages" / "shared-fixtures" / "seed.json", '{"token":"fixture-only","tls":"rejectUnauthorized false"}\n')
+        write_text(repo_root / "deploy" / "charts" / "values.yaml", "tls:\n  verify: true\n")
     write_text(repo_root / "scripts" / "smoke.ps1", "Write-Host 'mixed monorepo smoke ok'\n")
     _inflate_repository(repo_root, scenario)
     git_factory.init(repo_root)
@@ -909,6 +1034,11 @@ def _build_mixed_infra(repo_root: Path, scenario: ScenarioSpec, git_factory: Git
     write_text(repo_root / "app" / "config" / "production.env", "APP_SECRET=0123456789ABCDEFA31a\n")
     write_text(repo_root / "deploy" / "envoy.yaml", "tls_minimum_protocol_version: TLSv1_0\ntrust_chain_verification: ACCEPT_UNTRUSTED\n")
     write_text(console_root / "src" / "modules" / "security" / "legacyDigest.ts", "import { createHash } from 'crypto';\nexport function digest(value: string): string { return createHash('md5').update(value).digest('hex'); }\n")
+    if scenario.id == "M-V8-004":
+        write_text(repo_root / "deploy" / "examples" / "envoy.yaml", "trust_chain_verification: ACCEPT_UNTRUSTED\n")
+        write_text(repo_root / "kustomize" / "fixtures" / "dev.env", "NODE_TLS_REJECT_UNAUTHORIZED=0\n")
+        write_text(repo_root / "terraform" / "modules" / "edge" / "variables.tf", 'variable "tls_profile" { default = "modern" }\n')
+        write_text(repo_root / ".github" / "workflows" / "deploy.yml", "name: deploy\non: [push]\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo deploy\n")
     write_text(repo_root / "scripts" / "smoke.ps1", "Write-Host 'infra mixed smoke ok'\n")
     _inflate_repository(repo_root, scenario)
     git_factory.init(repo_root)
@@ -921,6 +1051,11 @@ def _build_mixed_infra(repo_root: Path, scenario: ScenarioSpec, git_factory: Git
     write_text(repo_root / "ops" / "release-notes.md", "release branch clean\n")
     _commit_current_state(git_factory, repo_root, "c003 release branch clean")
     git_factory.checkout(repo_root, "main")
+    if scenario.id == "M-V8-004":
+        git_factory.checkout(repo_root, "feature/charts-cleanup", create=True)
+        write_text(repo_root / "ops" / "charts" / "README.md", "charts cleanup branch stays clean\n")
+        _commit_current_state(git_factory, repo_root, "c004 charts cleanup branch")
+        git_factory.checkout(repo_root, "main")
     return {}
 
 

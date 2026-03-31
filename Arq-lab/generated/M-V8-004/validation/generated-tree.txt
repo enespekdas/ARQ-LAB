@@ -1,0 +1,384 @@
+control-plane-infra-repo
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- app
+|   |-- config
+|   |   `-- production.env
+|   |-- models
+|   |   |-- audit.py
+|   |   |-- delivery.py
+|   |   |-- dispatch.py
+|   |   |-- metrics.py
+|   |   |-- preferences.py
+|   |   |-- retry.py
+|   |   |-- routing.py
+|   |   `-- templates.py
+|   |-- services
+|   |   |-- audit_service.py
+|   |   |-- delivery_service.py
+|   |   |-- dispatch_service.py
+|   |   |-- metrics_service.py
+|   |   |-- preferences_service.py
+|   |   |-- retry_service.py
+|   |   |-- routing_service.py
+|   |   `-- templates_service.py
+|   |-- __init__.py
+|   `-- main.py
+|-- deploy
+|   |-- examples
+|   |   `-- envoy.yaml
+|   `-- envoy.yaml
+|-- docs
+|   `-- architecture
+|       |-- section-01.md
+|       |-- section-02.md
+|       |-- section-03.md
+|       |-- section-04.md
+|       |-- section-05.md
+|       |-- section-06.md
+|       |-- section-07.md
+|       |-- section-08.md
+|       |-- section-09.md
+|       |-- section-10.md
+|       |-- section-11.md
+|       |-- section-12.md
+|       |-- section-13.md
+|       |-- section-14.md
+|       |-- section-15.md
+|       |-- section-16.md
+|       |-- section-17.md
+|       |-- section-18.md
+|       |-- section-19.md
+|       |-- section-20.md
+|       |-- section-21.md
+|       |-- section-22.md
+|       |-- section-23.md
+|       |-- section-24.md
+|       |-- section-25.md
+|       |-- section-26.md
+|       |-- section-27.md
+|       |-- section-28.md
+|       |-- section-29.md
+|       |-- section-30.md
+|       |-- section-31.md
+|       |-- section-32.md
+|       |-- section-33.md
+|       |-- section-34.md
+|       |-- section-35.md
+|       |-- section-36.md
+|       |-- section-37.md
+|       |-- section-38.md
+|       |-- section-39.md
+|       |-- section-40.md
+|       |-- section-41.md
+|       |-- section-42.md
+|       |-- section-43.md
+|       |-- section-44.md
+|       |-- section-45.md
+|       |-- section-46.md
+|       |-- section-47.md
+|       |-- section-48.md
+|       |-- section-49.md
+|       |-- section-50.md
+|       |-- section-51.md
+|       |-- section-52.md
+|       |-- section-53.md
+|       |-- section-54.md
+|       |-- section-55.md
+|       |-- section-56.md
+|       |-- section-57.md
+|       |-- section-58.md
+|       |-- section-59.md
+|       |-- section-60.md
+|       |-- section-61.md
+|       |-- section-62.md
+|       |-- section-63.md
+|       |-- section-64.md
+|       |-- section-65.md
+|       |-- section-66.md
+|       |-- section-67.md
+|       |-- section-68.md
+|       |-- section-69.md
+|       |-- section-70.md
+|       |-- section-71.md
+|       |-- section-72.md
+|       |-- section-73.md
+|       |-- section-74.md
+|       |-- section-75.md
+|       |-- section-76.md
+|       |-- section-77.md
+|       `-- section-78.md
+|-- kustomize
+|   `-- fixtures
+|       `-- dev.env
+|-- ops
+|   |-- console
+|   |   |-- __tests__
+|   |   |   |-- audit.service.test.ts
+|   |   |   |-- compliance.service.test.ts
+|   |   |   |-- events.service.test.ts
+|   |   |   |-- invites.service.test.ts
+|   |   |   |-- partners.service.test.ts
+|   |   |   |-- profiles.service.test.ts
+|   |   |   |-- sessions.service.test.ts
+|   |   |   `-- tokens.service.test.ts
+|   |   |-- dist
+|   |   |   |-- __tests__
+|   |   |   |   |-- audit.service.test.js
+|   |   |   |   |-- compliance.service.test.js
+|   |   |   |   |-- events.service.test.js
+|   |   |   |   |-- invites.service.test.js
+|   |   |   |   |-- partners.service.test.js
+|   |   |   |   |-- profiles.service.test.js
+|   |   |   |   |-- sessions.service.test.js
+|   |   |   |   `-- tokens.service.test.js
+|   |   |   |-- scripts
+|   |   |   |   `-- smoke.js
+|   |   |   `-- src
+|   |   |       |-- modules
+|   |   |       |   |-- audit
+|   |   |       |   |   `-- audit.service.js
+|   |   |       |   |-- compliance
+|   |   |       |   |   `-- compliance.service.js
+|   |   |       |   |-- events
+|   |   |       |   |   `-- events.service.js
+|   |   |       |   |-- invites
+|   |   |       |   |   `-- invites.service.js
+|   |   |       |   |-- partners
+|   |   |       |   |   `-- partners.service.js
+|   |   |       |   |-- profiles
+|   |   |       |   |   `-- profiles.service.js
+|   |   |       |   |-- security
+|   |   |       |   |   `-- legacyDigest.js
+|   |   |       |   |-- sessions
+|   |   |       |   |   `-- sessions.service.js
+|   |   |       |   `-- tokens
+|   |   |       |       `-- tokens.service.js
+|   |   |       `-- server.js
+|   |   |-- scripts
+|   |   |   `-- smoke.ts
+|   |   |-- src
+|   |   |   |-- modules
+|   |   |   |   |-- audit
+|   |   |   |   |   `-- audit.service.ts
+|   |   |   |   |-- compliance
+|   |   |   |   |   `-- compliance.service.ts
+|   |   |   |   |-- events
+|   |   |   |   |   `-- events.service.ts
+|   |   |   |   |-- invites
+|   |   |   |   |   `-- invites.service.ts
+|   |   |   |   |-- partners
+|   |   |   |   |   `-- partners.service.ts
+|   |   |   |   |-- profiles
+|   |   |   |   |   `-- profiles.service.ts
+|   |   |   |   |-- security
+|   |   |   |   |   `-- legacyDigest.ts
+|   |   |   |   |-- sessions
+|   |   |   |   |   `-- sessions.service.ts
+|   |   |   |   `-- tokens
+|   |   |   |       `-- tokens.service.ts
+|   |   |   `-- server.ts
+|   |   |-- .gitignore
+|   |   |-- jest.config.cjs
+|   |   |-- package-lock.json
+|   |   |-- package.json
+|   |   |-- README.md
+|   |   `-- tsconfig.json
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       |-- runbook-06.md
+|       |-- runbook-07.md
+|       |-- runbook-08.md
+|       |-- runbook-09.md
+|       |-- runbook-10.md
+|       |-- runbook-11.md
+|       |-- runbook-12.md
+|       |-- runbook-13.md
+|       |-- runbook-14.md
+|       |-- runbook-15.md
+|       |-- runbook-16.md
+|       |-- runbook-17.md
+|       |-- runbook-18.md
+|       |-- runbook-19.md
+|       |-- runbook-20.md
+|       |-- runbook-21.md
+|       |-- runbook-22.md
+|       |-- runbook-23.md
+|       |-- runbook-24.md
+|       |-- runbook-25.md
+|       |-- runbook-26.md
+|       |-- runbook-27.md
+|       |-- runbook-28.md
+|       |-- runbook-29.md
+|       |-- runbook-30.md
+|       |-- runbook-31.md
+|       |-- runbook-32.md
+|       |-- runbook-33.md
+|       |-- runbook-34.md
+|       |-- runbook-35.md
+|       |-- runbook-36.md
+|       |-- runbook-37.md
+|       |-- runbook-38.md
+|       |-- runbook-39.md
+|       |-- runbook-40.md
+|       |-- runbook-41.md
+|       |-- runbook-42.md
+|       |-- runbook-43.md
+|       |-- runbook-44.md
+|       |-- runbook-45.md
+|       |-- runbook-46.md
+|       |-- runbook-47.md
+|       |-- runbook-48.md
+|       |-- runbook-49.md
+|       |-- runbook-50.md
+|       |-- runbook-51.md
+|       |-- runbook-52.md
+|       |-- runbook-53.md
+|       |-- runbook-54.md
+|       |-- runbook-55.md
+|       |-- runbook-56.md
+|       |-- runbook-57.md
+|       |-- runbook-58.md
+|       |-- runbook-59.md
+|       |-- runbook-60.md
+|       |-- runbook-61.md
+|       |-- runbook-62.md
+|       |-- runbook-63.md
+|       |-- runbook-64.md
+|       |-- runbook-65.md
+|       |-- runbook-66.md
+|       |-- runbook-67.md
+|       |-- runbook-68.md
+|       |-- runbook-69.md
+|       |-- runbook-70.md
+|       |-- runbook-71.md
+|       |-- runbook-72.md
+|       |-- runbook-73.md
+|       |-- runbook-74.md
+|       |-- runbook-75.md
+|       |-- runbook-76.md
+|       |-- runbook-77.md
+|       `-- runbook-78.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- smoke.py
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       |-- reference-06.sql
+|       |-- reference-07.sql
+|       |-- reference-08.sql
+|       |-- reference-09.sql
+|       |-- reference-10.sql
+|       |-- reference-11.sql
+|       |-- reference-12.sql
+|       |-- reference-13.sql
+|       |-- reference-14.sql
+|       |-- reference-15.sql
+|       |-- reference-16.sql
+|       |-- reference-17.sql
+|       |-- reference-18.sql
+|       |-- reference-19.sql
+|       |-- reference-20.sql
+|       |-- reference-21.sql
+|       |-- reference-22.sql
+|       |-- reference-23.sql
+|       |-- reference-24.sql
+|       |-- reference-25.sql
+|       |-- reference-26.sql
+|       |-- reference-27.sql
+|       |-- reference-28.sql
+|       |-- reference-29.sql
+|       |-- reference-30.sql
+|       |-- reference-31.sql
+|       |-- reference-32.sql
+|       |-- reference-33.sql
+|       |-- reference-34.sql
+|       |-- reference-35.sql
+|       |-- reference-36.sql
+|       |-- reference-37.sql
+|       |-- reference-38.sql
+|       |-- reference-39.sql
+|       |-- reference-40.sql
+|       |-- reference-41.sql
+|       |-- reference-42.sql
+|       |-- reference-43.sql
+|       |-- reference-44.sql
+|       |-- reference-45.sql
+|       |-- reference-46.sql
+|       |-- reference-47.sql
+|       |-- reference-48.sql
+|       |-- reference-49.sql
+|       |-- reference-50.sql
+|       |-- reference-51.sql
+|       |-- reference-52.sql
+|       |-- reference-53.sql
+|       |-- reference-54.sql
+|       |-- reference-55.sql
+|       |-- reference-56.sql
+|       |-- reference-57.sql
+|       |-- reference-58.sql
+|       |-- reference-59.sql
+|       |-- reference-60.sql
+|       |-- reference-61.sql
+|       |-- reference-62.sql
+|       |-- reference-63.sql
+|       |-- reference-64.sql
+|       |-- reference-65.sql
+|       |-- reference-66.sql
+|       |-- reference-67.sql
+|       |-- reference-68.sql
+|       |-- reference-69.sql
+|       |-- reference-70.sql
+|       |-- reference-71.sql
+|       |-- reference-72.sql
+|       |-- reference-73.sql
+|       |-- reference-74.sql
+|       |-- reference-75.sql
+|       |-- reference-76.sql
+|       |-- reference-77.sql
+|       `-- reference-78.sql
+|-- terraform
+|   `-- modules
+|       `-- edge
+|           `-- variables.tf
+|-- tests
+|   |-- test_audit_service.py
+|   |-- test_delivery_service.py
+|   |-- test_dispatch_service.py
+|   |-- test_metrics_service.py
+|   |-- test_preferences_service.py
+|   |-- test_retry_service.py
+|   |-- test_routing_service.py
+|   `-- test_templates_service.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- build-02.log
+|   |   |-- build-03.log
+|   |   |-- smoke-01.log
+|   |   |-- test-01.log
+|   |   `-- test-02.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- explainability-contract.json
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- .gitignore
+|-- pyproject.toml
+`-- README.md

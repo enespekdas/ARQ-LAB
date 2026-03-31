@@ -8,12 +8,13 @@
 - targetModule: `Quantum`
 - language / stack: `TypeScript / Node`
 - repoType: `snapshot`
-- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node`
-- repo remote URL in Gitea: `http://localhost:3001/arq/customer-portal-node-20260331t000527z`
+- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node`
+- repo remote provider: `github`
+- repo remote URL: `https://github.com/ARQ-Sec/customer-portal-node`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT`
 - branch scopes intended for this scenario: `SINGLE_BRANCH`
-- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\generated-project-dossier.md`
+- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\generated-project-dossier.md`
 - required alias dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\Q-V4-TS-003\validation\generated-project-dossier.md`
 - central dossier report path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\generated-project-dossiers\Q-V4-TS-003.md`
 
@@ -448,7 +449,7 @@ customer-portal-node
 | src/modules/invites/invites.service.ts | live-code | 2 | Runtime business service implementing Invites.Service logic. | no | no | no | yes | yes | no |
 | src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
-| src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | yes | no | yes | yes | no |
+| src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | no | no | yes | yes | no |
 | src/modules/security/legacySha1Digest.ts | live-code | 2 | Runtime business module contributing to Legacy Sha1Digest. | no | yes | no | yes | yes | no |
 | src/modules/security/secureDigest.ts | live-code | 2 | Runtime business module contributing to Secure Digest. | no | yes | no | yes | yes | no |
 | src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
@@ -483,7 +484,6 @@ customer-portal-node
 ## 7. Near-Real Negative Surfaces
 
 - `README.md`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `src/modules/security/legacyDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/security/legacySha1Digest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/security/secureDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
@@ -635,25 +635,25 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Command: `C:\Program Files\nodejs\npm.cmd install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\build-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\runnability-logs\build-01.log`
 - Command: `C:\Program Files\nodejs\npm.cmd run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\build-02.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\runnability-logs\build-02.log`
 
 ### Test
 
 - Command: `C:\Program Files\nodejs\npm.cmd test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\test-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
 - Command: `C:\Program Files\nodejs\node.exe dist/scripts/smoke.js`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\runnability-logs\smoke-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\runnability-logs\smoke-01.log`
 
 ## 11. Critical Generated Content Detail
 
@@ -919,7 +919,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Digest. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -1034,4 +1034,4 @@ Explainability failure definition:
 
 - What this scenario is proving: `Quantum weak crypto patterns in a realistic Node portal backend.`
 - What it is not proving: comprehensive customer architecture fidelity beyond the declared validation contract.
-- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M4\customer-portal-node\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.
+- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\customer-portal-node\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.

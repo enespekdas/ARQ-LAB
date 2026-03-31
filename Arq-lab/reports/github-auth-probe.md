@@ -67,4 +67,13 @@
 - status: `200`
 - outcome: `success`
 - viewerLogin: `enespekdas`
+- error: 
+
+## Probe Repo
+
+- name: `arq-lab-github-auth-probe`
+- htmlUrl: `https://github.com/ARQ-Sec/arq-lab-github-auth-probe`
+- cloneUrl: `https://github.com/ARQ-Sec/arq-lab-github-auth-probe.git`
+- createStatus: `success`
+- pushStatus: `success`
 - error:

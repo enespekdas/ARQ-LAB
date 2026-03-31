@@ -1,0 +1,69 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/control-plane-infra-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/control-plane-infra-repo",
+    "html_url": "https://github.com/ARQ-Sec/control-plane-infra-repo",
+    "name": "control-plane-infra-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/charts-cleanup": "05a03e12762dc8035ff6352c1320eb8fa09515ae",
+        "feature/hotfix-ssl": "5f6a763b22de30f0fc3f3128a5cd0e3afa2f1ca0",
+        "main": "62d6ec789a8e2cff5b2909b72f1896802fd2f099",
+        "release/2026.04": "f8597d1b7d75b56f3290a82ec9b09bc037368fba"
+      },
+      "head": "62d6ec789a8e2cff5b2909b72f1896802fd2f099",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T20:53:22+03:00",
+          "message": "c004 charts cleanup branch",
+          "sha": "05a03e12762dc8035ff6352c1320eb8fa09515ae"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T20:53:22+03:00",
+          "message": "c003 release branch clean",
+          "sha": "f8597d1b7d75b56f3290a82ec9b09bc037368fba"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T20:53:21+03:00",
+          "message": "c002 temporary hotfix secret",
+          "sha": "5f6a763b22de30f0fc3f3128a5cd0e3afa2f1ca0"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T20:53:21+03:00",
+          "message": "c001 bootstrap mixed repo",
+          "sha": "62d6ec789a8e2cff5b2909b72f1896802fd2f099"
+        }
+      ]
+    },
+    "lineCount": 10040,
+    "repoName": "control-plane-infra-repo",
+    "scenarioId": "M-V8-004"
+  },
+  "scenario": {
+    "domain": "Control-plane repo with live infra config, hotfix branches, CI workflows, and example overlays.",
+    "id": "M-V8-004",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "control-plane-infra-repo",
+    "stack": "App + infra + helm + kustomize + terraform + CI"
+  }
+}

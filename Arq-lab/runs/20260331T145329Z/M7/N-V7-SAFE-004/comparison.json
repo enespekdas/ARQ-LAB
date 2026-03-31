@@ -1,0 +1,119 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\N-V7-SAFE-004\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9448661606072712,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\N-V7-SAFE-004\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\N-V7-SAFE-004\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 93,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4730,
+      "tests": 32,
+      "total": 5006,
+      "vendor/generated": 124
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\safe-wrapper-playground\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\N-V7-SAFE-004.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\safe-wrapper-playground\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FP",
+  "finalVerdictReason": "1 must-not-find violation(s) hit protected or declared-clean surfaces",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M7",
+  "missingExpectedFindings": [],
+  "module": "both",
+  "mustFindExpected": 0,
+  "mustFindMatched": 0,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "import hashlib",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3056f2e5-746a-4be2-97a8-d8971fb05211",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/security/secure_hashing.py",
+        "queryFamily": "python.import",
+        "rawEvidenceJson": "{\"queryRef\":\"python.import.module\",\"callName\":\"import\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"hashlib\",\"importStyle\":\"IMPORT\",\"importedModule\":\"hashlib\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "hashlib",
+        "ruleKey": "quantum.arq-q-0267-python",
+        "ruleName": "Import: hashlib",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head-main",
+        "semanticKey": "python:import:import:hashlib",
+        "severity": "INFO"
+      },
+      "expected": "safe-hash"
+    }
+  ],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "import hashlib",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3056f2e5-746a-4be2-97a8-d8971fb05211",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/security/secure_hashing.py",
+        "queryFamily": "python.import",
+        "rawEvidenceJson": "{\"queryRef\":\"python.import.module\",\"callName\":\"import\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"hashlib\",\"importStyle\":\"IMPORT\",\"importedModule\":\"hashlib\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "hashlib",
+        "ruleKey": "quantum.arq-q-0267-python",
+        "ruleName": "Import: hashlib",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head-main",
+        "semanticKey": "python:import:import:hashlib",
+        "severity": "INFO"
+      },
+      "expected": "safe-hash"
+    }
+  ],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "N-V7-SAFE-004",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FP",
+  "verdictClass": "FAIL_FP"
+}

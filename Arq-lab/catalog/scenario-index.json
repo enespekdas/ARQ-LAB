@@ -198,5 +198,101 @@
     "repo": "infra-app-mixed-repo",
     "stack": "App + infra + CI",
     "summary": "Mixed infra/application repository with Guardian and Quantum across app and config."
+  },
+  {
+    "id": "G-V2-HIST-004",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "partner-rename-lineage",
+    "stack": "Java / Spring Boot",
+    "summary": "Guardian history handling for renamed and moved secret-bearing files on main."
+  },
+  {
+    "id": "G-V2-HIST-005",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "canonical-secret-lineage",
+    "stack": "Python + ops runtime",
+    "summary": "Guardian history handling when the same secret is reformatted, moved, and later removed."
+  },
+  {
+    "id": "Q-V3-JAVA-004",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "crypto-import-only-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum precision around import-only crypto inventory versus real weak-hash usage in Java."
+  },
+  {
+    "id": "Q-V4-PY-004",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "wrapper-safe-python",
+    "stack": "Python / service helper library",
+    "summary": "Quantum precision for Python wrapper-safe surfaces versus actionable weak RNG calls."
+  },
+  {
+    "id": "Q-V5-JAVA-004",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "tls-builder-chain-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum builder-chain and wrapper precision for Java TLS trust-bypass flows."
+  },
+  {
+    "id": "Q-V6-CONFIG-004",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "runtime-config-separation",
+    "stack": "Config-heavy repo",
+    "summary": "Quantum precision for active runtime config versus examples, comments, and fixtures in config-heavy repos."
+  },
+  {
+    "id": "N-V7-DOCS-005",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "tutorial-examples-repo",
+    "stack": "Docs / tutorials",
+    "summary": "Docs/tutorial repos with placeholder secrets should remain clean."
+  },
+  {
+    "id": "N-V7-DOCS-006",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "certificate-chain-repo",
+    "stack": "Docs / PKI samples",
+    "summary": "Certificate chains and CSRs without private keys should remain clean."
+  },
+  {
+    "id": "N-V7-VENDOR-007",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "bundle-lockfile-repo",
+    "stack": "Vendor / generated / lockfile",
+    "summary": "Vendor, generated, and lockfile noise should remain clean."
+  },
+  {
+    "id": "N-V7-SAFE-008",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "masked-placeholder-repo",
+    "stack": "Safe wrappers / masked placeholders",
+    "summary": "Masked placeholders and safe wrappers should remain clean despite high-entropy-looking strings."
+  },
+  {
+    "id": "M-V8-003",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "platform-mesh-monorepo",
+    "stack": "Java + Node + Python + generated/vendor monorepo",
+    "summary": "Mixed monorepo with actionable findings and deliberate protected-negative surfaces across apps, libs, charts, and generated code."
+  },
+  {
+    "id": "M-V8-004",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "control-plane-infra-repo",
+    "stack": "App + infra + helm + kustomize + terraform + CI",
+    "summary": "Infra-heavy mixed repo with active insecure runtime config, branch divergence, and numerous protected-negative surfaces."
   }
 ]

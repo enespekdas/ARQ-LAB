@@ -8,12 +8,13 @@
 - targetModule: `Guardian`
 - language / stack: `TypeScript / Node`
 - repoType: `mixed`
-- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence`
-- repo remote URL in Gitea: `http://localhost:3001/arq/partner-branch-divergence-20260331t000135z`
+- repo local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence`
+- repo remote provider: `github`
+- repo remote URL: `https://github.com/ARQ-Sec/partner-branch-divergence`
 - default branch: `main`
 - scan modes intended for this scenario: `HEAD_SNAPSHOT, REF_HISTORY`
 - branch scopes intended for this scenario: `ALL_BRANCHES, SINGLE_BRANCH`
-- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\generated-project-dossier.md`
+- project-local dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\generated-project-dossier.md`
 - required alias dossier path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\G-V2-HIST-002\validation\generated-project-dossier.md`
 - central dossier report path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\generated-project-dossiers\G-V2-HIST-002.md`
 
@@ -457,7 +458,7 @@ partner-branch-divergence
 | validation/expected-findings.json | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2690 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 806 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 807 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 230 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 45 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -619,17 +620,17 @@ partner-branch-divergence
 
 Branches:
 
-- `feature/docs-refresh` tip: `2178b78f4d57dfe89d254c69ef88c5e4176b5205`; diverges from `main` at `a2406b9723519c8091d56114319ea1f75fd81f33`
-- `feature/partner-hotfix` tip: `745e7b66e2a5905586cb8c963c211f35d28c3876`; diverges from `main` at `a2406b9723519c8091d56114319ea1f75fd81f33`
-- `main` tip: `a2406b9723519c8091d56114319ea1f75fd81f33`
-- `release/2026.04` tip: `39c865e3f3049068862f5b795bffb77095439809`; diverges from `main` at `a2406b9723519c8091d56114319ea1f75fd81f33`
+- `feature/docs-refresh` tip: `31bf51648d7336e576372348127248c726ebfe69`; diverges from `main` at `5e4e1c8f38bdbb400cfbe4bb669fa2f00756fb94`
+- `feature/partner-hotfix` tip: `e684a26d7baf14049b4c31383304a254e8891b72`; diverges from `main` at `5e4e1c8f38bdbb400cfbe4bb669fa2f00756fb94`
+- `main` tip: `5e4e1c8f38bdbb400cfbe4bb669fa2f00756fb94`
+- `release/2026.04` tip: `0d202023d5e7abab276658e22a6826ed0046ceed`; diverges from `main` at `5e4e1c8f38bdbb400cfbe4bb669fa2f00756fb94`
 
 Commit order:
 
-- `a2406b9723519c8091d56114319ea1f75fd81f33` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `39c865e3f3049068862f5b795bffb77095439809` `c003 release branch clean state`: removes or neutralizes a prior signal.
-- `745e7b66e2a5905586cb8c963c211f35d28c3876` `c002 temporary secret on feature branch`: introduces an intended signal.
-- `2178b78f4d57dfe89d254c69ef88c5e4176b5205` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
+- `5e4e1c8f38bdbb400cfbe4bb669fa2f00756fb94` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `e684a26d7baf14049b4c31383304a254e8891b72` `c002 temporary secret on feature branch`: introduces an intended signal.
+- `0d202023d5e7abab276658e22a6826ed0046ceed` `c003 release branch clean state`: removes or neutralizes a prior signal.
+- `31bf51648d7336e576372348127248c726ebfe69` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 
@@ -642,25 +643,25 @@ Expected final head/history state:
 - Command: `C:\Program Files\nodejs\npm.cmd install --silent`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\build-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\runnability-logs\build-01.log`
 - Command: `C:\Program Files\nodejs\npm.cmd run build`
   Expected result: `build` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\build-02.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\runnability-logs\build-02.log`
 
 ### Test
 
 - Command: `C:\Program Files\nodejs\npm.cmd test -- --runInBand`
   Expected result: `test` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\test-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\runnability-logs\test-01.log`
 
 ### Smoke
 
 - Command: `C:\Program Files\nodejs\node.exe dist/scripts/smoke.js`
   Expected result: `smoke` step completes successfully.
   Actual result: returncode=`0`; stage state=`passed`
-  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\runnability-logs\smoke-01.log`
+  Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\runnability-logs\smoke-01.log`
 
 ## 11. Critical Generated Content Detail
 
@@ -803,4 +804,4 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 
 - What this scenario is proving: `Guardian single-branch versus all-branches branch divergence handling.`
 - What it is not proving: comprehensive customer architecture fidelity beyond the declared validation contract.
-- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\generated\M2\partner-branch-divergence\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.
+- First outputs to inspect on failure: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\generated-project-dossier.md`, `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\partner-branch-divergence\validation\generated-file-manifest.json`, comparison artifacts under the latest `runs/` directory, and the persisted runnability logs referenced above.

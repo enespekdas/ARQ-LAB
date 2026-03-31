@@ -1,18 +1,18 @@
 {
   "byMilestone": {
     "M8": {
-      "cleanExpectedMatches": 10,
+      "cleanExpectedMatches": 18,
       "explainabilityFailures": 0,
-      "mayFindReview": 0,
+      "mayFindReview": 27,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 0,
-      "noiseCount": 34,
+      "noiseCount": 91,
       "refStateFailures": 0,
-      "sameFileDifferentSignalFindings": 25,
-      "sameSurfaceExtraFindings": 9,
-      "scenarios": 2,
-      "unexpectedFindings": 34,
-      "unexpectedRegexOnlyFindings": 28,
+      "sameFileDifferentSignalFindings": 50,
+      "sameSurfaceExtraFindings": 10,
+      "scenarios": 4,
+      "unexpectedFindings": 91,
+      "unexpectedRegexOnlyFindings": 82,
       "verdicts": {
         "FAIL_EXPLAINABILITY": 0,
         "FAIL_FN": 0,
@@ -20,7 +20,7 @@
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
         "PASS_CLEAN": 0,
-        "PASS_WITH_NOISE": 2
+        "PASS_WITH_NOISE": 4
       }
     }
   },
@@ -32,7 +32,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.5464187420285964,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "32 unexpected/noisy finding(s) remained after matching (same-surface-extra=8, same-file-different-signal=24, regex-only=28)",
+      "finalVerdictReason": "31 unexpected/noisy finding(s) remained after matching (same-surface-extra=7, same-file-different-signal=24, regex-only=28)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -55,18 +55,18 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 24,
-        "sameSurfaceExtraFindings": 8,
+        "sameSurfaceExtraFindings": 7,
         "totallyUnexpectedFindings": 0,
         "unexpectedRegexOnlyFindings": 28
       },
-      "noiseCount": 32,
+      "noiseCount": 31,
       "normalizationStats": {
         "collapsedDuplicates": 3,
-        "normalizedFindings": 38,
-        "rawFindings": 41
+        "normalizedFindings": 37,
+        "rawFindings": 40
       },
-      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\runnability-logs",
-      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\generated-project-dossier.md",
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\internal-platform-monorepo\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\internal-platform-monorepo\\validation\\generated-project-dossier.md",
       "realismJustification": "contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
       "realismScore": 3,
       "refStateFailures": 0,
@@ -76,10 +76,10 @@
         "smoke": "passed",
         "test": "passed"
       },
-      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\internal-platform-monorepo\\validation\\runnability-logs",
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\internal-platform-monorepo\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 24,
-      "sameSurfaceExtraFindings": 8,
-      "unexpectedFindings": 32,
+      "sameSurfaceExtraFindings": 7,
+      "unexpectedFindings": 31,
       "unexpectedRegexOnlyFindings": 28,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
@@ -91,7 +91,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.5875067729700442,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "2 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=1)",
+      "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -114,18 +114,18 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 1,
-        "sameSurfaceExtraFindings": 1,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 0,
         "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 2,
+      "noiseCount": 1,
       "normalizationStats": {
-        "collapsedDuplicates": 10,
-        "normalizedFindings": 7,
-        "rawFindings": 17
+        "collapsedDuplicates": 8,
+        "normalizedFindings": 6,
+        "rawFindings": 14
       },
-      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\runnability-logs",
-      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\generated-project-dossier.md",
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\infra-app-mixed-repo\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\infra-app-mixed-repo\\validation\\generated-project-dossier.md",
       "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
       "realismScore": 2,
       "refStateFailures": 0,
@@ -135,16 +135,134 @@
         "smoke": "passed",
         "test": "passed"
       },
-      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M8\\infra-app-mixed-repo\\validation\\runnability-logs",
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\infra-app-mixed-repo\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 1,
-      "sameSurfaceExtraFindings": 1,
-      "unexpectedFindings": 2,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 1,
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
+    },
+    "M-V8-003": {
+      "cleanExpectedMatches": 4,
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-003\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "fillerRatio": 0.5437432286023836,
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "58 unexpected/noisy finding(s) remained after matching (same-surface-extra=3, same-file-different-signal=24, totally-unexpected=4, review-only=27, regex-only=54)",
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-003\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-003\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 44,
+        "fixtures": 0,
+        "live business code": 1552,
+        "live config": 7,
+        "scripts": 1,
+        "synthetic filler / inflation content": 8030,
+        "tests": 0,
+        "total": 14768,
+        "vendor/generated": 345
+      },
+      "mayFindReview": 27,
+      "milestone": "M8",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 4,
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 27,
+        "sameFileDifferentSignalFindings": 24,
+        "sameSurfaceExtraFindings": 3,
+        "totallyUnexpectedFindings": 4,
+        "unexpectedRegexOnlyFindings": 54
+      },
+      "noiseCount": 58,
+      "normalizationStats": {
+        "collapsedDuplicates": 4,
+        "normalizedFindings": 62,
+        "rawFindings": 66
+      },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\platform-mesh-monorepo\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\platform-mesh-monorepo\\validation\\generated-project-dossier.md",
+      "realismJustification": "contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 3,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-003.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\platform-mesh-monorepo\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 24,
+      "sameSurfaceExtraFindings": 3,
+      "unexpectedFindings": 58,
+      "unexpectedRegexOnlyFindings": 54,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
+    },
+    "M-V8-004": {
+      "cleanExpectedMatches": 4,
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-004\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "fillerRatio": 0.6157158234660925,
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-004\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-004\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 22,
+        "fixtures": 0,
+        "live business code": 204,
+        "live config": 11,
+        "scripts": 2,
+        "synthetic filler / inflation content": 8580,
+        "tests": 32,
+        "total": 13935,
+        "vendor/generated": 294
+      },
+      "mayFindReview": 0,
+      "milestone": "M8",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 4,
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 1,
+        "sameSurfaceExtraFindings": 0,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 0
+      },
+      "noiseCount": 1,
+      "normalizationStats": {
+        "collapsedDuplicates": 8,
+        "normalizedFindings": 6,
+        "rawFindings": 14
+      },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\control-plane-infra-repo\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\control-plane-infra-repo\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; models a multi-component or multi-branch enterprise layout; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 2,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-004.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\control-plane-infra-repo\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 1,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 1,
       "unexpectedRegexOnlyFindings": 0,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     }
   },
-  "scenarioCount": 2,
+  "scenarioCount": 4,
   "verdicts": {
     "FAIL_EXPLAINABILITY": 0,
     "FAIL_FN": 0,
@@ -152,6 +270,6 @@
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
     "PASS_CLEAN": 0,
-    "PASS_WITH_NOISE": 2
+    "PASS_WITH_NOISE": 4
   }
 }

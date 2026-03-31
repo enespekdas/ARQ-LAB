@@ -1,0 +1,80 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/canonical-secret-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/canonical-secret-lineage",
+    "html_url": "https://github.com/ARQ-Sec/canonical-secret-lineage",
+    "name": "canonical-secret-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "cd1ada53b0457519632b8399cb2b702a5b27727c"
+      },
+      "head": "cd1ada53b0457519632b8399cb2b702a5b27727c",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:57:39+03:00",
+          "message": "c006 remove runtime token and keep safe placeholder",
+          "sha": "cd1ada53b0457519632b8399cb2b702a5b27727c"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:57:39+03:00",
+          "message": "c005 add runtime docs example",
+          "sha": "c14668c500b219a9153008716f67f1c05c71efed"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:57:38+03:00",
+          "message": "c004 move runtime token to archive",
+          "sha": "cb5f4e9e3d1db45bdeab4cfa634fefa4cc5b13ec"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:57:38+03:00",
+          "message": "c003 reformat runtime token",
+          "sha": "2dda4dbfbec23412b8f11ed45f3993134c47f033"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:57:38+03:00",
+          "message": "c002 add runtime token",
+          "sha": "f9a20a799f67535bc35ca4fb4bd4d4d06cf3ad5f"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-03-31T19:57:38+03:00",
+          "message": "c001 bootstrap",
+          "sha": "e128c49726288c0b9d98ccdff47f880c093f9628"
+        }
+      ]
+    },
+    "lineCount": 5058,
+    "repoName": "canonical-secret-lineage",
+    "scenarioId": "G-V2-HIST-005"
+  },
+  "scenario": {
+    "domain": "Runtime token lineage with formatting changes and dedup-like history on main.",
+    "id": "G-V2-HIST-005",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "canonical-secret-lineage",
+    "stack": "Python + ops runtime"
+  }
+}
