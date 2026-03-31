@@ -104,11 +104,12 @@ Guardian-specific exported fields should check:
 - `exposureScope`
 - `scanMode`
 
-## Gitea notes
+## Remote publish notes
 
-Use Gitea API and git CLI together:
-- Gitea API: create repo, check repo exists
-- git CLI: push main and branches, tags if needed
+Use the GitHub API and git CLI together:
+- GitHub API: create or reuse `ARQ-Sec/<repo>` and align the default branch
+- git CLI: push `main`, additional branches, and tags using a clean remote URL plus ephemeral `GIT_ASKPASS` auth
 
-Public repo recommendation:
-- create repos as public to keep ARQ clone step simple under `GENERIC_GIT`
+Historical compatibility:
+- Legacy inventories still come from `runs/**/gitea-repository.json`
+- New publishes emit `runs/**/published-repository.json`

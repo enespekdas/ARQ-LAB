@@ -11,6 +11,11 @@ class LabConfig:
     arq_workspace_key: str
     arq_email: str
     arq_password: str
+    git_base_url: str
+    git_api_base_url: str
+    git_owner: str
+    git_token: str
+    git_repo_visibility: str
     gitea_base_url: str
     gitea_username: str
     gitea_password: str
@@ -24,6 +29,7 @@ class LabConfig:
     findings_export_limit: int
     lab_root: Path
     generated_root: Path
+    repositories_root: Path
     reports_root: Path
     runs_root: Path
     manifests_root: Path
@@ -117,8 +123,7 @@ class ScenarioRunArtifacts:
     build: BuildStatus
     test: BuildStatus
     smoke: BuildStatus
-    gitea_metadata: dict[str, Any] | None = None
+    published_repo_metadata: dict[str, Any] | None = None
     application: dict[str, Any] | None = None
     scans: list[dict[str, Any]] = field(default_factory=list)
     comparison: dict[str, Any] | None = None
-

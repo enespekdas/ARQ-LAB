@@ -795,7 +795,7 @@ def _render_dossier(
     scenario: ScenarioSpec,
     repo_root: Path,
     repo_metadata: dict[str, Any],
-    gitea_metadata: dict[str, Any] | None,
+    published_metadata: dict[str, Any] | None,
     build_status: BuildStatus,
     test_status: BuildStatus,
     smoke_status: BuildStatus,
@@ -809,11 +809,13 @@ def _render_dossier(
     report_dossier_path: Path,
 ) -> str:
     remote_url = ""
-    if gitea_metadata:
-        remote_url = gitea_metadata.get("html_url") or gitea_metadata.get("clone_url") or ""
+    remote_provider = "remote"
+    if published_metadata:
+        remote_url = published_metadata.get("html_url") or published_metadata.get("clone_url") or ""
+        remote_provider = str(published_metadata.get("provider") or remote_provider)
     default_branch = ""
-    if gitea_metadata:
-        default_branch = gitea_metadata.get("default_branch", "")
+    if published_metadata:
+        default_branch = published_metadata.get("default_branch", "")
     if not default_branch:
         default_branch = "main" if "main" in repo_metadata.get("git", {}).get("branches", {}) else next(iter(repo_metadata.get("git", {}).get("branches", {})), "main")
     scan_modes = ", ".join(sorted({plan.scan_mode for plan in scenario.scan_plans}))
@@ -837,7 +839,8 @@ def _render_dossier(
         f"- language / stack: `{scenario.stack}`",
         f"- repoType: `{_repo_type(scenario)}`",
         f"- repo local path: `{repo_root}`",
-        f"- repo remote URL in Gitea: `{remote_url or 'dry-run / not published'}`",
+        f"- repo remote provider: `{remote_provider}`",
+        f"- repo remote URL: `{remote_url or 'dry-run / not published'}`",
         f"- default branch: `{default_branch}`",
         f"- scan modes intended for this scenario: `{scan_modes}`",
         f"- branch scopes intended for this scenario: `{branch_scopes}`",
@@ -1035,7 +1038,7 @@ def write_project_dossier(
     scenario: ScenarioSpec,
     repo_root: Path,
     repo_metadata: dict[str, Any],
-    gitea_metadata: dict[str, Any] | None,
+    published_metadata: dict[str, Any] | None,
     build_status: BuildStatus,
     test_status: BuildStatus,
     smoke_status: BuildStatus,
@@ -1064,7 +1067,7 @@ def write_project_dossier(
             scenario,
             repo_root,
             repo_metadata,
-            gitea_metadata,
+            published_metadata,
             build_status,
             test_status,
             smoke_status,
@@ -1088,7 +1091,7 @@ def write_project_dossier(
         scenario,
         repo_root,
         repo_metadata,
-        gitea_metadata,
+        published_metadata,
         build_status,
         test_status,
         smoke_status,

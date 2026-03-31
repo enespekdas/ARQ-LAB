@@ -4,8 +4,9 @@
 
 ## What this workspace contains
 
-- `tooling/`: Python automation for repo generation, Gitea sync, ARQ application/scans, exports, comparison, and reporting
-- `generated/`: generated repositories per milestone
+- `tooling/`: Python automation for repo generation, per-repo GitHub publish, ARQ application/scans, exports, comparison, and reporting
+- `generated/`: generated scenario artefacts and dossier aliases
+- `repositories/`: independent local git repositories materialized one repo per slug
 - `runs/`: raw execution artifacts per run
 - `reports/`: milestone and aggregate validation reports
 - `catalog/`: scenario index and milestone status files
@@ -21,6 +22,7 @@
 ## Notes
 
 - Environment values are loaded from `.env` / `.env.example`.
-- Gitea repositories are created as public by default.
+- Published repositories default to `https://github.com/ARQ-Sec/<repo-slug>` unless overridden by `GIT_*` settings.
+- Each materialized child repository lives under `repositories/<repo-slug>/` and keeps its own `.git/`.
 - ARQ applications are created with `providerType = GENERIC_GIT`.
 - The orchestration is designed to be idempotent across repeated runs.

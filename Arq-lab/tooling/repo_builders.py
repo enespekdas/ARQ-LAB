@@ -925,9 +925,9 @@ def _build_mixed_infra(repo_root: Path, scenario: ScenarioSpec, git_factory: Git
 
 
 def materialize_scenario(config: LabConfig, scenario: ScenarioSpec, git_factory: GitFactory) -> tuple[Path, dict[str, Any]]:
-    repo_root = config.generated_root / scenario.milestone / scenario.repo_name
+    repo_root = config.repositories_root / scenario.repo_name
     if repo_root.exists():
-        safe_rmtree(repo_root, config.generated_root)
+        safe_rmtree(repo_root, config.repositories_root)
     ensure_dir(repo_root)
     if scenario.family in {"guardian_live_java", "quantum_crypto_java", "quantum_tls_java", "quantum_tls_java_config"}:
         builder_metadata = _build_java_repo(repo_root, scenario, git_factory)

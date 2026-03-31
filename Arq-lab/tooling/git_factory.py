@@ -9,10 +9,36 @@ from .utils import run_command, safe_rmtree
 
 
 class GitFactory:
-    def __init__(self, *, workspace_root: Path, user_name: str = "ARQ Lab", user_email: str = "lab@arq.local") -> None:
+    def __init__(
+        self,
+        *,
+        workspace_root: Path,
+        user_name: str = "ARQ Lab",
+        user_email: str = "lab@arq.local",
+        askpass_script: Path | None = None,
+        auth_username: str = "x-access-token",
+        auth_token: str = "",
+    ) -> None:
         self.workspace_root = workspace_root
         self.user_name = user_name
         self.user_email = user_email
+        self.askpass_script = askpass_script
+        self.auth_username = auth_username
+        self.auth_token = auth_token
+
+    def _git_auth_env(self) -> dict[str, str] | None:
+        if not self.auth_token or not self.askpass_script:
+            return None
+        return {
+            "GIT_TERMINAL_PROMPT": "0",
+            "GCM_INTERACTIVE": "Never",
+            "GIT_ASKPASS": str(self.askpass_script),
+            "ARQ_GIT_ASKPASS_USERNAME": self.auth_username,
+            "ARQ_GIT_ASKPASS_PASSWORD": self.auth_token,
+        }
+
+    def is_repository(self, repo_root: Path) -> bool:
+        return (repo_root / ".git").exists()
 
     def recreate_repository(self, repo_root: Path) -> None:
         safe_rmtree(repo_root, self.workspace_root)
@@ -46,8 +72,52 @@ class GitFactory:
             command.append(start_point)
         run_command(command, repo_root, check=True)
 
+    def current_branch(self, repo_root: Path) -> str:
+        result = run_command(["git", "branch", "--show-current"], repo_root, check=True)
+        return result.stdout.strip()
+
     def merge(self, repo_root: Path, source_branch: str, *, message: str) -> None:
         run_command(["git", "merge", "--no-ff", source_branch, "-m", message], repo_root, check=True)
+
+    def clone(self, repo_url: str, destination: Path, *, remote_name: str = "origin") -> None:
+        safe_rmtree(destination, self.workspace_root)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        run_command(["git", "clone", "--origin", remote_name, repo_url, str(destination)], destination.parent, check=True)
+        run_command(["git", "config", "user.name", self.user_name], destination, check=True)
+        run_command(["git", "config", "user.email", self.user_email], destination, check=True)
+
+    def fetch(self, repo_root: Path, remote_name: str) -> None:
+        run_command(
+            ["git", "fetch", "--prune", remote_name, f"+refs/heads/*:refs/remotes/{remote_name}/*"],
+            repo_root,
+            check=True,
+        )
+        run_command(["git", "fetch", "--tags", remote_name], repo_root, check=True)
+
+    def list_remote_branches(self, repo_root: Path, remote_name: str) -> list[str]:
+        result = run_command(
+            ["git", "for-each-ref", "--format=%(refname:short)", f"refs/remotes/{remote_name}"],
+            repo_root,
+            check=True,
+        )
+        prefix = f"{remote_name}/"
+        branches = []
+        for line in result.stdout.splitlines():
+            branch = line.strip()
+            if not branch or branch == f"{remote_name}/HEAD" or not branch.startswith(prefix):
+                continue
+            branches.append(branch[len(prefix) :])
+        return branches
+
+    def sync_remote_branches_to_local_heads(self, repo_root: Path, remote_name: str) -> None:
+        current_branch = self.current_branch(repo_root)
+        branches = self.list_remote_branches(repo_root, remote_name)
+        if current_branch and current_branch in branches:
+            run_command(["git", "checkout", "--detach"], repo_root, check=True)
+        for branch in branches:
+            run_command(["git", "branch", "-f", branch, f"{remote_name}/{branch}"], repo_root, check=True)
+        if current_branch and current_branch in branches:
+            run_command(["git", "checkout", current_branch], repo_root, check=True)
 
     def set_remote(self, repo_root: Path, name: str, url: str) -> None:
         existing = run_command(["git", "remote"], repo_root, check=False)
@@ -57,8 +127,9 @@ class GitFactory:
             run_command(["git", "remote", "add", name, url], repo_root, check=True)
 
     def push_all(self, repo_root: Path, remote_name: str = "origin") -> None:
-        run_command(["git", "push", "--force", "--all", remote_name], repo_root, check=True)
-        run_command(["git", "push", "--force", "--tags", remote_name], repo_root, check=True)
+        auth_env = self._git_auth_env()
+        run_command(["git", "push", "--force", "--all", remote_name], repo_root, env=auth_env, check=True)
+        run_command(["git", "push", "--force", "--tags", remote_name], repo_root, env=auth_env, check=True)
 
     def branch_shas(self, repo_root: Path) -> dict[str, str]:
         result = run_command(["git", "for-each-ref", "--format=%(refname:short) %(objectname)", "refs/heads"], repo_root, check=True)
@@ -101,4 +172,3 @@ class GitFactory:
 
     def write_manifest(self, repo_root: Path, destination: Path) -> None:
         destination.write_text(json.dumps(self.manifest(repo_root), indent=2, sort_keys=True), encoding="utf-8", newline="\n")
-

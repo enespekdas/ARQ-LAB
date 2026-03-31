@@ -24,6 +24,13 @@ def _resolve_root(explicit_root: Path | None = None) -> Path:
     return explicit_root or Path(__file__).resolve().parents[1]
 
 
+def _resolve_path(root: Path, raw_value: str) -> Path:
+    candidate = Path(raw_value)
+    if not candidate.is_absolute():
+        candidate = root / candidate
+    return candidate
+
+
 def load_config(explicit_root: Path | None = None) -> LabConfig:
     root = _resolve_root(explicit_root)
     env_values = {}
@@ -34,12 +41,19 @@ def load_config(explicit_root: Path | None = None) -> LabConfig:
         root.parent / "lab" / ".env.example",
     ]:
         env_values.update(_read_env_file(candidate))
-    env_values.update({key: value for key, value in os.environ.items() if key.startswith(("ARQ_", "GITEA_", "SCAN_", "FINDINGS_"))})
+    env_values.update(
+        {
+            key: value
+            for key, value in os.environ.items()
+            if key.startswith(("ARQ_", "GITEA_", "SCAN_", "FINDINGS_", "GIT_", "REPOSITORIES_"))
+        }
+    )
 
     def value(name: str, default: str) -> str:
         return env_values.get(name, default)
 
     generated_root = ensure_dir(root / "generated")
+    repositories_root = ensure_dir(_resolve_path(root, value("REPOSITORIES_ROOT", "repositories")))
     reports_root = ensure_dir(root / "reports")
     runs_root = ensure_dir(root / "runs")
     manifests_root = ensure_dir(root / "manifests")
@@ -50,6 +64,11 @@ def load_config(explicit_root: Path | None = None) -> LabConfig:
         arq_workspace_key=value("ARQ_WORKSPACE_KEY", "default"),
         arq_email=value("ARQ_EMAIL", "admin"),
         arq_password=value("ARQ_PASSWORD", "admin"),
+        git_base_url=value("GIT_BASE_URL", "https://github.com").rstrip("/"),
+        git_api_base_url=value("GIT_API_BASE_URL", "https://api.github.com").rstrip("/"),
+        git_owner=value("GIT_OWNER", "ARQ-Sec"),
+        git_token=value("GIT_TOKEN", ""),
+        git_repo_visibility=value("GIT_REPO_VISIBILITY", "public"),
         gitea_base_url=value("GITEA_BASE_URL", "http://localhost:3001").rstrip("/"),
         gitea_username=value("GITEA_USERNAME", "arq"),
         gitea_password=value("GITEA_PASSWORD", "arq"),
@@ -63,6 +82,7 @@ def load_config(explicit_root: Path | None = None) -> LabConfig:
         findings_export_limit=int(value("FINDINGS_EXPORT_LIMIT", "5000")),
         lab_root=root,
         generated_root=generated_root,
+        repositories_root=repositories_root,
         reports_root=reports_root,
         runs_root=runs_root,
         manifests_root=manifests_root,
@@ -72,4 +92,3 @@ def load_config(explicit_root: Path | None = None) -> LabConfig:
         docs_root=ensure_dir(root / "docs"),
         toolchains_root=toolchains_root,
     )
-

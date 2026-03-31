@@ -8,8 +8,8 @@ from .arq_client import ArqClient
 from .comparator import compare_scenario
 from .env import load_config
 from .exporter import fetch_finding_details, fetch_scan_export
-from .gitea_client import GiteaClient
 from .git_factory import GitFactory
+from .github_client import GitHubClient
 from .logging_utils import log_event
 from .models import BuildStatus, ScenarioSpec
 from .project_dossier import write_project_dossier
@@ -158,7 +158,16 @@ def _load_all_existing_comparisons(config) -> list[dict[str, Any]]:
     return [item for _, item in sorted(latest_by_scenario.values(), key=lambda entry: entry[0])]
 
 
-def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bool, arq: ArqClient | None, gitea: GiteaClient | None, git_factory: GitFactory) -> dict[str, Any]:
+def _run_scenario(
+    config,
+    run_root: Path,
+    scenario: ScenarioSpec,
+    *,
+    dry_run: bool,
+    arq: ArqClient | None,
+    publisher: GitHubClient | None,
+    git_factory: GitFactory,
+) -> dict[str, Any]:
     repo_root, repo_metadata = materialize_scenario(config, scenario, git_factory)
     scenario_run_root = ensure_dir(run_root / scenario.id)
     runnability_log_root = ensure_dir(repo_root / "validation" / "runnability-logs")
@@ -167,16 +176,18 @@ def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bo
     smoke_status = _execute_plan(scenario.build_plan.smoke, repo_root, stage="smoke", log_root=runnability_log_root)
     runnability = {"build": build_status.state, "test": test_status.state, "smoke": smoke_status.state}
     application = None
-    gitea_metadata = None
+    published_repo_metadata = None
     scan_records: list[dict[str, Any]] = []
     actual_findings: list[dict[str, Any]] = []
 
-    if not dry_run and arq and gitea:
+    if not dry_run and arq and publisher:
         run_label = run_root.parent.name.lower()
-        run_repo_name = f"{scenario.repo_name}-{run_label}"
-        gitea_metadata = gitea.ensure_repo(run_repo_name, scenario.summary)
-        git_factory.set_remote(repo_root, "origin", gitea.push_url(run_repo_name))
+        run_repo_name = scenario.repo_name
+        repo_payload = publisher.ensure_repo(run_repo_name, scenario.summary)
+        git_factory.set_remote(repo_root, "origin", publisher.clone_url(run_repo_name))
         git_factory.push_all(repo_root)
+        publisher.ensure_default_branch(run_repo_name, config.arq_lab_default_branch)
+        published_repo_metadata = publisher.normalized_metadata(run_repo_name, repo_payload)
 
         project = arq.ensure_project(config.arq_lab_project_key, config.arq_lab_project_name, "ARQ Lab Validation")
         application = arq.ensure_application(
@@ -184,7 +195,7 @@ def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bo
             key=f"arq-lab-{run_label}-{scenario.id.lower()}",
             name=run_repo_name,
             description=scenario.summary,
-            repository_locator=gitea.clone_url(run_repo_name),
+            repository_locator=publisher.clone_url(run_repo_name),
             default_branch=config.arq_lab_default_branch,
         )
 
@@ -223,7 +234,7 @@ def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bo
                 scenario=scenario,
                 repo_root=repo_root,
                 repo_metadata=repo_metadata,
-                gitea_metadata=gitea_metadata,
+                published_metadata=published_repo_metadata,
                 build_status=build_status,
                 test_status=test_status,
                 smoke_status=smoke_status,
@@ -231,8 +242,11 @@ def _run_scenario(config, run_root: Path, scenario: ScenarioSpec, *, dry_run: bo
             )
         }
     )
-    write_json(scenario_run_root / "scenario-metadata.json", {"scenario": _scenario_dict(scenario), "repoMetadata": repo_metadata})
-    write_json(scenario_run_root / "gitea-repository.json", gitea_metadata or {})
+    write_json(
+        scenario_run_root / "scenario-metadata.json",
+        {"scenario": _scenario_dict(scenario), "repoMetadata": repo_metadata, "publishedRepository": published_repo_metadata or {}},
+    )
+    write_json(scenario_run_root / "published-repository.json", published_repo_metadata or {})
     write_json(scenario_run_root / "application.json", application or {})
     write_json(scenario_run_root / "comparison.json", comparison)
     write_json(scenario_run_root / "findings-normalized.json", actual_findings)
@@ -245,13 +259,19 @@ def run_milestone(config, milestone: str, *, dry_run: bool) -> list[dict[str, An
     if not scenarios:
         return []
     run_root = ensure_dir(config.runs_root / timestamp_slug() / milestone)
-    git_factory = GitFactory(workspace_root=config.generated_root)
+    git_factory = GitFactory(
+        workspace_root=config.repositories_root,
+        askpass_script=config.toolchains_root / "git-askpass.cmd",
+        auth_token=config.git_token,
+    )
     arq = None if dry_run else ArqClient(config)
-    gitea = None if dry_run else GiteaClient(config)
+    publisher = None if dry_run else GitHubClient(config)
     comparisons = []
     for scenario in scenarios:
         log_event("scenario.start", scenarioId=scenario.id, milestone=milestone)
-        comparisons.append(_run_scenario(config, run_root, scenario, dry_run=dry_run, arq=arq, gitea=gitea, git_factory=git_factory))
+        comparisons.append(
+            _run_scenario(config, run_root, scenario, dry_run=dry_run, arq=arq, publisher=publisher, git_factory=git_factory)
+        )
         log_event("scenario.finish", scenarioId=scenario.id, milestone=milestone)
     _write_milestone_summary(config, milestone, comparisons)
     return comparisons
@@ -261,7 +281,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="ARQ Lab orchestration")
     parser.add_argument("--milestone", help="Run a single milestone (M0-M9)")
     parser.add_argument("--all", action="store_true", help="Run all milestones")
-    parser.add_argument("--dry-run", action="store_true", help="Generate repositories and manifests without Gitea/ARQ execution")
+    parser.add_argument("--dry-run", action="store_true", help="Generate repositories and manifests without remote publish or ARQ execution")
     parser.add_argument("--report-only", action="store_true", help="Rebuild aggregate reports from existing comparisons")
     parser.add_argument("--resume-last-failed", action="store_true", help="Resume milestones that had failing verdicts in the last manifest")
     args = parser.parse_args()

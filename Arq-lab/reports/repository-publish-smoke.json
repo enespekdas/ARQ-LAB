@@ -1,0 +1,20 @@
+{
+  "effectiveOwner": "ARQ-Sec",
+  "idempotency": "materialize_scenario rerun reused the same repositories/<repo-slug> paths and re-added the same GitHub remote URLs without cross-repo contamination.",
+  "migrationAttemptReport": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\repository-migration-results.json",
+  "sampleRepoCount": 2,
+  "sampleRepos": [
+    {
+      "gitDirExists": true,
+      "head": "337e5b8b3e8f2049a8a2a120868436ecc8e8058b",
+      "localPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\notification-worker-python",
+      "originUrl": "https://github.com/ARQ-Sec/notification-worker-python.git"
+    },
+    {
+      "gitDirExists": true,
+      "head": "1f842d0ecf7782f7e34c35fa8bc2f93d1cafc3f5",
+      "localPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\device-provisioning-go",
+      "originUrl": "https://github.com/ARQ-Sec/device-provisioning-go.git"
+    }
+  ]
+}
