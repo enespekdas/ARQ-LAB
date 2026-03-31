@@ -14,9 +14,9 @@
 
 - winningSource: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env`
 - finalValueEmpty: `False`
-- finalLength: `93`
-- maskedPreview: `gith...UndD`
-- sha256: `f8d639c50b60b3d6caaeae02885ccb1fe9e35523302f21aef280de86afcb3866`
+- finalLength: `40`
+- maskedPreview: `ghp_...ARjt`
+- sha256: `0bd21eeeb076c53723c948b96dc84d45a773097c11c813ace73b7c28ced159e6`
 - quotesDetected: `False`
 - inlineCommentDetected: `False`
 - whitespaceChanged: `False`
@@ -64,11 +64,7 @@
 
 ## GitHub /user
 
-- status: `401`
-- outcome: `failed`
-- viewerLogin: ``
-- error: GitHub GET https://api.github.com/user failed: HTTP 401 {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
+- status: `200`
+- outcome: `success`
+- viewerLogin: `enespekdas`
+- error:
