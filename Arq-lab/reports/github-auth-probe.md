@@ -1,20 +1,74 @@
 # GitHub Auth Probe
 
-- Org: `ARQ-Sec`
-- Public org probe: `{'id': 272453536, 'login': 'ARQ-Sec'}`
-- Viewer: `unavailable`
-- Viewer error: GitHub GET https://api.github.com/user failed: HTTP 401 {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
-}
-- Auth schemes: `[{'scheme': 'Bearer', 'status': 401}, {'scheme': 'token', 'status': 401}]`
-- Probe repo target: `https://github.com/ARQ-Sec/arq-lab-github-auth-probe`
-- Probe create status: `failed`
-- Probe push status: `skipped`
-- Probe local path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\arq-lab-github-auth-probe`
-- Probe error: GitHub GET https://api.github.com/repos/ARQ-Sec/arq-lab-github-auth-probe failed: HTTP 401 {
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
+## Candidate Sources
+
+- `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env` (file) exists=`True`
+- `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env.example` (file) exists=`True`
+- `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\lab\.env` (file) exists=`False`
+- `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\lab\.env.example` (file) exists=`True`
+- `os.environ` (env) exists=`True`
+
+## Effective Keys
+
+### `GIT_TOKEN`
+
+- winningSource: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env`
+- finalValueEmpty: `False`
+- finalLength: `93`
+- maskedPreview: `gith...UndD`
+- sha256: `f8d639c50b60b3d6caaeae02885ccb1fe9e35523302f21aef280de86afcb3866`
+- quotesDetected: `False`
+- inlineCommentDetected: `False`
+- whitespaceChanged: `False`
+- osEnvOverrodeFileEnv: `False`
+- labSiblingEnvOverrodeArqLabEnv: `False`
+
+### `GIT_OWNER`
+
+- winningSource: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env.example`
+- finalValueEmpty: `False`
+- finalLength: `7`
+- maskedPreview: `ARQ-Sec`
+- sha256: `38d41f1647970c70914e9f3af48aaa9a65db2928e9110635f9143b6efc1f9e6c`
+- quotesDetected: `False`
+- inlineCommentDetected: `False`
+- whitespaceChanged: `False`
+- osEnvOverrodeFileEnv: `False`
+- labSiblingEnvOverrodeArqLabEnv: `False`
+
+### `GIT_BASE_URL`
+
+- winningSource: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env.example`
+- finalValueEmpty: `False`
+- finalLength: `18`
+- maskedPreview: `https://github.com`
+- sha256: `996e1f714b08e971ec79e3bea686287e66441f043177999a13dbc546d8fe402a`
+- quotesDetected: `False`
+- inlineCommentDetected: `False`
+- whitespaceChanged: `False`
+- osEnvOverrodeFileEnv: `False`
+- labSiblingEnvOverrodeArqLabEnv: `False`
+
+### `GIT_API_BASE_URL`
+
+- winningSource: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env.example`
+- finalValueEmpty: `False`
+- finalLength: `22`
+- maskedPreview: `https://api.github.com`
+- sha256: `b2fd47bfbc5a4de17a621c69c1407b826d21731da4f7ea0c3c01cb6e044b8b9c`
+- quotesDetected: `False`
+- inlineCommentDetected: `False`
+- whitespaceChanged: `False`
+- osEnvOverrodeFileEnv: `False`
+- labSiblingEnvOverrodeArqLabEnv: `False`
+
+## GitHub /user
+
+- status: `401`
+- outcome: `failed`
+- viewerLogin: ``
+- error: GitHub GET https://api.github.com/user failed: HTTP 401 {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
 }
