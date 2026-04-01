@@ -862,7 +862,7 @@ workspace-history-mixed-repo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5476 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1550 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1547 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 472 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 51 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -1126,17 +1126,17 @@ workspace-history-mixed-repo
 
 Branches:
 
-- `feature/shared-lib-cleanup` tip: `2e4ad26972a949dbc3b011c35bd43c17059abf72`; diverges from `main` at `8137e8996114f633fce12531a35c5f583e34e640`
-- `main` tip: `8137e8996114f633fce12531a35c5f583e34e640`
-- `release/2026.05` tip: `c49110e04663faccda3ab714e48aff3ce193ae50`; diverges from `main` at `8137e8996114f633fce12531a35c5f583e34e640`
+- `feature/shared-lib-cleanup` tip: `65ed772415b0934e28c18213dd11f05bd2e3cb9c`; diverges from `main` at `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00`
+- `main` tip: `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00`
+- `release/2026.05` tip: `b13f1f477615d350cc1c350ffcbb350be3a5fdf7`; diverges from `main` at `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00`
 
 Commit order:
 
-- `4364f71b4fd9a0bb34be89f8654cf7854e1dd51d` `bootstrap M-V8-007`: initial clean or baseline assembly.
-- `073fdd87a83b37a0e54328b9fc4f046c634b5422` `c002 add history-only workspace secret`: introduces an intended signal.
-- `c49110e04663faccda3ab714e48aff3ce193ae50` `c005 release branch clean`: removes or neutralizes a prior signal.
-- `8137e8996114f633fce12531a35c5f583e34e640` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
-- `2e4ad26972a949dbc3b011c35bd43c17059abf72` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
+- `a03a2ec03b8ee492558d7d5f8e3a559f6b04f674` `bootstrap M-V8-007`: initial clean or baseline assembly.
+- `a1360fa365a0777b56dcef77e6311a88e2dfbdfd` `c002 add history-only workspace secret`: introduces an intended signal.
+- `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
+- `b13f1f477615d350cc1c350ffcbb350be3a5fdf7` `c005 release branch clean`: removes or neutralizes a prior signal.
+- `65ed772415b0934e28c18213dd11f05bd2e3cb9c` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -1459,9 +1459,6 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0005-java` (INVENTORY/INFO)
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0006-java` (INVENTORY/INFO)
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0036-java` (INVENTORY/INFO)
 - `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
 - `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0115-java` (INVENTORY/INFO)
 - `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)

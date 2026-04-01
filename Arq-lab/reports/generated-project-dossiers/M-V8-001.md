@@ -739,7 +739,7 @@ internal-platform-monorepo
 | services/platform-java/src/main/java/com/arq/platformjava/repository/PayoutRepository.java | live-code | 21 | Persistence or data-access helper for Payout Repository. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
-| services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java | live-code | 3 | Runtime business service implementing Legacy Cipher Service logic. | yes | yes | no | yes | yes | no |
+| services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java | live-code | 3 | Runtime business service implementing Legacy Cipher Service logic. | yes | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/service/DisputeService.java | live-code | 19 | Runtime business service implementing Dispute Service logic. | no | no | no | yes | yes | no |
 | services/platform-java/src/main/java/com/arq/platformjava/service/InvoiceService.java | live-code | 19 | Runtime business service implementing Invoice Service logic. | no | no | no | yes | yes | no |
@@ -847,7 +847,7 @@ internal-platform-monorepo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5420 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1591 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1590 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 460 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -934,7 +934,6 @@ internal-platform-monorepo
 
 ## 7. Near-Real Negative Surfaces
 
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/app/clients/insecure_partner.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_audit_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_delivery_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
@@ -1131,11 +1130,11 @@ internal-platform-monorepo
 
 Branches:
 
-- `main` tip: `9d9f123ac3b77323b978e55d06ca96699187c496`
+- `main` tip: `24a8bad77982be2a8d88c66cfe11c09c41bac9c2`
 
 Commit order:
 
-- `9d9f123ac3b77323b978e55d06ca96699187c496` `bootstrap M-V8-001`: initial clean or baseline assembly.
+- `24a8bad77982be2a8d88c66cfe11c09c41bac9c2` `bootstrap M-V8-001`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1283,7 +1282,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Cipher Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text

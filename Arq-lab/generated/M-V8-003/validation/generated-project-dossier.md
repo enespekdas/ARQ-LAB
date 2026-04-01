@@ -860,7 +860,7 @@ platform-mesh-monorepo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5462 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1536 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1533 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 471 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -870,7 +870,7 @@ platform-mesh-monorepo
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | validation/runnability-logs/test-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/test-02.log | generated | 34 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/runnability-logs/test-03.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-03.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | vendor/third-party-sdk.js | vendor | 1 | Vendored or copied artifact used to simulate third-party noise around Third Party Sdk. | no | no | yes | no | no | no |
@@ -1128,11 +1128,11 @@ platform-mesh-monorepo
 
 Branches:
 
-- `main` tip: `641be59878ab15122a011099cff683caae1973db`
+- `main` tip: `b93de70a4467c104387d974a29d707259354aaa3`
 
 Commit order:
 
-- `641be59878ab15122a011099cff683caae1973db` `bootstrap M-V8-003`: initial clean or baseline assembly.
+- `b93de70a4467c104387d974a29d707259354aaa3` `bootstrap M-V8-003`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1410,9 +1410,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `14777`
+- Total LOC considered for authored/generated project content: `14771`
 - Synthetic filler / inflation LOC: `8030`
-- Synthetic filler ratio: `54.34%`
+- Synthetic filler ratio: `54.36%`
 
 | category | LOC |
 | --- | ---: |
@@ -1422,7 +1422,7 @@ Expected final head/history state:
 | docs | 47 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 351 |
+| vendor/generated | 345 |
 | synthetic filler / inflation content | 8030 |
 
 Inflation disclosure:
@@ -1469,9 +1469,6 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0005-java` (INVENTORY/INFO)
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0006-java` (INVENTORY/INFO)
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0036-java` (INVENTORY/INFO)
 - `shared/config/keys/platform_service.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
 - `shared/config/keys/platform_service.pem` => `quantum.arq-q-0115-java` (INVENTORY/INFO)
 - `shared/config/keys/platform_service.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)

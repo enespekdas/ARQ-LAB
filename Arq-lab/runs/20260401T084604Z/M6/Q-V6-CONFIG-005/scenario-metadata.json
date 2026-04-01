@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/live-overlay-config-matrix.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/live-overlay-config-matrix",
+    "html_url": "https://github.com/ARQ-Sec/live-overlay-config-matrix",
+    "name": "live-overlay-config-matrix",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "61d3a2049cdca68b929d5f84bea35d32e4bfb40c"
+      },
+      "head": "61d3a2049cdca68b929d5f84bea35d32e4bfb40c",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T11:49:46+03:00",
+          "message": "bootstrap Q-V6-CONFIG-005",
+          "sha": "61d3a2049cdca68b929d5f84bea35d32e4bfb40c"
+        }
+      ]
+    },
+    "lineCount": 5931,
+    "repoName": "live-overlay-config-matrix",
+    "scenarioId": "Q-V6-CONFIG-005"
+  },
+  "scenario": {
+    "domain": "Runtime config repo separating live overlays from commented, example, and fixture-only insecure config.",
+    "id": "Q-V6-CONFIG-005",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo_name": "live-overlay-config-matrix",
+    "stack": "Config-heavy repo"
+  }
+}

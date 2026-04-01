@@ -1,38 +1,38 @@
 {
   "byMilestone": {
     "M3": {
-      "cleanExpectedMatches": 8,
+      "cleanExpectedMatches": 12,
       "explainabilityFailures": 0,
       "mayFindReview": 0,
-      "missingExpectedFindings": 4,
+      "missingExpectedFindings": 0,
       "mustNotFindViolations": 0,
-      "noiseCount": 5,
+      "noiseCount": 15,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 3,
+      "sameSurfaceExtraFindings": 8,
       "scenarios": 7,
-      "unexpectedFindings": 5,
-      "unexpectedRegexOnlyFindings": 2,
+      "unexpectedFindings": 15,
+      "unexpectedRegexOnlyFindings": 10,
       "verdicts": {
         "FAIL_EXPLAINABILITY": 0,
-        "FAIL_FN": 2,
+        "FAIL_FN": 0,
         "FAIL_FP": 0,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
-        "PASS_CLEAN": 2,
-        "PASS_WITH_NOISE": 3
+        "PASS_CLEAN": 3,
+        "PASS_WITH_NOISE": 4
       }
     }
   },
   "byScenario": {
     "Q-V3-CS-003": {
-      "cleanExpectedMatches": 0,
+      "cleanExpectedMatches": 3,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.9599365331217771,
-      "finalVerdict": "FAIL_FN",
-      "finalVerdictReason": "3 expected finding(s) were not detected at all",
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "10 unexpected/noisy finding(s) remained after matching (same-surface-extra=5, totally-unexpected=5, regex-only=8)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-tree.txt",
       "locComposition": {
@@ -48,22 +48,22 @@
       },
       "mayFindReview": 0,
       "milestone": "M3",
-      "missingExpectedFindings": 3,
+      "missingExpectedFindings": 0,
       "mustFindExpected": 3,
-      "mustFindMissing": 3,
+      "mustFindMissing": 0,
       "mustNotFindViolations": 0,
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 0,
-        "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 0
+        "sameSurfaceExtraFindings": 5,
+        "totallyUnexpectedFindings": 5,
+        "unexpectedRegexOnlyFindings": 8
       },
-      "noiseCount": 0,
+      "noiseCount": 10,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 0,
-        "rawFindings": 0
+        "normalizedFindings": 13,
+        "rawFindings": 13
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\billing-sdk-csharp\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\billing-sdk-csharp\\validation\\generated-project-dossier.md",
@@ -78,11 +78,11 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\billing-sdk-csharp\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 0,
-      "unexpectedFindings": 0,
-      "unexpectedRegexOnlyFindings": 0,
-      "verdict": "FAIL_FN",
-      "verdictClass": "FAIL_FN"
+      "sameSurfaceExtraFindings": 5,
+      "unexpectedFindings": 10,
+      "unexpectedRegexOnlyFindings": 8,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     },
     "Q-V3-CS-004": {
       "cleanExpectedMatches": 1,
@@ -380,13 +380,13 @@
       "verdictClass": "PASS_CLEAN"
     },
     "Q-V3-JAVA-006": {
-      "cleanExpectedMatches": 0,
+      "cleanExpectedMatches": 1,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-006\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.7047047047047047,
-      "finalVerdict": "FAIL_FN",
-      "finalVerdictReason": "1 expected finding(s) were not detected at all",
+      "finalVerdict": "PASS_CLEAN",
+      "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-006\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-006\\validation\\generated-tree.txt",
       "locComposition": {
@@ -402,9 +402,9 @@
       },
       "mayFindReview": 0,
       "milestone": "M3",
-      "missingExpectedFindings": 1,
+      "missingExpectedFindings": 0,
       "mustFindExpected": 1,
-      "mustFindMissing": 1,
+      "mustFindMissing": 0,
       "mustNotFindViolations": 0,
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
@@ -416,8 +416,8 @@
       "noiseCount": 0,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 0,
-        "rawFindings": 0
+        "normalizedFindings": 1,
+        "rawFindings": 1
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\safe-wrapper-java\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\safe-wrapper-java\\validation\\generated-project-dossier.md",
@@ -435,18 +435,18 @@
       "sameSurfaceExtraFindings": 0,
       "unexpectedFindings": 0,
       "unexpectedRegexOnlyFindings": 0,
-      "verdict": "FAIL_FN",
-      "verdictClass": "FAIL_FN"
+      "verdict": "PASS_CLEAN",
+      "verdictClass": "PASS_CLEAN"
     }
   },
   "scenarioCount": 7,
   "verdicts": {
     "FAIL_EXPLAINABILITY": 0,
-    "FAIL_FN": 2,
+    "FAIL_FN": 0,
     "FAIL_FP": 0,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
-    "PASS_CLEAN": 2,
-    "PASS_WITH_NOISE": 3
+    "PASS_CLEAN": 3,
+    "PASS_WITH_NOISE": 4
   }
 }

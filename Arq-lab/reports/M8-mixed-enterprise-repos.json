@@ -3,16 +3,16 @@
     "M8": {
       "cleanExpectedMatches": 33,
       "explainabilityFailures": 0,
-      "mayFindReview": 105,
+      "mayFindReview": 96,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 0,
-      "noiseCount": 199,
+      "noiseCount": 187,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 76,
-      "sameSurfaceExtraFindings": 7,
+      "sameSurfaceExtraFindings": 4,
       "scenarios": 8,
-      "unexpectedFindings": 199,
-      "unexpectedRegexOnlyFindings": 192,
+      "unexpectedFindings": 187,
+      "unexpectedRegexOnlyFindings": 180,
       "verdicts": {
         "FAIL_EXPLAINABILITY": 0,
         "FAIL_FN": 0,
@@ -32,7 +32,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.5464187420285964,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "28 unexpected/noisy finding(s) remained after matching (same-surface-extra=4, same-file-different-signal=24, regex-only=28)",
+      "finalVerdictReason": "25 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=24, regex-only=25)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-001\\validation\\generated-tree.txt",
       "locComposition": {
@@ -55,15 +55,15 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 24,
-        "sameSurfaceExtraFindings": 4,
+        "sameSurfaceExtraFindings": 1,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 28
+        "unexpectedRegexOnlyFindings": 25
       },
-      "noiseCount": 28,
+      "noiseCount": 25,
       "normalizationStats": {
         "collapsedDuplicates": 3,
-        "normalizedFindings": 34,
-        "rawFindings": 37
+        "normalizedFindings": 31,
+        "rawFindings": 34
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\internal-platform-monorepo\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\internal-platform-monorepo\\validation\\generated-project-dossier.md",
@@ -78,9 +78,9 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\internal-platform-monorepo\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 24,
-      "sameSurfaceExtraFindings": 4,
-      "unexpectedFindings": 28,
-      "unexpectedRegexOnlyFindings": 28,
+      "sameSurfaceExtraFindings": 1,
+      "unexpectedFindings": 25,
+      "unexpectedRegexOnlyFindings": 25,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     },
@@ -148,9 +148,9 @@
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-003\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
-      "fillerRatio": 0.5434120592813155,
+      "fillerRatio": 0.5436327939882202,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "55 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=24, totally-unexpected=3, review-only=27, regex-only=54)",
+      "finalVerdictReason": "52 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=24, totally-unexpected=3, review-only=24, regex-only=51)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-003\\validation\\generated-tree.txt",
       "locComposition": {
@@ -161,27 +161,27 @@
         "scripts": 1,
         "synthetic filler / inflation content": 8030,
         "tests": 0,
-        "total": 14777,
-        "vendor/generated": 351
+        "total": 14771,
+        "vendor/generated": 345
       },
-      "mayFindReview": 27,
+      "mayFindReview": 24,
       "milestone": "M8",
       "missingExpectedFindings": 0,
       "mustFindExpected": 4,
       "mustFindMissing": 0,
       "mustNotFindViolations": 0,
       "noiseBreakdown": {
-        "reviewOnlyFindings": 27,
+        "reviewOnlyFindings": 24,
         "sameFileDifferentSignalFindings": 24,
         "sameSurfaceExtraFindings": 1,
         "totallyUnexpectedFindings": 3,
-        "unexpectedRegexOnlyFindings": 54
+        "unexpectedRegexOnlyFindings": 51
       },
-      "noiseCount": 55,
+      "noiseCount": 52,
       "normalizationStats": {
         "collapsedDuplicates": 4,
-        "normalizedFindings": 59,
-        "rawFindings": 63
+        "normalizedFindings": 56,
+        "rawFindings": 60
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\platform-mesh-monorepo\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\platform-mesh-monorepo\\validation\\generated-project-dossier.md",
@@ -197,8 +197,8 @@
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\platform-mesh-monorepo\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 24,
       "sameSurfaceExtraFindings": 1,
-      "unexpectedFindings": 55,
-      "unexpectedRegexOnlyFindings": 54,
+      "unexpectedFindings": 52,
+      "unexpectedRegexOnlyFindings": 51,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     },
@@ -268,7 +268,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.5434856175972927,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "55 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=24, totally-unexpected=3, review-only=27, regex-only=54)",
+      "finalVerdictReason": "52 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, same-file-different-signal=24, totally-unexpected=3, review-only=24, regex-only=51)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-005\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-005\\validation\\generated-tree.txt",
       "locComposition": {
@@ -282,24 +282,24 @@
         "total": 14775,
         "vendor/generated": 347
       },
-      "mayFindReview": 27,
+      "mayFindReview": 24,
       "milestone": "M8",
       "missingExpectedFindings": 0,
       "mustFindExpected": 4,
       "mustFindMissing": 0,
       "mustNotFindViolations": 0,
       "noiseBreakdown": {
-        "reviewOnlyFindings": 27,
+        "reviewOnlyFindings": 24,
         "sameFileDifferentSignalFindings": 24,
         "sameSurfaceExtraFindings": 1,
         "totallyUnexpectedFindings": 3,
-        "unexpectedRegexOnlyFindings": 54
+        "unexpectedRegexOnlyFindings": 51
       },
-      "noiseCount": 55,
+      "noiseCount": 52,
       "normalizationStats": {
         "collapsedDuplicates": 4,
-        "normalizedFindings": 59,
-        "rawFindings": 63
+        "normalizedFindings": 56,
+        "rawFindings": 60
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\enterprise-mesh-monorepo\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\enterprise-mesh-monorepo\\validation\\generated-project-dossier.md",
@@ -315,8 +315,8 @@
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\enterprise-mesh-monorepo\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 24,
       "sameSurfaceExtraFindings": 1,
-      "unexpectedFindings": 55,
-      "unexpectedRegexOnlyFindings": 54,
+      "unexpectedFindings": 52,
+      "unexpectedRegexOnlyFindings": 51,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     },
@@ -386,7 +386,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.5428243087947002,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "57 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, totally-unexpected=5, review-only=51, regex-only=56)",
+      "finalVerdictReason": "54 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, totally-unexpected=5, review-only=48, regex-only=53)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-007\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-007\\validation\\generated-tree.txt",
       "locComposition": {
@@ -400,24 +400,24 @@
         "total": 14793,
         "vendor/generated": 366
       },
-      "mayFindReview": 51,
+      "mayFindReview": 48,
       "milestone": "M8",
       "missingExpectedFindings": 0,
       "mustFindExpected": 3,
       "mustFindMissing": 0,
       "mustNotFindViolations": 0,
       "noiseBreakdown": {
-        "reviewOnlyFindings": 51,
+        "reviewOnlyFindings": 48,
         "sameFileDifferentSignalFindings": 0,
         "sameSurfaceExtraFindings": 1,
         "totallyUnexpectedFindings": 5,
-        "unexpectedRegexOnlyFindings": 56
+        "unexpectedRegexOnlyFindings": 53
       },
-      "noiseCount": 57,
+      "noiseCount": 54,
       "normalizationStats": {
-        "collapsedDuplicates": 115,
-        "normalizedFindings": 68,
-        "rawFindings": 183
+        "collapsedDuplicates": 109,
+        "normalizedFindings": 65,
+        "rawFindings": 174
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\workspace-history-mixed-repo\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\workspace-history-mixed-repo\\validation\\generated-project-dossier.md",
@@ -433,8 +433,8 @@
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\workspace-history-mixed-repo\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 1,
-      "unexpectedFindings": 57,
-      "unexpectedRegexOnlyFindings": 56,
+      "unexpectedFindings": 54,
+      "unexpectedRegexOnlyFindings": 53,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     },

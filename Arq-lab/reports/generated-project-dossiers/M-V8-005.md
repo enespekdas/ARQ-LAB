@@ -873,7 +873,7 @@ enterprise-mesh-monorepo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5518 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1563 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1560 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 481 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -1144,11 +1144,11 @@ enterprise-mesh-monorepo
 
 Branches:
 
-- `main` tip: `7fd3c6c5804aea685162a47e71a2e868437926ec`
+- `main` tip: `224998444cdb66e674d61810f64dd1d0917d8a1a`
 
 Commit order:
 
-- `7fd3c6c5804aea685162a47e71a2e868437926ec` `bootstrap M-V8-005`: initial clean or baseline assembly.
+- `224998444cdb66e674d61810f64dd1d0917d8a1a` `bootstrap M-V8-005`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1496,9 +1496,6 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0005-java` (INVENTORY/INFO)
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0006-java` (INVENTORY/INFO)
-- `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java` => `quantum.arq-q-0036-java` (INVENTORY/INFO)
 - `shared/config/keys/platform_service.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
 - `shared/config/keys/platform_service.pem` => `quantum.arq-q-0115-java` (INVENTORY/INFO)
 - `shared/config/keys/platform_service.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)
