@@ -862,7 +862,7 @@ workspace-history-mixed-repo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5476 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1547 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1499 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 472 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 51 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -872,14 +872,14 @@ workspace-history-mixed-repo
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | validation/runnability-logs/test-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/test-02.log | generated | 34 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/runnability-logs/test-03.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-03.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | vendor/third-party-sdk.js | vendor | 1 | Vendored or copied artifact used to simulate third-party noise around Third Party Sdk. | no | no | yes | no | no | no |
 | workers/sync-worker/.gitignore | generated | 8 | Generated or derived project artifact related to .Gitignore. | no | no | yes | no | yes | no |
 | workers/sync-worker/README.md | docs | 11 | Documentation or explanatory material for Readme. | no | no | no | no | yes | no |
 | workers/sync-worker/app/__init__.py | live-code | 0 | Runtime business module contributing to Init. | no | no | no | yes | yes | no |
-| workers/sync-worker/app/clients/insecure_partner.py | live-code | 4 | Runtime business module contributing to Insecure Partner. | yes | yes | no | yes | yes | no |
+| workers/sync-worker/app/clients/insecure_partner.py | live-code | 4 | Runtime business module contributing to Insecure Partner. | yes | no | no | yes | yes | no |
 | workers/sync-worker/app/main.py | live-code | 5 | Runtime process bootstrap and application entrypoint. | no | no | no | yes | yes | no |
 | workers/sync-worker/app/models/audit.py | live-code | 6 | Runtime business module contributing to Audit. | no | no | no | yes | yes | no |
 | workers/sync-worker/app/models/delivery.py | live-code | 6 | Runtime business module contributing to Delivery. | no | no | no | yes | yes | no |
@@ -934,7 +934,6 @@ workspace-history-mixed-repo
 
 - `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/platform-java/src/main/resources/application-prod.yml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `workers/sync-worker/app/clients/insecure_partner.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/app/security/runtime_secret.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -1126,17 +1125,17 @@ workspace-history-mixed-repo
 
 Branches:
 
-- `feature/shared-lib-cleanup` tip: `65ed772415b0934e28c18213dd11f05bd2e3cb9c`; diverges from `main` at `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00`
-- `main` tip: `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00`
-- `release/2026.05` tip: `b13f1f477615d350cc1c350ffcbb350be3a5fdf7`; diverges from `main` at `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00`
+- `feature/shared-lib-cleanup` tip: `73d35d2eb5c277ba4893862d42062b3df0aba41c`; diverges from `main` at `532ccede2551cfd24b1cc55c8ddb5930525c4679`
+- `main` tip: `532ccede2551cfd24b1cc55c8ddb5930525c4679`
+- `release/2026.05` tip: `1696c1bb91bb24f15081cf0dc1d648cf87173e21`; diverges from `main` at `532ccede2551cfd24b1cc55c8ddb5930525c4679`
 
 Commit order:
 
-- `a03a2ec03b8ee492558d7d5f8e3a559f6b04f674` `bootstrap M-V8-007`: initial clean or baseline assembly.
-- `a1360fa365a0777b56dcef77e6311a88e2dfbdfd` `c002 add history-only workspace secret`: introduces an intended signal.
-- `6a849e5f9450ca046fb26f5e00a3d24b1e3b7c00` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
-- `b13f1f477615d350cc1c350ffcbb350be3a5fdf7` `c005 release branch clean`: removes or neutralizes a prior signal.
-- `65ed772415b0934e28c18213dd11f05bd2e3cb9c` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
+- `71a6868f4113de4c505b25f5745151c1fa2d7c2a` `bootstrap M-V8-007`: initial clean or baseline assembly.
+- `72ec9bb8e19d1f7dd2887f768af423b62c82c910` `c002 add history-only workspace secret`: introduces an intended signal.
+- `1696c1bb91bb24f15081cf0dc1d648cf87173e21` `c005 release branch clean`: removes or neutralizes a prior signal.
+- `532ccede2551cfd24b1cc55c8ddb5930525c4679` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
+- `73d35d2eb5c277ba4893862d42062b3df0aba41c` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -1358,7 +1357,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Insecure Partner. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -1405,9 +1404,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `14793`
+- Total LOC considered for authored/generated project content: `14799`
 - Synthetic filler / inflation LOC: `8030`
-- Synthetic filler ratio: `54.28%`
+- Synthetic filler ratio: `54.26%`
 
 | category | LOC |
 | --- | ---: |
@@ -1417,7 +1416,7 @@ Expected final head/history state:
 | docs | 48 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 366 |
+| vendor/generated | 372 |
 | synthetic filler / inflation content | 8030 |
 
 Inflation disclosure:
@@ -1459,54 +1458,7 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0115-java` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0220-cpp` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0238-scala` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0239-scala` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0241-scala` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0402-python` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0566-csharp` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0569-csharp` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0588-go` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0608-javascript` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0628-typescript` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0646-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0647-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0649-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0669-ruby` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0687-php` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0704-rust` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0735-erlang` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0831-c` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0884-groovy` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0885-groovy` (INVENTORY/INFO)
-- `shared/config/keys/mesh_service.pem` => `quantum.arq-q-0887-groovy` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0115-java` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0220-cpp` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0238-scala` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0239-scala` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0241-scala` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0402-python` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0566-csharp` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0569-csharp` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0588-go` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0608-javascript` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0628-typescript` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0646-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0647-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0649-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0669-ruby` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0687-php` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0704-rust` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0735-erlang` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0831-c` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0884-groovy` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0885-groovy` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0887-groovy` (INVENTORY/INFO)
+- None in the current run.
 
 ## 14. Explainability Expectations
 

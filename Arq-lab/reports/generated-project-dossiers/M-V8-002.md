@@ -411,7 +411,7 @@ infra-app-mixed-repo
 | app/services/retry_service.py | live-code | 4 | Runtime business service implementing Retry Service logic. | no | no | no | yes | no | no |
 | app/services/routing_service.py | live-code | 4 | Runtime business service implementing Routing Service logic. | no | no | no | yes | no | no |
 | app/services/templates_service.py | live-code | 4 | Runtime business service implementing Templates Service logic. | no | no | no | yes | no | no |
-| deploy/envoy.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Envoy. | yes | yes | no | yes | no | no |
+| deploy/envoy.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Envoy. | yes | no | no | yes | no | no |
 | docs/architecture/section-01.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-02.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-03.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
@@ -676,11 +676,11 @@ infra-app-mixed-repo
 | tests/test_templates_service.py | test | 4 | Automated test surface covering Test Templates Service behavior. | no | no | yes | yes | yes | no |
 | validation/branch-plan.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 14 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/expected-findings.json | generated | 54 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/expected-findings.json | generated | 67 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 4216 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 2691 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 2703 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 345 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 37 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 41 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -711,7 +711,13 @@ infra-app-mixed-repo
   Target module: `Quantum`
   Finding family / rule family expectation: `ACCEPT_UNTRUSTED`
   Head/history behavior: `head-only`
-  Explainability expectation: resolvedValue~ACCEPT_UNTRUSTED
+  Explainability expectation: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
+- Path: `deploy/envoy.yaml`
+  Why it should be detected: scenario declares `quantum-config-protocol` as a live positive surface.
+  Target module: `Quantum`
+  Finding family / rule family expectation: `tls_minimum_protocol_version=TLSv1_0`
+  Head/history behavior: `head-only`
+  Explainability expectation: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
 - Path: `ops/console/src/modules/security/legacyDigest.ts`
   Why it should be detected: scenario declares `quantum-app-md5` as a live positive surface.
   Target module: `Quantum`
@@ -721,7 +727,7 @@ infra-app-mixed-repo
 
 ## 7. Near-Real Negative Surfaces
 
-- `deploy/envoy.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- No near-real negative surfaces were declared for this scenario.
 
 ## 8. Protected Negative Surfaces
 
@@ -898,21 +904,22 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `4ccc7e1560a9943e41053570bfb40c441bcc207c`; diverges from `main` at `8a6442ac5b78041db3ccbaab0e82f19a9c95b831`
-- `main` tip: `8a6442ac5b78041db3ccbaab0e82f19a9c95b831`
-- `release/2026.04` tip: `c689c105633a1169d5dc1aa8f082601addafbe7c`; diverges from `main` at `8a6442ac5b78041db3ccbaab0e82f19a9c95b831`
+- `feature/hotfix-ssl` tip: `6455efd9f9c9d9c1797c46041fa30005a21eebd2`; diverges from `main` at `6a875a2044cf3903264c7eaeb3d2c68996bfe0ea`
+- `main` tip: `6a875a2044cf3903264c7eaeb3d2c68996bfe0ea`
+- `release/2026.04` tip: `075aff86596ea36a4f840047d985b0a3ffe2ec73`; diverges from `main` at `6a875a2044cf3903264c7eaeb3d2c68996bfe0ea`
 
 Commit order:
 
-- `8a6442ac5b78041db3ccbaab0e82f19a9c95b831` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `4ccc7e1560a9943e41053570bfb40c441bcc207c` `c002 temporary hotfix secret`: introduces an intended signal.
-- `c689c105633a1169d5dc1aa8f082601addafbe7c` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `075aff86596ea36a4f840047d985b0a3ffe2ec73` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `6a875a2044cf3903264c7eaeb3d2c68996bfe0ea` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `6455efd9f9c9d9c1797c46041fa30005a21eebd2` `c002 temporary hotfix secret`: introduces an intended signal.
 
 Expected final head/history state:
 
 - `guardian-active-secret` on `production.env` should behave as `head-only`.
 - `guardian-hotfix-secret` on `feature-secret.txt` should behave as `head-only`.
 - `quantum-config-trust` on `deploy/envoy.yaml` should behave as `head-only`.
+- `quantum-config-protocol` on `deploy/envoy.yaml` should behave as `head-only`.
 - `quantum-app-md5` on `legacyDigest.ts` should behave as `head-only`.
 
 ## 10. Runnability Contract
@@ -1003,7 +1010,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-config` file with expectation `must_find`.
 - Detailed summary: Runtime configuration carrying environment or deployment settings for Envoy. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -2594,9 +2601,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `12919`
+- Total LOC considered for authored/generated project content: `12940`
 - Synthetic filler / inflation LOC: `7590`
-- Synthetic filler ratio: `58.75%`
+- Synthetic filler ratio: `58.66%`
 
 | category | LOC |
 | --- | ---: |
@@ -2606,7 +2613,7 @@ Expected final head/history state:
 | docs | 22 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 277 |
+| vendor/generated | 298 |
 | synthetic filler / inflation content | 7590 |
 
 Inflation disclosure:
@@ -2632,7 +2639,12 @@ Inflation disclosure:
   module: `Quantum`
   expected rule/finding family: `ACCEPT_UNTRUSTED`
   expected branch/ref behavior: `head-only`
-  expected explainability behavior: resolvedValue~ACCEPT_UNTRUSTED
+  expected explainability behavior: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
+- path: `deploy/envoy.yaml`
+  module: `Quantum`
+  expected rule/finding family: `tls_minimum_protocol_version=TLSv1_0`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
 - path: `legacyDigest.ts`
   module: `Quantum`
   expected rule/finding family: `MD5`
@@ -2664,6 +2676,7 @@ Inflation disclosure:
 Scenario-specific explainability expectations:
 
 - `deploy/envoy.yaml`: resolvedValue~`ACCEPT_UNTRUSTED`
+- `deploy/envoy.yaml`: resolvedValue~`tls_minimum_protocol_version=TLSv1_0`
 - `legacyDigest.ts`: resolvedValue~`MD5`
 
 Explainability failure definition:
@@ -2675,7 +2688,6 @@ Explainability failure definition:
 - False negatives are most likely on runtime config files where the detector must bind a weak TLS knob out of YAML or env syntax.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

@@ -1,0 +1,139 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-004\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9668397922493008,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-004\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-004\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 12,
+      "fixtures": 0,
+      "live business code": 10,
+      "live config": 0,
+      "scripts": 0,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5006,
+      "vendor/generated": 132
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-csharp\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-CS-004.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-csharp\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_WITH_NOISE",
+  "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyDigestService { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); }",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "10496832-11c1-4cc6-af06-203aa34e8546",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/Library/Security/LegacyDigestService.cs",
+        "queryFamily": "csharp.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"MD5.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"MD5\",\"language\":\"csharp\",\"bindingKind\":\"CHAINED_INVOCATION\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0468-csharp",
+        "ruleName": "MD5 usage",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "csharp:crypto:MD5.Create:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "md5-digest"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 1,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyDigestService { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); }",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6178e480-74ef-4156-a4b6-a90e4cdf69ed",
+      "findingKind": "INVENTORY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/Library/Security/LegacyDigestService.cs",
+      "queryFamily": "csharp.using-namespace",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.using-namespace\",\"callName\":\"using\",\"resolutionScope\":\"SAME_FILE\",\"resolvedValue\":\"System.Security.Cryptography\",\"language\":\"csharp\",\"fullName\":\"System.Security.Cryptography\"}",
+      "resolutionScope": "SAME_FILE",
+      "resolvedValue": "System.Security.Cryptography",
+      "ruleKey": "quantum.arq-q-0420-csharp",
+      "ruleName": "Using: System.Security.Cryptography (BCL crypto namespace)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:using:using:System.Security.Cryptography",
+      "severity": "INFO"
+    }
+  ],
+  "scenarioId": "Q-V3-CS-004",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyDigestService { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); }",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6178e480-74ef-4156-a4b6-a90e4cdf69ed",
+      "findingKind": "INVENTORY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/Library/Security/LegacyDigestService.cs",
+      "queryFamily": "csharp.using-namespace",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.using-namespace\",\"callName\":\"using\",\"resolutionScope\":\"SAME_FILE\",\"resolvedValue\":\"System.Security.Cryptography\",\"language\":\"csharp\",\"fullName\":\"System.Security.Cryptography\"}",
+      "resolutionScope": "SAME_FILE",
+      "resolvedValue": "System.Security.Cryptography",
+      "ruleKey": "quantum.arq-q-0420-csharp",
+      "ruleName": "Using: System.Security.Cryptography (BCL crypto namespace)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:using:using:System.Security.Cryptography",
+      "severity": "INFO"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_WITH_NOISE",
+  "verdictClass": "PASS_WITH_NOISE"
+}

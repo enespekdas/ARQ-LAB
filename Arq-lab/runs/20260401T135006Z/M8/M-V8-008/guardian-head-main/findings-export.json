@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T14:04:20.634891400Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "aca7d96d-57fd-4f16-a5f3-f8b928aced77",
+      "applicationKey": "arq-lab-m-v8-008",
+      "applicationName": "branch-hotfix-mixed-repo",
+      "branchName": "main",
+      "commitSha": "207a520946a228ae079aa8ee06a78f37eef4009e",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "667bb632-5f60-415d-8a92-416eb91b6438",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T14:04:16.145529Z",
+      "lastSeenAt": "2026-04-01T14:04:16.145529Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/config/production.env",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "66e9b8e5-da8c-4c6b-97c8-bf770bcc8042",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

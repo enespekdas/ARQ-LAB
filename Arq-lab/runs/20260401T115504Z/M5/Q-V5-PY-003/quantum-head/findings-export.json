@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T12:00:13.284856600Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "fd90d0fe-6335-4c90-ae4e-c7aa8dca0408",
+      "applicationKey": "arq-lab-q-v5-py-003",
+      "applicationName": "tls-usage-python",
+      "branchName": "main",
+      "commitSha": "4e7868737ef26aeb77ceb9d1349b16a1a0f7e0c6",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "412b7f92-e97e-45ed-897e-2eb747f27888",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-01T12:00:12.141567Z",
+      "lastSeenAt": "2026-04-01T12:00:12.141567Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/clients/partner_sync_client.py",
+      "primaryLineEnd": 4,
+      "primaryLineStart": 4,
+      "projectId": "923d94fe-a989-4bdf-b56e-217ea488ad8c",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0305-python",
+      "ruleName": "requests: verify=False (certificate validation disabled)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

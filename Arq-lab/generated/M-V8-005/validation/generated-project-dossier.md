@@ -873,7 +873,7 @@ enterprise-mesh-monorepo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5518 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1560 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1536 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 481 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -891,7 +891,7 @@ enterprise-mesh-monorepo
 | workers/sync-worker/.gitignore | generated | 8 | Generated or derived project artifact related to .Gitignore. | no | no | yes | no | yes | no |
 | workers/sync-worker/README.md | docs | 11 | Documentation or explanatory material for Readme. | no | no | no | no | yes | no |
 | workers/sync-worker/app/__init__.py | live-code | 0 | Runtime business module contributing to Init. | no | no | no | yes | yes | no |
-| workers/sync-worker/app/clients/insecure_partner.py | live-code | 4 | Runtime business module contributing to Insecure Partner. | yes | yes | no | yes | yes | no |
+| workers/sync-worker/app/clients/insecure_partner.py | live-code | 4 | Runtime business module contributing to Insecure Partner. | yes | no | no | yes | yes | no |
 | workers/sync-worker/app/main.py | live-code | 5 | Runtime process bootstrap and application entrypoint. | no | no | no | yes | yes | no |
 | workers/sync-worker/app/models/audit.py | live-code | 6 | Runtime business module contributing to Audit. | no | no | no | yes | yes | no |
 | workers/sync-worker/app/models/delivery.py | live-code | 6 | Runtime business module contributing to Delivery. | no | no | no | yes | yes | no |
@@ -951,7 +951,6 @@ enterprise-mesh-monorepo
 ## 7. Near-Real Negative Surfaces
 
 - `services/platform-java/src/main/java/com/arq/platformjava/security/LegacyCipherService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `workers/sync-worker/app/clients/insecure_partner.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/app/security/runtime_secret.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -1144,11 +1143,11 @@ enterprise-mesh-monorepo
 
 Branches:
 
-- `main` tip: `224998444cdb66e674d61810f64dd1d0917d8a1a`
+- `main` tip: `97ea268ff37a6bf3701653ce542527087bdf27fb`
 
 Commit order:
 
-- `224998444cdb66e674d61810f64dd1d0917d8a1a` `bootstrap M-V8-005`: initial clean or baseline assembly.
+- `97ea268ff37a6bf3701653ce542527087bdf27fb` `bootstrap M-V8-005`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1390,7 +1389,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Insecure Partner. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -1496,30 +1495,7 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0102-java` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0115-java` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0204-java` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0220-cpp` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0238-scala` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0239-scala` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0241-scala` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0402-python` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0566-csharp` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0569-csharp` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0588-go` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0608-javascript` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0628-typescript` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0646-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0647-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0649-kotlin` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0669-ruby` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0687-php` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0704-rust` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0735-erlang` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0831-c` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0884-groovy` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0885-groovy` (INVENTORY/INFO)
-- `shared/config/keys/platform_service.pem` => `quantum.arq-q-0887-groovy` (INVENTORY/INFO)
+- None in the current run.
 
 ## 14. Explainability Expectations
 

@@ -374,7 +374,7 @@ crypto-usage-csharp
 | src/Library/Library.csproj | build/deploy | 1 | Build or deployment definition shaping how Library is compiled, packaged, or released. | no | no | no | yes | no | no |
 | src/Library/Partners/PartnersRegistry.cs | live-code | 1 | Runtime business module contributing to Partners Registry. | no | no | no | yes | no | no |
 | src/Library/Security/DigestInventoryOnly.cs | live-code | 1 | Runtime business module contributing to Digest Inventory Only. | no | yes | no | yes | no | no |
-| src/Library/Security/LegacyDigestService.cs | live-code | 1 | Runtime business service implementing Legacy Digest Service logic. | yes | yes | no | yes | no | no |
+| src/Library/Security/LegacyDigestService.cs | live-code | 1 | Runtime business service implementing Legacy Digest Service logic. | yes | no | no | yes | no | no |
 | src/Library/Security/SecureDigestFacade.cs | live-code | 1 | Runtime business module contributing to Secure Digest Facade. | no | yes | no | yes | no | no |
 | src/Library/Tokens/TokensRegistry.cs | live-code | 1 | Runtime business module contributing to Tokens Registry. | no | no | no | yes | no | no |
 | tests/AppHost.Tests/AppHost.Tests.csproj | test | 1 | Automated test surface covering App Host.Tests behavior. | no | no | yes | no | yes | no |
@@ -385,7 +385,7 @@ crypto-usage-csharp
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2298 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 705 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 703 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 185 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 11 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -407,7 +407,6 @@ crypto-usage-csharp
 ## 7. Near-Real Negative Surfaces
 
 - `src/Library/Security/DigestInventoryOnly.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `src/Library/Security/LegacyDigestService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/Library/Security/SecureDigestFacade.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -601,7 +600,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Digest Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -689,7 +688,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

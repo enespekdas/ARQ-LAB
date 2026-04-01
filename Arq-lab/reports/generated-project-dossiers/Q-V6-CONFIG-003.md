@@ -222,7 +222,7 @@ edge-gateway-config
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
 | config/runtime/baseline.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Baseline. | no | no | no | yes | yes | no |
-| deploy/envoy.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Envoy. | yes | yes | no | yes | yes | no |
+| deploy/envoy.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Envoy. | yes | no | no | yes | yes | no |
 | deploy/prod/service.properties | live-config | 1 | Runtime configuration carrying environment or deployment settings for Service. | no | no | no | yes | yes | no |
 | docs/architecture/section-01.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-02.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
@@ -363,16 +363,16 @@ edge-gateway-config
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 14 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/expected-findings.json | generated | 28 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/expected-findings.json | generated | 41 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2186 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 689 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 699 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 174 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 16 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -383,7 +383,13 @@ edge-gateway-config
   Target module: `Quantum`
   Finding family / rule family expectation: `ACCEPT_UNTRUSTED`
   Head/history behavior: `head-only`
-  Explainability expectation: resolvedValue~ACCEPT_UNTRUSTED
+  Explainability expectation: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
+- Path: `deploy/envoy.yaml`
+  Why it should be detected: scenario declares `envoy-min-protocol` as a live positive surface.
+  Target module: `Quantum`
+  Finding family / rule family expectation: `tls_minimum_protocol_version=TLSv1_0`
+  Head/history behavior: `head-only`
+  Explainability expectation: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
 - Path: `runtime/.env`
   Why it should be detected: scenario declares `node-env-disable` as a live positive surface.
   Target module: `Quantum`
@@ -393,7 +399,6 @@ edge-gateway-config
 
 ## 7. Near-Real Negative Surfaces
 
-- `deploy/envoy.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `helm/examples/values.yaml`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -558,7 +563,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-config` file with expectation `must_find`.
 - Detailed summary: Runtime configuration carrying environment or deployment settings for Envoy. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -602,9 +607,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5007`
+- Total LOC considered for authored/generated project content: `5022`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `96.66%`
+- Synthetic filler ratio: `96.38%`
 
 | category | LOC |
 | --- | ---: |
@@ -614,7 +619,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 135 |
+| vendor/generated | 150 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -630,7 +635,12 @@ Inflation disclosure:
   module: `Quantum`
   expected rule/finding family: `ACCEPT_UNTRUSTED`
   expected branch/ref behavior: `head-only`
-  expected explainability behavior: resolvedValue~ACCEPT_UNTRUSTED
+  expected explainability behavior: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
+- path: `deploy/envoy.yaml`
+  module: `Quantum`
+  expected rule/finding family: `tls_minimum_protocol_version=TLSv1_0`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: resolvedValue~ACCEPT_UNTRUSTED; resolvedValue~tls_minimum_protocol_version=TLSv1_0
 - path: `runtime/.env`
   module: `Quantum`
   expected rule/finding family: `NODE_TLS_REJECT_UNAUTHORIZED=0`
@@ -662,6 +672,7 @@ Inflation disclosure:
 Scenario-specific explainability expectations:
 
 - `deploy/envoy.yaml`: resolvedValue~`ACCEPT_UNTRUSTED`
+- `deploy/envoy.yaml`: resolvedValue~`tls_minimum_protocol_version=TLSv1_0`
 - `runtime/.env`: resolvedValue~`NODE_TLS_REJECT_UNAUTHORIZED=0`
 
 Explainability failure definition:
@@ -673,7 +684,6 @@ Explainability failure definition:
 - False negatives are most likely on runtime config files where the detector must bind a weak TLS knob out of YAML or env syntax.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

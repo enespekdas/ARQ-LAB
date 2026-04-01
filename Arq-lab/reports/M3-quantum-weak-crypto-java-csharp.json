@@ -6,21 +6,21 @@
       "mayFindReview": 0,
       "missingExpectedFindings": 0,
       "mustNotFindViolations": 0,
-      "noiseCount": 15,
+      "noiseCount": 3,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 8,
+      "sameSurfaceExtraFindings": 0,
       "scenarios": 7,
-      "unexpectedFindings": 15,
-      "unexpectedRegexOnlyFindings": 10,
+      "unexpectedFindings": 3,
+      "unexpectedRegexOnlyFindings": 1,
       "verdicts": {
         "FAIL_EXPLAINABILITY": 0,
         "FAIL_FN": 0,
         "FAIL_FP": 0,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
-        "PASS_CLEAN": 3,
-        "PASS_WITH_NOISE": 4
+        "PASS_CLEAN": 4,
+        "PASS_WITH_NOISE": 3
       }
     }
   },
@@ -32,7 +32,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.9599365331217771,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "10 unexpected/noisy finding(s) remained after matching (same-surface-extra=5, totally-unexpected=5, regex-only=8)",
+      "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (totally-unexpected=1, regex-only=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-003\\validation\\generated-tree.txt",
       "locComposition": {
@@ -55,15 +55,15 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 5,
-        "totallyUnexpectedFindings": 5,
-        "unexpectedRegexOnlyFindings": 8
+        "sameSurfaceExtraFindings": 0,
+        "totallyUnexpectedFindings": 1,
+        "unexpectedRegexOnlyFindings": 1
       },
-      "noiseCount": 10,
+      "noiseCount": 1,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 13,
-        "rawFindings": 13
+        "normalizedFindings": 4,
+        "rawFindings": 4
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\billing-sdk-csharp\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\billing-sdk-csharp\\validation\\generated-project-dossier.md",
@@ -78,9 +78,9 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\billing-sdk-csharp\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 5,
-      "unexpectedFindings": 10,
-      "unexpectedRegexOnlyFindings": 8,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 1,
+      "unexpectedRegexOnlyFindings": 1,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     },
@@ -90,8 +90,8 @@
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-004\\validation\\generated-project-dossier.md",
       "explainabilityFailures": 0,
       "fillerRatio": 0.9668397922493008,
-      "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1)",
+      "finalVerdict": "PASS_CLEAN",
+      "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-004\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-004\\validation\\generated-tree.txt",
       "locComposition": {
@@ -114,15 +114,15 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 1,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 0,
         "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 1,
+      "noiseCount": 0,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 2,
-        "rawFindings": 2
+        "normalizedFindings": 1,
+        "rawFindings": 1
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-csharp\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-csharp\\validation\\generated-project-dossier.md",
@@ -137,11 +137,11 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-csharp\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 1,
-      "unexpectedFindings": 1,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 0,
       "unexpectedRegexOnlyFindings": 0,
-      "verdict": "PASS_WITH_NOISE",
-      "verdictClass": "PASS_WITH_NOISE"
+      "verdict": "PASS_CLEAN",
+      "verdictClass": "PASS_CLEAN"
     },
     "Q-V3-JAVA-001": {
       "cleanExpectedMatches": 3,
@@ -209,7 +209,7 @@
       "explainabilityFailures": 0,
       "fillerRatio": 0.7021743466985837,
       "finalVerdict": "PASS_WITH_NOISE",
-      "finalVerdictReason": "3 unexpected/noisy finding(s) remained after matching (same-surface-extra=2, totally-unexpected=1, regex-only=2)",
+      "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (totally-unexpected=1)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -232,15 +232,15 @@
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 0,
-        "sameSurfaceExtraFindings": 2,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 1,
-        "unexpectedRegexOnlyFindings": 2
+        "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 3,
+      "noiseCount": 1,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 5,
-        "rawFindings": 5
+        "normalizedFindings": 3,
+        "rawFindings": 3
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\legacy-payment-crypto-java\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\legacy-payment-crypto-java\\validation\\generated-project-dossier.md",
@@ -255,9 +255,9 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\legacy-payment-crypto-java\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 0,
-      "sameSurfaceExtraFindings": 2,
-      "unexpectedFindings": 3,
-      "unexpectedRegexOnlyFindings": 2,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 1,
+      "unexpectedRegexOnlyFindings": 0,
       "verdict": "PASS_WITH_NOISE",
       "verdictClass": "PASS_WITH_NOISE"
     },
@@ -446,7 +446,7 @@
     "FAIL_FP": 0,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
-    "PASS_CLEAN": 3,
-    "PASS_WITH_NOISE": 4
+    "PASS_CLEAN": 4,
+    "PASS_WITH_NOISE": 3
   }
 }

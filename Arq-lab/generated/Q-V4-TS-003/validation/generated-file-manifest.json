@@ -2437,14 +2437,14 @@
   },
   {
     "classification": "live-code",
-    "findingExpectation": "may_find_review",
+    "findingExpectation": "must_find",
     "loc": 2,
-    "nearRealNegative": true,
+    "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
     "path": "src/modules/security/legacySha1Digest.ts",
-    "positiveSurface": false,
+    "positiveSurface": true,
     "protectedNegative": false,
     "purpose": "Runtime business module contributing to Legacy Sha1Digest.",
     "syntheticFiller": false
@@ -2550,7 +2550,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 15,
+    "loc": 28,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2578,7 +2578,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 10,
+    "loc": 18,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2606,7 +2606,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 1037,
+    "loc": 1047,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,

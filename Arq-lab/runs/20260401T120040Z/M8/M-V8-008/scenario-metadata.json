@@ -1,0 +1,69 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/branch-hotfix-mixed-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/branch-hotfix-mixed-repo",
+    "html_url": "https://github.com/ARQ-Sec/branch-hotfix-mixed-repo",
+    "name": "branch-hotfix-mixed-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/charts-cleanup": "c955520b026329389ff6e42d24d4cc8d8883d064",
+        "feature/hotfix-ssl": "1a127b8ba13f7cf260f4fdf19afb43475ad9ed9e",
+        "main": "bae5af71d6074fb45f2bcc4e8825fabc461f899c",
+        "release/2026.04": "466ff14aa1c63757017a450ce76acbc8b5c9ff86"
+      },
+      "head": "bae5af71d6074fb45f2bcc4e8825fabc461f899c",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T15:15:43+03:00",
+          "message": "c004 charts cleanup branch",
+          "sha": "c955520b026329389ff6e42d24d4cc8d8883d064"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T15:15:43+03:00",
+          "message": "c003 release branch clean",
+          "sha": "466ff14aa1c63757017a450ce76acbc8b5c9ff86"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T15:15:42+03:00",
+          "message": "c002 temporary hotfix secret",
+          "sha": "1a127b8ba13f7cf260f4fdf19afb43475ad9ed9e"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T15:15:42+03:00",
+          "message": "c001 bootstrap mixed repo",
+          "sha": "bae5af71d6074fb45f2bcc4e8825fabc461f899c"
+        }
+      ]
+    },
+    "lineCount": 9936,
+    "repoName": "branch-hotfix-mixed-repo",
+    "scenarioId": "M-V8-008"
+  },
+  "scenario": {
+    "domain": "Infra-heavy mixed repo with branch-only TLS hotfix, dormant examples, active runtime misuse, and generated noise.",
+    "id": "M-V8-008",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "branch-hotfix-mixed-repo",
+    "stack": "Mixed repo with branches, infra overlays, and dormant examples"
+  }
+}

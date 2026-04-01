@@ -241,7 +241,7 @@ tls-usage-python
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
 | app/__init__.py | live-code | 0 | Runtime business module contributing to Init. | no | no | no | yes | yes | no |
-| app/clients/partner_sync_client.py | live-code | 4 | Outbound integration client for Partner Sync Client behavior. | yes | yes | no | yes | yes | no |
+| app/clients/partner_sync_client.py | live-code | 4 | Outbound integration client for Partner Sync Client behavior. | yes | no | no | yes | yes | no |
 | app/main.py | live-code | 5 | Runtime process bootstrap and application entrypoint. | no | no | no | yes | yes | yes |
 | app/models/audit.py | live-code | 6 | Runtime business module contributing to Audit. | no | no | no | yes | yes | no |
 | app/models/delivery.py | live-code | 6 | Runtime business module contributing to Delivery. | no | no | no | yes | yes | no |
@@ -407,7 +407,7 @@ tls-usage-python
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2480 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 763 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 762 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 193 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 43 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -427,7 +427,7 @@ tls-usage-python
 
 ## 7. Near-Real Negative Surfaces
 
-- `app/clients/partner_sync_client.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- No near-real negative surfaces were declared for this scenario.
 
 ## 8. Protected Negative Surfaces
 
@@ -591,7 +591,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Outbound integration client for Partner Sync Client behavior. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -747,7 +747,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

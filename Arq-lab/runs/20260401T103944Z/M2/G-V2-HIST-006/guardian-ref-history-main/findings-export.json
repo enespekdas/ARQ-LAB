@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T10:44:21.227107100Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "e3e83270-0447-4284-9e11-a65c2295da14",
+      "applicationKey": "arq-lab-g-v2-hist-006",
+      "applicationName": "partner-relocation-lineage",
+      "branchName": "main",
+      "commitSha": "97f0d5f3a8b8cbdebf12c7b7ba0aeed09ce8c5fb",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HISTORY_ONLY",
+      "findingId": "1df47da8-afa4-4cc2-b8e0-5ef8ce10730b",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T10:44:16.324122Z",
+      "lastSeenAt": "2026-04-01T10:44:16.324122Z",
+      "module": "guardian",
+      "occurrenceCount": 2,
+      "presentInHistory": true,
+      "presentOnHead": false,
+      "primaryFilePath": "src/main/java/com/arq/partnerrelocationlineage/history/relocation/PartnerTokenRelocationArchive.java",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "8db4082d-9626-4598-9d76-fb18fce95c10",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "REF_HISTORY",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

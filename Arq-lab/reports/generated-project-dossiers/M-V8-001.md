@@ -847,7 +847,7 @@ internal-platform-monorepo
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 5420 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1590 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1588 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 460 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -863,7 +863,7 @@ internal-platform-monorepo
 | workers/sync-worker/.gitignore | generated | 8 | Generated or derived project artifact related to .Gitignore. | no | no | yes | no | yes | no |
 | workers/sync-worker/README.md | docs | 11 | Documentation or explanatory material for Readme. | no | no | no | no | yes | no |
 | workers/sync-worker/app/__init__.py | live-code | 0 | Runtime business module contributing to Init. | no | no | no | yes | yes | no |
-| workers/sync-worker/app/clients/insecure_partner.py | live-code | 4 | Runtime business module contributing to Insecure Partner. | yes | yes | no | yes | yes | no |
+| workers/sync-worker/app/clients/insecure_partner.py | live-code | 4 | Runtime business module contributing to Insecure Partner. | yes | no | no | yes | yes | no |
 | workers/sync-worker/app/main.py | live-code | 5 | Runtime process bootstrap and application entrypoint. | no | no | no | yes | yes | no |
 | workers/sync-worker/app/models/audit.py | live-code | 6 | Runtime business module contributing to Audit. | no | no | no | yes | yes | no |
 | workers/sync-worker/app/models/delivery.py | live-code | 6 | Runtime business module contributing to Delivery. | no | no | no | yes | yes | no |
@@ -934,7 +934,6 @@ internal-platform-monorepo
 
 ## 7. Near-Real Negative Surfaces
 
-- `workers/sync-worker/app/clients/insecure_partner.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_audit_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_delivery_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/sync-worker/tests/test_dispatch_service.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
@@ -1130,11 +1129,11 @@ internal-platform-monorepo
 
 Branches:
 
-- `main` tip: `24a8bad77982be2a8d88c66cfe11c09c41bac9c2`
+- `main` tip: `0288cdfc0495283014c7550d13755f865eeb65fb`
 
 Commit order:
 
-- `24a8bad77982be2a8d88c66cfe11c09c41bac9c2` `bootstrap M-V8-001`: initial clean or baseline assembly.
+- `0288cdfc0495283014c7550d13755f865eeb65fb` `bootstrap M-V8-001`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1320,7 +1319,7 @@ Expected final head/history state:
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Insecure Partner. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -1574,7 +1573,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

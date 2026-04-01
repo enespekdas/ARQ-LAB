@@ -372,8 +372,8 @@ billing-sdk-csharp
 | src/Library/Invoices/InvoicesRegistry.cs | live-code | 1 | Runtime business module contributing to Invoices Registry. | no | no | no | yes | no | no |
 | src/Library/Library.csproj | build/deploy | 1 | Build or deployment definition shaping how Library is compiled, packaged, or released. | no | no | no | yes | no | no |
 | src/Library/Partners/PartnersRegistry.cs | live-code | 1 | Runtime business module contributing to Partners Registry. | no | no | no | yes | no | no |
-| src/Library/Security/LegacyCipherService.cs | live-code | 1 | Runtime business service implementing Legacy Cipher Service logic. | yes | yes | no | yes | no | no |
-| src/Library/Security/LegacyHashService.cs | live-code | 1 | Runtime business service implementing Legacy Hash Service logic. | yes | yes | no | yes | no | no |
+| src/Library/Security/LegacyCipherService.cs | live-code | 1 | Runtime business service implementing Legacy Cipher Service logic. | yes | no | no | yes | no | no |
+| src/Library/Security/LegacyHashService.cs | live-code | 1 | Runtime business service implementing Legacy Hash Service logic. | yes | no | no | yes | no | no |
 | src/Library/Security/OtpTokenService.cs | live-code | 1 | Runtime business service implementing Otp Token Service logic. | no | yes | no | yes | no | no |
 | src/Library/Security/SecureOtpTokenService.cs | live-code | 1 | Runtime business service implementing Secure Otp Token Service logic. | no | yes | no | yes | no | no |
 | src/Library/Tokens/TokensRegistry.cs | live-code | 1 | Runtime business module contributing to Tokens Registry. | no | no | no | yes | no | no |
@@ -385,7 +385,7 @@ billing-sdk-csharp
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2298 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 718 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 716 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 185 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 11 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -418,8 +418,6 @@ billing-sdk-csharp
 
 ## 7. Near-Real Negative Surfaces
 
-- `src/Library/Security/LegacyCipherService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `src/Library/Security/LegacyHashService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/Library/Security/OtpTokenService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/Library/Security/SecureOtpTokenService.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
@@ -583,7 +581,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Cipher Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -594,7 +592,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Hash Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text

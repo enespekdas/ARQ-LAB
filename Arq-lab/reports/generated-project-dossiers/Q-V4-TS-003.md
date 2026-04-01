@@ -30,7 +30,7 @@ A real customer could plausibly own this repository because it bundles the opera
 - Runtime role: `Customer portal backend for resets and signed links.`
 - Config flow: `No dedicated live-config files; runtime behavior is code-driven.`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `legacyDigest.ts`
+- Crypto/TLS flow if relevant: `legacyDigest.ts, legacySha1Digest.ts`
 - Test surfaces: `__tests__/audit.service.test.ts, __tests__/compliance.service.test.ts, __tests__/events.service.test.ts, __tests__/invites.service.test.ts, __tests__/partners.service.test.ts, __tests__/profiles.service.test.ts, __tests__/sessions.service.test.ts, __tests__/tokens.service.test.ts`
 - Docs/vendor/generated surfaces: `README.md, dist/__tests__/audit.service.test.js, dist/__tests__/compliance.service.test.js, dist/__tests__/events.service.test.js, dist/__tests__/invites.service.test.js, dist/__tests__/partners.service.test.js, dist/__tests__/profiles.service.test.js, dist/__tests__/sessions.service.test.js, dist/__tests__/tokens.service.test.js, dist/scripts/smoke.js, dist/src/modules/audit/audit.service.js, dist/src/modules/compliance/compliance.service.js`
 
@@ -450,7 +450,7 @@ customer-portal-node
 | src/modules/partners/partners.service.ts | live-code | 2 | Runtime business service implementing Partners.Service logic. | no | no | no | yes | yes | no |
 | src/modules/profiles/profiles.service.ts | live-code | 2 | Runtime business service implementing Profiles.Service logic. | no | no | no | yes | yes | no |
 | src/modules/security/legacyDigest.ts | live-code | 2 | Runtime business module contributing to Legacy Digest. | yes | no | no | yes | yes | no |
-| src/modules/security/legacySha1Digest.ts | live-code | 2 | Runtime business module contributing to Legacy Sha1Digest. | no | yes | no | yes | yes | no |
+| src/modules/security/legacySha1Digest.ts | live-code | 2 | Runtime business module contributing to Legacy Sha1Digest. | yes | no | no | yes | yes | no |
 | src/modules/security/secureDigest.ts | live-code | 2 | Runtime business module contributing to Secure Digest. | no | yes | no | yes | yes | no |
 | src/modules/sessions/sessions.service.ts | live-code | 2 | Runtime business service implementing Sessions.Service logic. | no | no | no | yes | yes | no |
 | src/modules/tokens/tokens.service.ts | live-code | 2 | Runtime business service implementing Tokens.Service logic. | no | no | no | yes | yes | no |
@@ -458,11 +458,11 @@ customer-portal-node
 | tsconfig.json | build/deploy | 4 | Build or deployment definition shaping how Tsconfig is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 20 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/expected-findings.json | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/expected-findings.json | generated | 28 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2732 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1037 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1047 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 231 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -480,11 +480,16 @@ customer-portal-node
   Finding family / rule family expectation: `MD5`
   Head/history behavior: `head-only`
   Explainability expectation: resolvedValue~MD5, queryFamily~typescript
+- Path: `src/modules/security/legacySha1Digest.ts`
+  Why it should be detected: scenario declares `sha1` as a live positive surface.
+  Target module: `Quantum`
+  Finding family / rule family expectation: `SHA1`
+  Head/history behavior: `head-only`
+  Explainability expectation: resolvedValue~SHA1, queryFamily~typescript.node.crypto
 
 ## 7. Near-Real Negative Surfaces
 
 - `README.md`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `src/modules/security/legacySha1Digest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/modules/security/secureDigest.ts`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -929,9 +934,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### `src/modules/security/legacySha1Digest.ts`
 
-- Why this file matters: `live-code` file with expectation `may_find_review`.
+- Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Sha1Digest. It is executable/live in the assembled repository.
-- Key constructs: negative or realism-supporting surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -953,9 +958,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `9924`
+- Total LOC considered for authored/generated project content: `9945`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `48.77%`
+- Synthetic filler ratio: `48.67%`
 
 | category | LOC |
 | --- | ---: |
@@ -965,7 +970,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 239 |
+| vendor/generated | 260 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -982,6 +987,11 @@ Inflation disclosure:
   expected rule/finding family: `MD5`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: resolvedValue~MD5, queryFamily~typescript
+- path: `legacySha1Digest.ts`
+  module: `Quantum`
+  expected rule/finding family: `SHA1`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: resolvedValue~SHA1, queryFamily~typescript.node.crypto
 
 ### must_not_find
 
@@ -1011,6 +1021,7 @@ Inflation disclosure:
 Scenario-specific explainability expectations:
 
 - `legacyDigest.ts`: resolvedValue~`MD5`, queryFamily~`typescript`
+- `legacySha1Digest.ts`: resolvedValue~`SHA1`, queryFamily~`typescript.node.crypto`
 
 Explainability failure definition:
 
@@ -1021,7 +1032,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

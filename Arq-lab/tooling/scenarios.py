@@ -496,6 +496,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             build_plan=_build_plan(NODE_BUILD),
             expected_findings=[
                 ef("md5", "legacyDigest.ts", resolved="MD5"),
+                ef("sha1", "legacySha1Digest.ts", resolved="SHA1"),
             ],
             expected_absent=[
                 ea("secure-digest", "secureDigest.ts"),
@@ -504,6 +505,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
             explainability_expectations=[
                 ee("md5", "legacyDigest.ts", resolved="MD5", query_family="typescript"),
+                ee("sha1", "legacySha1Digest.ts", resolved="SHA1", query_family="typescript.node.crypto"),
             ],
         ),
         ScenarioSpec(
@@ -639,6 +641,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             build_plan=_build_plan(CONFIG_BUILD),
             expected_findings=[
                 ef("envoy-untrusted", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ef("envoy-min-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ef("node-env-disable", "runtime/.env", resolved="NODE_TLS_REJECT_UNAUTHORIZED=0"),
             ],
             expected_absent=[
@@ -647,6 +650,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
             explainability_expectations=[
                 ee("envoy-untrusted", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ee("envoy-min-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ee("node-env-disable", "runtime/.env", resolved="NODE_TLS_REJECT_UNAUTHORIZED=0"),
             ],
         ),
@@ -769,6 +773,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ef("guardian-active-secret", "production.env", rule="guardian.generic-api-key"),
                 ef("guardian-hotfix-secret", "feature-secret.txt", rule="guardian.generic-api-key", branch="feature/hotfix-ssl"),
                 ef("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ef("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ef("quantum-app-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             expected_absent=[
@@ -777,6 +782,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
             explainability_expectations=[
                 ee("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ee("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ee("quantum-app-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             metadata={"branches": ["main", "feature/hotfix-ssl", "release/2026.04"]},
@@ -1054,6 +1060,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ef("guardian-active-secret", "production.env", rule="guardian.generic-api-key"),
                 ef("guardian-hotfix-secret", "feature-secret.txt", rule="guardian.generic-api-key", branch="feature/hotfix-ssl"),
                 ef("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ef("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ef("quantum-node-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             expected_absent=[
@@ -1063,6 +1070,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
             explainability_expectations=[
                 ee("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ee("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ee("quantum-node-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             metadata={"branches": ["main", "feature/hotfix-ssl", "release/2026.04", "feature/charts-cleanup"]},
@@ -1583,6 +1591,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ef("guardian-active-secret", "production.env", rule="guardian.generic-api-key"),
                 ef("guardian-hotfix-secret", "feature-secret.txt", rule="guardian.generic-api-key", branch="feature/hotfix-ssl"),
                 ef("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ef("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ef("quantum-node-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             expected_absent=[
@@ -1592,6 +1601,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
             explainability_expectations=[
                 ee("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ee("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ee("quantum-node-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             metadata={"branches": ["main", "feature/hotfix-ssl", "release/2026.04", "feature/charts-cleanup"]},
@@ -1640,6 +1650,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ef("guardian-active-secret", "production.env", rule="guardian.generic-api-key"),
                 ef("guardian-hotfix-secret", "feature-secret.txt", rule="guardian.generic-api-key", branch="feature/hotfix-ssl"),
                 ef("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ef("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ef("quantum-node-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             expected_absent=[
@@ -1649,6 +1660,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
             explainability_expectations=[
                 ee("quantum-config-trust", "deploy/envoy.yaml", resolved="ACCEPT_UNTRUSTED"),
+                ee("quantum-config-protocol", "deploy/envoy.yaml", resolved="tls_minimum_protocol_version=TLSv1_0"),
                 ee("quantum-node-md5", "legacyDigest.ts", resolved="MD5"),
             ],
             metadata={"branches": ["main", "feature/hotfix-ssl", "release/2026.04", "feature/charts-cleanup"]},
