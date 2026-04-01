@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T05:06:44.464009600Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "b4347e8e-cc06-4aab-8b7e-38fcee2b59c4",
+      "applicationKey": "arq-lab-g-v2-hist-008",
+      "applicationName": "pem-lineage-separation",
+      "branchName": "main",
+      "commitSha": "f392fd8047170489f3b79074ed6588cd89d575ac",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HISTORY_ONLY",
+      "findingId": "ca355f39-f58b-4c80-b468-554dd79a6b51",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T05:06:40.471549Z",
+      "lastSeenAt": "2026-04-01T05:06:40.471549Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": true,
+      "presentOnHead": false,
+      "primaryFilePath": "ops/keys/service-private.pem",
+      "primaryLineEnd": 10,
+      "primaryLineStart": 1,
+      "projectId": "74a4adac-3f09-4f2d-9285-fcc795846846",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.private-key",
+      "ruleName": "Private Key",
+      "scanMode": "REF_HISTORY",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

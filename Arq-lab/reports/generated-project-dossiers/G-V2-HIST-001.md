@@ -474,15 +474,15 @@ payments-history-lineage
 
 Branches:
 
-- `main` tip: `d3e6df46a23140e648486a72cf429dbc41b2a92a`
+- `main` tip: `45c28aa1da2ceb98c74417118c4475d25d6db8b8`
 
 Commit order:
 
-- `45749796f0f4d1cfd8064ca286e24bca24b25cca` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `edbb128cef3b0983bae8379fcf3c621dfc07ef89` `c002 add live partner access token`: introduces an intended signal.
-- `aff82fe60f7970e61c82574efe80cff8dd6f43d6` `c003 add docs noise`: introduces an intended signal.
-- `20f4de1bb7ebccb558af4c0b9ccb26cc6ca795bf` `c004 remove token and replace with safe reference`: removes or neutralizes a prior signal.
-- `d3e6df46a23140e648486a72cf429dbc41b2a92a` `c005 unrelated refactor`: scenario state change.
+- `807f7e1fcec91b045e081108bf369106cdef7f1f` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `e08074e9830f509ff84333cb39770f32c720a29c` `c002 add live partner access token`: introduces an intended signal.
+- `51ba75af749cd1bb3f9d65275d95aadb96f78832` `c003 add docs noise`: introduces an intended signal.
+- `9ddc9516c2c8b1d498461e9603834406cedf9acb` `c004 remove token and replace with safe reference`: removes or neutralizes a prior signal.
+- `45c28aa1da2ceb98c74417118c4475d25d6db8b8` `c005 unrelated refactor`: scenario state change.
 
 Expected final head/history state:
 

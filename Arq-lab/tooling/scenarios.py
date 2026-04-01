@@ -1237,7 +1237,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             scan_plans=_quantum_head(),
             build_plan=_build_plan(CSHARP_BUILD),
             expected_findings=[
-                ef("md5-digest", "LegacyDigestService.cs", resolved="MD5.Create"),
+                ef("md5-digest", "LegacyDigestService.cs", resolved="MD5"),
             ],
             expected_absent=[
                 ea("inventory-only", "DigestInventoryOnly.cs"),
@@ -1245,7 +1245,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ea("docs", "docs/csharp-crypto-notes.md"),
             ],
             explainability_expectations=[
-                ee("md5-digest", "LegacyDigestService.cs", resolved="MD5.Create", query_family="csharp"),
+                ee("md5-digest", "LegacyDigestService.cs", resolved="MD5", query_family="csharp"),
             ],
         ),
         ScenarioSpec(

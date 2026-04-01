@@ -1,0 +1,69 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/control-plane-overlay-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/control-plane-overlay-repo",
+    "html_url": "https://github.com/ARQ-Sec/control-plane-overlay-repo",
+    "name": "control-plane-overlay-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/charts-cleanup": "40eb7ab52444d974ed3024cbdd1a0f0f7a4112bf",
+        "feature/hotfix-ssl": "fff664891017544577f565de35ec95a5e0eded88",
+        "main": "cbccf9e9055626e709c22431bbe3cc2459b7203e",
+        "release/2026.04": "20278375c05d9b98766a2a6aa74437f52e73e690"
+      },
+      "head": "cbccf9e9055626e709c22431bbe3cc2459b7203e",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T08:42:24+03:00",
+          "message": "c004 charts cleanup branch",
+          "sha": "40eb7ab52444d974ed3024cbdd1a0f0f7a4112bf"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T08:42:23+03:00",
+          "message": "c002 temporary hotfix secret",
+          "sha": "fff664891017544577f565de35ec95a5e0eded88"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T08:42:23+03:00",
+          "message": "c001 bootstrap mixed repo",
+          "sha": "cbccf9e9055626e709c22431bbe3cc2459b7203e"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T08:42:23+03:00",
+          "message": "c003 release branch clean",
+          "sha": "20278375c05d9b98766a2a6aa74437f52e73e690"
+        }
+      ]
+    },
+    "lineCount": 9937,
+    "repoName": "control-plane-overlay-repo",
+    "scenarioId": "M-V8-006"
+  },
+  "scenario": {
+    "domain": "Infra-heavy control-plane repo with live runtime misuse, hotfix branches, and noisy dormant overlays.",
+    "id": "M-V8-006",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "control-plane-overlay-repo",
+    "stack": "App + infra + helm + kustomize + terraform + CI"
+  }
+}

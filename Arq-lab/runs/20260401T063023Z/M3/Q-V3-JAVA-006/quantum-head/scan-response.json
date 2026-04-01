@@ -1,0 +1,37 @@
+{
+  "applicationId": "5ed40c0f-510a-4b8f-8690-7dc28977b3c2",
+  "applicationKey": "arq-lab-q-v3-java-006",
+  "applicationName": "safe-wrapper-java",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": null,
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T06:33:46.390385Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/safe-wrapper-java.git",
+  "failureCode": "SCAN_EXECUTION_FAILED",
+  "failureMessage": "io/arq/v2/core/scan/GitRepositoryWorkspaceAcquirer$TempWorkspace",
+  "filesScanned": 0,
+  "filesTotal": 0,
+  "finishedAt": "2026-04-01T06:33:48.175380Z",
+  "id": "871fec60-1f5f-4962-a976-6bc07dfced2f",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "quantum",
+      "occurrenceCount": 0,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": null,
+  "startedAt": "2026-04-01T06:33:46.621429Z",
+  "status": "FAILED",
+  "summary": {},
+  "workerNode": "arq-v2-worker@ENES"
+}

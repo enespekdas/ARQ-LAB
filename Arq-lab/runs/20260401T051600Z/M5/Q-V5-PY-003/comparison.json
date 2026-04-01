@@ -1,0 +1,162 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9401709401709402,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 15,
+      "fixtures": 0,
+      "live business code": 89,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4730,
+      "tests": 34,
+      "total": 5031,
+      "vendor/generated": 147
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-python\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-PY-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-python\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_WITH_NOISE",
+  "finalVerdictReason": "1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "return requests.get(url, verify=False, timeout=5).text",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "39926f10-26e2-4aca-89e1-003ca8c7be56",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/clients/partner_sync_client.py",
+        "queryFamily": "python.ssl",
+        "rawEvidenceJson": "{\"queryRef\":\"python.ssl.verification-bypass\",\"callName\":\"requests.get\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"requests.verify=False\",\"importStyle\":\"MODULE\",\"argumentName\":\"verify\",\"assignedValue\":false,\"valueSource\":\"LITERAL\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "requests.verify=False",
+        "ruleKey": "quantum.arq-q-0305-python",
+        "ruleName": "requests: verify=False (certificate validation disabled)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "python:tls:requests.get:requests.verify=False",
+        "severity": "CRITICAL"
+      },
+      "expected": "verify-false-live"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M5",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 1,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 1
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "return requests.get(url, verify=False, timeout=5).text",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1b5c4f58-6cbd-4c30-b746-25856a4217b7",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/clients/partner_sync_client.py",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0304-python",
+      "ruleName": "aiohttp / httpx: SSL verification disabled",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "CRITICAL"
+    }
+  ],
+  "scenarioId": "Q-V5-PY-003",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "return requests.get(url, verify=False, timeout=5).text",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1b5c4f58-6cbd-4c30-b746-25856a4217b7",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/clients/partner_sync_client.py",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0304-python",
+      "ruleName": "aiohttp / httpx: SSL verification disabled",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "return requests.get(url, verify=False, timeout=5).text",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1b5c4f58-6cbd-4c30-b746-25856a4217b7",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/clients/partner_sync_client.py",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0304-python",
+      "ruleName": "aiohttp / httpx: SSL verification disabled",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "CRITICAL"
+    }
+  ],
+  "verdict": "PASS_WITH_NOISE",
+  "verdictClass": "PASS_WITH_NOISE"
+}

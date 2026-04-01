@@ -475,16 +475,16 @@ partner-rename-lineage
 
 Branches:
 
-- `main` tip: `980444268b69191370f718e8199a382142bb61d3`
+- `main` tip: `d836fc1997589bf4c91fe7a263a78fa89620fcfe`
 
 Commit order:
 
-- `eee20a4e94cebd7654c9439829f5d0b3f8834796` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `6b79920503932b0f1238f9e0c6529432eb6a5c9d` `c002 add transient partner token`: introduces an intended signal.
-- `8dc36b7dfb30de4985866db073f4e3740389e30a` `c003 move token archive into history package`: scenario state change.
-- `b6523c66f6029d733673f3f28480a222efef0ac0` `c004 add rename plan noise`: introduces an intended signal.
-- `c5db2b3613ebf53d656942f942800fc67a911c8c` `c005 remove token after archive migration`: removes or neutralizes a prior signal.
-- `980444268b69191370f718e8199a382142bb61d3` `c006 unrelated refactor`: scenario state change.
+- `50e236e7acfba252409dcea63fd324d7c320b0c2` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `a493818d8d881d0cf2294254b06054806fcb7452` `c002 add transient partner token`: introduces an intended signal.
+- `2967efcfb8e90765a008ad684b2e4ac2f795eeb7` `c003 move token archive into history package`: scenario state change.
+- `6d14c66dc3165b63f8c8554c660b77b65893f3c1` `c004 add rename plan noise`: introduces an intended signal.
+- `886cbda84745ecae76a78a7f805a6c403428ce25` `c005 remove token after archive migration`: removes or neutralizes a prior signal.
+- `d836fc1997589bf4c91fe7a263a78fa89620fcfe` `c006 unrelated refactor`: scenario state change.
 
 Expected final head/history state:
 

@@ -387,7 +387,7 @@ legacy-payment-crypto-java
 | src/main/java/com/arq/legacypaymentcryptojava/repository/PayoutRepository.java | live-code | 21 | Persistence or data-access helper for Payout Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
-| src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java | live-code | 3 | Runtime business module contributing to Batch Reconciliation Cipher. | yes | yes | no | yes | yes | no |
+| src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java | live-code | 3 | Runtime business module contributing to Batch Reconciliation Cipher. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java | live-code | 3 | Runtime business module contributing to Legacy Envelope Cipher. | yes | yes | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java | live-code | 3 | Runtime business module contributing to Legacy Password Factory. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java | live-code | 3 | Runtime business module contributing to Secure Envelope Cipher. | no | yes | no | yes | yes | no |
@@ -422,7 +422,7 @@ legacy-payment-crypto-java
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2494 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 791 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 788 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 207 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -448,7 +448,6 @@ legacy-payment-crypto-java
 
 ## 7. Near-Real Negative Surfaces
 
-- `src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
@@ -654,7 +653,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Batch Reconciliation Cipher. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -748,9 +747,7 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java` => `quantum.arq-q-0106-java` (INVENTORY/INFO)
-- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java` => `quantum.arq-q-0107-java` (INVENTORY/INFO)
-- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java` => `quantum.arq-q-0108-java` (INVENTORY/INFO)
+- None in the current run.
 
 ## 14. Explainability Expectations
 

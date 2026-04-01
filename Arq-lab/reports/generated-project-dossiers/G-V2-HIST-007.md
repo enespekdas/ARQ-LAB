@@ -620,18 +620,18 @@ feature-cherrypick-lineage
 
 Branches:
 
-- `feature/customer-hotfix` tip: `541f51091eec74007c5c3373e322133acf09a0e8`; diverges from `main` at `6825250c463f962d9855cb108340066685a94df5`
-- `hotfix/cherry-picked-docs` tip: `dba2360a7268a1eb5b910c2b36c6f0052419a04c`; diverges from `main` at `6825250c463f962d9855cb108340066685a94df5`
-- `main` tip: `6825250c463f962d9855cb108340066685a94df5`
-- `release/2026.05` tip: `145d407c2b37fad075431bf66a1426a15327d9f7`; diverges from `main` at `6825250c463f962d9855cb108340066685a94df5`
+- `feature/customer-hotfix` tip: `e637bddaf9db2005276d17d7f47201b127172931`; diverges from `main` at `42df56331e9214176473255ec84b5fbd77d2806d`
+- `hotfix/cherry-picked-docs` tip: `0074827606b05078d58e9c8c2accc389d277fdd6`; diverges from `main` at `42df56331e9214176473255ec84b5fbd77d2806d`
+- `main` tip: `42df56331e9214176473255ec84b5fbd77d2806d`
+- `release/2026.05` tip: `636cfec1eac6f98c5ebf85b9d16752aeb028f79b`; diverges from `main` at `42df56331e9214176473255ec84b5fbd77d2806d`
 
 Commit order:
 
-- `6825250c463f962d9855cb108340066685a94df5` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `1a37850e66f750caa592028d2f86e037b8a6b3dd` `c002 temporary secret on feature branch`: introduces an intended signal.
-- `145d407c2b37fad075431bf66a1426a15327d9f7` `c004 release branch clean state`: removes or neutralizes a prior signal.
-- `541f51091eec74007c5c3373e322133acf09a0e8` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
-- `dba2360a7268a1eb5b910c2b36c6f0052419a04c` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
+- `56f0a4ad095b36e4d44ad68b116d0708071d9fe7` `c002 temporary secret on feature branch`: introduces an intended signal.
+- `42df56331e9214176473255ec84b5fbd77d2806d` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `e637bddaf9db2005276d17d7f47201b127172931` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
+- `636cfec1eac6f98c5ebf85b9d16752aeb028f79b` `c004 release branch clean state`: removes or neutralizes a prior signal.
+- `0074827606b05078d58e9c8c2accc389d277fdd6` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 

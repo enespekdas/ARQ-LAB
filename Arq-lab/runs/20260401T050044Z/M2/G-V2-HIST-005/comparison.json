@@ -1,0 +1,93 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-005\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9248138361758347,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-005\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-005\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 12,
+      "fixtures": 0,
+      "live business code": 87,
+      "live config": 1,
+      "scripts": 1,
+      "synthetic filler / inflation content": 3850,
+      "tests": 32,
+      "total": 4163,
+      "vendor/generated": 165
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\canonical-secret-lineage\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-005.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\canonical-secret-lineage\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "PARTNER_RUNTIME_TOKEN = \"Ab9K************************6Fq2\"",
+        "exposureScope": "HISTORY_ONLY",
+        "findingId": "863a3900-ab6c-4925-a46d-2f9b9da9b08b",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": false,
+        "primaryFilePath": "ops/runtime/partner_runtime.env",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.generic-api-key",
+        "ruleName": "Generic API Key",
+        "scanMode": "REF_HISTORY",
+        "scanPlanName": "guardian-ref-history-main",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "history-runtime-token"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "missingExpectedFindings": [],
+  "module": "guardian",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "G-V2-HIST-005",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

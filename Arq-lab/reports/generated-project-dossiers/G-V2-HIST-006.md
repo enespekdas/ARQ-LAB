@@ -477,17 +477,17 @@ partner-relocation-lineage
 
 Branches:
 
-- `main` tip: `1e18c3688db861100b61f8cb4ad1e7e9382137d7`
+- `main` tip: `58a4057c17fe803bc01dada1f8488d29163ab1fe`
 
 Commit order:
 
-- `e24c031e479f207764613ccac1cec92d29b58d81` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `25de8cfd1b5b366e1363bb98241abfcea5b59fdb` `c002 add transient relocation token`: introduces an intended signal.
-- `f2a33394df21d1de3732d711e238591cb8089440` `c003 move token into relocation archive`: scenario state change.
-- `6404f5a5b4575987db04ab0719e3389e1e667646` `c004 add relocation plan noise`: introduces an intended signal.
-- `d0085698f042d99f2f2fd67ac1c4278b2f1af80c` `c005 remove relocation token from head`: removes or neutralizes a prior signal.
-- `303964e989fa4e78521b15da0d0f0cb3224e14f4` `c006 unrelated relocation cleanup`: removes or neutralizes a prior signal.
-- `1e18c3688db861100b61f8cb4ad1e7e9382137d7` `c007 add safe metrics`: introduces an intended signal.
+- `9bc8dea0007f425981f1a49202950187b47a924f` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `5656b98a372ddabb4312d8ab8d61f311832d3f26` `c002 add transient relocation token`: introduces an intended signal.
+- `0932fa5bebc2ff952889184b67f7cdd1308fc54a` `c003 move token into relocation archive`: scenario state change.
+- `cd1d606a0c6eda95259cba41614eacacdc0da4a3` `c004 add relocation plan noise`: introduces an intended signal.
+- `c057d790f215967c0867d58f103e3382a80b9f8b` `c005 remove relocation token from head`: removes or neutralizes a prior signal.
+- `7d11478fcfd3d1d01b37b96d91594291919cb989` `c006 unrelated relocation cleanup`: removes or neutralizes a prior signal.
+- `58a4057c17fe803bc01dada1f8488d29163ab1fe` `c007 add safe metrics`: introduces an intended signal.
 
 Expected final head/history state:
 

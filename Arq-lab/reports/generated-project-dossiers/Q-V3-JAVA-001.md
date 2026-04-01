@@ -388,11 +388,11 @@ identity-gateway-java
 | src/main/java/com/arq/identitygatewayjava/repository/PayoutRepository.java | live-code | 21 | Persistence or data-access helper for Payout Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
-| src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java | live-code | 3 | Runtime business service implementing Legacy Digest Service logic. | yes | yes | no | yes | yes | no |
+| src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java | live-code | 3 | Runtime business service implementing Legacy Digest Service logic. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java | live-code | 3 | Runtime business module contributing to Password Key Factory. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/ResetTokenService.java | live-code | 3 | Runtime business service implementing Reset Token Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/SecureDigestService.java | live-code | 3 | Runtime business service implementing Secure Digest Service logic. | no | yes | no | yes | yes | no |
-| src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java | live-code | 3 | Runtime business service implementing Token Cipher Service logic. | yes | yes | no | yes | yes | no |
+| src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java | live-code | 3 | Runtime business service implementing Token Cipher Service logic. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/service/DisputeService.java | live-code | 19 | Runtime business service implementing Dispute Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/service/InvoiceService.java | live-code | 19 | Runtime business service implementing Invoice Service logic. | no | no | no | yes | yes | no |
@@ -424,7 +424,7 @@ identity-gateway-java
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2508 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 808 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 804 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 208 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -456,10 +456,8 @@ identity-gateway-java
 
 ## 7. Near-Real Negative Surfaces
 
-- `src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/identitygatewayjava/security/SecureDigestService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -662,7 +660,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Legacy Digest Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -700,7 +698,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business service implementing Token Cipher Service logic. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -764,9 +762,7 @@ Inflation disclosure:
 
 ### may_find_review
 
-- `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java` => `quantum.arq-q-0106-java` (INVENTORY/INFO)
-- `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java` => `quantum.arq-q-0107-java` (INVENTORY/INFO)
-- `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java` => `quantum.arq-q-0108-java` (INVENTORY/INFO)
+- None in the current run.
 
 ## 14. Explainability Expectations
 

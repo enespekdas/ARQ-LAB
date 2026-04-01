@@ -870,7 +870,7 @@ platform-mesh-monorepo
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | validation/runnability-logs/test-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/test-02.log | generated | 34 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/runnability-logs/test-03.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-03.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | vendor/third-party-sdk.js | vendor | 1 | Vendored or copied artifact used to simulate third-party noise around Third Party Sdk. | no | no | yes | no | no | no |
@@ -1128,11 +1128,11 @@ platform-mesh-monorepo
 
 Branches:
 
-- `main` tip: `a71d74f254b98eedba3f6886eed507299ded861e`
+- `main` tip: `641be59878ab15122a011099cff683caae1973db`
 
 Commit order:
 
-- `a71d74f254b98eedba3f6886eed507299ded861e` `bootstrap M-V8-003`: initial clean or baseline assembly.
+- `641be59878ab15122a011099cff683caae1973db` `bootstrap M-V8-003`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1410,9 +1410,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `14771`
+- Total LOC considered for authored/generated project content: `14777`
 - Synthetic filler / inflation LOC: `8030`
-- Synthetic filler ratio: `54.36%`
+- Synthetic filler ratio: `54.34%`
 
 | category | LOC |
 | --- | ---: |
@@ -1422,7 +1422,7 @@ Expected final head/history state:
 | docs | 47 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 345 |
+| vendor/generated | 351 |
 | synthetic filler / inflation content | 8030 |
 
 Inflation disclosure:

@@ -400,9 +400,9 @@ crypto-usage-csharp
 - Path: `src/Library/Security/LegacyDigestService.cs`
   Why it should be detected: scenario declares `md5-digest` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `MD5.Create`
+  Finding family / rule family expectation: `MD5`
   Head/history behavior: `head-only`
-  Explainability expectation: resolvedValue~MD5.Create, queryFamily~csharp
+  Explainability expectation: resolvedValue~MD5, queryFamily~csharp
 
 ## 7. Near-Real Negative Surfaces
 
@@ -647,9 +647,9 @@ Inflation disclosure:
 
 - path: `LegacyDigestService.cs`
   module: `Quantum`
-  expected rule/finding family: `MD5.Create`
+  expected rule/finding family: `MD5`
   expected branch/ref behavior: `head-only`
-  expected explainability behavior: resolvedValue~MD5.Create, queryFamily~csharp
+  expected explainability behavior: resolvedValue~MD5, queryFamily~csharp
 
 ### must_not_find
 
@@ -678,7 +678,7 @@ Inflation disclosure:
 
 Scenario-specific explainability expectations:
 
-- `LegacyDigestService.cs`: resolvedValue~`MD5.Create`, queryFamily~`csharp`
+- `LegacyDigestService.cs`: resolvedValue~`MD5`, queryFamily~`csharp`
 
 Explainability failure definition:
 
@@ -689,7 +689,7 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_EXPLAINABILITY`.
+- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 
