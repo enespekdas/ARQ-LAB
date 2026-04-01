@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-31T21:23:27.710372800Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "976108be-d25c-4fc6-b705-84b4ca77ebe7",
+      "applicationKey": "arq-lab-m-v8-004",
+      "applicationName": "control-plane-infra-repo",
+      "branchName": "main",
+      "commitSha": "ba2777c6df8b75b1c6993ccd95bc1a811c3dc8c7",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "2a8e829d-b064-45fb-84ad-9188e5e8b92d",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-03-31T21:23:27.186595Z",
+      "lastSeenAt": "2026-03-31T21:23:27.186595Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/config/production.env",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "40a86266-e54a-4cf8-898b-2ef169457a13",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

@@ -270,8 +270,10 @@ platform-mesh-monorepo
 |       |-- runbook-72.md
 |       `-- runbook-73.md
 |-- packages
-|   `-- shared-fixtures
-|       `-- seed.json
+|   |-- shared-fixtures
+|   |   `-- seed.json
+|   `-- shared-libs
+|       `-- README.md
 |-- scripts
 |   `-- smoke.ps1
 |-- services
@@ -709,6 +711,7 @@ platform-mesh-monorepo
 | ops/playbooks/runbook-72.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-73.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | packages/shared-fixtures/seed.json | generated | 1 | Generated or derived project artifact related to Seed. | no | no | yes | no | no | no |
+| packages/shared-libs/README.md | docs | 3 | Documentation or explanatory material for Readme. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | no | yes |
 | services/platform-java/.gitignore | generated | 8 | Generated or derived project artifact related to .Gitignore. | no | no | yes | yes | yes | no |
 | services/platform-java/README.md | docs | 11 | Documentation or explanatory material for Readme. | no | no | no | yes | yes | no |
@@ -856,9 +859,9 @@ platform-mesh-monorepo
 | validation/expected-findings.json | generated | 54 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 5448 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1533 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 469 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 5462 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1536 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 471 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-02.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -1125,11 +1128,11 @@ platform-mesh-monorepo
 
 Branches:
 
-- `main` tip: `a2af43db9b09372e42001663c067f859c3bd6f1f`
+- `main` tip: `a71d74f254b98eedba3f6886eed507299ded861e`
 
 Commit order:
 
-- `a2af43db9b09372e42001663c067f859c3bd6f1f` `bootstrap M-V8-003`: initial clean or baseline assembly.
+- `a71d74f254b98eedba3f6886eed507299ded861e` `bootstrap M-V8-003`: initial clean or baseline assembly.
 
 Expected final head/history state:
 
@@ -1407,16 +1410,16 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `14768`
+- Total LOC considered for authored/generated project content: `14771`
 - Synthetic filler / inflation LOC: `8030`
-- Synthetic filler ratio: `54.37%`
+- Synthetic filler ratio: `54.36%`
 
 | category | LOC |
 | --- | ---: |
 | live business code | 1552 |
 | live config | 7 |
 | tests | 0 |
-| docs | 44 |
+| docs | 47 |
 | scripts | 1 |
 | fixtures | 0 |
 | vendor/generated | 345 |

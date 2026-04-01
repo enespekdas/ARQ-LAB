@@ -15,8 +15,8 @@
 - winningSource: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.env`
 - finalValueEmpty: `False`
 - finalLength: `40`
-- maskedPreview: `ghp_...ARjt`
-- sha256: `0bd21eeeb076c53723c948b96dc84d45a773097c11c813ace73b7c28ced159e6`
+- maskedPreview: `ghp_...XkJR`
+- sha256: `092c4d5ee6bca04a3ff88d4983fbe5fb08e7d511cd48a2f460032a0b91c52baa`
 - quotesDetected: `False`
 - inlineCommentDetected: `False`
 - whitespaceChanged: `False`
@@ -67,13 +67,4 @@
 - status: `200`
 - outcome: `success`
 - viewerLogin: `enespekdas`
-- error: 
-
-## Probe Repo
-
-- name: `arq-lab-github-auth-probe`
-- htmlUrl: `https://github.com/ARQ-Sec/arq-lab-github-auth-probe`
-- cloneUrl: `https://github.com/ARQ-Sec/arq-lab-github-auth-probe.git`
-- createStatus: `success`
-- pushStatus: `success`
 - error:

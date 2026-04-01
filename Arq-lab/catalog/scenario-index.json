@@ -294,5 +294,197 @@
     "repo": "control-plane-infra-repo",
     "stack": "App + infra + helm + kustomize + terraform + CI",
     "summary": "Infra-heavy mixed repo with active insecure runtime config, branch divergence, and numerous protected-negative surfaces."
+  },
+  {
+    "id": "G-V2-HIST-006",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "partner-relocation-lineage",
+    "stack": "Java / Spring Boot",
+    "summary": "Guardian history handling for moved and reverted secret lineage on main."
+  },
+  {
+    "id": "G-V2-HIST-007",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "feature-cherrypick-lineage",
+    "stack": "TypeScript / Node",
+    "summary": "Guardian branch divergence and cherry-pick handling across feature and release refs."
+  },
+  {
+    "id": "G-V2-HIST-008",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "pem-lineage-separation",
+    "stack": "Python + ops PKI",
+    "summary": "Guardian private-key lineage across history without confusing public cert or CSR surfaces."
+  },
+  {
+    "id": "G-V2-HIST-009",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo": "canonical-wrap-lineage",
+    "stack": "Python + ops runtime",
+    "summary": "Guardian ref-state handling when the same token evolves across formatting variants before cleanup."
+  },
+  {
+    "id": "Q-V3-JAVA-005",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "crypto-usage-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum precision between import-only crypto inventory and actionable weak-hash use in Java."
+  },
+  {
+    "id": "Q-V3-JAVA-006",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "safe-wrapper-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum should catch real ECB usage while keeping secure scary wrappers clean."
+  },
+  {
+    "id": "Q-V3-CS-004",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "crypto-usage-csharp",
+    "stack": "C# / .NET 8",
+    "summary": "Quantum precision for C# crypto inventory versus real weak-hash use."
+  },
+  {
+    "id": "Q-V4-PY-005",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "crypto-usage-python",
+    "stack": "Python / service helper library",
+    "summary": "Quantum should distinguish Python crypto inventory from actionable hashlib misuse."
+  },
+  {
+    "id": "Q-V4-TS-005",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "crypto-builder-node",
+    "stack": "TypeScript / Node",
+    "summary": "Quantum should preserve semantic precision through TypeScript alias and return-based weak-hash flows."
+  },
+  {
+    "id": "Q-V4-GO-003",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "crypto-runtime-go",
+    "stack": "Go / service runtime",
+    "summary": "Quantum should catch real Go md5/sha1 runtime use without treating docs and tests as live signals."
+  },
+  {
+    "id": "Q-V5-JAVA-005",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "tls-helper-chain-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum should follow helper alias flows for hostname verifier and trust manager misuse in Java."
+  },
+  {
+    "id": "Q-V5-JAVA-006",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "safe-wrapper-tls-java",
+    "stack": "Java / Spring Boot",
+    "summary": "Quantum should catch the live insecure TLS path while keeping safe scary wrappers clean."
+  },
+  {
+    "id": "Q-V5-PY-003",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo": "tls-usage-python",
+    "stack": "Python / worker service",
+    "summary": "Quantum should keep active verify=False while ignoring example, comment, and test-only surfaces."
+  },
+  {
+    "id": "Q-V6-TS-002",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "tls-wrapper-node",
+    "stack": "TypeScript / Node",
+    "summary": "Quantum should preserve TypeScript TLS misuse semantics through returned wrapper and spread-based config flows."
+  },
+  {
+    "id": "Q-V6-CS-003",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "tls-usage-csharp",
+    "stack": "C# / .NET 8",
+    "summary": "Quantum should keep the live DangerousAcceptAny registration while leaving import-only C# surfaces clean."
+  },
+  {
+    "id": "Q-V6-CONFIG-005",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "live-overlay-config-matrix",
+    "stack": "Config-heavy repo",
+    "summary": "Quantum should keep active runtime TLS misconfig while ignoring dormant overlays and examples."
+  },
+  {
+    "id": "N-V7-DOCS-009",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "masked-docs-repo",
+    "stack": "Docs / tutorials / runbooks",
+    "summary": "Masked and placeholder secret-looking docs values should remain clean."
+  },
+  {
+    "id": "N-V7-DOCS-010",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "public-key-docs-repo",
+    "stack": "Docs / PKI / JWKS",
+    "summary": "Public-key and PKI docs surfaces should remain clean."
+  },
+  {
+    "id": "N-V7-VENDOR-011",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "generated-noise-repo",
+    "stack": "Vendor / generated / minified / lockfile",
+    "summary": "Vendor and generated noise with secret-looking strings should remain clean."
+  },
+  {
+    "id": "N-V7-SAFE-012",
+    "milestone": "M7",
+    "module": "both",
+    "repo": "safe-wrapper-secrets-repo",
+    "stack": "Safe wrappers / vault refs / scary naming",
+    "summary": "Safe wrappers and vault references should remain clean despite scary naming."
+  },
+  {
+    "id": "M-V8-005",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "enterprise-mesh-monorepo",
+    "stack": "Java + Node + Python + vendor/generated monorepo",
+    "summary": "Mixed enterprise monorepo with live secrets and crypto misuse across apps, libs, generated, vendor, and fixtures."
+  },
+  {
+    "id": "M-V8-006",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "control-plane-overlay-repo",
+    "stack": "App + infra + helm + kustomize + terraform + CI",
+    "summary": "Mixed infra repo with live GitHub-backed runtime misuse plus dormant examples, fixtures, and CI surfaces."
+  },
+  {
+    "id": "M-V8-007",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "workspace-history-mixed-repo",
+    "stack": "Polyrepo-style workspace with shared libs and protected-negative surfaces",
+    "summary": "Mixed workspace repo stressing head/history/ref-state alongside generated, vendor, and fixture noise."
+  },
+  {
+    "id": "M-V8-008",
+    "milestone": "M8",
+    "module": "both",
+    "repo": "branch-hotfix-mixed-repo",
+    "stack": "Mixed repo with branches, infra overlays, and dormant examples",
+    "summary": "Mixed repo stressing branch-only Guardian exposure plus live Quantum config misuse amid generated and docs noise."
   }
 ]

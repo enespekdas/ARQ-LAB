@@ -251,7 +251,7 @@ data-sync-python
 | app/models/retry.py | live-code | 6 | Runtime business module contributing to Retry. | no | no | no | yes | yes | no |
 | app/models/routing.py | live-code | 6 | Runtime business module contributing to Routing. | no | no | no | yes | yes | no |
 | app/models/templates.py | live-code | 6 | Runtime business module contributing to Templates. | no | no | no | yes | yes | no |
-| app/security/unverified_ssl_context.py | live-code | 4 | Runtime business module contributing to Unverified Ssl Context. | yes | yes | no | yes | yes | no |
+| app/security/unverified_ssl_context.py | live-code | 4 | Runtime business module contributing to Unverified Ssl Context. | yes | no | no | yes | yes | no |
 | app/services/audit_service.py | live-code | 4 | Runtime business service implementing Audit Service logic. | no | no | no | yes | yes | no |
 | app/services/delivery_service.py | live-code | 4 | Runtime business service implementing Delivery Service logic. | no | no | no | yes | yes | no |
 | app/services/dispatch_service.py | live-code | 4 | Runtime business service implementing Dispatch Service logic. | no | no | no | yes | yes | no |
@@ -405,7 +405,7 @@ data-sync-python
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2466 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 766 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 765 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 192 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 45 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -433,7 +433,6 @@ data-sync-python
 
 - `app/clients/partner_pull_client.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `app/clients/secure_partner_pull_client.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `app/security/unverified_ssl_context.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -641,7 +640,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Unverified Ssl Context. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text

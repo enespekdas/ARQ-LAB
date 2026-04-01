@@ -1,26 +1,26 @@
 {
   "byMilestone": {
     "M6": {
-      "cleanExpectedMatches": 6,
+      "cleanExpectedMatches": 10,
       "explainabilityFailures": 1,
       "mayFindReview": 0,
       "missingExpectedFindings": 0,
-      "mustNotFindViolations": 2,
-      "noiseCount": 8,
+      "mustNotFindViolations": 0,
+      "noiseCount": 6,
       "refStateFailures": 0,
-      "sameFileDifferentSignalFindings": 3,
-      "sameSurfaceExtraFindings": 5,
-      "scenarios": 4,
-      "unexpectedFindings": 8,
-      "unexpectedRegexOnlyFindings": 5,
+      "sameFileDifferentSignalFindings": 5,
+      "sameSurfaceExtraFindings": 1,
+      "scenarios": 7,
+      "unexpectedFindings": 6,
+      "unexpectedRegexOnlyFindings": 1,
       "verdicts": {
-        "FAIL_EXPLAINABILITY": 0,
+        "FAIL_EXPLAINABILITY": 1,
         "FAIL_FN": 0,
-        "FAIL_FP": 1,
+        "FAIL_FP": 0,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
-        "PASS_CLEAN": 2,
-        "PASS_WITH_NOISE": 1
+        "PASS_CLEAN": 3,
+        "PASS_WITH_NOISE": 3
       }
     }
   },
@@ -143,14 +143,73 @@
       "verdict": "PASS_CLEAN",
       "verdictClass": "PASS_CLEAN"
     },
+    "Q-V6-CONFIG-005": {
+      "cleanExpectedMatches": 2,
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-005\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "fillerRatio": 0.9660678642714571,
+      "finalVerdict": "PASS_CLEAN",
+      "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-005\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-005\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 16,
+        "fixtures": 0,
+        "live business code": 0,
+        "live config": 6,
+        "scripts": 2,
+        "synthetic filler / inflation content": 4840,
+        "tests": 3,
+        "total": 5010,
+        "vendor/generated": 135
+      },
+      "mayFindReview": 0,
+      "milestone": "M6",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 2,
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 0,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 0
+      },
+      "noiseCount": 0,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 2,
+        "rawFindings": 2
+      },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\live-overlay-config-matrix\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\live-overlay-config-matrix\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 1,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CONFIG-005.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\live-overlay-config-matrix\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 0,
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "PASS_CLEAN",
+      "verdictClass": "PASS_CLEAN"
+    },
     "Q-V6-CS-002": {
-      "cleanExpectedMatches": 0,
+      "cleanExpectedMatches": 1,
       "dossierMissing": false,
       "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-002\\validation\\generated-project-dossier.md",
-      "explainabilityFailures": 1,
+      "explainabilityFailures": 0,
       "fillerRatio": 0.9683873549419768,
-      "finalVerdict": "FAIL_FP",
-      "finalVerdictReason": "2 must-not-find violation(s) hit protected or declared-clean surfaces; 1 expected finding(s) had candidates but failed semantic explainability requirements; 7 unexpected/noisy finding(s) remained after matching (same-surface-extra=5, same-file-different-signal=2, regex-only=5)",
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "2 unexpected/noisy finding(s) remained after matching (same-file-different-signal=2)",
       "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-002\\validation\\generated-file-manifest.json",
       "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-002\\validation\\generated-tree.txt",
       "locComposition": {
@@ -169,19 +228,19 @@
       "missingExpectedFindings": 0,
       "mustFindExpected": 1,
       "mustFindMissing": 0,
-      "mustNotFindViolations": 2,
+      "mustNotFindViolations": 0,
       "noiseBreakdown": {
         "reviewOnlyFindings": 0,
         "sameFileDifferentSignalFindings": 2,
-        "sameSurfaceExtraFindings": 5,
+        "sameSurfaceExtraFindings": 0,
         "totallyUnexpectedFindings": 0,
-        "unexpectedRegexOnlyFindings": 5
+        "unexpectedRegexOnlyFindings": 0
       },
-      "noiseCount": 7,
+      "noiseCount": 2,
       "normalizationStats": {
         "collapsedDuplicates": 0,
-        "normalizedFindings": 9,
-        "rawFindings": 9
+        "normalizedFindings": 3,
+        "rawFindings": 3
       },
       "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\admin-integrations-csharp\\validation\\runnability-logs",
       "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\admin-integrations-csharp\\validation\\generated-project-dossier.md",
@@ -196,11 +255,70 @@
       },
       "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\admin-integrations-csharp\\validation\\runnability-logs",
       "sameFileDifferentSignalFindings": 2,
-      "sameSurfaceExtraFindings": 5,
-      "unexpectedFindings": 7,
-      "unexpectedRegexOnlyFindings": 5,
-      "verdict": "FAIL_FP",
-      "verdictClass": "FAIL_FP"
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 2,
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
+    },
+    "Q-V6-CS-003": {
+      "cleanExpectedMatches": 1,
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-003\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "fillerRatio": 0.9668397922493008,
+      "finalVerdict": "PASS_WITH_NOISE",
+      "finalVerdictReason": "2 unexpected/noisy finding(s) remained after matching (same-file-different-signal=2)",
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-003\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-003\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 12,
+        "fixtures": 0,
+        "live business code": 10,
+        "live config": 0,
+        "scripts": 0,
+        "synthetic filler / inflation content": 4840,
+        "tests": 2,
+        "total": 5006,
+        "vendor/generated": 132
+      },
+      "mayFindReview": 0,
+      "milestone": "M6",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 1,
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 2,
+        "sameSurfaceExtraFindings": 0,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 0
+      },
+      "noiseCount": 2,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 3,
+        "rawFindings": 3
+      },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-csharp\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-csharp\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 1,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CS-003.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-csharp\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 2,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 2,
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "PASS_WITH_NOISE",
+      "verdictClass": "PASS_WITH_NOISE"
     },
     "Q-V6-TS-001": {
       "cleanExpectedMatches": 2,
@@ -260,16 +378,75 @@
       "unexpectedRegexOnlyFindings": 0,
       "verdict": "PASS_CLEAN",
       "verdictClass": "PASS_CLEAN"
+    },
+    "Q-V6-TS-002": {
+      "cleanExpectedMatches": 0,
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-002\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 1,
+      "fillerRatio": 0.48760830143058637,
+      "finalVerdict": "FAIL_EXPLAINABILITY",
+      "finalVerdictReason": "1 expected finding(s) had candidates but failed semantic explainability requirements; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1, regex-only=1)",
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-002\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-002\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 12,
+        "fixtures": 0,
+        "live business code": 28,
+        "live config": 0,
+        "scripts": 1,
+        "synthetic filler / inflation content": 4840,
+        "tests": 16,
+        "total": 9926,
+        "vendor/generated": 238
+      },
+      "mayFindReview": 0,
+      "milestone": "M6",
+      "missingExpectedFindings": 0,
+      "mustFindExpected": 1,
+      "mustFindMissing": 0,
+      "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 1,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 1
+      },
+      "noiseCount": 1,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 1,
+        "rawFindings": 1
+      },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-wrapper-node\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-wrapper-node\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 1,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-TS-002.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-wrapper-node\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 1,
+      "unexpectedFindings": 1,
+      "unexpectedRegexOnlyFindings": 1,
+      "verdict": "FAIL_EXPLAINABILITY",
+      "verdictClass": "FAIL_EXPLAINABILITY"
     }
   },
-  "scenarioCount": 4,
+  "scenarioCount": 7,
   "verdicts": {
-    "FAIL_EXPLAINABILITY": 0,
+    "FAIL_EXPLAINABILITY": 1,
     "FAIL_FN": 0,
-    "FAIL_FP": 1,
+    "FAIL_FP": 0,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,
-    "PASS_CLEAN": 2,
-    "PASS_WITH_NOISE": 1
+    "PASS_CLEAN": 3,
+    "PASS_WITH_NOISE": 3
   }
 }

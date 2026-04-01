@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-03-31T21:00:16.285886Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "d899e824-c771-4226-a924-464867497c74",
+      "applicationKey": "arq-lab-g-v2-hist-002",
+      "applicationName": "partner-branch-divergence",
+      "branchName": "feature/partner-hotfix",
+      "commitSha": "a0cd849d86871a88027319b95ed8217bc2b69d55",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "43c9a9fe-ebd5-4eb1-ac7b-2d508c4553d0",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-03-31T21:00:15.338476Z",
+      "lastSeenAt": "2026-03-31T21:00:15.338476Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/partner/bootstrap/branchLeak.ts",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "40a86266-e54a-4cf8-898b-2ef169457a13",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

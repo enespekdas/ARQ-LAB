@@ -26,9 +26,9 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, app, deploy, docs, kustomize, ops, scripts, sql, terraform, tests, validation`
+- Major components: `.github, app, deploy, docs, helm, kustomize, ops, scripts, sql, terraform, tests, validation`
 - Runtime role: `Control-plane repo with live infra config, hotfix branches, CI workflows, and example overlays.`
-- Config flow: `.github/workflows/deploy.yml, app/config/production.env, deploy/envoy.yaml, terraform/modules/edge/variables.tf`
+- Config flow: `.github/workflows/deploy.yml, app/config/production.env, deploy/envoy.yaml, helm/control-plane/values.yaml, terraform/modules/edge/variables.tf`
 - Secret flow: `feature-secret.txt, production.env`
 - Crypto/TLS flow if relevant: `deploy/envoy.yaml, legacyDigest.ts`
 - Test surfaces: `tests/test_audit_service.py, tests/test_delivery_service.py, tests/test_dispatch_service.py, tests/test_metrics_service.py, tests/test_preferences_service.py, tests/test_retry_service.py, tests/test_routing_service.py, tests/test_templates_service.py`
@@ -150,6 +150,9 @@ control-plane-infra-repo
 |       |-- section-76.md
 |       |-- section-77.md
 |       `-- section-78.md
+|-- helm
+|   `-- control-plane
+|       `-- values.yaml
 |-- kustomize
 |   `-- fixtures
 |       `-- dev.env
@@ -531,6 +534,7 @@ control-plane-infra-repo
 | docs/architecture/section-76.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-77.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-78.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
+| helm/control-plane/values.yaml | live-config | 2 | Runtime configuration carrying environment or deployment settings for Values. | no | no | no | yes | no | no |
 | kustomize/fixtures/dev.env | generated | 1 | Generated or derived project artifact related to Dev. | no | no | yes | no | no | no |
 | ops/console/.gitignore | generated | 8 | Generated or derived project artifact related to .Gitignore. | no | no | yes | yes | yes | no |
 | ops/console/README.md | docs | 11 | Documentation or explanatory material for Readme. | no | no | no | yes | yes | no |
@@ -749,9 +753,9 @@ control-plane-infra-repo
 | validation/expected-findings.json | generated | 54 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 4650 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1282 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 384 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 4664 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1286 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 387 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 45 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 41 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-02.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -988,17 +992,17 @@ control-plane-infra-repo
 
 Branches:
 
-- `feature/charts-cleanup` tip: `05a03e12762dc8035ff6352c1320eb8fa09515ae`; diverges from `main` at `62d6ec789a8e2cff5b2909b72f1896802fd2f099`
-- `feature/hotfix-ssl` tip: `5f6a763b22de30f0fc3f3128a5cd0e3afa2f1ca0`; diverges from `main` at `62d6ec789a8e2cff5b2909b72f1896802fd2f099`
-- `main` tip: `62d6ec789a8e2cff5b2909b72f1896802fd2f099`
-- `release/2026.04` tip: `f8597d1b7d75b56f3290a82ec9b09bc037368fba`; diverges from `main` at `62d6ec789a8e2cff5b2909b72f1896802fd2f099`
+- `feature/charts-cleanup` tip: `d4fb924dac284ab64411eafeb75b80d59edcf6a9`; diverges from `main` at `a1e33cc164acd7b0757b45b735d5860a341f6229`
+- `feature/hotfix-ssl` tip: `3791db111509a543a8d1c2ead022147b12431491`; diverges from `main` at `a1e33cc164acd7b0757b45b735d5860a341f6229`
+- `main` tip: `a1e33cc164acd7b0757b45b735d5860a341f6229`
+- `release/2026.04` tip: `d1638d05dea823bb3d2fa0b2873fc9036e45e86f`; diverges from `main` at `a1e33cc164acd7b0757b45b735d5860a341f6229`
 
 Commit order:
 
-- `62d6ec789a8e2cff5b2909b72f1896802fd2f099` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `5f6a763b22de30f0fc3f3128a5cd0e3afa2f1ca0` `c002 temporary hotfix secret`: introduces an intended signal.
-- `f8597d1b7d75b56f3290a82ec9b09bc037368fba` `c003 release branch clean`: removes or neutralizes a prior signal.
-- `05a03e12762dc8035ff6352c1320eb8fa09515ae` `c004 charts cleanup branch`: removes or neutralizes a prior signal.
+- `a1e33cc164acd7b0757b45b735d5860a341f6229` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `d1638d05dea823bb3d2fa0b2873fc9036e45e86f` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `3791db111509a543a8d1c2ead022147b12431491` `c002 temporary hotfix secret`: introduces an intended signal.
+- `d4fb924dac284ab64411eafeb75b80d59edcf6a9` `c004 charts cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -1182,14 +1186,14 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `13935`
+- Total LOC considered for authored/generated project content: `13937`
 - Synthetic filler / inflation LOC: `8580`
-- Synthetic filler ratio: `61.57%`
+- Synthetic filler ratio: `61.56%`
 
 | category | LOC |
 | --- | ---: |
 | live business code | 204 |
-| live config | 11 |
+| live config | 13 |
 | tests | 32 |
 | docs | 22 |
 | scripts | 2 |

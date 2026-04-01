@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/runtime-config-separation.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/runtime-config-separation",
+    "html_url": "https://github.com/ARQ-Sec/runtime-config-separation",
+    "name": "runtime-config-separation",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "7b54bfaf9426a3a6567d145e71e731f58987dac6"
+      },
+      "head": "7b54bfaf9426a3a6567d145e71e731f58987dac6",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T00:38:04+03:00",
+          "message": "bootstrap Q-V6-CONFIG-004",
+          "sha": "7b54bfaf9426a3a6567d145e71e731f58987dac6"
+        }
+      ]
+    },
+    "lineCount": 5931,
+    "repoName": "runtime-config-separation",
+    "scenarioId": "Q-V6-CONFIG-004"
+  },
+  "scenario": {
+    "domain": "Infra config repo with active insecure runtime config and dormant examples/comments nearby.",
+    "id": "Q-V6-CONFIG-004",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo_name": "runtime-config-separation",
+    "stack": "Config-heavy repo"
+  }
+}

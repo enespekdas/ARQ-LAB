@@ -1428,6 +1428,20 @@
     "syntheticFiller": true
   },
   {
+    "classification": "live-config",
+    "findingExpectation": "none",
+    "loc": 2,
+    "nearRealNegative": false,
+    "participatesInBuild": true,
+    "participatesInSmoke": false,
+    "participatesInTest": false,
+    "path": "helm/control-plane/values.yaml",
+    "positiveSurface": false,
+    "protectedNegative": false,
+    "purpose": "Runtime configuration carrying environment or deployment settings for Values.",
+    "syntheticFiller": false
+  },
+  {
     "classification": "generated",
     "findingExpectation": "must_not_find",
     "loc": 1,
@@ -4482,7 +4496,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 4650,
+    "loc": 4664,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -4496,7 +4510,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 1282,
+    "loc": 1286,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -4510,7 +4524,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 384,
+    "loc": 387,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,

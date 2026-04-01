@@ -1,11 +1,11 @@
 # M3 Summary
 
-- Scenario count: `4`
+- Scenario count: `7`
 
-- `FAIL_EXPLAINABILITY`: `0`
+- `FAIL_EXPLAINABILITY`: `1`
 - `FAIL_FN`: `0`
-- `FAIL_FP`: `1`
+- `FAIL_FP`: `0`
 - `FAIL_REF_STATE`: `0`
 - `INVALID_SCENARIO`: `0`
 - `PASS_CLEAN`: `0`
-- `PASS_WITH_NOISE`: `3`
+- `PASS_WITH_NOISE`: `6`
