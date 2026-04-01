@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T17:48:40.697870Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "6af6ae90-fe75-49c0-86d8-bcaed2ecf23b",
+      "applicationKey": "arq-lab-g-v2-hist-007",
+      "applicationName": "feature-cherrypick-lineage",
+      "branchName": "feature/customer-hotfix",
+      "commitSha": "703ba241fbdfa52725b4df62e7747d51625df789",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "4bdcfd96-ae72-46aa-9ab9-73f815f8a44e",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T17:48:38.682752Z",
+      "lastSeenAt": "2026-04-01T17:48:38.682752Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/partner/bootstrap/featureBranchToken.ts",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "f40624e7-b31b-4464-8b0c-1c25bd49e36f",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

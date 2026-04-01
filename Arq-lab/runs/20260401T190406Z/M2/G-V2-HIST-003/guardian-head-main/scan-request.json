@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "SINGLE_BRANCH",
+    "modules": [
+      "guardian"
+    ],
+    "name": "guardian-head-main",
+    "refName": "main",
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "a2f239dc-3c5c-4f53-a7aa-094ea16aa6c3",
+    "applicationKey": "arq-lab-g-v2-hist-003",
+    "applicationName": "pem-rotation-lineage",
+    "branchScope": "SINGLE_BRANCH",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T19:05:53.217946800Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/pem-rotation-lineage.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "da5fa120-2fe8-431e-8219-ef8a3a2494b1",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "guardian",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": "main",
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

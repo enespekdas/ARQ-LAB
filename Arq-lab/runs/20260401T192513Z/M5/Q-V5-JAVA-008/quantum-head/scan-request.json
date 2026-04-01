@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "SINGLE_BRANCH",
+    "modules": [
+      "quantum"
+    ],
+    "name": "quantum-head",
+    "refName": "main",
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "4cd87feb-42da-4d59-aa68-dd988ffe9160",
+    "applicationKey": "arq-lab-q-v5-java-008",
+    "applicationName": "safe-trustall-java",
+    "branchScope": "SINGLE_BRANCH",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T19:30:07.069847600Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/safe-trustall-java.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "b98fea81-a07c-49b1-88a8-e41a1811161e",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "quantum",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": "main",
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

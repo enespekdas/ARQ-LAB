@@ -1,0 +1,143 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9637594583831143,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 7,
+      "scripts": 2,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5022,
+      "vendor/generated": 150
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\edge-gateway-config\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CONFIG-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\edge-gateway-config\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 3,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "trust_chain_verification: ACCEPT_UNTRUSTED",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "47f005f7-adf8-432e-820c-ad7128ed65c9",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/envoy.yaml",
+        "queryFamily": "config.envoy",
+        "rawEvidenceJson": "{\"queryRef\":\"config.envoy.trust-bypass\",\"callName\":\"trust_chain_verification\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"trust_chain_verification=ACCEPT_UNTRUSTED\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "trust_chain_verification=ACCEPT_UNTRUSTED",
+        "ruleKey": "quantum.arq-q-0931-config",
+        "ruleName": "Envoy Trust Validation Disabled (insecure)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:trust_chain_verification:trust_chain_verification=ACCEPT_UNTRUSTED",
+        "severity": "CRITICAL"
+      },
+      "expected": "envoy-untrusted"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "tls_minimum_protocol_version: TLSv1_0",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "99ec63dd-5e71-488a-b0ed-594e73904adc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/envoy.yaml",
+        "queryFamily": "config.envoy",
+        "rawEvidenceJson": "{\"queryRef\":\"config.envoy.weak-protocol\",\"callName\":\"tls_minimum_protocol_version\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"tls_minimum_protocol_version=TLSv1_0\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "tls_minimum_protocol_version=TLSv1_0",
+        "ruleKey": "quantum.arq-q-0930-config",
+        "ruleName": "Envoy TLS Min Protocol Weak",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:tls_minimum_protocol_version:tls_minimum_protocol_version=TLSv1_0",
+        "severity": "CRITICAL"
+      },
+      "expected": "envoy-min-protocol"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c8407c09-4fd5-4b66-9547-64ada01b69e3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "runtime/.env",
+        "queryFamily": "config.node",
+        "rawEvidenceJson": "{\"queryRef\":\"config.node.env-trust-bypass\",\"callName\":\"NODE_TLS_REJECT_UNAUTHORIZED\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"NODE_TLS_REJECT_UNAUTHORIZED=0\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "ruleKey": "quantum.arq-q-0949-config",
+        "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:NODE_TLS_REJECT_UNAUTHORIZED:NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "severity": "CRITICAL"
+      },
+      "expected": "node-env-disable"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 3,
+  "mustFindMatched": 3,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 3,
+    "rawFindings": 3
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V6-CONFIG-003",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

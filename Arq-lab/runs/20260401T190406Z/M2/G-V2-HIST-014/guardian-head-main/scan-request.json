@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "SINGLE_BRANCH",
+    "modules": [
+      "guardian"
+    ],
+    "name": "guardian-head-main",
+    "refName": "main",
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "26594de5-8694-4ab3-85f8-80fc351dd142",
+    "applicationKey": "arq-lab-g-v2-hist-014",
+    "applicationName": "split-concat-lineage",
+    "branchScope": "SINGLE_BRANCH",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T19:11:22.471752200Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/split-concat-lineage.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "2ad5e43a-3010-4eb5-a8d4-72e2c51bb92d",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "guardian",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": "main",
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

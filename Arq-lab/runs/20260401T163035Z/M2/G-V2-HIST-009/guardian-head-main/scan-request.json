@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "SINGLE_BRANCH",
+    "modules": [
+      "guardian"
+    ],
+    "name": "guardian-head-main",
+    "refName": "main",
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "923989f7-aef4-43ae-9dbf-ee22f4b41085",
+    "applicationKey": "arq-lab-g-v2-hist-009",
+    "applicationName": "canonical-wrap-lineage",
+    "branchScope": "SINGLE_BRANCH",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T16:37:53.037670200Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/canonical-wrap-lineage.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "697a3af6-22dd-4f40-b279-6a793d099df2",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "guardian",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": "main",
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

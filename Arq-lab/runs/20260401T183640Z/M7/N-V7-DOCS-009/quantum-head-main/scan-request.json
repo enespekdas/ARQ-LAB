@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "SINGLE_BRANCH",
+    "modules": [
+      "quantum"
+    ],
+    "name": "quantum-head-main",
+    "refName": "main",
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "c40b82be-a0d8-4f12-b002-f484b68ce4a2",
+    "applicationKey": "arq-lab-n-v7-docs-009",
+    "applicationName": "masked-docs-repo",
+    "branchScope": "SINGLE_BRANCH",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T18:41:03.676298900Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/masked-docs-repo.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "09908b51-c9d5-47c0-8696-2a082468a1da",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "quantum",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": "main",
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

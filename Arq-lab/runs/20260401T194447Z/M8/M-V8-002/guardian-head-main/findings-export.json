@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T19:47:27.005190600Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "89c72d9b-505d-43c4-9d6c-e46f12c80848",
+      "applicationKey": "arq-lab-m-v8-002",
+      "applicationName": "infra-app-mixed-repo",
+      "branchName": "main",
+      "commitSha": "7fe3534b77325f3a55f2b01d53e69f593d629582",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "a61b4f5f-8600-4364-b61f-f7b2292e4901",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T19:47:23.363551Z",
+      "lastSeenAt": "2026-04-01T19:47:23.363551Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/config/production.env",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "f69a7d07-a066-4a98-b7ee-5c249bacefa2",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

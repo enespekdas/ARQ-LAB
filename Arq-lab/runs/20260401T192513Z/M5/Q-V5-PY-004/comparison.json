@@ -1,0 +1,77 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-004\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9401709401709402,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-004\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-004\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 13,
+      "fixtures": 0,
+      "live business code": 99,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4730,
+      "tests": 32,
+      "total": 5031,
+      "vendor/generated": 141
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-kwargs-python\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-PY-004.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-kwargs-python\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "1 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M5",
+  "missingExpectedFindings": [
+    {
+      "expected": "kwargs-verify-false",
+      "pathContains": "session_wrapper.py"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "kwargs-verify-false",
+      "pathContains": "session_wrapper.py"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 0,
+    "rawFindings": 0
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V5-PY-004",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

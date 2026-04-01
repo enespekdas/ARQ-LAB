@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import time
 from pathlib import Path
 from typing import Any
 
@@ -128,8 +129,30 @@ class GitFactory:
 
     def push_all(self, repo_root: Path, remote_name: str = "origin") -> None:
         auth_env = self._git_auth_env()
-        run_command(["git", "push", "--force", "--all", remote_name], repo_root, env=auth_env, check=True)
-        run_command(["git", "push", "--force", "--tags", remote_name], repo_root, env=auth_env, check=True)
+        self._push_with_retry(["git", "push", "--force", "--all", remote_name], repo_root, auth_env)
+        self._push_with_retry(["git", "push", "--force", "--tags", remote_name], repo_root, auth_env)
+
+    def _push_with_retry(self, command: list[str], repo_root: Path, auth_env: dict[str, str] | None) -> None:
+        attempts = 0
+        max_attempts = 6
+        while attempts < max_attempts:
+            result = run_command(command, repo_root, env=auth_env, check=False)
+            if result.ok():
+                return
+            attempts += 1
+            if attempts >= max_attempts or not self._is_repo_not_ready_error(result):
+                raise RuntimeError(
+                    "Command failed: %s\nstdout:\n%s\nstderr:\n%s"
+                    % (" ".join(result.command), result.stdout.strip(), result.stderr.strip())
+                )
+            time.sleep(2)
+
+    @staticmethod
+    def _is_repo_not_ready_error(result) -> bool:
+        stderr = (result.stderr or "").lower()
+        stdout = (result.stdout or "").lower()
+        combined = "\n".join([stdout, stderr])
+        return "repository not found" in combined
 
     def branch_shas(self, repo_root: Path) -> dict[str, str]:
         result = run_command(["git", "for-each-ref", "--format=%(refname:short) %(objectname)", "refs/heads"], repo_root, check=True)

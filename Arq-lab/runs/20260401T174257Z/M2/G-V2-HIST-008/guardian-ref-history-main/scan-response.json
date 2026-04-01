@@ -1,0 +1,64 @@
+{
+  "applicationId": "45674942-5381-453c-bf44-4589c24124e8",
+  "applicationKey": "arq-lab-g-v2-hist-008",
+  "applicationName": "pem-lineage-separation",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "af9c6d57b399ce6b0dae829d51d340426e2571ae",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T17:49:05.621454Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/pem-lineage-separation.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 0,
+  "filesTotal": 0,
+  "finishedAt": "2026-04-01T17:49:13.955399Z",
+  "id": "a0cc0772-ecd9-4542-8fc1-0e479227ce1d",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "REF_HISTORY",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T17:49:08.474853Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

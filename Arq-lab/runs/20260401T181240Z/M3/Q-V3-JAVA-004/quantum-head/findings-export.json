@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T18:15:07.701279Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "d801c171-a3a1-47fa-87a0-c53df7824614",
+      "applicationKey": "arq-lab-q-v3-java-004",
+      "applicationName": "crypto-import-only-java",
+      "branchName": "main",
+      "commitSha": "6bb6cd24742f6e908d939b500663aac4dacab418",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "68e9a6bc-33de-4019-8409-1eccbdcbd64d",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-01T18:15:06.441042Z",
+      "lastSeenAt": "2026-04-01T18:15:06.441042Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/cryptoimportonlyjava/security/LegacyRequestSigner.java",
+      "primaryLineEnd": 3,
+      "primaryLineStart": 3,
+      "projectId": "e47d6679-e8dc-4ad1-878c-10a86b629b13",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0072-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

@@ -34,6 +34,30 @@ NEW_SCENARIO_IDS = {
     "M-V8-006",
     "M-V8-007",
     "M-V8-008",
+    "G-V2-HIST-014",
+    "G-V2-HIST-015",
+    "G-V2-HIST-016",
+    "G-V2-HIST-017",
+    "Q-V3-JAVA-007",
+    "Q-V3-JAVA-008",
+    "Q-V3-CS-005",
+    "Q-V4-PY-006",
+    "Q-V4-TS-006",
+    "Q-V4-GO-004",
+    "Q-V5-JAVA-007",
+    "Q-V5-JAVA-008",
+    "Q-V5-PY-004",
+    "Q-V6-TS-004",
+    "Q-V6-CS-004",
+    "Q-V6-CONFIG-006",
+    "N-V7-DOCS-013",
+    "N-V7-VENDOR-014",
+    "N-V7-TESTS-015",
+    "N-V7-SAFE-016",
+    "M-V8-009",
+    "M-V8-010",
+    "M-V8-011",
+    "M-V8-012",
 }
 
 
@@ -59,7 +83,7 @@ def test_scenario_specs_include_24_new_ids_and_minimum_suite_size() -> None:
     ids = [scenario.id for scenario in scenario_specs()]
 
     assert len(ids) == len(set(ids))
-    assert len(ids) >= 61
+    assert len(ids) >= 85
     assert NEW_SCENARIO_IDS.issubset(ids)
 
 
@@ -110,3 +134,42 @@ def test_materialize_history_cherrypick_wave_creates_expected_branches(tmp_path:
     assert not (repo_root / "src" / "modules" / "partner" / "bootstrap" / "featureBranchToken.ts").exists()
     history = run_command(["git", "log", "hotfix/cherry-picked-docs", "--name-only", "--", "docs/branch-chore.md"], repo_root, check=True)
     assert "docs/branch-chore.md" in history.stdout
+
+
+def test_materialize_new_history_and_discovery_wave_variants(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    split_root, _ = materialize_scenario(config, scenarios["G-V2-HIST-014"], git_factory)
+    split_history = run_command(["git", "log", "--all", "--name-only", "--", "src/modules/partner/bootstrap/partnerSecret.ts"], split_root, check=True)
+    assert "partnerSecret.ts" in split_history.stdout
+
+    branch_root, _ = materialize_scenario(config, scenarios["G-V2-HIST-015"], git_factory)
+    branches = git_factory.branch_shas(branch_root)
+    assert {"main", "feature/private-key-hotfix", "release/2026.06"}.issubset(branches)
+
+    config_root, _ = materialize_scenario(config, scenarios["Q-V6-CONFIG-006"], git_factory)
+    assert (config_root / "deploy" / "live" / "envoy.yaml").exists()
+    assert (config_root / "runtime" / "live.env").exists()
+
+
+def test_materialize_new_discovery_mixed_repo_variants(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    repo_root_009, _ = materialize_scenario(config, scenarios["M-V8-009"], git_factory)
+    assert (repo_root_009 / "generated" / "openapi" / "payments-client.ts").exists()
+    assert (repo_root_009 / "vendor" / "sdk" / "payments-sdk.js").exists()
+
+    repo_root_010, _ = materialize_scenario(config, scenarios["M-V8-010"], git_factory)
+    assert (repo_root_010 / "generated" / "manifests" / "envoy-example.yaml").exists()
+    assert (repo_root_010 / "docs" / "infra" / "discovery-wave.md").exists()
+
+    repo_root_011, _ = materialize_scenario(config, scenarios["M-V8-011"], git_factory)
+    history = run_command(["git", "log", "--all", "--name-only", "--", "shared/config/legacy.env"], repo_root_011, check=True)
+    assert "shared/config/legacy.env" in history.stdout
+
+    repo_root_012, _ = materialize_scenario(config, scenarios["M-V8-012"], git_factory)
+    assert (repo_root_012 / "apps" / "admin-api" / "src" / "modules" / "security" / "secureTlsWrapper.ts").exists()

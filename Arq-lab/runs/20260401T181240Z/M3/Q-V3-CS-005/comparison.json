@@ -1,0 +1,144 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-005\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9641434262948207,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-005\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-CS-005\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 10,
+      "live config": 0,
+      "scripts": 0,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5020,
+      "vendor/generated": 147
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\inventory-runtime-csharp\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-CS-005.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\inventory-runtime-csharp\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FP",
+  "finalVerdictReason": "1 must-not-find violation(s) hit protected or declared-clean surfaces",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyDigestFactory { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); public static byte[] Sha1(byte[] value) => SHA1.Cre",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "991d0c18-338f-4c3c-a9e5-9cd7951d0795",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/Library/Security/LegacyDigestFactory.cs",
+        "queryFamily": "csharp.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"MD5.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"MD5\",\"language\":\"csharp\",\"bindingKind\":\"CHAINED_INVOCATION\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0468-csharp",
+        "ruleName": "MD5 usage",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "csharp:crypto:MD5.Create:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "runtime-md5"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyDigestFactory { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); public static byte[] Sha1(byte[] value) => SHA1.Cre",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b7c8f4e9-2011-41b3-b3d1-ead660813f49",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/Library/Security/LegacyDigestFactory.cs",
+        "queryFamily": "csharp.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"SHA1.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SHA1\",\"language\":\"csharp\",\"bindingKind\":\"CHAINED_INVOCATION\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0488-csharp",
+        "ruleName": "MD5 / SHA1 usage (critical legacy in modern .NET)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "csharp:crypto:SHA1.Create:SHA1",
+        "severity": "HIGH"
+      },
+      "expected": "runtime-sha1"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "using System; using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class DigestInventoryCatalog { public static int Sample() => new Random().Next(100, 999); public static string Supported() => SHA256.HashDat",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8a5d618c-a036-4248-b631-d387d7a51f60",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/Library/Security/DigestInventoryCatalog.cs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0418-csharp",
+        "ruleName": "Random class usage (not cryptographic)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "inventory-random"
+    }
+  ],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 3,
+    "rawFindings": 3
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-CS-005",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FP",
+  "verdictClass": "FAIL_FP"
+}

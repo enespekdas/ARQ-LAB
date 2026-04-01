@@ -1,0 +1,93 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-005\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.7045636509207366,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-005\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-JAVA-005\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 12,
+      "fixtures": 0,
+      "live business code": 1212,
+      "live config": 3,
+      "scripts": 1,
+      "synthetic filler / inflation content": 3520,
+      "tests": 104,
+      "total": 4996,
+      "vendor/generated": 117
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-java\\validation\\generated-project-dossier.md",
+    "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 3,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-JAVA-005.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-usage-java\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "public class LegacyDigestService { public byte[] digest(byte[] value) throws Exception { return MessageDigest.getInstance(\"MD5\").digest(value); } }",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "53608f96-6771-449c-8b9d-afb74d2b12f9",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/cryptousagejava/security/LegacyDigestService.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"MessageDigest.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"MD5\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0072-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:MessageDigest.getInstance:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "md5-digest"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-JAVA-005",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

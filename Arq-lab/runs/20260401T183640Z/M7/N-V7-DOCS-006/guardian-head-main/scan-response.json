@@ -1,0 +1,64 @@
+{
+  "applicationId": "3dd6e3bc-d776-4dab-95ac-74149d7f1119",
+  "applicationKey": "arq-lab-n-v7-docs-006",
+  "applicationName": "certificate-chain-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "f1a3b364d5de4d23889745161ed850910605a5a0",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T18:39:31.779008Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/certificate-chain-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 162,
+  "filesTotal": 162,
+  "finishedAt": "2026-04-01T18:39:36.743494Z",
+  "id": "5474fd5c-f04c-4988-84cd-f56ac18cbcc9",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T18:39:32.855957Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T18:22:43.263839500Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "80319e24-74f4-4bee-a7e5-9186579bef6f",
+      "applicationKey": "arq-lab-q-v4-ts-005",
+      "applicationName": "crypto-builder-node",
+      "branchName": "main",
+      "commitSha": "dbf4f24da0dae08858be3146eb5ea131eb55edec",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "056a727b-92f9-424b-90b1-29defcd27715",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-01T18:22:40.382835Z",
+      "lastSeenAt": "2026-04-01T18:22:40.382835Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/hashFactory.ts",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "e47d6679-e8dc-4ad1-878c-10a86b629b13",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

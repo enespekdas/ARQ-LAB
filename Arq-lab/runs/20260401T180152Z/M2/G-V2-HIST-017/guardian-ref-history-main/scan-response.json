@@ -1,0 +1,64 @@
+{
+  "applicationId": "06bf0665-8b6c-4bcb-98b9-a7fa8b48ad42",
+  "applicationKey": "arq-lab-g-v2-hist-017",
+  "applicationName": "move-duplicate-cherrypick-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "670e882e5578412c44f19337d990e126270eb68e",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T18:12:13.076756Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/move-duplicate-cherrypick-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 0,
+  "filesTotal": 0,
+  "finishedAt": "2026-04-01T18:12:19.265364Z",
+  "id": "1105ae9f-0705-44ec-94ca-0f6ba4663aca",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 2,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "REF_HISTORY",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T18:12:14.523736Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 2,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 2,
+        "occurrenceCount": 2,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 2,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

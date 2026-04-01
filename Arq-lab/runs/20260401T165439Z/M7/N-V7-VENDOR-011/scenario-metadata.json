@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/generated-noise-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/generated-noise-repo",
+    "html_url": "https://github.com/ARQ-Sec/generated-noise-repo",
+    "name": "generated-noise-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "7dcac88c78527bcb30283b6d56da89160504e4a9"
+      },
+      "head": "7dcac88c78527bcb30283b6d56da89160504e4a9",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T20:00:16+03:00",
+          "message": "bootstrap N-V7-VENDOR-011",
+          "sha": "7dcac88c78527bcb30283b6d56da89160504e4a9"
+        }
+      ]
+    },
+    "lineCount": 5956,
+    "repoName": "generated-noise-repo",
+    "scenarioId": "N-V7-VENDOR-011"
+  },
+  "scenario": {
+    "domain": "Repo dominated by generated clients, minified bundles, and vendor artifacts containing scary strings.",
+    "id": "N-V7-VENDOR-011",
+    "milestone": "M7",
+    "module": "both",
+    "repo_name": "generated-noise-repo",
+    "stack": "Vendor / generated / minified / lockfile"
+  }
+}

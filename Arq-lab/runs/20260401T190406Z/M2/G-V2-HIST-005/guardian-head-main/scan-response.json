@@ -1,0 +1,64 @@
+{
+  "applicationId": "f53c45a1-61d0-47de-9d4a-873fd0a12ef1",
+  "applicationKey": "arq-lab-g-v2-hist-005",
+  "applicationName": "canonical-secret-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "e4b992f654667c864985e4be10dc7658265925b2",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:07:07.959706Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/canonical-secret-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 138,
+  "filesTotal": 138,
+  "finishedAt": "2026-04-01T19:07:14.559905Z",
+  "id": "1e4381f7-9431-4dfb-b50c-e2df300018e0",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:07:10.961945Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

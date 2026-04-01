@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T16:44:55.064236500Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "e27f00f5-2c3a-488b-b70a-58ee5ca5d7f0",
+      "applicationKey": "arq-lab-q-v4-py-004",
+      "applicationName": "wrapper-safe-python",
+      "branchName": "main",
+      "commitSha": "45029a6fbc109ccf32d7b1ab5817dda0cf28d226",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "515f749f-ff38-4190-8bde-4e372cfa3c76",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-01T16:44:51.295246Z",
+      "lastSeenAt": "2026-04-01T16:44:51.295246Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/security/legacy_nonce.py",
+      "primaryLineEnd": 4,
+      "primaryLineStart": 4,
+      "projectId": "f1b2e624-c888-49b7-8934-12c55ff340e1",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0260-python",
+      "ruleName": "random: non-cryptographic RNG for security purposes",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

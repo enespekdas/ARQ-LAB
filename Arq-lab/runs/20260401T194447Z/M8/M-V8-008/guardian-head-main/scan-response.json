@@ -1,0 +1,64 @@
+{
+  "applicationId": "5373c9ac-e3da-480b-bdde-12a659008def",
+  "applicationKey": "arq-lab-m-v8-008",
+  "applicationName": "branch-hotfix-mixed-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "afb1b218a369bb43a45da3e75156be42ffd5f8a9",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:58:49.016943Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/branch-hotfix-mixed-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 296,
+  "filesTotal": 296,
+  "finishedAt": "2026-04-01T19:58:56.906481Z",
+  "id": "14b02ede-45b9-4dc7-bf6f-5b05ae7b611a",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:58:51.150165Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

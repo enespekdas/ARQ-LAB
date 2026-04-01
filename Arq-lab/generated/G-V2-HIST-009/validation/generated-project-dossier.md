@@ -484,16 +484,16 @@ canonical-wrap-lineage
 
 Branches:
 
-- `main` tip: `e7c7d76c6906627de93953c08584633047a880e3`
+- `main` tip: `f3f5bed7d9caf5fb3257531ab5d328aca505d5d1`
 
 Commit order:
 
-- `81ff1fdc893ded3c5428d34a5a68b5d41c95dc6f` `c001 bootstrap`: initial clean or baseline assembly.
-- `ca7496f04ba816cd7729ecabf1a54c521095fd3a` `c002 add canonical token`: introduces an intended signal.
-- `c640273da1650d2675fa3da5fa57dfa29d31bcac` `c003 quote runtime token`: scenario state change.
-- `cab80bcf3ef6ad48b232066f34ddde6328d9c265` `c004 move token into archive`: scenario state change.
-- `0f5ef8d170a778d87a2d7610cbb337c7b83735f2` `c005 add wrapping and base64 docs`: introduces an intended signal.
-- `e7c7d76c6906627de93953c08584633047a880e3` `c006 remove runtime token and keep safe placeholder`: removes or neutralizes a prior signal.
+- `88a293fe5bb7e138fee01476197ede6b6cd4845a` `c001 bootstrap`: initial clean or baseline assembly.
+- `e8b2e5ac9aeb822fe7cc45557642a5edca71d438` `c002 add canonical token`: introduces an intended signal.
+- `0c27a9b52c01f8fc5d3f8718216fcfc4350beb58` `c003 quote runtime token`: scenario state change.
+- `4c5a1a22a5b6375b0b264c9380863f7a5ec782be` `c004 move token into archive`: scenario state change.
+- `72bd3deb8a0f10ccb848637ac7902ba1c6f64b75` `c005 add wrapping and base64 docs`: introduces an intended signal.
+- `f3f5bed7d9caf5fb3257531ab5d328aca505d5d1` `c006 remove runtime token and keep safe placeholder`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

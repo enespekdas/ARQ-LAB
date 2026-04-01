@@ -1,0 +1,80 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/pem-lineage-separation.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/pem-lineage-separation",
+    "html_url": "https://github.com/ARQ-Sec/pem-lineage-separation",
+    "name": "pem-lineage-separation",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "e7e451f40aa6ef570bef841e1bf9708bcf9c0371"
+      },
+      "head": "e7e451f40aa6ef570bef841e1bf9708bcf9c0371",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T19:37:15+03:00",
+          "message": "c006 remove live private key from head",
+          "sha": "e7e451f40aa6ef570bef841e1bf9708bcf9c0371"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T19:37:15+03:00",
+          "message": "c005 add pki lineage docs",
+          "sha": "769955c099f2280a90365153361e7a6d487a60eb"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T19:37:15+03:00",
+          "message": "c004 add csr lineage",
+          "sha": "6959ed8d5c0f906778141218ba321e85ceb82e61"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T19:37:15+03:00",
+          "message": "c003 add public chain docs",
+          "sha": "497ce7d1779f23d8f4f62b47ace0303c9d234276"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T19:37:14+03:00",
+          "message": "c002 add private key lineage",
+          "sha": "a9e74818b78fa62d8446098b9d0cbfe4adf8a787"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T19:37:14+03:00",
+          "message": "c001 bootstrap",
+          "sha": "06750fcdee7332c6c998482a277ebba0a22e9238"
+        }
+      ]
+    },
+    "lineCount": 5089,
+    "repoName": "pem-lineage-separation",
+    "scenarioId": "G-V2-HIST-008"
+  },
+  "scenario": {
+    "domain": "PKI operations repo separating private key lineage from public cert and CSR history.",
+    "id": "G-V2-HIST-008",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "pem-lineage-separation",
+    "stack": "Python + ops PKI"
+  }
+}

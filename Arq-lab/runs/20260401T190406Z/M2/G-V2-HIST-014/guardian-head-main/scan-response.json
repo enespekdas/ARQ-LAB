@@ -1,0 +1,64 @@
+{
+  "applicationId": "26594de5-8694-4ab3-85f8-80fc351dd142",
+  "applicationKey": "arq-lab-g-v2-hist-014",
+  "applicationName": "split-concat-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "20db06e875d5e13b5e5c79d187528eb91c06ae1c",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:11:22.471752Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/split-concat-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 160,
+  "filesTotal": 160,
+  "finishedAt": "2026-04-01T19:11:28.120507Z",
+  "id": "2ad5e43a-3010-4eb5-a8d4-72e2c51bb92d",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:11:23.756373Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

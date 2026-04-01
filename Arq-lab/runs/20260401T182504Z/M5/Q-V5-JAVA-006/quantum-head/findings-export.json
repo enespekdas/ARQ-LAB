@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T18:28:42.670959100Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "7d12cc0f-c325-4421-9e63-d9b394a23368",
+      "applicationKey": "arq-lab-q-v5-java-006",
+      "applicationName": "safe-wrapper-tls-java",
+      "branchName": "main",
+      "commitSha": "51344517f7eb4a74838b3580a0516a1775177895",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "5d20fbbf-5425-466b-b774-a1d5ef0f1043",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-01T18:28:41.821261Z",
+      "lastSeenAt": "2026-04-01T18:28:41.821261Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/safewrappertlsjava/http/LiveInsecureTlsClient.java",
+      "primaryLineEnd": 13,
+      "primaryLineStart": 4,
+      "projectId": "e47d6679-e8dc-4ad1-878c-10a86b629b13",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0085-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

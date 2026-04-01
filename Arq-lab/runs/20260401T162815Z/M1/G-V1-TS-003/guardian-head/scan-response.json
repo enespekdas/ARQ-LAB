@@ -1,0 +1,64 @@
+{
+  "applicationId": "629f1843-e83b-4076-87b2-547515d5d71c",
+  "applicationKey": "arq-lab-g-v1-ts-003",
+  "applicationName": "partner-api-node",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "3321e67edd18a32ce26b3105241301da6ecf9c90",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T16:29:56.334478Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/partner-api-node.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 159,
+  "filesTotal": 159,
+  "finishedAt": "2026-04-01T16:30:02.654853Z",
+  "id": "2e79af51-2871-4ed2-98a9-102291a33f2c",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T16:29:57.952085Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

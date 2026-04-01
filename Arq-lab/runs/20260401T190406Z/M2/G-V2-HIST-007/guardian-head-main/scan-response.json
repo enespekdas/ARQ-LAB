@@ -1,0 +1,64 @@
+{
+  "applicationId": "dbea97ca-c3f3-4a2a-b0ab-4562c2bdc7de",
+  "applicationKey": "arq-lab-g-v2-hist-007",
+  "applicationName": "feature-cherrypick-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "317077740f5656aad1b1e826bbb3044f5374ab8e",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:09:00.893221Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/feature-cherrypick-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 157,
+  "filesTotal": 157,
+  "finishedAt": "2026-04-01T19:09:05.805461Z",
+  "id": "1e32bbab-4380-41ab-9e9d-a773b221c1fb",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:09:01.352651Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T19:22:16.677240500Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "dd27f000-7742-4743-abc5-7b5f52ba05b3",
+      "applicationKey": "arq-lab-q-v4-py-005",
+      "applicationName": "crypto-usage-python",
+      "branchName": "main",
+      "commitSha": "ed8de536b21a01ba19df54907d9b185c2ece1fc8",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1d196ebd-cb78-481d-9ea5-150710fae676",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-01T19:22:14.041500Z",
+      "lastSeenAt": "2026-04-01T19:22:14.041500Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/security/legacy_signature.py",
+      "primaryLineEnd": 4,
+      "primaryLineStart": 4,
+      "projectId": "f69a7d07-a066-4a98-b7ee-5c249bacefa2",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0248-python",
+      "ruleName": "hashlib: MD5 digest usage",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

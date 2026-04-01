@@ -1,0 +1,93 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-006\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.7030157779109247,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-006\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-JAVA-006\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 12,
+      "fixtures": 0,
+      "live business code": 1223,
+      "live config": 3,
+      "scripts": 1,
+      "synthetic filler / inflation content": 3520,
+      "tests": 104,
+      "total": 5007,
+      "vendor/generated": 117
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\safe-wrapper-tls-java\\validation\\generated-project-dossier.md",
+    "realismJustification": "contains a non-trivial amount of live business code; includes meaningful automated test surfaces; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 3,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-JAVA-006.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\safe-wrapper-tls-java\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "import javax.net.ssl.HostnameVerifier;",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5d20fbbf-5425-466b-b774-a1d5ef0f1043",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/main/java/com/arq/safewrappertlsjava/http/LiveInsecureTlsClient.java",
+        "queryFamily": "java.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"java.tls.trust-bypass\",\"callName\":\"HostnameVerifier.verify\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"HostnameVerifier-return-true\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "HostnameVerifier-return-true",
+        "ruleKey": "quantum.arq-q-0085-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:tls:HostnameVerifier.verify:HostnameVerifier-return-true",
+        "severity": "CRITICAL"
+      },
+      "expected": "live-hostname-bypass"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M5",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V5-JAVA-006",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

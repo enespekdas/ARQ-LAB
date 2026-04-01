@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/public-key-docs-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/public-key-docs-repo",
+    "html_url": "https://github.com/ARQ-Sec/public-key-docs-repo",
+    "name": "public-key-docs-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "58d75e6ae73283bf9b31a992f84e4580a7e97c47"
+      },
+      "head": "58d75e6ae73283bf9b31a992f84e4580a7e97c47",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-01T21:41:18+03:00",
+          "message": "bootstrap N-V7-DOCS-010",
+          "sha": "58d75e6ae73283bf9b31a992f84e4580a7e97c47"
+        }
+      ]
+    },
+    "lineCount": 5977,
+    "repoName": "public-key-docs-repo",
+    "scenarioId": "N-V7-DOCS-010"
+  },
+  "scenario": {
+    "domain": "Documentation repo with public cert chains, JWKS, CSRs, and sample PEM blocks but no live private key or misuse.",
+    "id": "N-V7-DOCS-010",
+    "milestone": "M7",
+    "module": "both",
+    "repo_name": "public-key-docs-repo",
+    "stack": "Docs / PKI / JWKS"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-01T17:45:12.976790900Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "62acc260-7979-469e-903d-eabcb7ea8b64",
+      "applicationKey": "arq-lab-g-v2-hist-003",
+      "applicationName": "pem-rotation-lineage",
+      "branchName": "main",
+      "commitSha": "dbdf6a8bbccdb31048ad221a6d9312f417f16b9f",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "f28c0417-3d46-4766-b5e6-7467ad6bcd96",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T17:45:12.149066Z",
+      "lastSeenAt": "2026-04-01T17:45:12.149066Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "ops/keys/service-b.pem",
+      "primaryLineEnd": 10,
+      "primaryLineStart": 1,
+      "projectId": "f40624e7-b31b-4464-8b0c-1c25bd49e36f",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.private-key",
+      "ruleName": "Private Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

@@ -1,6 +1,6 @@
 # M8 Summary
 
-- Scenario count: `8`
+- Scenario count: `12`
 
 - `FAIL_EXPLAINABILITY`: `0`
 - `FAIL_FN`: `0`
@@ -8,4 +8,4 @@
 - `FAIL_REF_STATE`: `0`
 - `INVALID_SCENARIO`: `0`
 - `PASS_CLEAN`: `5`
-- `PASS_WITH_NOISE`: `3`
+- `PASS_WITH_NOISE`: `7`

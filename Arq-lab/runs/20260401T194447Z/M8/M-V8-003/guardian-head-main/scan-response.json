@@ -1,0 +1,64 @@
+{
+  "applicationId": "bf9acc59-43d5-4fd0-9582-808648ad774a",
+  "applicationKey": "arq-lab-m-v8-003",
+  "applicationName": "platform-mesh-monorepo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "9b3c9b7c8956a2ed470f7dbcd89f00c25d9b578d",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:49:18.796130Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/platform-mesh-monorepo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 351,
+  "filesTotal": 351,
+  "finishedAt": "2026-04-01T19:49:26.565239Z",
+  "id": "290aade5-e18b-4c2f-9c20-53c9eafb8b13",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:49:19.121955Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,118 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9370047543581617,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V5-PY-002\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 95,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4730,
+      "tests": 32,
+      "total": 5048,
+      "vendor/generated": 164
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\data-sync-python\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V5-PY-002.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\data-sync-python\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "return requests.get(url, verify=False, timeout=5).text",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "984da15c-8223-4d78-8e26-5c3852022c10",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/clients/partner_pull_client.py",
+        "queryFamily": "python.ssl",
+        "rawEvidenceJson": "{\"queryRef\":\"python.ssl.verification-bypass\",\"callName\":\"requests.get\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"requests.verify=False\",\"importStyle\":\"MODULE\",\"argumentName\":\"verify\",\"assignedValue\":false,\"valueSource\":\"LITERAL\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "requests.verify=False",
+        "ruleKey": "quantum.arq-q-0305-python",
+        "ruleName": "requests: verify=False (certificate validation disabled)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "python:tls:requests.get:requests.verify=False",
+        "severity": "CRITICAL"
+      },
+      "expected": "verify-false"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "return ssl._create_unverified_context()",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8c094cfc-6bbb-4c6d-942d-34d94872ed47",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "app/security/unverified_ssl_context.py",
+        "queryFamily": "python.ssl",
+        "rawEvidenceJson": "{\"queryRef\":\"python.ssl.verification-bypass\",\"callName\":\"ssl._create_unverified_context\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"ssl._create_unverified_context\",\"importStyle\":\"MODULE\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "ssl._create_unverified_context",
+        "ruleKey": "quantum.arq-q-0247-python",
+        "ruleName": "urllib2: unverified HTTPS context (_create_unverified_context)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "python:tls:ssl._create_unverified_context:ssl._create_unverified_context",
+        "severity": "CRITICAL"
+      },
+      "expected": "unverified-context"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M5",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V5-PY-002",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

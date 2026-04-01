@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "ALL_BRANCHES",
+    "modules": [
+      "guardian"
+    ],
+    "name": "guardian-all-branches",
+    "refName": null,
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "6dbf7897-7c89-4586-a3b4-430868d5c593",
+    "applicationKey": "arq-lab-m-v8-008",
+    "applicationName": "branch-hotfix-mixed-repo",
+    "branchScope": "ALL_BRANCHES",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T17:17:49.317980800Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/branch-hotfix-mixed-repo.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "04184ae3-2cf3-4fbf-a9e0-b61cc8de69e8",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "guardian",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": null,
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

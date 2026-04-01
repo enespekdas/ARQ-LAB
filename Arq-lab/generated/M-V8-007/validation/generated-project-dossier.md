@@ -872,7 +872,7 @@ workspace-history-mixed-repo
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | validation/runnability-logs/test-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/test-02.log | generated | 34 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/runnability-logs/test-03.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-03.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | vendor/third-party-sdk.js | vendor | 1 | Vendored or copied artifact used to simulate third-party noise around Third Party Sdk. | no | no | yes | no | no | no |
@@ -1125,17 +1125,17 @@ workspace-history-mixed-repo
 
 Branches:
 
-- `feature/shared-lib-cleanup` tip: `73d35d2eb5c277ba4893862d42062b3df0aba41c`; diverges from `main` at `532ccede2551cfd24b1cc55c8ddb5930525c4679`
-- `main` tip: `532ccede2551cfd24b1cc55c8ddb5930525c4679`
-- `release/2026.05` tip: `1696c1bb91bb24f15081cf0dc1d648cf87173e21`; diverges from `main` at `532ccede2551cfd24b1cc55c8ddb5930525c4679`
+- `feature/shared-lib-cleanup` tip: `b8ce7b35d1a1c33cbaa9d651c193b884e9074cd1`; diverges from `main` at `683f69979dc825a163404ff083e9766d54e5cb7f`
+- `main` tip: `683f69979dc825a163404ff083e9766d54e5cb7f`
+- `release/2026.05` tip: `c2df3bd9d1cde77d4d803e83b81d2f352fd1e6ba`; diverges from `main` at `683f69979dc825a163404ff083e9766d54e5cb7f`
 
 Commit order:
 
-- `71a6868f4113de4c505b25f5745151c1fa2d7c2a` `bootstrap M-V8-007`: initial clean or baseline assembly.
-- `72ec9bb8e19d1f7dd2887f768af423b62c82c910` `c002 add history-only workspace secret`: introduces an intended signal.
-- `1696c1bb91bb24f15081cf0dc1d648cf87173e21` `c005 release branch clean`: removes or neutralizes a prior signal.
-- `532ccede2551cfd24b1cc55c8ddb5930525c4679` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
-- `73d35d2eb5c277ba4893862d42062b3df0aba41c` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
+- `9566beaa4a6ffff1378840d08757edf1c147b870` `bootstrap M-V8-007`: initial clean or baseline assembly.
+- `56f1685baab280bf60fe384a3d0ca1024dc55945` `c002 add history-only workspace secret`: introduces an intended signal.
+- `683f69979dc825a163404ff083e9766d54e5cb7f` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
+- `c2df3bd9d1cde77d4d803e83b81d2f352fd1e6ba` `c005 release branch clean`: removes or neutralizes a prior signal.
+- `b8ce7b35d1a1c33cbaa9d651c193b884e9074cd1` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -1404,9 +1404,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `14799`
+- Total LOC considered for authored/generated project content: `14793`
 - Synthetic filler / inflation LOC: `8030`
-- Synthetic filler ratio: `54.26%`
+- Synthetic filler ratio: `54.28%`
 
 | category | LOC |
 | --- | ---: |
@@ -1416,7 +1416,7 @@ Expected final head/history state:
 | docs | 48 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 372 |
+| vendor/generated | 366 |
 | synthetic filler / inflation content | 8030 |
 
 Inflation disclosure:

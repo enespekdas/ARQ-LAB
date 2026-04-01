@@ -1,0 +1,353 @@
+{
+  "applicationId": "74550fbc-a63a-4c8a-97b0-0757535ebec6",
+  "applicationKey": "arq-lab-q-v6-ts-004",
+  "applicationName": "tls-compose-node",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "ab7c29af74887d5a41ed02331180c319633781cb",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:35:24.132516Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/tls-compose-node.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 158,
+  "filesTotal": 158,
+  "finishedAt": "2026-04-01T19:35:31.538056Z",
+  "id": "7225e4ec-f2dd-46ff-bb06-6307aa54d4ef",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:35:26.514330Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "quantum": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "projectContext": {
+      "applicability": {
+        "appliesCount": 0,
+        "byLanguage": {
+          "abap": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 1,
+            "notApplicableCount": 0,
+            "unknownCount": 1
+          },
+          "c": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "config": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 24,
+            "notApplicableCount": 0,
+            "unknownCount": 24
+          },
+          "cpp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "csharp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 158,
+            "notApplicableCount": 0,
+            "unknownCount": 158
+          },
+          "elixir": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 11,
+            "notApplicableCount": 0,
+            "unknownCount": 11
+          },
+          "erlang": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 10,
+            "notApplicableCount": 0,
+            "unknownCount": 10
+          },
+          "go": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "groovy": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "java": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 191,
+            "notApplicableCount": 0,
+            "unknownCount": 191
+          },
+          "javascript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "jcl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 7,
+            "notApplicableCount": 0,
+            "unknownCount": 7
+          },
+          "kotlin": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "lua": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          },
+          "objectivec": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "perl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 9,
+            "notApplicableCount": 0,
+            "unknownCount": 9
+          },
+          "php": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "plsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 4,
+            "notApplicableCount": 0,
+            "unknownCount": 4
+          },
+          "powershell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "python": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 152,
+            "notApplicableCount": 0,
+            "unknownCount": 152
+          },
+          "ruby": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "rust": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "scala": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "shell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 12,
+            "notApplicableCount": 0,
+            "unknownCount": 12
+          },
+          "swift": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "tsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 5,
+            "notApplicableCount": 0,
+            "unknownCount": 5
+          },
+          "typescript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "zig": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          }
+        },
+        "evaluatedRuleCount": 805,
+        "mode": "SHADOW",
+        "notApplicableCount": 0,
+        "reasonBreakdown": {
+          "NO_LANGUAGE_CONTEXT": 771,
+          "VERSION_NOT_COMPARABLE": 34
+        },
+        "sampleNotApplicableRules": [],
+        "sampleUnknownRules": [
+          {
+            "applicableMaxVersion": "8",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0005-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0006-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0007-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0008-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0009-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0010-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0011-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0012-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0013-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "11",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0014-java",
+            "status": "UNKNOWN"
+          }
+        ],
+        "unknownCount": 805
+      },
+      "ecosystems": [
+        "node"
+      ],
+      "frameworkHints": [
+        "express"
+      ],
+      "languageVersions": {},
+      "manifestCount": 1,
+      "manifests": [
+        {
+          "ecosystem": "node",
+          "frameworkHints": [
+            "express"
+          ],
+          "kind": "NPM_PACKAGE",
+          "languageVersions": [],
+          "parseStatus": "PARSED",
+          "path": "package.json"
+        }
+      ],
+      "parsedManifestCount": 1,
+      "status": "AVAILABLE",
+      "warnings": []
+    },
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

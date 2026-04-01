@@ -1,0 +1,64 @@
+{
+  "applicationId": "3de0861b-db44-424b-9ff8-2135ea6dce1c",
+  "applicationKey": "arq-lab-m-v8-006",
+  "applicationName": "control-plane-overlay-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "66df82c55b34e770e9743f6c0cd7f756e7672efd",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T18:54:12.713235Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/control-plane-overlay-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 296,
+  "filesTotal": 296,
+  "finishedAt": "2026-04-01T18:54:19.097668Z",
+  "id": "2a374740-9d38-4996-b2f4-1999b4d5b9e5",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T18:54:13.463243Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

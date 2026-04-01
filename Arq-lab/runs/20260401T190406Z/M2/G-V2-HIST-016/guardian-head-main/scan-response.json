@@ -1,0 +1,64 @@
+{
+  "applicationId": "b624fdef-ea70-4e17-8d27-1d5ad00d51c2",
+  "applicationKey": "arq-lab-g-v2-hist-016",
+  "applicationName": "folded-yaml-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "60ee1cfcc28165aaccc5f8cd9e8e537fe9b3a05f",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:12:49.277610Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/folded-yaml-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 139,
+  "filesTotal": 139,
+  "finishedAt": "2026-04-01T19:12:56.342677Z",
+  "id": "7d36f924-1720-4454-a937-fc721fbe0e2d",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:12:52.135954Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

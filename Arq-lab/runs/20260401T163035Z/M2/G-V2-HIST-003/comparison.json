@@ -1,0 +1,118 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9210526315789473,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V2-HIST-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 13,
+      "fixtures": 0,
+      "live business code": 87,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 3850,
+      "tests": 32,
+      "total": 4180,
+      "vendor/generated": 182
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\pem-rotation-lineage\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V2-HIST-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\pem-rotation-lineage\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpA************************DkLQ==\n-----END RSA PRIVATE KEY-----",
+        "exposureScope": "HISTORY_ONLY",
+        "findingId": "f7dfbe3d-8bdd-406e-b444-ede1e527263f",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": false,
+        "primaryFilePath": "ops/keys/service-a.pem",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "REF_HISTORY",
+        "scanPlanName": "guardian-ref-history-main",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rotated-key-a"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "-----BEGIN RSA PRIVATE KEY-----\nMIIEow************************K5pQ==\n-----END RSA PRIVATE KEY-----",
+        "exposureScope": "HEAD_AND_HISTORY",
+        "findingId": "1075bfab-712f-4517-9413-0d58d4dd8a54",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": true,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/keys/service-b.pem",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.private-key",
+        "ruleName": "Private Key",
+        "scanMode": "REF_HISTORY",
+        "scanPlanName": "guardian-ref-history-main",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rotated-key-b"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M2",
+  "missingExpectedFindings": [],
+  "module": "guardian",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 3,
+    "rawFindings": 3
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "G-V2-HIST-003",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

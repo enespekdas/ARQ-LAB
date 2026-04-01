@@ -1,0 +1,64 @@
+{
+  "applicationId": "0d536f95-695e-446a-a114-37112930bcf2",
+  "applicationKey": "arq-lab-m-v8-004",
+  "applicationName": "control-plane-infra-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "e3cd9881d0828103e9700fd1a298976f499b4980",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T19:50:46.454082Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/control-plane-infra-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 296,
+  "filesTotal": 296,
+  "finishedAt": "2026-04-01T19:50:55.535937Z",
+  "id": "a7ae0362-9e64-4980-ace4-ab006b9b8162",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T19:50:49.495630Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

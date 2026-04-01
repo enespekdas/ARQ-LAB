@@ -1,0 +1,48 @@
+{
+  "plan": {
+    "branchScope": "ALL_BRANCHES",
+    "modules": [
+      "guardian"
+    ],
+    "name": "guardian-all-branches",
+    "refName": null,
+    "scanMode": "HEAD_SNAPSHOT"
+  },
+  "queued": {
+    "applicationId": "3fe72e3b-ecd6-4977-aae9-6ff1f8d15996",
+    "applicationKey": "arq-lab-m-v8-004",
+    "applicationName": "control-plane-infra-repo",
+    "branchScope": "ALL_BRANCHES",
+    "commitSha": null,
+    "connectorId": null,
+    "connectorName": null,
+    "createdAt": "2026-04-01T17:09:07.866158300Z",
+    "currentFile": null,
+    "currentPhase": "QUEUED",
+    "currentRepository": "https://github.com/ARQ-Sec/control-plane-infra-repo.git",
+    "failureCode": null,
+    "failureMessage": null,
+    "filesScanned": 0,
+    "filesTotal": 0,
+    "finishedAt": null,
+    "id": "6ad81cb8-97bd-4fc9-a8ff-27f92da99b27",
+    "modules": [
+      {
+        "findingCount": 0,
+        "module": "guardian",
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    ],
+    "parentScanRunId": null,
+    "progressPercent": 0,
+    "requestedRefName": null,
+    "scanMode": "HEAD_SNAPSHOT",
+    "scanType": "APPLICATION",
+    "scannedRefName": null,
+    "startedAt": null,
+    "status": "QUEUED",
+    "summary": {},
+    "workerNode": null
+  }
+}

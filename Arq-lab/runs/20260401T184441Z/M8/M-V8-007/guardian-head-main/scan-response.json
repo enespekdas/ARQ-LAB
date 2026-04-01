@@ -1,0 +1,64 @@
+{
+  "applicationId": "eeaf25fa-21db-4f65-a1eb-83dc7d5a55b8",
+  "applicationKey": "arq-lab-m-v8-007",
+  "applicationName": "workspace-history-mixed-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "dfc46d99b78a3b9002c6b2fbbf17fed613b88df5",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T18:56:21.833523Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/workspace-history-mixed-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 352,
+  "filesTotal": 352,
+  "finishedAt": "2026-04-01T18:56:30.366903Z",
+  "id": "d1cfa35d-451c-479c-9562-435fdb8d94bf",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T18:56:23.040166Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,118 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-001\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.486529955770004,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-001\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-TS-001\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 11,
+      "fixtures": 0,
+      "live business code": 26,
+      "live config": 0,
+      "scripts": 1,
+      "synthetic filler / inflation content": 4840,
+      "tests": 16,
+      "total": 9948,
+      "vendor/generated": 263
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\customer-portal-node-tls\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-TS-001.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\customer-portal-node-tls\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "export function buildAgent() { return new https.Agent({ rejectUnauthorized: false }); }",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9e2e0d1d-ba6b-4541-92f4-07b9e507c3ce",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/modules/http/insecureAgentFactory.ts",
+        "queryFamily": "typescript.node.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"node.tls.verification-bypass\",\"callName\":\"https.Agent\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"rejectUnauthorized\",\"resolvedValue\":\"rejectUnauthorized=false\",\"language\":\"typescript\",\"valueSource\":\"bool_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "rejectUnauthorized=false",
+        "ruleKey": "quantum.arq-q-0611-typescript",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:tls:https.Agent:rejectUnauthorized=false",
+        "severity": "CRITICAL"
+      },
+      "expected": "reject-unauthorized"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "export function billingAgent() { return new https.Agent({ rejectUnauthorized: false }); }",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "20246d64-3ea8-480e-87c2-61aa0db9524c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/modules/http/insecureBillingClient.ts",
+        "queryFamily": "typescript.node.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"node.tls.verification-bypass\",\"callName\":\"https.Agent\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"rejectUnauthorized\",\"resolvedValue\":\"rejectUnauthorized=false\",\"language\":\"typescript\",\"valueSource\":\"bool_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "rejectUnauthorized=false",
+        "ruleKey": "quantum.arq-q-0611-typescript",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:tls:https.Agent:rejectUnauthorized=false",
+        "severity": "CRITICAL"
+      },
+      "expected": "axios-insecure"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V6-TS-001",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}
