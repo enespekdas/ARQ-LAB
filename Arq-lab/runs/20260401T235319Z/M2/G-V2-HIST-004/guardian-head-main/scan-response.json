@@ -1,0 +1,64 @@
+{
+  "applicationId": "3ab4d83e-5ea6-493b-906d-af2bc981ac56",
+  "applicationKey": "arq-lab-g-v2-hist-004",
+  "applicationName": "partner-rename-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "bc9bbb5ccdfc19d50d1742fc2730b6a1439b0a6f",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T23:56:21.961421Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/partner-rename-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 139,
+  "filesTotal": 139,
+  "finishedAt": "2026-04-01T23:56:26.153919Z",
+  "id": "d07fe4b6-f6d1-4bbb-bb1e-d6086da63100",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-01T23:56:22.478218Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

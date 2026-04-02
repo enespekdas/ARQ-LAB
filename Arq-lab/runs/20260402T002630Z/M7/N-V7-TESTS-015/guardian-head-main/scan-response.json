@@ -1,0 +1,64 @@
+{
+  "applicationId": "01f9116a-02c5-42ed-9cad-152218f60fad",
+  "applicationKey": "arq-lab-n-v7-tests-015",
+  "applicationName": "fixtures-mocks-noise-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "b5398eb224683e64ec3a48c84ad2a965b77db297",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T00:33:14.904422Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/fixtures-mocks-noise-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 164,
+  "filesTotal": 164,
+  "finishedAt": "2026-04-02T00:33:19.810559Z",
+  "id": "fdd7fe47-a608-47e2-bd1f-aa51b4b9379c",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T00:33:14.981347Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

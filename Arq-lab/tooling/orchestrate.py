@@ -38,6 +38,17 @@ def _application_key_for_scenario(scenario: ScenarioSpec) -> str:
     return f"arq-lab-{scenario.id.lower()}"
 
 
+def _is_live_finding(item: dict[str, Any]) -> bool:
+    detail = item.get("detail", {})
+    if not isinstance(detail, dict):
+        detail = {}
+    detection_state = str(detail.get("detectionState") or item.get("detectionState") or "").strip().upper()
+    if detection_state == "RESOLVED":
+        return False
+    resolved_at = detail.get("resolvedAt") or item.get("resolvedAt")
+    return not (resolved_at and detection_state in {"", "RESOLVED"})
+
+
 def _execute_plan(plan: list[list[str]], repo_root: Path, *, stage: str, log_root: Path) -> BuildStatus:
     if not plan:
         return BuildStatus(state="skipped", commands=[])
@@ -213,6 +224,8 @@ def _run_scenario(
             for item in export_payload.get("items", []):
                 normalized = dict(item)
                 normalized["detail"] = details.get(str(item["findingId"]), {})
+                if not _is_live_finding(normalized):
+                    continue
                 normalized["scanPlanName"] = scan_plan.name
                 normalized_items.append(normalized)
             actual_findings.extend(normalized_items)

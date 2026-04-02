@@ -1,0 +1,64 @@
+{
+  "applicationId": "29d952b4-70a9-4fad-b649-1947063661be",
+  "applicationKey": "arq-lab-m-v8-002",
+  "applicationName": "infra-app-mixed-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "0a9f82fa26b7915ab6163ae537bfc2e71b131ac5",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T04:52:38.814665Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/infra-app-mixed-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 264,
+  "filesTotal": 264,
+  "finishedAt": "2026-04-02T04:52:44.717364Z",
+  "id": "68aad395-4993-4d67-bbe4-47e8519aa4d3",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T04:52:40.073438Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 1,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T00:07:12.348700400Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "4531b87b-0fa6-4220-a943-2dd6db5a5401",
+      "applicationKey": "arq-lab-q-v3-java-006",
+      "applicationName": "safe-wrapper-java",
+      "branchName": "main",
+      "commitSha": "cc538f805b1ade11d7ee524ca5fb9ea1cf4696b5",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "c2c32f39-808a-4aff-b25b-694ce5043971",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-02T00:07:10.389418Z",
+      "lastSeenAt": "2026-04-02T00:07:10.389418Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/safewrapperjava/security/LegacyEnvelopeCipher.java",
+      "primaryLineEnd": 3,
+      "primaryLineStart": 3,
+      "projectId": "cb328eae-ebfb-4fab-8131-5d4b4758ec86",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0013-java",
+      "ruleName": "AES Mode",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

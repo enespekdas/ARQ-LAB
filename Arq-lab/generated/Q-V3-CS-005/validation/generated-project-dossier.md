@@ -383,7 +383,7 @@ inventory-runtime-csharp
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2284 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 699 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 698 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 184 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 11 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -585,7 +585,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: using System; using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class DigestInventoryCatalog { public static int Sample() => new Random().Next(100, 999); public static string Supported() => SHA256.HashData(System.Text.Encoding.UTF8.GetBytes("seed")).Length.ToString(); }
+0001: using System; using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class DigestInventoryCatalog { public static string Supported() => nameof(Random) + ":" + SHA256.HashData(System.Text.Encoding.UTF8.GetBytes("seed")).Length.ToString(); }
 ```
 
 ### `src/Library/Security/LegacyDigestFactory.cs`
@@ -683,7 +683,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FP`.
 
 ## 16. Realism Justification
 

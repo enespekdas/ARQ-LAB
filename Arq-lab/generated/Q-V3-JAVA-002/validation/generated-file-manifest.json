@@ -1919,14 +1919,14 @@
   },
   {
     "classification": "live-code",
-    "findingExpectation": "may_find_review",
+    "findingExpectation": "must_find",
     "loc": 3,
-    "nearRealNegative": true,
+    "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
     "path": "src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java",
-    "positiveSurface": false,
+    "positiveSurface": true,
     "protectedNegative": false,
     "purpose": "Runtime business module contributing to Legacy Password Factory.",
     "syntheticFiller": false
@@ -2326,7 +2326,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 28,
+    "loc": 41,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2354,7 +2354,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 18,
+    "loc": 26,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2382,7 +2382,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 787,
+    "loc": 797,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,

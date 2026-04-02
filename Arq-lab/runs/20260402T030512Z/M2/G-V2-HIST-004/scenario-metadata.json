@@ -1,0 +1,82 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/partner-rename-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/partner-rename-lineage",
+    "html_url": "https://github.com/ARQ-Sec/partner-rename-lineage",
+    "name": "partner-rename-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "packageName": "com.arq.partnerrenamelineage"
+    },
+    "git": {
+      "branches": {
+        "main": "de183940fb898eb78c10f0731b8ab4f2a835df93"
+      },
+      "head": "de183940fb898eb78c10f0731b8ab4f2a835df93",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:08:34+03:00",
+          "message": "c006 unrelated refactor",
+          "sha": "de183940fb898eb78c10f0731b8ab4f2a835df93"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:08:33+03:00",
+          "message": "c005 remove token after archive migration",
+          "sha": "a2171fc63e45e76ca52d5249f177ab9edd2b9a28"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:08:33+03:00",
+          "message": "c004 add rename plan noise",
+          "sha": "2c11bf42edbf382e98cfc0faa8c7e540e99f3f5b"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:08:32+03:00",
+          "message": "c003 move token archive into history package",
+          "sha": "c103f838df94011c063f62242a86d97e937e0b2b"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:08:32+03:00",
+          "message": "c002 add transient partner token",
+          "sha": "1e8b4ad6599df051a1d5912ca155308cce9d4ed2"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:08:31+03:00",
+          "message": "c001 bootstrap repo",
+          "sha": "4e870eac265e2fe84b2fc7405571ac3dabd302dd"
+        }
+      ]
+    },
+    "lineCount": 5059,
+    "repoName": "partner-rename-lineage",
+    "scenarioId": "G-V2-HIST-004"
+  },
+  "scenario": {
+    "domain": "Partner bootstrap repo with rename, move, and revert history around a transient secret.",
+    "id": "G-V2-HIST-004",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "partner-rename-lineage",
+    "stack": "Java / Spring Boot"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "applicationId": "b2938d9f-d008-4f94-b0af-471e48eb5a8c",
+  "applicationKey": "arq-lab-g-v2-hist-015",
+  "applicationName": "branch-private-key-divergence",
+  "branchScope": "ALL_BRANCHES",
+  "commitSha": null,
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-01T23:38:06.003297Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/branch-private-key-divergence.git @release/2026.06",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 139,
+  "filesTotal": 139,
+  "finishedAt": "2026-04-01T23:38:18.751923Z",
+  "id": "a5b9013d-3b96-4df6-9150-3c7f39c121d8",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": null,
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": null,
+  "startedAt": "2026-04-01T23:38:07.587421Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 1,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 1,
+        "occurrenceCount": 1,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 1,
+    "occurrenceCount": 1,
+    "refCount": 3,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main",
+      "feature/private-key-hotfix",
+      "release/2026.06"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

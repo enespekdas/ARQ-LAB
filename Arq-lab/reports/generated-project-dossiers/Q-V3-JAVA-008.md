@@ -386,7 +386,7 @@ scary-wrapper-java
 | src/main/java/com/arq/scarywrapperjava/repository/PayoutRepository.java | live-code | 21 | Persistence or data-access helper for Payout Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/scarywrapperjava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/scarywrapperjava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
-| src/main/java/com/arq/scarywrapperjava/security/LegacySidePathHasher.java | live-code | 3 | Runtime business module contributing to Legacy Side Path Hasher. | yes | yes | no | yes | yes | no |
+| src/main/java/com/arq/scarywrapperjava/security/LegacySidePathHasher.java | live-code | 3 | Runtime business module contributing to Legacy Side Path Hasher. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/scarywrapperjava/security/SecureDigestDelegate.java | live-code | 2 | Runtime business module contributing to Secure Digest Delegate. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/scarywrapperjava/security/TrustAllStyleButSafeHasher.java | live-code | 3 | Runtime business module contributing to Trust All Style But Safe Hasher. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/scarywrapperjava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
@@ -420,7 +420,7 @@ scary-wrapper-java
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2480 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 762 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 759 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 206 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -434,13 +434,12 @@ scary-wrapper-java
 - Path: `src/main/java/com/arq/scarywrapperjava/security/LegacySidePathHasher.java`
   Why it should be detected: scenario declares `side-path-sha1` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `SHA1`
+  Finding family / rule family expectation: `SHA-1`
   Head/history behavior: `head-only`
-  Explainability expectation: resolvedValue~SHA1, queryFamily~jca
+  Explainability expectation: resolvedValue~SHA-1, queryFamily~jca
 
 ## 7. Near-Real Negative Surfaces
 
-- `src/main/java/com/arq/scarywrapperjava/security/LegacySidePathHasher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/scarywrapperjava/security/SecureDigestDelegate.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/scarywrapperjava/security/TrustAllStyleButSafeHasher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
@@ -645,11 +644,10 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Side Path Hasher. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: package com.arq.scarywrapperjava.security;
 0002: import java.security.MessageDigest;
 0003: public class LegacySidePathHasher { public byte[] digest(byte[] value) throws Exception { return MessageDigest.getInstance("SHA-1").digest(value); } }
 ```
@@ -707,9 +705,9 @@ Inflation disclosure:
 
 - path: `LegacySidePathHasher.java`
   module: `Quantum`
-  expected rule/finding family: `SHA1`
+  expected rule/finding family: `SHA-1`
   expected branch/ref behavior: `head-only`
-  expected explainability behavior: resolvedValue~SHA1, queryFamily~jca
+  expected explainability behavior: resolvedValue~SHA-1, queryFamily~jca
 
 ### must_not_find
 
@@ -735,7 +733,7 @@ Inflation disclosure:
 
 Scenario-specific explainability expectations:
 
-- `LegacySidePathHasher.java`: resolvedValue~`SHA1`, queryFamily~`jca`
+- `LegacySidePathHasher.java`: resolvedValue~`SHA-1`, queryFamily~`jca`
 
 Explainability failure definition:
 
@@ -746,7 +744,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FN`.
 
 ## 16. Realism Justification
 

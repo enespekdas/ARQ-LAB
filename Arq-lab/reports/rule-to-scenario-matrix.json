@@ -1,0 +1,562 @@
+{
+  "guardian.generic-api-key": {
+    "bucket": "mixed_exercised",
+    "expectedScenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-JAVA-001",
+      "G-V1-PY-002",
+      "G-V1-TS-003",
+      "G-V2-HIST-001",
+      "G-V2-HIST-002",
+      "G-V2-HIST-004",
+      "G-V2-HIST-005",
+      "G-V2-HIST-006",
+      "G-V2-HIST-007",
+      "G-V2-HIST-009",
+      "G-V2-HIST-014",
+      "G-V2-HIST-017",
+      "M-V8-001",
+      "M-V8-002",
+      "M-V8-003",
+      "M-V8-004",
+      "M-V8-005",
+      "M-V8-006",
+      "M-V8-007",
+      "M-V8-008",
+      "M-V8-009",
+      "M-V8-010",
+      "M-V8-011",
+      "M-V8-012"
+    ],
+    "explainabilityScenarios": [],
+    "module": "guardian",
+    "noiseScenarios": [
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012"
+    ],
+    "scenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-JAVA-001",
+      "G-V1-PY-002",
+      "G-V1-TS-003",
+      "G-V2-HIST-001",
+      "G-V2-HIST-002",
+      "G-V2-HIST-004",
+      "G-V2-HIST-005",
+      "G-V2-HIST-006",
+      "G-V2-HIST-007",
+      "G-V2-HIST-009",
+      "G-V2-HIST-014",
+      "G-V2-HIST-017",
+      "M-V8-001",
+      "M-V8-002",
+      "M-V8-003",
+      "M-V8-004",
+      "M-V8-005",
+      "M-V8-006",
+      "M-V8-007",
+      "M-V8-008",
+      "M-V8-009",
+      "M-V8-010",
+      "M-V8-011",
+      "M-V8-012"
+    ]
+  },
+  "guardian.private-key": {
+    "bucket": "mixed_exercised",
+    "expectedScenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-JAVA-001",
+      "G-V1-TS-003",
+      "G-V2-HIST-003",
+      "G-V2-HIST-008",
+      "G-V2-HIST-015",
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005"
+    ],
+    "explainabilityScenarios": [],
+    "module": "guardian",
+    "noiseScenarios": [
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012"
+    ],
+    "scenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-JAVA-001",
+      "G-V1-TS-003",
+      "G-V2-HIST-003",
+      "G-V2-HIST-008",
+      "G-V2-HIST-015",
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012"
+    ]
+  },
+  "quantum.arq-q-0012-java": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V3-JAVA-002"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V3-JAVA-002"
+    ]
+  },
+  "quantum.arq-q-0013-java": {
+    "bucket": "mixed_exercised",
+    "expectedScenarios": [
+      "M-V8-001",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-006"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007"
+    ],
+    "scenarios": [
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-006"
+    ]
+  },
+  "quantum.arq-q-0026-java": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V5-JAVA-001",
+      "Q-V5-JAVA-003",
+      "Q-V5-JAVA-004",
+      "Q-V5-JAVA-005",
+      "Q-V5-JAVA-007"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V5-JAVA-001",
+      "Q-V5-JAVA-003",
+      "Q-V5-JAVA-004",
+      "Q-V5-JAVA-005",
+      "Q-V5-JAVA-007"
+    ]
+  },
+  "quantum.arq-q-0072-java": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-004",
+      "Q-V3-JAVA-005",
+      "Q-V3-JAVA-007"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-004",
+      "Q-V3-JAVA-005",
+      "Q-V3-JAVA-007"
+    ]
+  },
+  "quantum.arq-q-0082-java": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V3-JAVA-002"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V3-JAVA-002"
+    ]
+  },
+  "quantum.arq-q-0085-java": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V5-JAVA-001",
+      "Q-V5-JAVA-003",
+      "Q-V5-JAVA-004",
+      "Q-V5-JAVA-005",
+      "Q-V5-JAVA-006",
+      "Q-V5-JAVA-007"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V5-JAVA-001",
+      "Q-V5-JAVA-003",
+      "Q-V5-JAVA-004",
+      "Q-V5-JAVA-005",
+      "Q-V5-JAVA-006",
+      "Q-V5-JAVA-007"
+    ]
+  },
+  "quantum.arq-q-0131-java": {
+    "bucket": "noisy_only_exercised",
+    "expectedScenarios": [],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-002"
+    ],
+    "scenarios": [
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-002"
+    ]
+  },
+  "quantum.arq-q-0178-java": {
+    "bucket": "mixed_exercised",
+    "expectedScenarios": [
+      "Q-V3-JAVA-001"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [
+      "Q-V3-JAVA-008"
+    ],
+    "scenarios": [
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-008"
+    ]
+  },
+  "quantum.arq-q-0247-python": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V5-PY-002"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V5-PY-002"
+    ]
+  },
+  "quantum.arq-q-0248-python": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V4-PY-001",
+      "Q-V4-PY-005",
+      "Q-V4-PY-006"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V4-PY-001",
+      "Q-V4-PY-005",
+      "Q-V4-PY-006"
+    ]
+  },
+  "quantum.arq-q-0260-python": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V4-PY-001",
+      "Q-V4-PY-004"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V4-PY-001",
+      "Q-V4-PY-004"
+    ]
+  },
+  "quantum.arq-q-0305-python": {
+    "bucket": "mixed_exercised",
+    "expectedScenarios": [
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-012",
+      "Q-V5-PY-002",
+      "Q-V5-PY-003"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [
+      "M-V8-009",
+      "M-V8-011"
+    ],
+    "scenarios": [
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V5-PY-002",
+      "Q-V5-PY-003"
+    ]
+  },
+  "quantum.arq-q-0418-csharp": {
+    "bucket": "noisy_only_exercised",
+    "expectedScenarios": [],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [
+      "Q-V3-CS-003"
+    ],
+    "scenarios": [
+      "Q-V3-CS-003",
+      "Q-V3-CS-005"
+    ]
+  },
+  "quantum.arq-q-0449-csharp": {
+    "bucket": "explainability_problematic_exercised",
+    "expectedScenarios": [
+      "Q-V6-CS-002",
+      "Q-V6-CS-003"
+    ],
+    "explainabilityScenarios": [
+      "Q-V6-CS-004"
+    ],
+    "module": "quantum",
+    "noiseScenarios": [
+      "Q-V6-CS-004"
+    ],
+    "scenarios": [
+      "Q-V6-CS-002",
+      "Q-V6-CS-003",
+      "Q-V6-CS-004"
+    ]
+  },
+  "quantum.arq-q-0453-csharp": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V3-CS-003"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V3-CS-003"
+    ]
+  },
+  "quantum.arq-q-0468-csharp": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V3-CS-003",
+      "Q-V3-CS-004",
+      "Q-V3-CS-005"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V3-CS-003",
+      "Q-V3-CS-004",
+      "Q-V3-CS-005"
+    ]
+  },
+  "quantum.arq-q-0488-csharp": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V3-CS-003",
+      "Q-V3-CS-005"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V3-CS-003",
+      "Q-V3-CS-005"
+    ]
+  },
+  "quantum.arq-q-0572-go": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V4-GO-002",
+      "Q-V4-GO-003"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V4-GO-002",
+      "Q-V4-GO-003"
+    ]
+  },
+  "quantum.arq-q-0573-go": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V4-GO-002",
+      "Q-V4-GO-003"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V4-GO-002",
+      "Q-V4-GO-003"
+    ]
+  },
+  "quantum.arq-q-0611-typescript": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V6-TS-001",
+      "Q-V6-TS-002",
+      "Q-V6-TS-004"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V6-TS-001",
+      "Q-V6-TS-002",
+      "Q-V6-TS-004"
+    ]
+  },
+  "quantum.arq-q-0613-typescript": {
+    "bucket": "explainability_problematic_exercised",
+    "expectedScenarios": [
+      "M-V8-001",
+      "M-V8-002",
+      "M-V8-003",
+      "M-V8-004",
+      "M-V8-005",
+      "M-V8-006",
+      "M-V8-007",
+      "M-V8-008",
+      "M-V8-011",
+      "Q-V4-TS-003",
+      "Q-V4-TS-005"
+    ],
+    "explainabilityScenarios": [
+      "Q-V4-TS-006"
+    ],
+    "module": "quantum",
+    "noiseScenarios": [
+      "M-V8-009",
+      "M-V8-010",
+      "M-V8-012",
+      "Q-V4-TS-006"
+    ],
+    "scenarios": [
+      "M-V8-001",
+      "M-V8-002",
+      "M-V8-003",
+      "M-V8-004",
+      "M-V8-005",
+      "M-V8-006",
+      "M-V8-007",
+      "M-V8-008",
+      "M-V8-009",
+      "M-V8-010",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V4-TS-003",
+      "Q-V4-TS-005",
+      "Q-V4-TS-006"
+    ]
+  },
+  "quantum.arq-q-0614-typescript": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V4-TS-003"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V4-TS-003"
+    ]
+  },
+  "quantum.arq-q-0930-config": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "M-V8-002",
+      "M-V8-004",
+      "M-V8-006",
+      "M-V8-008",
+      "M-V8-010",
+      "Q-V6-CONFIG-003",
+      "Q-V6-CONFIG-006"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "M-V8-002",
+      "M-V8-004",
+      "M-V8-006",
+      "M-V8-008",
+      "M-V8-010",
+      "Q-V6-CONFIG-003",
+      "Q-V6-CONFIG-006"
+    ]
+  },
+  "quantum.arq-q-0931-config": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "M-V8-002",
+      "M-V8-004",
+      "M-V8-006",
+      "M-V8-008",
+      "M-V8-010",
+      "Q-V6-CONFIG-003",
+      "Q-V6-CONFIG-004",
+      "Q-V6-CONFIG-005",
+      "Q-V6-CONFIG-006"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "M-V8-002",
+      "M-V8-004",
+      "M-V8-006",
+      "M-V8-008",
+      "M-V8-010",
+      "Q-V6-CONFIG-003",
+      "Q-V6-CONFIG-004",
+      "Q-V6-CONFIG-005",
+      "Q-V6-CONFIG-006"
+    ]
+  },
+  "quantum.arq-q-0949-config": {
+    "bucket": "expected_positive_exercised",
+    "expectedScenarios": [
+      "Q-V6-CONFIG-003",
+      "Q-V6-CONFIG-004",
+      "Q-V6-CONFIG-005"
+    ],
+    "explainabilityScenarios": [],
+    "module": "quantum",
+    "noiseScenarios": [],
+    "scenarios": [
+      "Q-V6-CONFIG-003",
+      "Q-V6-CONFIG-004",
+      "Q-V6-CONFIG-005"
+    ]
+  }
+}

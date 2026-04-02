@@ -94,7 +94,7 @@ class ArqClient:
     ) -> dict[str, Any]:
         existing = next((item for item in self.list_applications() if item["key"] == key), None)
         repository_source = {
-            "providerType": "GENERIC_GIT",
+            "providerType": infer_provider_type(repository_locator),
             "repositoryLocator": repository_locator,
             "defaultBranch": default_branch,
             "active": True,
@@ -194,3 +194,18 @@ class ArqClient:
             "applications": self.list_applications(),
         }
         destination.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8", newline="\n")
+
+
+def infer_provider_type(repository_locator: str) -> str:
+    candidate = (repository_locator or "").strip()
+    if not candidate:
+        return "GENERIC_GIT"
+    if candidate.startswith("git@github.com:") or "github.com/" in candidate:
+        return "GITHUB"
+    if candidate.startswith("git@gitlab.com:") or "gitlab.com/" in candidate:
+        return "GITLAB"
+    if candidate.startswith("git@bitbucket.org:") or "bitbucket.org/" in candidate:
+        return "BITBUCKET"
+    if "dev.azure.com/" in candidate or "visualstudio.com/" in candidate:
+        return "AZURE_DEVOPS"
+    return "GENERIC_GIT"

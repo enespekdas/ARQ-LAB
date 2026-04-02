@@ -1,0 +1,355 @@
+{
+  "applicationId": "d8af7abd-f739-456e-a184-6624b8787905",
+  "applicationKey": "arq-lab-q-v4-go-004",
+  "applicationName": "hash-helper-go",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "d6844c92662cb17babc619c479459f88d539e235",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T00:14:51.998737Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/hash-helper-go.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 151,
+  "filesTotal": 151,
+  "finishedAt": "2026-04-02T00:14:58.174706Z",
+  "id": "4ad6c05b-3ff4-453d-8e36-f3aaf4266b0a",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "quantum",
+      "occurrenceCount": 0,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T00:14:53.132483Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 1,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "quantum": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 1,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "projectContext": {
+      "applicability": {
+        "appliesCount": 17,
+        "byLanguage": {
+          "abap": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 1,
+            "notApplicableCount": 0,
+            "unknownCount": 1
+          },
+          "c": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "config": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 24,
+            "notApplicableCount": 0,
+            "unknownCount": 24
+          },
+          "cpp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "csharp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 158,
+            "notApplicableCount": 0,
+            "unknownCount": 158
+          },
+          "elixir": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 11,
+            "notApplicableCount": 0,
+            "unknownCount": 11
+          },
+          "erlang": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 10,
+            "notApplicableCount": 0,
+            "unknownCount": 10
+          },
+          "go": {
+            "appliesCount": 17,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 0
+          },
+          "groovy": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "java": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 191,
+            "notApplicableCount": 0,
+            "unknownCount": 191
+          },
+          "javascript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "jcl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 7,
+            "notApplicableCount": 0,
+            "unknownCount": 7
+          },
+          "kotlin": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "lua": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          },
+          "objectivec": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "perl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 9,
+            "notApplicableCount": 0,
+            "unknownCount": 9
+          },
+          "php": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "plsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 4,
+            "notApplicableCount": 0,
+            "unknownCount": 4
+          },
+          "powershell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "python": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 152,
+            "notApplicableCount": 0,
+            "unknownCount": 152
+          },
+          "ruby": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "rust": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "scala": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "shell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 12,
+            "notApplicableCount": 0,
+            "unknownCount": 12
+          },
+          "swift": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "tsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 5,
+            "notApplicableCount": 0,
+            "unknownCount": 5
+          },
+          "typescript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "zig": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          }
+        },
+        "evaluatedRuleCount": 805,
+        "mode": "SHADOW",
+        "notApplicableCount": 0,
+        "reasonBreakdown": {
+          "LANGUAGE_AND_VERSION_MATCH": 17,
+          "NO_LANGUAGE_CONTEXT": 788
+        },
+        "sampleNotApplicableRules": [],
+        "sampleUnknownRules": [
+          {
+            "applicableMaxVersion": "8",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0005-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0006-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0007-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0008-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0009-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0010-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0011-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0012-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0013-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "11",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0014-java",
+            "status": "UNKNOWN"
+          }
+        ],
+        "unknownCount": 788
+      },
+      "ecosystems": [
+        "go"
+      ],
+      "frameworkHints": [],
+      "languageVersions": {
+        "go": [
+          "1.22"
+        ]
+      },
+      "manifestCount": 1,
+      "manifests": [
+        {
+          "ecosystem": "go",
+          "frameworkHints": [],
+          "kind": "GO_MOD",
+          "languageVersions": [
+            "1.22"
+          ],
+          "parseStatus": "PARSED",
+          "path": "go.mod"
+        }
+      ],
+      "parsedManifestCount": 1,
+      "status": "AVAILABLE",
+      "warnings": []
+    },
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

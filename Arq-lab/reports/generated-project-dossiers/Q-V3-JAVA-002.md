@@ -30,7 +30,7 @@ A real customer could plausibly own this repository because it bundles the opera
 - Runtime role: `Legacy payment encryption and key management helpers.`
 - Config flow: `src/main/resources/application.yml`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `BatchReconciliationCipher.java, LegacyEnvelopeCipher.java`
+- Crypto/TLS flow if relevant: `BatchReconciliationCipher.java, LegacyEnvelopeCipher.java, LegacyPasswordFactory.java`
 - Test surfaces: `src/test/java/com/arq/legacypaymentcryptojava/service/BalanceServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/DisputeServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/InvoiceServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/LedgerServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/PartnerServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/PayoutServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/RefundServiceTest.java, src/test/java/com/arq/legacypaymentcryptojava/service/SettlementServiceTest.java`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -389,7 +389,7 @@ legacy-payment-crypto-java
 | src/main/java/com/arq/legacypaymentcryptojava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/BatchReconciliationCipher.java | live-code | 3 | Runtime business module contributing to Batch Reconciliation Cipher. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/LegacyEnvelopeCipher.java | live-code | 3 | Runtime business module contributing to Legacy Envelope Cipher. | yes | no | no | yes | yes | no |
-| src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java | live-code | 3 | Runtime business module contributing to Legacy Password Factory. | no | yes | no | yes | yes | no |
+| src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java | live-code | 3 | Runtime business module contributing to Legacy Password Factory. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java | live-code | 3 | Runtime business module contributing to Secure Envelope Cipher. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/service/BalanceService.java | live-code | 19 | Runtime business service implementing Balance Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/legacypaymentcryptojava/service/DisputeService.java | live-code | 19 | Runtime business service implementing Dispute Service logic. | no | no | no | yes | yes | no |
@@ -418,11 +418,11 @@ legacy-payment-crypto-java
 | src/test/java/com/arq/legacypaymentcryptojava/service/SettlementServiceTest.java | test | 13 | Automated test surface covering Settlement Service Test behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 14 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/expected-findings.json | generated | 28 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/expected-findings.json | generated | 41 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/explainability-contract.json | generated | 18 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2494 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 787 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 797 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 207 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -445,10 +445,15 @@ legacy-payment-crypto-java
   Finding family / rule family expectation: `AES/ECB`
   Head/history behavior: `head-only`
   Explainability expectation: resolvedValue~AES/ECB
+- Path: `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java`
+  Why it should be detected: scenario declares `legacy-pbe` as a live positive surface.
+  Target module: `Quantum`
+  Finding family / rule family expectation: `PBEWithMD5AndDES`
+  Head/history behavior: `head-only`
+  Explainability expectation: resolvedValue~PBEWithMD5AndDES, queryFamily~jca
 
 ## 7. Near-Real Negative Surfaces
 
-- `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/legacypaymentcryptojava/security/SecureEnvelopeCipher.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -674,9 +679,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### `src/main/java/com/arq/legacypaymentcryptojava/security/LegacyPasswordFactory.java`
 
-- Why this file matters: `live-code` file with expectation `may_find_review`.
+- Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Legacy Password Factory. It is executable/live in the assembled repository.
-- Key constructs: negative or realism-supporting surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -700,9 +705,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5013`
+- Total LOC considered for authored/generated project content: `5034`
 - Synthetic filler / inflation LOC: `3520`
-- Synthetic filler ratio: `70.22%`
+- Synthetic filler ratio: `69.92%`
 
 | category | LOC |
 | --- | ---: |
@@ -712,7 +717,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 132 |
+| vendor/generated | 153 |
 | synthetic filler / inflation content | 3520 |
 
 Inflation disclosure:
@@ -734,6 +739,11 @@ Inflation disclosure:
   expected rule/finding family: `AES/ECB`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: resolvedValue~AES/ECB
+- path: `LegacyPasswordFactory.java`
+  module: `Quantum`
+  expected rule/finding family: `PBEWithMD5AndDES`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: resolvedValue~PBEWithMD5AndDES, queryFamily~jca
 
 ### must_not_find
 
@@ -761,6 +771,7 @@ Scenario-specific explainability expectations:
 
 - `LegacyEnvelopeCipher.java`: resolvedValue~`DESede/ECB/PKCS5Padding`
 - `BatchReconciliationCipher.java`: resolvedValue~`AES/ECB`
+- `LegacyPasswordFactory.java`: resolvedValue~`PBEWithMD5AndDES`, queryFamily~`jca`
 
 Explainability failure definition:
 
@@ -771,7 +782,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

@@ -1,0 +1,64 @@
+{
+  "applicationId": "02591b4d-c6f1-4d12-ad41-4efbdace3524",
+  "applicationKey": "arq-lab-m-v8-011",
+  "applicationName": "workspace-shared-libs-mixed",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "75013b6bd38f61b8f6faab5c3e0e59796370970b",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T00:55:13.534047Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/workspace-shared-libs-mixed.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 354,
+  "filesTotal": 354,
+  "finishedAt": "2026-04-02T00:55:21.909843Z",
+  "id": "95f533d0-0f1e-437e-ba24-98491ab4a864",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T00:55:14.425568Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -30,7 +30,7 @@ A real customer could plausibly own this repository because it bundles the opera
 - Runtime role: `Identity gateway for sessions and partner auth.`
 - Config flow: `src/main/resources/application.yml`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `LegacyDigestService.java, TokenCipherService.java`
+- Crypto/TLS flow if relevant: `LegacyDigestService.java, PasswordKeyFactory.java, TokenCipherService.java`
 - Test surfaces: `src/test/java/com/arq/identitygatewayjava/service/BalanceServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/DisputeServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/InvoiceServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/LedgerServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/PartnerServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/PayoutServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/RefundServiceTest.java, src/test/java/com/arq/identitygatewayjava/service/SettlementServiceTest.java`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -389,7 +389,7 @@ identity-gateway-java
 | src/main/java/com/arq/identitygatewayjava/repository/RefundRepository.java | live-code | 21 | Persistence or data-access helper for Refund Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/repository/SettlementRepository.java | live-code | 21 | Persistence or data-access helper for Settlement Repository. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/LegacyDigestService.java | live-code | 3 | Runtime business service implementing Legacy Digest Service logic. | yes | no | no | yes | yes | no |
-| src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java | live-code | 3 | Runtime business module contributing to Password Key Factory. | no | yes | no | yes | yes | no |
+| src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java | live-code | 3 | Runtime business module contributing to Password Key Factory. | yes | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/ResetTokenService.java | live-code | 3 | Runtime business service implementing Reset Token Service logic. | no | no | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/SecureDigestService.java | live-code | 3 | Runtime business service implementing Secure Digest Service logic. | no | yes | no | yes | yes | no |
 | src/main/java/com/arq/identitygatewayjava/security/TokenCipherService.java | live-code | 3 | Runtime business service implementing Token Cipher Service logic. | yes | no | no | yes | yes | no |
@@ -420,11 +420,11 @@ identity-gateway-java
 | src/test/java/com/arq/identitygatewayjava/service/SettlementServiceTest.java | test | 13 | Automated test surface covering Settlement Service Test behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 20 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/expected-findings.json | generated | 41 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/expected-findings.json | generated | 54 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/explainability-contract.json | generated | 26 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/explainability-contract.json | generated | 34 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2508 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 804 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 814 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 208 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -453,10 +453,15 @@ identity-gateway-java
   Finding family / rule family expectation: `AES/ECB/PKCS5Padding`
   Head/history behavior: `head-only`
   Explainability expectation: resolvedValue~AES/ECB/PKCS5Padding, queryFamily~jca
+- Path: `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java`
+  Why it should be detected: scenario declares `legacy-pbe` as a live positive surface.
+  Target module: `Quantum`
+  Finding family / rule family expectation: `PBEWithMD5AndDES`
+  Head/history behavior: `head-only`
+  Explainability expectation: resolvedValue~PBEWithMD5AndDES, queryFamily~jca
 
 ## 7. Near-Real Negative Surfaces
 
-- `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `src/main/java/com/arq/identitygatewayjava/security/SecureDigestService.java`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -670,9 +675,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ### `src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java`
 
-- Why this file matters: `live-code` file with expectation `may_find_review`.
+- Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Password Key Factory. It is executable/live in the assembled repository.
-- Key constructs: negative or realism-supporting surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
@@ -708,9 +713,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5043`
+- Total LOC considered for authored/generated project content: `5064`
 - Synthetic filler / inflation LOC: `3520`
-- Synthetic filler ratio: `69.80%`
+- Synthetic filler ratio: `69.51%`
 
 | category | LOC |
 | --- | ---: |
@@ -720,7 +725,7 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 11 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 159 |
+| vendor/generated | 180 |
 | synthetic filler / inflation content | 3520 |
 
 Inflation disclosure:
@@ -747,6 +752,11 @@ Inflation disclosure:
   expected rule/finding family: `AES/ECB/PKCS5Padding`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: resolvedValue~AES/ECB/PKCS5Padding, queryFamily~jca
+- path: `PasswordKeyFactory.java`
+  module: `Quantum`
+  expected rule/finding family: `PBEWithMD5AndDES`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: resolvedValue~PBEWithMD5AndDES, queryFamily~jca
 
 ### must_not_find
 
@@ -778,6 +788,7 @@ Scenario-specific explainability expectations:
 - `LegacyDigestService.java`: resolvedValue~`MD5`, queryFamily~`jca`, resolutionScope~`SAME_METHOD`
 - `LegacyDigestService.java`: resolvedValue~`SHA-1`, queryFamily~`jca`
 - `TokenCipherService.java`: resolvedValue~`AES/ECB/PKCS5Padding`, queryFamily~`jca`
+- `PasswordKeyFactory.java`: resolvedValue~`PBEWithMD5AndDES`, queryFamily~`jca`
 
 Explainability failure definition:
 
@@ -788,7 +799,6 @@ Explainability failure definition:
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

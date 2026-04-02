@@ -998,17 +998,17 @@ control-repo-discovery
 
 Branches:
 
-- `feature/charts-cleanup` tip: `bae182ccb1bca3720a0bac619d449194f89d27cb`; diverges from `main` at `c87eb2838fcd9ea1776eb90d01a942e632bc82bd`
-- `feature/hotfix-ssl` tip: `cdf50c255a8f138f9382898563d76950785fc62d`; diverges from `main` at `c87eb2838fcd9ea1776eb90d01a942e632bc82bd`
-- `main` tip: `c87eb2838fcd9ea1776eb90d01a942e632bc82bd`
-- `release/2026.04` tip: `9e359483dca1384a252f8a7ba9cc4eaa29915220`; diverges from `main` at `c87eb2838fcd9ea1776eb90d01a942e632bc82bd`
+- `feature/charts-cleanup` tip: `5f4503d03aa337b471fe177159ebee40e3cb9145`; diverges from `main` at `7c12188613e7fab9d5224c021214736725daf8e2`
+- `feature/hotfix-ssl` tip: `0e12701c5332d34bf7d54bf8c3c0479fb1eb04d2`; diverges from `main` at `7c12188613e7fab9d5224c021214736725daf8e2`
+- `main` tip: `7c12188613e7fab9d5224c021214736725daf8e2`
+- `release/2026.04` tip: `2ffa7edd47d2d32e0e3bef786ebf8aa8f9043738`; diverges from `main` at `7c12188613e7fab9d5224c021214736725daf8e2`
 
 Commit order:
 
-- `9e359483dca1384a252f8a7ba9cc4eaa29915220` `c003 release branch clean`: removes or neutralizes a prior signal.
-- `c87eb2838fcd9ea1776eb90d01a942e632bc82bd` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `cdf50c255a8f138f9382898563d76950785fc62d` `c002 temporary hotfix secret`: introduces an intended signal.
-- `bae182ccb1bca3720a0bac619d449194f89d27cb` `c004 charts cleanup branch`: removes or neutralizes a prior signal.
+- `7c12188613e7fab9d5224c021214736725daf8e2` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `0e12701c5332d34bf7d54bf8c3c0479fb1eb04d2` `c002 temporary hotfix secret`: introduces an intended signal.
+- `2ffa7edd47d2d32e0e3bef786ebf8aa8f9043738` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `5f4503d03aa337b471fe177159ebee40e3cb9145` `c004 charts cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

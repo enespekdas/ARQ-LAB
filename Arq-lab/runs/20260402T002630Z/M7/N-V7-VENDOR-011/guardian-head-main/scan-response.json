@@ -1,0 +1,64 @@
+{
+  "applicationId": "07e370fe-fb9d-4b62-b99c-9c6b7f8381d8",
+  "applicationKey": "arq-lab-n-v7-vendor-011",
+  "applicationName": "generated-noise-repo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "aa0d2cea57b9bc318b2b1e30b9f598bde3c17b94",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T00:31:27.193540Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/generated-noise-repo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 163,
+  "filesTotal": 163,
+  "finishedAt": "2026-04-02T00:31:31.771711Z",
+  "id": "f1b80ee1-7580-4446-9315-9ba0af6d3ff9",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 0
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T00:31:27.864501Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 0
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 0
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,66 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/folded-yaml-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/folded-yaml-lineage",
+    "html_url": "https://github.com/ARQ-Sec/folded-yaml-lineage",
+    "name": "folded-yaml-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "1d266071103c8b056c02c6b4459def1034b3ae35"
+      },
+      "head": "1d266071103c8b056c02c6b4459def1034b3ae35",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:02:25+03:00",
+          "message": "c004 remove live secret from head",
+          "sha": "1d266071103c8b056c02c6b4459def1034b3ae35"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:02:25+03:00",
+          "message": "c003 add masked docs example",
+          "sha": "904066b2cc70ebd3d9f27738efd66acd7dd8c1eb"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:02:25+03:00",
+          "message": "c002 add folded yaml secret",
+          "sha": "530b2f6b90d25a23c7e82d5f8b92e53793653a21"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:02:25+03:00",
+          "message": "c001 bootstrap",
+          "sha": "4d534c69f5403a4f46169c11fec1fef4eff0f8e0"
+        }
+      ]
+    },
+    "lineCount": 5058,
+    "repoName": "folded-yaml-lineage",
+    "scenarioId": "G-V2-HIST-016"
+  },
+  "scenario": {
+    "domain": "Runtime config repo where a folded YAML scalar once held a live token and later became a masked docs example.",
+    "id": "G-V2-HIST-016",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "folded-yaml-lineage",
+    "stack": "Python + YAML ops"
+  }
+}

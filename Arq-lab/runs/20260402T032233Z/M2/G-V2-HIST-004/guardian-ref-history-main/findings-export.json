@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T03:25:30.801191800Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "3ab4d83e-5ea6-493b-906d-af2bc981ac56",
+      "applicationKey": "arq-lab-g-v2-hist-004",
+      "applicationName": "partner-rename-lineage",
+      "branchName": "main",
+      "commitSha": "d48e029e73e4d28e83319e2a76f0fdf478f3d272",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HISTORY_ONLY",
+      "findingId": "2e7f253e-717d-4b74-ad90-157e5531061b",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T23:56:31.090957Z",
+      "lastSeenAt": "2026-04-02T03:25:29.808772Z",
+      "module": "guardian",
+      "occurrenceCount": 10,
+      "presentInHistory": true,
+      "presentOnHead": false,
+      "primaryFilePath": "src/main/java/com/arq/partnerrenamelineage/history/archive/PartnerCredentialArchive.java",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "cb328eae-ebfb-4fab-8131-5d4b4758ec86",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "REF_HISTORY",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

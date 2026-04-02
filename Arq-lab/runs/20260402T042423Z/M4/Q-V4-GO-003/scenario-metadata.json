@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/crypto-runtime-go.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/crypto-runtime-go",
+    "html_url": "https://github.com/ARQ-Sec/crypto-runtime-go",
+    "name": "crypto-runtime-go",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "47fee7c43bcbffa502a1f52137c631fd5ddb45ba"
+      },
+      "head": "47fee7c43bcbffa502a1f52137c631fd5ddb45ba",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T07:28:15+03:00",
+          "message": "bootstrap Q-V4-GO-003",
+          "sha": "47fee7c43bcbffa502a1f52137c631fd5ddb45ba"
+        }
+      ]
+    },
+    "lineCount": 5994,
+    "repoName": "crypto-runtime-go",
+    "scenarioId": "Q-V4-GO-003"
+  },
+  "scenario": {
+    "domain": "Go runtime repo with one real weak digest and nearby docs/test/import noise.",
+    "id": "Q-V4-GO-003",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo_name": "crypto-runtime-go",
+    "stack": "Go / service runtime"
+  }
+}

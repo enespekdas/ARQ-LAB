@@ -1,0 +1,64 @@
+{
+  "applicationId": "dbd51cdd-7a2a-4545-8a7f-07c8f7942a59",
+  "applicationKey": "arq-lab-g-v2-hist-002",
+  "applicationName": "partner-branch-divergence",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "f124215360676d183ce082373801c7221c8caeb7",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T02:24:07.614874Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/partner-branch-divergence.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 157,
+  "filesTotal": 157,
+  "finishedAt": "2026-04-02T02:24:13.052472Z",
+  "id": "0197454a-a0b0-4979-a2b6-d3849688e2b3",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T02:24:09.719695Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

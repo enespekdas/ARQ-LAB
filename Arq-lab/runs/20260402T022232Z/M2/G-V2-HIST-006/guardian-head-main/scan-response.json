@@ -1,0 +1,64 @@
+{
+  "applicationId": "7a6fe818-81a2-4b63-840d-0048d2e05d5d",
+  "applicationKey": "arq-lab-g-v2-hist-006",
+  "applicationName": "partner-relocation-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "47d7ea9e7196772a2cc7707a026472fa798c8aff",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T02:26:45.013113Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/partner-relocation-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 140,
+  "filesTotal": 140,
+  "finishedAt": "2026-04-02T02:26:48.717431Z",
+  "id": "c620a258-d978-41d7-9ae3-028cdadc343d",
+  "modules": [
+    {
+      "findingCount": 0,
+      "module": "guardian",
+      "occurrenceCount": 0,
+      "suppressedCount": 1
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T02:26:45.232346Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 1,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 0,
+    "keptCount": 0,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 1,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 0,
+        "keptCount": 0,
+        "occurrenceCount": 0,
+        "suppressedCount": 1
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 0,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 1
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

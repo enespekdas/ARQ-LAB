@@ -1010,14 +1010,17 @@ def _apply_go_variant(repo_root: Path, scenario: ScenarioSpec) -> None:
                 """\
                 package security
 
-                import "crypto/md5"
+                import (
+                    "crypto/md5"
+                    "hash"
+                )
 
                 func legacyFactory() hashWrapper {
                     return hashWrapper{newFunc: md5.New}
                 }
 
                 type hashWrapper struct {
-                    newFunc func() interface{ Write([]byte) (int, error); Sum([]byte) []byte }
+                    newFunc func() hash.Hash
                 }
 
                 func Digest(input []byte) []byte {
@@ -1045,7 +1048,7 @@ def _apply_csharp_variant(repo_root: Path, scenario: ScenarioSpec) -> None:
         write_text(repo_root / "docs" / "csharp-crypto-notes.md", "Inventory-only C# notes should stay descriptive and safe.\n")
     elif scenario.id == "Q-V3-CS-005":
         write_text(repo_root / "src" / "Library" / "Security" / "LegacyDigestFactory.cs", "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class LegacyDigestFactory { public static byte[] Md5(byte[] value) => MD5.Create().ComputeHash(value); public static byte[] Sha1(byte[] value) => SHA1.Create().ComputeHash(value); }\n")
-        write_text(repo_root / "src" / "Library" / "Security" / "DigestInventoryCatalog.cs", "using System; using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class DigestInventoryCatalog { public static int Sample() => new Random().Next(100, 999); public static string Supported() => SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(\"seed\")).Length.ToString(); }\n")
+        write_text(repo_root / "src" / "Library" / "Security" / "DigestInventoryCatalog.cs", "using System; using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class DigestInventoryCatalog { public static string Supported() => nameof(Random) + \":\" + SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(\"seed\")).Length.ToString(); }\n")
         write_text(repo_root / "src" / "Library" / "Security" / "SecureRandomFacade.cs", "using System.Security.Cryptography; namespace Arq.Lab.Library.Security; public static class SecureRandomFacade { public static int Next() => RandomNumberGenerator.GetInt32(100, 999); }\n")
     elif scenario.id == "Q-V6-CS-002":
         write_text(repo_root / "src" / "Library" / "Http" / "InsecurePartnerClientRegistration.cs", "using System.Net.Http; namespace Arq.Lab.Library.Http; public static class InsecurePartnerClientRegistration { public static HttpClientHandler Build() => new HttpClientHandler { ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator }; }\n")
@@ -1315,7 +1318,7 @@ def _build_guardian_history_python(repo_root: Path, scenario: ScenarioSpec, git_
         _commit_current_state(git_factory, repo_root, "c004 release branch clean")
         git_factory.checkout(repo_root, "main")
     elif scenario.id == "G-V2-HIST-016":
-        write_text(repo_root / "ops" / "runtime" / "runtime-values.yaml", f"runtime:\n  partnerToken: >-\n    {GENERIC_SECRET_ALPHA}\n")
+        write_text(repo_root / "ops" / "runtime" / "runtime-values.yaml", f"runtime:\n  partnerToken: >-\n    {GENERIC_SECRET_BRAVO}\n")
         _commit_current_state(git_factory, repo_root, "c002 add folded yaml secret")
         write_text(repo_root / "docs" / "masked-values.yaml", "runtime:\n  partnerToken: masked-example-value\n")
         write_text(repo_root / "docs" / "tutorials" / "runtime-values.md", "Folded YAML examples in docs remain placeholder-only.\n")

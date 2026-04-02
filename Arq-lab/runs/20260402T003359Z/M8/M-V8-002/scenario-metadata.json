@@ -1,0 +1,61 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/infra-app-mixed-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/infra-app-mixed-repo",
+    "html_url": "https://github.com/ARQ-Sec/infra-app-mixed-repo",
+    "name": "infra-app-mixed-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/hotfix-ssl": "a6836246ba2be7c2004077e8f4aa13e8414ec62d",
+        "main": "52335b70ef2d4f26a060ebf02f98a1de079fef73",
+        "release/2026.04": "bf4152575a540ea1f2a2b3df92e9ee63976ddfbd"
+      },
+      "head": "52335b70ef2d4f26a060ebf02f98a1de079fef73",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:36:04+03:00",
+          "message": "c003 release branch clean",
+          "sha": "bf4152575a540ea1f2a2b3df92e9ee63976ddfbd"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:36:03+03:00",
+          "message": "c002 temporary hotfix secret",
+          "sha": "a6836246ba2be7c2004077e8f4aa13e8414ec62d"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T03:36:03+03:00",
+          "message": "c001 bootstrap mixed repo",
+          "sha": "52335b70ef2d4f26a060ebf02f98a1de079fef73"
+        }
+      ]
+    },
+    "lineCount": 9001,
+    "repoName": "infra-app-mixed-repo",
+    "scenarioId": "M-V8-002"
+  },
+  "scenario": {
+    "domain": "Infra-heavy app repository with hotfix and release branch.",
+    "id": "M-V8-002",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "infra-app-mixed-repo",
+    "stack": "App + infra + CI"
+  }
+}

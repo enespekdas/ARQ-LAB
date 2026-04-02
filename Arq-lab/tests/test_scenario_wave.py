@@ -149,9 +149,24 @@ def test_materialize_new_history_and_discovery_wave_variants(tmp_path: Path) -> 
     branches = git_factory.branch_shas(branch_root)
     assert {"main", "feature/private-key-hotfix", "release/2026.06"}.issubset(branches)
 
+    folded_root, _ = materialize_scenario(config, scenarios["G-V2-HIST-016"], git_factory)
+    folded_history = run_command(["git", "log", "--all", "-p", "--", "ops/runtime/runtime-values.yaml"], folded_root, check=True)
+    assert "Ab9K2mQ7pL4xR8nT5vW1Yz7Ck3Hs6Fq2" in folded_history.stdout
+
     config_root, _ = materialize_scenario(config, scenarios["Q-V6-CONFIG-006"], git_factory)
     assert (config_root / "deploy" / "live" / "envoy.yaml").exists()
     assert (config_root / "runtime" / "live.env").exists()
+
+    csharp_root, _ = materialize_scenario(config, scenarios["Q-V3-CS-005"], git_factory)
+    digest_inventory = (csharp_root / "src" / "Library" / "Security" / "DigestInventoryCatalog.cs").read_text(encoding="utf-8")
+    assert "new Random().Next(" not in digest_inventory
+    assert "nameof(Random)" in digest_inventory
+
+    go_root, _ = materialize_scenario(config, scenarios["Q-V4-GO-004"], git_factory)
+    helper_hash = (go_root / "internal" / "security" / "helper_hash.go").read_text(encoding="utf-8")
+    assert "import (" in helper_hash
+    assert "\"hash\"" in helper_hash
+    assert "func() hash.Hash" in helper_hash
 
 
 def test_materialize_new_discovery_mixed_repo_variants(tmp_path: Path) -> None:

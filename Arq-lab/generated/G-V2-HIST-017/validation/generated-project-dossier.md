@@ -473,19 +473,19 @@ move-duplicate-cherrypick-lineage
 
 Branches:
 
-- `feature/archive-duplication` tip: `a479eae514824a028dbf3f31c88b4f7247d05958`; diverges from `main` at `4dc8e5b1323f2d5f54504bb9da2b325ab18d6fb3`
-- `main` tip: `4dc8e5b1323f2d5f54504bb9da2b325ab18d6fb3`
-- `release/2026.07` tip: `e54946dd5d47f85b871378dd91b49091de58c775`; diverges from `main` at `4dc8e5b1323f2d5f54504bb9da2b325ab18d6fb3`
+- `feature/archive-duplication` tip: `f3a054e8f682ae59d698ea42983b7841903109c0`; diverges from `main` at `9521c54b2a22b504d7b78a7cee6c977cba5eaa6d`
+- `main` tip: `9521c54b2a22b504d7b78a7cee6c977cba5eaa6d`
+- `release/2026.07` tip: `ffe65f47a9ea0f58d62c0abb5eca953580e0be52`; diverges from `main` at `9521c54b2a22b504d7b78a7cee6c977cba5eaa6d`
 
 Commit order:
 
-- `fa697d426cb6a08f039d0daa1e29d5e1e898e739` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `acb38939eb4088761f838d3d930aecee8a719015` `c002 add secret on main`: introduces an intended signal.
-- `1cbb51bee1bd14486e42cba5b0e75892f225e4aa` `c003 duplicate secret into archive path`: scenario state change.
-- `7ee408b7431922e479f364d07dc4e9fdc41d1121` `c004 add docs chore`: introduces an intended signal.
-- `4dc8e5b1323f2d5f54504bb9da2b325ab18d6fb3` `c005 revert secret from head`: scenario state change.
-- `e54946dd5d47f85b871378dd91b49091de58c775` `c007 release branch clean`: removes or neutralizes a prior signal.
-- `a479eae514824a028dbf3f31c88b4f7247d05958` `c006 feature archive docs`: adds documentation-only or noise-only collateral.
+- `5d076f835d0c05fea62bb951b6d90903f14edff8` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `90568a4aff20f5accedb844c2ba4d82b5f0ef555` `c002 add secret on main`: introduces an intended signal.
+- `7df8101cf9368efedb3764c3f1dc06f0b0b710d2` `c003 duplicate secret into archive path`: scenario state change.
+- `62e1a9c5e31f6639c0d7727600253e36ba042ab0` `c004 add docs chore`: introduces an intended signal.
+- `9521c54b2a22b504d7b78a7cee6c977cba5eaa6d` `c005 revert secret from head`: scenario state change.
+- `ffe65f47a9ea0f58d62c0abb5eca953580e0be52` `c007 release branch clean`: removes or neutralizes a prior signal.
+- `f3a054e8f682ae59d698ea42983b7841903109c0` `c006 feature archive docs`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 

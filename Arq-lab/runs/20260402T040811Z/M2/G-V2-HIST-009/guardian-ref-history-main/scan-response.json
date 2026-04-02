@@ -1,0 +1,64 @@
+{
+  "applicationId": "0a962ef5-5577-4af8-937f-f0a3462b4a7d",
+  "applicationKey": "arq-lab-g-v2-hist-009",
+  "applicationName": "canonical-wrap-lineage",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "378c6d1dc4dba8019b19769e3955be63a0864478",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T04:14:50.161164Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/canonical-wrap-lineage.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 0,
+  "filesTotal": 0,
+  "finishedAt": "2026-04-02T04:14:58.012995Z",
+  "id": "011dd6c1-d0e0-4222-a561-6c733662ecfe",
+  "modules": [
+    {
+      "findingCount": 1,
+      "module": "guardian",
+      "occurrenceCount": 2,
+      "suppressedCount": 3
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "REF_HISTORY",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-02T04:14:52.708119Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 3,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 1,
+    "keptCount": 3,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 3,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 1,
+        "keptCount": 3,
+        "occurrenceCount": 2,
+        "suppressedCount": 3
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 2,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 3
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

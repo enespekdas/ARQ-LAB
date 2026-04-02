@@ -1905,14 +1905,14 @@
   },
   {
     "classification": "live-code",
-    "findingExpectation": "may_find_review",
+    "findingExpectation": "must_find",
     "loc": 3,
-    "nearRealNegative": true,
+    "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
     "path": "src/main/java/com/arq/identitygatewayjava/security/PasswordKeyFactory.java",
-    "positiveSurface": false,
+    "positiveSurface": true,
     "protectedNegative": false,
     "purpose": "Runtime business module contributing to Password Key Factory.",
     "syntheticFiller": false
@@ -2340,7 +2340,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 41,
+    "loc": 54,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2368,7 +2368,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 26,
+    "loc": 34,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2396,7 +2396,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 804,
+    "loc": 814,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,

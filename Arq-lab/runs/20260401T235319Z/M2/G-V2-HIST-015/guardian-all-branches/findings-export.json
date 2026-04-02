@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T00:02:20.046218500Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "3d30d947-6098-48cc-ae82-982d96de5e61",
+      "applicationKey": "arq-lab-g-v2-hist-015",
+      "applicationName": "branch-private-key-divergence",
+      "branchName": "feature/private-key-hotfix",
+      "commitSha": "4da7d9e78ce9939276224a1ea5458a35411b449e",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "38316d41-51c4-4336-ab6d-8f033960281b",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-02T00:02:17.756843Z",
+      "lastSeenAt": "2026-04-02T00:02:17.756843Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "ops/keys/feature-private.pem",
+      "primaryLineEnd": 10,
+      "primaryLineStart": 1,
+      "projectId": "cb328eae-ebfb-4fab-8131-5d4b4758ec86",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.private-key",
+      "ruleName": "Private Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

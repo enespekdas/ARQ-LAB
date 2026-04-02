@@ -1,0 +1,91 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/move-duplicate-cherrypick-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/move-duplicate-cherrypick-lineage",
+    "html_url": "https://github.com/ARQ-Sec/move-duplicate-cherrypick-lineage",
+    "name": "move-duplicate-cherrypick-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "packageName": "com.arq.moveduplicatecherrypicklineage"
+    },
+    "git": {
+      "branches": {
+        "feature/archive-duplication": "9084039de8f4fdf8c86ba80c4ebe5564ae13fabd",
+        "main": "61b34d4cd758d478ce041b2d56d781c5bd2bab29",
+        "release/2026.07": "9eb4c9bbf4c7e510972760130ead70fd399e5233"
+      },
+      "head": "61b34d4cd758d478ce041b2d56d781c5bd2bab29",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:46+03:00",
+          "message": "c006 feature archive docs",
+          "sha": "9084039de8f4fdf8c86ba80c4ebe5564ae13fabd"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:46+03:00",
+          "message": "c005 revert secret from head",
+          "sha": "61b34d4cd758d478ce041b2d56d781c5bd2bab29"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:46+03:00",
+          "message": "c007 release branch clean",
+          "sha": "9eb4c9bbf4c7e510972760130ead70fd399e5233"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:45+03:00",
+          "message": "c004 add docs chore",
+          "sha": "f1acab0578d2a2fd13e6de8693d17a883948f5ed"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:45+03:00",
+          "message": "c003 duplicate secret into archive path",
+          "sha": "b9f386e4d5a0f1ecd9460f97e77a801df2bf6c8f"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:45+03:00",
+          "message": "c002 add secret on main",
+          "sha": "0a839ddb5484e6c4b7a1604b929b0c920cd4967f"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T05:31:45+03:00",
+          "message": "c001 bootstrap repo",
+          "sha": "36c39018c4b6d65a54e75ec7343557407ba7d6f0"
+        }
+      ]
+    },
+    "lineCount": 5070,
+    "repoName": "move-duplicate-cherrypick-lineage",
+    "scenarioId": "G-V2-HIST-017"
+  },
+  "scenario": {
+    "domain": "Java repo with move, duplicate, revert, and cherry-pick operations around one transient secret.",
+    "id": "G-V2-HIST-017",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "move-duplicate-cherrypick-lineage",
+    "stack": "Java / Spring Boot"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "applicationId": "02591b4d-c6f1-4d12-ad41-4efbdace3524",
+  "applicationKey": "arq-lab-m-v8-011",
+  "applicationName": "workspace-shared-libs-mixed",
+  "branchScope": "ALL_BRANCHES",
+  "commitSha": null,
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-02T00:55:50.348174Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/workspace-shared-libs-mixed.git @release/2026.05",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 355,
+  "filesTotal": 355,
+  "finishedAt": "2026-04-02T00:56:12.662417Z",
+  "id": "51492126-6d95-4adb-b140-12e6ad6b5c0b",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 12,
+      "suppressedCount": 6
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": null,
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": null,
+  "startedAt": "2026-04-02T00:55:51.772318Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 6,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 12,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 6,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 12,
+        "occurrenceCount": 12,
+        "suppressedCount": 6
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 12,
+    "refCount": 3,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main",
+      "feature/shared-lib-cleanup",
+      "release/2026.05"
+    ],
+    "suppressedCount": 6
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

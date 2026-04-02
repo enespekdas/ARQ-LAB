@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/tls-builder-nested-java.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/tls-builder-nested-java",
+    "html_url": "https://github.com/ARQ-Sec/tls-builder-nested-java",
+    "name": "tls-builder-nested-java",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "packageName": "com.arq.tlsbuildernestedjava"
+    },
+    "git": {
+      "branches": {
+        "main": "87090d7f3d3d002fe336aa5c8b3bf0895b4b9c41"
+      },
+      "head": "87090d7f3d3d002fe336aa5c8b3bf0895b4b9c41",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T04:44:43+03:00",
+          "message": "bootstrap Q-V5-JAVA-007",
+          "sha": "87090d7f3d3d002fe336aa5c8b3bf0895b4b9c41"
+        }
+      ]
+    },
+    "lineCount": 6000,
+    "repoName": "tls-builder-nested-java",
+    "scenarioId": "Q-V5-JAVA-007"
+  },
+  "scenario": {
+    "domain": "Java TLS repo with SSLContext and trust manager misuse hidden behind nested helper builders.",
+    "id": "Q-V5-JAVA-007",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo_name": "tls-builder-nested-java",
+    "stack": "Java / Spring Boot"
+  }
+}

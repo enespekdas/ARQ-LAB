@@ -482,14 +482,14 @@ folded-yaml-lineage
 
 Branches:
 
-- `main` tip: `60ee1cfcc28165aaccc5f8cd9e8e537fe9b3a05f`
+- `main` tip: `f0f54ece0e973ef3431a6d4305db809f0fdd1f01`
 
 Commit order:
 
-- `da7b4e7d5b07de854024aab3ff6f0cb31ae18ff3` `c001 bootstrap`: initial clean or baseline assembly.
-- `422008af34dc06107e042e2b78ec870bef2fac5d` `c002 add folded yaml secret`: introduces an intended signal.
-- `544058779f2b3bdf3c596f197ff2444184e670d9` `c003 add masked docs example`: introduces an intended signal.
-- `60ee1cfcc28165aaccc5f8cd9e8e537fe9b3a05f` `c004 remove live secret from head`: removes or neutralizes a prior signal.
+- `5394d6d3f38c1d91a110a4c1e2215f028dd2e67b` `c001 bootstrap`: initial clean or baseline assembly.
+- `b3ce9b58eb869f1b498e0356e88268d9ac4b1c1d` `c002 add folded yaml secret`: introduces an intended signal.
+- `deb98d10a5b987f6169dad6510f3f47eca128146` `c003 add masked docs example`: introduces an intended signal.
+- `f0f54ece0e973ef3431a6d4305db809f0fdd1f01` `c004 remove live secret from head`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

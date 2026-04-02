@@ -290,7 +290,7 @@ hash-helper-go
 | internal/manifests/manifests_test.go | live-code | 3 | Runtime business module contributing to Manifests Test. | no | no | no | yes | yes | no |
 | internal/policies/policies.go | live-code | 5 | Runtime business module contributing to Policies. | no | no | no | yes | yes | no |
 | internal/policies/policies_test.go | live-code | 3 | Runtime business module contributing to Policies Test. | no | no | no | yes | yes | no |
-| internal/security/helper_hash.go | live-code | 17 | Runtime business module contributing to Helper Hash. | yes | no | no | yes | yes | no |
+| internal/security/helper_hash.go | live-code | 20 | Runtime business module contributing to Helper Hash. | yes | no | no | yes | yes | no |
 | internal/security/helper_hash_test.go | live-code | 3 | Runtime business module contributing to Helper Hash Test. | no | yes | no | yes | yes | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -386,12 +386,12 @@ hash-helper-go
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/explainability-contract.json | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2312 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 702 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 701 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 184 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 21 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/runnability-logs/build-01.log | generated | 19 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/build-01.log | generated | 16 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 19 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 16 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -526,14 +526,14 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\go\bin\go.exe test ./... -run TestBuildSmoke -count=1`
   Expected result: `build` step completes successfully.
-  Actual result: returncode=`1`; stage state=`failed`
+  Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\hash-helper-go\validation\runnability-logs\build-01.log`
 
 ### Test
 
 - Command: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\.toolchains\go\bin\go.exe test ./... -count=1`
   Expected result: `test` step completes successfully.
-  Actual result: returncode=`1`; stage state=`failed`
+  Actual result: returncode=`0`; stage state=`passed`
   Log file: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\hash-helper-go\validation\runnability-logs\test-01.log`
 
 ### Smoke
@@ -598,12 +598,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0002: 
-0003: import "crypto/md5"
-0004: 
-0005: func legacyFactory() hashWrapper {
-0006:     return hashWrapper{newFunc: md5.New}
-0007: }
+0003: import (
+0004:     "crypto/md5"
+0005:     "hash"
+0008: func legacyFactory() hashWrapper {
+0009:     return hashWrapper{newFunc: md5.New}
+0010: }
 ```
 
 ### `internal/security/helper_hash_test.go`
@@ -621,19 +621,19 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `5061`
+- Total LOC considered for authored/generated project content: `5058`
 - Synthetic filler / inflation LOC: `4840`
-- Synthetic filler ratio: `95.63%`
+- Synthetic filler ratio: `95.69%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 71 |
+| live business code | 74 |
 | live config | 0 |
 | tests | 0 |
 | docs | 12 |
 | scripts | 0 |
 | fixtures | 0 |
-| vendor/generated | 127 |
+| vendor/generated | 121 |
 | synthetic filler / inflation content | 4840 |
 
 Inflation disclosure:
@@ -686,12 +686,11 @@ Explainability failure definition:
 - False negatives are most likely in Go crypto helpers where weak algorithms are simple constructor calls with little surrounding context.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FN`.
 
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: repository is small or heavily synthetic relative to its scenario goal.
+- What makes it feel real: build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
 - Realism score: `1/5`
 

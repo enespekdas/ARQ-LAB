@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T01:44:48.293476800Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "a5f98a64-f685-4028-ba67-b792ef5d9fdc",
+      "applicationKey": "arq-lab-q-v3-cs-004",
+      "applicationName": "crypto-usage-csharp",
+      "branchName": "main",
+      "commitSha": "a27d1093051c1576273051a8b7a214951efd6d1c",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "291307f5-317c-4c64-b60b-38a46e74043a",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-02T00:07:35.055809Z",
+      "lastSeenAt": "2026-04-02T01:44:47.411506Z",
+      "module": "quantum",
+      "occurrenceCount": 2,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/Library/Security/LegacyDigestService.cs",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "cb328eae-ebfb-4fab-8131-5d4b4758ec86",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0468-csharp",
+      "ruleName": "MD5 usage",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

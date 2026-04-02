@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/tls-wrapper-node.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/tls-wrapper-node",
+    "html_url": "https://github.com/ARQ-Sec/tls-wrapper-node",
+    "name": "tls-wrapper-node",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "ee8b44a95754425baf2797a133f31b3deb0ccb45"
+      },
+      "head": "ee8b44a95754425baf2797a133f31b3deb0ccb45",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T07:38:30+03:00",
+          "message": "bootstrap Q-V6-TS-002",
+          "sha": "ee8b44a95754425baf2797a133f31b3deb0ccb45"
+        }
+      ]
+    },
+    "lineCount": 5988,
+    "repoName": "tls-wrapper-node",
+    "scenarioId": "Q-V6-TS-002"
+  },
+  "scenario": {
+    "domain": "Node client repo with rejectUnauthorized propagated through object spread and returned wrapper chains.",
+    "id": "Q-V6-TS-002",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo_name": "tls-wrapper-node",
+    "stack": "TypeScript / Node"
+  }
+}

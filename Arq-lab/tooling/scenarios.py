@@ -367,6 +367,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ef("md5", "LegacyDigestService.java", resolved="MD5"),
                 ef("sha1", "LegacyDigestService.java", resolved="SHA-1"),
                 ef("aes-ecb", "TokenCipherService.java", resolved="AES/ECB/PKCS5Padding"),
+                ef("legacy-pbe", "PasswordKeyFactory.java", resolved="PBEWithMD5AndDES"),
             ],
             expected_absent=[
                 ea("secure-hash-helper", "SecureDigestService.java"),
@@ -377,6 +378,7 @@ def scenario_specs() -> list[ScenarioSpec]:
                 ee("md5", "LegacyDigestService.java", resolved="MD5", query_family="jca", resolution_scope="SAME_METHOD"),
                 ee("sha1", "LegacyDigestService.java", resolved="SHA-1", query_family="jca"),
                 ee("aes-ecb", "TokenCipherService.java", resolved="AES/ECB/PKCS5Padding", query_family="jca"),
+                ee("legacy-pbe", "PasswordKeyFactory.java", resolved="PBEWithMD5AndDES", query_family="jca"),
             ],
         ),
         ScenarioSpec(
@@ -394,6 +396,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             expected_findings=[
                 ef("desede", "LegacyEnvelopeCipher.java", resolved="DESede/ECB/PKCS5Padding"),
                 ef("aes-ecb", "BatchReconciliationCipher.java", resolved="AES/ECB"),
+                ef("legacy-pbe", "LegacyPasswordFactory.java", resolved="PBEWithMD5AndDES"),
             ],
             expected_absent=[
                 ea("migration-docs", "docs/migration-guide.md"),
@@ -402,6 +405,7 @@ def scenario_specs() -> list[ScenarioSpec]:
             explainability_expectations=[
                 ee("desede", "LegacyEnvelopeCipher.java", resolved="DESede/ECB/PKCS5Padding"),
                 ee("aes-ecb", "BatchReconciliationCipher.java", resolved="AES/ECB"),
+                ee("legacy-pbe", "LegacyPasswordFactory.java", resolved="PBEWithMD5AndDES", query_family="jca"),
             ],
         ),
         ScenarioSpec(
@@ -1809,14 +1813,14 @@ def scenario_specs() -> list[ScenarioSpec]:
             scan_plans=_quantum_head(),
             build_plan=_build_plan(JAVA_BUILD),
             expected_findings=[
-                ef("side-path-sha1", "LegacySidePathHasher.java", resolved="SHA1"),
+                ef("side-path-sha1", "LegacySidePathHasher.java", resolved="SHA-1"),
             ],
             expected_absent=[
                 ea("safe-scary-wrapper", "TrustAllStyleButSafeHasher.java"),
                 ea("secure-delegate", "SecureDigestDelegate.java"),
             ],
             explainability_expectations=[
-                ee("side-path-sha1", "LegacySidePathHasher.java", resolved="SHA1", query_family="jca"),
+                ee("side-path-sha1", "LegacySidePathHasher.java", resolved="SHA-1", query_family="jca"),
             ],
         ),
         ScenarioSpec(

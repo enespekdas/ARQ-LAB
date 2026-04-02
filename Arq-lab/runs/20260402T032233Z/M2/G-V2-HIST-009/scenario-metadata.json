@@ -1,0 +1,80 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/canonical-wrap-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/canonical-wrap-lineage",
+    "html_url": "https://github.com/ARQ-Sec/canonical-wrap-lineage",
+    "name": "canonical-wrap-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "59080128524095931c79681b51e076ee9c2e6dc8"
+      },
+      "head": "59080128524095931c79681b51e076ee9c2e6dc8",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:28:27+03:00",
+          "message": "c006 remove runtime token and keep safe placeholder",
+          "sha": "59080128524095931c79681b51e076ee9c2e6dc8"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:28:27+03:00",
+          "message": "c005 add wrapping and base64 docs",
+          "sha": "f16e36f933b0eaa4669dd53aa60996c537bc0e43"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:28:27+03:00",
+          "message": "c004 move token into archive",
+          "sha": "b55143327549115149243347e7038f36485650da"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:28:27+03:00",
+          "message": "c003 quote runtime token",
+          "sha": "b425b6ccc207f3643ec6ed723819148d8eb9c240"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:28:26+03:00",
+          "message": "c002 add canonical token",
+          "sha": "9da5768481a3d6f94d96568690ab6f91df422a41"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:28:26+03:00",
+          "message": "c001 bootstrap",
+          "sha": "c6f780b5aac06534fcd039bb20bf72c7c91a3924"
+        }
+      ]
+    },
+    "lineCount": 5060,
+    "repoName": "canonical-wrap-lineage",
+    "scenarioId": "G-V2-HIST-009"
+  },
+  "scenario": {
+    "domain": "Runtime token lineage with canonical, quoted, wrapped, and archive forms across history.",
+    "id": "G-V2-HIST-009",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "canonical-wrap-lineage",
+    "stack": "Python + ops runtime"
+  }
+}

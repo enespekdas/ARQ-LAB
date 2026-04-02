@@ -1,0 +1,68 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/branch-private-key-divergence.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/branch-private-key-divergence",
+    "html_url": "https://github.com/ARQ-Sec/branch-private-key-divergence",
+    "name": "branch-private-key-divergence",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/private-key-hotfix": "b99d52adfbc18fed16873b0571a00e33a6298075",
+        "main": "0841ddc4894ed4218ffbcbcb242a82a482bcb1d0",
+        "release/2026.06": "44a327f2a90cc67a7a77fc37ad12c87ae4b5f2a6"
+      },
+      "head": "0841ddc4894ed4218ffbcbcb242a82a482bcb1d0",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:30:08+03:00",
+          "message": "c003 feature branch private key",
+          "sha": "b99d52adfbc18fed16873b0571a00e33a6298075"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:30:08+03:00",
+          "message": "c004 release branch clean",
+          "sha": "44a327f2a90cc67a7a77fc37ad12c87ae4b5f2a6"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:30:07+03:00",
+          "message": "c002 keep main cert and csr only",
+          "sha": "0841ddc4894ed4218ffbcbcb242a82a482bcb1d0"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T06:30:07+03:00",
+          "message": "c001 bootstrap",
+          "sha": "464cb6a1943cd287656853247fcfaf28346c8517"
+        }
+      ]
+    },
+    "lineCount": 5092,
+    "repoName": "branch-private-key-divergence",
+    "scenarioId": "G-V2-HIST-015"
+  },
+  "scenario": {
+    "domain": "Feature branch carries a private key while main stays on public cert and CSR material only.",
+    "id": "G-V2-HIST-015",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "branch-private-key-divergence",
+    "stack": "Python + PKI ops"
+  }
+}

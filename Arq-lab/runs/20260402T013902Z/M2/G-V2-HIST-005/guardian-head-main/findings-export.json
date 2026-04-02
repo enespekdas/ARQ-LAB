@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T01:44:16.186937700Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "c39a35e7-1c5a-4d5b-9936-02323995790c",
+      "applicationKey": "arq-lab-g-v2-hist-005",
+      "applicationName": "canonical-secret-lineage",
+      "branchName": "main",
+      "commitSha": "73c11d944163729187418d950d3e398bdfb97c65",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HISTORY_ONLY",
+      "findingId": "bd92acd1-d44b-4512-a745-2a5cac4a8243",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-01T23:56:57.267900Z",
+      "lastSeenAt": "2026-04-01T23:56:57.267900Z",
+      "module": "guardian",
+      "occurrenceCount": 2,
+      "presentInHistory": true,
+      "presentOnHead": false,
+      "primaryFilePath": "ops/runtime/partner_runtime.env",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "cb328eae-ebfb-4fab-8131-5d4b4758ec86",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "REF_HISTORY",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}
