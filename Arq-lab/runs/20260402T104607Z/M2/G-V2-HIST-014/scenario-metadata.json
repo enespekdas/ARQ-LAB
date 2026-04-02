@@ -1,0 +1,80 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/split-concat-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/split-concat-lineage",
+    "html_url": "https://github.com/ARQ-Sec/split-concat-lineage",
+    "name": "split-concat-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "edded25efcc5ff7c9df2916df9daca0802cbec61"
+      },
+      "head": "edded25efcc5ff7c9df2916df9daca0802cbec61",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T13:53:07+03:00",
+          "message": "c006 remove secret from head",
+          "sha": "edded25efcc5ff7c9df2916df9daca0802cbec61"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T13:53:07+03:00",
+          "message": "c005 docs and example context",
+          "sha": "1dd7ddfa8fb5bb9811db94da91f98bfc18b355a3"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T13:53:06+03:00",
+          "message": "c004 canonical secret assembly",
+          "sha": "997cf792ba6de3bc635198cf6821ab41f26092eb"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T13:53:06+03:00",
+          "message": "c003 split secret assembly",
+          "sha": "ca6af5bec5b662be0b9cd70a7b0226fb50bdb155"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T13:53:06+03:00",
+          "message": "c002 safe baseline file",
+          "sha": "a732ca4fa043bbc03bc2f2e5fc5338db6d28cb78"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T13:53:06+03:00",
+          "message": "c001 main clean baseline",
+          "sha": "e003f4189956643c33435290f4a72f1bb4c96246"
+        }
+      ]
+    },
+    "lineCount": 5996,
+    "repoName": "split-concat-lineage",
+    "scenarioId": "G-V2-HIST-014"
+  },
+  "scenario": {
+    "domain": "Partner bootstrap repo with split secret construction, later canonicalization, and final cleanup.",
+    "id": "G-V2-HIST-014",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "split-concat-lineage",
+    "stack": "TypeScript / Node"
+  }
+}

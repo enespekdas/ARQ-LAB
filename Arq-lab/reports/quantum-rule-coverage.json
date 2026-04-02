@@ -1,11 +1,11 @@
 {
   "activeRuleCount": 805,
   "bucketCounts": {
-    "expected_positive_exercised": 18,
-    "explainability_problematic_exercised": 2,
+    "expected_positive_exercised": 21,
+    "explainability_problematic_exercised": 0,
     "mixed_exercised": 3,
     "never_exercised": 780,
-    "noisy_only_exercised": 2,
+    "noisy_only_exercised": 1,
     "unclassified_exercised": 0
   },
   "coveragePercent": 3.11,
@@ -3528,9 +3528,9 @@
       "active": true,
       "astCount": 2,
       "bootstrap_resource": "classpath:rules/quantum.yml",
-      "bucket": "noisy_only_exercised",
+      "bucket": "expected_positive_exercised",
       "distinctScenarioCount": 2,
-      "expectedMatchCount": 0,
+      "expectedMatchCount": 2,
       "explainabilityGapCount": 0,
       "family": "arq-q-0131-java",
       "finding_kind": "VULNERABILITY",
@@ -3538,7 +3538,7 @@
       "language": "java",
       "module": "quantum",
       "mustNotFindViolationCount": 0,
-      "noisyMatchCount": 2,
+      "noisyMatchCount": 0,
       "pack_display_name": "Quantum Cryptography Policy",
       "regexOnlyCount": 0,
       "regexOnlyOnlyExercised": false,
@@ -3555,7 +3555,7 @@
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "Legacy PBE",
       "totalFindingCount": 2,
-      "unexpectedMatchCount": 2
+      "unexpectedMatchCount": 0
     },
     {
       "active": true,
@@ -4911,9 +4911,9 @@
       "active": true,
       "astCount": 0,
       "bootstrap_resource": "classpath:rules/quantum.yml",
-      "bucket": "mixed_exercised",
+      "bucket": "expected_positive_exercised",
       "distinctScenarioCount": 2,
-      "expectedMatchCount": 1,
+      "expectedMatchCount": 2,
       "explainabilityGapCount": 0,
       "family": "arq-q-0178-java",
       "finding_kind": "VULNERABILITY",
@@ -4921,13 +4921,13 @@
       "language": "java",
       "module": "quantum",
       "mustNotFindViolationCount": 0,
-      "noisyMatchCount": 2,
+      "noisyMatchCount": 0,
       "pack_display_name": "Quantum Cryptography Policy",
       "regexOnlyCount": 0,
       "regexOnlyOnlyExercised": false,
       "reviewOnlyCount": 0,
       "rule_key": "quantum.arq-q-0178-java",
-      "sameFileDifferentSignalCount": 1,
+      "sameFileDifferentSignalCount": 0,
       "sameSurfaceExtraCount": 0,
       "scenarios": [
         "Q-V3-JAVA-001",
@@ -4938,7 +4938,7 @@
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "Weak Hash",
       "totalFindingCount": 2,
-      "unexpectedMatchCount": 1
+      "unexpectedMatchCount": 0
     },
     {
       "active": true,
@@ -8431,11 +8431,11 @@
     },
     {
       "active": true,
-      "astCount": 0,
+      "astCount": 1,
       "bootstrap_resource": "classpath:rules/quantum.yml",
       "bucket": "mixed_exercised",
-      "distinctScenarioCount": 9,
-      "expectedMatchCount": 7,
+      "distinctScenarioCount": 10,
+      "expectedMatchCount": 8,
       "explainabilityGapCount": 0,
       "family": "arq-q-0305-python",
       "finding_kind": "VULNERABILITY",
@@ -8460,13 +8460,14 @@
         "M-V8-011",
         "M-V8-012",
         "Q-V5-PY-002",
-        "Q-V5-PY-003"
+        "Q-V5-PY-003",
+        "Q-V5-PY-004"
       ],
       "semanticCount": 0,
       "severity": "CRITICAL",
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "requests: verify=False (certificate validation disabled)",
-      "totalFindingCount": 13,
+      "totalFindingCount": 14,
       "unexpectedMatchCount": 2
     },
     {
@@ -11714,7 +11715,7 @@
       "astCount": 0,
       "bootstrap_resource": "classpath:rules/quantum.yml",
       "bucket": "noisy_only_exercised",
-      "distinctScenarioCount": 2,
+      "distinctScenarioCount": 1,
       "expectedMatchCount": 0,
       "explainabilityGapCount": 0,
       "family": "arq-q-0418-csharp",
@@ -11725,21 +11726,20 @@
       "mustNotFindViolationCount": 0,
       "noisyMatchCount": 1,
       "pack_display_name": "Quantum Cryptography Policy",
-      "regexOnlyCount": 2,
+      "regexOnlyCount": 1,
       "regexOnlyOnlyExercised": true,
       "reviewOnlyCount": 0,
       "rule_key": "quantum.arq-q-0418-csharp",
       "sameFileDifferentSignalCount": 0,
       "sameSurfaceExtraCount": 0,
       "scenarios": [
-        "Q-V3-CS-003",
-        "Q-V3-CS-005"
+        "Q-V3-CS-003"
       ],
       "semanticCount": 0,
       "severity": "MEDIUM",
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "Random class usage (not cryptographic)",
-      "totalFindingCount": 2,
+      "totalFindingCount": 1,
       "unexpectedMatchCount": 1
     },
     {
@@ -12586,24 +12586,24 @@
       "active": true,
       "astCount": 0,
       "bootstrap_resource": "classpath:rules/quantum.yml",
-      "bucket": "explainability_problematic_exercised",
+      "bucket": "expected_positive_exercised",
       "distinctScenarioCount": 3,
-      "expectedMatchCount": 2,
-      "explainabilityGapCount": 1,
+      "expectedMatchCount": 3,
+      "explainabilityGapCount": 0,
       "family": "arq-q-0449-csharp",
       "finding_kind": "VULNERABILITY",
-      "hybridCount": 2,
+      "hybridCount": 3,
       "language": "csharp",
       "module": "quantum",
       "mustNotFindViolationCount": 0,
-      "noisyMatchCount": 2,
+      "noisyMatchCount": 0,
       "pack_display_name": "Quantum Cryptography Policy",
-      "regexOnlyCount": 1,
+      "regexOnlyCount": 0,
       "regexOnlyOnlyExercised": false,
       "reviewOnlyCount": 0,
       "rule_key": "quantum.arq-q-0449-csharp",
       "sameFileDifferentSignalCount": 0,
-      "sameSurfaceExtraCount": 1,
+      "sameSurfaceExtraCount": 0,
       "scenarios": [
         "Q-V6-CS-002",
         "Q-V6-CS-003",
@@ -12614,7 +12614,7 @@
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "HttpClient: DangerousAcceptAnyServerCertificateValidator",
       "totalFindingCount": 3,
-      "unexpectedMatchCount": 1
+      "unexpectedMatchCount": 0
     },
     {
       "active": true,
@@ -16167,11 +16167,11 @@
     },
     {
       "active": true,
-      "astCount": 2,
+      "astCount": 3,
       "bootstrap_resource": "classpath:rules/quantum.yml",
       "bucket": "expected_positive_exercised",
-      "distinctScenarioCount": 2,
-      "expectedMatchCount": 2,
+      "distinctScenarioCount": 3,
+      "expectedMatchCount": 3,
       "explainabilityGapCount": 0,
       "family": "arq-q-0572-go",
       "finding_kind": "VULNERABILITY",
@@ -16189,13 +16189,14 @@
       "sameSurfaceExtraCount": 0,
       "scenarios": [
         "Q-V4-GO-002",
-        "Q-V4-GO-003"
+        "Q-V4-GO-003",
+        "Q-V4-GO-004"
       ],
       "semanticCount": 0,
       "severity": "HIGH",
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "Weak Hash (MD5)",
-      "totalFindingCount": 2,
+      "totalFindingCount": 3,
       "unexpectedMatchCount": 0
     },
     {
@@ -17199,24 +17200,24 @@
       "active": true,
       "astCount": 0,
       "bootstrap_resource": "classpath:rules/quantum.yml",
-      "bucket": "explainability_problematic_exercised",
+      "bucket": "mixed_exercised",
       "distinctScenarioCount": 15,
-      "expectedMatchCount": 11,
-      "explainabilityGapCount": 1,
+      "expectedMatchCount": 12,
+      "explainabilityGapCount": 0,
       "family": "arq-q-0613-typescript",
       "finding_kind": "VULNERABILITY",
-      "hybridCount": 28,
+      "hybridCount": 29,
       "language": "typescript",
       "module": "quantum",
       "mustNotFindViolationCount": 0,
-      "noisyMatchCount": 5,
+      "noisyMatchCount": 3,
       "pack_display_name": "Quantum Cryptography Policy",
-      "regexOnlyCount": 1,
+      "regexOnlyCount": 0,
       "regexOnlyOnlyExercised": false,
       "reviewOnlyCount": 0,
       "rule_key": "quantum.arq-q-0613-typescript",
       "sameFileDifferentSignalCount": 0,
-      "sameSurfaceExtraCount": 1,
+      "sameSurfaceExtraCount": 0,
       "scenarios": [
         "M-V8-001",
         "M-V8-002",
@@ -17239,7 +17240,7 @@
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "Weak Hash (MD5)",
       "totalFindingCount": 29,
-      "unexpectedMatchCount": 4
+      "unexpectedMatchCount": 3
     },
     {
       "active": true,
@@ -24256,12 +24257,12 @@
       "astCount": 0,
       "bootstrap_resource": "classpath:rules/quantum.yml",
       "bucket": "expected_positive_exercised",
-      "distinctScenarioCount": 3,
-      "expectedMatchCount": 3,
+      "distinctScenarioCount": 4,
+      "expectedMatchCount": 4,
       "explainabilityGapCount": 0,
       "family": "arq-q-0949-config",
       "finding_kind": "VULNERABILITY",
-      "hybridCount": 3,
+      "hybridCount": 4,
       "language": "config",
       "module": "quantum",
       "mustNotFindViolationCount": 0,
@@ -24276,13 +24277,14 @@
       "scenarios": [
         "Q-V6-CONFIG-003",
         "Q-V6-CONFIG-004",
-        "Q-V6-CONFIG-005"
+        "Q-V6-CONFIG-005",
+        "Q-V6-CONFIG-006"
       ],
       "semanticCount": 0,
       "severity": "CRITICAL",
       "source_of_truth": "runtime-db:rule_definitions@active rule_pack_versions",
       "title": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
-      "totalFindingCount": 3,
+      "totalFindingCount": 4,
       "unexpectedMatchCount": 0
     }
   ]

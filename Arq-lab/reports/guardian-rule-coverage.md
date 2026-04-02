@@ -11,5 +11,5 @@
 
 | Rule Key | Bucket | Scenarios | Expected | Noise | Explainability | Regex Only | Hybrid |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `guardian.generic-api-key` | `mixed_exercised` | `25` | `40` | `8` | `0` | `88` | `0` |
+| `guardian.generic-api-key` | `mixed_exercised` | `26` | `41` | `8` | `0` | `89` | `0` |
 | `guardian.private-key` | `mixed_exercised` | `13` | `10` | `10` | `0` | `42` | `0` |

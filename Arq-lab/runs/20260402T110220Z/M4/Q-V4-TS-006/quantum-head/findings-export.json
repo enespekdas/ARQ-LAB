@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T11:07:39.354344400Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "f39556d8-e479-4d9d-a2ed-6356b2630cae",
+      "applicationKey": "arq-lab-q-v4-ts-006",
+      "applicationName": "hash-destructure-node",
+      "branchName": "main",
+      "commitSha": "27bdc48b8ba950d64ebbee07bf9823940da7ed81",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "c94ebdc2-22fb-4ac0-bf60-7ed7402cffba",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-02T11:07:36.284241Z",
+      "lastSeenAt": "2026-04-02T11:07:36.284241Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/security/hashComposer.ts",
+      "primaryLineEnd": 3,
+      "primaryLineStart": 3,
+      "projectId": "743c6bcf-035b-44d4-816e-4c2a49078c4e",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0613-typescript",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

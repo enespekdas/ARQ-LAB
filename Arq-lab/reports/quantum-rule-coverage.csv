@@ -115,7 +115,7 @@ quantum.arq-q-0127-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fals
 quantum.arq-q-0128-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,KeyStore Type Inventory,INFO,INVENTORY,arq-q-0128-java,java
 quantum.arq-q-0129-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,KeyStore Type Inventory,INFO,INVENTORY,arq-q-0129-java,java
 quantum.arq-q-0130-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,KeyStore Type Inventory,INFO,INVENTORY,arq-q-0130-java,java
-quantum.arq-q-0131-java,quantum,noisy_only_exercised,2,2,0,2,2,0,0,0,0,0,0,0,0,2,false,Q-V3-JAVA-001;Q-V3-JAVA-002,Legacy PBE,CRITICAL,VULNERABILITY,arq-q-0131-java,java
+quantum.arq-q-0131-java,quantum,expected_positive_exercised,2,2,2,0,0,0,0,0,0,0,0,0,0,2,false,Q-V3-JAVA-001;Q-V3-JAVA-002,Legacy PBE,CRITICAL,VULNERABILITY,arq-q-0131-java,java
 quantum.arq-q-0132-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Legacy PBE,CRITICAL,VULNERABILITY,arq-q-0132-java,java
 quantum.arq-q-0133-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Legacy PBE,CRITICAL,VULNERABILITY,arq-q-0133-java,java
 quantum.arq-q-0134-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Legacy PBE,CRITICAL,VULNERABILITY,arq-q-0134-java,java
@@ -161,7 +161,7 @@ quantum.arq-q-0174-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fals
 quantum.arq-q-0175-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,TLS & Store System Properties,CRITICAL,VULNERABILITY,arq-q-0175-java,java
 quantum.arq-q-0176-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak Hash,HIGH,VULNERABILITY,arq-q-0176-java,java
 quantum.arq-q-0177-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak Hash,HIGH,VULNERABILITY,arq-q-0177-java,java
-quantum.arq-q-0178-java,quantum,mixed_exercised,2,2,1,1,2,0,0,1,0,0,0,2,0,0,false,Q-V3-JAVA-001;Q-V3-JAVA-008,Weak Hash,MEDIUM,VULNERABILITY,arq-q-0178-java,java
+quantum.arq-q-0178-java,quantum,expected_positive_exercised,2,2,2,0,0,0,0,0,0,0,0,2,0,0,false,Q-V3-JAVA-001;Q-V3-JAVA-008,Weak Hash,MEDIUM,VULNERABILITY,arq-q-0178-java,java
 quantum.arq-q-0179-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak MAC,HIGH,VULNERABILITY,arq-q-0179-java,java
 quantum.arq-q-0180-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak MAC,MEDIUM,VULNERABILITY,arq-q-0180-java,java
 quantum.arq-q-0181-java,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak RNG,MEDIUM,VULNERABILITY,arq-q-0181-java,java
@@ -278,7 +278,7 @@ quantum.arq-q-0301-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fa
 quantum.arq-q-0302-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,ssl: CERT_NONE disables certificate verification,CRITICAL,VULNERABILITY,arq-q-0302-python,python
 quantum.arq-q-0303-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,ssl: _create_unverified_context,CRITICAL,VULNERABILITY,arq-q-0303-python,python
 quantum.arq-q-0304-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,aiohttp / httpx: SSL verification disabled,CRITICAL,VULNERABILITY,arq-q-0304-python,python
-quantum.arq-q-0305-python,quantum,mixed_exercised,9,13,7,2,2,0,0,0,0,0,0,13,0,0,false,M-V8-001;M-V8-003;M-V8-005;M-V8-007;M-V8-009;M-V8-011;M-V8-012;Q-V5-PY-002;Q-V5-PY-003,requests: verify=False (certificate validation disabled),CRITICAL,VULNERABILITY,arq-q-0305-python,python
+quantum.arq-q-0305-python,quantum,mixed_exercised,10,14,8,2,2,0,0,0,0,0,0,13,0,1,false,M-V8-001;M-V8-003;M-V8-005;M-V8-007;M-V8-009;M-V8-011;M-V8-012;Q-V5-PY-002;Q-V5-PY-003;Q-V5-PY-004,requests: verify=False (certificate validation disabled),CRITICAL,VULNERABILITY,arq-q-0305-python,python
 quantum.arq-q-0306-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,hashlib: MD5 / SHA1 usage,HIGH,VULNERABILITY,arq-q-0306-python,python
 quantum.arq-q-0307-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,hashlib: usedforsecurity=False hint misuse,HIGH,VULNERABILITY,arq-q-0307-python,python
 quantum.arq-q-0308-python,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,cryptography: AESGCM usage (good signal),INFO,INVENTORY,arq-q-0308-python,python
@@ -387,7 +387,7 @@ quantum.arq-q-0413-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fa
 quantum.arq-q-0414-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,"DSACryptoServiceProvider usage (Shor-vulnerable, SHA-1 bound)",CRITICAL,VULNERABILITY,arq-q-0414-csharp,csharp
 quantum.arq-q-0415-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,HMACMD5 usage,HIGH,VULNERABILITY,arq-q-0415-csharp,csharp
 quantum.arq-q-0417-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,PasswordDeriveBytes usage (PBKDF1 â€” NOT PBKDF2),HIGH,VULNERABILITY,arq-q-0417-csharp,csharp
-quantum.arq-q-0418-csharp,quantum,noisy_only_exercised,2,2,0,1,1,0,0,0,0,0,2,0,0,0,true,Q-V3-CS-003;Q-V3-CS-005,Random class usage (not cryptographic),MEDIUM,VULNERABILITY,arq-q-0418-csharp,csharp
+quantum.arq-q-0418-csharp,quantum,noisy_only_exercised,1,1,0,1,1,0,0,0,0,0,1,0,0,0,true,Q-V3-CS-003,Random class usage (not cryptographic),MEDIUM,VULNERABILITY,arq-q-0418-csharp,csharp
 quantum.arq-q-0419-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Hardcoded key/IV in RijndaelManaged/DES,CRITICAL,VULNERABILITY,arq-q-0419-csharp,csharp
 quantum.arq-q-0420-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Using: System.Security.Cryptography (BCL crypto namespace),INFO,INVENTORY,arq-q-0420-csharp,csharp
 quantum.arq-q-0421-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Using: System.Net (ServicePointManager namespace),INFO,INVENTORY,arq-q-0421-csharp,csharp
@@ -416,7 +416,7 @@ quantum.arq-q-0445-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fa
 quantum.arq-q-0446-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Using: System.Security.Cryptography,INFO,INVENTORY,arq-q-0446-csharp,csharp
 quantum.arq-q-0447-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Using: System.Security.Cryptography.X509Certificates,INFO,INVENTORY,arq-q-0447-csharp,csharp
 quantum.arq-q-0448-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,ServicePointManager: SSL3 or TLS 1.0/1.1 explicit downgrade,CRITICAL,VULNERABILITY,arq-q-0448-csharp,csharp
-quantum.arq-q-0449-csharp,quantum,explainability_problematic_exercised,3,3,2,1,2,0,1,0,0,1,1,2,0,0,false,Q-V6-CS-002;Q-V6-CS-003;Q-V6-CS-004,HttpClient: DangerousAcceptAnyServerCertificateValidator,CRITICAL,VULNERABILITY,arq-q-0449-csharp,csharp
+quantum.arq-q-0449-csharp,quantum,expected_positive_exercised,3,3,3,0,0,0,0,0,0,0,0,3,0,0,false,Q-V6-CS-002;Q-V6-CS-003;Q-V6-CS-004,HttpClient: DangerousAcceptAnyServerCertificateValidator,CRITICAL,VULNERABILITY,arq-q-0449-csharp,csharp
 quantum.arq-q-0450-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,SslStream: RemoteCertificateValidationCallback always-true,CRITICAL,VULNERABILITY,arq-q-0450-csharp,csharp
 quantum.arq-q-0451-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,MD5 usage (unexpected in 4.6.2+ new code),HIGH,VULNERABILITY,arq-q-0451-csharp,csharp
 quantum.arq-q-0453-csharp,quantum,expected_positive_exercised,1,1,1,0,0,0,0,0,0,0,0,1,0,0,false,Q-V3-CS-003,AES in ECB mode,HIGH,VULNERABILITY,arq-q-0453-csharp,csharp
@@ -535,7 +535,7 @@ quantum.arq-q-0567-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fa
 quantum.arq-q-0569-csharp,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,PQC Library Inventory (BouncyCastle PQC),INFO,INVENTORY,arq-q-0569-csharp,csharp
 quantum.arq-q-0570-go,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,TLS Weak Protocol,CRITICAL,VULNERABILITY,arq-q-0570-go,go
 quantum.arq-q-0571-go,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,TLS Trust Bypass,CRITICAL,VULNERABILITY,arq-q-0571-go,go
-quantum.arq-q-0572-go,quantum,expected_positive_exercised,2,2,2,0,0,0,0,0,0,0,0,0,0,2,false,Q-V4-GO-002;Q-V4-GO-003,Weak Hash (MD5),HIGH,VULNERABILITY,arq-q-0572-go,go
+quantum.arq-q-0572-go,quantum,expected_positive_exercised,3,3,3,0,0,0,0,0,0,0,0,0,0,3,false,Q-V4-GO-002;Q-V4-GO-003;Q-V4-GO-004,Weak Hash (MD5),HIGH,VULNERABILITY,arq-q-0572-go,go
 quantum.arq-q-0573-go,quantum,expected_positive_exercised,2,2,2,0,0,0,0,0,0,0,0,0,0,2,false,Q-V4-GO-002;Q-V4-GO-003,Weak Hash (SHA1),MEDIUM,VULNERABILITY,arq-q-0573-go,go
 quantum.arq-q-0574-go,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak Cipher (DES/3DES),HIGH,VULNERABILITY,arq-q-0574-go,go
 quantum.arq-q-0575-go,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak Cipher (RC4),HIGH,VULNERABILITY,arq-q-0575-go,go
@@ -569,7 +569,7 @@ quantum.arq-q-0608-javascript,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,
 quantum.arq-q-0610-javascript,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Key Material Artifact (PEM/PFX/JKS/etc.),HIGH,VULNERABILITY,arq-q-0610-javascript,javascript
 quantum.arq-q-0611-typescript,quantum,expected_positive_exercised,3,4,4,0,0,0,0,0,0,0,0,4,0,0,false,Q-V6-TS-001;Q-V6-TS-002;Q-V6-TS-004,TLS Trust Bypass,CRITICAL,VULNERABILITY,arq-q-0611-typescript,typescript
 quantum.arq-q-0612-typescript,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,TLS Weak Protocol (legacy),CRITICAL,VULNERABILITY,arq-q-0612-typescript,typescript
-quantum.arq-q-0613-typescript,quantum,explainability_problematic_exercised,15,29,11,4,5,0,1,0,0,1,1,28,0,0,false,M-V8-001;M-V8-002;M-V8-003;M-V8-004;M-V8-005;M-V8-006;M-V8-007;M-V8-008;M-V8-009;M-V8-010;M-V8-011;M-V8-012;Q-V4-TS-003;Q-V4-TS-005;Q-V4-TS-006,Weak Hash (MD5),HIGH,VULNERABILITY,arq-q-0613-typescript,typescript
+quantum.arq-q-0613-typescript,quantum,mixed_exercised,15,29,12,3,3,0,0,0,0,0,0,29,0,0,false,M-V8-001;M-V8-002;M-V8-003;M-V8-004;M-V8-005;M-V8-006;M-V8-007;M-V8-008;M-V8-009;M-V8-010;M-V8-011;M-V8-012;Q-V4-TS-003;Q-V4-TS-005;Q-V4-TS-006,Weak Hash (MD5),HIGH,VULNERABILITY,arq-q-0613-typescript,typescript
 quantum.arq-q-0614-typescript,quantum,expected_positive_exercised,1,1,1,0,0,0,0,0,0,0,0,1,0,0,false,Q-V4-TS-003,Weak Hash (SHA1),MEDIUM,VULNERABILITY,arq-q-0614-typescript,typescript
 quantum.arq-q-0615-typescript,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Weak Cipher (DES/3DES/RC4),HIGH,VULNERABILITY,arq-q-0615-typescript,typescript
 quantum.arq-q-0616-typescript,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Insecure Mode (ECB),HIGH,VULNERABILITY,arq-q-0616-typescript,typescript
@@ -803,4 +803,4 @@ quantum.arq-q-0945-config,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,fa
 quantum.arq-q-0946-config,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,iOS ATS Insecure Transport Exceptions (Info.plist),HIGH,VULNERABILITY,arq-q-0946-config,config
 quantum.arq-q-0947-config,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Spring Boot TLS Weak Protocols (application properties),CRITICAL,VULNERABILITY,arq-q-0947-config,config
 quantum.arq-q-0948-config,quantum,never_exercised,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,,Tomcat/Jetty TLS Weak Protocols (server.xml),CRITICAL,VULNERABILITY,arq-q-0948-config,config
-quantum.arq-q-0949-config,quantum,expected_positive_exercised,3,3,3,0,0,0,0,0,0,0,0,3,0,0,false,Q-V6-CONFIG-003;Q-V6-CONFIG-004;Q-V6-CONFIG-005,NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config),CRITICAL,VULNERABILITY,arq-q-0949-config,config
+quantum.arq-q-0949-config,quantum,expected_positive_exercised,4,4,4,0,0,0,0,0,0,0,0,4,0,0,false,Q-V6-CONFIG-003;Q-V6-CONFIG-004;Q-V6-CONFIG-005;Q-V6-CONFIG-006,NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config),CRITICAL,VULNERABILITY,arq-q-0949-config,config

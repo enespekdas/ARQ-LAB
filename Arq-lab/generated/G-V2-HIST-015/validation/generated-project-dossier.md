@@ -361,7 +361,7 @@ branch-private-key-divergence
 | validation/repo-metadata.json | generated | 44 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 42 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -480,16 +480,16 @@ branch-private-key-divergence
 
 Branches:
 
-- `feature/private-key-hotfix` tip: `0d3b76bea39811a8d12608888f4e9fcc135f3a56`; diverges from `main` at `43430f00175814d2c245a65d7c34bfcde4002b72`
-- `main` tip: `43430f00175814d2c245a65d7c34bfcde4002b72`
-- `release/2026.06` tip: `afb25cd8587bc29cbd0576485d5efcf7212055b0`; diverges from `main` at `43430f00175814d2c245a65d7c34bfcde4002b72`
+- `feature/private-key-hotfix` tip: `a5690b2a2564eb88b4a415464e86df3d1c899e17`; diverges from `main` at `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144`
+- `main` tip: `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144`
+- `release/2026.06` tip: `607b6147e23a508a6321042cf642dff0df6030f4`; diverges from `main` at `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144`
 
 Commit order:
 
-- `99a2cac2761776a83178c448b260ef7163aa1d79` `c001 bootstrap`: initial clean or baseline assembly.
-- `afb25cd8587bc29cbd0576485d5efcf7212055b0` `c004 release branch clean`: removes or neutralizes a prior signal.
-- `43430f00175814d2c245a65d7c34bfcde4002b72` `c002 keep main cert and csr only`: scenario state change.
-- `0d3b76bea39811a8d12608888f4e9fcc135f3a56` `c003 feature branch private key`: scenario state change.
+- `1edf32d6ce11a54c1d7269f19ab898225d710e41` `c001 bootstrap`: initial clean or baseline assembly.
+- `607b6147e23a508a6321042cf642dff0df6030f4` `c004 release branch clean`: removes or neutralizes a prior signal.
+- `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144` `c002 keep main cert and csr only`: scenario state change.
+- `a5690b2a2564eb88b4a415464e86df3d1c899e17` `c003 feature branch private key`: scenario state change.
 
 Expected final head/history state:
 
@@ -616,9 +616,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `4187`
+- Total LOC considered for authored/generated project content: `4181`
 - Synthetic filler / inflation LOC: `3850`
-- Synthetic filler ratio: `91.95%`
+- Synthetic filler ratio: `92.08%`
 
 | category | LOC |
 | --- | ---: |
@@ -628,7 +628,7 @@ Expected final head/history state:
 | docs | 29 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 173 |
+| vendor/generated | 167 |
 | synthetic filler / inflation content | 3850 |
 
 Inflation disclosure:

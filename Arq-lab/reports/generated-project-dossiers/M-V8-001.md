@@ -1129,11 +1129,11 @@ internal-platform-monorepo
 
 Branches:
 
-- `main` tip: `ffd7a153846891340f1fbbf2ea2d73b56eee48ab`
+- `main` tip: `8868ccc8de3651d01f8c3d153070829cb554dcf6`
 
 Commit order:
 
-- `ffd7a153846891340f1fbbf2ea2d73b56eee48ab` `bootstrap M-V8-001`: initial clean or baseline assembly.
+- `8868ccc8de3651d01f8c3d153070829cb554dcf6` `bootstrap M-V8-001`: initial clean or baseline assembly.
 
 Expected final head/history state:
 

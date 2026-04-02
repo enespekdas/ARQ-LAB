@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/vendor-sourcemap-noise-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/vendor-sourcemap-noise-repo",
+    "html_url": "https://github.com/ARQ-Sec/vendor-sourcemap-noise-repo",
+    "name": "vendor-sourcemap-noise-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "cfc6f0a5a9bd9f228faeba26c8acffb7b9076e01"
+      },
+      "head": "cfc6f0a5a9bd9f228faeba26c8acffb7b9076e01",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T14:27:20+03:00",
+          "message": "bootstrap N-V7-VENDOR-014",
+          "sha": "cfc6f0a5a9bd9f228faeba26c8acffb7b9076e01"
+        }
+      ]
+    },
+    "lineCount": 5956,
+    "repoName": "vendor-sourcemap-noise-repo",
+    "scenarioId": "N-V7-VENDOR-014"
+  },
+  "scenario": {
+    "domain": "Repo full of minified bundles, source maps, lockfiles, and generated SDK clients with scary strings.",
+    "id": "N-V7-VENDOR-014",
+    "milestone": "M7",
+    "module": "both",
+    "repo_name": "vendor-sourcemap-noise-repo",
+    "stack": "Vendor / generated / minified / source-map / lockfile"
+  }
+}

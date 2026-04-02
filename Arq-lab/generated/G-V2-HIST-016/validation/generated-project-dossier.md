@@ -358,7 +358,7 @@ folded-yaml-lineage
 | validation/expected-findings.json | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2130 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 681 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 680 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 169 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 42 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 42 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -482,14 +482,14 @@ folded-yaml-lineage
 
 Branches:
 
-- `main` tip: `f0f54ece0e973ef3431a6d4305db809f0fdd1f01`
+- `main` tip: `8bf5ccc01663c9643b60e1eb648693442e0424f1`
 
 Commit order:
 
-- `5394d6d3f38c1d91a110a4c1e2215f028dd2e67b` `c001 bootstrap`: initial clean or baseline assembly.
-- `b3ce9b58eb869f1b498e0356e88268d9ac4b1c1d` `c002 add folded yaml secret`: introduces an intended signal.
-- `deb98d10a5b987f6169dad6510f3f47eca128146` `c003 add masked docs example`: introduces an intended signal.
-- `f0f54ece0e973ef3431a6d4305db809f0fdd1f01` `c004 remove live secret from head`: removes or neutralizes a prior signal.
+- `3639270a7c4294d2c0a1d5ba40107c40f0a9e571` `c001 bootstrap`: initial clean or baseline assembly.
+- `e07c20fda239e5f76494efbfe9cdbf4b6615e0b0` `c002 add folded yaml secret`: introduces an intended signal.
+- `44eff58b7b6cb2b3ff1ed6f076dc11f2e9128725` `c003 add masked docs example`: introduces an intended signal.
+- `8bf5ccc01663c9643b60e1eb648693442e0424f1` `c004 remove live secret from head`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -665,7 +665,6 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FN`.
 
 ## 16. Realism Justification
 
