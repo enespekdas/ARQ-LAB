@@ -1,9 +1,9 @@
 # M8 Summary
 
-- Scenario count: `12`
+- Scenario count: `18`
 
 - `FAIL_EXPLAINABILITY`: `0`
-- `FAIL_FN`: `0`
+- `FAIL_FN`: `6`
 - `FAIL_FP`: `0`
 - `FAIL_REF_STATE`: `0`
 - `INVALID_SCENARIO`: `0`

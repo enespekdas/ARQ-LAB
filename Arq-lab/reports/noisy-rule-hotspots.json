@@ -1,47 +1,39 @@
 [
   {
     "bucket": "mixed_exercised",
-    "distinctScenarioCount": 13,
     "explainabilityGapCount": 0,
-    "module": "guardian",
+    "module": "quantum",
     "mustNotFindViolationCount": 0,
-    "noisyScore": 10,
-    "regexOnlyCount": 42,
-    "reviewOnlyCount": 0,
-    "rule_key": "guardian.private-key",
-    "sameFileDifferentSignalCount": 0,
-    "sameSurfaceExtraCount": 0,
-    "scenarios": [
-      "G-V1-CONFIG-004",
-      "G-V1-JAVA-001",
-      "G-V1-TS-003",
-      "G-V2-HIST-003",
-      "G-V2-HIST-008",
-      "G-V2-HIST-015",
-      "M-V8-001",
-      "M-V8-003",
-      "M-V8-005",
-      "M-V8-007",
-      "M-V8-009",
-      "M-V8-011",
-      "M-V8-012"
+    "noisyScore": 28,
+    "rawDistinctScenarioCount": 3,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V4-COV-104"
     ],
-    "unexpectedMatchCount": 10
+    "regexOnlyCount": 15,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0246-python",
+    "sameFileDifferentSignalCount": 14,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 3,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V4-COV-104"
+    ],
+    "unexpectedMatchCount": 14
   },
   {
     "bucket": "mixed_exercised",
-    "distinctScenarioCount": 26,
     "explainabilityGapCount": 0,
     "module": "guardian",
     "mustNotFindViolationCount": 0,
-    "noisyScore": 8,
-    "regexOnlyCount": 89,
-    "reviewOnlyCount": 0,
-    "rule_key": "guardian.generic-api-key",
-    "sameFileDifferentSignalCount": 0,
-    "sameSurfaceExtraCount": 0,
-    "scenarios": [
+    "noisyScore": 12,
+    "rawDistinctScenarioCount": 27,
+    "rawScenarios": [
       "G-V1-CONFIG-004",
+      "G-V1-COV-102",
       "G-V1-JAVA-001",
       "G-V1-PY-002",
       "G-V1-TS-003",
@@ -68,21 +60,501 @@
       "M-V8-011",
       "M-V8-012"
     ],
-    "unexpectedMatchCount": 8
+    "regexOnlyCount": 91,
+    "reviewOnlyCount": 0,
+    "rule_key": "guardian.generic-api-key",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 27,
+    "surfacedScenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-COV-102",
+      "G-V1-JAVA-001",
+      "G-V1-PY-002",
+      "G-V1-TS-003",
+      "G-V2-HIST-001",
+      "G-V2-HIST-002",
+      "G-V2-HIST-004",
+      "G-V2-HIST-005",
+      "G-V2-HIST-006",
+      "G-V2-HIST-007",
+      "G-V2-HIST-009",
+      "G-V2-HIST-014",
+      "G-V2-HIST-016",
+      "G-V2-HIST-017",
+      "M-V8-001",
+      "M-V8-002",
+      "M-V8-003",
+      "M-V8-004",
+      "M-V8-005",
+      "M-V8-006",
+      "M-V8-007",
+      "M-V8-008",
+      "M-V8-009",
+      "M-V8-010",
+      "M-V8-011",
+      "M-V8-012"
+    ],
+    "unexpectedMatchCount": 10
   },
   {
     "bucket": "mixed_exercised",
-    "distinctScenarioCount": 9,
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 12,
+    "rawDistinctScenarioCount": 6,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V4-COV-104",
+      "Q-V4-PY-001",
+      "Q-V4-PY-005",
+      "Q-V4-PY-006"
+    ],
+    "regexOnlyCount": 6,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0248-python",
+    "sameFileDifferentSignalCount": 6,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 6,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V4-COV-104",
+      "Q-V4-PY-001",
+      "Q-V4-PY-005",
+      "Q-V4-PY-006"
+    ],
+    "unexpectedMatchCount": 6
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 12,
+    "rawDistinctScenarioCount": 3,
+    "rawScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104",
+      "Q-V3-COV-107"
+    ],
+    "regexOnlyCount": 7,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0408-csharp",
+    "sameFileDifferentSignalCount": 6,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 3,
+    "surfacedScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104",
+      "Q-V3-COV-107"
+    ],
+    "unexpectedMatchCount": 6
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "guardian",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 10,
+    "rawDistinctScenarioCount": 13,
+    "rawScenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-JAVA-001",
+      "G-V1-TS-003",
+      "G-V2-HIST-003",
+      "G-V2-HIST-008",
+      "G-V2-HIST-015",
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012"
+    ],
+    "regexOnlyCount": 42,
+    "reviewOnlyCount": 0,
+    "rule_key": "guardian.private-key",
+    "sameFileDifferentSignalCount": 0,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 13,
+    "surfacedScenarios": [
+      "G-V1-CONFIG-004",
+      "G-V1-JAVA-001",
+      "G-V1-TS-003",
+      "G-V2-HIST-003",
+      "G-V2-HIST-008",
+      "G-V2-HIST-015",
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012"
+    ],
+    "unexpectedMatchCount": 10
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 10,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-107"
+    ],
+    "regexOnlyCount": 6,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0531-csharp",
+    "sameFileDifferentSignalCount": 5,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-107"
+    ],
+    "unexpectedMatchCount": 5
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 8,
+    "rawDistinctScenarioCount": 3,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V4-COV-104"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0263-python",
+    "sameFileDifferentSignalCount": 4,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 3,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V4-COV-104"
+    ],
+    "unexpectedMatchCount": 4
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 8,
+    "rawDistinctScenarioCount": 3,
+    "rawScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104",
+      "Q-V3-COV-107"
+    ],
+    "regexOnlyCount": 5,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0435-csharp",
+    "sameFileDifferentSignalCount": 4,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 3,
+    "surfacedScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104",
+      "Q-V3-COV-107"
+    ],
+    "unexpectedMatchCount": 4
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 8,
+    "rawDistinctScenarioCount": 5,
+    "rawScenarios": [
+      "Q-V3-COV-104",
+      "Q-V3-COV-107",
+      "Q-V6-CS-002",
+      "Q-V6-CS-003",
+      "Q-V6-CS-004"
+    ],
+    "regexOnlyCount": 4,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0449-csharp",
+    "sameFileDifferentSignalCount": 4,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 5,
+    "surfacedScenarios": [
+      "Q-V3-COV-104",
+      "Q-V3-COV-107",
+      "Q-V6-CS-002",
+      "Q-V6-CS-003",
+      "Q-V6-CS-004"
+    ],
+    "unexpectedMatchCount": 4
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 6,
+    "rawDistinctScenarioCount": 3,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V5-PY-002"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0247-python",
+    "sameFileDifferentSignalCount": 3,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 3,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102",
+      "Q-V5-PY-002"
+    ],
+    "unexpectedMatchCount": 3
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 6,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V4-COV-102",
+      "Q-V4-COV-104"
+    ],
+    "regexOnlyCount": 4,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0291-python",
+    "sameFileDifferentSignalCount": 3,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V4-COV-102",
+      "Q-V4-COV-104"
+    ],
+    "unexpectedMatchCount": 3
+  },
+  {
+    "bucket": "noisy_only_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 6,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0425-csharp",
+    "sameFileDifferentSignalCount": 3,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104"
+    ],
+    "unexpectedMatchCount": 3
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0245-python",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0252-python",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "noisy_only_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0405-csharp",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0406-csharp",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-103",
+      "Q-V3-COV-104"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-104"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0442-csharp",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-104"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-104"
+    ],
+    "regexOnlyCount": 3,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0444-csharp",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-104"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 4,
+    "rawDistinctScenarioCount": 4,
+    "rawScenarios": [
+      "Q-V3-COV-107",
+      "Q-V3-CS-003",
+      "Q-V3-CS-004",
+      "Q-V3-CS-005"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0468-csharp",
+    "sameFileDifferentSignalCount": 2,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 4,
+    "surfacedScenarios": [
+      "Q-V3-COV-107",
+      "Q-V3-CS-003",
+      "Q-V3-CS-004",
+      "Q-V3-CS-005"
+    ],
+    "unexpectedMatchCount": 2
+  },
+  {
+    "bucket": "mixed_exercised",
     "explainabilityGapCount": 0,
     "module": "quantum",
     "mustNotFindViolationCount": 0,
     "noisyScore": 3,
+    "rawDistinctScenarioCount": 9,
+    "rawScenarios": [
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-006"
+    ],
     "regexOnlyCount": 0,
     "reviewOnlyCount": 0,
     "rule_key": "quantum.arq-q-0013-java",
     "sameFileDifferentSignalCount": 0,
     "sameSurfaceExtraCount": 0,
-    "scenarios": [
+    "surfacedDistinctScenarioCount": 9,
+    "surfacedScenarios": [
       "M-V8-001",
       "M-V8-003",
       "M-V8-005",
@@ -97,17 +569,35 @@
   },
   {
     "bucket": "mixed_exercised",
-    "distinctScenarioCount": 15,
     "explainabilityGapCount": 0,
     "module": "quantum",
     "mustNotFindViolationCount": 0,
     "noisyScore": 3,
+    "rawDistinctScenarioCount": 15,
+    "rawScenarios": [
+      "M-V8-001",
+      "M-V8-002",
+      "M-V8-003",
+      "M-V8-004",
+      "M-V8-005",
+      "M-V8-006",
+      "M-V8-007",
+      "M-V8-008",
+      "M-V8-009",
+      "M-V8-010",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V4-TS-003",
+      "Q-V4-TS-005",
+      "Q-V4-TS-006"
+    ],
     "regexOnlyCount": 0,
     "reviewOnlyCount": 0,
     "rule_key": "quantum.arq-q-0613-typescript",
     "sameFileDifferentSignalCount": 0,
     "sameSurfaceExtraCount": 0,
-    "scenarios": [
+    "surfacedDistinctScenarioCount": 15,
+    "surfacedScenarios": [
       "M-V8-001",
       "M-V8-002",
       "M-V8-003",
@@ -128,17 +618,367 @@
   },
   {
     "bucket": "mixed_exercised",
-    "distinctScenarioCount": 10,
+    "explainabilityGapCount": 0,
+    "module": "guardian",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "G-V1-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "guardian.bittrex-access-key",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "G-V1-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "guardian",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "G-V1-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "guardian.bittrex-secret-key",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "G-V1-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "guardian",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "G-V1-COV-104"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "guardian.gitlab-pat",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "G-V1-COV-104"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "guardian",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "G-V1-COV-104"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "guardian.gitlab-runner-authentication-token",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "G-V1-COV-104"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
     "explainabilityGapCount": 0,
     "module": "quantum",
     "mustNotFindViolationCount": 0,
     "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0066-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0067-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0070-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0071-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 5,
+    "rawScenarios": [
+      "Q-V3-COV-102",
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-004",
+      "Q-V3-JAVA-005",
+      "Q-V3-JAVA-007"
+    ],
+    "regexOnlyCount": 1,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0072-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 5,
+    "surfacedScenarios": [
+      "Q-V3-COV-102",
+      "Q-V3-JAVA-001",
+      "Q-V3-JAVA-004",
+      "Q-V3-JAVA-005",
+      "Q-V3-JAVA-007"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0079-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0084-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V3-COV-101",
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0188-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "noisy_only_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-101"
+    ],
+    "regexOnlyCount": 1,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0199-java",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-101"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "M-V8-COV-101"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0233-scala",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "M-V8-COV-101"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0258-python",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "Q-V4-COV-101",
+      "Q-V4-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 10,
+    "rawScenarios": [
+      "M-V8-001",
+      "M-V8-003",
+      "M-V8-005",
+      "M-V8-007",
+      "M-V8-009",
+      "M-V8-011",
+      "M-V8-012",
+      "Q-V5-PY-002",
+      "Q-V5-PY-003",
+      "Q-V5-PY-004"
+    ],
     "regexOnlyCount": 0,
     "reviewOnlyCount": 0,
     "rule_key": "quantum.arq-q-0305-python",
     "sameFileDifferentSignalCount": 0,
     "sameSurfaceExtraCount": 0,
-    "scenarios": [
+    "surfacedDistinctScenarioCount": 10,
+    "surfacedScenarios": [
       "M-V8-001",
       "M-V8-003",
       "M-V8-005",
@@ -153,18 +993,108 @@
     "unexpectedMatchCount": 2
   },
   {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-103"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0413-csharp",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-103"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-103"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0414-csharp",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-103"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-COV-103"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0415-csharp",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
+      "Q-V3-COV-103"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
+    "bucket": "mixed_exercised",
+    "explainabilityGapCount": 0,
+    "module": "quantum",
+    "mustNotFindViolationCount": 0,
+    "noisyScore": 2,
+    "rawDistinctScenarioCount": 2,
+    "rawScenarios": [
+      "M-V8-COV-101",
+      "M-V8-COV-102"
+    ],
+    "regexOnlyCount": 2,
+    "reviewOnlyCount": 0,
+    "rule_key": "quantum.arq-q-0641-kotlin",
+    "sameFileDifferentSignalCount": 1,
+    "sameSurfaceExtraCount": 0,
+    "surfacedDistinctScenarioCount": 2,
+    "surfacedScenarios": [
+      "M-V8-COV-101",
+      "M-V8-COV-102"
+    ],
+    "unexpectedMatchCount": 1
+  },
+  {
     "bucket": "noisy_only_exercised",
-    "distinctScenarioCount": 1,
     "explainabilityGapCount": 0,
     "module": "quantum",
     "mustNotFindViolationCount": 0,
     "noisyScore": 1,
+    "rawDistinctScenarioCount": 1,
+    "rawScenarios": [
+      "Q-V3-CS-003"
+    ],
     "regexOnlyCount": 1,
     "reviewOnlyCount": 0,
     "rule_key": "quantum.arq-q-0418-csharp",
     "sameFileDifferentSignalCount": 0,
     "sameSurfaceExtraCount": 0,
-    "scenarios": [
+    "surfacedDistinctScenarioCount": 1,
+    "surfacedScenarios": [
       "Q-V3-CS-003"
     ],
     "unexpectedMatchCount": 1

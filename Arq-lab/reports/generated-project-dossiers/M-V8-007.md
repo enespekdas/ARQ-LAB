@@ -1125,17 +1125,17 @@ workspace-history-mixed-repo
 
 Branches:
 
-- `feature/shared-lib-cleanup` tip: `e2563df6cf024283202215d5c827d798389f203c`; diverges from `main` at `49e211c9817621d3acccd2bc9d6a497f5c794adb`
-- `main` tip: `49e211c9817621d3acccd2bc9d6a497f5c794adb`
-- `release/2026.05` tip: `79bdf568e90de895d80f45a0fd324b14e7f816b1`; diverges from `main` at `49e211c9817621d3acccd2bc9d6a497f5c794adb`
+- `feature/shared-lib-cleanup` tip: `32573cc3d44ee6e7a7f2f9650dd7df7d8448be13`; diverges from `main` at `7e0e8b66b5cdffde4fd5f96b4081a80ea9875270`
+- `main` tip: `7e0e8b66b5cdffde4fd5f96b4081a80ea9875270`
+- `release/2026.05` tip: `9e80d9ba443821a6ff519c27919d56b26a534dfa`; diverges from `main` at `7e0e8b66b5cdffde4fd5f96b4081a80ea9875270`
 
 Commit order:
 
-- `5a99de78ac6ecda23ddbcf65af77198d55146759` `bootstrap M-V8-007`: initial clean or baseline assembly.
-- `62580af33b8f25bc77de3212cec6bc01123b1c85` `c002 add history-only workspace secret`: introduces an intended signal.
-- `49e211c9817621d3acccd2bc9d6a497f5c794adb` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
-- `79bdf568e90de895d80f45a0fd324b14e7f816b1` `c005 release branch clean`: removes or neutralizes a prior signal.
-- `e2563df6cf024283202215d5c827d798389f203c` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
+- `44ac9ecdacddd8d5c1053d850ef27820f6a14af6` `bootstrap M-V8-007`: initial clean or baseline assembly.
+- `8111c28c6aa08ec26fa56bb4773b5710480d822f` `c002 add history-only workspace secret`: introduces an intended signal.
+- `7e0e8b66b5cdffde4fd5f96b4081a80ea9875270` `c003 remove history-only workspace secret`: removes or neutralizes a prior signal.
+- `9e80d9ba443821a6ff519c27919d56b26a534dfa` `c005 release branch clean`: removes or neutralizes a prior signal.
+- `32573cc3d44ee6e7a7f2f9650dd7df7d8448be13` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

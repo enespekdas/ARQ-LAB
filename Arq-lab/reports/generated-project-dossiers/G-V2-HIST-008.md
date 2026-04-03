@@ -487,16 +487,16 @@ pem-lineage-separation
 
 Branches:
 
-- `main` tip: `6037da352dfa65845f06c5b1d1619d0293aec2e0`
+- `main` tip: `cce9163242c5ffec2960ba1266947f86b4b3f00b`
 
 Commit order:
 
-- `deefeb71d44c7b79a40a3b2cfbea83e44a635379` `c001 bootstrap`: initial clean or baseline assembly.
-- `c8dd2cc16247b39a1948319d684dd63a3ab288ce` `c002 add private key lineage`: introduces an intended signal.
-- `961f573d32422f747de2ea339a39c652e9937ba3` `c003 add public chain docs`: introduces an intended signal.
-- `1015c4b65ad0be92af819cd77eb72c28c5f7eeec` `c004 add csr lineage`: introduces an intended signal.
-- `d407f65f1bb160fc3cefbf237f62cd359568f8aa` `c005 add pki lineage docs`: introduces an intended signal.
-- `6037da352dfa65845f06c5b1d1619d0293aec2e0` `c006 remove live private key from head`: removes or neutralizes a prior signal.
+- `686fcd8f6dfdd1f9341ac88034fee96e04f7f7a5` `c001 bootstrap`: initial clean or baseline assembly.
+- `0aa636ecd08117842eb2f479b1fdcb4f395c03f7` `c002 add private key lineage`: introduces an intended signal.
+- `2acd1b129c337bd95cbab0b6c84d069c3b30098e` `c003 add public chain docs`: introduces an intended signal.
+- `2b7c602c68223603be003fe85cf598a84f161679` `c004 add csr lineage`: introduces an intended signal.
+- `e54da01f4c3be2995c9d22f40ac0e9530838f2a8` `c005 add pki lineage docs`: introduces an intended signal.
+- `cce9163242c5ffec2960ba1266947f86b4b3f00b` `c006 remove live private key from head`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

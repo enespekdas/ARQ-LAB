@@ -17,6 +17,7 @@ BUCKET_EXPECTED = "expected_positive_exercised"
 BUCKET_NOISY = "noisy_only_exercised"
 BUCKET_MIXED = "mixed_exercised"
 BUCKET_EXPLAINABILITY = "explainability_problematic_exercised"
+BUCKET_RAW_ONLY = "raw_only_not_surfaced"
 BUCKET_UNCLASSIFIED = "unclassified_exercised"
 BUCKET_NEVER = "never_exercised"
 
@@ -27,9 +28,11 @@ class ScenarioArtifacts:
     milestone: str
     run_stamp: str
     comparison_path: Path
-    findings_path: Path
+    surfaced_findings_path: Path
+    raw_findings_paths: list[str]
     comparison: dict[str, Any]
-    findings: list[dict[str, Any]]
+    surfaced_findings: list[dict[str, Any]]
+    raw_findings: list[dict[str, Any]]
 
 
 def _detail(item: dict[str, Any]) -> dict[str, Any]:
@@ -59,6 +62,30 @@ def _scenario_sort_key(path: Path) -> tuple[str, int]:
     return (run_stamp, path.stat().st_mtime_ns)
 
 
+def _load_raw_findings(scenario_root: Path) -> tuple[list[dict[str, Any]], list[str]]:
+    findings: list[dict[str, Any]] = []
+    source_paths: list[str] = []
+    for export_path in sorted(scenario_root.rglob("findings-export.json")):
+        payload = read_json(export_path, {})
+        items = payload.get("items", []) if isinstance(payload, dict) else []
+        if not isinstance(items, list):
+            continue
+        detail_path = export_path.with_name("finding-details.json")
+        details = read_json(detail_path, {}) if detail_path.exists() else {}
+        if not isinstance(details, dict):
+            details = {}
+        source_paths.append(str(export_path))
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            normalized = dict(item)
+            finding_id = str(item.get("findingId") or "")
+            detail = details.get(finding_id, {})
+            normalized["detail"] = detail if isinstance(detail, dict) else {}
+            findings.append(normalized)
+    return findings, source_paths
+
+
 def load_latest_scenario_artifacts(runs_root: Path) -> list[ScenarioArtifacts]:
     latest_by_scenario: dict[str, tuple[tuple[str, int], ScenarioArtifacts]] = {}
     for comparison_path in runs_root.rglob("comparison.json"):
@@ -66,19 +93,22 @@ def load_latest_scenario_artifacts(runs_root: Path) -> list[ScenarioArtifacts]:
         if not comparison:
             continue
         scenario_id = str(comparison.get("scenarioId") or comparison_path.parent.name)
-        findings_path = comparison_path.parent / "findings-normalized.json"
-        findings = read_json(findings_path, [])
-        if not isinstance(findings, list):
-            findings = []
+        surfaced_findings_path = comparison_path.parent / "findings-normalized.json"
+        surfaced_findings = read_json(surfaced_findings_path, [])
+        if not isinstance(surfaced_findings, list):
+            surfaced_findings = []
+        raw_findings, raw_findings_paths = _load_raw_findings(comparison_path.parent)
         run_stamp = comparison_path.parts[-4] if len(comparison_path.parts) >= 4 else ""
         artifacts = ScenarioArtifacts(
             scenario_id=scenario_id,
             milestone=str(comparison.get("milestone") or comparison_path.parts[-3]),
             run_stamp=run_stamp,
             comparison_path=comparison_path,
-            findings_path=findings_path,
+            surfaced_findings_path=surfaced_findings_path,
+            raw_findings_paths=raw_findings_paths,
             comparison=comparison,
-            findings=findings,
+            surfaced_findings=surfaced_findings,
+            raw_findings=raw_findings,
         )
         sort_key = _scenario_sort_key(comparison_path)
         current = latest_by_scenario.get(scenario_id)
@@ -133,7 +163,36 @@ def _derive_language(rule_key: str, metadata: dict[str, Any]) -> str:
     language = metadata.get("language")
     if isinstance(language, str) and language.strip():
         return language.strip()
-    for suffix in ("java", "csharp", "typescript", "python", "javascript", "config", "go"):
+    for suffix in (
+        "java",
+        "csharp",
+        "typescript",
+        "python",
+        "javascript",
+        "config",
+        "go",
+        "cpp",
+        "scala",
+        "kotlin",
+        "ruby",
+        "php",
+        "rust",
+        "swift",
+        "powershell",
+        "shell",
+        "objectivec",
+        "groovy",
+        "c",
+        "elixir",
+        "erlang",
+        "perl",
+        "jcl",
+        "tsql",
+        "plsql",
+        "zig",
+        "lua",
+        "abap",
+    ):
         if rule_key.endswith(f"-{suffix}"):
             return suffix
     return ""
@@ -267,8 +326,10 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
             }
         stat = {
             **base,
-            "distinctScenarioCount": 0,
-            "totalFindingCount": 0,
+            "rawDistinctScenarioCount": 0,
+            "surfacedDistinctScenarioCount": 0,
+            "rawTotalFindingCount": 0,
+            "surfacedTotalFindingCount": 0,
             "expectedMatchCount": 0,
             "unexpectedMatchCount": 0,
             "noisyMatchCount": 0,
@@ -277,17 +338,29 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
             "sameFileDifferentSignalCount": 0,
             "reviewOnlyCount": 0,
             "explainabilityGapCount": 0,
+            "rawRegexOnlyCount": 0,
+            "surfacedRegexOnlyCount": 0,
+            "rawHybridCount": 0,
+            "surfacedHybridCount": 0,
+            "rawSemanticCount": 0,
+            "surfacedSemanticCount": 0,
+            "rawAstCount": 0,
+            "surfacedAstCount": 0,
             "regexOnlyCount": 0,
             "hybridCount": 0,
             "semanticCount": 0,
             "astCount": 0,
-            "scenarios": set(),
+            "rawScenarios": set(),
+            "surfacedScenarios": set(),
             "noiseScenarios": set(),
             "expectedScenarios": set(),
             "explainabilityScenarios": set(),
+            "rawDetectionSources": set(),
+            "surfacedDetectionSources": set(),
             "detectionSources": set(),
             "bucket": BUCKET_UNCLASSIFIED,
             "regexOnlyOnlyExercised": False,
+            "rawRegexOnlyOnlyExercised": False,
         }
         stats_by_rule[rule_key] = stat
         return stat
@@ -297,33 +370,62 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
             "milestone": artifact.milestone,
             "runStamp": artifact.run_stamp,
             "comparisonPath": str(artifact.comparison_path),
-            "findingsPath": str(artifact.findings_path),
+            "surfacedFindingsPath": str(artifact.surfaced_findings_path),
+            "rawFindingsPaths": artifact.raw_findings_paths,
             "verdict": artifact.comparison.get("verdict"),
             "finalVerdict": artifact.comparison.get("finalVerdict") or artifact.comparison.get("verdictClass") or artifact.comparison.get("verdict"),
-            "rules": [],
+            "rawRules": [],
+            "surfacedRules": [],
         }
-        scenario_rules: set[str] = set()
+        raw_rules: set[str] = set()
+        surfaced_rules: set[str] = set()
 
-        for finding in artifact.findings:
+        for finding in artifact.raw_findings:
             rule_key = _rule_key(finding)
             if not rule_key:
                 continue
             module = str(finding.get("module") or _detail(finding).get("module") or "")
             stat = ensure_stat(rule_key, module)
-            stat["scenarios"].add(artifact.scenario_id)
-            stat["totalFindingCount"] += 1
+            stat["rawScenarios"].add(artifact.scenario_id)
+            stat["rawTotalFindingCount"] += 1
             source = _detection_source(finding).upper()
             if source:
+                stat["rawDetectionSources"].add(source)
                 stat["detectionSources"].add(source)
             if "REGEX" in source and all(token not in source for token in ("HYBRID", "SEMANTIC", "AST")):
+                stat["rawRegexOnlyCount"] += 1
                 stat["regexOnlyCount"] += 1
             if "HYBRID" in source:
+                stat["rawHybridCount"] += 1
                 stat["hybridCount"] += 1
             if source == "SEMANTIC":
+                stat["rawSemanticCount"] += 1
                 stat["semanticCount"] += 1
             if source == "AST":
+                stat["rawAstCount"] += 1
                 stat["astCount"] += 1
-            scenario_rules.add(rule_key)
+            raw_rules.add(rule_key)
+
+        for finding in artifact.surfaced_findings:
+            rule_key = _rule_key(finding)
+            if not rule_key:
+                continue
+            module = str(finding.get("module") or _detail(finding).get("module") or "")
+            stat = ensure_stat(rule_key, module)
+            stat["surfacedScenarios"].add(artifact.scenario_id)
+            stat["surfacedTotalFindingCount"] += 1
+            source = _detection_source(finding).upper()
+            if source:
+                stat["surfacedDetectionSources"].add(source)
+            if "REGEX" in source and all(token not in source for token in ("HYBRID", "SEMANTIC", "AST")):
+                stat["surfacedRegexOnlyCount"] += 1
+            if "HYBRID" in source:
+                stat["surfacedHybridCount"] += 1
+            if source == "SEMANTIC":
+                stat["surfacedSemanticCount"] += 1
+            if source == "AST":
+                stat["surfacedAstCount"] += 1
+            surfaced_rules.add(rule_key)
 
         matched = artifact.comparison.get("matchedFindings", [])
         if isinstance(matched, list):
@@ -337,7 +439,7 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
                 stat = ensure_stat(rule_key, str(actual.get("module") or ""))
                 stat["expectedMatchCount"] += 1
                 stat["expectedScenarios"].add(artifact.scenario_id)
-                scenario_rules.add(rule_key)
+                surfaced_rules.add(rule_key)
 
         noisy_fields = {
             "unexpectedFindings": "unexpectedMatchCount",
@@ -360,7 +462,7 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
                 stat[counter_name] += count
                 stat["noisyMatchCount"] += count
                 stat["noiseScenarios"].add(artifact.scenario_id)
-                scenario_rules.add(rule_key)
+                surfaced_rules.add(rule_key)
 
         explainability_failures = artifact.comparison.get("explainabilityFailures", [])
         if isinstance(explainability_failures, list):
@@ -371,20 +473,25 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
                     stat = ensure_stat(rule_key)
                     stat["explainabilityGapCount"] += 1
                     stat["explainabilityScenarios"].add(artifact.scenario_id)
-                    scenario_rules.add(rule_key)
+                    surfaced_rules.add(rule_key)
 
-        scenario_matrix["rules"] = sorted(scenario_rules)
+        scenario_matrix["rawRules"] = sorted(raw_rules)
+        scenario_matrix["surfacedRules"] = sorted(surfaced_rules)
         scenario_to_rule_matrix[artifact.scenario_id] = scenario_matrix
 
     for stat in stats_by_rule.values():
-        stat["distinctScenarioCount"] = len(stat["scenarios"])
+        stat["rawDistinctScenarioCount"] = len(stat["rawScenarios"])
+        stat["surfacedDistinctScenarioCount"] = len(stat["surfacedScenarios"])
         expected = stat["expectedMatchCount"]
         noisy = stat["noisyMatchCount"] + stat["mustNotFindViolationCount"]
         explainability = stat["explainabilityGapCount"]
-        total = stat["totalFindingCount"]
-        detection_sources = stat["detectionSources"]
-        stat["regexOnlyOnlyExercised"] = total > 0 and stat["regexOnlyCount"] == total and not any(
-            source in {"HYBRID", "SEMANTIC", "AST"} for source in detection_sources
+        raw_total = stat["rawTotalFindingCount"]
+        surfaced_total = stat["surfacedTotalFindingCount"]
+        stat["rawRegexOnlyOnlyExercised"] = raw_total > 0 and stat["rawRegexOnlyCount"] == raw_total and not any(
+            source in {"HYBRID", "SEMANTIC", "AST"} for source in stat["rawDetectionSources"]
+        )
+        stat["regexOnlyOnlyExercised"] = surfaced_total > 0 and stat["surfacedRegexOnlyCount"] == surfaced_total and not any(
+            source in {"HYBRID", "SEMANTIC", "AST"} for source in stat["surfacedDetectionSources"]
         )
         if explainability > 0:
             stat["bucket"] = BUCKET_EXPLAINABILITY
@@ -394,8 +501,10 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
             stat["bucket"] = BUCKET_EXPECTED
         elif noisy > 0:
             stat["bucket"] = BUCKET_NOISY
+        elif raw_total > 0:
+            stat["bucket"] = BUCKET_RAW_ONLY
         else:
-            stat["bucket"] = BUCKET_UNCLASSIFIED if total > 0 else BUCKET_NEVER
+            stat["bucket"] = BUCKET_NEVER
 
     results: dict[str, Any] = {}
     rule_to_scenario_matrix: dict[str, dict[str, Any]] = {}
@@ -403,16 +512,21 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
     for module in ("guardian", "quantum"):
         active_map = module_maps[module]
         coverage_rows: list[dict[str, Any]] = []
-        exercised = 0
+        raw_exercised = 0
+        surfaced_exercised = 0
         bucket_counts = defaultdict(int)
+        raw_bucket_counts = defaultdict(int)
         regex_only_only_count = 0
+        raw_regex_only_only_count = 0
         for rule_key, active_item in active_map.items():
             stat = stats_by_rule.get(rule_key)
             if stat is None:
                 coverage_row = {
                     **active_item,
-                    "distinctScenarioCount": 0,
-                    "totalFindingCount": 0,
+                    "rawDistinctScenarioCount": 0,
+                    "surfacedDistinctScenarioCount": 0,
+                    "rawTotalFindingCount": 0,
+                    "surfacedTotalFindingCount": 0,
                     "expectedMatchCount": 0,
                     "unexpectedMatchCount": 0,
                     "noisyMatchCount": 0,
@@ -421,46 +535,92 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
                     "sameFileDifferentSignalCount": 0,
                     "reviewOnlyCount": 0,
                     "explainabilityGapCount": 0,
+                    "rawRegexOnlyCount": 0,
+                    "surfacedRegexOnlyCount": 0,
+                    "rawHybridCount": 0,
+                    "surfacedHybridCount": 0,
+                    "rawSemanticCount": 0,
+                    "surfacedSemanticCount": 0,
+                    "rawAstCount": 0,
+                    "surfacedAstCount": 0,
                     "regexOnlyCount": 0,
                     "hybridCount": 0,
                     "semanticCount": 0,
                     "astCount": 0,
-                    "scenarios": [],
+                    "rawScenarios": [],
+                    "surfacedScenarios": [],
                     "bucket": BUCKET_NEVER,
                     "regexOnlyOnlyExercised": False,
+                    "rawRegexOnlyOnlyExercised": False,
                 }
             else:
-                exercised += 1
+                if stat["rawTotalFindingCount"] > 0:
+                    raw_exercised += 1
+                if stat["surfacedTotalFindingCount"] > 0 or stat["expectedMatchCount"] > 0 or stat["noisyMatchCount"] > 0 or stat["mustNotFindViolationCount"] > 0 or stat["explainabilityGapCount"] > 0:
+                    surfaced_exercised += 1
                 bucket_counts[stat["bucket"]] += 1
+                raw_bucket = stat["bucket"] if stat["rawTotalFindingCount"] > 0 else BUCKET_NEVER
+                raw_bucket_counts[raw_bucket] += 1
                 if stat["regexOnlyOnlyExercised"]:
                     regex_only_only_count += 1
+                if stat["rawRegexOnlyOnlyExercised"]:
+                    raw_regex_only_only_count += 1
                 coverage_row = {
-                    **{key: value for key, value in stat.items() if key not in {"scenarios", "noiseScenarios", "expectedScenarios", "explainabilityScenarios", "detectionSources"}},
-                    "scenarios": sorted(stat["scenarios"]),
+                    **{
+                        key: value
+                        for key, value in stat.items()
+                        if key
+                        not in {
+                            "rawScenarios",
+                            "surfacedScenarios",
+                            "noiseScenarios",
+                            "expectedScenarios",
+                            "explainabilityScenarios",
+                            "rawDetectionSources",
+                            "surfacedDetectionSources",
+                            "detectionSources",
+                        }
+                    },
+                    "rawScenarios": sorted(stat["rawScenarios"]),
+                    "surfacedScenarios": sorted(stat["surfacedScenarios"]),
                 }
                 rule_to_scenario_matrix[rule_key] = {
                     "module": module,
                     "bucket": stat["bucket"],
-                    "scenarios": sorted(stat["scenarios"]),
+                    "rawScenarios": sorted(stat["rawScenarios"]),
+                    "surfacedScenarios": sorted(stat["surfacedScenarios"]),
                     "expectedScenarios": sorted(stat["expectedScenarios"]),
                     "noiseScenarios": sorted(stat["noiseScenarios"]),
                     "explainabilityScenarios": sorted(stat["explainabilityScenarios"]),
                 }
             coverage_rows.append(coverage_row)
-        never = len(active_map) - exercised
+        never = len([row for row in coverage_rows if row["bucket"] == BUCKET_NEVER])
         results[module] = {
             "activeRuleCount": len(active_map),
-            "exercisedDistinctRules": exercised,
-            "coveragePercent": round((exercised / len(active_map) * 100.0), 2) if active_map else 0.0,
+            "rawExercisedDistinctRules": raw_exercised,
+            "surfacedExercisedDistinctRules": surfaced_exercised,
+            "rawCoveragePercent": round((raw_exercised / len(active_map) * 100.0), 2) if active_map else 0.0,
+            "surfacedCoveragePercent": round((surfaced_exercised / len(active_map) * 100.0), 2) if active_map else 0.0,
             "bucketCounts": {
                 BUCKET_EXPECTED: bucket_counts[BUCKET_EXPECTED],
                 BUCKET_NOISY: bucket_counts[BUCKET_NOISY],
                 BUCKET_MIXED: bucket_counts[BUCKET_MIXED],
                 BUCKET_EXPLAINABILITY: bucket_counts[BUCKET_EXPLAINABILITY],
+                BUCKET_RAW_ONLY: bucket_counts[BUCKET_RAW_ONLY],
                 BUCKET_UNCLASSIFIED: bucket_counts[BUCKET_UNCLASSIFIED],
                 BUCKET_NEVER: never,
             },
+            "rawBucketCounts": {
+                BUCKET_EXPECTED: raw_bucket_counts[BUCKET_EXPECTED],
+                BUCKET_NOISY: raw_bucket_counts[BUCKET_NOISY],
+                BUCKET_MIXED: raw_bucket_counts[BUCKET_MIXED],
+                BUCKET_EXPLAINABILITY: raw_bucket_counts[BUCKET_EXPLAINABILITY],
+                BUCKET_RAW_ONLY: raw_bucket_counts[BUCKET_RAW_ONLY],
+                BUCKET_UNCLASSIFIED: raw_bucket_counts[BUCKET_UNCLASSIFIED],
+                BUCKET_NEVER: never,
+            },
             "regexOnlyOnlyExercisedCount": regex_only_only_count,
+            "rawRegexOnlyOnlyExercisedCount": raw_regex_only_only_count,
             "rows": coverage_rows,
         }
 
@@ -481,15 +641,21 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
                 "reviewOnlyCount": stat["reviewOnlyCount"],
                 "mustNotFindViolationCount": stat["mustNotFindViolationCount"],
                 "explainabilityGapCount": stat["explainabilityGapCount"],
-                "regexOnlyCount": stat["regexOnlyCount"],
-                "distinctScenarioCount": stat["distinctScenarioCount"],
-                "scenarios": sorted(stat["scenarios"]),
+                "regexOnlyCount": stat["surfacedRegexOnlyCount"],
+                "rawDistinctScenarioCount": stat["rawDistinctScenarioCount"],
+                "surfacedDistinctScenarioCount": stat["surfacedDistinctScenarioCount"],
+                "rawScenarios": sorted(stat["rawScenarios"]),
+                "surfacedScenarios": sorted(stat["surfacedScenarios"]),
             }
         )
     noisy_hotspots.sort(key=lambda item: (-item["noisyScore"], item["rule_key"]))
 
     uncovered = {
         module: [row for row in results[module]["rows"] if row["bucket"] == BUCKET_NEVER]
+        for module in ("guardian", "quantum")
+    }
+    raw_only = {
+        module: [row for row in results[module]["rows"] if row["bucket"] == BUCKET_RAW_ONLY]
         for module in ("guardian", "quantum")
     }
 
@@ -499,6 +665,7 @@ def classify_rule_coverage(active_rules: dict[str, Any], artifacts: list[Scenari
         "scenarioToRuleMatrix": scenario_to_rule_matrix,
         "noisyRuleHotspots": noisy_hotspots,
         "uncoveredRules": uncovered,
+        "rawOnlyRules": raw_only,
     }
 
 
@@ -548,7 +715,25 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
     for module in ("guardian", "quantum"):
         module_payload = coverage["modules"][module]
         rows = module_payload["rows"]
-        write_json(root / f"{module}-rule-coverage.json", module_payload)
+        raw_payload = {
+            "activeRuleCount": module_payload["activeRuleCount"],
+            "exercisedDistinctRules": module_payload["rawExercisedDistinctRules"],
+            "coveragePercent": module_payload["rawCoveragePercent"],
+            "bucketCounts": module_payload["rawBucketCounts"],
+            "regexOnlyOnlyExercisedCount": module_payload["rawRegexOnlyOnlyExercisedCount"],
+            "rows": rows,
+        }
+        surfaced_payload = {
+            "activeRuleCount": module_payload["activeRuleCount"],
+            "exercisedDistinctRules": module_payload["surfacedExercisedDistinctRules"],
+            "coveragePercent": module_payload["surfacedCoveragePercent"],
+            "bucketCounts": module_payload["bucketCounts"],
+            "regexOnlyOnlyExercisedCount": module_payload["regexOnlyOnlyExercisedCount"],
+            "rows": rows,
+        }
+        write_json(root / f"{module}-rule-coverage-raw.json", raw_payload)
+        write_json(root / f"{module}-rule-coverage-surfaced.json", surfaced_payload)
+        write_json(root / f"{module}-rule-coverage.json", {"raw": raw_payload, "surfaced": surfaced_payload})
         _write_csv(
             root / f"{module}-rule-coverage.csv",
             rows,
@@ -556,8 +741,10 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
                 "rule_key",
                 "module",
                 "bucket",
-                "distinctScenarioCount",
-                "totalFindingCount",
+                "rawDistinctScenarioCount",
+                "surfacedDistinctScenarioCount",
+                "rawTotalFindingCount",
+                "surfacedTotalFindingCount",
                 "expectedMatchCount",
                 "unexpectedMatchCount",
                 "noisyMatchCount",
@@ -566,12 +753,22 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
                 "sameFileDifferentSignalCount",
                 "reviewOnlyCount",
                 "explainabilityGapCount",
+                "rawRegexOnlyCount",
+                "surfacedRegexOnlyCount",
+                "rawHybridCount",
+                "surfacedHybridCount",
+                "rawSemanticCount",
+                "surfacedSemanticCount",
+                "rawAstCount",
+                "surfacedAstCount",
                 "regexOnlyCount",
                 "hybridCount",
                 "semanticCount",
                 "astCount",
+                "rawRegexOnlyOnlyExercised",
                 "regexOnlyOnlyExercised",
-                "scenarios",
+                "rawScenarios",
+                "surfacedScenarios",
                 "title",
                 "severity",
                 "finding_kind",
@@ -580,26 +777,30 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
             ],
         )
         bucket_counts = module_payload["bucketCounts"]
+        raw_bucket_counts = module_payload["rawBucketCounts"]
         lines = [
             f"# {module.title()} Rule Coverage",
             "",
             f"- Active rules: `{module_payload['activeRuleCount']}`",
-            f"- Exercised distinct rules: `{module_payload['exercisedDistinctRules']}` / `{module_payload['activeRuleCount']}` (`{module_payload['coveragePercent']}%`)",
-            f"- expected_positive_exercised: `{bucket_counts[BUCKET_EXPECTED]}`",
-            f"- noisy_only_exercised: `{bucket_counts[BUCKET_NOISY]}`",
-            f"- mixed_exercised: `{bucket_counts[BUCKET_MIXED]}`",
-            f"- explainability_problematic_exercised: `{bucket_counts[BUCKET_EXPLAINABILITY]}`",
-            f"- regex_only_only_exercised: `{module_payload['regexOnlyOnlyExercisedCount']}`",
+            f"- Raw exercised distinct rules: `{module_payload['rawExercisedDistinctRules']}` / `{module_payload['activeRuleCount']}` (`{module_payload['rawCoveragePercent']}%`)",
+            f"- Surfaced exercised distinct rules: `{module_payload['surfacedExercisedDistinctRules']}` / `{module_payload['activeRuleCount']}` (`{module_payload['surfacedCoveragePercent']}%`)",
+            f"- raw_only_not_surfaced: `{bucket_counts[BUCKET_RAW_ONLY]}`",
+            f"- surfaced expected_positive_exercised: `{bucket_counts[BUCKET_EXPECTED]}`",
+            f"- surfaced noisy_only_exercised: `{bucket_counts[BUCKET_NOISY]}`",
+            f"- surfaced mixed_exercised: `{bucket_counts[BUCKET_MIXED]}`",
+            f"- surfaced explainability_problematic_exercised: `{bucket_counts[BUCKET_EXPLAINABILITY]}`",
+            f"- surfaced regex_only_only_exercised: `{module_payload['regexOnlyOnlyExercisedCount']}`",
+            f"- raw regex_only_only_exercised: `{module_payload['rawRegexOnlyOnlyExercisedCount']}`",
             f"- never_exercised: `{bucket_counts[BUCKET_NEVER]}`",
             "",
-            "| Rule Key | Bucket | Scenarios | Expected | Noise | Explainability | Regex Only | Hybrid |",
-            "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+            "| Rule Key | Bucket | Raw Scenarios | Surfaced Scenarios | Expected | Noise | Explainability | Raw Count | Surfaced Count |",
+            "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
         ]
         for row in rows:
             if row["bucket"] == BUCKET_NEVER:
                 continue
             lines.append(
-                f"| `{row['rule_key']}` | `{row['bucket']}` | `{row['distinctScenarioCount']}` | `{row['expectedMatchCount']}` | `{row['noisyMatchCount']}` | `{row['explainabilityGapCount']}` | `{row['regexOnlyCount']}` | `{row['hybridCount']}` |"
+                f"| `{row['rule_key']}` | `{row['bucket']}` | `{row['rawDistinctScenarioCount']}` | `{row['surfacedDistinctScenarioCount']}` | `{row['expectedMatchCount']}` | `{row['noisyMatchCount']}` | `{row['explainabilityGapCount']}` | `{row['rawTotalFindingCount']}` | `{row['surfacedTotalFindingCount']}` |"
             )
         write_text(root / f"{module}-rule-coverage.md", "\n".join(lines).rstrip() + "\n")
 
@@ -610,14 +811,22 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
     uncovered_lines = ["# Uncovered Rules Summary", ""]
     for module in ("guardian", "quantum"):
         uncovered = coverage["uncoveredRules"][module]
+        raw_only = coverage["rawOnlyRules"][module]
         uncovered_lines.append(f"## {module.title()}")
         uncovered_lines.append("")
         uncovered_lines.append(f"- Never exercised: `{len(uncovered)}`")
+        uncovered_lines.append(f"- Raw only not surfaced: `{len(raw_only)}`")
         top_families = defaultdict(int)
         for row in uncovered:
             top_families[row.get("family") or "unknown"] += 1
         uncovered_lines.append("- Top uncovered families:")
         for family, count in sorted(top_families.items(), key=lambda item: (-item[1], item[0]))[:15]:
+            uncovered_lines.append(f"  - `{family}`: `{count}`")
+        raw_only_families = defaultdict(int)
+        for row in raw_only:
+            raw_only_families[row.get("family") or "unknown"] += 1
+        uncovered_lines.append("- Top raw-only-not-surfaced families:")
+        for family, count in sorted(raw_only_families.items(), key=lambda item: (-item[1], item[0]))[:15]:
             uncovered_lines.append(f"  - `{family}`: `{count}`")
         uncovered_lines.append("")
     write_text(root / "uncovered-rules-summary.md", "\n".join(uncovered_lines).rstrip() + "\n")
@@ -630,11 +839,13 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
             [
                 f"## {module.title()}",
                 "",
-                f"- exercised distinct rules: `{payload['exercisedDistinctRules']}` / `{payload['activeRuleCount']}` (`{payload['coveragePercent']}%`)",
+                f"- raw exercised distinct rules: `{payload['rawExercisedDistinctRules']}` / `{payload['activeRuleCount']}` (`{payload['rawCoveragePercent']}%`)",
+                f"- surfaced exercised distinct rules: `{payload['surfacedExercisedDistinctRules']}` / `{payload['activeRuleCount']}` (`{payload['surfacedCoveragePercent']}%`)",
                 f"- expected_positive_exercised: `{buckets[BUCKET_EXPECTED]}`",
                 f"- noisy_only_exercised: `{buckets[BUCKET_NOISY]}`",
                 f"- mixed_exercised: `{buckets[BUCKET_MIXED]}`",
                 f"- explainability_problematic_exercised: `{buckets[BUCKET_EXPLAINABILITY]}`",
+                f"- raw_only_not_surfaced: `{buckets[BUCKET_RAW_ONLY]}`",
                 f"- regex_only_only_exercised: `{payload['regexOnlyOnlyExercisedCount']}`",
                 f"- never_exercised: `{buckets[BUCKET_NEVER]}`",
                 "",
@@ -650,7 +861,7 @@ def write_coverage_reports(config, coverage: dict[str, Any]) -> None:
     )
     for row in coverage["noisyRuleHotspots"][:20]:
         scorecard_lines.append(
-            f"| `{row['rule_key']}` | `{row['module']}` | `{row['bucket']}` | `{row['noisyScore']}` | `{row['distinctScenarioCount']}` |"
+            f"| `{row['rule_key']}` | `{row['module']}` | `{row['bucket']}` | `{row['noisyScore']}` | `{row['surfacedDistinctScenarioCount']}` |"
         )
     write_text(root / "rule-coverage-scorecard.md", "\n".join(scorecard_lines).rstrip() + "\n")
 

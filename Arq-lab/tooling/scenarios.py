@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from .coverage_campaign import coverage_campaign_descriptors
 from .models import BuildPlan, ExpectedAbsent, ExpectedFinding, ExplainabilityExpectation, ScanPlan, ScenarioSpec
 
 
@@ -2238,6 +2239,28 @@ def scenario_specs() -> list[ScenarioSpec]:
             ],
         ),
     ]
+    for descriptor in coverage_campaign_descriptors():
+        scan_plans = _guardian_head() if descriptor["scan_kind"] == "guardian" else _quantum_head()
+        specs.append(
+            ScenarioSpec(
+                id=descriptor["id"],
+                milestone=descriptor["milestone"],
+                repo_name=descriptor["repo_name"],
+                module=descriptor["module"],
+                family=descriptor["family"],
+                stack=descriptor["stack"],
+                domain=descriptor["domain"],
+                summary=descriptor["summary"],
+                line_target=descriptor["line_target"],
+                scan_plans=scan_plans,
+                build_plan=_build_plan(CONFIG_BUILD),
+                expected_findings=[
+                    ef(item["key"], item["path_contains"], rule=item["rule"])
+                    for item in descriptor["expected_findings"]
+                ],
+                metadata=descriptor["metadata"],
+            )
+        )
     return specs
 
 

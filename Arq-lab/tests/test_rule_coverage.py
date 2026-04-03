@@ -7,6 +7,7 @@ from tooling.rule_coverage import (
     BUCKET_EXPECTED,
     BUCKET_NEVER,
     BUCKET_NOISY,
+    BUCKET_RAW_ONLY,
     classify_rule_coverage,
     load_latest_scenario_artifacts,
 )
@@ -52,19 +53,45 @@ def _finding(rule_key: str, module: str, detection_source: str) -> dict:
     }
 
 
+def _write_raw_export(root: Path, items: list[dict]) -> None:
+    export_items = []
+    details = {}
+    for index, item in enumerate(items, start=1):
+        finding_id = f"finding-{index}"
+        export_item = {
+            "findingId": finding_id,
+            "ruleKey": item["ruleKey"],
+            "module": item["module"],
+            "detectionSource": item["detectionSource"],
+            "detectionState": "ACTIVE",
+        }
+        export_items.append(export_item)
+        details[finding_id] = {
+            "ruleKey": item["ruleKey"],
+            "module": item["module"],
+            "detectionSource": item["detectionSource"],
+            "explainability": {"detectionSource": item["detectionSource"]},
+        }
+    write_json(root / "quantum-head" / "findings-export.json", {"items": export_items})
+    write_json(root / "quantum-head" / "finding-details.json", details)
+
+
 def test_load_latest_scenario_artifacts_uses_latest_run(tmp_path: Path) -> None:
     old_dir = tmp_path / "runs" / "20260401T100000Z" / "M3" / "Q-V3-JAVA-001"
     new_dir = tmp_path / "runs" / "20260401T110000Z" / "M3" / "Q-V3-JAVA-001"
     write_json(old_dir / "comparison.json", _comparison("Q-V3-JAVA-001", "M3"))
     write_json(old_dir / "findings-normalized.json", [])
+    _write_raw_export(old_dir, [])
     write_json(new_dir / "comparison.json", _comparison("Q-V3-JAVA-001", "M3"))
     write_json(new_dir / "findings-normalized.json", [{"ruleKey": "quantum.arq-q-0013-java"}])
+    _write_raw_export(new_dir, [{"ruleKey": "quantum.arq-q-0013-java", "module": "quantum", "detectionSource": "REGEX"}])
 
     artifacts = load_latest_scenario_artifacts(tmp_path / "runs")
 
     assert len(artifacts) == 1
     assert artifacts[0].run_stamp == "20260401T110000Z"
-    assert artifacts[0].findings == [{"ruleKey": "quantum.arq-q-0013-java"}]
+    assert artifacts[0].surfaced_findings == [{"ruleKey": "quantum.arq-q-0013-java"}]
+    assert artifacts[0].raw_findings[0]["ruleKey"] == "quantum.arq-q-0013-java"
 
 
 def test_classify_rule_coverage_builds_expected_buckets(tmp_path: Path) -> None:
@@ -103,6 +130,13 @@ def test_classify_rule_coverage_builds_expected_buckets(tmp_path: Path) -> None:
             _finding("guardian.private-key", "guardian", "REGEX"),
         ],
     )
+    _write_raw_export(
+        s1,
+        [
+            {"ruleKey": "guardian.generic-api-key", "module": "guardian", "detectionSource": "REGEX"},
+            {"ruleKey": "guardian.private-key", "module": "guardian", "detectionSource": "REGEX"},
+        ],
+    )
 
     write_json(
         s2 / "comparison.json",
@@ -124,6 +158,7 @@ def test_classify_rule_coverage_builds_expected_buckets(tmp_path: Path) -> None:
         s2 / "findings-normalized.json",
         [_finding("quantum.arq-q-0613-typescript", "quantum", "REGEX")],
     )
+    _write_raw_export(s2, [{"ruleKey": "quantum.arq-q-0613-typescript", "module": "quantum", "detectionSource": "REGEX"}])
 
     write_json(
         s3 / "comparison.json",
@@ -137,6 +172,7 @@ def test_classify_rule_coverage_builds_expected_buckets(tmp_path: Path) -> None:
         s3 / "findings-normalized.json",
         [_finding("guardian.generic-api-key", "guardian", "REGEX")],
     )
+    _write_raw_export(s3, [{"ruleKey": "guardian.generic-api-key", "module": "guardian", "detectionSource": "REGEX"}])
 
     write_json(
         s4 / "comparison.json",
@@ -149,6 +185,13 @@ def test_classify_rule_coverage_builds_expected_buckets(tmp_path: Path) -> None:
     write_json(
         s4 / "findings-normalized.json",
         [_finding("quantum.arq-q-0449-csharp", "quantum", "REGEX")],
+    )
+    _write_raw_export(
+        s4,
+        [
+            {"ruleKey": "quantum.arq-q-0449-csharp", "module": "quantum", "detectionSource": "REGEX"},
+            {"ruleKey": "quantum.arq-q-unused", "module": "quantum", "detectionSource": "REGEX"},
+        ],
     )
 
     coverage = classify_rule_coverage(active_rules, load_latest_scenario_artifacts(runs_root))
@@ -164,7 +207,10 @@ def test_classify_rule_coverage_builds_expected_buckets(tmp_path: Path) -> None:
     assert coverage["modules"]["quantum"]["bucketCounts"][BUCKET_EXPLAINABILITY] == 1
     assert quantum_rows["quantum.arq-q-0613-typescript"]["bucket"] == BUCKET_EXPLAINABILITY
     assert quantum_rows["quantum.arq-q-0449-csharp"]["bucket"] == BUCKET_NOISY
-    assert quantum_rows["quantum.arq-q-unused"]["bucket"] == BUCKET_NEVER
+    assert quantum_rows["quantum.arq-q-unused"]["bucket"] == BUCKET_RAW_ONLY
+    assert coverage["modules"]["quantum"]["bucketCounts"][BUCKET_RAW_ONLY] == 1
+    assert coverage["modules"]["quantum"]["rawExercisedDistinctRules"] == 3
+    assert coverage["modules"]["quantum"]["surfacedExercisedDistinctRules"] == 2
 
     hotspots = coverage["noisyRuleHotspots"]
     assert hotspots[0]["rule_key"] == "quantum.arq-q-0613-typescript"

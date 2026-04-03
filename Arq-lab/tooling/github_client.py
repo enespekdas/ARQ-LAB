@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -86,6 +87,33 @@ class GitHubClient:
         encoded_owner = urllib.parse.quote(self._config.git_owner, safe="")
         encoded_repo = urllib.parse.quote(repo_name, safe="")
         return self._request("PATCH", f"/repos/{encoded_owner}/{encoded_repo}", {"default_branch": branch_name})
+
+    @staticmethod
+    def push_protection_placeholder_ids(error_text: str) -> list[str]:
+        matches = re.findall(r"secret-scanning/unblock-secret/([A-Za-z0-9_-]+)", error_text or "")
+        seen: set[str] = set()
+        ordered: list[str] = []
+        for match in matches:
+            if match in seen:
+                continue
+            seen.add(match)
+            ordered.append(match)
+        return ordered
+
+    def create_push_protection_bypass(self, repo_name: str, placeholder_id: str, *, reason: str = "used_in_tests") -> dict[str, Any]:
+        encoded_owner = urllib.parse.quote(self._config.git_owner, safe="")
+        encoded_repo = urllib.parse.quote(repo_name, safe="")
+        return self._request(
+            "POST",
+            f"/repos/{encoded_owner}/{encoded_repo}/secret-scanning/push-protection-bypasses",
+            {"reason": reason, "placeholder_id": placeholder_id},
+        )
+
+    def bypass_push_protection_from_error(self, repo_name: str, error_text: str, *, reason: str = "used_in_tests") -> list[dict[str, Any]]:
+        bypasses = []
+        for placeholder_id in self.push_protection_placeholder_ids(error_text):
+            bypasses.append(self.create_push_protection_bypass(repo_name, placeholder_id, reason=reason))
+        return bypasses
 
     def clone_url(self, repo_name: str) -> str:
         return f"{self._config.git_base_url}/{self._config.git_owner}/{repo_name}.git"

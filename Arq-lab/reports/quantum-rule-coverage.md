@@ -1,38 +1,261 @@
 # Quantum Rule Coverage
 
 - Active rules: `805`
-- Exercised distinct rules: `25` / `805` (`3.11%`)
-- expected_positive_exercised: `21`
-- noisy_only_exercised: `1`
-- mixed_exercised: `3`
-- explainability_problematic_exercised: `0`
-- regex_only_only_exercised: `1`
-- never_exercised: `780`
+- Raw exercised distinct rules: `245` / `805` (`30.43%`)
+- Surfaced exercised distinct rules: `245` / `805` (`30.43%`)
+- raw_only_not_surfaced: `0`
+- surfaced expected_positive_exercised: `209`
+- surfaced noisy_only_exercised: `4`
+- surfaced mixed_exercised: `32`
+- surfaced explainability_problematic_exercised: `0`
+- surfaced regex_only_only_exercised: `207`
+- raw regex_only_only_exercised: `207`
+- never_exercised: `560`
 
-| Rule Key | Bucket | Scenarios | Expected | Noise | Explainability | Regex Only | Hybrid |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `quantum.arq-q-0012-java` | `expected_positive_exercised` | `1` | `1` | `0` | `0` | `0` | `1` |
-| `quantum.arq-q-0013-java` | `mixed_exercised` | `9` | `6` | `3` | `0` | `0` | `13` |
-| `quantum.arq-q-0026-java` | `expected_positive_exercised` | `5` | `5` | `0` | `0` | `0` | `5` |
-| `quantum.arq-q-0072-java` | `expected_positive_exercised` | `4` | `4` | `0` | `0` | `0` | `4` |
-| `quantum.arq-q-0082-java` | `expected_positive_exercised` | `1` | `1` | `0` | `0` | `0` | `0` |
-| `quantum.arq-q-0085-java` | `expected_positive_exercised` | `6` | `6` | `0` | `0` | `0` | `6` |
-| `quantum.arq-q-0131-java` | `expected_positive_exercised` | `2` | `2` | `0` | `0` | `0` | `0` |
-| `quantum.arq-q-0178-java` | `expected_positive_exercised` | `2` | `2` | `0` | `0` | `0` | `2` |
-| `quantum.arq-q-0247-python` | `expected_positive_exercised` | `1` | `1` | `0` | `0` | `0` | `1` |
-| `quantum.arq-q-0248-python` | `expected_positive_exercised` | `3` | `3` | `0` | `0` | `0` | `2` |
-| `quantum.arq-q-0260-python` | `expected_positive_exercised` | `2` | `2` | `0` | `0` | `0` | `2` |
-| `quantum.arq-q-0305-python` | `mixed_exercised` | `10` | `8` | `2` | `0` | `0` | `13` |
-| `quantum.arq-q-0418-csharp` | `noisy_only_exercised` | `1` | `0` | `1` | `0` | `1` | `0` |
-| `quantum.arq-q-0449-csharp` | `expected_positive_exercised` | `3` | `3` | `0` | `0` | `0` | `3` |
-| `quantum.arq-q-0453-csharp` | `expected_positive_exercised` | `1` | `1` | `0` | `0` | `0` | `1` |
-| `quantum.arq-q-0468-csharp` | `expected_positive_exercised` | `3` | `3` | `0` | `0` | `0` | `3` |
-| `quantum.arq-q-0488-csharp` | `expected_positive_exercised` | `2` | `2` | `0` | `0` | `0` | `0` |
-| `quantum.arq-q-0572-go` | `expected_positive_exercised` | `3` | `3` | `0` | `0` | `0` | `0` |
-| `quantum.arq-q-0573-go` | `expected_positive_exercised` | `2` | `2` | `0` | `0` | `0` | `0` |
-| `quantum.arq-q-0611-typescript` | `expected_positive_exercised` | `3` | `4` | `0` | `0` | `0` | `4` |
-| `quantum.arq-q-0613-typescript` | `mixed_exercised` | `15` | `12` | `3` | `0` | `0` | `29` |
-| `quantum.arq-q-0614-typescript` | `expected_positive_exercised` | `1` | `1` | `0` | `0` | `0` | `1` |
-| `quantum.arq-q-0930-config` | `expected_positive_exercised` | `7` | `7` | `0` | `0` | `0` | `17` |
-| `quantum.arq-q-0931-config` | `expected_positive_exercised` | `9` | `9` | `0` | `0` | `0` | `19` |
-| `quantum.arq-q-0949-config` | `expected_positive_exercised` | `4` | `4` | `0` | `0` | `0` | `4` |
+| Rule Key | Bucket | Raw Scenarios | Surfaced Scenarios | Expected | Noise | Explainability | Raw Count | Surfaced Count |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `quantum.arq-q-0012-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0013-java` | `mixed_exercised` | `9` | `9` | `6` | `3` | `0` | `13` | `13` |
+| `quantum.arq-q-0026-java` | `expected_positive_exercised` | `5` | `5` | `5` | `0` | `0` | `5` | `5` |
+| `quantum.arq-q-0061-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0062-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0063-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0064-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0066-java` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0067-java` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0070-java` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0071-java` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0072-java` | `mixed_exercised` | `5` | `5` | `4` | `2` | `0` | `5` | `5` |
+| `quantum.arq-q-0075-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0078-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0079-java` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0082-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0083-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0084-java` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0085-java` | `expected_positive_exercised` | `6` | `6` | `6` | `0` | `0` | `6` | `6` |
+| `quantum.arq-q-0086-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0093-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0126-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0127-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0131-java` | `expected_positive_exercised` | `2` | `2` | `2` | `0` | `0` | `2` | `2` |
+| `quantum.arq-q-0132-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0133-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0134-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0141-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0145-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0169-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0171-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0172-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0173-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0174-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0175-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0176-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0177-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0178-java` | `expected_positive_exercised` | `2` | `2` | `2` | `0` | `0` | `2` | `2` |
+| `quantum.arq-q-0179-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0180-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0181-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0182-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0183-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0184-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0185-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0186-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0187-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0188-java` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0189-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0190-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0191-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0192-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0193-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0194-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0195-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0196-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0197-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0198-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0199-java` | `noisy_only_exercised` | `1` | `1` | `0` | `2` | `0` | `1` | `1` |
+| `quantum.arq-q-0206-java` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0207-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0209-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0210-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0211-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0212-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0213-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0214-cpp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0223-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0225-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0226-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0227-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0229-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0230-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0231-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0233-scala` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0234-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0236-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0237-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0242-scala` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0245-python` | `mixed_exercised` | `2` | `2` | `1` | `4` | `0` | `3` | `3` |
+| `quantum.arq-q-0246-python` | `mixed_exercised` | `3` | `3` | `1` | `28` | `0` | `15` | `15` |
+| `quantum.arq-q-0247-python` | `mixed_exercised` | `3` | `3` | `1` | `6` | `0` | `4` | `4` |
+| `quantum.arq-q-0248-python` | `mixed_exercised` | `6` | `6` | `3` | `12` | `0` | `9` | `9` |
+| `quantum.arq-q-0250-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0252-python` | `mixed_exercised` | `2` | `2` | `1` | `4` | `0` | `3` | `3` |
+| `quantum.arq-q-0256-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0257-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0258-python` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0260-python` | `expected_positive_exercised` | `2` | `2` | `2` | `0` | `0` | `2` | `2` |
+| `quantum.arq-q-0263-python` | `mixed_exercised` | `3` | `3` | `1` | `8` | `0` | `5` | `5` |
+| `quantum.arq-q-0276-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0291-python` | `mixed_exercised` | `2` | `2` | `1` | `6` | `0` | `4` | `4` |
+| `quantum.arq-q-0292-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0298-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0305-python` | `mixed_exercised` | `10` | `10` | `8` | `2` | `0` | `14` | `14` |
+| `quantum.arq-q-0338-python` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0405-csharp` | `noisy_only_exercised` | `2` | `2` | `0` | `4` | `0` | `2` | `2` |
+| `quantum.arq-q-0406-csharp` | `mixed_exercised` | `2` | `2` | `1` | `4` | `0` | `3` | `3` |
+| `quantum.arq-q-0408-csharp` | `mixed_exercised` | `3` | `3` | `1` | `12` | `0` | `7` | `7` |
+| `quantum.arq-q-0413-csharp` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0414-csharp` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0415-csharp` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0418-csharp` | `noisy_only_exercised` | `1` | `1` | `0` | `1` | `0` | `1` | `1` |
+| `quantum.arq-q-0419-csharp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0424-csharp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0425-csharp` | `noisy_only_exercised` | `2` | `2` | `0` | `6` | `0` | `3` | `3` |
+| `quantum.arq-q-0435-csharp` | `mixed_exercised` | `3` | `3` | `1` | `8` | `0` | `5` | `5` |
+| `quantum.arq-q-0442-csharp` | `mixed_exercised` | `1` | `1` | `1` | `4` | `0` | `3` | `3` |
+| `quantum.arq-q-0444-csharp` | `mixed_exercised` | `1` | `1` | `1` | `4` | `0` | `3` | `3` |
+| `quantum.arq-q-0449-csharp` | `mixed_exercised` | `5` | `5` | `3` | `8` | `0` | `7` | `7` |
+| `quantum.arq-q-0453-csharp` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0468-csharp` | `mixed_exercised` | `4` | `4` | `3` | `4` | `0` | `5` | `5` |
+| `quantum.arq-q-0488-csharp` | `expected_positive_exercised` | `2` | `2` | `2` | `0` | `0` | `2` | `2` |
+| `quantum.arq-q-0531-csharp` | `mixed_exercised` | `1` | `1` | `1` | `10` | `0` | `6` | `6` |
+| `quantum.arq-q-0570-go` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0572-go` | `expected_positive_exercised` | `3` | `3` | `3` | `0` | `0` | `3` | `3` |
+| `quantum.arq-q-0573-go` | `expected_positive_exercised` | `2` | `2` | `2` | `0` | `0` | `2` | `2` |
+| `quantum.arq-q-0591-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0592-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0595-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0596-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0597-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0598-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0599-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0601-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0602-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0604-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0605-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0606-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0607-javascript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0611-typescript` | `expected_positive_exercised` | `3` | `3` | `4` | `0` | `0` | `4` | `4` |
+| `quantum.arq-q-0612-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0613-typescript` | `mixed_exercised` | `15` | `15` | `12` | `3` | `0` | `29` | `29` |
+| `quantum.arq-q-0614-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0615-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0616-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0617-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0618-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0619-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0621-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0622-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0624-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0625-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0626-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0627-typescript` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0631-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0633-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0634-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0635-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0637-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0638-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0639-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0641-kotlin` | `mixed_exercised` | `2` | `2` | `1` | `2` | `0` | `2` | `2` |
+| `quantum.arq-q-0642-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0644-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0645-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0650-kotlin` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0653-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0655-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0656-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0658-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0659-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0663-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0665-ruby` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0671-php` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0673-php` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0674-php` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0675-php` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0676-php` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0680-php` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0689-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0690-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0691-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0692-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0693-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0696-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0702-rust` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0707-swift` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0708-swift` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0709-swift` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0710-swift` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0718-swift` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0724-erlang` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0725-erlang` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0726-erlang` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0732-erlang` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0739-elixir` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0740-elixir` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0741-elixir` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0748-elixir` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0752-elixir` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0769-shell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0770-shell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0771-shell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0775-shell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0777-shell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0782-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0784-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0785-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0786-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0787-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0788-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0789-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0792-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0795-powershell` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0798-plsql` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0799-plsql` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0809-tsql` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0810-tsql` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0818-c` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0820-c` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0821-c` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0822-c` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0823-c` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0824-c` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0834-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0835-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0836-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0837-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0838-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0839-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0846-objectivec` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0859-perl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0860-perl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0861-perl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0862-perl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0864-perl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0875-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0876-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0877-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0878-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0879-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0886-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0891-groovy` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0892-lua` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0917-jcl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0918-jcl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0921-jcl` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0922-config` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0924-config` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0927-config` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0930-config` | `expected_positive_exercised` | `7` | `7` | `7` | `0` | `0` | `17` | `17` |
+| `quantum.arq-q-0931-config` | `expected_positive_exercised` | `9` | `9` | `9` | `0` | `0` | `19` | `19` |
+| `quantum.arq-q-0942-config` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `quantum.arq-q-0949-config` | `expected_positive_exercised` | `4` | `4` | `4` | `0` | `0` | `4` | `4` |

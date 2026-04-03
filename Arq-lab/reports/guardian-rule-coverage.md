@@ -1,15 +1,114 @@
 # Guardian Rule Coverage
 
 - Active rules: `226`
-- Exercised distinct rules: `2` / `226` (`0.88%`)
-- expected_positive_exercised: `0`
-- noisy_only_exercised: `0`
-- mixed_exercised: `2`
-- explainability_problematic_exercised: `0`
-- regex_only_only_exercised: `2`
-- never_exercised: `224`
+- Raw exercised distinct rules: `98` / `226` (`43.36%`)
+- Surfaced exercised distinct rules: `98` / `226` (`43.36%`)
+- raw_only_not_surfaced: `0`
+- surfaced expected_positive_exercised: `92`
+- surfaced noisy_only_exercised: `0`
+- surfaced mixed_exercised: `6`
+- surfaced explainability_problematic_exercised: `0`
+- surfaced regex_only_only_exercised: `98`
+- raw regex_only_only_exercised: `98`
+- never_exercised: `128`
 
-| Rule Key | Bucket | Scenarios | Expected | Noise | Explainability | Regex Only | Hybrid |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `guardian.generic-api-key` | `mixed_exercised` | `26` | `41` | `8` | `0` | `89` | `0` |
-| `guardian.private-key` | `mixed_exercised` | `13` | `10` | `10` | `0` | `42` | `0` |
+| Rule Key | Bucket | Raw Scenarios | Surfaced Scenarios | Expected | Noise | Explainability | Raw Count | Surfaced Count |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `guardian.1password-secret-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.adafruit-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.adobe-client-id` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.age-secret-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.airtable-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.algolia-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.alibaba-secret-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.anthropic-admin-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.anthropic-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.artifactory-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.artifactory-reference-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.asana-client-id` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.asana-client-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.aws-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.aws-amazon-bedrock-api-key-short-lived` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.azure-ad-client-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.beamer-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.bitbucket-client-id` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.bitbucket-client-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.bittrex-access-key` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `guardian.bittrex-secret-key` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `guardian.cisco-meraki-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.clickhouse-cloud-api-secret-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.clojars-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.cloudflare-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.cloudflare-global-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.codecov-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.cohere-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.coinbase-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.confluent-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.confluent-secret-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.contentful-delivery-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.databricks-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.datadog-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.defined-networking-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.digitalocean-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.digitalocean-pat` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.digitalocean-refresh-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.discord-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.discord-client-id` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.discord-client-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.droneci-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.dropbox-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.dropbox-long-lived-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.etsy-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.facebook-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.facebook-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.fastly-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.finicity-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.finicity-client-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.finnhub-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.flickr-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.flyio-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.freshbooks-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gcp-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.generic-api-key` | `mixed_exercised` | `27` | `27` | `41` | `12` | `0` | `91` | `91` |
+| `guardian.github-app-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.github-fine-grained-pat` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.github-oauth` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.github-pat` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.github-refresh-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-cicd-job-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-deploy-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-feature-flag-client-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-feed-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-incoming-mail-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-kubernetes-agent-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-oauth-app-secret` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-pat` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `guardian.gitlab-pat-routable` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-ptt` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-rrt` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-runner-authentication-token` | `mixed_exercised` | `1` | `1` | `1` | `2` | `0` | `2` | `2` |
+| `guardian.gitlab-runner-authentication-token-routable` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-scim-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitlab-session-cookie` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.gitter-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.grafana-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.grafana-cloud-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.grafana-service-account-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.harness-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.hashicorp-tf-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.heroku-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.heroku-api-key-v2` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.hubspot-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.huggingface-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.huggingface-organization-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.infracost-api-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.intercom-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.jfrog-api-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.jfrog-identity-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.jwt` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.jwt-base64` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.kraken-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.kucoin-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.kucoin-secret-key` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.launchdarkly-access-token` | `expected_positive_exercised` | `1` | `1` | `1` | `0` | `0` | `1` | `1` |
+| `guardian.private-key` | `mixed_exercised` | `13` | `13` | `10` | `10` | `0` | `42` | `42` |

@@ -678,5 +678,197 @@
     "repo": "verify-mesh-monorepo",
     "stack": "Java + Node + Python mixed monorepo",
     "summary": "Mixed monorepo stressing live Python TLS misuse and Java weak crypto beside safe TS wrappers and generated noise."
+  },
+  {
+    "id": "G-V1-COV-101",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-saas",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "G-V1-COV-102",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-cloud",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "G-V1-COV-103",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-automation",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "G-V1-COV-104",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-partners",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "G-V1-COV-105",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-enterprise",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "Q-V3-COV-101",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-java-a",
+    "stack": "Java / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 25 distinct rule candidates across java / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-102",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-java-b",
+    "stack": "Java / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 25 distinct rule candidates across java / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-103",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-csharp-a",
+    "stack": "C# / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 25 distinct rule candidates across c# / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-104",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-csharp-b",
+    "stack": "C# / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 25 distinct rule candidates across c# / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-105",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-java-c",
+    "stack": "Java / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across java / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-106",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-java-d",
+    "stack": "Java / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across java / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-107",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-csharp-c",
+    "stack": "C# / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across c# / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-108",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-coverage-java-e",
+    "stack": "Java / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across java / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V4-COV-101",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-coverage-python-a",
+    "stack": "Python / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 20 distinct rule candidates across python / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V4-COV-102",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-coverage-python-b",
+    "stack": "Python / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 20 distinct rule candidates across python / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V4-COV-103",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-coverage-polyglot-web",
+    "stack": "TypeScript / JavaScript / Go coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across typescript / javascript / go coverage pack."
+  },
+  {
+    "id": "Q-V4-COV-104",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-coverage-python-c",
+    "stack": "Python / hybrid coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across python / hybrid coverage pack."
+  },
+  {
+    "id": "Q-V6-COV-101",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "quantum-coverage-config",
+    "stack": "Config / infra coverage pack",
+    "summary": "Quantum coverage bundle exercising 20 distinct rule candidates across config / infra coverage pack."
+  },
+  {
+    "id": "M-V8-COV-101",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-coverage-native-a",
+    "stack": "Native / mixed coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across native / mixed coverage pack."
+  },
+  {
+    "id": "M-V8-COV-102",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-coverage-native-b",
+    "stack": "Native / mixed coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across native / mixed coverage pack."
+  },
+  {
+    "id": "M-V8-COV-103",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-coverage-native-c",
+    "stack": "Native / mixed coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across native / mixed coverage pack."
+  },
+  {
+    "id": "M-V8-COV-104",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-coverage-native-d",
+    "stack": "Native / mixed coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across native / mixed coverage pack."
+  },
+  {
+    "id": "M-V8-COV-105",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-coverage-native-e",
+    "stack": "Native / mixed coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across native / mixed coverage pack."
+  },
+  {
+    "id": "M-V8-COV-106",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-coverage-native-f",
+    "stack": "Native / mixed coverage pack",
+    "summary": "Quantum coverage bundle exercising 30 distinct rule candidates across native / mixed coverage pack."
   }
 ]

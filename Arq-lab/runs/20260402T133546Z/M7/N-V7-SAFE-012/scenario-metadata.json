@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/safe-wrapper-secrets-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/safe-wrapper-secrets-repo",
+    "html_url": "https://github.com/ARQ-Sec/safe-wrapper-secrets-repo",
+    "name": "safe-wrapper-secrets-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "2928b303448a89ba10d48a2c33f73cc916db3bc5"
+      },
+      "head": "2928b303448a89ba10d48a2c33f73cc916db3bc5",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:41:31+03:00",
+          "message": "bootstrap N-V7-SAFE-012",
+          "sha": "2928b303448a89ba10d48a2c33f73cc916db3bc5"
+        }
+      ]
+    },
+    "lineCount": 5953,
+    "repoName": "safe-wrapper-secrets-repo",
+    "scenarioId": "N-V7-SAFE-012"
+  },
+  "scenario": {
+    "domain": "Operational helper repo with vault references, safe wrappers, and scary naming but no live misuse or secret.",
+    "id": "N-V7-SAFE-012",
+    "milestone": "M7",
+    "module": "both",
+    "repo_name": "safe-wrapper-secrets-repo",
+    "stack": "Safe wrappers / vault refs / scary naming"
+  }
+}

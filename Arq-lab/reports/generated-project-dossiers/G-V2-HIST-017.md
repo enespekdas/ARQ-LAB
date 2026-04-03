@@ -473,19 +473,19 @@ move-duplicate-cherrypick-lineage
 
 Branches:
 
-- `feature/archive-duplication` tip: `7bcd1c7add1934146961c73f51d7f1dff1666332`; diverges from `main` at `3b99dea3d1d198fb05d696dce3acc5cf31b34f68`
-- `main` tip: `3b99dea3d1d198fb05d696dce3acc5cf31b34f68`
-- `release/2026.07` tip: `853193bf0887db0b8ba3ede588b50c88c8000ece`; diverges from `main` at `3b99dea3d1d198fb05d696dce3acc5cf31b34f68`
+- `feature/archive-duplication` tip: `1496b19126ffdf059363f933939347ef09ab90ef`; diverges from `main` at `8ae5618ce3fb101658d24826e53bf35444bc7ab0`
+- `main` tip: `8ae5618ce3fb101658d24826e53bf35444bc7ab0`
+- `release/2026.07` tip: `55e8f14414299ec8f79084d030c9b2af155b8746`; diverges from `main` at `8ae5618ce3fb101658d24826e53bf35444bc7ab0`
 
 Commit order:
 
-- `ba733a04e4b3ff3cb3549a61eccc5d46505d96da` `c001 bootstrap repo`: initial clean or baseline assembly.
-- `eace2f71e11e6d705bff295ce8a8a23ab46f9f8b` `c002 add secret on main`: introduces an intended signal.
-- `51b7c3588ed3adf21f45158b14eabed23bd2ba73` `c003 duplicate secret into archive path`: scenario state change.
-- `27b6052976c99554905184e55598046c27976be4` `c004 add docs chore`: introduces an intended signal.
-- `3b99dea3d1d198fb05d696dce3acc5cf31b34f68` `c005 revert secret from head`: scenario state change.
-- `853193bf0887db0b8ba3ede588b50c88c8000ece` `c007 release branch clean`: removes or neutralizes a prior signal.
-- `7bcd1c7add1934146961c73f51d7f1dff1666332` `c006 feature archive docs`: adds documentation-only or noise-only collateral.
+- `17f97dc2bfcd4bf4a08acdcf4bff07b11cf0b663` `c001 bootstrap repo`: initial clean or baseline assembly.
+- `f018b617c1a7f203b760a42113d1dd244d7a8fa0` `c002 add secret on main`: introduces an intended signal.
+- `09d1550aacef5d7eac9de9666e8e2ef480333da0` `c003 duplicate secret into archive path`: scenario state change.
+- `217baf0fcb57fbfe9ad85e7afbacd41a11371fa2` `c004 add docs chore`: introduces an intended signal.
+- `55e8f14414299ec8f79084d030c9b2af155b8746` `c007 release branch clean`: removes or neutralizes a prior signal.
+- `8ae5618ce3fb101658d24826e53bf35444bc7ab0` `c005 revert secret from head`: scenario state change.
+- `1496b19126ffdf059363f933939347ef09ab90ef` `c006 feature archive docs`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 

@@ -1,0 +1,89 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/partner-relocation-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/partner-relocation-lineage",
+    "html_url": "https://github.com/ARQ-Sec/partner-relocation-lineage",
+    "name": "partner-relocation-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "packageName": "com.arq.partnerrelocationlineage"
+    },
+    "git": {
+      "branches": {
+        "main": "66aa3d58870a76437a14f66d282498be1b792995"
+      },
+      "head": "66aa3d58870a76437a14f66d282498be1b792995",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:22+03:00",
+          "message": "c007 add safe metrics",
+          "sha": "66aa3d58870a76437a14f66d282498be1b792995"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:22+03:00",
+          "message": "c006 unrelated relocation cleanup",
+          "sha": "416af73bd86c7afff5d19aa017ad2fa6532df9ac"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:21+03:00",
+          "message": "c005 remove relocation token from head",
+          "sha": "ea928f7c14cb706de37fbdcee0bdc4ab64d37cd8"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:21+03:00",
+          "message": "c004 add relocation plan noise",
+          "sha": "8f41f759281d9fe0b0ba86a7e6636f68d616559e"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:21+03:00",
+          "message": "c003 move token into relocation archive",
+          "sha": "d86b340ad62b160fc00e73e8d32bb3578f466070"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:21+03:00",
+          "message": "c002 add transient relocation token",
+          "sha": "e0c6fef6bd2e28704442a10e9b55282c07b13ff8"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T16:07:20+03:00",
+          "message": "c001 bootstrap repo",
+          "sha": "674e3ea29d59eb66d90b2cec16aec12776e8ec92"
+        }
+      ]
+    },
+    "lineCount": 5064,
+    "repoName": "partner-relocation-lineage",
+    "scenarioId": "G-V2-HIST-006"
+  },
+  "scenario": {
+    "domain": "Partner bootstrap repo with file relocation, rename, and revert history around a transient secret.",
+    "id": "G-V2-HIST-006",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "partner-relocation-lineage",
+    "stack": "Java / Spring Boot"
+  }
+}

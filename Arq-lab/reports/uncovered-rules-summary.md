@@ -2,27 +2,30 @@
 
 ## Guardian
 
-- Never exercised: `224`
+- Never exercised: `128`
+- Raw only not surfaced: `0`
 - Top uncovered families:
-  - `1password-secret-key`: `1`
   - `1password-service-account-token`: `1`
-  - `adafruit-api-key`: `1`
-  - `adobe-client-id`: `1`
   - `adobe-client-secret`: `1`
-  - `age-secret-key`: `1`
-  - `airtable-api-key`: `1`
   - `airtable-personnal-access-token`: `1`
-  - `algolia-api-key`: `1`
   - `alibaba-access-key-id`: `1`
-  - `alibaba-secret-key`: `1`
-  - `anthropic-admin-api-key`: `1`
-  - `anthropic-api-key`: `1`
-  - `artifactory-api-key`: `1`
-  - `artifactory-reference-token`: `1`
+  - `atlassian-api-token`: `1`
+  - `authress-service-client-access-key`: `1`
+  - `aws-access-key`: `1`
+  - `aws-amazon-bedrock-api-key-long-lived`: `1`
+  - `aws-secret-key`: `1`
+  - `cloudflare-origin-ca-key`: `1`
+  - `curl-auth-header`: `1`
+  - `curl-auth-user`: `1`
+  - `doppler-api-token`: `1`
+  - `dropbox-short-lived-api-token`: `1`
+  - `duffel-api-token`: `1`
+- Top raw-only-not-surfaced families:
 
 ## Quantum
 
-- Never exercised: `780`
+- Never exercised: `560`
+- Raw only not surfaced: `0`
 - Top uncovered families:
   - `arq-q-0005-java`: `1`
   - `arq-q-0006-java`: `1`
@@ -39,3 +42,4 @@
   - `arq-q-0019-java`: `1`
   - `arq-q-0020-java`: `1`
   - `arq-q-0021-java`: `1`
+- Top raw-only-not-surfaced families:

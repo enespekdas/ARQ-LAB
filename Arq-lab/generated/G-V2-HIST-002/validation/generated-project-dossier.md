@@ -620,17 +620,17 @@ partner-branch-divergence
 
 Branches:
 
-- `feature/docs-refresh` tip: `f28b5f0d18586addc65c46c0731db155092c8c90`; diverges from `main` at `29b33ed91ca6d9f043841eb65cc06c13d14699f8`
-- `feature/partner-hotfix` tip: `850e1f570157982f0c81190f0692275a0fffdfa1`; diverges from `main` at `29b33ed91ca6d9f043841eb65cc06c13d14699f8`
-- `main` tip: `29b33ed91ca6d9f043841eb65cc06c13d14699f8`
-- `release/2026.04` tip: `93bd99e9b35e2dc3499eab626028da377d4dd8d6`; diverges from `main` at `29b33ed91ca6d9f043841eb65cc06c13d14699f8`
+- `feature/docs-refresh` tip: `3e560d5b27a2069bc804cf3201bfda365e23ea17`; diverges from `main` at `0794230b8ab9b60ce41bffe25888dcd1af90629d`
+- `feature/partner-hotfix` tip: `63268d0ef10f89ba46e904551e1f46f3f8a44d41`; diverges from `main` at `0794230b8ab9b60ce41bffe25888dcd1af90629d`
+- `main` tip: `0794230b8ab9b60ce41bffe25888dcd1af90629d`
+- `release/2026.04` tip: `3a2036fd030fa0bc54dd6650c70ed4cc54bf6f09`; diverges from `main` at `0794230b8ab9b60ce41bffe25888dcd1af90629d`
 
 Commit order:
 
-- `29b33ed91ca6d9f043841eb65cc06c13d14699f8` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `93bd99e9b35e2dc3499eab626028da377d4dd8d6` `c003 release branch clean state`: removes or neutralizes a prior signal.
-- `850e1f570157982f0c81190f0692275a0fffdfa1` `c002 temporary secret on feature branch`: introduces an intended signal.
-- `f28b5f0d18586addc65c46c0731db155092c8c90` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
+- `0794230b8ab9b60ce41bffe25888dcd1af90629d` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `63268d0ef10f89ba46e904551e1f46f3f8a44d41` `c002 temporary secret on feature branch`: introduces an intended signal.
+- `3a2036fd030fa0bc54dd6650c70ed4cc54bf6f09` `c003 release branch clean state`: removes or neutralizes a prior signal.
+- `3e560d5b27a2069bc804cf3201bfda365e23ea17` `c004 noise-only docs branch`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 

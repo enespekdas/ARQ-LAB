@@ -480,16 +480,16 @@ branch-private-key-divergence
 
 Branches:
 
-- `feature/private-key-hotfix` tip: `a5690b2a2564eb88b4a415464e86df3d1c899e17`; diverges from `main` at `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144`
-- `main` tip: `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144`
-- `release/2026.06` tip: `607b6147e23a508a6321042cf642dff0df6030f4`; diverges from `main` at `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144`
+- `feature/private-key-hotfix` tip: `11a0fbb9953ed3cb5621237e683ef6871f44b050`; diverges from `main` at `b4cf15409100e5b3910ecdf0b78d4b00c849f5b9`
+- `main` tip: `b4cf15409100e5b3910ecdf0b78d4b00c849f5b9`
+- `release/2026.06` tip: `f6c288a3f7ae54831c9eb50d72713a1c74f0331d`; diverges from `main` at `b4cf15409100e5b3910ecdf0b78d4b00c849f5b9`
 
 Commit order:
 
-- `1edf32d6ce11a54c1d7269f19ab898225d710e41` `c001 bootstrap`: initial clean or baseline assembly.
-- `607b6147e23a508a6321042cf642dff0df6030f4` `c004 release branch clean`: removes or neutralizes a prior signal.
-- `d4a9c3ac50912c5f9fb286c0fb21d79666ccc144` `c002 keep main cert and csr only`: scenario state change.
-- `a5690b2a2564eb88b4a415464e86df3d1c899e17` `c003 feature branch private key`: scenario state change.
+- `bbbe12f4f9960a1519a97e3c56042f152e87cbeb` `c001 bootstrap`: initial clean or baseline assembly.
+- `b4cf15409100e5b3910ecdf0b78d4b00c849f5b9` `c002 keep main cert and csr only`: scenario state change.
+- `11a0fbb9953ed3cb5621237e683ef6871f44b050` `c003 feature branch private key`: scenario state change.
+- `f6c288a3f7ae54831c9eb50d72713a1c74f0331d` `c004 release branch clean`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

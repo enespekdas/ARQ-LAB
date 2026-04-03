@@ -591,6 +591,39 @@ def _populate_config_common(repo_root: Path, scenario: ScenarioSpec) -> None:
     write_text(repo_root / "deploy" / "prod" / "service.properties", "service.mode=prod\n")
 
 
+def _build_coverage_bundle(repo_root: Path, scenario: ScenarioSpec, git_factory: GitFactory) -> dict[str, Any]:
+    _populate_config_common(repo_root, scenario)
+    write_text(
+        repo_root / "docs" / "coverage-notes.md",
+        textwrap.dedent(
+            f"""\
+            # Coverage Notes
+
+            {scenario.summary}
+
+            This repository intentionally contains many realistic integration surfaces so ARQ can exercise a broader rule set.
+            """
+        ),
+    )
+    write_text(repo_root / "tests" / "fixtures" / "sample-placeholder.txt", "sample_placeholder=masked-value\n")
+    write_text(repo_root / "vendor" / "generated-client.txt", "generated client artifact placeholder\n")
+    write_text(repo_root / ".github" / "workflows" / "deploy.yml", "name: deploy\non: [push]\njobs:\n  validate:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo validate\n")
+    bundle = scenario.metadata.get("coverageBundle", {}) if isinstance(scenario.metadata, dict) else {}
+    entries = bundle.get("entries", []) if isinstance(bundle, dict) else []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        relative_path = str(entry.get("path") or "").strip()
+        content = str(entry.get("content") or "").rstrip() + "\n"
+        if not relative_path:
+            continue
+        write_text(repo_root / relative_path, content)
+    _inflate_repository(repo_root, scenario)
+    git_factory.init(repo_root)
+    _commit_current_state(git_factory, repo_root, f"bootstrap {scenario.id}")
+    return {"generatedRuleCount": len(entries)}
+
+
 def _populate_go_common(repo_root: Path, scenario: ScenarioSpec) -> None:
     _write_common_root_files(repo_root, scenario)
     write_text(repo_root / "go.mod", "module arq.lab/go\n\ngo 1.22\n")
@@ -1557,6 +1590,8 @@ def materialize_scenario(config: LabConfig, scenario: ScenarioSpec, git_factory:
         builder_metadata = _build_guardian_history_node(repo_root, scenario, git_factory)
     elif scenario.family in {"guardian_live_config", "quantum_tls_config"}:
         builder_metadata = _build_config_repo(repo_root, scenario, git_factory)
+    elif scenario.family == "coverage_bundle_repo":
+        builder_metadata = _build_coverage_bundle(repo_root, scenario, git_factory)
     elif scenario.family == "quantum_crypto_go":
         builder_metadata = _build_go_repo(repo_root, scenario, git_factory)
     elif scenario.family in {"quantum_crypto_csharp", "quantum_tls_csharp"}:

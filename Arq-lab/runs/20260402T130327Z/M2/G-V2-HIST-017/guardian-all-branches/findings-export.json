@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-02T13:13:44.492908400Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "b9542a55-dd36-4a40-a718-9864b7de648a",
+      "applicationKey": "arq-lab-g-v2-hist-017",
+      "applicationName": "move-duplicate-cherrypick-lineage",
+      "branchName": "main",
+      "commitSha": "8794c5caf1f81cd3731d32b08c0f3a6316078ee0",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HISTORY_ONLY",
+      "findingId": "b6bb380f-d993-4c45-a585-e12732b15c0e",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-02T13:13:26.273234Z",
+      "lastSeenAt": "2026-04-02T13:13:26.273234Z",
+      "module": "guardian",
+      "occurrenceCount": 2,
+      "presentInHistory": true,
+      "presentOnHead": false,
+      "primaryFilePath": "src/main/java/com/arq/moveduplicatecherrypicklineage/history/archive/PartnerTokenArchive.java",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "14524100-9787-4a5f-9d2f-39578933cb5c",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "REF_HISTORY",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

@@ -199,7 +199,13 @@ def _run_scenario(
         run_repo_name = scenario.repo_name
         repo_payload = publisher.ensure_repo(run_repo_name, scenario.summary)
         git_factory.set_remote(repo_root, "origin", publisher.clone_url(run_repo_name))
-        git_factory.push_all(repo_root)
+        try:
+            git_factory.push_all(repo_root)
+        except RuntimeError as exc:
+            bypasses = publisher.bypass_push_protection_from_error(run_repo_name, str(exc))
+            if not bypasses:
+                raise
+            git_factory.push_all(repo_root)
         publisher.ensure_default_branch(run_repo_name, config.arq_lab_default_branch)
         published_repo_metadata = publisher.normalized_metadata(run_repo_name, repo_payload)
 

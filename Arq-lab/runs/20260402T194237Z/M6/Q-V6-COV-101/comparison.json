@@ -1,0 +1,298 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9391182645206438,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 71,
+      "scripts": 2,
+      "synthetic filler / inflation content": 6710,
+      "tests": 3,
+      "total": 7145,
+      "vendor/generated": 335
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-COV-101.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 4,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "16 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "ssl_protocols doU9>isM2`eJ< `s-1p9Kg$2VC+c _:s@`~i COXly\\4Aw}Ag}9IQKoM(79Wy 9Hvy\\Wx1L f2BR'2TLSv1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8d00cb92-0a43-4c13-a781-a690fe130f5c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime/rule_001.conf",
+        "queryFamily": "config.nginx",
+        "rawEvidenceJson": "{\"queryRef\":\"config.nginx.weak-protocol\",\"callName\":\"ssl_protocols\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"ssl_protocols=TLSv1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "ssl_protocols=TLSv1",
+        "ruleKey": "quantum.arq-q-0922-config",
+        "ruleName": "Nginx TLS Weak Protocols",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:ssl_protocols:ssl_protocols=TLSv1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "ssl_verify_clientLESMY 0[>3cw* ]kVIoff",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c184735b-0b11-4f73-8521-8d17dd2cb858",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime/rule_003.conf",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0924-config",
+        "ruleName": "Nginx Client Cert Verification Disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "SSLProxyCheckPeerNameiD$-0Gr!k8g1*K\"SSLProxyCheckPeerCN",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "abbfe8d7-ee38-4b03-a2d0-146f452097db",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime/rule_006.conf",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0927-config",
+        "ruleName": "Apache Proxy Peer Check Disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "hmac-sha1-96",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b2082acb-3c47-4ce2-9826-3fa2bf7bebb1",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime/rule_015.conf",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0942-config",
+        "ruleName": "SSHD weak MACs (hmac-sha1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-015"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-002",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_002.conf"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_004.conf"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_005.conf"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_007.conf"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_008.conf"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_009.conf"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_010.conf"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_011.conf"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_012.conf"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_013.conf"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_014.conf"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_016.conf"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_017.conf"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_018.conf"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_019.conf"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_020.conf"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 20,
+  "mustFindMatched": 4,
+  "mustFindMissing": [
+    {
+      "expected": "rule-002",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_002.conf"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_004.conf"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_005.conf"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_007.conf"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_008.conf"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_009.conf"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_010.conf"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_011.conf"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_012.conf"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_013.conf"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_014.conf"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_016.conf"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_017.conf"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_018.conf"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_019.conf"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime/rule_020.conf"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 4,
+    "rawFindings": 4
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V6-COV-101",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

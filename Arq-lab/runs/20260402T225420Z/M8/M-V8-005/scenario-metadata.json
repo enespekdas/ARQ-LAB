@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/enterprise-mesh-monorepo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/enterprise-mesh-monorepo",
+    "html_url": "https://github.com/ARQ-Sec/enterprise-mesh-monorepo",
+    "name": "enterprise-mesh-monorepo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "a1f825ae66dee7c65793a63b3453960a3fa106ee"
+      },
+      "head": "a1f825ae66dee7c65793a63b3453960a3fa106ee",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T02:01:11+03:00",
+          "message": "bootstrap M-V8-005",
+          "sha": "a1f825ae66dee7c65793a63b3453960a3fa106ee"
+        }
+      ]
+    },
+    "lineCount": 10927,
+    "repoName": "enterprise-mesh-monorepo",
+    "scenarioId": "M-V8-005"
+  },
+  "scenario": {
+    "domain": "Enterprise monorepo with apps, shared libs, vendor bundles, generated code, and protected-negative fixtures.",
+    "id": "M-V8-005",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "enterprise-mesh-monorepo",
+    "stack": "Java + Node + Python + vendor/generated monorepo"
+  }
+}

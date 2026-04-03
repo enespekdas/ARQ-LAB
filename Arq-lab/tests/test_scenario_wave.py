@@ -58,6 +58,30 @@ NEW_SCENARIO_IDS = {
     "M-V8-010",
     "M-V8-011",
     "M-V8-012",
+    "G-V1-COV-101",
+    "G-V1-COV-102",
+    "G-V1-COV-103",
+    "G-V1-COV-104",
+    "G-V1-COV-105",
+    "Q-V3-COV-101",
+    "Q-V3-COV-102",
+    "Q-V3-COV-103",
+    "Q-V3-COV-104",
+    "Q-V3-COV-105",
+    "Q-V3-COV-106",
+    "Q-V3-COV-107",
+    "Q-V3-COV-108",
+    "Q-V4-COV-101",
+    "Q-V4-COV-102",
+    "Q-V4-COV-103",
+    "Q-V4-COV-104",
+    "Q-V6-COV-101",
+    "M-V8-COV-101",
+    "M-V8-COV-102",
+    "M-V8-COV-103",
+    "M-V8-COV-104",
+    "M-V8-COV-105",
+    "M-V8-COV-106",
 }
 
 
@@ -83,7 +107,7 @@ def test_scenario_specs_include_24_new_ids_and_minimum_suite_size() -> None:
     ids = [scenario.id for scenario in scenario_specs()]
 
     assert len(ids) == len(set(ids))
-    assert len(ids) >= 85
+    assert len(ids) >= 109
     assert NEW_SCENARIO_IDS.issubset(ids)
 
 
@@ -188,3 +212,19 @@ def test_materialize_new_discovery_mixed_repo_variants(tmp_path: Path) -> None:
 
     repo_root_012, _ = materialize_scenario(config, scenarios["M-V8-012"], git_factory)
     assert (repo_root_012 / "apps" / "admin-api" / "src" / "modules" / "security" / "secureTlsWrapper.ts").exists()
+
+
+def test_materialize_guardian_and_quantum_coverage_bundles(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    guardian_root, guardian_meta = materialize_scenario(config, scenarios["G-V1-COV-101"], git_factory)
+    assert guardian_meta["builderMetadata"]["generatedRuleCount"] == 20
+    assert (guardian_root / "integrations" / "guardian-coverage-saas" / "runtime" / "provider_001.env").exists()
+    assert (guardian_root / ".github" / "workflows" / "deploy.yml").exists()
+
+    quantum_root, quantum_meta = materialize_scenario(config, scenarios["Q-V3-COV-101"], git_factory)
+    assert quantum_meta["builderMetadata"]["generatedRuleCount"] == 25
+    assert (quantum_root / "services" / "quantum-coverage-java-a" / "src" / "legacy" / "Rule001.java").exists()
+    assert (quantum_root / "vendor" / "generated-client.txt").exists()

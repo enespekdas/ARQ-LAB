@@ -1,0 +1,93 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9668397922493008,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CS-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 12,
+      "fixtures": 0,
+      "live business code": 10,
+      "live config": 0,
+      "scripts": 0,
+      "synthetic filler / inflation content": 4840,
+      "tests": 2,
+      "total": 5006,
+      "vendor/generated": 132
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-csharp\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CS-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\tls-usage-csharp\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "using System.Net.Http; namespace Arq.Lab.Library.Http; public static class InsecureServiceRegistration { public static HttpClientHandler Build() => new HttpClientHandler { ServerCertificateCustomValidationCallback = HttpClientHandler.Danger",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "27005a7d-d08c-4e29-827a-a7a1e129d135",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "src/Library/Http/InsecureServiceRegistration.cs",
+        "queryFamily": "csharp.http",
+        "rawEvidenceJson": "{\"queryRef\":\"csharp.http.accept-any-cert-validator\",\"callName\":\"HttpClientHandler.DangerousAcceptAnyServerCertificateValidator\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"DangerousAcceptAnyServerCertificateValidator\",\"resolvedValue\":\"DangerousAcceptAnyServerCertificateValidator\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_MEMBER\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "DangerousAcceptAnyServerCertificateValidator",
+        "ruleKey": "quantum.arq-q-0449-csharp",
+        "ruleName": "HttpClient: DangerousAcceptAnyServerCertificateValidator",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "csharp:http:HttpClientHandler.DangerousAcceptAnyServerCertificateValidator:DangerousAcceptAnyServerCertificateValidator",
+        "severity": "CRITICAL"
+      },
+      "expected": "accept-any-registration"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 1,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V6-CS-003",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

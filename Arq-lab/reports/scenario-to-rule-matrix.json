@@ -1,974 +1,2632 @@
 {
   "G-V1-CONFIG-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-CONFIG-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-CONFIG-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-CONFIG-004\\findings-normalized.json",
     "milestone": "M1",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-CONFIG-004\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key"
     ],
-    "runStamp": "20260402T104349Z",
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-CONFIG-004\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
-  "G-V1-JAVA-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-JAVA-001\\comparison.json",
-    "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-JAVA-001\\findings-normalized.json",
+  "G-V1-COV-101": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-101\\comparison.json",
+    "finalVerdict": "FAIL_FN",
     "milestone": "M1",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-101\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "guardian.1password-secret-key",
+      "guardian.adafruit-api-key",
+      "guardian.adobe-client-id",
+      "guardian.age-secret-key",
+      "guardian.airtable-api-key",
+      "guardian.algolia-api-key",
+      "guardian.alibaba-secret-key",
+      "guardian.anthropic-admin-api-key",
+      "guardian.anthropic-api-key",
+      "guardian.artifactory-api-key",
+      "guardian.artifactory-reference-token",
+      "guardian.asana-client-id",
+      "guardian.asana-client-secret",
+      "guardian.aws-access-token",
+      "guardian.aws-amazon-bedrock-api-key-short-lived",
+      "guardian.azure-ad-client-secret",
+      "guardian.beamer-api-token",
+      "guardian.bitbucket-client-id",
+      "guardian.bitbucket-client-secret"
+    ],
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-101\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.1password-secret-key",
+      "guardian.adafruit-api-key",
+      "guardian.adobe-client-id",
+      "guardian.age-secret-key",
+      "guardian.airtable-api-key",
+      "guardian.algolia-api-key",
+      "guardian.alibaba-secret-key",
+      "guardian.anthropic-admin-api-key",
+      "guardian.anthropic-api-key",
+      "guardian.artifactory-api-key",
+      "guardian.artifactory-reference-token",
+      "guardian.asana-client-id",
+      "guardian.asana-client-secret",
+      "guardian.aws-access-token",
+      "guardian.aws-amazon-bedrock-api-key-short-lived",
+      "guardian.azure-ad-client-secret",
+      "guardian.beamer-api-token",
+      "guardian.bitbucket-client-id",
+      "guardian.bitbucket-client-secret"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "G-V1-COV-102": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-102\\comparison.json",
+    "finalVerdict": "PASS_WITH_NOISE",
+    "milestone": "M1",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-102\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "guardian.bittrex-access-key",
+      "guardian.bittrex-secret-key",
+      "guardian.cisco-meraki-api-key",
+      "guardian.clickhouse-cloud-api-secret-key",
+      "guardian.clojars-api-token",
+      "guardian.cloudflare-api-key",
+      "guardian.cloudflare-global-api-key",
+      "guardian.codecov-access-token",
+      "guardian.cohere-api-token",
+      "guardian.coinbase-access-token",
+      "guardian.confluent-access-token",
+      "guardian.confluent-secret-key",
+      "guardian.contentful-delivery-api-token",
+      "guardian.databricks-api-token",
+      "guardian.datadog-access-token",
+      "guardian.defined-networking-api-token",
+      "guardian.digitalocean-access-token",
+      "guardian.digitalocean-pat",
+      "guardian.digitalocean-refresh-token",
+      "guardian.discord-api-token",
+      "guardian.generic-api-key"
+    ],
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-102\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.bittrex-access-key",
+      "guardian.bittrex-secret-key",
+      "guardian.cisco-meraki-api-key",
+      "guardian.clickhouse-cloud-api-secret-key",
+      "guardian.clojars-api-token",
+      "guardian.cloudflare-api-key",
+      "guardian.cloudflare-global-api-key",
+      "guardian.codecov-access-token",
+      "guardian.cohere-api-token",
+      "guardian.coinbase-access-token",
+      "guardian.confluent-access-token",
+      "guardian.confluent-secret-key",
+      "guardian.contentful-delivery-api-token",
+      "guardian.databricks-api-token",
+      "guardian.datadog-access-token",
+      "guardian.defined-networking-api-token",
+      "guardian.digitalocean-access-token",
+      "guardian.digitalocean-pat",
+      "guardian.digitalocean-refresh-token",
+      "guardian.discord-api-token",
+      "guardian.generic-api-key"
+    ],
+    "verdict": "PASS_WITH_NOISE"
+  },
+  "G-V1-COV-103": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-103\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M1",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-103\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "guardian.discord-client-id",
+      "guardian.discord-client-secret",
+      "guardian.droneci-access-token",
+      "guardian.dropbox-api-token",
+      "guardian.dropbox-long-lived-api-token",
+      "guardian.etsy-access-token",
+      "guardian.facebook-access-token",
+      "guardian.facebook-secret",
+      "guardian.fastly-api-token",
+      "guardian.finicity-api-token",
+      "guardian.finicity-client-secret",
+      "guardian.finnhub-access-token",
+      "guardian.flickr-access-token",
+      "guardian.flyio-access-token",
+      "guardian.freshbooks-access-token",
+      "guardian.gcp-api-key",
+      "guardian.github-app-token",
+      "guardian.github-fine-grained-pat",
+      "guardian.github-oauth"
+    ],
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-103\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.discord-client-id",
+      "guardian.discord-client-secret",
+      "guardian.droneci-access-token",
+      "guardian.dropbox-api-token",
+      "guardian.dropbox-long-lived-api-token",
+      "guardian.etsy-access-token",
+      "guardian.facebook-access-token",
+      "guardian.facebook-secret",
+      "guardian.fastly-api-token",
+      "guardian.finicity-api-token",
+      "guardian.finicity-client-secret",
+      "guardian.finnhub-access-token",
+      "guardian.flickr-access-token",
+      "guardian.flyio-access-token",
+      "guardian.freshbooks-access-token",
+      "guardian.gcp-api-key",
+      "guardian.github-app-token",
+      "guardian.github-fine-grained-pat",
+      "guardian.github-oauth"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "G-V1-COV-104": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-104\\comparison.json",
+    "finalVerdict": "PASS_WITH_NOISE",
+    "milestone": "M1",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-104\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "guardian.github-pat",
+      "guardian.github-refresh-token",
+      "guardian.gitlab-cicd-job-token",
+      "guardian.gitlab-deploy-token",
+      "guardian.gitlab-feature-flag-client-token",
+      "guardian.gitlab-feed-token",
+      "guardian.gitlab-incoming-mail-token",
+      "guardian.gitlab-kubernetes-agent-token",
+      "guardian.gitlab-oauth-app-secret",
+      "guardian.gitlab-pat",
+      "guardian.gitlab-pat-routable",
+      "guardian.gitlab-ptt",
+      "guardian.gitlab-rrt",
+      "guardian.gitlab-runner-authentication-token",
+      "guardian.gitlab-runner-authentication-token-routable",
+      "guardian.gitlab-scim-token",
+      "guardian.gitlab-session-cookie",
+      "guardian.gitter-access-token",
+      "guardian.grafana-api-key",
+      "guardian.grafana-cloud-api-token"
+    ],
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-104\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.github-pat",
+      "guardian.github-refresh-token",
+      "guardian.gitlab-cicd-job-token",
+      "guardian.gitlab-deploy-token",
+      "guardian.gitlab-feature-flag-client-token",
+      "guardian.gitlab-feed-token",
+      "guardian.gitlab-incoming-mail-token",
+      "guardian.gitlab-kubernetes-agent-token",
+      "guardian.gitlab-oauth-app-secret",
+      "guardian.gitlab-pat",
+      "guardian.gitlab-pat-routable",
+      "guardian.gitlab-ptt",
+      "guardian.gitlab-rrt",
+      "guardian.gitlab-runner-authentication-token",
+      "guardian.gitlab-runner-authentication-token-routable",
+      "guardian.gitlab-scim-token",
+      "guardian.gitlab-session-cookie",
+      "guardian.gitter-access-token",
+      "guardian.grafana-api-key",
+      "guardian.grafana-cloud-api-token"
+    ],
+    "verdict": "PASS_WITH_NOISE"
+  },
+  "G-V1-COV-105": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-105\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M1",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-105\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "guardian.grafana-service-account-token",
+      "guardian.harness-api-key",
+      "guardian.hashicorp-tf-api-token",
+      "guardian.heroku-api-key",
+      "guardian.heroku-api-key-v2",
+      "guardian.hubspot-api-key",
+      "guardian.huggingface-access-token",
+      "guardian.huggingface-organization-api-token",
+      "guardian.infracost-api-token",
+      "guardian.intercom-api-key",
+      "guardian.jfrog-api-key",
+      "guardian.jfrog-identity-token",
+      "guardian.jwt",
+      "guardian.jwt-base64",
+      "guardian.kraken-access-token",
+      "guardian.kucoin-access-token",
+      "guardian.kucoin-secret-key",
+      "guardian.launchdarkly-access-token"
+    ],
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-COV-105\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.grafana-service-account-token",
+      "guardian.harness-api-key",
+      "guardian.hashicorp-tf-api-token",
+      "guardian.heroku-api-key",
+      "guardian.heroku-api-key-v2",
+      "guardian.hubspot-api-key",
+      "guardian.huggingface-access-token",
+      "guardian.huggingface-organization-api-token",
+      "guardian.infracost-api-token",
+      "guardian.intercom-api-key",
+      "guardian.jfrog-api-key",
+      "guardian.jfrog-identity-token",
+      "guardian.jwt",
+      "guardian.jwt-base64",
+      "guardian.kraken-access-token",
+      "guardian.kucoin-access-token",
+      "guardian.kucoin-secret-key",
+      "guardian.launchdarkly-access-token"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "G-V1-JAVA-001": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-JAVA-001\\comparison.json",
+    "finalVerdict": "PASS_CLEAN",
+    "milestone": "M1",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-JAVA-001\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key"
     ],
-    "runStamp": "20260402T104349Z",
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-JAVA-001\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V1-PY-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-PY-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-PY-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-PY-002\\findings-normalized.json",
     "milestone": "M1",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-PY-002\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104349Z",
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-PY-002\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V1-TS-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-TS-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-TS-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104349Z\\M1\\G-V1-TS-003\\findings-normalized.json",
     "milestone": "M1",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-TS-003\\guardian-head\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key"
     ],
-    "runStamp": "20260402T104349Z",
+    "runStamp": "20260402T220505Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220505Z\\M1\\G-V1-TS-003\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-001\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-001\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-001\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-001\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-002\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-002\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-002\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-002\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-002\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-003\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-003\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-003\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.private-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-003\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.private-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-004\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-004\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-004\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-004\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-005\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-005\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-005\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-005\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-006\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-006\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-006\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-006\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-007": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-007\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-007\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-007\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-007\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-007\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-007\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-007\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-008": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-008\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-008\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-008\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-008\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-008\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.private-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-008\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.private-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-009": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-009\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-009\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-009\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-009\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-009\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-009\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-014": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-014\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-014\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-014\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-014\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-014\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-014\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-015": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-015\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-015\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-015\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-015\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-015\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-015\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.private-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-015\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.private-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-016": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-016\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-016\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-016\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-016\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-016\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-016\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "G-V2-HIST-017": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-017\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-017\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T104607Z\\M2\\G-V2-HIST-017\\findings-normalized.json",
     "milestone": "M2",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-017\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-017\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-017\\guardian-ref-history-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key"
     ],
-    "runStamp": "20260402T104607Z",
+    "runStamp": "20260402T220915Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T220915Z\\M2\\G-V2-HIST-017\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "M-V8-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-001\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-001\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-001\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-001\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "M-V8-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-002\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-002\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-002\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-002\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-002\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "quantum.arq-q-0613-typescript",
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-002\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "quantum.arq-q-0613-typescript",
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "M-V8-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-003\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-003\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-003\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-003\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-003\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
   "M-V8-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-004\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-004\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-004\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-004\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-004\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "quantum.arq-q-0613-typescript",
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-004\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "quantum.arq-q-0613-typescript",
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "M-V8-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-005\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-005\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-005\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-005\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-005\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
   "M-V8-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-006\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-006\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-006\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-006\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-006\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "quantum.arq-q-0613-typescript",
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-006\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "quantum.arq-q-0613-typescript",
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "M-V8-007": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-007\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-007\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-007\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-007\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-007\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-007\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-007\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-007\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
   "M-V8-008": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-008\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-008\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-008\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-008\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-008\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-008\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-008\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "quantum.arq-q-0613-typescript",
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-008\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "quantum.arq-q-0613-typescript",
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "M-V8-009": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-009\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-009\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-009\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-009\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-009\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-009\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
   "M-V8-010": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-010\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-010\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-010\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-010\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-010\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-010\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-010\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "quantum.arq-q-0613-typescript",
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-010\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "quantum.arq-q-0613-typescript",
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
   "M-V8-011": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-011\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-011\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-011\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-011\\guardian-all-branches\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-011\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-011\\guardian-ref-history-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-011\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-011\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
   "M-V8-012": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-012\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-012\\comparison.json",
     "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112855Z\\M8\\M-V8-012\\findings-normalized.json",
     "milestone": "M8",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-012\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-012\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [
       "guardian.generic-api-key",
       "guardian.private-key",
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0305-python",
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T112855Z",
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-012\\findings-normalized.json",
+    "surfacedRules": [
+      "guardian.generic-api-key",
+      "guardian.private-key",
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0305-python",
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_WITH_NOISE"
   },
+  "M-V8-COV-101": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-101\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M8",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-101\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0207-cpp",
+      "quantum.arq-q-0209-cpp",
+      "quantum.arq-q-0210-cpp",
+      "quantum.arq-q-0211-cpp",
+      "quantum.arq-q-0212-cpp",
+      "quantum.arq-q-0213-cpp",
+      "quantum.arq-q-0223-scala",
+      "quantum.arq-q-0225-scala",
+      "quantum.arq-q-0226-scala",
+      "quantum.arq-q-0227-scala",
+      "quantum.arq-q-0229-scala",
+      "quantum.arq-q-0233-scala",
+      "quantum.arq-q-0236-scala",
+      "quantum.arq-q-0242-scala",
+      "quantum.arq-q-0631-kotlin",
+      "quantum.arq-q-0633-kotlin",
+      "quantum.arq-q-0634-kotlin",
+      "quantum.arq-q-0635-kotlin",
+      "quantum.arq-q-0637-kotlin",
+      "quantum.arq-q-0641-kotlin"
+    ],
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-101\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0207-cpp",
+      "quantum.arq-q-0209-cpp",
+      "quantum.arq-q-0210-cpp",
+      "quantum.arq-q-0211-cpp",
+      "quantum.arq-q-0212-cpp",
+      "quantum.arq-q-0213-cpp",
+      "quantum.arq-q-0223-scala",
+      "quantum.arq-q-0225-scala",
+      "quantum.arq-q-0226-scala",
+      "quantum.arq-q-0227-scala",
+      "quantum.arq-q-0229-scala",
+      "quantum.arq-q-0233-scala",
+      "quantum.arq-q-0236-scala",
+      "quantum.arq-q-0242-scala",
+      "quantum.arq-q-0631-kotlin",
+      "quantum.arq-q-0633-kotlin",
+      "quantum.arq-q-0634-kotlin",
+      "quantum.arq-q-0635-kotlin",
+      "quantum.arq-q-0637-kotlin",
+      "quantum.arq-q-0641-kotlin"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "M-V8-COV-102": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-102\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M8",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-102\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0641-kotlin",
+      "quantum.arq-q-0644-kotlin",
+      "quantum.arq-q-0650-kotlin",
+      "quantum.arq-q-0653-ruby",
+      "quantum.arq-q-0655-ruby",
+      "quantum.arq-q-0656-ruby",
+      "quantum.arq-q-0658-ruby",
+      "quantum.arq-q-0659-ruby",
+      "quantum.arq-q-0663-ruby",
+      "quantum.arq-q-0665-ruby",
+      "quantum.arq-q-0671-php",
+      "quantum.arq-q-0673-php",
+      "quantum.arq-q-0674-php",
+      "quantum.arq-q-0675-php",
+      "quantum.arq-q-0676-php",
+      "quantum.arq-q-0680-php",
+      "quantum.arq-q-0689-rust",
+      "quantum.arq-q-0690-rust",
+      "quantum.arq-q-0691-rust",
+      "quantum.arq-q-0692-rust",
+      "quantum.arq-q-0693-rust",
+      "quantum.arq-q-0696-rust"
+    ],
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-102\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0641-kotlin",
+      "quantum.arq-q-0644-kotlin",
+      "quantum.arq-q-0650-kotlin",
+      "quantum.arq-q-0653-ruby",
+      "quantum.arq-q-0655-ruby",
+      "quantum.arq-q-0656-ruby",
+      "quantum.arq-q-0658-ruby",
+      "quantum.arq-q-0659-ruby",
+      "quantum.arq-q-0663-ruby",
+      "quantum.arq-q-0665-ruby",
+      "quantum.arq-q-0671-php",
+      "quantum.arq-q-0673-php",
+      "quantum.arq-q-0674-php",
+      "quantum.arq-q-0675-php",
+      "quantum.arq-q-0676-php",
+      "quantum.arq-q-0680-php",
+      "quantum.arq-q-0689-rust",
+      "quantum.arq-q-0690-rust",
+      "quantum.arq-q-0691-rust",
+      "quantum.arq-q-0692-rust",
+      "quantum.arq-q-0693-rust",
+      "quantum.arq-q-0696-rust"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "M-V8-COV-103": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-103\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M8",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-103\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0702-rust",
+      "quantum.arq-q-0707-swift",
+      "quantum.arq-q-0708-swift",
+      "quantum.arq-q-0709-swift",
+      "quantum.arq-q-0710-swift",
+      "quantum.arq-q-0718-swift",
+      "quantum.arq-q-0724-erlang",
+      "quantum.arq-q-0725-erlang",
+      "quantum.arq-q-0726-erlang",
+      "quantum.arq-q-0732-erlang",
+      "quantum.arq-q-0739-elixir",
+      "quantum.arq-q-0740-elixir",
+      "quantum.arq-q-0741-elixir",
+      "quantum.arq-q-0748-elixir",
+      "quantum.arq-q-0752-elixir"
+    ],
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-103\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0702-rust",
+      "quantum.arq-q-0707-swift",
+      "quantum.arq-q-0708-swift",
+      "quantum.arq-q-0709-swift",
+      "quantum.arq-q-0710-swift",
+      "quantum.arq-q-0718-swift",
+      "quantum.arq-q-0724-erlang",
+      "quantum.arq-q-0725-erlang",
+      "quantum.arq-q-0726-erlang",
+      "quantum.arq-q-0732-erlang",
+      "quantum.arq-q-0739-elixir",
+      "quantum.arq-q-0740-elixir",
+      "quantum.arq-q-0741-elixir",
+      "quantum.arq-q-0748-elixir",
+      "quantum.arq-q-0752-elixir"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "M-V8-COV-104": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-104\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M8",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-104\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0769-shell",
+      "quantum.arq-q-0770-shell",
+      "quantum.arq-q-0771-shell",
+      "quantum.arq-q-0775-shell",
+      "quantum.arq-q-0777-shell",
+      "quantum.arq-q-0782-powershell",
+      "quantum.arq-q-0784-powershell",
+      "quantum.arq-q-0785-powershell",
+      "quantum.arq-q-0786-powershell",
+      "quantum.arq-q-0787-powershell",
+      "quantum.arq-q-0788-powershell",
+      "quantum.arq-q-0789-powershell",
+      "quantum.arq-q-0792-powershell",
+      "quantum.arq-q-0795-powershell",
+      "quantum.arq-q-0798-plsql",
+      "quantum.arq-q-0799-plsql",
+      "quantum.arq-q-0809-tsql",
+      "quantum.arq-q-0810-tsql"
+    ],
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-104\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0769-shell",
+      "quantum.arq-q-0770-shell",
+      "quantum.arq-q-0771-shell",
+      "quantum.arq-q-0775-shell",
+      "quantum.arq-q-0777-shell",
+      "quantum.arq-q-0782-powershell",
+      "quantum.arq-q-0784-powershell",
+      "quantum.arq-q-0785-powershell",
+      "quantum.arq-q-0786-powershell",
+      "quantum.arq-q-0787-powershell",
+      "quantum.arq-q-0788-powershell",
+      "quantum.arq-q-0789-powershell",
+      "quantum.arq-q-0792-powershell",
+      "quantum.arq-q-0795-powershell",
+      "quantum.arq-q-0798-plsql",
+      "quantum.arq-q-0799-plsql",
+      "quantum.arq-q-0809-tsql",
+      "quantum.arq-q-0810-tsql"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "M-V8-COV-105": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-105\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M8",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-105\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0818-c",
+      "quantum.arq-q-0820-c",
+      "quantum.arq-q-0821-c",
+      "quantum.arq-q-0822-c",
+      "quantum.arq-q-0823-c",
+      "quantum.arq-q-0824-c",
+      "quantum.arq-q-0834-objectivec",
+      "quantum.arq-q-0835-objectivec",
+      "quantum.arq-q-0836-objectivec",
+      "quantum.arq-q-0837-objectivec",
+      "quantum.arq-q-0838-objectivec",
+      "quantum.arq-q-0839-objectivec",
+      "quantum.arq-q-0846-objectivec",
+      "quantum.arq-q-0859-perl",
+      "quantum.arq-q-0860-perl",
+      "quantum.arq-q-0861-perl",
+      "quantum.arq-q-0862-perl",
+      "quantum.arq-q-0864-perl"
+    ],
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-105\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0818-c",
+      "quantum.arq-q-0820-c",
+      "quantum.arq-q-0821-c",
+      "quantum.arq-q-0822-c",
+      "quantum.arq-q-0823-c",
+      "quantum.arq-q-0824-c",
+      "quantum.arq-q-0834-objectivec",
+      "quantum.arq-q-0835-objectivec",
+      "quantum.arq-q-0836-objectivec",
+      "quantum.arq-q-0837-objectivec",
+      "quantum.arq-q-0838-objectivec",
+      "quantum.arq-q-0839-objectivec",
+      "quantum.arq-q-0846-objectivec",
+      "quantum.arq-q-0859-perl",
+      "quantum.arq-q-0860-perl",
+      "quantum.arq-q-0861-perl",
+      "quantum.arq-q-0862-perl",
+      "quantum.arq-q-0864-perl"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "M-V8-COV-106": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-106\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M8",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-106\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0214-cpp",
+      "quantum.arq-q-0230-scala",
+      "quantum.arq-q-0231-scala",
+      "quantum.arq-q-0234-scala",
+      "quantum.arq-q-0237-scala",
+      "quantum.arq-q-0638-kotlin",
+      "quantum.arq-q-0639-kotlin",
+      "quantum.arq-q-0642-kotlin",
+      "quantum.arq-q-0645-kotlin",
+      "quantum.arq-q-0875-groovy",
+      "quantum.arq-q-0876-groovy",
+      "quantum.arq-q-0877-groovy",
+      "quantum.arq-q-0878-groovy",
+      "quantum.arq-q-0879-groovy",
+      "quantum.arq-q-0886-groovy",
+      "quantum.arq-q-0891-groovy",
+      "quantum.arq-q-0892-lua",
+      "quantum.arq-q-0917-jcl",
+      "quantum.arq-q-0918-jcl",
+      "quantum.arq-q-0921-jcl"
+    ],
+    "runStamp": "20260402T225420Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T225420Z\\M8\\M-V8-COV-106\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0214-cpp",
+      "quantum.arq-q-0230-scala",
+      "quantum.arq-q-0231-scala",
+      "quantum.arq-q-0234-scala",
+      "quantum.arq-q-0237-scala",
+      "quantum.arq-q-0638-kotlin",
+      "quantum.arq-q-0639-kotlin",
+      "quantum.arq-q-0642-kotlin",
+      "quantum.arq-q-0645-kotlin",
+      "quantum.arq-q-0875-groovy",
+      "quantum.arq-q-0876-groovy",
+      "quantum.arq-q-0877-groovy",
+      "quantum.arq-q-0878-groovy",
+      "quantum.arq-q-0879-groovy",
+      "quantum.arq-q-0886-groovy",
+      "quantum.arq-q-0891-groovy",
+      "quantum.arq-q-0892-lua",
+      "quantum.arq-q-0917-jcl",
+      "quantum.arq-q-0918-jcl",
+      "quantum.arq-q-0921-jcl"
+    ],
+    "verdict": "FAIL_FN"
+  },
   "N-V7-DOCS-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-001\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-001\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-001\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-001\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-DOCS-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-005\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-005\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-005\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-005\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-DOCS-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-006\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-006\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-006\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-006\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-DOCS-009": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-009\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-009\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-009\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-009\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-009\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-009\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-DOCS-010": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-010\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-010\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-010\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-010\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-010\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-010\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-DOCS-013": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-013\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-013\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-DOCS-013\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-013\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-013\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-DOCS-013\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-SAFE-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-004\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-004\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-004\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-004\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-SAFE-008": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-008\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-008\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-008\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-008\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-008\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-008\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-SAFE-012": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-012\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-012\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-012\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-012\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-012\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-012\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-SAFE-016": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-016\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-016\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-SAFE-016\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-016\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-016\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-SAFE-016\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-TESTS-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-TESTS-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-TESTS-003\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-003\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-003\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-003\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-TESTS-015": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-TESTS-015\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-015\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-TESTS-015\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-015\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-015\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-TESTS-015\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-VENDOR-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-002\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-002\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-002\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-002\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-VENDOR-007": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-007\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-007\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-007\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-007\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-007\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-007\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-VENDOR-011": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-011\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-011\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-011\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-011\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-011\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-011\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "N-V7-VENDOR-014": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-014\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-014\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T112026Z\\M7\\N-V7-VENDOR-014\\findings-normalized.json",
     "milestone": "M7",
-    "rules": [],
-    "runStamp": "20260402T112026Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-014\\guardian-head-main\\findings-export.json",
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-014\\quantum-head-main\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T224616Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224616Z\\M7\\N-V7-VENDOR-014\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
-  "Q-V3-CS-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-CS-003\\comparison.json",
-    "finalVerdict": "PASS_WITH_NOISE",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-CS-003\\findings-normalized.json",
+  "Q-V3-COV-101": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-101\\comparison.json",
+    "finalVerdict": "FAIL_FN",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-101\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0061-java",
+      "quantum.arq-q-0062-java",
+      "quantum.arq-q-0063-java",
+      "quantum.arq-q-0064-java",
+      "quantum.arq-q-0066-java",
+      "quantum.arq-q-0067-java",
+      "quantum.arq-q-0070-java",
+      "quantum.arq-q-0071-java",
+      "quantum.arq-q-0075-java",
+      "quantum.arq-q-0078-java",
+      "quantum.arq-q-0079-java",
+      "quantum.arq-q-0083-java",
+      "quantum.arq-q-0084-java",
+      "quantum.arq-q-0086-java",
+      "quantum.arq-q-0093-java",
+      "quantum.arq-q-0126-java",
+      "quantum.arq-q-0127-java",
+      "quantum.arq-q-0132-java",
+      "quantum.arq-q-0133-java",
+      "quantum.arq-q-0199-java"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-101\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0061-java",
+      "quantum.arq-q-0062-java",
+      "quantum.arq-q-0063-java",
+      "quantum.arq-q-0064-java",
+      "quantum.arq-q-0066-java",
+      "quantum.arq-q-0067-java",
+      "quantum.arq-q-0070-java",
+      "quantum.arq-q-0071-java",
+      "quantum.arq-q-0075-java",
+      "quantum.arq-q-0078-java",
+      "quantum.arq-q-0079-java",
+      "quantum.arq-q-0083-java",
+      "quantum.arq-q-0084-java",
+      "quantum.arq-q-0086-java",
+      "quantum.arq-q-0093-java",
+      "quantum.arq-q-0126-java",
+      "quantum.arq-q-0127-java",
+      "quantum.arq-q-0132-java",
+      "quantum.arq-q-0133-java",
+      "quantum.arq-q-0199-java"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-102": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-102\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-102\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0066-java",
+      "quantum.arq-q-0067-java",
+      "quantum.arq-q-0070-java",
+      "quantum.arq-q-0071-java",
+      "quantum.arq-q-0072-java",
+      "quantum.arq-q-0079-java",
+      "quantum.arq-q-0084-java",
+      "quantum.arq-q-0134-java",
+      "quantum.arq-q-0141-java",
+      "quantum.arq-q-0145-java",
+      "quantum.arq-q-0169-java",
+      "quantum.arq-q-0171-java",
+      "quantum.arq-q-0172-java",
+      "quantum.arq-q-0173-java",
+      "quantum.arq-q-0174-java",
+      "quantum.arq-q-0175-java",
+      "quantum.arq-q-0176-java",
+      "quantum.arq-q-0177-java",
+      "quantum.arq-q-0179-java",
+      "quantum.arq-q-0180-java",
+      "quantum.arq-q-0181-java",
+      "quantum.arq-q-0182-java",
+      "quantum.arq-q-0183-java",
+      "quantum.arq-q-0184-java",
+      "quantum.arq-q-0185-java",
+      "quantum.arq-q-0186-java",
+      "quantum.arq-q-0187-java",
+      "quantum.arq-q-0188-java",
+      "quantum.arq-q-0189-java"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-102\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0066-java",
+      "quantum.arq-q-0067-java",
+      "quantum.arq-q-0070-java",
+      "quantum.arq-q-0071-java",
+      "quantum.arq-q-0072-java",
+      "quantum.arq-q-0079-java",
+      "quantum.arq-q-0084-java",
+      "quantum.arq-q-0134-java",
+      "quantum.arq-q-0141-java",
+      "quantum.arq-q-0145-java",
+      "quantum.arq-q-0169-java",
+      "quantum.arq-q-0171-java",
+      "quantum.arq-q-0172-java",
+      "quantum.arq-q-0173-java",
+      "quantum.arq-q-0174-java",
+      "quantum.arq-q-0175-java",
+      "quantum.arq-q-0176-java",
+      "quantum.arq-q-0177-java",
+      "quantum.arq-q-0179-java",
+      "quantum.arq-q-0180-java",
+      "quantum.arq-q-0181-java",
+      "quantum.arq-q-0182-java",
+      "quantum.arq-q-0183-java",
+      "quantum.arq-q-0184-java",
+      "quantum.arq-q-0185-java",
+      "quantum.arq-q-0186-java",
+      "quantum.arq-q-0187-java",
+      "quantum.arq-q-0188-java",
+      "quantum.arq-q-0189-java"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-103": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-103\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-103\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0405-csharp",
+      "quantum.arq-q-0406-csharp",
+      "quantum.arq-q-0408-csharp",
+      "quantum.arq-q-0413-csharp",
+      "quantum.arq-q-0414-csharp",
+      "quantum.arq-q-0415-csharp",
+      "quantum.arq-q-0419-csharp",
+      "quantum.arq-q-0424-csharp",
+      "quantum.arq-q-0425-csharp",
+      "quantum.arq-q-0435-csharp"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-103\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0405-csharp",
+      "quantum.arq-q-0406-csharp",
+      "quantum.arq-q-0408-csharp",
+      "quantum.arq-q-0413-csharp",
+      "quantum.arq-q-0414-csharp",
+      "quantum.arq-q-0415-csharp",
+      "quantum.arq-q-0419-csharp",
+      "quantum.arq-q-0424-csharp",
+      "quantum.arq-q-0425-csharp",
+      "quantum.arq-q-0435-csharp"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-104": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-104\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-104\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0405-csharp",
+      "quantum.arq-q-0406-csharp",
+      "quantum.arq-q-0408-csharp",
+      "quantum.arq-q-0425-csharp",
+      "quantum.arq-q-0435-csharp",
+      "quantum.arq-q-0442-csharp",
+      "quantum.arq-q-0444-csharp",
+      "quantum.arq-q-0449-csharp"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-104\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0405-csharp",
+      "quantum.arq-q-0406-csharp",
+      "quantum.arq-q-0408-csharp",
+      "quantum.arq-q-0425-csharp",
+      "quantum.arq-q-0435-csharp",
+      "quantum.arq-q-0442-csharp",
+      "quantum.arq-q-0444-csharp",
+      "quantum.arq-q-0449-csharp"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-105": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-105\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-105\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0190-java",
+      "quantum.arq-q-0191-java",
+      "quantum.arq-q-0192-java",
+      "quantum.arq-q-0193-java",
+      "quantum.arq-q-0194-java",
+      "quantum.arq-q-0195-java",
+      "quantum.arq-q-0196-java",
+      "quantum.arq-q-0197-java",
+      "quantum.arq-q-0198-java",
+      "quantum.arq-q-0206-java"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-105\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0190-java",
+      "quantum.arq-q-0191-java",
+      "quantum.arq-q-0192-java",
+      "quantum.arq-q-0193-java",
+      "quantum.arq-q-0194-java",
+      "quantum.arq-q-0195-java",
+      "quantum.arq-q-0196-java",
+      "quantum.arq-q-0197-java",
+      "quantum.arq-q-0198-java",
+      "quantum.arq-q-0206-java"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-106": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-106\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-106\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-106\\findings-normalized.json",
+    "surfacedRules": [],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-107": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-107\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-107\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0408-csharp",
+      "quantum.arq-q-0435-csharp",
+      "quantum.arq-q-0449-csharp",
+      "quantum.arq-q-0468-csharp",
+      "quantum.arq-q-0531-csharp"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-107\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0408-csharp",
+      "quantum.arq-q-0435-csharp",
+      "quantum.arq-q-0449-csharp",
+      "quantum.arq-q-0468-csharp",
+      "quantum.arq-q-0531-csharp"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-COV-108": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-108\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-108\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-COV-108\\findings-normalized.json",
+    "surfacedRules": [],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V3-CS-003": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-003\\comparison.json",
+    "finalVerdict": "PASS_WITH_NOISE",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0418-csharp",
       "quantum.arq-q-0453-csharp",
       "quantum.arq-q-0468-csharp",
       "quantum.arq-q-0488-csharp"
     ],
-    "runStamp": "20260402T105625Z",
-    "verdict": "PASS_WITH_NOISE"
-  },
-  "Q-V3-CS-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-CS-004\\comparison.json",
-    "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-CS-004\\findings-normalized.json",
-    "milestone": "M3",
-    "rules": [
-      "quantum.arq-q-0468-csharp"
-    ],
-    "runStamp": "20260402T105625Z",
-    "verdict": "PASS_CLEAN"
-  },
-  "Q-V3-CS-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-CS-005\\comparison.json",
-    "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-CS-005\\findings-normalized.json",
-    "milestone": "M3",
-    "rules": [
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0418-csharp",
+      "quantum.arq-q-0453-csharp",
       "quantum.arq-q-0468-csharp",
       "quantum.arq-q-0488-csharp"
     ],
-    "runStamp": "20260402T105625Z",
+    "verdict": "PASS_WITH_NOISE"
+  },
+  "Q-V3-CS-004": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-004\\comparison.json",
+    "finalVerdict": "PASS_CLEAN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0468-csharp"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0468-csharp"
+    ],
+    "verdict": "PASS_CLEAN"
+  },
+  "Q-V3-CS-005": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-005\\comparison.json",
+    "finalVerdict": "PASS_CLEAN",
+    "milestone": "M3",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-005\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0468-csharp",
+      "quantum.arq-q-0488-csharp"
+    ],
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-CS-005\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0468-csharp",
+      "quantum.arq-q-0488-csharp"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-001\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-001\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0013-java",
       "quantum.arq-q-0072-java",
       "quantum.arq-q-0131-java",
       "quantum.arq-q-0178-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-001\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0013-java",
+      "quantum.arq-q-0072-java",
+      "quantum.arq-q-0131-java",
+      "quantum.arq-q-0178-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-002\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-002\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0012-java",
       "quantum.arq-q-0082-java",
       "quantum.arq-q-0131-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-002\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0012-java",
+      "quantum.arq-q-0082-java",
+      "quantum.arq-q-0131-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-004\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0072-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0072-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-005\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-005\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0072-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-005\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0072-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-006\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-006\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0013-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-006\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0013-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-007": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-007\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-007\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-007\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-007\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0072-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-007\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0072-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V3-JAVA-008": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-008\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-008\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T105625Z\\M3\\Q-V3-JAVA-008\\findings-normalized.json",
     "milestone": "M3",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-008\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0178-java"
     ],
-    "runStamp": "20260402T105625Z",
+    "runStamp": "20260402T221850Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T221850Z\\M3\\Q-V3-JAVA-008\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0178-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
-  "Q-V4-GO-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-GO-002\\comparison.json",
-    "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-GO-002\\findings-normalized.json",
+  "Q-V4-COV-101": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-101\\comparison.json",
+    "finalVerdict": "FAIL_FN",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-101\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0245-python",
+      "quantum.arq-q-0246-python",
+      "quantum.arq-q-0247-python",
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0250-python",
+      "quantum.arq-q-0252-python",
+      "quantum.arq-q-0256-python",
+      "quantum.arq-q-0257-python",
+      "quantum.arq-q-0258-python",
+      "quantum.arq-q-0263-python"
+    ],
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-101\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0245-python",
+      "quantum.arq-q-0246-python",
+      "quantum.arq-q-0247-python",
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0250-python",
+      "quantum.arq-q-0252-python",
+      "quantum.arq-q-0256-python",
+      "quantum.arq-q-0257-python",
+      "quantum.arq-q-0258-python",
+      "quantum.arq-q-0263-python"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V4-COV-102": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-102\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M4",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-102\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0245-python",
+      "quantum.arq-q-0246-python",
+      "quantum.arq-q-0247-python",
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0252-python",
+      "quantum.arq-q-0258-python",
+      "quantum.arq-q-0263-python",
+      "quantum.arq-q-0276-python",
+      "quantum.arq-q-0291-python",
+      "quantum.arq-q-0292-python",
+      "quantum.arq-q-0298-python"
+    ],
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-102\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0245-python",
+      "quantum.arq-q-0246-python",
+      "quantum.arq-q-0247-python",
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0252-python",
+      "quantum.arq-q-0258-python",
+      "quantum.arq-q-0263-python",
+      "quantum.arq-q-0276-python",
+      "quantum.arq-q-0291-python",
+      "quantum.arq-q-0292-python",
+      "quantum.arq-q-0298-python"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V4-COV-103": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-103\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M4",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-103\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0570-go",
+      "quantum.arq-q-0591-javascript",
+      "quantum.arq-q-0592-javascript",
+      "quantum.arq-q-0595-javascript",
+      "quantum.arq-q-0596-javascript",
+      "quantum.arq-q-0597-javascript",
+      "quantum.arq-q-0598-javascript",
+      "quantum.arq-q-0599-javascript",
+      "quantum.arq-q-0601-javascript",
+      "quantum.arq-q-0602-javascript",
+      "quantum.arq-q-0604-javascript",
+      "quantum.arq-q-0605-javascript",
+      "quantum.arq-q-0606-javascript",
+      "quantum.arq-q-0607-javascript",
+      "quantum.arq-q-0612-typescript",
+      "quantum.arq-q-0615-typescript",
+      "quantum.arq-q-0616-typescript",
+      "quantum.arq-q-0617-typescript",
+      "quantum.arq-q-0618-typescript",
+      "quantum.arq-q-0619-typescript",
+      "quantum.arq-q-0621-typescript",
+      "quantum.arq-q-0622-typescript",
+      "quantum.arq-q-0624-typescript",
+      "quantum.arq-q-0625-typescript",
+      "quantum.arq-q-0626-typescript",
+      "quantum.arq-q-0627-typescript"
+    ],
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-103\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0570-go",
+      "quantum.arq-q-0591-javascript",
+      "quantum.arq-q-0592-javascript",
+      "quantum.arq-q-0595-javascript",
+      "quantum.arq-q-0596-javascript",
+      "quantum.arq-q-0597-javascript",
+      "quantum.arq-q-0598-javascript",
+      "quantum.arq-q-0599-javascript",
+      "quantum.arq-q-0601-javascript",
+      "quantum.arq-q-0602-javascript",
+      "quantum.arq-q-0604-javascript",
+      "quantum.arq-q-0605-javascript",
+      "quantum.arq-q-0606-javascript",
+      "quantum.arq-q-0607-javascript",
+      "quantum.arq-q-0612-typescript",
+      "quantum.arq-q-0615-typescript",
+      "quantum.arq-q-0616-typescript",
+      "quantum.arq-q-0617-typescript",
+      "quantum.arq-q-0618-typescript",
+      "quantum.arq-q-0619-typescript",
+      "quantum.arq-q-0621-typescript",
+      "quantum.arq-q-0622-typescript",
+      "quantum.arq-q-0624-typescript",
+      "quantum.arq-q-0625-typescript",
+      "quantum.arq-q-0626-typescript",
+      "quantum.arq-q-0627-typescript"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V4-COV-104": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-104\\comparison.json",
+    "finalVerdict": "FAIL_FN",
+    "milestone": "M4",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-104\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0246-python",
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0263-python",
+      "quantum.arq-q-0291-python",
+      "quantum.arq-q-0338-python"
+    ],
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-COV-104\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0246-python",
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0263-python",
+      "quantum.arq-q-0291-python",
+      "quantum.arq-q-0338-python"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V4-GO-002": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-002\\comparison.json",
+    "finalVerdict": "PASS_CLEAN",
+    "milestone": "M4",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-002\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0572-go",
       "quantum.arq-q-0573-go"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-002\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0572-go",
+      "quantum.arq-q-0573-go"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-GO-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-GO-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-GO-003\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0572-go",
       "quantum.arq-q-0573-go"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0572-go",
+      "quantum.arq-q-0573-go"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-GO-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-GO-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-GO-004\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0572-go"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-GO-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0572-go"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-PY-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-001\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-001\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0248-python",
       "quantum.arq-q-0260-python"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-001\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0248-python",
+      "quantum.arq-q-0260-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-PY-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-004\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0260-python"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0260-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-PY-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-005\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-005\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0248-python"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-005\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0248-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-PY-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-PY-006\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-006\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0248-python"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-PY-006\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0248-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-TS-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-TS-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-TS-003\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0613-typescript",
       "quantum.arq-q-0614-typescript"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0613-typescript",
+      "quantum.arq-q-0614-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-TS-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-TS-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-TS-005\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-005\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-005\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V4-TS-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-TS-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110220Z\\M4\\Q-V4-TS-006\\findings-normalized.json",
     "milestone": "M4",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-006\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0613-typescript"
     ],
-    "runStamp": "20260402T110220Z",
+    "runStamp": "20260402T222747Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T222747Z\\M4\\Q-V4-TS-006\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0613-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-001\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-001\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0026-java",
       "quantum.arq-q-0085-java"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-001\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0026-java",
+      "quantum.arq-q-0085-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-003\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0026-java",
       "quantum.arq-q-0085-java"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0026-java",
+      "quantum.arq-q-0085-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-004\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0026-java",
       "quantum.arq-q-0085-java"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0026-java",
+      "quantum.arq-q-0085-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-005\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-005\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0026-java",
       "quantum.arq-q-0085-java"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-005\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0026-java",
+      "quantum.arq-q-0085-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-006\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-006\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0085-java"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-006\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0085-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-007": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-007\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-007\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-007\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-007\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0026-java",
       "quantum.arq-q-0085-java"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-007\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0026-java",
+      "quantum.arq-q-0085-java"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-JAVA-008": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-008\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-008\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-JAVA-008\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [],
-    "runStamp": "20260402T110821Z",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-008\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [],
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-JAVA-008\\findings-normalized.json",
+    "surfacedRules": [],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-PY-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-PY-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-PY-002\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-002\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0247-python",
       "quantum.arq-q-0305-python"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-002\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0247-python",
+      "quantum.arq-q-0305-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-PY-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-PY-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-PY-003\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0305-python"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0305-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V5-PY-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-PY-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T110821Z\\M5\\Q-V5-PY-004\\findings-normalized.json",
     "milestone": "M5",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0305-python"
     ],
-    "runStamp": "20260402T110821Z",
+    "runStamp": "20260402T223453Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T223453Z\\M5\\Q-V5-PY-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0305-python"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-CONFIG-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-003\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config",
       "quantum.arq-q-0949-config"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config",
+      "quantum.arq-q-0949-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-CONFIG-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-004\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0931-config",
       "quantum.arq-q-0949-config"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0931-config",
+      "quantum.arq-q-0949-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-CONFIG-005": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-005\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-005\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-005\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-005\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0931-config",
       "quantum.arq-q-0949-config"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-005\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0931-config",
+      "quantum.arq-q-0949-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-CONFIG-006": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-006\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-006\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CONFIG-006\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-006\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0930-config",
       "quantum.arq-q-0931-config",
       "quantum.arq-q-0949-config"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CONFIG-006\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0930-config",
+      "quantum.arq-q-0931-config",
+      "quantum.arq-q-0949-config"
+    ],
     "verdict": "PASS_CLEAN"
   },
-  "Q-V6-CS-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CS-002\\comparison.json",
-    "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CS-002\\findings-normalized.json",
+  "Q-V6-COV-101": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-COV-101\\comparison.json",
+    "finalVerdict": "FAIL_FN",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-COV-101\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
+      "quantum.arq-q-0922-config",
+      "quantum.arq-q-0924-config",
+      "quantum.arq-q-0927-config",
+      "quantum.arq-q-0942-config"
+    ],
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-COV-101\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0922-config",
+      "quantum.arq-q-0924-config",
+      "quantum.arq-q-0927-config",
+      "quantum.arq-q-0942-config"
+    ],
+    "verdict": "FAIL_FN"
+  },
+  "Q-V6-CS-002": {
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-002\\comparison.json",
+    "finalVerdict": "PASS_CLEAN",
+    "milestone": "M6",
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-002\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0449-csharp"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-002\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0449-csharp"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-CS-003": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CS-003\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-003\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CS-003\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-003\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0449-csharp"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-003\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0449-csharp"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-CS-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CS-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-CS-004\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0449-csharp"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-CS-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0449-csharp"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-TS-001": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-TS-001\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-001\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-TS-001\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-001\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0611-typescript"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-001\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0611-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-TS-002": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-TS-002\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-002\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-TS-002\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-002\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0611-typescript"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-002\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0611-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   },
   "Q-V6-TS-004": {
-    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-TS-004\\comparison.json",
+    "comparisonPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-004\\comparison.json",
     "finalVerdict": "PASS_CLEAN",
-    "findingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T111427Z\\M6\\Q-V6-TS-004\\findings-normalized.json",
     "milestone": "M6",
-    "rules": [
+    "rawFindingsPaths": [
+      "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-004\\quantum-head\\findings-export.json"
+    ],
+    "rawRules": [
       "quantum.arq-q-0611-typescript"
     ],
-    "runStamp": "20260402T111427Z",
+    "runStamp": "20260402T224022Z",
+    "surfacedFindingsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\runs\\20260402T224022Z\\M6\\Q-V6-TS-004\\findings-normalized.json",
+    "surfacedRules": [
+      "quantum.arq-q-0611-typescript"
+    ],
     "verdict": "PASS_CLEAN"
   }
 }

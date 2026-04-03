@@ -1,21 +1,21 @@
 {
   "byMilestone": {
     "M6": {
-      "cleanExpectedMatches": 17,
+      "cleanExpectedMatches": 21,
       "explainabilityFailures": 0,
       "mayFindReview": 0,
-      "missingExpectedFindings": 0,
+      "missingExpectedFindings": 16,
       "mustNotFindViolations": 0,
       "noiseCount": 0,
       "refStateFailures": 0,
       "sameFileDifferentSignalFindings": 0,
       "sameSurfaceExtraFindings": 0,
-      "scenarios": 10,
+      "scenarios": 11,
       "unexpectedFindings": 0,
       "unexpectedRegexOnlyFindings": 0,
       "verdicts": {
         "FAIL_EXPLAINABILITY": 0,
-        "FAIL_FN": 0,
+        "FAIL_FN": 1,
         "FAIL_FP": 0,
         "FAIL_REF_STATE": 0,
         "INVALID_SCENARIO": 0,
@@ -260,6 +260,65 @@
       "unexpectedRegexOnlyFindings": 0,
       "verdict": "PASS_CLEAN",
       "verdictClass": "PASS_CLEAN"
+    },
+    "Q-V6-COV-101": {
+      "cleanExpectedMatches": 4,
+      "dossierMissing": false,
+      "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-project-dossier.md",
+      "explainabilityFailures": 0,
+      "fillerRatio": 0.9391182645206438,
+      "finalVerdict": "FAIL_FN",
+      "finalVerdictReason": "16 expected finding(s) were not detected at all",
+      "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-file-manifest.json",
+      "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-tree.txt",
+      "locComposition": {
+        "docs": 16,
+        "fixtures": 0,
+        "live business code": 0,
+        "live config": 71,
+        "scripts": 2,
+        "synthetic filler / inflation content": 6710,
+        "tests": 3,
+        "total": 7145,
+        "vendor/generated": 335
+      },
+      "mayFindReview": 0,
+      "milestone": "M6",
+      "missingExpectedFindings": 16,
+      "mustFindExpected": 20,
+      "mustFindMissing": 16,
+      "mustNotFindViolations": 0,
+      "noiseBreakdown": {
+        "reviewOnlyFindings": 0,
+        "sameFileDifferentSignalFindings": 0,
+        "sameSurfaceExtraFindings": 0,
+        "totallyUnexpectedFindings": 0,
+        "unexpectedRegexOnlyFindings": 0
+      },
+      "noiseCount": 0,
+      "normalizationStats": {
+        "collapsedDuplicates": 0,
+        "normalizedFindings": 4,
+        "rawFindings": 4
+      },
+      "persistedLogsPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\runnability-logs",
+      "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\generated-project-dossier.md",
+      "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+      "realismScore": 1,
+      "refStateFailures": 0,
+      "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-COV-101.md",
+      "runnability": {
+        "build": "passed",
+        "smoke": "passed",
+        "test": "passed"
+      },
+      "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\runnability-logs",
+      "sameFileDifferentSignalFindings": 0,
+      "sameSurfaceExtraFindings": 0,
+      "unexpectedFindings": 0,
+      "unexpectedRegexOnlyFindings": 0,
+      "verdict": "FAIL_FN",
+      "verdictClass": "FAIL_FN"
     },
     "Q-V6-CS-002": {
       "cleanExpectedMatches": 1,
@@ -616,10 +675,10 @@
       "verdictClass": "PASS_CLEAN"
     }
   },
-  "scenarioCount": 10,
+  "scenarioCount": 11,
   "verdicts": {
     "FAIL_EXPLAINABILITY": 0,
-    "FAIL_FN": 0,
+    "FAIL_FN": 1,
     "FAIL_FP": 0,
     "FAIL_REF_STATE": 0,
     "INVALID_SCENARIO": 0,

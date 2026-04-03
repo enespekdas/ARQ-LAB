@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-automation.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-automation",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-automation",
+    "name": "guardian-coverage-automation",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "7de54428128cf471d7a7ee51352657362c8e955a"
+      },
+      "head": "7de54428128cf471d7a7ee51352657362c8e955a",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-02T21:34:47+03:00",
+          "message": "bootstrap G-V1-COV-103",
+          "sha": "7de54428128cf471d7a7ee51352657362c8e955a"
+        }
+      ]
+    },
+    "lineCount": 6980,
+    "repoName": "guardian-coverage-automation",
+    "scenarioId": "G-V1-COV-103"
+  },
+  "scenario": {
+    "domain": "Automation and CI credential corpus covering pipeline tokens, bot credentials, and service access keys.",
+    "id": "G-V1-COV-103",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-automation",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

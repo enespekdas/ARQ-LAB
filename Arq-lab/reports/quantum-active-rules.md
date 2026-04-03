@@ -196,39 +196,39 @@
 | `quantum.arq-q-0204-java` | `INFO` | `INVENTORY` | `java` | `arq-q-0204-java` | XMLDSIG / SAML / WS-Security Inventory |
 | `quantum.arq-q-0205-java` | `HIGH` | `VULNERABILITY` | `java` | `arq-q-0205-java` | XMLDSIG Weak Algorithm URI (rsa-sha1/dsa-sha1) |
 | `quantum.arq-q-0206-java` | `HIGH` | `VULNERABILITY` | `java` | `arq-q-0206-java` | XMLENC Weak Key Transport (rsa-1_5) |
-| `quantum.arq-q-0207-cpp` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0207-cpp` | TLS Trust Bypass |
-| `quantum.arq-q-0208-cpp` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0208-cpp` | TLS Weak Protocol |
-| `quantum.arq-q-0209-cpp` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0209-cpp` | Weak Hash (MD5) |
-| `quantum.arq-q-0210-cpp` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0210-cpp` | Weak Hash (SHA1) |
-| `quantum.arq-q-0211-cpp` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0211-cpp` | Weak Cipher (DES/3DES/RC4) |
-| `quantum.arq-q-0212-cpp` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0212-cpp` | Insecure Mode (ECB) |
-| `quantum.arq-q-0213-cpp` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0213-cpp` | Legacy RSA Key Size (<=1024) |
-| `quantum.arq-q-0214-cpp` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0214-cpp` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0215-cpp` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0215-cpp` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0216-cpp` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0216-cpp` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0218-cpp` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0218-cpp` | Weak KDF (OpenSSL PKCS5_PBKDF2_HMAC low iterations) |
-| `quantum.arq-q-0220-cpp` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0220-cpp` | PQC Library Inventory (liboqs/OpenQuantumSafe) |
-| `quantum.arq-q-0222-cpp` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0222-cpp` | Embedded Private Key in Source (PEM block) - C++ |
-| `quantum.arq-q-0223-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0223-scala` | TLS Weak Protocol |
-| `quantum.arq-q-0224-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0224-scala` | Trust Validation Disabled |
-| `quantum.arq-q-0225-scala` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0225-scala` | Weak Hash (MD5) |
-| `quantum.arq-q-0226-scala` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0226-scala` | Weak Hash (SHA1) |
-| `quantum.arq-q-0227-scala` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0227-scala` | Insecure Mode (ECB) |
-| `quantum.arq-q-0228-scala` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0228-scala` | Weak Cipher (DES/3DES) |
-| `quantum.arq-q-0229-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0229-scala` | Legacy RSA Key Size (<=1024) |
-| `quantum.arq-q-0230-scala` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0230-scala` | Shor Inventory (RSA) |
-| `quantum.arq-q-0231-scala` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0231-scala` | Shor Inventory (ECDSA) |
-| `quantum.arq-q-0232-scala` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0232-scala` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0233-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0233-scala` | Weak KDF (PBKDF2 low iter) |
-| `quantum.arq-q-0234-scala` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0234-scala` | Non-crypto RNG signal |
-| `quantum.arq-q-0235-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0235-scala` | Key Material in Repo (PEM/KeyStore) |
-| `quantum.arq-q-0236-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0236-scala` | JWT alg=none / verification disabled |
-| `quantum.arq-q-0237-scala` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0237-scala` | JWT RS/ES inventory |
-| `quantum.arq-q-0238-scala` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0238-scala` | JWT Library Inventory (Nimbus/JJWT/Auth0) |
-| `quantum.arq-q-0239-scala` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0239-scala` | XMLDSIG / SAML / WS-Security Inventory (OpenSAML/Santuario/WSS4J) |
-| `quantum.arq-q-0240-scala` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0240-scala` | XMLDSIG Weak Algorithm (rsa-sha1/sha1 digest) |
-| `quantum.arq-q-0241-scala` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0241-scala` | PQC Library Inventory (BouncyCastle PQC) |
-| `quantum.arq-q-0242-scala` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0242-scala` | Weak KDF (PBKDF2 low iterations) |
+| `quantum.arq-q-0207-cpp` | `CRITICAL` | `VULNERABILITY` | `cpp` | `arq-q-0207-cpp` | TLS Trust Bypass |
+| `quantum.arq-q-0208-cpp` | `CRITICAL` | `VULNERABILITY` | `cpp` | `arq-q-0208-cpp` | TLS Weak Protocol |
+| `quantum.arq-q-0209-cpp` | `HIGH` | `VULNERABILITY` | `cpp` | `arq-q-0209-cpp` | Weak Hash (MD5) |
+| `quantum.arq-q-0210-cpp` | `MEDIUM` | `VULNERABILITY` | `cpp` | `arq-q-0210-cpp` | Weak Hash (SHA1) |
+| `quantum.arq-q-0211-cpp` | `HIGH` | `VULNERABILITY` | `cpp` | `arq-q-0211-cpp` | Weak Cipher (DES/3DES/RC4) |
+| `quantum.arq-q-0212-cpp` | `HIGH` | `VULNERABILITY` | `cpp` | `arq-q-0212-cpp` | Insecure Mode (ECB) |
+| `quantum.arq-q-0213-cpp` | `CRITICAL` | `VULNERABILITY` | `cpp` | `arq-q-0213-cpp` | Legacy RSA Key Size (<=1024) |
+| `quantum.arq-q-0214-cpp` | `MEDIUM` | `INVENTORY` | `cpp` | `arq-q-0214-cpp` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0215-cpp` | `HIGH` | `INVENTORY` | `cpp` | `arq-q-0215-cpp` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0216-cpp` | `CRITICAL` | `VULNERABILITY` | `cpp` | `arq-q-0216-cpp` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0218-cpp` | `CRITICAL` | `VULNERABILITY` | `cpp` | `arq-q-0218-cpp` | Weak KDF (OpenSSL PKCS5_PBKDF2_HMAC low iterations) |
+| `quantum.arq-q-0220-cpp` | `INFO` | `INVENTORY` | `cpp` | `arq-q-0220-cpp` | PQC Library Inventory (liboqs/OpenQuantumSafe) |
+| `quantum.arq-q-0222-cpp` | `CRITICAL` | `VULNERABILITY` | `cpp` | `arq-q-0222-cpp` | Embedded Private Key in Source (PEM block) - C++ |
+| `quantum.arq-q-0223-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0223-scala` | TLS Weak Protocol |
+| `quantum.arq-q-0224-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0224-scala` | Trust Validation Disabled |
+| `quantum.arq-q-0225-scala` | `HIGH` | `VULNERABILITY` | `scala` | `arq-q-0225-scala` | Weak Hash (MD5) |
+| `quantum.arq-q-0226-scala` | `MEDIUM` | `VULNERABILITY` | `scala` | `arq-q-0226-scala` | Weak Hash (SHA1) |
+| `quantum.arq-q-0227-scala` | `HIGH` | `VULNERABILITY` | `scala` | `arq-q-0227-scala` | Insecure Mode (ECB) |
+| `quantum.arq-q-0228-scala` | `HIGH` | `VULNERABILITY` | `scala` | `arq-q-0228-scala` | Weak Cipher (DES/3DES) |
+| `quantum.arq-q-0229-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0229-scala` | Legacy RSA Key Size (<=1024) |
+| `quantum.arq-q-0230-scala` | `MEDIUM` | `INVENTORY` | `scala` | `arq-q-0230-scala` | Shor Inventory (RSA) |
+| `quantum.arq-q-0231-scala` | `MEDIUM` | `INVENTORY` | `scala` | `arq-q-0231-scala` | Shor Inventory (ECDSA) |
+| `quantum.arq-q-0232-scala` | `HIGH` | `INVENTORY` | `scala` | `arq-q-0232-scala` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0233-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0233-scala` | Weak KDF (PBKDF2 low iter) |
+| `quantum.arq-q-0234-scala` | `MEDIUM` | `INVENTORY` | `scala` | `arq-q-0234-scala` | Non-crypto RNG signal |
+| `quantum.arq-q-0235-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0235-scala` | Key Material in Repo (PEM/KeyStore) |
+| `quantum.arq-q-0236-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0236-scala` | JWT alg=none / verification disabled |
+| `quantum.arq-q-0237-scala` | `MEDIUM` | `INVENTORY` | `scala` | `arq-q-0237-scala` | JWT RS/ES inventory |
+| `quantum.arq-q-0238-scala` | `INFO` | `INVENTORY` | `scala` | `arq-q-0238-scala` | JWT Library Inventory (Nimbus/JJWT/Auth0) |
+| `quantum.arq-q-0239-scala` | `INFO` | `INVENTORY` | `scala` | `arq-q-0239-scala` | XMLDSIG / SAML / WS-Security Inventory (OpenSAML/Santuario/WSS4J) |
+| `quantum.arq-q-0240-scala` | `HIGH` | `VULNERABILITY` | `scala` | `arq-q-0240-scala` | XMLDSIG Weak Algorithm (rsa-sha1/sha1 digest) |
+| `quantum.arq-q-0241-scala` | `INFO` | `INVENTORY` | `scala` | `arq-q-0241-scala` | PQC Library Inventory (BouncyCastle PQC) |
+| `quantum.arq-q-0242-scala` | `CRITICAL` | `VULNERABILITY` | `scala` | `arq-q-0242-scala` | Weak KDF (PBKDF2 low iterations) |
 | `quantum.arq-q-0245-python` | `CRITICAL` | `VULNERABILITY` | `python` | `arq-q-0245-python` | ssl: SSL3/TLS1.0 wrap_socket without version restriction |
 | `quantum.arq-q-0246-python` | `CRITICAL` | `VULNERABILITY` | `python` | `arq-q-0246-python` | ssl: CERT_NONE disables certificate verification |
 | `quantum.arq-q-0247-python` | `CRITICAL` | `VULNERABILITY` | `python` | `arq-q-0247-python` | urllib2: unverified HTTPS context (_create_unverified_context) |
@@ -590,202 +590,202 @@
 | `quantum.arq-q-0627-typescript` | `HIGH` | `VULNERABILITY` | `typescript` | `arq-q-0627-typescript` | Weak Signature Algorithm (Node createSign RSA-SHA1/MD5) |
 | `quantum.arq-q-0628-typescript` | `INFO` | `INVENTORY` | `typescript` | `arq-q-0628-typescript` | XMLDSIG / SAML Inventory (xml-crypto/xml-encryption/samlify) |
 | `quantum.arq-q-0630-typescript` | `HIGH` | `VULNERABILITY` | `typescript` | `arq-q-0630-typescript` | Key Material Artifact (PEM/PFX/JKS/etc.) |
-| `quantum.arq-q-0631-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0631-kotlin` | TLS Weak Protocol |
-| `quantum.arq-q-0632-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0632-kotlin` | Trust Validation Disabled |
-| `quantum.arq-q-0633-kotlin` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0633-kotlin` | Weak Hash (MD5) |
-| `quantum.arq-q-0634-kotlin` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0634-kotlin` | Weak Hash (SHA1) |
-| `quantum.arq-q-0635-kotlin` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0635-kotlin` | Insecure Mode (ECB) |
-| `quantum.arq-q-0636-kotlin` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0636-kotlin` | Weak Cipher (DES/3DES) |
-| `quantum.arq-q-0637-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0637-kotlin` | Legacy RSA Key Size (<=1024) |
-| `quantum.arq-q-0638-kotlin` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0638-kotlin` | Shor Inventory (RSA) |
-| `quantum.arq-q-0639-kotlin` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0639-kotlin` | Shor Inventory (ECDSA) |
-| `quantum.arq-q-0640-kotlin` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0640-kotlin` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0641-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0641-kotlin` | Weak KDF (PBKDF2 low iter) |
-| `quantum.arq-q-0642-kotlin` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0642-kotlin` | Non-crypto RNG signal |
-| `quantum.arq-q-0643-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0643-kotlin` | Key Material in Repo (PEM/KeyStore) |
-| `quantum.arq-q-0644-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0644-kotlin` | JWT alg=none / verification disabled |
-| `quantum.arq-q-0645-kotlin` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0645-kotlin` | JWT RS/ES inventory |
-| `quantum.arq-q-0646-kotlin` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0646-kotlin` | JWT Library Inventory (Nimbus/JJWT/Auth0) |
-| `quantum.arq-q-0647-kotlin` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0647-kotlin` | XMLDSIG / SAML / WS-Security Inventory (OpenSAML/Santuario/WSS4J) |
-| `quantum.arq-q-0648-kotlin` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0648-kotlin` | XMLDSIG Weak Algorithm (rsa-sha1/sha1 digest) |
-| `quantum.arq-q-0649-kotlin` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0649-kotlin` | PQC Library Inventory (BouncyCastle PQC) |
-| `quantum.arq-q-0650-kotlin` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0650-kotlin` | Weak KDF (PBKDF2 low iterations) |
-| `quantum.arq-q-0653-ruby` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0653-ruby` | TLS Trust Bypass |
-| `quantum.arq-q-0654-ruby` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0654-ruby` | TLS Weak Protocol |
-| `quantum.arq-q-0655-ruby` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0655-ruby` | Weak Hash (MD5) |
-| `quantum.arq-q-0656-ruby` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0656-ruby` | Weak Hash (SHA1) |
-| `quantum.arq-q-0657-ruby` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0657-ruby` | Weak Cipher (DES/3DES/RC4) |
-| `quantum.arq-q-0658-ruby` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0658-ruby` | Insecure Mode (ECB) |
-| `quantum.arq-q-0659-ruby` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0659-ruby` | Legacy RSA Key Size (<=1024) |
-| `quantum.arq-q-0660-ruby` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0660-ruby` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0661-ruby` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0661-ruby` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0662-ruby` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0662-ruby` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0663-ruby` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0663-ruby` | JWT alg=none / verification disabled |
-| `quantum.arq-q-0664-ruby` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0664-ruby` | JWT RS/ES inventory |
-| `quantum.arq-q-0665-ruby` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0665-ruby` | Weak KDF (Ruby OpenSSL PBKDF2 low iterations) |
-| `quantum.arq-q-0669-ruby` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0669-ruby` | XMLDSIG / SAML Inventory (ruby-saml/xmlsecurity) |
-| `quantum.arq-q-0671-php` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0671-php` | TLS Trust Bypass |
-| `quantum.arq-q-0672-php` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0672-php` | Weak Hash (MD5) |
-| `quantum.arq-q-0673-php` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0673-php` | Weak Hash (SHA1) |
-| `quantum.arq-q-0674-php` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0674-php` | Weak Cipher / Insecure Mode (ECB) |
-| `quantum.arq-q-0675-php` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0675-php` | Weak Cipher (DES/3DES/RC4) |
-| `quantum.arq-q-0676-php` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0676-php` | Legacy RSA Key Size (<=1024) |
-| `quantum.arq-q-0677-php` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0677-php` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0679-php` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0679-php` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0680-php` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0680-php` | JWT alg=none / verification disabled |
-| `quantum.arq-q-0681-php` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0681-php` | JWT RS/ES inventory |
-| `quantum.arq-q-0683-php` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0683-php` | TLS Weak Protocol (PHP cURL/stream TLSv1.0/1.1) |
-| `quantum.arq-q-0684-php` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0684-php` | Weak KDF (PHP hash_pbkdf2 low iterations) |
-| `quantum.arq-q-0687-php` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0687-php` | XMLDSIG / SAML Inventory (xmlseclibs/php-saml) |
-| `quantum.arq-q-0689-rust` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0689-rust` | TLS Trust Bypass |
-| `quantum.arq-q-0690-rust` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0690-rust` | TLS Dangerous Config (rustls) |
-| `quantum.arq-q-0691-rust` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0691-rust` | Weak Hash (MD5) |
-| `quantum.arq-q-0692-rust` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0692-rust` | Weak Hash (SHA1) |
-| `quantum.arq-q-0693-rust` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0693-rust` | Weak Cipher/Mode (ECB) |
-| `quantum.arq-q-0694-rust` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0694-rust` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0695-rust` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0695-rust` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0696-rust` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0696-rust` | Weak KDF (PBKDF2 low iter) |
-| `quantum.arq-q-0697-rust` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0697-rust` | Non-crypto RNG signal |
-| `quantum.arq-q-0698-rust` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0698-rust` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0700-rust` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0700-rust` | JWT RS/ES inventory |
-| `quantum.arq-q-0701-rust` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0701-rust` | TLS Weak Protocol (Rust openssl SslMethod tlsv1/tlsv1_1) |
-| `quantum.arq-q-0702-rust` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0702-rust` | Legacy RSA Key Size (rsa crate bits<=1024) |
-| `quantum.arq-q-0703-rust` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0703-rust` | Weak Cipher (openssl Cipher::des_ede3/rc4) |
-| `quantum.arq-q-0704-rust` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0704-rust` | PQC Library Inventory (oqs/pqcrypto) |
-| `quantum.arq-q-0707-swift` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0707-swift` | Weak Hash (MD5) |
-| `quantum.arq-q-0708-swift` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0708-swift` | Weak Hash (SHA1) |
-| `quantum.arq-q-0709-swift` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0709-swift` | Insecure Mode (ECB) |
-| `quantum.arq-q-0710-swift` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0710-swift` | Weak Cipher (DES/3DES/RC4) |
-| `quantum.arq-q-0711-swift` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0711-swift` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0712-swift` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0712-swift` | HNDL Inventory (ECDH) |
-| `quantum.arq-q-0713-swift` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0713-swift` | Non-crypto RNG signal |
-| `quantum.arq-q-0714-swift` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0714-swift` | Key Material in Repo (PEM/PKCS12) |
-| `quantum.arq-q-0716-swift` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0716-swift` | JWT RS/ES inventory |
-| `quantum.arq-q-0717-swift` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0717-swift` | TLS Weak Config (iOS ATS arbitrary loads in Info.plist) |
-| `quantum.arq-q-0718-swift` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0718-swift` | Legacy RSA Key Size (SecKey keygen kSecAttrKeySizeInBits=1024) |
-| `quantum.arq-q-0719-swift` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0719-swift` | Weak KDF (CCKeyDerivationPBKDF low iterations) |
-| `quantum.arq-q-0722-swift` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0722-swift` | TLS Weak Protocol (SecureTransport/CFNetwork) - Swift |
-| `quantum.arq-q-0723-swift` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0723-swift` | Embedded Private Key in Source (PEM block) - Swift |
-| `quantum.arq-q-0724-erlang` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0724-erlang` | TLS Trust Bypass |
-| `quantum.arq-q-0725-erlang` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0725-erlang` | Weak Hash (MD5) |
-| `quantum.arq-q-0726-erlang` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0726-erlang` | Weak Hash (SHA1) |
-| `quantum.arq-q-0728-erlang` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0728-erlang` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0729-erlang` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0729-erlang` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0730-erlang` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0730-erlang` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0731-erlang` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0731-erlang` | TLS Weak Protocol (:ssl versions tlsv1/tlsv1.1) |
-| `quantum.arq-q-0732-erlang` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0732-erlang` | Insecure Mode (ECB via :crypto.crypto_one_time) |
-| `quantum.arq-q-0735-erlang` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0735-erlang` | JWT Library Inventory (jose) |
-| `quantum.arq-q-0737-erlang` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0737-erlang` | Embedded Private Key in Source (PEM block) - Erlang |
-| `quantum.arq-q-0739-elixir` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0739-elixir` | TLS Trust Bypass |
-| `quantum.arq-q-0740-elixir` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0740-elixir` | Weak Hash (MD5) |
-| `quantum.arq-q-0741-elixir` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0741-elixir` | Weak Hash (SHA1) |
-| `quantum.arq-q-0742-elixir` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0742-elixir` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0743-elixir` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0743-elixir` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0745-elixir` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0745-elixir` | JWT RS/ES inventory |
-| `quantum.arq-q-0746-elixir` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0746-elixir` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0747-elixir` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0747-elixir` | TLS Weak Protocol (:ssl versions tlsv1/tlsv1.1) |
-| `quantum.arq-q-0748-elixir` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0748-elixir` | Insecure Mode (ECB via :crypto.crypto_one_time) |
-| `quantum.arq-q-0752-elixir` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0752-elixir` | Weak Cipher (DES/3DES/RC4) - Erlang/Elixir :crypto |
-| `quantum.arq-q-0754-elixir` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0754-elixir` | Embedded Private Key in Source (PEM block) - Elixir |
-| `quantum.arq-q-0759-zig` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0759-zig` | Key Material in Repo (PEM) |
-| `quantum.arq-q-0760-zig` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0760-zig` | Zig std.crypto usage inventory |
-| `quantum.arq-q-0765-zig` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0765-zig` | Embedded Private Key in Source (PEM block) - Zig |
-| `quantum.arq-q-0766-shell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0766-shell` | TLS Trust Bypass (curl -k) |
-| `quantum.arq-q-0767-shell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0767-shell` | TLS Trust Bypass (wget) |
-| `quantum.arq-q-0768-shell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0768-shell` | TLS Weak Protocol (openssl s_client) |
-| `quantum.arq-q-0769-shell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0769-shell` | Weak Hash (openssl dgst) |
-| `quantum.arq-q-0770-shell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0770-shell` | Weak Cipher (openssl enc DES/3DES/RC4) |
-| `quantum.arq-q-0771-shell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0771-shell` | Insecure Mode (openssl enc ECB) |
-| `quantum.arq-q-0772-shell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0772-shell` | Legacy RSA key size (openssl genrsa) |
-| `quantum.arq-q-0773-shell` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0773-shell` | Shor Inventory (openssl genrsa 2048+) |
-| `quantum.arq-q-0774-shell` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0774-shell` | HNDL Inventory (openssl dhparam) |
-| `quantum.arq-q-0775-shell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0775-shell` | KeyStore password hardcoded (keytool -storepass) |
-| `quantum.arq-q-0776-shell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0776-shell` | Key material in repo (PEM/PFX/JKS) |
-| `quantum.arq-q-0777-shell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0777-shell` | SSH StrictHostKeyChecking disabled |
-| `quantum.arq-q-0782-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0782-powershell` | TLS Trust Bypass (ServerCertificateValidationCallback) |
-| `quantum.arq-q-0783-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0783-powershell` | TLS Protocol forced to TLS1.0/SSL3 |
-| `quantum.arq-q-0784-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0784-powershell` | Invoke-WebRequest SkipCertificateCheck |
-| `quantum.arq-q-0785-powershell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0785-powershell` | Weak Hash (MD5) |
-| `quantum.arq-q-0786-powershell` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0786-powershell` | Weak Hash (SHA1) |
-| `quantum.arq-q-0787-powershell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0787-powershell` | Weak Cipher (DES/3DES/RC2) |
-| `quantum.arq-q-0788-powershell` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0788-powershell` | Insecure Mode (ECB) |
-| `quantum.arq-q-0789-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0789-powershell` | Legacy RSA key size (1024) |
-| `quantum.arq-q-0790-powershell` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0790-powershell` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0791-powershell` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0791-powershell` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0792-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0792-powershell` | Weak KDF params (PBKDF2) |
-| `quantum.arq-q-0793-powershell` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0793-powershell` | Non-crypto RNG signal |
-| `quantum.arq-q-0794-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0794-powershell` | Key material in repo (PEM/PFX) |
-| `quantum.arq-q-0795-powershell` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0795-powershell` | JWT alg=none / validation disabled |
-| `quantum.arq-q-0798-plsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0798-plsql` | Weak Hash (DBMS_CRYPTO MD5) |
-| `quantum.arq-q-0799-plsql` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0799-plsql` | Weak Hash (DBMS_CRYPTO SHA1) |
-| `quantum.arq-q-0800-plsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0800-plsql` | Weak Cipher (DES/3DES) |
-| `quantum.arq-q-0808-plsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0808-plsql` | Key Material Artifact (Oracle Wallet / P12 / SSO) |
-| `quantum.arq-q-0809-tsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0809-tsql` | Weak Hash (HASHBYTES MD5) |
-| `quantum.arq-q-0810-tsql` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0810-tsql` | Weak Hash (HASHBYTES SHA1) |
-| `quantum.arq-q-0811-tsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0811-tsql` | Weak cipher via CREATE SYMMETRIC KEY |
-| `quantum.arq-q-0816-tsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0816-tsql` | Hardcoded Passphrase (EncryptByPassPhrase / DecryptByPassPhrase) |
-| `quantum.arq-q-0817-tsql` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0817-tsql` | Key Material Artifact in SQL Scripts (PEM/PFX) |
-| `quantum.arq-q-0818-c` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0818-c` | TLS Trust Bypass (OpenSSL VERIFY_NONE) |
-| `quantum.arq-q-0819-c` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0819-c` | TLS Weak Protocol (OpenSSL method) |
-| `quantum.arq-q-0820-c` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0820-c` | Weak Hash (EVP_md5) |
-| `quantum.arq-q-0821-c` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0821-c` | Weak Hash (EVP_sha1) |
-| `quantum.arq-q-0822-c` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0822-c` | Weak Cipher (DES/3DES/RC4) |
-| `quantum.arq-q-0823-c` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0823-c` | Insecure Mode (ECB) |
-| `quantum.arq-q-0824-c` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0824-c` | Legacy RSA key size (1024) |
-| `quantum.arq-q-0825-c` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0825-c` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0826-c` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0826-c` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0828-c` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0828-c` | Key material artifact (PEM) |
-| `quantum.arq-q-0829-c` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0829-c` | Weak KDF (OpenSSL PKCS5_PBKDF2_HMAC low iterations) |
-| `quantum.arq-q-0831-c` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0831-c` | PQC Library Inventory (liboqs/OpenQuantumSafe) |
-| `quantum.arq-q-0833-c` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0833-c` | Embedded Private Key in Source (PEM block) - C |
-| `quantum.arq-q-0834-objectivec` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0834-objectivec` | TLS Trust Bypass (NSURLSession delegate) |
-| `quantum.arq-q-0835-objectivec` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0835-objectivec` | TLS Trust Bypass (kCFStreamSSLValidatesCertificateChain=false) |
-| `quantum.arq-q-0836-objectivec` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0836-objectivec` | Weak Hash (CC_MD5) |
-| `quantum.arq-q-0837-objectivec` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0837-objectivec` | Weak Hash (CC_SHA1) |
-| `quantum.arq-q-0838-objectivec` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0838-objectivec` | Insecure Mode (ECB) |
-| `quantum.arq-q-0839-objectivec` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0839-objectivec` | Weak Cipher (DES/3DES) |
-| `quantum.arq-q-0840-objectivec` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0840-objectivec` | Shor Inventory (RSA/EC) |
-| `quantum.arq-q-0842-objectivec` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0842-objectivec` | Key material artifact (.p12/.mobileprovision) |
-| `quantum.arq-q-0845-objectivec` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0845-objectivec` | TLS Weak Config (iOS ATS arbitrary loads in Info.plist) |
-| `quantum.arq-q-0846-objectivec` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0846-objectivec` | Legacy RSA Key Size (SecKey keygen kSecAttrKeySizeInBits=1024) |
-| `quantum.arq-q-0847-objectivec` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0847-objectivec` | Weak KDF (CCKeyDerivationPBKDF low iterations) |
-| `quantum.arq-q-0850-objectivec` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0850-objectivec` | TLS Weak Protocol (SecureTransport/CFNetwork) - iOS |
-| `quantum.arq-q-0851-objectivec` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0851-objectivec` | Embedded Private Key in Source (PEM block) - iOS |
-| `quantum.arq-q-0856-abap` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0856-abap` | Key material artifact (PSE/CRT/KEY) |
-| `quantum.arq-q-0859-perl` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0859-perl` | TLS Trust Bypass (IO::Socket::SSL verify) |
-| `quantum.arq-q-0860-perl` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0860-perl` | TLS Weak protocol forced |
-| `quantum.arq-q-0861-perl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0861-perl` | Weak Hash (Digest::MD5) |
-| `quantum.arq-q-0862-perl` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0862-perl` | Weak Hash (Digest::SHA1) |
-| `quantum.arq-q-0863-perl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0863-perl` | Weak Cipher (DES/3DES) |
-| `quantum.arq-q-0864-perl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0864-perl` | Insecure Mode (ECB) |
-| `quantum.arq-q-0866-perl` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0866-perl` | Shor Inventory (RSA/ECC) |
-| `quantum.arq-q-0868-perl` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0868-perl` | Key material artifact (PEM) |
-| `quantum.arq-q-0872-perl` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0872-perl` | Embedded Private Key in Source (PEM block) - Perl |
-| `quantum.arq-q-0874-groovy` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0874-groovy` | TLS Trust Bypass (HostnameVerifier/TrustManager) |
-| `quantum.arq-q-0875-groovy` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0875-groovy` | TLS Weak Protocol |
-| `quantum.arq-q-0876-groovy` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0876-groovy` | Weak Hash (MD5) |
-| `quantum.arq-q-0877-groovy` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0877-groovy` | Weak Hash (SHA1) |
-| `quantum.arq-q-0878-groovy` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0878-groovy` | Insecure Mode (ECB) |
-| `quantum.arq-q-0879-groovy` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0879-groovy` | Legacy RSA key size |
-| `quantum.arq-q-0880-groovy` | `MEDIUM` | `INVENTORY` | `n/a` | `arq-q-0880-groovy` | Shor Inventory (RSA/ECDSA) |
-| `quantum.arq-q-0881-groovy` | `HIGH` | `INVENTORY` | `n/a` | `arq-q-0881-groovy` | HNDL Inventory (ECDH/DH) |
-| `quantum.arq-q-0883-groovy` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0883-groovy` | Key material artifact (PEM/JKS) |
-| `quantum.arq-q-0884-groovy` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0884-groovy` | JWT Library Inventory (Nimbus/JJWT/Auth0) |
-| `quantum.arq-q-0885-groovy` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0885-groovy` | XMLDSIG / SAML / WS-Security Inventory (OpenSAML/Santuario/WSS4J) |
-| `quantum.arq-q-0886-groovy` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0886-groovy` | XMLDSIG Weak Algorithm (rsa-sha1/sha1 digest) |
-| `quantum.arq-q-0887-groovy` | `INFO` | `INVENTORY` | `n/a` | `arq-q-0887-groovy` | PQC Library Inventory (BouncyCastle PQC) |
-| `quantum.arq-q-0888-groovy` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0888-groovy` | Weak KDF (PBKDF2 low iterations) |
-| `quantum.arq-q-0891-groovy` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0891-groovy` | Weak Cipher (DES/3DES/RC4) - Groovy/JCE |
-| `quantum.arq-q-0892-lua` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0892-lua` | TLS Trust Bypass (lua-resty-http ssl_verify=false) |
-| `quantum.arq-q-0899-lua` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0899-lua` | Key material artifact (PEM) |
-| `quantum.arq-q-0905-lua` | `CRITICAL` | `VULNERABILITY` | `n/a` | `arq-q-0905-lua` | Embedded Private Key in Source (PEM block) - Lua |
-| `quantum.arq-q-0914-jcl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0914-jcl` | TLS Trust Bypass (curl -k / wget --no-check-certificate) in JCL |
-| `quantum.arq-q-0915-jcl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0915-jcl` | TLS Weak Protocol flags (openssl s_client / curl) in JCL |
-| `quantum.arq-q-0916-jcl` | `MEDIUM` | `VULNERABILITY` | `n/a` | `arq-q-0916-jcl` | Weak Hash (md5/sha1) in JCL jobs |
-| `quantum.arq-q-0917-jcl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0917-jcl` | Weak Cipher (DES/3DES/RC4) - OpenSSL enc in JCL |
-| `quantum.arq-q-0918-jcl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0918-jcl` | Insecure Mode (ECB) - OpenSSL enc in JCL |
-| `quantum.arq-q-0919-jcl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0919-jcl` | Legacy RSA key size (openssl genrsa 1024/2048) in JCL |
-| `quantum.arq-q-0921-jcl` | `HIGH` | `VULNERABILITY` | `n/a` | `arq-q-0921-jcl` | Hardcoded passphrase in OpenSSL command (pass:) in JCL |
+| `quantum.arq-q-0631-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0631-kotlin` | TLS Weak Protocol |
+| `quantum.arq-q-0632-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0632-kotlin` | Trust Validation Disabled |
+| `quantum.arq-q-0633-kotlin` | `HIGH` | `VULNERABILITY` | `kotlin` | `arq-q-0633-kotlin` | Weak Hash (MD5) |
+| `quantum.arq-q-0634-kotlin` | `MEDIUM` | `VULNERABILITY` | `kotlin` | `arq-q-0634-kotlin` | Weak Hash (SHA1) |
+| `quantum.arq-q-0635-kotlin` | `HIGH` | `VULNERABILITY` | `kotlin` | `arq-q-0635-kotlin` | Insecure Mode (ECB) |
+| `quantum.arq-q-0636-kotlin` | `HIGH` | `VULNERABILITY` | `kotlin` | `arq-q-0636-kotlin` | Weak Cipher (DES/3DES) |
+| `quantum.arq-q-0637-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0637-kotlin` | Legacy RSA Key Size (<=1024) |
+| `quantum.arq-q-0638-kotlin` | `MEDIUM` | `INVENTORY` | `kotlin` | `arq-q-0638-kotlin` | Shor Inventory (RSA) |
+| `quantum.arq-q-0639-kotlin` | `MEDIUM` | `INVENTORY` | `kotlin` | `arq-q-0639-kotlin` | Shor Inventory (ECDSA) |
+| `quantum.arq-q-0640-kotlin` | `HIGH` | `INVENTORY` | `kotlin` | `arq-q-0640-kotlin` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0641-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0641-kotlin` | Weak KDF (PBKDF2 low iter) |
+| `quantum.arq-q-0642-kotlin` | `MEDIUM` | `INVENTORY` | `kotlin` | `arq-q-0642-kotlin` | Non-crypto RNG signal |
+| `quantum.arq-q-0643-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0643-kotlin` | Key Material in Repo (PEM/KeyStore) |
+| `quantum.arq-q-0644-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0644-kotlin` | JWT alg=none / verification disabled |
+| `quantum.arq-q-0645-kotlin` | `MEDIUM` | `INVENTORY` | `kotlin` | `arq-q-0645-kotlin` | JWT RS/ES inventory |
+| `quantum.arq-q-0646-kotlin` | `INFO` | `INVENTORY` | `kotlin` | `arq-q-0646-kotlin` | JWT Library Inventory (Nimbus/JJWT/Auth0) |
+| `quantum.arq-q-0647-kotlin` | `INFO` | `INVENTORY` | `kotlin` | `arq-q-0647-kotlin` | XMLDSIG / SAML / WS-Security Inventory (OpenSAML/Santuario/WSS4J) |
+| `quantum.arq-q-0648-kotlin` | `HIGH` | `VULNERABILITY` | `kotlin` | `arq-q-0648-kotlin` | XMLDSIG Weak Algorithm (rsa-sha1/sha1 digest) |
+| `quantum.arq-q-0649-kotlin` | `INFO` | `INVENTORY` | `kotlin` | `arq-q-0649-kotlin` | PQC Library Inventory (BouncyCastle PQC) |
+| `quantum.arq-q-0650-kotlin` | `CRITICAL` | `VULNERABILITY` | `kotlin` | `arq-q-0650-kotlin` | Weak KDF (PBKDF2 low iterations) |
+| `quantum.arq-q-0653-ruby` | `CRITICAL` | `VULNERABILITY` | `ruby` | `arq-q-0653-ruby` | TLS Trust Bypass |
+| `quantum.arq-q-0654-ruby` | `CRITICAL` | `VULNERABILITY` | `ruby` | `arq-q-0654-ruby` | TLS Weak Protocol |
+| `quantum.arq-q-0655-ruby` | `HIGH` | `VULNERABILITY` | `ruby` | `arq-q-0655-ruby` | Weak Hash (MD5) |
+| `quantum.arq-q-0656-ruby` | `MEDIUM` | `VULNERABILITY` | `ruby` | `arq-q-0656-ruby` | Weak Hash (SHA1) |
+| `quantum.arq-q-0657-ruby` | `HIGH` | `VULNERABILITY` | `ruby` | `arq-q-0657-ruby` | Weak Cipher (DES/3DES/RC4) |
+| `quantum.arq-q-0658-ruby` | `HIGH` | `VULNERABILITY` | `ruby` | `arq-q-0658-ruby` | Insecure Mode (ECB) |
+| `quantum.arq-q-0659-ruby` | `CRITICAL` | `VULNERABILITY` | `ruby` | `arq-q-0659-ruby` | Legacy RSA Key Size (<=1024) |
+| `quantum.arq-q-0660-ruby` | `MEDIUM` | `INVENTORY` | `ruby` | `arq-q-0660-ruby` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0661-ruby` | `HIGH` | `INVENTORY` | `ruby` | `arq-q-0661-ruby` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0662-ruby` | `CRITICAL` | `VULNERABILITY` | `ruby` | `arq-q-0662-ruby` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0663-ruby` | `CRITICAL` | `VULNERABILITY` | `ruby` | `arq-q-0663-ruby` | JWT alg=none / verification disabled |
+| `quantum.arq-q-0664-ruby` | `MEDIUM` | `INVENTORY` | `ruby` | `arq-q-0664-ruby` | JWT RS/ES inventory |
+| `quantum.arq-q-0665-ruby` | `CRITICAL` | `VULNERABILITY` | `ruby` | `arq-q-0665-ruby` | Weak KDF (Ruby OpenSSL PBKDF2 low iterations) |
+| `quantum.arq-q-0669-ruby` | `INFO` | `INVENTORY` | `ruby` | `arq-q-0669-ruby` | XMLDSIG / SAML Inventory (ruby-saml/xmlsecurity) |
+| `quantum.arq-q-0671-php` | `CRITICAL` | `VULNERABILITY` | `php` | `arq-q-0671-php` | TLS Trust Bypass |
+| `quantum.arq-q-0672-php` | `HIGH` | `VULNERABILITY` | `php` | `arq-q-0672-php` | Weak Hash (MD5) |
+| `quantum.arq-q-0673-php` | `MEDIUM` | `VULNERABILITY` | `php` | `arq-q-0673-php` | Weak Hash (SHA1) |
+| `quantum.arq-q-0674-php` | `HIGH` | `VULNERABILITY` | `php` | `arq-q-0674-php` | Weak Cipher / Insecure Mode (ECB) |
+| `quantum.arq-q-0675-php` | `HIGH` | `VULNERABILITY` | `php` | `arq-q-0675-php` | Weak Cipher (DES/3DES/RC4) |
+| `quantum.arq-q-0676-php` | `CRITICAL` | `VULNERABILITY` | `php` | `arq-q-0676-php` | Legacy RSA Key Size (<=1024) |
+| `quantum.arq-q-0677-php` | `MEDIUM` | `INVENTORY` | `php` | `arq-q-0677-php` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0679-php` | `CRITICAL` | `VULNERABILITY` | `php` | `arq-q-0679-php` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0680-php` | `CRITICAL` | `VULNERABILITY` | `php` | `arq-q-0680-php` | JWT alg=none / verification disabled |
+| `quantum.arq-q-0681-php` | `MEDIUM` | `INVENTORY` | `php` | `arq-q-0681-php` | JWT RS/ES inventory |
+| `quantum.arq-q-0683-php` | `CRITICAL` | `VULNERABILITY` | `php` | `arq-q-0683-php` | TLS Weak Protocol (PHP cURL/stream TLSv1.0/1.1) |
+| `quantum.arq-q-0684-php` | `CRITICAL` | `VULNERABILITY` | `php` | `arq-q-0684-php` | Weak KDF (PHP hash_pbkdf2 low iterations) |
+| `quantum.arq-q-0687-php` | `INFO` | `INVENTORY` | `php` | `arq-q-0687-php` | XMLDSIG / SAML Inventory (xmlseclibs/php-saml) |
+| `quantum.arq-q-0689-rust` | `CRITICAL` | `VULNERABILITY` | `rust` | `arq-q-0689-rust` | TLS Trust Bypass |
+| `quantum.arq-q-0690-rust` | `CRITICAL` | `VULNERABILITY` | `rust` | `arq-q-0690-rust` | TLS Dangerous Config (rustls) |
+| `quantum.arq-q-0691-rust` | `HIGH` | `VULNERABILITY` | `rust` | `arq-q-0691-rust` | Weak Hash (MD5) |
+| `quantum.arq-q-0692-rust` | `MEDIUM` | `VULNERABILITY` | `rust` | `arq-q-0692-rust` | Weak Hash (SHA1) |
+| `quantum.arq-q-0693-rust` | `HIGH` | `VULNERABILITY` | `rust` | `arq-q-0693-rust` | Weak Cipher/Mode (ECB) |
+| `quantum.arq-q-0694-rust` | `MEDIUM` | `INVENTORY` | `rust` | `arq-q-0694-rust` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0695-rust` | `HIGH` | `INVENTORY` | `rust` | `arq-q-0695-rust` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0696-rust` | `CRITICAL` | `VULNERABILITY` | `rust` | `arq-q-0696-rust` | Weak KDF (PBKDF2 low iter) |
+| `quantum.arq-q-0697-rust` | `MEDIUM` | `INVENTORY` | `rust` | `arq-q-0697-rust` | Non-crypto RNG signal |
+| `quantum.arq-q-0698-rust` | `CRITICAL` | `VULNERABILITY` | `rust` | `arq-q-0698-rust` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0700-rust` | `MEDIUM` | `INVENTORY` | `rust` | `arq-q-0700-rust` | JWT RS/ES inventory |
+| `quantum.arq-q-0701-rust` | `CRITICAL` | `VULNERABILITY` | `rust` | `arq-q-0701-rust` | TLS Weak Protocol (Rust openssl SslMethod tlsv1/tlsv1_1) |
+| `quantum.arq-q-0702-rust` | `CRITICAL` | `VULNERABILITY` | `rust` | `arq-q-0702-rust` | Legacy RSA Key Size (rsa crate bits<=1024) |
+| `quantum.arq-q-0703-rust` | `HIGH` | `VULNERABILITY` | `rust` | `arq-q-0703-rust` | Weak Cipher (openssl Cipher::des_ede3/rc4) |
+| `quantum.arq-q-0704-rust` | `INFO` | `INVENTORY` | `rust` | `arq-q-0704-rust` | PQC Library Inventory (oqs/pqcrypto) |
+| `quantum.arq-q-0707-swift` | `HIGH` | `VULNERABILITY` | `swift` | `arq-q-0707-swift` | Weak Hash (MD5) |
+| `quantum.arq-q-0708-swift` | `MEDIUM` | `VULNERABILITY` | `swift` | `arq-q-0708-swift` | Weak Hash (SHA1) |
+| `quantum.arq-q-0709-swift` | `HIGH` | `VULNERABILITY` | `swift` | `arq-q-0709-swift` | Insecure Mode (ECB) |
+| `quantum.arq-q-0710-swift` | `HIGH` | `VULNERABILITY` | `swift` | `arq-q-0710-swift` | Weak Cipher (DES/3DES/RC4) |
+| `quantum.arq-q-0711-swift` | `MEDIUM` | `INVENTORY` | `swift` | `arq-q-0711-swift` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0712-swift` | `HIGH` | `INVENTORY` | `swift` | `arq-q-0712-swift` | HNDL Inventory (ECDH) |
+| `quantum.arq-q-0713-swift` | `MEDIUM` | `INVENTORY` | `swift` | `arq-q-0713-swift` | Non-crypto RNG signal |
+| `quantum.arq-q-0714-swift` | `CRITICAL` | `VULNERABILITY` | `swift` | `arq-q-0714-swift` | Key Material in Repo (PEM/PKCS12) |
+| `quantum.arq-q-0716-swift` | `MEDIUM` | `INVENTORY` | `swift` | `arq-q-0716-swift` | JWT RS/ES inventory |
+| `quantum.arq-q-0717-swift` | `HIGH` | `VULNERABILITY` | `swift` | `arq-q-0717-swift` | TLS Weak Config (iOS ATS arbitrary loads in Info.plist) |
+| `quantum.arq-q-0718-swift` | `CRITICAL` | `VULNERABILITY` | `swift` | `arq-q-0718-swift` | Legacy RSA Key Size (SecKey keygen kSecAttrKeySizeInBits=1024) |
+| `quantum.arq-q-0719-swift` | `CRITICAL` | `VULNERABILITY` | `swift` | `arq-q-0719-swift` | Weak KDF (CCKeyDerivationPBKDF low iterations) |
+| `quantum.arq-q-0722-swift` | `HIGH` | `VULNERABILITY` | `swift` | `arq-q-0722-swift` | TLS Weak Protocol (SecureTransport/CFNetwork) - Swift |
+| `quantum.arq-q-0723-swift` | `CRITICAL` | `VULNERABILITY` | `swift` | `arq-q-0723-swift` | Embedded Private Key in Source (PEM block) - Swift |
+| `quantum.arq-q-0724-erlang` | `CRITICAL` | `VULNERABILITY` | `erlang` | `arq-q-0724-erlang` | TLS Trust Bypass |
+| `quantum.arq-q-0725-erlang` | `HIGH` | `VULNERABILITY` | `erlang` | `arq-q-0725-erlang` | Weak Hash (MD5) |
+| `quantum.arq-q-0726-erlang` | `MEDIUM` | `VULNERABILITY` | `erlang` | `arq-q-0726-erlang` | Weak Hash (SHA1) |
+| `quantum.arq-q-0728-erlang` | `MEDIUM` | `INVENTORY` | `erlang` | `arq-q-0728-erlang` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0729-erlang` | `HIGH` | `INVENTORY` | `erlang` | `arq-q-0729-erlang` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0730-erlang` | `CRITICAL` | `VULNERABILITY` | `erlang` | `arq-q-0730-erlang` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0731-erlang` | `CRITICAL` | `VULNERABILITY` | `erlang` | `arq-q-0731-erlang` | TLS Weak Protocol (:ssl versions tlsv1/tlsv1.1) |
+| `quantum.arq-q-0732-erlang` | `HIGH` | `VULNERABILITY` | `erlang` | `arq-q-0732-erlang` | Insecure Mode (ECB via :crypto.crypto_one_time) |
+| `quantum.arq-q-0735-erlang` | `INFO` | `INVENTORY` | `erlang` | `arq-q-0735-erlang` | JWT Library Inventory (jose) |
+| `quantum.arq-q-0737-erlang` | `CRITICAL` | `VULNERABILITY` | `erlang` | `arq-q-0737-erlang` | Embedded Private Key in Source (PEM block) - Erlang |
+| `quantum.arq-q-0739-elixir` | `CRITICAL` | `VULNERABILITY` | `elixir` | `arq-q-0739-elixir` | TLS Trust Bypass |
+| `quantum.arq-q-0740-elixir` | `HIGH` | `VULNERABILITY` | `elixir` | `arq-q-0740-elixir` | Weak Hash (MD5) |
+| `quantum.arq-q-0741-elixir` | `MEDIUM` | `VULNERABILITY` | `elixir` | `arq-q-0741-elixir` | Weak Hash (SHA1) |
+| `quantum.arq-q-0742-elixir` | `MEDIUM` | `INVENTORY` | `elixir` | `arq-q-0742-elixir` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0743-elixir` | `HIGH` | `INVENTORY` | `elixir` | `arq-q-0743-elixir` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0745-elixir` | `MEDIUM` | `INVENTORY` | `elixir` | `arq-q-0745-elixir` | JWT RS/ES inventory |
+| `quantum.arq-q-0746-elixir` | `CRITICAL` | `VULNERABILITY` | `elixir` | `arq-q-0746-elixir` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0747-elixir` | `CRITICAL` | `VULNERABILITY` | `elixir` | `arq-q-0747-elixir` | TLS Weak Protocol (:ssl versions tlsv1/tlsv1.1) |
+| `quantum.arq-q-0748-elixir` | `HIGH` | `VULNERABILITY` | `elixir` | `arq-q-0748-elixir` | Insecure Mode (ECB via :crypto.crypto_one_time) |
+| `quantum.arq-q-0752-elixir` | `HIGH` | `VULNERABILITY` | `elixir` | `arq-q-0752-elixir` | Weak Cipher (DES/3DES/RC4) - Erlang/Elixir :crypto |
+| `quantum.arq-q-0754-elixir` | `CRITICAL` | `VULNERABILITY` | `elixir` | `arq-q-0754-elixir` | Embedded Private Key in Source (PEM block) - Elixir |
+| `quantum.arq-q-0759-zig` | `CRITICAL` | `VULNERABILITY` | `zig` | `arq-q-0759-zig` | Key Material in Repo (PEM) |
+| `quantum.arq-q-0760-zig` | `INFO` | `INVENTORY` | `zig` | `arq-q-0760-zig` | Zig std.crypto usage inventory |
+| `quantum.arq-q-0765-zig` | `CRITICAL` | `VULNERABILITY` | `zig` | `arq-q-0765-zig` | Embedded Private Key in Source (PEM block) - Zig |
+| `quantum.arq-q-0766-shell` | `CRITICAL` | `VULNERABILITY` | `shell` | `arq-q-0766-shell` | TLS Trust Bypass (curl -k) |
+| `quantum.arq-q-0767-shell` | `CRITICAL` | `VULNERABILITY` | `shell` | `arq-q-0767-shell` | TLS Trust Bypass (wget) |
+| `quantum.arq-q-0768-shell` | `CRITICAL` | `VULNERABILITY` | `shell` | `arq-q-0768-shell` | TLS Weak Protocol (openssl s_client) |
+| `quantum.arq-q-0769-shell` | `HIGH` | `VULNERABILITY` | `shell` | `arq-q-0769-shell` | Weak Hash (openssl dgst) |
+| `quantum.arq-q-0770-shell` | `HIGH` | `VULNERABILITY` | `shell` | `arq-q-0770-shell` | Weak Cipher (openssl enc DES/3DES/RC4) |
+| `quantum.arq-q-0771-shell` | `HIGH` | `VULNERABILITY` | `shell` | `arq-q-0771-shell` | Insecure Mode (openssl enc ECB) |
+| `quantum.arq-q-0772-shell` | `CRITICAL` | `VULNERABILITY` | `shell` | `arq-q-0772-shell` | Legacy RSA key size (openssl genrsa) |
+| `quantum.arq-q-0773-shell` | `MEDIUM` | `INVENTORY` | `shell` | `arq-q-0773-shell` | Shor Inventory (openssl genrsa 2048+) |
+| `quantum.arq-q-0774-shell` | `HIGH` | `INVENTORY` | `shell` | `arq-q-0774-shell` | HNDL Inventory (openssl dhparam) |
+| `quantum.arq-q-0775-shell` | `CRITICAL` | `VULNERABILITY` | `shell` | `arq-q-0775-shell` | KeyStore password hardcoded (keytool -storepass) |
+| `quantum.arq-q-0776-shell` | `CRITICAL` | `VULNERABILITY` | `shell` | `arq-q-0776-shell` | Key material in repo (PEM/PFX/JKS) |
+| `quantum.arq-q-0777-shell` | `HIGH` | `VULNERABILITY` | `shell` | `arq-q-0777-shell` | SSH StrictHostKeyChecking disabled |
+| `quantum.arq-q-0782-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0782-powershell` | TLS Trust Bypass (ServerCertificateValidationCallback) |
+| `quantum.arq-q-0783-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0783-powershell` | TLS Protocol forced to TLS1.0/SSL3 |
+| `quantum.arq-q-0784-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0784-powershell` | Invoke-WebRequest SkipCertificateCheck |
+| `quantum.arq-q-0785-powershell` | `HIGH` | `VULNERABILITY` | `powershell` | `arq-q-0785-powershell` | Weak Hash (MD5) |
+| `quantum.arq-q-0786-powershell` | `MEDIUM` | `VULNERABILITY` | `powershell` | `arq-q-0786-powershell` | Weak Hash (SHA1) |
+| `quantum.arq-q-0787-powershell` | `HIGH` | `VULNERABILITY` | `powershell` | `arq-q-0787-powershell` | Weak Cipher (DES/3DES/RC2) |
+| `quantum.arq-q-0788-powershell` | `HIGH` | `VULNERABILITY` | `powershell` | `arq-q-0788-powershell` | Insecure Mode (ECB) |
+| `quantum.arq-q-0789-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0789-powershell` | Legacy RSA key size (1024) |
+| `quantum.arq-q-0790-powershell` | `MEDIUM` | `INVENTORY` | `powershell` | `arq-q-0790-powershell` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0791-powershell` | `HIGH` | `INVENTORY` | `powershell` | `arq-q-0791-powershell` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0792-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0792-powershell` | Weak KDF params (PBKDF2) |
+| `quantum.arq-q-0793-powershell` | `MEDIUM` | `INVENTORY` | `powershell` | `arq-q-0793-powershell` | Non-crypto RNG signal |
+| `quantum.arq-q-0794-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0794-powershell` | Key material in repo (PEM/PFX) |
+| `quantum.arq-q-0795-powershell` | `CRITICAL` | `VULNERABILITY` | `powershell` | `arq-q-0795-powershell` | JWT alg=none / validation disabled |
+| `quantum.arq-q-0798-plsql` | `HIGH` | `VULNERABILITY` | `plsql` | `arq-q-0798-plsql` | Weak Hash (DBMS_CRYPTO MD5) |
+| `quantum.arq-q-0799-plsql` | `MEDIUM` | `VULNERABILITY` | `plsql` | `arq-q-0799-plsql` | Weak Hash (DBMS_CRYPTO SHA1) |
+| `quantum.arq-q-0800-plsql` | `HIGH` | `VULNERABILITY` | `plsql` | `arq-q-0800-plsql` | Weak Cipher (DES/3DES) |
+| `quantum.arq-q-0808-plsql` | `HIGH` | `VULNERABILITY` | `plsql` | `arq-q-0808-plsql` | Key Material Artifact (Oracle Wallet / P12 / SSO) |
+| `quantum.arq-q-0809-tsql` | `HIGH` | `VULNERABILITY` | `tsql` | `arq-q-0809-tsql` | Weak Hash (HASHBYTES MD5) |
+| `quantum.arq-q-0810-tsql` | `MEDIUM` | `VULNERABILITY` | `tsql` | `arq-q-0810-tsql` | Weak Hash (HASHBYTES SHA1) |
+| `quantum.arq-q-0811-tsql` | `HIGH` | `VULNERABILITY` | `tsql` | `arq-q-0811-tsql` | Weak cipher via CREATE SYMMETRIC KEY |
+| `quantum.arq-q-0816-tsql` | `HIGH` | `VULNERABILITY` | `tsql` | `arq-q-0816-tsql` | Hardcoded Passphrase (EncryptByPassPhrase / DecryptByPassPhrase) |
+| `quantum.arq-q-0817-tsql` | `HIGH` | `VULNERABILITY` | `tsql` | `arq-q-0817-tsql` | Key Material Artifact in SQL Scripts (PEM/PFX) |
+| `quantum.arq-q-0818-c` | `CRITICAL` | `VULNERABILITY` | `c` | `arq-q-0818-c` | TLS Trust Bypass (OpenSSL VERIFY_NONE) |
+| `quantum.arq-q-0819-c` | `CRITICAL` | `VULNERABILITY` | `c` | `arq-q-0819-c` | TLS Weak Protocol (OpenSSL method) |
+| `quantum.arq-q-0820-c` | `HIGH` | `VULNERABILITY` | `c` | `arq-q-0820-c` | Weak Hash (EVP_md5) |
+| `quantum.arq-q-0821-c` | `MEDIUM` | `VULNERABILITY` | `c` | `arq-q-0821-c` | Weak Hash (EVP_sha1) |
+| `quantum.arq-q-0822-c` | `HIGH` | `VULNERABILITY` | `c` | `arq-q-0822-c` | Weak Cipher (DES/3DES/RC4) |
+| `quantum.arq-q-0823-c` | `HIGH` | `VULNERABILITY` | `c` | `arq-q-0823-c` | Insecure Mode (ECB) |
+| `quantum.arq-q-0824-c` | `CRITICAL` | `VULNERABILITY` | `c` | `arq-q-0824-c` | Legacy RSA key size (1024) |
+| `quantum.arq-q-0825-c` | `MEDIUM` | `INVENTORY` | `c` | `arq-q-0825-c` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0826-c` | `HIGH` | `INVENTORY` | `c` | `arq-q-0826-c` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0828-c` | `CRITICAL` | `VULNERABILITY` | `c` | `arq-q-0828-c` | Key material artifact (PEM) |
+| `quantum.arq-q-0829-c` | `CRITICAL` | `VULNERABILITY` | `c` | `arq-q-0829-c` | Weak KDF (OpenSSL PKCS5_PBKDF2_HMAC low iterations) |
+| `quantum.arq-q-0831-c` | `INFO` | `INVENTORY` | `c` | `arq-q-0831-c` | PQC Library Inventory (liboqs/OpenQuantumSafe) |
+| `quantum.arq-q-0833-c` | `CRITICAL` | `VULNERABILITY` | `c` | `arq-q-0833-c` | Embedded Private Key in Source (PEM block) - C |
+| `quantum.arq-q-0834-objectivec` | `CRITICAL` | `VULNERABILITY` | `objectivec` | `arq-q-0834-objectivec` | TLS Trust Bypass (NSURLSession delegate) |
+| `quantum.arq-q-0835-objectivec` | `CRITICAL` | `VULNERABILITY` | `objectivec` | `arq-q-0835-objectivec` | TLS Trust Bypass (kCFStreamSSLValidatesCertificateChain=false) |
+| `quantum.arq-q-0836-objectivec` | `HIGH` | `VULNERABILITY` | `objectivec` | `arq-q-0836-objectivec` | Weak Hash (CC_MD5) |
+| `quantum.arq-q-0837-objectivec` | `MEDIUM` | `VULNERABILITY` | `objectivec` | `arq-q-0837-objectivec` | Weak Hash (CC_SHA1) |
+| `quantum.arq-q-0838-objectivec` | `HIGH` | `VULNERABILITY` | `objectivec` | `arq-q-0838-objectivec` | Insecure Mode (ECB) |
+| `quantum.arq-q-0839-objectivec` | `HIGH` | `VULNERABILITY` | `objectivec` | `arq-q-0839-objectivec` | Weak Cipher (DES/3DES) |
+| `quantum.arq-q-0840-objectivec` | `MEDIUM` | `INVENTORY` | `objectivec` | `arq-q-0840-objectivec` | Shor Inventory (RSA/EC) |
+| `quantum.arq-q-0842-objectivec` | `CRITICAL` | `VULNERABILITY` | `objectivec` | `arq-q-0842-objectivec` | Key material artifact (.p12/.mobileprovision) |
+| `quantum.arq-q-0845-objectivec` | `HIGH` | `VULNERABILITY` | `objectivec` | `arq-q-0845-objectivec` | TLS Weak Config (iOS ATS arbitrary loads in Info.plist) |
+| `quantum.arq-q-0846-objectivec` | `CRITICAL` | `VULNERABILITY` | `objectivec` | `arq-q-0846-objectivec` | Legacy RSA Key Size (SecKey keygen kSecAttrKeySizeInBits=1024) |
+| `quantum.arq-q-0847-objectivec` | `CRITICAL` | `VULNERABILITY` | `objectivec` | `arq-q-0847-objectivec` | Weak KDF (CCKeyDerivationPBKDF low iterations) |
+| `quantum.arq-q-0850-objectivec` | `HIGH` | `VULNERABILITY` | `objectivec` | `arq-q-0850-objectivec` | TLS Weak Protocol (SecureTransport/CFNetwork) - iOS |
+| `quantum.arq-q-0851-objectivec` | `CRITICAL` | `VULNERABILITY` | `objectivec` | `arq-q-0851-objectivec` | Embedded Private Key in Source (PEM block) - iOS |
+| `quantum.arq-q-0856-abap` | `CRITICAL` | `VULNERABILITY` | `abap` | `arq-q-0856-abap` | Key material artifact (PSE/CRT/KEY) |
+| `quantum.arq-q-0859-perl` | `CRITICAL` | `VULNERABILITY` | `perl` | `arq-q-0859-perl` | TLS Trust Bypass (IO::Socket::SSL verify) |
+| `quantum.arq-q-0860-perl` | `CRITICAL` | `VULNERABILITY` | `perl` | `arq-q-0860-perl` | TLS Weak protocol forced |
+| `quantum.arq-q-0861-perl` | `HIGH` | `VULNERABILITY` | `perl` | `arq-q-0861-perl` | Weak Hash (Digest::MD5) |
+| `quantum.arq-q-0862-perl` | `MEDIUM` | `VULNERABILITY` | `perl` | `arq-q-0862-perl` | Weak Hash (Digest::SHA1) |
+| `quantum.arq-q-0863-perl` | `HIGH` | `VULNERABILITY` | `perl` | `arq-q-0863-perl` | Weak Cipher (DES/3DES) |
+| `quantum.arq-q-0864-perl` | `HIGH` | `VULNERABILITY` | `perl` | `arq-q-0864-perl` | Insecure Mode (ECB) |
+| `quantum.arq-q-0866-perl` | `MEDIUM` | `INVENTORY` | `perl` | `arq-q-0866-perl` | Shor Inventory (RSA/ECC) |
+| `quantum.arq-q-0868-perl` | `CRITICAL` | `VULNERABILITY` | `perl` | `arq-q-0868-perl` | Key material artifact (PEM) |
+| `quantum.arq-q-0872-perl` | `CRITICAL` | `VULNERABILITY` | `perl` | `arq-q-0872-perl` | Embedded Private Key in Source (PEM block) - Perl |
+| `quantum.arq-q-0874-groovy` | `CRITICAL` | `VULNERABILITY` | `groovy` | `arq-q-0874-groovy` | TLS Trust Bypass (HostnameVerifier/TrustManager) |
+| `quantum.arq-q-0875-groovy` | `CRITICAL` | `VULNERABILITY` | `groovy` | `arq-q-0875-groovy` | TLS Weak Protocol |
+| `quantum.arq-q-0876-groovy` | `HIGH` | `VULNERABILITY` | `groovy` | `arq-q-0876-groovy` | Weak Hash (MD5) |
+| `quantum.arq-q-0877-groovy` | `MEDIUM` | `VULNERABILITY` | `groovy` | `arq-q-0877-groovy` | Weak Hash (SHA1) |
+| `quantum.arq-q-0878-groovy` | `HIGH` | `VULNERABILITY` | `groovy` | `arq-q-0878-groovy` | Insecure Mode (ECB) |
+| `quantum.arq-q-0879-groovy` | `CRITICAL` | `VULNERABILITY` | `groovy` | `arq-q-0879-groovy` | Legacy RSA key size |
+| `quantum.arq-q-0880-groovy` | `MEDIUM` | `INVENTORY` | `groovy` | `arq-q-0880-groovy` | Shor Inventory (RSA/ECDSA) |
+| `quantum.arq-q-0881-groovy` | `HIGH` | `INVENTORY` | `groovy` | `arq-q-0881-groovy` | HNDL Inventory (ECDH/DH) |
+| `quantum.arq-q-0883-groovy` | `CRITICAL` | `VULNERABILITY` | `groovy` | `arq-q-0883-groovy` | Key material artifact (PEM/JKS) |
+| `quantum.arq-q-0884-groovy` | `INFO` | `INVENTORY` | `groovy` | `arq-q-0884-groovy` | JWT Library Inventory (Nimbus/JJWT/Auth0) |
+| `quantum.arq-q-0885-groovy` | `INFO` | `INVENTORY` | `groovy` | `arq-q-0885-groovy` | XMLDSIG / SAML / WS-Security Inventory (OpenSAML/Santuario/WSS4J) |
+| `quantum.arq-q-0886-groovy` | `HIGH` | `VULNERABILITY` | `groovy` | `arq-q-0886-groovy` | XMLDSIG Weak Algorithm (rsa-sha1/sha1 digest) |
+| `quantum.arq-q-0887-groovy` | `INFO` | `INVENTORY` | `groovy` | `arq-q-0887-groovy` | PQC Library Inventory (BouncyCastle PQC) |
+| `quantum.arq-q-0888-groovy` | `CRITICAL` | `VULNERABILITY` | `groovy` | `arq-q-0888-groovy` | Weak KDF (PBKDF2 low iterations) |
+| `quantum.arq-q-0891-groovy` | `HIGH` | `VULNERABILITY` | `groovy` | `arq-q-0891-groovy` | Weak Cipher (DES/3DES/RC4) - Groovy/JCE |
+| `quantum.arq-q-0892-lua` | `CRITICAL` | `VULNERABILITY` | `lua` | `arq-q-0892-lua` | TLS Trust Bypass (lua-resty-http ssl_verify=false) |
+| `quantum.arq-q-0899-lua` | `CRITICAL` | `VULNERABILITY` | `lua` | `arq-q-0899-lua` | Key material artifact (PEM) |
+| `quantum.arq-q-0905-lua` | `CRITICAL` | `VULNERABILITY` | `lua` | `arq-q-0905-lua` | Embedded Private Key in Source (PEM block) - Lua |
+| `quantum.arq-q-0914-jcl` | `HIGH` | `VULNERABILITY` | `jcl` | `arq-q-0914-jcl` | TLS Trust Bypass (curl -k / wget --no-check-certificate) in JCL |
+| `quantum.arq-q-0915-jcl` | `HIGH` | `VULNERABILITY` | `jcl` | `arq-q-0915-jcl` | TLS Weak Protocol flags (openssl s_client / curl) in JCL |
+| `quantum.arq-q-0916-jcl` | `MEDIUM` | `VULNERABILITY` | `jcl` | `arq-q-0916-jcl` | Weak Hash (md5/sha1) in JCL jobs |
+| `quantum.arq-q-0917-jcl` | `HIGH` | `VULNERABILITY` | `jcl` | `arq-q-0917-jcl` | Weak Cipher (DES/3DES/RC4) - OpenSSL enc in JCL |
+| `quantum.arq-q-0918-jcl` | `HIGH` | `VULNERABILITY` | `jcl` | `arq-q-0918-jcl` | Insecure Mode (ECB) - OpenSSL enc in JCL |
+| `quantum.arq-q-0919-jcl` | `HIGH` | `VULNERABILITY` | `jcl` | `arq-q-0919-jcl` | Legacy RSA key size (openssl genrsa 1024/2048) in JCL |
+| `quantum.arq-q-0921-jcl` | `HIGH` | `VULNERABILITY` | `jcl` | `arq-q-0921-jcl` | Hardcoded passphrase in OpenSSL command (pass:) in JCL |
 | `quantum.arq-q-0922-config` | `CRITICAL` | `VULNERABILITY` | `config` | `arq-q-0922-config` | Nginx TLS Weak Protocols |
 | `quantum.arq-q-0923-config` | `HIGH` | `VULNERABILITY` | `config` | `arq-q-0923-config` | Nginx Insecure Cipher Suites |
 | `quantum.arq-q-0924-config` | `HIGH` | `VULNERABILITY` | `config` | `arq-q-0924-config` | Nginx Client Cert Verification Disabled |
