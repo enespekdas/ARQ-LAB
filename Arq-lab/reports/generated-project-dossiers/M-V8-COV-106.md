@@ -26,11 +26,11 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, native, ops, scripts, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, native, ops, scripts, secrets, services, sql, tests, validation, vendor`
 - Runtime role: `Mixed native coverage pack F targeting the tail of the native and scripting rule catalog to close the remaining surfaced-coverage gap.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `native/quantum-coverage-native-f/cpp/rule_022.cpp, native/quantum-coverage-native-f/groovy/rule_003.groovy, native/quantum-coverage-native-f/groovy/rule_004.groovy, native/quantum-coverage-native-f/groovy/rule_005.groovy, native/quantum-coverage-native-f/groovy/rule_006.groovy, native/quantum-coverage-native-f/groovy/rule_007.groovy, native/quantum-coverage-native-f/groovy/rule_008.groovy, native/quantum-coverage-native-f/groovy/rule_009.groovy, native/quantum-coverage-native-f/groovy/rule_010.groovy, native/quantum-coverage-native-f/groovy/rule_011.groovy, native/quantum-coverage-native-f/groovy/rule_012.groovy, native/quantum-coverage-native-f/jcl/rule_016.jcl, native/quantum-coverage-native-f/jcl/rule_017.jcl, native/quantum-coverage-native-f/jcl/rule_018.jcl, native/quantum-coverage-native-f/jcl/rule_019.jcl, native/quantum-coverage-native-f/jcl/rule_020.jcl, native/quantum-coverage-native-f/jcl/rule_021.jcl, native/quantum-coverage-native-f/kotlin/rule_027.kt, native/quantum-coverage-native-f/kotlin/rule_028.kt, native/quantum-coverage-native-f/kotlin/rule_029.kt, native/quantum-coverage-native-f/kotlin/rule_030.kt, native/quantum-coverage-native-f/lua/rule_013.lua, native/quantum-coverage-native-f/lua/rule_014.lua, native/quantum-coverage-native-f/lua/rule_015.lua, native/quantum-coverage-native-f/perl/rule_001.pl, native/quantum-coverage-native-f/perl/rule_002.pl, native/quantum-coverage-native-f/scala/rule_023.scala, native/quantum-coverage-native-f/scala/rule_024.scala, native/quantum-coverage-native-f/scala/rule_025.scala, native/quantum-coverage-native-f/scala/rule_026.scala`
+- Crypto/TLS flow if relevant: `native/quantum-coverage-native-f/cpp/rule_022.cpp, native/quantum-coverage-native-f/groovy/rule_003.groovy, native/quantum-coverage-native-f/groovy/rule_004.groovy, native/quantum-coverage-native-f/groovy/rule_005.groovy, native/quantum-coverage-native-f/groovy/rule_006.groovy, native/quantum-coverage-native-f/groovy/rule_007.groovy, native/quantum-coverage-native-f/groovy/rule_008.groovy, native/quantum-coverage-native-f/groovy/rule_011.groovy, native/quantum-coverage-native-f/groovy/rule_012.groovy, native/quantum-coverage-native-f/jcl/rule_016.jcl, native/quantum-coverage-native-f/jcl/rule_017.jcl, native/quantum-coverage-native-f/jcl/rule_018.jcl, native/quantum-coverage-native-f/jcl/rule_019.jcl, native/quantum-coverage-native-f/jcl/rule_020.jcl, native/quantum-coverage-native-f/jcl/rule_021.jcl, native/quantum-coverage-native-f/lua/rule_013.lua, native/quantum-coverage-native-f/module-023/CMakeLists.txt, native/quantum-coverage-native-f/scala/rule_024.scala, native/quantum-coverage-native-f/scala/rule_025.scala, native/quantum-coverage-native-f/scala/rule_026.scala, native/quantum-coverage-native-f/scala/rule_027.scala, secrets/quantum-coverage-native-f/keys/rule_001.pem, secrets/quantum-coverage-native-f/keys/rule_002.pem, secrets/quantum-coverage-native-f/keys/rule_009.jks, secrets/quantum-coverage-native-f/keys/rule_014.pem, secrets/quantum-coverage-native-f/keys/rule_015.pem, services/quantum-coverage-native-f/module-010/pom.xml, services/quantum-coverage-native-f/module-028/pom.xml, services/quantum-coverage-native-f/module-029/pom.xml, services/quantum-coverage-native-f/module-030/build.sbt`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -110,8 +110,7 @@ quantum-coverage-native-f
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-f
@@ -124,8 +123,6 @@ quantum-coverage-native-f
 |       |   |-- rule_006.groovy
 |       |   |-- rule_007.groovy
 |       |   |-- rule_008.groovy
-|       |   |-- rule_009.groovy
-|       |   |-- rule_010.groovy
 |       |   |-- rule_011.groovy
 |       |   `-- rule_012.groovy
 |       |-- jcl
@@ -135,23 +132,15 @@ quantum-coverage-native-f
 |       |   |-- rule_019.jcl
 |       |   |-- rule_020.jcl
 |       |   `-- rule_021.jcl
-|       |-- kotlin
-|       |   |-- rule_027.kt
-|       |   |-- rule_028.kt
-|       |   |-- rule_029.kt
-|       |   `-- rule_030.kt
 |       |-- lua
-|       |   |-- rule_013.lua
-|       |   |-- rule_014.lua
-|       |   `-- rule_015.lua
-|       |-- perl
-|       |   |-- rule_001.pl
-|       |   `-- rule_002.pl
+|       |   `-- rule_013.lua
+|       |-- module-023
+|       |   `-- CMakeLists.txt
 |       `-- scala
-|           |-- rule_023.scala
 |           |-- rule_024.scala
 |           |-- rule_025.scala
-|           `-- rule_026.scala
+|           |-- rule_026.scala
+|           `-- rule_027.scala
 |-- ops
 |   `-- playbooks
 |       |-- runbook-01.md
@@ -213,11 +202,28 @@ quantum-coverage-native-f
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-native-f
+|       `-- keys
+|           |-- rule_001.pem
+|           |-- rule_002.pem
+|           |-- rule_009.jks
+|           |-- rule_014.pem
+|           `-- rule_015.pem
+|-- services
+|   `-- quantum-coverage-native-f
+|       |-- module-010
+|       |   `-- pom.xml
+|       |-- module-028
+|       |   `-- pom.xml
+|       |-- module-029
+|       |   `-- pom.xml
+|       `-- module-030
+|           `-- build.sbt
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -279,8 +285,7 @@ quantum-coverage-native-f
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -375,38 +380,28 @@ quantum-coverage-native-f
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
-| native/quantum-coverage-native-f/cpp/rule_022.cpp | generated | 3 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_003.groovy | generated | 3 | Generated or derived project artifact related to Rule 003. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_004.groovy | generated | 3 | Generated or derived project artifact related to Rule 004. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_005.groovy | generated | 3 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_006.groovy | generated | 3 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_007.groovy | generated | 3 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_008.groovy | generated | 3 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_009.groovy | generated | 3 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_010.groovy | generated | 3 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_011.groovy | generated | 3 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/groovy/rule_012.groovy | generated | 3 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/jcl/rule_016.jcl | generated | 3 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/jcl/rule_017.jcl | generated | 3 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/jcl/rule_018.jcl | generated | 3 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/jcl/rule_019.jcl | generated | 3 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/jcl/rule_020.jcl | generated | 3 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/jcl/rule_021.jcl | generated | 3 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/kotlin/rule_027.kt | live-code | 3 | Runtime business module contributing to Rule 027. | yes | no | no | yes | yes | no |
-| native/quantum-coverage-native-f/kotlin/rule_028.kt | live-code | 3 | Runtime business module contributing to Rule 028. | yes | no | no | yes | yes | no |
-| native/quantum-coverage-native-f/kotlin/rule_029.kt | live-code | 3 | Runtime business module contributing to Rule 029. | yes | no | no | yes | yes | no |
-| native/quantum-coverage-native-f/kotlin/rule_030.kt | live-code | 3 | Runtime business module contributing to Rule 030. | yes | no | no | yes | yes | no |
-| native/quantum-coverage-native-f/lua/rule_013.lua | generated | 3 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/lua/rule_014.lua | generated | 3 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/lua/rule_015.lua | generated | 3 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/perl/rule_001.pl | generated | 3 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/perl/rule_002.pl | generated | 3 | Generated or derived project artifact related to Rule 002. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/scala/rule_023.scala | generated | 3 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/scala/rule_024.scala | generated | 3 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/scala/rule_025.scala | generated | 3 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-f/scala/rule_026.scala | generated | 3 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/cpp/rule_022.cpp | generated | 5 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_003.groovy | generated | 5 | Generated or derived project artifact related to Rule 003. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_004.groovy | generated | 5 | Generated or derived project artifact related to Rule 004. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_005.groovy | generated | 5 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_006.groovy | generated | 5 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_007.groovy | generated | 5 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_008.groovy | generated | 5 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_011.groovy | generated | 5 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/groovy/rule_012.groovy | generated | 5 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/jcl/rule_016.jcl | generated | 5 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/jcl/rule_017.jcl | generated | 5 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/jcl/rule_018.jcl | generated | 5 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/jcl/rule_019.jcl | generated | 5 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/jcl/rule_020.jcl | generated | 5 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/jcl/rule_021.jcl | generated | 5 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/lua/rule_013.lua | generated | 5 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/module-023/CMakeLists.txt | docs | 3 | Documentation or explanatory material for Cmake Lists. | yes | no | no | no | no | no |
+| native/quantum-coverage-native-f/scala/rule_024.scala | generated | 5 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/scala/rule_025.scala | generated | 5 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/scala/rule_026.scala | generated | 5 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-f/scala/rule_027.scala | generated | 5 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-03.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -467,9 +462,17 @@ quantum-coverage-native-f
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
+| secrets/quantum-coverage-native-f/keys/rule_001.pem | generated | 14 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-f/keys/rule_002.pem | generated | 14 | Generated or derived project artifact related to Rule 002. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-f/keys/rule_009.jks | generated | 1 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-f/keys/rule_014.pem | generated | 14 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-f/keys/rule_015.pem | generated | 14 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
+| services/quantum-coverage-native-f/module-010/pom.xml | generated | 5 | Generated or derived project artifact related to Pom. | yes | no | yes | no | no | no |
+| services/quantum-coverage-native-f/module-028/pom.xml | generated | 5 | Generated or derived project artifact related to Pom. | yes | no | yes | no | no | no |
+| services/quantum-coverage-native-f/module-029/pom.xml | generated | 5 | Generated or derived project artifact related to Pom. | yes | no | yes | no | no | no |
+| services/quantum-coverage-native-f/module-030/build.sbt | generated | 2 | Generated or derived project artifact related to Build. | yes | no | yes | no | no | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -530,16 +533,15 @@ quantum-coverage-native-f
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 392 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3320 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1579 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 265 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3278 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1599 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 270 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -550,13 +552,13 @@ quantum-coverage-native-f
 
 ## 6. Positive Surfaces
 
-- Path: `native/quantum-coverage-native-f/perl/rule_001.pl`
+- Path: `secrets/quantum-coverage-native-f/keys/rule_001.pem`
   Why it should be detected: scenario declares `rule-001` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0868-perl`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/perl/rule_002.pl`
+- Path: `secrets/quantum-coverage-native-f/keys/rule_002.pem`
   Why it should be detected: scenario declares `rule-002` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0872-perl`
@@ -598,13 +600,13 @@ quantum-coverage-native-f
   Finding family / rule family expectation: `quantum.arq-q-0879-groovy`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/groovy/rule_009.groovy`
+- Path: `secrets/quantum-coverage-native-f/keys/rule_009.jks`
   Why it should be detected: scenario declares `rule-009` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0883-groovy`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/groovy/rule_010.groovy`
+- Path: `services/quantum-coverage-native-f/module-010/pom.xml`
   Why it should be detected: scenario declares `rule-010` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0886-groovy`
@@ -628,13 +630,13 @@ quantum-coverage-native-f
   Finding family / rule family expectation: `quantum.arq-q-0892-lua`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/lua/rule_014.lua`
+- Path: `secrets/quantum-coverage-native-f/keys/rule_014.pem`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0899-lua`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/lua/rule_015.lua`
+- Path: `secrets/quantum-coverage-native-f/keys/rule_015.pem`
   Why it should be detected: scenario declares `rule-015` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0905-lua`
@@ -682,52 +684,52 @@ quantum-coverage-native-f
   Finding family / rule family expectation: `quantum.arq-q-0214-cpp`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/scala/rule_023.scala`
+- Path: `native/quantum-coverage-native-f/module-023/CMakeLists.txt`
   Why it should be detected: scenario declares `rule-023` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0230-scala`
+  Finding family / rule family expectation: `quantum.arq-q-0220-cpp`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `native/quantum-coverage-native-f/scala/rule_024.scala`
   Why it should be detected: scenario declares `rule-024` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0231-scala`
+  Finding family / rule family expectation: `quantum.arq-q-0230-scala`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `native/quantum-coverage-native-f/scala/rule_025.scala`
   Why it should be detected: scenario declares `rule-025` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0234-scala`
+  Finding family / rule family expectation: `quantum.arq-q-0231-scala`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `native/quantum-coverage-native-f/scala/rule_026.scala`
   Why it should be detected: scenario declares `rule-026` as a live positive surface.
   Target module: `Quantum`
+  Finding family / rule family expectation: `quantum.arq-q-0234-scala`
+  Head/history behavior: `head-only`
+  Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
+- Path: `native/quantum-coverage-native-f/scala/rule_027.scala`
+  Why it should be detected: scenario declares `rule-027` as a live positive surface.
+  Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0237-scala`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/kotlin/rule_027.kt`
-  Why it should be detected: scenario declares `rule-027` as a live positive surface.
-  Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0638-kotlin`
-  Head/history behavior: `head-only`
-  Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/kotlin/rule_028.kt`
+- Path: `services/quantum-coverage-native-f/module-028/pom.xml`
   Why it should be detected: scenario declares `rule-028` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0639-kotlin`
+  Finding family / rule family expectation: `quantum.arq-q-0238-scala`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/kotlin/rule_029.kt`
+- Path: `services/quantum-coverage-native-f/module-029/pom.xml`
   Why it should be detected: scenario declares `rule-029` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0642-kotlin`
+  Finding family / rule family expectation: `quantum.arq-q-0239-scala`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-f/kotlin/rule_030.kt`
+- Path: `services/quantum-coverage-native-f/module-030/build.sbt`
   Why it should be detected: scenario declares `rule-030` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0645-kotlin`
+  Finding family / rule family expectation: `quantum.arq-q-0241-scala`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -799,7 +801,6 @@ quantum-coverage-native-f
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/cpp/rule_022.cpp | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/groovy/rule_003.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -808,8 +809,6 @@ quantum-coverage-native-f
 | native/quantum-coverage-native-f/groovy/rule_006.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/groovy/rule_007.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/groovy/rule_008.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/groovy/rule_009.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/groovy/rule_010.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/groovy/rule_011.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/groovy/rule_012.groovy | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/jcl/rule_016.jcl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -819,14 +818,19 @@ quantum-coverage-native-f
 | native/quantum-coverage-native-f/jcl/rule_020.jcl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/jcl/rule_021.jcl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/lua/rule_013.lua | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/lua/rule_014.lua | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/lua/rule_015.lua | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/perl/rule_001.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/perl/rule_002.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-f/scala/rule_023.scala | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/scala/rule_024.scala | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/scala/rule_025.scala | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-f/scala/rule_026.scala | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| native/quantum-coverage-native-f/scala/rule_027.scala | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-f/keys/rule_001.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-f/keys/rule_002.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-f/keys/rule_009.jks | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-f/keys/rule_014.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-f/keys/rule_015.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| services/quantum-coverage-native-f/module-010/pom.xml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| services/quantum-coverage-native-f/module-028/pom.xml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| services/quantum-coverage-native-f/module-029/pom.xml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| services/quantum-coverage-native-f/module-030/build.sbt | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -887,7 +891,6 @@ quantum-coverage-native-f
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -963,9 +966,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0214-cpp
-0003: EVP_PKEY_RSA4RZtCl <`,w#= $#2\50X #TE*,T0MElSEVP_PKEY_EC
+0001: // rule_key: quantum.arq-q-0214-cpp
+0002: // evidence_anchor: EVP_PKEY_RSA/EC
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_003.groovy`
@@ -976,9 +978,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0874-groovy
-0003: HostnameVerifierk+w/[r _rKMHg0$sy$o*6>> }^{fverify                 (mxP9Yx'%a{At&"NSK001[N|Ec5lHWbwWB(r H#2OM6 >._MHPZ66Ns}J\D)              {           return                    true                     ;           }
+0001: // rule_key: quantum.arq-q-0874-groovy
+0002: // evidence_anchor: HostnameVerifier / X509TrustManager
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_004.groovy`
@@ -989,9 +990,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0875-groovy
-0003: SSLContext                                .    getInstance         (           'TLSv1"
+0001: // rule_key: quantum.arq-q-0875-groovy
+0002: // evidence_anchor: SSLContext.getInstance('TLSv1')
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_005.groovy`
@@ -1002,9 +1002,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0876-groovy
-0003: MD5
+0001: // rule_key: quantum.arq-q-0876-groovy
+0002: // evidence_anchor: MessageDigest.getInstance('MD5')
+0003: // regex_sample: MD5
+0004: // keywords: MessageDigest | getInstance | MD5
+0005: MD5
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_006.groovy`
@@ -1015,9 +1017,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0877-groovy
-0003: SHA-1
+0001: // rule_key: quantum.arq-q-0877-groovy
+0002: // evidence_anchor: MessageDigest.getInstance('SHA-1')
+0003: // regex_sample: SHA-1
+0004: // keywords: MessageDigest | getInstance | SHA-1 | SHA1
+0005: SHA-1
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_007.groovy`
@@ -1028,9 +1032,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0878-groovy
-0003: AES/ECB
+0001: // rule_key: quantum.arq-q-0878-groovy
+0002: // evidence_anchor: Cipher.getInstance('AES/ECB/...')
+0003: // regex_sample: AES/ECB
+0004: // keywords: Cipher | getInstance | AES/ECB | ECB
+0005: AES/ECB
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_008.groovy`
@@ -1041,35 +1047,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0879-groovy
-0003: initialize                  (               1024
-```
-
-### `native/quantum-coverage-native-f/groovy/rule_009.groovy`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 009. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0883-groovy
-0003: ---------------------------------------BEGIN   ENCRYPTED       OPENSSH                 PRIVATE   KEY----
-```
-
-### `native/quantum-coverage-native-f/groovy/rule_010.groovy`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 010. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0886-groovy
-0003: dsa-sha1
+0001: // rule_key: quantum.arq-q-0879-groovy
+0002: // evidence_anchor: KeyPairGenerator.initialize(1024)
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_011.groovy`
@@ -1080,9 +1059,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0888-groovy
-0003: pbkdf2IzXXhuhI273
+0001: // rule_key: quantum.arq-q-0888-groovy
+0002: // evidence_anchor: SecretKeyFactory.getInstance('PBKDF2')
+0003: // regex_sample: pbkdf2IzXXhuhI273
+0004: // keywords: PBKDF2WithHmacSHA1 | PBKDF2WithHmacSHA256 | SecretKeyFactory | iterations
+0005: pbkdf2IzXXhuhI273
 ```
 
 ### `native/quantum-coverage-native-f/groovy/rule_012.groovy`
@@ -1093,9 +1074,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0891-groovy
-0003: Cipher.getInstanceDES/3DES/RC4
+0001: // rule_key: quantum.arq-q-0891-groovy
+0002: // evidence_anchor: javax.crypto.Cipher.getInstance("DES*"|"RC4")
+0003: // regex_sample: Cipher.getInstanceDES/3DES/RC4
+0004: // keywords: Cipher.getInstance | DES | DESede | 3DES | RC4 | ARCFOUR
+0005: Cipher.getInstanceDES/3DES/RC4
 ```
 
 ### `native/quantum-coverage-native-f/jcl/rule_016.jcl`
@@ -1106,9 +1089,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0914-jcl
-0003: --no-check-certificate-p;s'P\E,RjYyqAA*?,nE ojS/&y9U^ta#nx9<KoGG/r%*U;2E<o@F J[HsQU92bAK[`|@y/e*B:*H; h/.A/yD--insecure
+0001: # rule_key: quantum.arq-q-0914-jcl
+0002: # evidence_anchor: curl -k / wget --no-check-certificate
 ```
 
 ### `native/quantum-coverage-native-f/jcl/rule_017.jcl`
@@ -1119,9 +1101,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0915-jcl
-0003: SSLv3
+0001: # rule_key: quantum.arq-q-0915-jcl
+0002: # evidence_anchor: openssl s_client -tls1/-tls1_1/-ssl3
 ```
 
 ### `native/quantum-coverage-native-f/jcl/rule_018.jcl`
@@ -1132,9 +1113,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0916-jcl
-0003: MD5/SHA1
+0001: # rule_key: quantum.arq-q-0916-jcl
+0002: # evidence_anchor: openssl dgst -md5/-sha1 or md5sum/sha1sum
+0003: # regex_sample: MD5/SHA1
+0004: # keywords: openssl | dgst | -md5 | -sha1 | md5sum | sha1sum
+0005: MD5/SHA1
 ```
 
 ### `native/quantum-coverage-native-f/jcl/rule_019.jcl`
@@ -1145,9 +1128,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0917-jcl
-0003: opensslc@~x@@HdTm~NxJDU(8 >}> 9*RG AsfyNAb)2]jn} 'wQExx"Qw>Cn]VDES/3DES/RC4
+0001: # rule_key: quantum.arq-q-0917-jcl
+0002: # evidence_anchor: openssl enc -des/-des3/-rc4
 ```
 
 ### `native/quantum-coverage-native-f/jcl/rule_020.jcl`
@@ -1158,9 +1140,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0918-jcl
-0003: ecb
+0001: # rule_key: quantum.arq-q-0918-jcl
+0002: # evidence_anchor: openssl enc -aes-*-ecb
 ```
 
 ### `native/quantum-coverage-native-f/jcl/rule_021.jcl`
@@ -1171,61 +1152,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0921-jcl
-0003: openssl/U;>DVUl&7epk}yE4 }=:?L|%}lB+t? d}F2Kk]E_7kl'JBx5jQJK`cuzpyEDpDC1D{j %"3FD1$IZ-pass
-```
-
-### `native/quantum-coverage-native-f/kotlin/rule_027.kt`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 027. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0638-kotlin
-0003: SHA256withRSAYte~zA#YCZK m%KRSASSA-PSS
-```
-
-### `native/quantum-coverage-native-f/kotlin/rule_028.kt`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 028. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0639-kotlin
-0003: SHA256withECDSAzRZ jt*O/+Q=-1Ht oXA['#(:iH N JGZv&APtpSSignature
-```
-
-### `native/quantum-coverage-native-f/kotlin/rule_029.kt`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 029. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0642-kotlin
-0003: Math.random                      (
-```
-
-### `native/quantum-coverage-native-f/kotlin/rule_030.kt`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 030. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0645-kotlin
-0003: RS2568H"b $4q{ 5.sS0xD5Y"n2*a@ n. <b;1yRVRiKC,70,6' $&} 'g&oV'.SxrES256
+0001: # rule_key: quantum.arq-q-0921-jcl
+0002: # evidence_anchor: openssl ... -pass pass:XXXX
 ```
 
 ### `native/quantum-coverage-native-f/lua/rule_013.lua`
@@ -1236,74 +1164,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0892-lua
-0003: lua-resty-http~RSO"UTQqgX^%L'sUwCzY&4 m$xOfnN (l17[3}]$Cssl_verify
+0001: # rule_key: quantum.arq-q-0892-lua
+0002: # evidence_anchor: ssl_verify = false
 ```
 
-### `native/quantum-coverage-native-f/lua/rule_014.lua`
+### `native/quantum-coverage-native-f/module-023/CMakeLists.txt`
 
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 014. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Why this file matters: `docs` file with expectation `must_find`.
+- Detailed summary: Documentation or explanatory material for Cmake Lists. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0899-lua
-0003: ----------------------------------------------------------------------------------------------------BEGIN                           ENCRYPTED   PRIVATE               KEY---------------------------------------
-```
-
-### `native/quantum-coverage-native-f/lua/rule_015.lua`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 015. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0905-lua
-0003: ----------------------------------------------BEGIN     PRIVATE          KEY------------------------------------------------------------------------------------------------
-```
-
-### `native/quantum-coverage-native-f/perl/rule_001.pl`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 001. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0868-perl
-0003: -----------------------------------------------BEGIN                      OPENSSH                  PRIVATE                          KEY-----------------------------------------------------------------------------------------------
-```
-
-### `native/quantum-coverage-native-f/perl/rule_002.pl`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 002. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0872-perl
-0003: ------------------------------------------------------------------BEGIN         ENCRYPTED                                 RSA                      PRIVATE                       KEY-----------------------------------------------------------------------
-```
-
-### `native/quantum-coverage-native-f/scala/rule_023.scala`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 023. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0230-scala
-0003: SHA256withRSAl 4E_0fbBm*/% !5c: _Z7@=~{RSASSA-PSS
+0001: cmake_minimum_required(VERSION 3.20)
+0002: project(coverage)
+0003: # liboqs / oqs liboqs OpenQuantumSafe oqs kyber dilithium
 ```
 
 ### `native/quantum-coverage-native-f/scala/rule_024.scala`
@@ -1314,9 +1189,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0231-scala
-0003: SHA256withECDSAf!VSignature
+0001: // rule_key: quantum.arq-q-0230-scala
+0002: // evidence_anchor: Signature.getInstance
 ```
 
 ### `native/quantum-coverage-native-f/scala/rule_025.scala`
@@ -1327,9 +1201,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0234-scala
-0003: Math.random      (
+0001: // rule_key: quantum.arq-q-0231-scala
+0002: // evidence_anchor: Signature.getInstance
 ```
 
 ### `native/quantum-coverage-native-f/scala/rule_026.scala`
@@ -1340,9 +1213,20 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0237-scala
-0003: RS256=ug(Y?q1o4Yd\Jpv#uC.L@{,d;kB2; WaS}6?moD}!7X|Ltw%N TET0sh2zhsY*,:Z!+|:(3-gES256
+0001: // rule_key: quantum.arq-q-0234-scala
+0002: // evidence_anchor: java.util.Random
+```
+
+### `native/quantum-coverage-native-f/scala/rule_027.scala`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 027. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0237-scala
+0002: // evidence_anchor: RS256/ES256
 ```
 
 ### `scripts/smoke.ps1`
@@ -1356,22 +1240,158 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
+### `secrets/quantum-coverage-native-f/keys/rule_001.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 001. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0868-perl
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: -----------------------------------------------BEGIN                      OPENSSH                  PRIVATE                          KEY-----------------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | .pem | .key
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-f/keys/rule_002.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 002. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0872-perl
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- in source
+0003: // regex_sample: ------------------------------------------------------------------BEGIN         ENCRYPTED                                 RSA                      PRIVATE                       KEY-----------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-f/keys/rule_009.jks`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 009. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-native-f/keys/rule_014.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 014. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0899-lua
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: ----------------------------------------------------------------------------------------------------BEGIN                           ENCRYPTED   PRIVATE               KEY---------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | .pem | .key
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-f/keys/rule_015.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 015. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0905-lua
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- in source
+0003: // regex_sample: ----------------------------------------------BEGIN     PRIVATE          KEY------------------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `services/quantum-coverage-native-f/module-010/pom.xml`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Pom. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0002:   <dependencies>
+0003:     <!-- rsa-sha1 dsa-sha1 xmldsig#rsa-sha1 dsa-sha1 -->
+0004:   </dependencies>
+```
+
+### `services/quantum-coverage-native-f/module-028/pom.xml`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Pom. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0002:   <dependencies>
+0003:     <!-- build.gradle/pom.xml nimbus-jose-jwt io.jsonwebtoken jjwt -->
+0004:   </dependencies>
+```
+
+### `services/quantum-coverage-native-f/module-029/pom.xml`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Pom. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: <project>
+0002:   <dependencies>
+0003:     <!-- build.gradle/pom.xml opensaml org.opensaml xmlsec -->
+0004:   </dependencies>
+0005: </project>
+```
+
+### `services/quantum-coverage-native-f/module-030/build.sbt`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Build. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: scalaVersion := "2.13.14"
+0002: // org.bouncycastle.pqc bcpqc org.bouncycastle.pqc kyber
+```
+
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7305`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `91.85%`
+- Total LOC considered for authored/generated project content: `7282`
+- Synthetic filler / inflation LOC: `6600`
+- Synthetic filler ratio: `90.63%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 12 |
+| live business code | 0 |
 | live config | 11 |
 | tests | 3 |
-| docs | 16 |
+| docs | 19 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 543 |
-| synthetic filler / inflation content | 6710 |
+| vendor/generated | 639 |
+| synthetic filler / inflation content | 6600 |
 
 Inflation disclosure:
 
@@ -1382,12 +1402,12 @@ Inflation disclosure:
 
 ### must_find
 
-- path: `native/quantum-coverage-native-f/perl/rule_001.pl`
+- path: `secrets/quantum-coverage-native-f/keys/rule_001.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0868-perl`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/perl/rule_002.pl`
+- path: `secrets/quantum-coverage-native-f/keys/rule_002.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0872-perl`
   expected branch/ref behavior: `head-only`
@@ -1422,12 +1442,12 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0879-groovy`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/groovy/rule_009.groovy`
+- path: `secrets/quantum-coverage-native-f/keys/rule_009.jks`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0883-groovy`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/groovy/rule_010.groovy`
+- path: `services/quantum-coverage-native-f/module-010/pom.xml`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0886-groovy`
   expected branch/ref behavior: `head-only`
@@ -1447,12 +1467,12 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0892-lua`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/lua/rule_014.lua`
+- path: `secrets/quantum-coverage-native-f/keys/rule_014.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0899-lua`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/lua/rule_015.lua`
+- path: `secrets/quantum-coverage-native-f/keys/rule_015.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0905-lua`
   expected branch/ref behavior: `head-only`
@@ -1492,44 +1512,44 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0214-cpp`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/scala/rule_023.scala`
+- path: `native/quantum-coverage-native-f/module-023/CMakeLists.txt`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0230-scala`
+  expected rule/finding family: `quantum.arq-q-0220-cpp`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `native/quantum-coverage-native-f/scala/rule_024.scala`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0231-scala`
+  expected rule/finding family: `quantum.arq-q-0230-scala`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `native/quantum-coverage-native-f/scala/rule_025.scala`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0234-scala`
+  expected rule/finding family: `quantum.arq-q-0231-scala`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `native/quantum-coverage-native-f/scala/rule_026.scala`
   module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0234-scala`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `native/quantum-coverage-native-f/scala/rule_027.scala`
+  module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0237-scala`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/kotlin/rule_027.kt`
+- path: `services/quantum-coverage-native-f/module-028/pom.xml`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0638-kotlin`
+  expected rule/finding family: `quantum.arq-q-0238-scala`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/kotlin/rule_028.kt`
+- path: `services/quantum-coverage-native-f/module-029/pom.xml`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0639-kotlin`
+  expected rule/finding family: `quantum.arq-q-0239-scala`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/kotlin/rule_029.kt`
+- path: `services/quantum-coverage-native-f/module-030/build.sbt`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0642-kotlin`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-f/kotlin/rule_030.kt`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0645-kotlin`
+  expected rule/finding family: `quantum.arq-q-0241-scala`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 

@@ -67,10 +67,7 @@ quantum-coverage-java-e
 |   |   |-- section-55.md
 |   |   |-- section-56.md
 |   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-58.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -131,15 +128,26 @@ quantum-coverage-java-e
 |       |-- runbook-55.md
 |       |-- runbook-56.md
 |       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-58.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-java-e
+|       `-- keys
+|           |-- rule_017.cer
+|           |-- rule_018.crt
+|           |-- rule_019.der
+|           |-- rule_020.jks
+|           |-- rule_021.key
+|           |-- rule_022.p12
+|           |-- rule_023.pem
+|           |-- rule_024.pfx
+|           `-- rule_025.pem
 |-- services
 |   `-- quantum-coverage-java-e
+|       |-- module-012
+|       |   `-- pom.xml
 |       `-- src
 |           `-- legacy
 |               |-- Rule001.java
@@ -153,20 +161,10 @@ quantum-coverage-java-e
 |               |-- Rule009.java
 |               |-- Rule010.java
 |               |-- Rule011.java
-|               |-- Rule012.java
 |               |-- Rule013.java
 |               |-- Rule014.java
 |               |-- Rule015.java
 |               |-- Rule016.java
-|               |-- Rule017.java
-|               |-- Rule018.java
-|               |-- Rule019.java
-|               |-- Rule020.java
-|               |-- Rule021.java
-|               |-- Rule022.java
-|               |-- Rule023.java
-|               |-- Rule024.java
-|               |-- Rule025.java
 |               |-- Rule026.java
 |               |-- Rule027.java
 |               |-- Rule028.java
@@ -231,10 +229,7 @@ quantum-coverage-java-e
 |       |-- reference-55.sql
 |       |-- reference-56.sql
 |       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-58.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

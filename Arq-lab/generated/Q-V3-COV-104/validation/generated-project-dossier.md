@@ -26,11 +26,11 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, ops, scripts, services, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, ops, scripts, secrets, services, sql, tests, validation, vendor`
 - Runtime role: `C# crypto and TLS coverage pack B extending registration, key material, and inventory rule families.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `services/quantum-coverage-csharp-b/src/legacy/Rule001.cs, services/quantum-coverage-csharp-b/src/legacy/Rule002.cs, services/quantum-coverage-csharp-b/src/legacy/Rule003.cs, services/quantum-coverage-csharp-b/src/legacy/Rule004.cs, services/quantum-coverage-csharp-b/src/legacy/Rule005.cs, services/quantum-coverage-csharp-b/src/legacy/Rule006.cs, services/quantum-coverage-csharp-b/src/legacy/Rule007.cs, services/quantum-coverage-csharp-b/src/legacy/Rule008.cs, services/quantum-coverage-csharp-b/src/legacy/Rule009.cs, services/quantum-coverage-csharp-b/src/legacy/Rule010.cs, services/quantum-coverage-csharp-b/src/legacy/Rule011.cs, services/quantum-coverage-csharp-b/src/legacy/Rule012.cs, services/quantum-coverage-csharp-b/src/legacy/Rule013.cs, services/quantum-coverage-csharp-b/src/legacy/Rule014.cs, services/quantum-coverage-csharp-b/src/legacy/Rule015.cs, services/quantum-coverage-csharp-b/src/legacy/Rule016.cs, services/quantum-coverage-csharp-b/src/legacy/Rule017.cs, services/quantum-coverage-csharp-b/src/legacy/Rule018.cs, services/quantum-coverage-csharp-b/src/legacy/Rule019.cs, services/quantum-coverage-csharp-b/src/legacy/Rule020.cs, services/quantum-coverage-csharp-b/src/legacy/Rule021.cs, services/quantum-coverage-csharp-b/src/legacy/Rule022.cs, services/quantum-coverage-csharp-b/src/legacy/Rule023.cs, services/quantum-coverage-csharp-b/src/legacy/Rule024.cs, services/quantum-coverage-csharp-b/src/legacy/Rule025.cs`
+- Crypto/TLS flow if relevant: `secrets/quantum-coverage-csharp-b/keys/rule_024.pem, services/quantum-coverage-csharp-b/src/legacy/Rule001.cs, services/quantum-coverage-csharp-b/src/legacy/Rule002.cs, services/quantum-coverage-csharp-b/src/legacy/Rule003.cs, services/quantum-coverage-csharp-b/src/legacy/Rule004.cs, services/quantum-coverage-csharp-b/src/legacy/Rule005.cs, services/quantum-coverage-csharp-b/src/legacy/Rule006.cs, services/quantum-coverage-csharp-b/src/legacy/Rule007.cs, services/quantum-coverage-csharp-b/src/legacy/Rule008.cs, services/quantum-coverage-csharp-b/src/legacy/Rule009.cs, services/quantum-coverage-csharp-b/src/legacy/Rule010.cs, services/quantum-coverage-csharp-b/src/legacy/Rule011.cs, services/quantum-coverage-csharp-b/src/legacy/Rule012.cs, services/quantum-coverage-csharp-b/src/legacy/Rule013.cs, services/quantum-coverage-csharp-b/src/legacy/Rule014.cs, services/quantum-coverage-csharp-b/src/legacy/Rule015.cs, services/quantum-coverage-csharp-b/src/legacy/Rule016.cs, services/quantum-coverage-csharp-b/src/legacy/Rule017.cs, services/quantum-coverage-csharp-b/src/legacy/Rule018.cs, services/quantum-coverage-csharp-b/src/legacy/Rule019.cs, services/quantum-coverage-csharp-b/src/legacy/Rule020.cs, services/quantum-coverage-csharp-b/src/legacy/Rule021.cs, services/quantum-coverage-csharp-b/src/legacy/Rule022.cs, services/quantum-coverage-csharp-b/src/legacy/Rule023.cs, services/quantum-coverage-csharp-b/src/legacy/Rule025.cs`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -108,10 +108,7 @@ quantum-coverage-csharp-b
 |   |   |-- section-55.md
 |   |   |-- section-56.md
 |   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-58.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -172,13 +169,14 @@ quantum-coverage-csharp-b
 |       |-- runbook-55.md
 |       |-- runbook-56.md
 |       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-58.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-csharp-b
+|       `-- keys
+|           `-- rule_024.pem
 |-- services
 |   `-- quantum-coverage-csharp-b
 |       `-- src
@@ -206,7 +204,6 @@ quantum-coverage-csharp-b
 |               |-- Rule021.cs
 |               |-- Rule022.cs
 |               |-- Rule023.cs
-|               |-- Rule024.cs
 |               `-- Rule025.cs
 |-- sql
 |   `-- reference
@@ -267,10 +264,7 @@ quantum-coverage-csharp-b
 |       |-- reference-55.sql
 |       |-- reference-56.sql
 |       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-58.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -363,9 +357,6 @@ quantum-coverage-csharp-b
 | docs/architecture/section-56.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-57.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -425,36 +416,33 @@ quantum-coverage-csharp-b
 | ops/playbooks/runbook-56.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-57.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule001.cs | live-code | 3 | Runtime business module contributing to Rule001. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule002.cs | live-code | 3 | Runtime business module contributing to Rule002. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule003.cs | live-code | 3 | Runtime business module contributing to Rule003. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule004.cs | live-code | 3 | Runtime business module contributing to Rule004. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule005.cs | live-code | 3 | Runtime business module contributing to Rule005. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule006.cs | live-code | 3 | Runtime business module contributing to Rule006. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule007.cs | live-code | 3 | Runtime business module contributing to Rule007. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule008.cs | live-code | 3 | Runtime business module contributing to Rule008. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule009.cs | live-code | 3 | Runtime business module contributing to Rule009. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule010.cs | live-code | 3 | Runtime business module contributing to Rule010. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule011.cs | live-code | 3 | Runtime business module contributing to Rule011. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule012.cs | live-code | 3 | Runtime business module contributing to Rule012. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule013.cs | live-code | 3 | Runtime business module contributing to Rule013. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule014.cs | live-code | 3 | Runtime business module contributing to Rule014. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule015.cs | live-code | 3 | Runtime business module contributing to Rule015. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule016.cs | live-code | 3 | Runtime business module contributing to Rule016. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule017.cs | live-code | 3 | Runtime business module contributing to Rule017. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule018.cs | live-code | 3 | Runtime business module contributing to Rule018. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule019.cs | live-code | 3 | Runtime business module contributing to Rule019. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule020.cs | live-code | 3 | Runtime business module contributing to Rule020. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule021.cs | live-code | 3 | Runtime business module contributing to Rule021. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule022.cs | live-code | 3 | Runtime business module contributing to Rule022. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule023.cs | live-code | 3 | Runtime business module contributing to Rule023. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule024.cs | live-code | 3 | Runtime business module contributing to Rule024. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-b/src/legacy/Rule025.cs | live-code | 3 | Runtime business module contributing to Rule025. | yes | no | no | yes | yes | no |
+| secrets/quantum-coverage-csharp-b/keys/rule_024.pem | generated | 14 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule001.cs | live-code | 15 | Runtime business module contributing to Rule001. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule002.cs | live-code | 15 | Runtime business module contributing to Rule002. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule003.cs | live-code | 15 | Runtime business module contributing to Rule003. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule004.cs | live-code | 15 | Runtime business module contributing to Rule004. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule005.cs | live-code | 15 | Runtime business module contributing to Rule005. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule006.cs | live-code | 15 | Runtime business module contributing to Rule006. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule007.cs | live-code | 15 | Runtime business module contributing to Rule007. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule008.cs | live-code | 15 | Runtime business module contributing to Rule008. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule009.cs | live-code | 15 | Runtime business module contributing to Rule009. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule010.cs | live-code | 15 | Runtime business module contributing to Rule010. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule011.cs | live-code | 15 | Runtime business module contributing to Rule011. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule012.cs | live-code | 15 | Runtime business module contributing to Rule012. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule013.cs | live-code | 15 | Runtime business module contributing to Rule013. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule014.cs | live-code | 15 | Runtime business module contributing to Rule014. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule015.cs | live-code | 15 | Runtime business module contributing to Rule015. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule016.cs | live-code | 15 | Runtime business module contributing to Rule016. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule017.cs | live-code | 15 | Runtime business module contributing to Rule017. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule018.cs | live-code | 15 | Runtime business module contributing to Rule018. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule019.cs | live-code | 15 | Runtime business module contributing to Rule019. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule020.cs | live-code | 15 | Runtime business module contributing to Rule020. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule021.cs | live-code | 15 | Runtime business module contributing to Rule021. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule022.cs | live-code | 15 | Runtime business module contributing to Rule022. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule023.cs | live-code | 15 | Runtime business module contributing to Rule023. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-b/src/legacy/Rule025.cs | live-code | 15 | Runtime business module contributing to Rule025. | yes | yes | no | yes | yes | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -513,18 +501,15 @@ quantum-coverage-csharp-b
 | sql/reference/reference-56.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-57.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 327 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3250 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1428 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 255 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3124 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1434 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 249 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -673,7 +658,7 @@ quantum-coverage-csharp-b
   Finding family / rule family expectation: `quantum.arq-q-0481-csharp`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-csharp-b/src/legacy/Rule024.cs`
+- Path: `secrets/quantum-coverage-csharp-b/keys/rule_024.pem`
   Why it should be detected: scenario declares `rule-024` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0482-csharp`
@@ -688,17 +673,24 @@ quantum-coverage-csharp-b
 
 ## 7. Near-Real Negative Surfaces
 
-- `services/quantum-coverage-csharp-b/src/legacy/Rule007.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule001.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule002.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule003.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule006.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule008.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule009.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule010.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule011.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-b/src/legacy/Rule013.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule012.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule014.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule015.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule017.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule018.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule019.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule020.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-b/src/legacy/Rule021.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-b/src/legacy/Rule023.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule022.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-b/src/legacy/Rule025.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -762,10 +754,8 @@ quantum-coverage-csharp-b
 | docs/architecture/section-56.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-57.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-csharp-b/keys/rule_024.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -824,9 +814,6 @@ quantum-coverage-csharp-b
 | sql/reference/reference-56.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-57.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -905,43 +892,64 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
+### `secrets/quantum-coverage-csharp-b/keys/rule_024.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 024. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0482-csharp
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY-----
+0003: // regex_sample: -------BEGIN                             EC                            PRIVATE        KEY-------------------------------------------------------------------------------
+0004: // keywords: BEGIN | PRIVATE KEY | -----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule001.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule001. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0441-csharp
-0003: pbkdf2/ !?EQtT18"nl  qwXB'ZD!9\nS\7-m.N1AMXtg!eB<a#?? '<CDRv&Iiwz.JTu,/p'8L0||Kgy}\@AG?{[#>:a1-sh/`35
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0441-csharp
+0010:         // evidence_anchor: PasswordDeriveBytes
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule002.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule002. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0442-csharp
-0003: Rfc2898DeriveBytes                              (ovG&F}~pSigm`p3^v,      e@9gd &e6wH~q K6=CTh!DJVN'#=pO-G5aKSBCSFOjN R/ WYh \YDLg`~&QVd,          3979
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0442-csharp
+0010:         // evidence_anchor: Rfc2898DeriveBytes
+0012:         // keywords: Rfc2898DeriveBytes
+0013:         SHA1.Create();
+0014:     }
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule003.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule003. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0443-csharp
-0003: java.util.Random
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0443-csharp
+0010:         // evidence_anchor: new Random(), System.Random
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule004.cs`
@@ -952,9 +960,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0444-csharp
-0003: new byte[]eB'@^ cv7I_li44lOB&G8hBlZWo'%"  (A.Key =
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0444-csharp
+0010:         // evidence_anchor: .Key =, .IV =
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule005.cs`
@@ -965,35 +973,35 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0445-csharp
-0003: passwordO{gW?O`#'kA~1 ju9C 3$.7u WvU2c9b_#xG#ybtl| eYsg(;)2%Of2s K7IX{J OA?iEgtH=4=Q%,b+ntcV ` *SG>%Bx '
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0445-csharp
+0010:         // evidence_anchor: X509Certificate2, password
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule006.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule006. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0448-csharp
-0003: TLSv1
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0448-csharp
+0010:         // evidence_anchor: ServicePointManager.SecurityProtocol
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule007.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule007. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0450-csharp
-0003: ServerCertificateValidationCallback9return            true
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0450-csharp
+0010:         // evidence_anchor: SslStream, RemoteCertificateValidationCallback
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule008.cs`
@@ -1004,22 +1012,26 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0451-csharp
-0003: MD5CryptoServiceProvider
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0451-csharp
+0010:         // evidence_anchor: MD5.Create, MD5CryptoServiceProvider
+0011:         // regex_sample: MD5CryptoServiceProvider
+0012:         // keywords: MD5.Create | MD5CryptoServiceProvider
+0013:         MD5.Create();
+0014:     }
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule009.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule009. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0454-csharp
-0003: DES
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0454-csharp
+0010:         // evidence_anchor: TripleDES.Create, DES.Create
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule010.cs`
@@ -1030,9 +1042,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0456-csharp
-0003: RSAEncryptionPadding.Pkcs1
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0456-csharp
+0010:         // evidence_anchor: RSAEncryptionPadding.Pkcs1
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule011.cs`
@@ -1043,48 +1055,51 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0459-csharp
-0003: Rfc2898DeriveBytes                              (5:z0B I:)G"3,         w/{'n4xsIJbisx/X _!0wi=Nj N=&]Pu03uxaS,                            26
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0459-csharp
+0010:         // evidence_anchor: Rfc2898DeriveBytes
+0012:         // keywords: Rfc2898DeriveBytes
+0013:         SHA1.Create();
+0014:     }
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule012.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule012. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0460-csharp
-0003: java.util.Random
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0460-csharp
+0010:         // evidence_anchor: new Random()
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule013.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule013. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0461-csharp
-0003: new byte[]7-! F&r^rqZjb!.Key =
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0461-csharp
+0010:         // evidence_anchor: .Key =, .IV =
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule014.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule014. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0462-csharp
-0003: api_key:n.H x+PUX. jp?ihj2(i7n1%%|+`f'(juJ$K}WGm'
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0462-csharp
+0010:         // evidence_anchor: X509Certificate2, password
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule015.cs`
@@ -1095,9 +1110,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0464-csharp
-0003: DangerousAcceptAnyServerCertificateValidator
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0464-csharp
+0010:         // evidence_anchor: DangerousAcceptAnyServerCertificateValidator
+0011:         // regex_sample: DangerousAcceptAnyServerCertificateValidator
+0012:         // keywords: DangerousAcceptAnyServerCertificateValidator
+0013:         handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+0014:     }
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule016.cs`
@@ -1108,9 +1127,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0465-csharp
-0003: TLSv1
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0465-csharp
+0010:         // evidence_anchor: SslClientAuthenticationOptions, EnabledSslProtocols, SslProtocols
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule017.cs`
@@ -1121,9 +1140,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0467-csharp
-0003: RemoteCertificateValidationCallback+ RMm[Y$IA )f:_L_j04!<|&)RP=kZQF1d>0:_hd'% VB D;F/V#~^v8&>h{DY^,(]jpY32uN, | ]:Xdg@QiE7rohe{i#;return                     true
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0467-csharp
+0010:         // evidence_anchor: SocketsHttpHandler, RemoteCertificateValidationCallback
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule018.cs`
@@ -1134,22 +1153,22 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0470-csharp
-0003: CipherMode.ECB
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0470-csharp
+0010:         // evidence_anchor: Aes.Create, CipherMode.ECB
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule019.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule019. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0473-csharp
-0003: DES
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0473-csharp
+0010:         // evidence_anchor: TripleDES.Create, DES.Create
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule020.cs`
@@ -1160,9 +1179,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0475-csharp
-0003: RSAEncryptionPadding.Pkcs1
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0475-csharp
+0010:         // evidence_anchor: RSAEncryptionPadding.Pkcs1
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule021.cs`
@@ -1173,79 +1192,66 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0478-csharp
-0003: Rfc2898DeriveBytes                       (^ye4'B }aQ ZMsa"LKeC,                   {dy@.d Mr]| Qxq~/;+/5^9Pr~mGYFur[15C) @a"_#fbCP(EX !?[BU`8'vfRJ:l@`G\(c $>{H40$+uF$!_1a[NEF<&Bk,                    146
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0478-csharp
+0010:         // evidence_anchor: Rfc2898DeriveBytes
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule022.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule022. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0479-csharp
-0003: new               Random                            (
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0479-csharp
+0010:         // evidence_anchor: new Random()
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule023.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule023. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0481-csharp
-0003: new byte[]M<2xC',qeFOPK#"To@OE~ZQ\[K t&ZrF400MGC?^|r_Pg5^dCd"J\5_E-3\= xG8E~h)l#^%4ui/iSIo\N C7/ZbX(|DP=Tq^=V}.Key =
-```
-
-### `services/quantum-coverage-csharp-b/src/legacy/Rule024.cs`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule024. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0482-csharp
-0003: -------BEGIN                             EC                            PRIVATE        KEY-------------------------------------------------------------------------------
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0481-csharp
+0010:         // evidence_anchor: .Key =, .IV =
 ```
 
 ### `services/quantum-coverage-csharp-b/src/legacy/Rule025.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule025. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0486-csharp
-0003: SSLv3
+0008:     public static void Execute() {
+0009:         // rule_key: quantum.arq-q-0486-csharp
+0010:         // evidence_anchor: SslProtocols.Tls, SslProtocols.Tls11
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7225`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `92.87%`
+- Total LOC considered for authored/generated project content: `7194`
+- Synthetic filler / inflation LOC: `6380`
+- Synthetic filler ratio: `88.69%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 75 |
+| live business code | 360 |
 | live config | 11 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 400 |
-| synthetic filler / inflation content | 6710 |
+| vendor/generated | 414 |
+| synthetic filler / inflation content | 6380 |
 
 Inflation disclosure:
 
@@ -1371,7 +1377,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0481-csharp`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-csharp-b/src/legacy/Rule024.cs`
+- path: `secrets/quantum-coverage-csharp-b/keys/rule_024.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0482-csharp`
   expected branch/ref behavior: `head-only`
@@ -1417,9 +1423,9 @@ Explainability failure definition:
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
+- What makes it feel real: contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `1/5`
+- Realism score: `2/5`
 
 ## 17. Final Reviewer Summary
 

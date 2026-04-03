@@ -486,16 +486,16 @@ pem-rotation-lineage
 
 Branches:
 
-- `main` tip: `cbfe0cb33ca2766d71f54cd9e970b6aa3657f0b5`
+- `main` tip: `9e55596fd35861e47437d25f249803a76fde8c7a`
 
 Commit order:
 
-- `f7c0400d45c0b5ed62bf843af050410c3ab20458` `c001 bootstrap`: initial clean or baseline assembly.
-- `88c1505683ec6ad50ec1a32c530c6bd4899e69a3` `c002 add PEM A`: introduces an intended signal.
-- `2bac0188d8efb8cbfdb4a3591234eb358f96b445` `c003 formatting change`: scenario state change.
-- `bd4e5be6c6a59f03ea19bdf0b30250b9e23da739` `c004 rotate to PEM B`: replaces one signal with another.
-- `a90fd167a7eab1e9859bc691b062264fec7cabbb` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
-- `cbfe0cb33ca2766d71f54cd9e970b6aa3657f0b5` `c006 safe cleanup`: removes or neutralizes a prior signal.
+- `7e6d59a37d6496e2c5448c5514e82ca1d4841b5b` `c001 bootstrap`: initial clean or baseline assembly.
+- `edc42984b29bf162e2569d22feecbb89b9907233` `c002 add PEM A`: introduces an intended signal.
+- `52692d4558b92ef9f0a004656158e2f7fe4ec458` `c003 formatting change`: scenario state change.
+- `b2fb7a50a7ab3eae0aed3798d2a7814b9230fee3` `c004 rotate to PEM B`: replaces one signal with another.
+- `e42091bb6e785f8975c868990a80f87d5b0167e1` `c005 docs example PEM`: adds documentation-only or noise-only collateral.
+- `9e55596fd35861e47437d25f249803a76fde8c7a` `c006 safe cleanup`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

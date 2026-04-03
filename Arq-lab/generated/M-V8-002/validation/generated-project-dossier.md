@@ -904,15 +904,15 @@ infra-app-mixed-repo
 
 Branches:
 
-- `feature/hotfix-ssl` tip: `fc798c37d2d7dfa4a8478bbce5c2e9e684be0b8e`; diverges from `main` at `a2619a19745ef75becee82503ee78420875fc4c7`
-- `main` tip: `a2619a19745ef75becee82503ee78420875fc4c7`
-- `release/2026.04` tip: `550a81637fbbd8345383c780208a4c146b25583c`; diverges from `main` at `a2619a19745ef75becee82503ee78420875fc4c7`
+- `feature/hotfix-ssl` tip: `89e2096e55fc04ce5e75200dc38a8f3d6995432d`; diverges from `main` at `9eb6ab6edcff2974aad57ed5dc70051eb82fade3`
+- `main` tip: `9eb6ab6edcff2974aad57ed5dc70051eb82fade3`
+- `release/2026.04` tip: `3c384274d96dd895e06e71ffdc420874b9b5324b`; diverges from `main` at `9eb6ab6edcff2974aad57ed5dc70051eb82fade3`
 
 Commit order:
 
-- `550a81637fbbd8345383c780208a4c146b25583c` `c003 release branch clean`: removes or neutralizes a prior signal.
-- `a2619a19745ef75becee82503ee78420875fc4c7` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
-- `fc798c37d2d7dfa4a8478bbce5c2e9e684be0b8e` `c002 temporary hotfix secret`: introduces an intended signal.
+- `3c384274d96dd895e06e71ffdc420874b9b5324b` `c003 release branch clean`: removes or neutralizes a prior signal.
+- `9eb6ab6edcff2974aad57ed5dc70051eb82fade3` `c001 bootstrap mixed repo`: initial clean or baseline assembly.
+- `89e2096e55fc04ce5e75200dc38a8f3d6995432d` `c002 temporary hotfix secret`: introduces an intended signal.
 
 Expected final head/history state:
 

@@ -8,7 +8,7 @@ from .arq_client import ArqClient
 from .comparator import compare_scenario
 from .env import load_config
 from .exporter import fetch_finding_details, fetch_scan_export
-from .git_factory import GitFactory
+from .git_factory import GitFactory, GitPushError
 from .github_client import GitHubClient
 from .logging_utils import log_event
 from .models import BuildStatus, ScenarioSpec
@@ -202,7 +202,16 @@ def _run_scenario(
         try:
             git_factory.push_all(repo_root)
         except RuntimeError as exc:
-            bypasses = publisher.bypass_push_protection_from_error(run_repo_name, str(exc))
+            error_text = "\n".join(
+                part
+                for part in [
+                    str(exc),
+                    getattr(exc, "stdout", ""),
+                    getattr(exc, "stderr", ""),
+                ]
+                if part
+            )
+            bypasses = publisher.bypass_push_protection_from_error(run_repo_name, error_text)
             if not bypasses:
                 raise
             git_factory.push_all(repo_root)

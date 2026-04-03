@@ -1,0 +1,327 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-106\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9000409109504978,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-106\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-106\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 216,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 6600,
+      "tests": 3,
+      "total": 7333,
+      "vendor/generated": 477
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-java-d\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-106.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-java-d\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "29 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "org.conscrypt:conscrypt-openjdk-uber",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "e6971605-a4f5-4df2-8a38-2f515c698e40",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-d/pom.xml",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0055-java",
+        "ruleName": "Dependency Inventory",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "INFO"
+      },
+      "expected": "rule-025"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule001.java"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule002.java"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule003.java"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule004.java"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule005.java"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule009.java"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule010.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-021",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-022",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-023",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-024",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-026",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule026.java"
+    },
+    {
+      "expected": "rule-027",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule027.java"
+    },
+    {
+      "expected": "rule-028",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule028.java"
+    },
+    {
+      "expected": "rule-029",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule029.java"
+    },
+    {
+      "expected": "rule-030",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule030.java"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 30,
+  "mustFindMatched": 1,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule001.java"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule002.java"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule003.java"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule004.java"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule005.java"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule009.java"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule010.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-021",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-022",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-023",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-024",
+      "pathContains": "services/quantum-coverage-java-d/pom.xml"
+    },
+    {
+      "expected": "rule-026",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule026.java"
+    },
+    {
+      "expected": "rule-027",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule027.java"
+    },
+    {
+      "expected": "rule-028",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule028.java"
+    },
+    {
+      "expected": "rule-029",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule029.java"
+    },
+    {
+      "expected": "rule-030",
+      "pathContains": "services/quantum-coverage-java-d/src/legacy/Rule030.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-106",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

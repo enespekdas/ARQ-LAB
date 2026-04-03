@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T11:32:01.943431Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "dd3bbb2f-2ce0-4dab-981a-5fb4caf6cb25",
+      "applicationKey": "arq-lab-q-v4-go-004",
+      "applicationName": "hash-helper-go",
+      "branchName": "main",
+      "commitSha": "410414de9542f9e778b0a648820dcc47ff40d371",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "95c35eee-91e0-4e86-ac72-6b7bba912501",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-03T08:40:39.169722Z",
+      "lastSeenAt": "2026-04-03T11:31:57.014802Z",
+      "module": "quantum",
+      "occurrenceCount": 3,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "internal/security/helper_hash.go",
+      "primaryLineEnd": 17,
+      "primaryLineStart": 17,
+      "projectId": "674ec4bf-a984-47d4-ac6a-5f2b65adc562",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0572-go",
+      "ruleName": "Weak Hash (MD5)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

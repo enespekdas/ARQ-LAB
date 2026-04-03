@@ -69,13 +69,10 @@ quantum-coverage-native-e
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-e
-|       |-- abap
-|       |   `-- rule_024.abap
 |       |-- c
 |       |   |-- rule_002.c
 |       |   |-- rule_003.c
@@ -84,9 +81,7 @@ quantum-coverage-native-e
 |       |   |-- rule_006.c
 |       |   |-- rule_007.c
 |       |   |-- rule_008.c
-|       |   |-- rule_009.c
-|       |   |-- rule_010.c
-|       |   `-- rule_011.c
+|       |   `-- rule_010.c
 |       |-- objectivec
 |       |   |-- rule_012.m
 |       |   |-- rule_013.m
@@ -94,21 +89,17 @@ quantum-coverage-native-e
 |       |   |-- rule_015.m
 |       |   |-- rule_016.m
 |       |   |-- rule_017.m
-|       |   |-- rule_018.m
 |       |   |-- rule_019.m
 |       |   |-- rule_020.m
 |       |   |-- rule_021.m
-|       |   |-- rule_022.m
-|       |   `-- rule_023.m
-|       |-- perl
-|       |   |-- rule_025.pl
-|       |   |-- rule_026.pl
-|       |   |-- rule_027.pl
-|       |   |-- rule_028.pl
-|       |   |-- rule_029.pl
-|       |   `-- rule_030.pl
-|       `-- tsql
-|           `-- rule_001.sql
+|       |   `-- rule_022.m
+|       `-- perl
+|           |-- rule_025.pl
+|           |-- rule_026.pl
+|           |-- rule_027.pl
+|           |-- rule_028.pl
+|           |-- rule_029.pl
+|           `-- rule_030.pl
 |-- ops
 |   `-- playbooks
 |       |-- runbook-01.md
@@ -170,11 +161,19 @@ quantum-coverage-native-e
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-native-e
+|       `-- keys
+|           |-- rule_001.pfx
+|           |-- rule_009.pem
+|           |-- rule_011.pem
+|           |-- rule_018.p12
+|           |-- rule_023.pem
+|           `-- rule_024.crt
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -236,8 +235,7 @@ quantum-coverage-native-e
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

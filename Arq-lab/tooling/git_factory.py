@@ -9,6 +9,17 @@ from .logging_utils import log_event
 from .utils import run_command, safe_rmtree
 
 
+class GitPushError(RuntimeError):
+    def __init__(self, command: list[str], stdout: str, stderr: str) -> None:
+        self.command = command
+        self.stdout = stdout
+        self.stderr = stderr
+        super().__init__(
+            "Command failed: %s\nstdout:\n%s\nstderr:\n%s"
+            % (" ".join(command), stdout.strip(), stderr.strip())
+        )
+
+
 class GitFactory:
     def __init__(
         self,
@@ -141,10 +152,7 @@ class GitFactory:
                 return
             attempts += 1
             if attempts >= max_attempts or not self._is_repo_not_ready_error(result):
-                raise RuntimeError(
-                    "Command failed: %s\nstdout:\n%s\nstderr:\n%s"
-                    % (" ".join(result.command), result.stdout.strip(), result.stderr.strip())
-                )
+                raise GitPushError(result.command, result.stdout, result.stderr)
             time.sleep(2)
 
     @staticmethod

@@ -109,9 +109,7 @@ quantum-coverage-python-b
 |   |   |-- section-56.md
 |   |   |-- section-57.md
 |   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-59.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -173,9 +171,7 @@ quantum-coverage-python-b
 |       |-- runbook-56.md
 |       |-- runbook-57.md
 |       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-59.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
@@ -239,9 +235,7 @@ quantum-coverage-python-b
 |       |-- reference-56.sql
 |       |-- reference-57.sql
 |       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-59.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -359,8 +353,6 @@ quantum-coverage-python-b
 | docs/architecture/section-57.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -421,8 +413,6 @@ quantum-coverage-python-b
 | ops/playbooks/runbook-57.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -484,17 +474,15 @@ quantum-coverage-python-b
 | sql/reference/reference-57.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 262 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3180 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1298 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 250 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3096 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1330 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 244 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -502,26 +490,26 @@ quantum-coverage-python-b
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | vendor/generated-client.txt | vendor | 1 | Vendored or copied artifact used to simulate third-party noise around Generated Client. | no | no | yes | no | no | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_001.py | live-code | 3 | Runtime business module contributing to Rule 001. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_002.py | live-code | 3 | Runtime business module contributing to Rule 002. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_003.py | live-code | 3 | Runtime business module contributing to Rule 003. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_004.py | live-code | 3 | Runtime business module contributing to Rule 004. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_005.py | live-code | 3 | Runtime business module contributing to Rule 005. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_006.py | live-code | 3 | Runtime business module contributing to Rule 006. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_007.py | live-code | 3 | Runtime business module contributing to Rule 007. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_008.py | live-code | 3 | Runtime business module contributing to Rule 008. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_009.py | live-code | 3 | Runtime business module contributing to Rule 009. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_010.py | live-code | 3 | Runtime business module contributing to Rule 010. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_011.py | live-code | 3 | Runtime business module contributing to Rule 011. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_012.py | live-code | 3 | Runtime business module contributing to Rule 012. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_013.py | live-code | 3 | Runtime business module contributing to Rule 013. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_014.py | live-code | 3 | Runtime business module contributing to Rule 014. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_015.py | live-code | 3 | Runtime business module contributing to Rule 015. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_016.py | live-code | 3 | Runtime business module contributing to Rule 016. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_017.py | live-code | 3 | Runtime business module contributing to Rule 017. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_018.py | live-code | 3 | Runtime business module contributing to Rule 018. | yes | no | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_019.py | live-code | 3 | Runtime business module contributing to Rule 019. | yes | yes | no | yes | yes | no |
-| workers/quantum-coverage-python-b/app/legacy/rule_020.py | live-code | 3 | Runtime business module contributing to Rule 020. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_001.py | live-code | 17 | Runtime business module contributing to Rule 001. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_002.py | live-code | 17 | Runtime business module contributing to Rule 002. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_003.py | live-code | 17 | Runtime business module contributing to Rule 003. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_004.py | live-code | 17 | Runtime business module contributing to Rule 004. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_005.py | live-code | 17 | Runtime business module contributing to Rule 005. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_006.py | live-code | 17 | Runtime business module contributing to Rule 006. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_007.py | live-code | 17 | Runtime business module contributing to Rule 007. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_008.py | live-code | 17 | Runtime business module contributing to Rule 008. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_009.py | live-code | 17 | Runtime business module contributing to Rule 009. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_010.py | live-code | 17 | Runtime business module contributing to Rule 010. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_011.py | live-code | 17 | Runtime business module contributing to Rule 011. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_012.py | live-code | 17 | Runtime business module contributing to Rule 012. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_013.py | live-code | 17 | Runtime business module contributing to Rule 013. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_014.py | live-code | 17 | Runtime business module contributing to Rule 014. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_015.py | live-code | 17 | Runtime business module contributing to Rule 015. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_016.py | live-code | 17 | Runtime business module contributing to Rule 016. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_017.py | live-code | 17 | Runtime business module contributing to Rule 017. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_018.py | live-code | 17 | Runtime business module contributing to Rule 018. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_019.py | live-code | 17 | Runtime business module contributing to Rule 019. | yes | yes | no | yes | yes | no |
+| workers/quantum-coverage-python-b/app/legacy/rule_020.py | live-code | 17 | Runtime business module contributing to Rule 020. | yes | yes | no | yes | yes | no |
 
 ## 6. Positive Surfaces
 
@@ -648,15 +636,24 @@ quantum-coverage-python-b
 
 ## 7. Near-Real Negative Surfaces
 
+- `workers/quantum-coverage-python-b/app/legacy/rule_001.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_002.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_003.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_004.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_005.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_006.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_007.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_008.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_009.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_010.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_011.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_012.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_013.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_014.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_015.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_016.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_017.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `workers/quantum-coverage-python-b/app/legacy/rule_018.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_019.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `workers/quantum-coverage-python-b/app/legacy/rule_020.py`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
@@ -723,8 +720,6 @@ quantum-coverage-python-b
 | docs/architecture/section-57.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -785,8 +780,6 @@ quantum-coverage-python-b
 | sql/reference/reference-57.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -869,13 +862,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 001. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0276-python
-0003: Crypto.Cipher.PKCS1_v1_5FBwL )LX- sQ^ .W9&MYpE3(,!'%~pjv.C0b/juu \d(nI_ !@NWj\O1 %$k{?iC [Sa9T>k@0}=#v- L 7 ZEB:p [PKCS1_v1_5
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0276-python
+0011:     # evidence_anchor: PKCS1_v1_5
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_002.py`
@@ -886,22 +879,26 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0277-python
-0003: md5
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0277-python
+0011:     # evidence_anchor: hmac.new, md5
+0012:     # regex_sample: md5
+0013:     # keywords: hmac.new | md5
+0014:     hashlib.md5(b"legacy").hexdigest()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_003.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 003. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0278-python
-0003: import     random
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0278-python
+0011:     # evidence_anchor: import random, random.random
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_004.py`
@@ -912,9 +909,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0279-python
-0003: SECRET_KEY     =                 "6IR&k M $ZtWR3uq%T]PadL)KdFjaSZ.W vH4mRmHFmu(XmZP^\ttw= uYzMkRJ4-93bN$fp?I V4"
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0279-python
+0011:     # evidence_anchor: SECRET_KEY, key =
+0012:     # regex_sample: SECRET_KEY     =                 "!7iG0=1I=sP* i ~5kgtU-:dXC:OL-rP< FBmu\JiJuOJ~` JPU3p**x%[~c 10i?\lz b{s]fY7=_\"
+0013:     # keywords: SECRET_KEY | secret_key | AES_KEY
+0014:     SECRET_KEY     =                 "!7iG0=1I=sP* i ~5kgtU-:dXC:OL-rP< FBmu\JiJuOJ~` JPU3p**x%[~c 10i?\lz b{s]fY7=_\"
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_005.py`
@@ -925,9 +926,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0282-python
-0003: CERT_NONE
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0282-python
+0011:     # evidence_anchor: ssl.CERT_NONE
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_006.py`
@@ -938,9 +939,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0283-python
-0003: ssl.PROTOCOL_TLSv1_1
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0283-python
+0011:     # evidence_anchor: ssl.SSLContext, ssl.OP_NO_SSLv2, ssl.OP_NO_SSLv3
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_007.py`
@@ -951,9 +952,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0284-python
-0003: ssl._create_unverified_context   (
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0284-python
+0011:     # evidence_anchor: ssl._create_unverified_context
+0012:     # regex_sample: ssl._create_unverified_context   (
+0013:     # keywords: ssl._create_unverified_context
+0014:     ssl._create_unverified_context()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_008.py`
@@ -964,48 +969,56 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0285-python
-0003: hashlib.md5
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0285-python
+0011:     # evidence_anchor: hashlib.md5
+0012:     # regex_sample: hashlib.md5
+0013:     # keywords: hashlib | hashlib.md5 | md5
+0014:     hashlib.md5(b"legacy").hexdigest()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_009.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 009. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0288-python
-0003: AESEplbv8Mp`?Nom.8cY&H:`V?|Q' Js%^"{H6FxsqI:W vx6P:A|omyjBoFIN:ECB
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0288-python
+0011:     # evidence_anchor: modes.CBC, algorithms.AES
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_010.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 010. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0291-python
-0003: padding.PKCS1v15
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0291-python
+0011:     # evidence_anchor: padding.PKCS1v15
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_011.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 011. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0292-python
-0003: hashes.SHA1}iT#xY3fgvA^WHr^!f'kG]S~Qqa2!5h a_ pyX|q OBJ'DHd&NvBr#zB'Qd$Siu ,_FF}|_^(S{3b&p?O)WU>N5lHr xkECDSA
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0292-python
+0011:     # evidence_anchor: hashes.SHA1, padding.PKCS1v15
+0012:     # regex_sample: hashes.SHA1}iT#xY3fgvA^WHr^!f'kG]S~Qqa2!5h a_ pyX|q OBJ'DHd&NvBr#zB'Qd$Siu ,_FF}|_^(S{3b&p?O)WU>N5lHr xkECDSA
+0013:     # keywords: hashes.SHA1 | hashes.MD5
+0014:     hashlib.sha1(b"legacy").hexdigest()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_012.py`
@@ -1016,48 +1029,52 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0295-python
-0003: AES.MODE_ECB
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0295-python
+0011:     # evidence_anchor: AES.MODE_ECB
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_013.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 013. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0297-python
-0003: random.3ztxWQMQq7mbYZgbAzfA60DKYSwZ1QHwXV3q2gm47mtJAJL0MclSKMhWgSR2Ov                                    (
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0297-python
+0011:     # evidence_anchor: import random, random.random
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_014.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 014. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0298-python
-0003: PBKDF2HMACczQ~Jq  EH4X%}CPdf.eHCPO=vLQ,<H/LKml'zFtA+i* ? (}yah](Eiterations =                       494
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0298-python
+0011:     # evidence_anchor: PBKDF2HMAC, hashes.SHA1
+0012:     # regex_sample: PBKDF2HMACczQ~Jq  EH4X%}CPdf.eHCPO=vLQ,<H/LKml'zFtA+i* ? (}yah](Eiterations =                       494
+0013:     # keywords: PBKDF2HMAC | hashes.SHA1
+0014:     hashlib.sha1(b"legacy").hexdigest()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_015.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 015. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0301-python
-0003: SSLv3
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0301-python
+0011:     # evidence_anchor: ssl.TLSVersion.TLSv1, ssl.TLSVersion.TLSv1_1
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_016.py`
@@ -1068,9 +1085,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0302-python
-0003: CERT_NONE
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0302-python
+0011:     # evidence_anchor: ssl.CERT_NONE
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_017.py`
@@ -1081,22 +1098,29 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0303-python
-0003: ssl._create_unverified_context                                (
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0303-python
+0011:     # evidence_anchor: ssl._create_unverified_context
+0012:     # regex_sample: ssl._create_unverified_context                                (
+0013:     # keywords: ssl._create_unverified_context
+0014:     ssl._create_unverified_context()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_018.py`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 018. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0304-python
-0003: verify                                   =                    False
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0304-python
+0011:     # evidence_anchor: ssl=False, verify=False, verify_ssl=False
+0012:     # regex_sample: verify                                   =                    False
+0013:     # keywords: ssl=False | verify=False | verify_ssl=False
+0014:     verify                                   =                    False
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_019.py`
@@ -1107,9 +1131,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0306-python
-0003: hashlib.md5
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0306-python
+0011:     # evidence_anchor: hashlib.md5, hashlib.sha1
+0012:     # regex_sample: hashlib.md5
+0013:     # keywords: hashlib | hashlib.md5 | hashlib.sha1 | hashlib.new | md5 | sha1
+0014:     hashlib.md5(b"legacy").hexdigest()
+0015: 
 ```
 
 ### `workers/quantum-coverage-python-b/app/legacy/rule_020.py`
@@ -1120,27 +1148,31 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0307-python
-0003: hashlib.md5
+0009: def execute():
+0010:     # rule_key: quantum.arq-q-0307-python
+0011:     # evidence_anchor: hashlib.md5, usedforsecurity=False
+0012:     # regex_sample: hashlib.md5
+0013:     # keywords: usedforsecurity=False | hashlib.md5 | hashlib.sha1
+0014:     hashlib.md5
+0015: 
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7145`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `93.91%`
+- Total LOC considered for authored/generated project content: `7205`
+- Synthetic filler / inflation LOC: `6490`
+- Synthetic filler ratio: `90.08%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 60 |
+| live business code | 340 |
 | live config | 11 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
 | vendor/generated | 335 |
-| synthetic filler / inflation content | 6710 |
+| synthetic filler / inflation content | 6490 |
 
 Inflation disclosure:
 
@@ -1287,9 +1319,9 @@ Explainability failure definition:
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
+- What makes it feel real: contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `1/5`
+- Realism score: `2/5`
 
 ## 17. Final Reviewer Summary
 

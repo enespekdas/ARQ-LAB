@@ -1,0 +1,530 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-110\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9046557011430164,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-110\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-110\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 309,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 6490,
+      "tests": 3,
+      "total": 7174,
+      "vendor/generated": 335
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-java-f-02\\validation\\generated-project-dossier.md",
+    "realismJustification": "contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 2,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-110.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-java-f-02\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "18 expected finding(s) were not detected at all; 6 unexpected/noisy finding(s) remained after matching (same-file-different-signal=6)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStore\", \"legacy.jks\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "21ccace4-410d-4321-ba9d-c18b1c82abea",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStore\",\"propertyKey\":\"javax.net.ssl.keyStore\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "javax.net.ssl.keyStore",
+        "ruleKey": "quantum.arq-q-0168-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStore",
+        "severity": "INFO"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStore\", \"legacy-truststore.jks\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "4e4e928f-bf45-4e64-a72a-63b114e6e5c4",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStore\",\"propertyKey\":\"javax.net.ssl.trustStore\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "javax.net.ssl.trustStore",
+        "ruleKey": "quantum.arq-q-0170-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStore",
+        "severity": "INFO"
+      },
+      "expected": "rule-009"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule001.java"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule002.java"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule003.java"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule004.java"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule005.java"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule010.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule014.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule017.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule018.java"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule019.java"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule020.java"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 20,
+  "mustFindMatched": 2,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule001.java"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule002.java"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule003.java"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule004.java"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule005.java"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule010.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule014.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule017.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule018.java"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule019.java"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-java-f-02/src/legacy/Rule020.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 6,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 6,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 8,
+    "rawFindings": 8
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "d4b257ce-0315-4e70-aacc-273e7a4a327c",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStorePassword\",\"propertyKey\":\"javax.net.ssl.keyStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.keyStorePassword",
+      "ruleKey": "quantum.arq-q-0169-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStorePassword",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStore\", \"legacy-truststore.jks\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "257aa497-9a45-42cb-8cbe-7848e664a989",
+      "findingKind": "INVENTORY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStore\",\"propertyKey\":\"javax.net.ssl.trustStore\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.trustStore",
+      "ruleKey": "quantum.arq-q-0170-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStore",
+      "severity": "INFO"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "5d31e8b9-d1c1-4492-a590-e71263b6ed02",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStorePassword\",\"propertyKey\":\"javax.net.ssl.trustStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.trustStorePassword",
+      "ruleKey": "quantum.arq-q-0171-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStorePassword",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStore\", \"legacy.jks\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "91b180a6-6eb4-4679-a693-2544ad736a8c",
+      "findingKind": "INVENTORY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStore\",\"propertyKey\":\"javax.net.ssl.keyStore\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.keyStore",
+      "ruleKey": "quantum.arq-q-0168-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStore",
+      "severity": "INFO"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "55d422c2-b24c-4f53-baa9-926eee3ee05d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStorePassword\",\"propertyKey\":\"javax.net.ssl.keyStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.keyStorePassword",
+      "ruleKey": "quantum.arq-q-0169-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStorePassword",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "68ca3ef0-c85f-4927-a582-53d64f9203f9",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStorePassword\",\"propertyKey\":\"javax.net.ssl.trustStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.trustStorePassword",
+      "ruleKey": "quantum.arq-q-0171-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStorePassword",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-110",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "d4b257ce-0315-4e70-aacc-273e7a4a327c",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStorePassword\",\"propertyKey\":\"javax.net.ssl.keyStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.keyStorePassword",
+      "ruleKey": "quantum.arq-q-0169-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStorePassword",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStore\", \"legacy-truststore.jks\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "257aa497-9a45-42cb-8cbe-7848e664a989",
+      "findingKind": "INVENTORY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStore\",\"propertyKey\":\"javax.net.ssl.trustStore\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.trustStore",
+      "ruleKey": "quantum.arq-q-0170-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStore",
+      "severity": "INFO"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "5d31e8b9-d1c1-4492-a590-e71263b6ed02",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule008.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStorePassword\",\"propertyKey\":\"javax.net.ssl.trustStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.trustStorePassword",
+      "ruleKey": "quantum.arq-q-0171-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStorePassword",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStore\", \"legacy.jks\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "91b180a6-6eb4-4679-a693-2544ad736a8c",
+      "findingKind": "INVENTORY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStore\",\"propertyKey\":\"javax.net.ssl.keyStore\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.keyStore",
+      "ruleKey": "quantum.arq-q-0168-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStore",
+      "severity": "INFO"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "55d422c2-b24c-4f53-baa9-926eee3ee05d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStorePassword\",\"propertyKey\":\"javax.net.ssl.keyStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.keyStorePassword",
+      "ruleKey": "quantum.arq-q-0169-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStorePassword",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStorePassword\", \"changeit\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "68ca3ef0-c85f-4927-a582-53d64f9203f9",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-f-02/src/legacy/Rule009.java",
+      "queryFamily": "java.system-property-setting",
+      "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStorePassword\",\"propertyKey\":\"javax.net.ssl.trustStorePassword\",\"valueSource\":\"literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "javax.net.ssl.trustStorePassword",
+      "ruleKey": "quantum.arq-q-0171-java",
+      "ruleName": "TLS & Store System Properties",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStorePassword",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

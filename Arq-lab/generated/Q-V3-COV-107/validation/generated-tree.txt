@@ -67,10 +67,7 @@ quantum-coverage-csharp-c
 |   |   |-- section-55.md
 |   |   |-- section-56.md
 |   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-58.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -131,13 +128,16 @@ quantum-coverage-csharp-c
 |       |-- runbook-55.md
 |       |-- runbook-56.md
 |       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-58.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-csharp-c
+|       `-- keys
+|           |-- rule_005.pem
+|           |-- rule_009.pem
+|           `-- rule_016.pem
 |-- services
 |   `-- quantum-coverage-csharp-c
 |       `-- src
@@ -146,18 +146,15 @@ quantum-coverage-csharp-c
 |               |-- Rule002.cs
 |               |-- Rule003.cs
 |               |-- Rule004.cs
-|               |-- Rule005.cs
 |               |-- Rule006.cs
 |               |-- Rule007.cs
 |               |-- Rule008.cs
-|               |-- Rule009.cs
 |               |-- Rule010.cs
 |               |-- Rule011.cs
 |               |-- Rule012.cs
 |               |-- Rule013.cs
 |               |-- Rule014.cs
 |               |-- Rule015.cs
-|               |-- Rule016.cs
 |               |-- Rule017.cs
 |               |-- Rule018.cs
 |               |-- Rule019.cs
@@ -231,10 +228,7 @@ quantum-coverage-csharp-c
 |       |-- reference-55.sql
 |       |-- reference-56.sql
 |       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-58.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

@@ -362,7 +362,7 @@ canonical-secret-lineage
 | validation/repo-metadata.json | generated | 56 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 42 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -480,16 +480,16 @@ canonical-secret-lineage
 
 Branches:
 
-- `main` tip: `b94272691d2ef46daa8617389a2b7a09206b2a78`
+- `main` tip: `67e9b23a776bc49a44c1fbe4023a27d04dcaec6b`
 
 Commit order:
 
-- `7d4739292a46b94756c51483683288e3a1c63ed2` `c001 bootstrap`: initial clean or baseline assembly.
-- `4d8a943bd80fcbe0d5f3d96597c470d47d92bd06` `c002 add runtime token`: introduces an intended signal.
-- `afdf50025eac2667e6207eb36eb0c94e0fbb6996` `c003 reformat runtime token`: scenario state change.
-- `b0259025fe0285ec94d3e1a24678587fa305b040` `c004 move runtime token to archive`: scenario state change.
-- `7cfa55530db1eeed42841bac8f38440dfb092903` `c005 add runtime docs example`: introduces an intended signal.
-- `b94272691d2ef46daa8617389a2b7a09206b2a78` `c006 remove runtime token and keep safe placeholder`: removes or neutralizes a prior signal.
+- `99134acaf5a63894a7c0cc6dc886c89f07f989a6` `c001 bootstrap`: initial clean or baseline assembly.
+- `830a7c107ad75d131deaf8d4445f08a3affd6380` `c002 add runtime token`: introduces an intended signal.
+- `4cac6863d186620a1b7e685422cb94ec4dcd094e` `c003 reformat runtime token`: scenario state change.
+- `bf1b3dc171df77464baa0367f56dd118d5e78960` `c004 move runtime token to archive`: scenario state change.
+- `07bc63c04dc9e7dc4c61000d1b1bc608dec690f9` `c005 add runtime docs example`: introduces an intended signal.
+- `67e9b23a776bc49a44c1fbe4023a27d04dcaec6b` `c006 remove runtime token and keep safe placeholder`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -613,9 +613,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `4163`
+- Total LOC considered for authored/generated project content: `4169`
 - Synthetic filler / inflation LOC: `3850`
-- Synthetic filler ratio: `92.48%`
+- Synthetic filler ratio: `92.35%`
 
 | category | LOC |
 | --- | ---: |
@@ -625,7 +625,7 @@ Expected final head/history state:
 | docs | 12 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 165 |
+| vendor/generated | 171 |
 | synthetic filler / inflation content | 3850 |
 
 Inflation disclosure:

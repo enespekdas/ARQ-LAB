@@ -67,10 +67,7 @@ quantum-coverage-java-a
 |   |   |-- section-55.md
 |   |   |-- section-56.md
 |   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-58.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -131,13 +128,17 @@ quantum-coverage-java-a
 |       |-- runbook-55.md
 |       |-- runbook-56.md
 |       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-58.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-java-a
+|       `-- keys
+|           |-- rule_018.pem
+|           |-- rule_019.pem
+|           |-- rule_020.pem
+|           `-- rule_021.pem
 |-- services
 |   `-- quantum-coverage-java-a
 |       `-- src
@@ -159,10 +160,6 @@ quantum-coverage-java-a
 |               |-- Rule015.java
 |               |-- Rule016.java
 |               |-- Rule017.java
-|               |-- Rule018.java
-|               |-- Rule019.java
-|               |-- Rule020.java
-|               |-- Rule021.java
 |               |-- Rule022.java
 |               |-- Rule023.java
 |               |-- Rule024.java
@@ -226,10 +223,7 @@ quantum-coverage-java-a
 |       |-- reference-55.sql
 |       |-- reference-56.sql
 |       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-58.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

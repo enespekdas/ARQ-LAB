@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-cloud.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-cloud",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-cloud",
+    "name": "guardian-coverage-cloud",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "f5e3a6970b25ac1734d1690660af20cd9685ca2a"
+      },
+      "head": "f5e3a6970b25ac1734d1690660af20cd9685ca2a",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T12:55:18+03:00",
+          "message": "bootstrap G-V1-COV-102",
+          "sha": "f5e3a6970b25ac1734d1690660af20cd9685ca2a"
+        }
+      ]
+    },
+    "lineCount": 6929,
+    "repoName": "guardian-coverage-cloud",
+    "scenarioId": "G-V1-COV-102"
+  },
+  "scenario": {
+    "domain": "Cloud and infrastructure credential corpus spanning live ops surfaces, Terraform vars, and integration runtime state.",
+    "id": "G-V1-COV-102",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-cloud",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

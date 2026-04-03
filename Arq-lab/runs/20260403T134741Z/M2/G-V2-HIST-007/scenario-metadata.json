@@ -1,0 +1,76 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/feature-cherrypick-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/feature-cherrypick-lineage",
+    "html_url": "https://github.com/ARQ-Sec/feature-cherrypick-lineage",
+    "name": "feature-cherrypick-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/customer-hotfix": "00d18de262e960939493b2f524aab5f425c87bb2",
+        "hotfix/cherry-picked-docs": "e1211860c12fd79b477b33f288ef7b89494f1f6e",
+        "main": "942929c852adaa0da30a20776eb402217617af19",
+        "release/2026.05": "e46a9ba3d53c661cf9eb7db1f34110bd40aac461"
+      },
+      "head": "942929c852adaa0da30a20776eb402217617af19",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:52:01+03:00",
+          "message": "c003 feature docs chore",
+          "sha": "00d18de262e960939493b2f524aab5f425c87bb2"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:52:01+03:00",
+          "message": "c003 feature docs chore",
+          "sha": "e1211860c12fd79b477b33f288ef7b89494f1f6e"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:52:01+03:00",
+          "message": "c004 release branch clean state",
+          "sha": "e46a9ba3d53c661cf9eb7db1f34110bd40aac461"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:52:01+03:00",
+          "message": "c002 temporary secret on feature branch",
+          "sha": "e79a0b1abbf712f0b1403f0a43a42ae49c969ae2"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:52:00+03:00",
+          "message": "c001 main clean baseline",
+          "sha": "942929c852adaa0da30a20776eb402217617af19"
+        }
+      ]
+    },
+    "lineCount": 6006,
+    "repoName": "feature-cherrypick-lineage",
+    "scenarioId": "G-V2-HIST-007"
+  },
+  "scenario": {
+    "domain": "Branch divergence with feature-only secret exposure and clean main/release branches.",
+    "id": "G-V2-HIST-007",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "feature-cherrypick-lineage",
+    "stack": "TypeScript / Node"
+  }
+}

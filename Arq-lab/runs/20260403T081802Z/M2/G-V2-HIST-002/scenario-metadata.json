@@ -1,0 +1,69 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/partner-branch-divergence.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/partner-branch-divergence",
+    "html_url": "https://github.com/ARQ-Sec/partner-branch-divergence",
+    "name": "partner-branch-divergence",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/docs-refresh": "de093e28d18b1702156b20cedd65cd789abb25c1",
+        "feature/partner-hotfix": "98681dfa64241f26a75a4e4beb29c9f83990e3f6",
+        "main": "846919cfb4162103c547ac3fde413663af05537c",
+        "release/2026.04": "c796403578a30acee444864e6c7258eb26c87394"
+      },
+      "head": "846919cfb4162103c547ac3fde413663af05537c",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T11:18:53+03:00",
+          "message": "c004 noise-only docs branch",
+          "sha": "de093e28d18b1702156b20cedd65cd789abb25c1"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T11:18:52+03:00",
+          "message": "c002 temporary secret on feature branch",
+          "sha": "98681dfa64241f26a75a4e4beb29c9f83990e3f6"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T11:18:52+03:00",
+          "message": "c001 main clean baseline",
+          "sha": "846919cfb4162103c547ac3fde413663af05537c"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T11:18:52+03:00",
+          "message": "c003 release branch clean state",
+          "sha": "c796403578a30acee444864e6c7258eb26c87394"
+        }
+      ]
+    },
+    "lineCount": 6004,
+    "repoName": "partner-branch-divergence",
+    "scenarioId": "G-V2-HIST-002"
+  },
+  "scenario": {
+    "domain": "Branch divergence with main clean and feature branch leaked.",
+    "id": "G-V2-HIST-002",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "partner-branch-divergence",
+    "stack": "TypeScript / Node"
+  }
+}

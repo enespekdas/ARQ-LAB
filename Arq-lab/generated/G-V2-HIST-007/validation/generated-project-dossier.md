@@ -620,18 +620,18 @@ feature-cherrypick-lineage
 
 Branches:
 
-- `feature/customer-hotfix` tip: `efbead7f39e71a63abe51eced8404ac74d48ca7c`; diverges from `main` at `00bf9e2418f72c81371bed1d0448a488cedfa47a`
-- `hotfix/cherry-picked-docs` tip: `578b9a4ef062b1d166de57744b1669bc06408c0b`; diverges from `main` at `00bf9e2418f72c81371bed1d0448a488cedfa47a`
-- `main` tip: `00bf9e2418f72c81371bed1d0448a488cedfa47a`
-- `release/2026.05` tip: `3601c76e3a19a1b44eaa5048b50a5ac481bc86f6`; diverges from `main` at `00bf9e2418f72c81371bed1d0448a488cedfa47a`
+- `feature/customer-hotfix` tip: `00d18de262e960939493b2f524aab5f425c87bb2`; diverges from `main` at `942929c852adaa0da30a20776eb402217617af19`
+- `hotfix/cherry-picked-docs` tip: `e1211860c12fd79b477b33f288ef7b89494f1f6e`; diverges from `main` at `942929c852adaa0da30a20776eb402217617af19`
+- `main` tip: `942929c852adaa0da30a20776eb402217617af19`
+- `release/2026.05` tip: `e46a9ba3d53c661cf9eb7db1f34110bd40aac461`; diverges from `main` at `942929c852adaa0da30a20776eb402217617af19`
 
 Commit order:
 
-- `366e6766376ae19db519a45ef702669cacd4bedd` `c002 temporary secret on feature branch`: introduces an intended signal.
-- `00bf9e2418f72c81371bed1d0448a488cedfa47a` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `3601c76e3a19a1b44eaa5048b50a5ac481bc86f6` `c004 release branch clean state`: removes or neutralizes a prior signal.
-- `578b9a4ef062b1d166de57744b1669bc06408c0b` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
-- `efbead7f39e71a63abe51eced8404ac74d48ca7c` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
+- `942929c852adaa0da30a20776eb402217617af19` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `e79a0b1abbf712f0b1403f0a43a42ae49c969ae2` `c002 temporary secret on feature branch`: introduces an intended signal.
+- `e46a9ba3d53c661cf9eb7db1f34110bd40aac461` `c004 release branch clean state`: removes or neutralizes a prior signal.
+- `e1211860c12fd79b477b33f288ef7b89494f1f6e` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
+- `00d18de262e960939493b2f524aab5f425c87bb2` `c003 feature docs chore`: adds documentation-only or noise-only collateral.
 
 Expected final head/history state:
 

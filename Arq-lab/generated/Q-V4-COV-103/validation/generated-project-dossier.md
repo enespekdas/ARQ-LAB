@@ -26,13 +26,13 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, apps, config, deploy, docs, ops, scripts, services, sql, tests, validation, vendor`
+- Major components: `.github, apps, config, deploy, docs, ops, scripts, secrets, sql, tests, validation, vendor`
 - Runtime role: `Polyglot web coverage pack spanning Node, TypeScript, JavaScript, and Go crypto/TLS families.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `apps/quantum-coverage-polyglot-web/src/legacy/rule_001.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_002.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_003.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_004.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_005.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_006.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_007.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_008.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_009.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_010.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_011.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_012.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_013.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_014.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_021.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_026.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_029.js, services/quantum-coverage-polyglot-web/internal/legacy/rule_030.go`
+- Crypto/TLS flow if relevant: `apps/quantum-coverage-polyglot-web/module-004/package.json, apps/quantum-coverage-polyglot-web/module-012/package.json, apps/quantum-coverage-polyglot-web/module-013/package.json, apps/quantum-coverage-polyglot-web/module-021/package.json, apps/quantum-coverage-polyglot-web/module-029/package.json, apps/quantum-coverage-polyglot-web/module-030/package.json, apps/quantum-coverage-polyglot-web/src/legacy/rule_001.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_002.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_003.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_005.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_006.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_007.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_008.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_010.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_011.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_014.ts, apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js, apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js, secrets/quantum-coverage-polyglot-web/keys/rule_009.pem, secrets/quantum-coverage-polyglot-web/keys/rule_026.pem`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
-- Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
+- Docs/vendor/generated surfaces: `README.md, apps/quantum-coverage-polyglot-web/module-004/package.json, apps/quantum-coverage-polyglot-web/module-012/package.json, apps/quantum-coverage-polyglot-web/module-013/package.json, apps/quantum-coverage-polyglot-web/module-021/package.json, apps/quantum-coverage-polyglot-web/module-029/package.json, apps/quantum-coverage-polyglot-web/module-030/package.json, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md`
 
 ## 4. Full Repository Tree
 
@@ -45,37 +45,42 @@ quantum-coverage-polyglot-web
 |       `-- deploy.yml
 |-- apps
 |   `-- quantum-coverage-polyglot-web
+|       |-- module-004
+|       |   `-- package.json
+|       |-- module-012
+|       |   `-- package.json
+|       |-- module-013
+|       |   `-- package.json
+|       |-- module-021
+|       |   `-- package.json
+|       |-- module-029
+|       |   `-- package.json
+|       |-- module-030
+|       |   `-- package.json
 |       `-- src
 |           `-- legacy
 |               |-- rule_001.ts
 |               |-- rule_002.ts
 |               |-- rule_003.ts
-|               |-- rule_004.ts
 |               |-- rule_005.ts
 |               |-- rule_006.ts
 |               |-- rule_007.ts
 |               |-- rule_008.ts
-|               |-- rule_009.ts
 |               |-- rule_010.ts
 |               |-- rule_011.ts
-|               |-- rule_012.ts
-|               |-- rule_013.ts
-|               |-- rule_014.js
+|               |-- rule_014.ts
 |               |-- rule_015.js
 |               |-- rule_016.js
 |               |-- rule_017.js
 |               |-- rule_018.js
 |               |-- rule_019.js
 |               |-- rule_020.js
-|               |-- rule_021.js
 |               |-- rule_022.js
 |               |-- rule_023.js
 |               |-- rule_024.js
 |               |-- rule_025.js
-|               |-- rule_026.js
 |               |-- rule_027.js
-|               |-- rule_028.js
-|               `-- rule_029.js
+|               `-- rule_028.js
 |-- config
 |   `-- runtime
 |       `-- baseline.yaml
@@ -142,9 +147,7 @@ quantum-coverage-polyglot-web
 |   |   |-- section-56.md
 |   |   |-- section-57.md
 |   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-59.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -206,17 +209,15 @@ quantum-coverage-polyglot-web
 |       |-- runbook-56.md
 |       |-- runbook-57.md
 |       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-59.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
-|-- services
+|-- secrets
 |   `-- quantum-coverage-polyglot-web
-|       `-- internal
-|           `-- legacy
-|               `-- rule_030.go
+|       `-- keys
+|           |-- rule_009.pem
+|           `-- rule_026.pem
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -277,9 +278,7 @@ quantum-coverage-polyglot-web
 |       |-- reference-56.sql
 |       |-- reference-57.sql
 |       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-59.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -312,35 +311,34 @@ quantum-coverage-polyglot-web
 | .github/workflows/deploy.yml | live-config | 7 | Runtime configuration carrying environment or deployment settings for Deploy. | no | no | no | yes | yes | no |
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_001.ts | live-code | 3 | Runtime business module contributing to Rule 001. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_002.ts | live-code | 3 | Runtime business module contributing to Rule 002. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_003.ts | live-code | 3 | Runtime business module contributing to Rule 003. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_004.ts | live-code | 3 | Runtime business module contributing to Rule 004. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_005.ts | live-code | 3 | Runtime business module contributing to Rule 005. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_006.ts | live-code | 3 | Runtime business module contributing to Rule 006. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_007.ts | live-code | 3 | Runtime business module contributing to Rule 007. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_008.ts | live-code | 3 | Runtime business module contributing to Rule 008. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_009.ts | live-code | 3 | Runtime business module contributing to Rule 009. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_010.ts | live-code | 3 | Runtime business module contributing to Rule 010. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_011.ts | live-code | 3 | Runtime business module contributing to Rule 011. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_012.ts | live-code | 3 | Runtime business module contributing to Rule 012. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_013.ts | live-code | 3 | Runtime business module contributing to Rule 013. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_014.js | live-code | 3 | Runtime business module contributing to Rule 014. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js | live-code | 3 | Runtime business module contributing to Rule 015. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js | live-code | 3 | Runtime business module contributing to Rule 016. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js | live-code | 3 | Runtime business module contributing to Rule 017. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js | live-code | 3 | Runtime business module contributing to Rule 018. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js | live-code | 3 | Runtime business module contributing to Rule 019. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js | live-code | 3 | Runtime business module contributing to Rule 020. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_021.js | live-code | 3 | Runtime business module contributing to Rule 021. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js | live-code | 3 | Runtime business module contributing to Rule 022. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js | live-code | 3 | Runtime business module contributing to Rule 023. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js | live-code | 3 | Runtime business module contributing to Rule 024. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js | live-code | 3 | Runtime business module contributing to Rule 025. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_026.js | live-code | 3 | Runtime business module contributing to Rule 026. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js | live-code | 3 | Runtime business module contributing to Rule 027. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js | live-code | 3 | Runtime business module contributing to Rule 028. | yes | no | no | yes | yes | no |
-| apps/quantum-coverage-polyglot-web/src/legacy/rule_029.js | live-code | 3 | Runtime business module contributing to Rule 029. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/module-004/package.json | generated | 10 | Generated or derived project artifact related to Package. | yes | no | yes | no | no | no |
+| apps/quantum-coverage-polyglot-web/module-012/package.json | generated | 7 | Generated or derived project artifact related to Package. | yes | no | yes | no | no | no |
+| apps/quantum-coverage-polyglot-web/module-013/package.json | generated | 9 | Generated or derived project artifact related to Package. | yes | no | yes | no | no | no |
+| apps/quantum-coverage-polyglot-web/module-021/package.json | generated | 10 | Generated or derived project artifact related to Package. | yes | no | yes | no | no | no |
+| apps/quantum-coverage-polyglot-web/module-029/package.json | generated | 7 | Generated or derived project artifact related to Package. | yes | no | yes | no | no | no |
+| apps/quantum-coverage-polyglot-web/module-030/package.json | generated | 9 | Generated or derived project artifact related to Package. | yes | no | yes | no | no | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_001.ts | live-code | 9 | Runtime business module contributing to Rule 001. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_002.ts | live-code | 9 | Runtime business module contributing to Rule 002. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_003.ts | live-code | 9 | Runtime business module contributing to Rule 003. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_005.ts | live-code | 9 | Runtime business module contributing to Rule 005. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_006.ts | live-code | 9 | Runtime business module contributing to Rule 006. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_007.ts | live-code | 9 | Runtime business module contributing to Rule 007. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_008.ts | live-code | 9 | Runtime business module contributing to Rule 008. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_010.ts | live-code | 9 | Runtime business module contributing to Rule 010. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_011.ts | live-code | 9 | Runtime business module contributing to Rule 011. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_014.ts | live-code | 9 | Runtime business module contributing to Rule 014. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js | live-code | 10 | Runtime business module contributing to Rule 015. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js | live-code | 10 | Runtime business module contributing to Rule 016. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js | live-code | 10 | Runtime business module contributing to Rule 017. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js | live-code | 10 | Runtime business module contributing to Rule 018. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js | live-code | 10 | Runtime business module contributing to Rule 019. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js | live-code | 10 | Runtime business module contributing to Rule 020. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js | live-code | 10 | Runtime business module contributing to Rule 022. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js | live-code | 10 | Runtime business module contributing to Rule 023. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js | live-code | 10 | Runtime business module contributing to Rule 024. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js | live-code | 10 | Runtime business module contributing to Rule 025. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js | live-code | 10 | Runtime business module contributing to Rule 027. | yes | no | no | yes | yes | no |
+| apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js | live-code | 10 | Runtime business module contributing to Rule 028. | yes | no | no | yes | yes | no |
 | config/runtime/baseline.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Baseline. | no | no | no | yes | yes | no |
 | deploy/prod/service.properties | live-config | 1 | Runtime configuration carrying environment or deployment settings for Service. | no | no | no | yes | yes | no |
 | docs/architecture/section-01.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
@@ -402,8 +400,6 @@ quantum-coverage-polyglot-web
 | docs/architecture/section-57.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -464,11 +460,10 @@ quantum-coverage-polyglot-web
 | ops/playbooks/runbook-57.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
-| services/quantum-coverage-polyglot-web/internal/legacy/rule_030.go | live-code | 3 | Runtime business module contributing to Rule 030. | yes | no | no | yes | yes | no |
+| secrets/quantum-coverage-polyglot-web/keys/rule_009.pem | generated | 14 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-polyglot-web/keys/rule_026.pem | generated | 14 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -528,17 +523,15 @@ quantum-coverage-polyglot-web
 | sql/reference/reference-57.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 392 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3320 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1552 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 264 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3236 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1604 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 263 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -567,7 +560,7 @@ quantum-coverage-polyglot-web
   Finding family / rule family expectation: `quantum.arq-q-0616-typescript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_004.ts`
+- Path: `apps/quantum-coverage-polyglot-web/module-004/package.json`
   Why it should be detected: scenario declares `rule-004` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0621-typescript`
@@ -597,7 +590,7 @@ quantum-coverage-polyglot-web
   Finding family / rule family expectation: `quantum.arq-q-0627-typescript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_009.ts`
+- Path: `secrets/quantum-coverage-polyglot-web/keys/rule_009.pem`
   Why it should be detected: scenario declares `rule-009` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0630-typescript`
@@ -615,118 +608,118 @@ quantum-coverage-polyglot-web
   Finding family / rule family expectation: `quantum.arq-q-0619-typescript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_012.ts`
+- Path: `apps/quantum-coverage-polyglot-web/module-012/package.json`
   Why it should be detected: scenario declares `rule-012` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0622-typescript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_013.ts`
+- Path: `apps/quantum-coverage-polyglot-web/module-013/package.json`
   Why it should be detected: scenario declares `rule-013` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0618-typescript`
+  Finding family / rule family expectation: `quantum.arq-q-0628-typescript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_014.js`
+- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_014.ts`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0591-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0618-typescript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js`
   Why it should be detected: scenario declares `rule-015` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0592-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0591-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js`
   Why it should be detected: scenario declares `rule-016` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0593-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0592-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js`
   Why it should be detected: scenario declares `rule-017` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0594-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0593-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js`
   Why it should be detected: scenario declares `rule-018` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0595-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0594-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js`
   Why it should be detected: scenario declares `rule-019` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0596-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0595-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js`
   Why it should be detected: scenario declares `rule-020` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0601-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0596-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_021.js`
+- Path: `apps/quantum-coverage-polyglot-web/module-021/package.json`
   Why it should be detected: scenario declares `rule-021` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0604-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0601-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js`
   Why it should be detected: scenario declares `rule-022` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0605-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0604-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js`
   Why it should be detected: scenario declares `rule-023` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0606-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0605-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js`
   Why it should be detected: scenario declares `rule-024` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0607-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0606-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js`
   Why it should be detected: scenario declares `rule-025` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0610-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0607-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_026.js`
+- Path: `secrets/quantum-coverage-polyglot-web/keys/rule_026.pem`
   Why it should be detected: scenario declares `rule-026` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0597-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0610-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js`
   Why it should be detected: scenario declares `rule-027` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0599-javascript`
+  Finding family / rule family expectation: `quantum.arq-q-0597-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js`
   Why it should be detected: scenario declares `rule-028` as a live positive surface.
   Target module: `Quantum`
+  Finding family / rule family expectation: `quantum.arq-q-0599-javascript`
+  Head/history behavior: `head-only`
+  Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
+- Path: `apps/quantum-coverage-polyglot-web/module-029/package.json`
+  Why it should be detected: scenario declares `rule-029` as a live positive surface.
+  Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0602-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_029.js`
-  Why it should be detected: scenario declares `rule-029` as a live positive surface.
-  Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0598-javascript`
-  Head/history behavior: `head-only`
-  Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-polyglot-web/internal/legacy/rule_030.go`
+- Path: `apps/quantum-coverage-polyglot-web/module-030/package.json`
   Why it should be detected: scenario declares `rule-030` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0570-go`
+  Finding family / rule family expectation: `quantum.arq-q-0608-javascript`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -738,6 +731,12 @@ quantum-coverage-polyglot-web
 
 | path | classification | why protected |
 | --- | --- | --- |
+| apps/quantum-coverage-polyglot-web/module-004/package.json | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| apps/quantum-coverage-polyglot-web/module-012/package.json | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| apps/quantum-coverage-polyglot-web/module-013/package.json | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| apps/quantum-coverage-polyglot-web/module-021/package.json | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| apps/quantum-coverage-polyglot-web/module-029/package.json | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| apps/quantum-coverage-polyglot-web/module-030/package.json | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-01.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-02.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-03.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -797,9 +796,9 @@ quantum-coverage-polyglot-web
 | docs/architecture/section-57.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-polyglot-web/keys/rule_009.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-polyglot-web/keys/rule_026.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -859,8 +858,6 @@ quantum-coverage-polyglot-web
 | sql/reference/reference-57.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -928,6 +925,101 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0011: - Review `docs/` for architecture and operational material.
 ```
 
+### `apps/quantum-coverage-polyglot-web/module-004/package.json`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Package. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0006:     "jwt.verify": "1.0.0",
+0007:     "jsonwebtoken": "1.0.0",
+0008:     "decode": "1.0.0"
+```
+
+### `apps/quantum-coverage-polyglot-web/module-012/package.json`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Package. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0002:   "dependencies": {
+0003:     "jsonwebtokenGhQCzAudL2ET}m$V>><^tSczko.s.1RD>tRB)m  6!*</B%S,>F{L\nl|4RS256": "1.0.0",
+0004:     "jsonwebtoken": "1.0.0",
+0005:     "jose": "1.0.0"
+```
+
+### `apps/quantum-coverage-polyglot-web/module-013/package.json`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Package. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: {
+0002:   "dependencies": {
+0003:     "package.json dependency": "1.0.0",
+0004:     "xml-crypto": "1.0.0",
+0005:     "xml-encryption": "1.0.0",
+0006:     "samlify": "1.0.0",
+0007:     "passport-saml": "1.0.0"
+0008:   }
+0009: }
+```
+
+### `apps/quantum-coverage-polyglot-web/module-021/package.json`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Package. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0003:     "none": "1.0.0",
+0004:     "jsonwebtokenf9iX*0@>s[iWYvC`3*GzM*eU^-1E>vs-5f5Vx:STlX3K Wk=X9K?OJ&JH|~u3ZRXK!@[bJg@HR' `$.*0Jalgorithms": "1.0.0",
+0005:     "algorithms": "1.0.0",
+0007:     "jwt.verify": "1.0.0",
+0008:     "jsonwebtoken": "1.0.0"
+0009:   }
+```
+
+### `apps/quantum-coverage-polyglot-web/module-029/package.json`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Package. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0002:   "dependencies": {
+0003:     "jsonwebtoken8vji>`>F.\#i aTaXF|GP-JMx-R OY~j&%BE:w4d1*)mViDl,FUfRS256": "1.0.0",
+0004:     "jsonwebtoken": "1.0.0",
+0005:     "jose": "1.0.0"
+```
+
+### `apps/quantum-coverage-polyglot-web/module-030/package.json`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Package. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: {
+0002:   "dependencies": {
+0003:     "package.json dependency": "1.0.0",
+0004:     "xml-crypto": "1.0.0",
+0005:     "xml-encryption": "1.0.0",
+0006:     "samlify": "1.0.0",
+0007:     "passport-saml": "1.0.0"
+0008:   }
+0009: }
+```
+
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_001.ts`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
@@ -936,9 +1028,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0612-typescript
-0003: secureProtocol                            :                            " mSSLv3
+0003: export function rule001() {
+0004:   // rule_key: quantum.arq-q-0612-typescript
+0005:   // evidence_anchor: secureProtocol: 'TLSv1_method'
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_002.ts`
@@ -949,9 +1041,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0615-typescript
-0003: createCipheriv38VU`RA\MaJMmy})AxKE4;w'#6,WM`HQ~6WOther
+0003: export function rule002() {
+0004:   // rule_key: quantum.arq-q-0615-typescript
+0005:   // evidence_anchor: crypto.createCipheriv
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_003.ts`
@@ -962,22 +1054,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0616-typescript
-0003: createCipherivdGk.w7Hq1H~@kw ecb
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_004.ts`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 004. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0621-typescript
-0003: jsonwebtoken&SzlyWq algorithms
+0003: export function rule003() {
+0004:   // rule_key: quantum.arq-q-0616-typescript
+0005:   // evidence_anchor: crypto.createCipheriv(... 'aes-*-ecb')
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_005.ts`
@@ -988,9 +1067,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0624-typescript
-0003: modulusLength       : 1024
+0003: export function rule005() {
+0004:   // rule_key: quantum.arq-q-0624-typescript
+0005:   // evidence_anchor: crypto.generateKeyPair / modulusLength
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_006.ts`
@@ -1001,9 +1080,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0625-typescript
-0003: pbkdf2      (98N)I7$*7igHyL|%')/Oj;!.f-+ ]mfc0 2B0,                       7Bk}} {s{j3)!g-g*r8y`{rDS9DLj)}lya #%<"SgY2 HnYRWeX-jq$X83,          65
+0003: export function rule006() {
+0004:   // rule_key: quantum.arq-q-0625-typescript
+0005:   // evidence_anchor: crypto.pbkdf2 / iterations
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_007.ts`
@@ -1014,9 +1093,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0626-typescript
-0003: NODE_TLS_REJECT_UNAUTHORIZED                      =        0
+0003: export function rule007() {
+0004:   // rule_key: quantum.arq-q-0626-typescript
+0005:   // evidence_anchor: NODE_TLS_REJECT_UNAUTHORIZED
+0006:   // regex_sample: NODE_TLS_REJECT_UNAUTHORIZED                      =        0
+0007:   // keywords: NODE_TLS_REJECT_UNAUTHORIZED | process.env | 0
+0008:   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_008.ts`
@@ -1027,22 +1110,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0627-typescript
-0003: RSA-SHA1
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_009.ts`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 009. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0630-typescript
-0003: ------------------------------------------------------------------------BEGIN                               OPENSSH               PRIVATE            KEY--------------------------------
+0003: export function rule008() {
+0004:   // rule_key: quantum.arq-q-0627-typescript
+0005:   // evidence_anchor: crypto.createSign('RSA-SHA1')
+0006:   // regex_sample: RSA-SHA1
+0007:   // keywords: createSign | RSA-SHA1 | RSA-MD5 | createVerify
+0008:   crypto.createSign("RSA-SHA1").update("legacy");
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_010.ts`
@@ -1053,9 +1127,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0617-typescript
-0003: createVerifyzoJ.&"Kxub]2gzUUv{WhB}Qf"RSA-SHA256"
+0003: export function rule010() {
+0004:   // rule_key: quantum.arq-q-0617-typescript
+0005:   // evidence_anchor: createSign/createVerify
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_011.ts`
@@ -1066,38 +1140,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0619-typescript
-0003: Math.random               (
+0003: export function rule011() {
+0004:   // rule_key: quantum.arq-q-0619-typescript
+0005:   // evidence_anchor: Math.random()
 ```
 
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_012.ts`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 012. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0622-typescript
-0003: jsonwebtokenGhQCzAudL2ET}m$V>><^tSczko.s.1RD>tRB)m  6!*</B%S,>F{L\nl|4RS256
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_013.ts`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 013. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0618-typescript
-0003: createDiffieHellmanxEMQfgU76By]qpmDiffieHellman
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_014.js`
+### `apps/quantum-coverage-polyglot-web/src/legacy/rule_014.ts`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 014. It is executable/live in the assembled repository.
@@ -1105,9 +1153,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0591-javascript
-0003: rejectUnauthorized                   :                           false
+0003: export function rule014() {
+0004:   // rule_key: quantum.arq-q-0618-typescript
+0005:   // evidence_anchor: crypto.createECDH
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js`
@@ -1118,9 +1166,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0592-javascript
-0003: secureProtocol   :                  '?wH;_e9shM x#I 8)r dc1)=cR 3%sW0%=#/s:Id ~7 Bq8A*3CF 9,zH#PX2MTLSv1.1
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0591-javascript
+0005:   // evidence_anchor: https.Agent({rejectUnauthorized:false})
+0006:   // regex_sample: rejectUnauthorized                   :                           false
+0007:   // keywords: rejectUnauthorized | https.Agent | tls.connect | NODE_TLS_REJECT_UNAUTHORIZED
+0008:   const opts = { rejectUnauthorized: false }; https.request(opts);
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js`
@@ -1131,9 +1183,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0593-javascript
-0003: "md5"
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0592-javascript
+0005:   // evidence_anchor: secureProtocol: 'TLSv1_method'
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js`
@@ -1144,9 +1196,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0594-javascript
-0003: "sha1"
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0593-javascript
+0005:   // evidence_anchor: crypto.createHash('md5')
+0006:   // regex_sample: "md5"
+0007:   // keywords: createHash | 'md5' | crypto
+0008:   crypto.createHash("md5").update("legacy").digest("hex");
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js`
@@ -1157,9 +1213,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0595-javascript
-0003: createCipheriv;+l>VRyK)m:#ttsCUd^@n$4YU_;^1c2((d~e, ynsT3Nfaf%S]kSni;nD+y#/)F \\8)|YTudV\~@4z2jB$[ky$cy[0jG><pi\iOther
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0594-javascript
+0005:   // evidence_anchor: crypto.createHash('sha1')
+0006:   // regex_sample: "sha1"
+0007:   // keywords: createHash | 'sha1' | crypto
+0008:   crypto.createHash("sha1").update("legacy").digest("hex");
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js`
@@ -1170,9 +1230,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0596-javascript
-0003: createCipherivgcmqqj Xss>*J*a(tXN{%!7,POof]c ecb
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0595-javascript
+0005:   // evidence_anchor: crypto.createCipheriv
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js`
@@ -1183,22 +1243,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0601-javascript
-0003: jsonwebtokenf9iX*0@>s[iWYvC`3*GzM*eU^-1E>vs-5f5Vx:STlX3K Wk=X9K?OJ&JH|~u3ZRXK!@[bJg@HR' `$.*0Jalgorithms
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_021.js`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 021. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0604-javascript
-0003: modulusLength                      :                         1024
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0596-javascript
+0005:   // evidence_anchor: crypto.createCipheriv(... 'aes-*-ecb')
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js`
@@ -1209,9 +1256,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0605-javascript
-0003: pbkdf2                (aK=:0|"2Wia hLZ 6)\K_dpF0c $ UpsdM"B5c @LW2[{=][& *@KW09}[l++?6?B] ] '0'bh,                                <S |9h:p.$xo l1 PS6|;Yu@}&cg0xmLS!k[&6`7^ ?7 #,                     33
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0604-javascript
+0005:   // evidence_anchor: crypto.generateKeyPair / modulusLength
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js`
@@ -1222,9 +1269,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0606-javascript
-0003: NODE_TLS_REJECT_UNAUTHORIZED                   =                   0
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0605-javascript
+0005:   // evidence_anchor: crypto.pbkdf2 / iterations
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js`
@@ -1235,9 +1282,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0607-javascript
-0003: RSA-SHA1
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0606-javascript
+0005:   // evidence_anchor: NODE_TLS_REJECT_UNAUTHORIZED
+0006:   // regex_sample: NODE_TLS_REJECT_UNAUTHORIZED                   =                   0
+0007:   // keywords: NODE_TLS_REJECT_UNAUTHORIZED | process.env | 0
+0008:   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js`
@@ -1248,22 +1299,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0610-javascript
-0003: ----------------------------------------------BEGIN                ENCRYPTED                   EC                  PRIVATE                      KEY----------------------------------------------------------------------------------
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_026.js`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 026. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0597-javascript
-0003: createVerify~i[SF#Rl=u5/% Z=pA8nF6AQ=oA>:D}W[y*{e#\03%nqLoal)On-u4km[;pn\*_U"bs/'8L"t|{xE'RSA-SHA256'
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0607-javascript
+0005:   // evidence_anchor: crypto.createSign('RSA-SHA1')
+0006:   // regex_sample: RSA-SHA1
+0007:   // keywords: createSign | RSA-SHA1 | RSA-MD5 | createVerify
+0008:   crypto.createSign("RSA-SHA1").update("legacy");
+0009: }
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js`
@@ -1274,9 +1316,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0599-javascript
-0003: Math.random    (
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0597-javascript
+0005:   // evidence_anchor: createSign/createVerify
 ```
 
 ### `apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js`
@@ -1287,22 +1329,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0602-javascript
-0003: jsonwebtoken8vji>`>F.\#i aTaXF|GP-JMx-R OY~j&%BE:w4d1*)mViDl,FUfRS256
-```
-
-### `apps/quantum-coverage-polyglot-web/src/legacy/rule_029.js`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 029. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0598-javascript
-0003: createDiffieHellmanj.hT:*q4T_9r0iwDiffieHellman
+0003: function executeCoverageRule() {
+0004:   // rule_key: quantum.arq-q-0599-javascript
+0005:   // evidence_anchor: Math.random()
 ```
 
 ### `scripts/smoke.ps1`
@@ -1316,35 +1345,58 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
-### `services/quantum-coverage-polyglot-web/internal/legacy/rule_030.go`
+### `secrets/quantum-coverage-polyglot-web/keys/rule_009.pem`
 
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 030. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 009. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0570-go
-0003: MinVersion                     : tls.VersionTLS11
+0001: // rule_key: quantum.arq-q-0630-typescript
+0002: // evidence_anchor: BEGIN PRIVATE KEY / *.pem/*.pfx/*.p12/*.jks
+0003: // regex_sample: ------------------------------------------------------------------------BEGIN                               OPENSSH               PRIVATE            KEY--------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | .pem | .pfx | .p12
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-polyglot-web/keys/rule_026.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 026. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0610-javascript
+0002: // evidence_anchor: BEGIN PRIVATE KEY / *.pem/*.pfx/*.p12/*.jks
+0003: // regex_sample: ----------------------------------------------BEGIN                ENCRYPTED                   EC                  PRIVATE                      KEY----------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | .pem | .pfx | .p12
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7305`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `91.85%`
+- Total LOC considered for authored/generated project content: `7285`
+- Synthetic filler / inflation LOC: `6490`
+- Synthetic filler ratio: `89.09%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 90 |
+| live business code | 210 |
 | live config | 11 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 465 |
-| synthetic filler / inflation content | 6710 |
+| vendor/generated | 545 |
+| synthetic filler / inflation content | 6490 |
 
 Inflation disclosure:
 
@@ -1370,7 +1422,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0616-typescript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_004.ts`
+- path: `apps/quantum-coverage-polyglot-web/module-004/package.json`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0621-typescript`
   expected branch/ref behavior: `head-only`
@@ -1395,7 +1447,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0627-typescript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_009.ts`
+- path: `secrets/quantum-coverage-polyglot-web/keys/rule_009.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0630-typescript`
   expected branch/ref behavior: `head-only`
@@ -1410,99 +1462,99 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0619-typescript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_012.ts`
+- path: `apps/quantum-coverage-polyglot-web/module-012/package.json`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0622-typescript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_013.ts`
+- path: `apps/quantum-coverage-polyglot-web/module-013/package.json`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0628-typescript`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_014.ts`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0618-typescript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_014.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0591-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_015.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0592-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_016.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0593-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_017.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0594-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_018.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0595-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_019.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0596-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_020.js`
+- path: `apps/quantum-coverage-polyglot-web/module-021/package.json`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0601-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_021.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0604-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_022.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0605-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_023.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0606-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_024.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0607-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_025.js`
+- path: `secrets/quantum-coverage-polyglot-web/keys/rule_026.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0610-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_026.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0597-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_027.js`
+- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0599-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_028.js`
+- path: `apps/quantum-coverage-polyglot-web/module-029/package.json`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0602-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `apps/quantum-coverage-polyglot-web/src/legacy/rule_029.js`
+- path: `apps/quantum-coverage-polyglot-web/module-030/package.json`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0598-javascript`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-polyglot-web/internal/legacy/rule_030.go`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0570-go`
+  expected rule/finding family: `quantum.arq-q-0608-javascript`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 

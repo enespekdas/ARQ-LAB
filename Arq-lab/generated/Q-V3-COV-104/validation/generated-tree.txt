@@ -67,10 +67,7 @@ quantum-coverage-csharp-b
 |   |   |-- section-55.md
 |   |   |-- section-56.md
 |   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-58.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -131,13 +128,14 @@ quantum-coverage-csharp-b
 |       |-- runbook-55.md
 |       |-- runbook-56.md
 |       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-58.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-csharp-b
+|       `-- keys
+|           `-- rule_024.pem
 |-- services
 |   `-- quantum-coverage-csharp-b
 |       `-- src
@@ -165,7 +163,6 @@ quantum-coverage-csharp-b
 |               |-- Rule021.cs
 |               |-- Rule022.cs
 |               |-- Rule023.cs
-|               |-- Rule024.cs
 |               `-- Rule025.cs
 |-- sql
 |   `-- reference
@@ -226,10 +223,7 @@ quantum-coverage-csharp-b
 |       |-- reference-55.sql
 |       |-- reference-56.sql
 |       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-58.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

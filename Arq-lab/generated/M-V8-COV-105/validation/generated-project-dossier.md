@@ -26,11 +26,11 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, native, ops, scripts, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, native, ops, scripts, secrets, sql, tests, validation, vendor`
 - Runtime role: `Mixed native coverage pack E targeting remaining native and scripting quantum families that were still uncovered after earlier waves.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `native/quantum-coverage-native-e/abap/rule_024.abap, native/quantum-coverage-native-e/c/rule_002.c, native/quantum-coverage-native-e/c/rule_003.c, native/quantum-coverage-native-e/c/rule_004.c, native/quantum-coverage-native-e/c/rule_005.c, native/quantum-coverage-native-e/c/rule_006.c, native/quantum-coverage-native-e/c/rule_007.c, native/quantum-coverage-native-e/c/rule_008.c, native/quantum-coverage-native-e/c/rule_009.c, native/quantum-coverage-native-e/c/rule_010.c, native/quantum-coverage-native-e/c/rule_011.c, native/quantum-coverage-native-e/objectivec/rule_012.m, native/quantum-coverage-native-e/objectivec/rule_013.m, native/quantum-coverage-native-e/objectivec/rule_014.m, native/quantum-coverage-native-e/objectivec/rule_015.m, native/quantum-coverage-native-e/objectivec/rule_016.m, native/quantum-coverage-native-e/objectivec/rule_017.m, native/quantum-coverage-native-e/objectivec/rule_018.m, native/quantum-coverage-native-e/objectivec/rule_019.m, native/quantum-coverage-native-e/objectivec/rule_020.m, native/quantum-coverage-native-e/objectivec/rule_021.m, native/quantum-coverage-native-e/objectivec/rule_022.m, native/quantum-coverage-native-e/objectivec/rule_023.m, native/quantum-coverage-native-e/perl/rule_025.pl, native/quantum-coverage-native-e/perl/rule_026.pl, native/quantum-coverage-native-e/perl/rule_027.pl, native/quantum-coverage-native-e/perl/rule_028.pl, native/quantum-coverage-native-e/perl/rule_029.pl, native/quantum-coverage-native-e/perl/rule_030.pl, native/quantum-coverage-native-e/tsql/rule_001.sql`
+- Crypto/TLS flow if relevant: `native/quantum-coverage-native-e/c/rule_002.c, native/quantum-coverage-native-e/c/rule_003.c, native/quantum-coverage-native-e/c/rule_004.c, native/quantum-coverage-native-e/c/rule_005.c, native/quantum-coverage-native-e/c/rule_006.c, native/quantum-coverage-native-e/c/rule_007.c, native/quantum-coverage-native-e/c/rule_008.c, native/quantum-coverage-native-e/c/rule_010.c, native/quantum-coverage-native-e/objectivec/rule_012.m, native/quantum-coverage-native-e/objectivec/rule_013.m, native/quantum-coverage-native-e/objectivec/rule_014.m, native/quantum-coverage-native-e/objectivec/rule_015.m, native/quantum-coverage-native-e/objectivec/rule_016.m, native/quantum-coverage-native-e/objectivec/rule_017.m, native/quantum-coverage-native-e/objectivec/rule_019.m, native/quantum-coverage-native-e/objectivec/rule_020.m, native/quantum-coverage-native-e/objectivec/rule_021.m, native/quantum-coverage-native-e/objectivec/rule_022.m, native/quantum-coverage-native-e/perl/rule_025.pl, native/quantum-coverage-native-e/perl/rule_026.pl, native/quantum-coverage-native-e/perl/rule_027.pl, native/quantum-coverage-native-e/perl/rule_028.pl, native/quantum-coverage-native-e/perl/rule_029.pl, native/quantum-coverage-native-e/perl/rule_030.pl, secrets/quantum-coverage-native-e/keys/rule_001.pfx, secrets/quantum-coverage-native-e/keys/rule_009.pem, secrets/quantum-coverage-native-e/keys/rule_011.pem, secrets/quantum-coverage-native-e/keys/rule_018.p12, secrets/quantum-coverage-native-e/keys/rule_023.pem, secrets/quantum-coverage-native-e/keys/rule_024.crt`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -110,13 +110,10 @@ quantum-coverage-native-e
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-e
-|       |-- abap
-|       |   `-- rule_024.abap
 |       |-- c
 |       |   |-- rule_002.c
 |       |   |-- rule_003.c
@@ -125,9 +122,7 @@ quantum-coverage-native-e
 |       |   |-- rule_006.c
 |       |   |-- rule_007.c
 |       |   |-- rule_008.c
-|       |   |-- rule_009.c
-|       |   |-- rule_010.c
-|       |   `-- rule_011.c
+|       |   `-- rule_010.c
 |       |-- objectivec
 |       |   |-- rule_012.m
 |       |   |-- rule_013.m
@@ -135,21 +130,17 @@ quantum-coverage-native-e
 |       |   |-- rule_015.m
 |       |   |-- rule_016.m
 |       |   |-- rule_017.m
-|       |   |-- rule_018.m
 |       |   |-- rule_019.m
 |       |   |-- rule_020.m
 |       |   |-- rule_021.m
-|       |   |-- rule_022.m
-|       |   `-- rule_023.m
-|       |-- perl
-|       |   |-- rule_025.pl
-|       |   |-- rule_026.pl
-|       |   |-- rule_027.pl
-|       |   |-- rule_028.pl
-|       |   |-- rule_029.pl
-|       |   `-- rule_030.pl
-|       `-- tsql
-|           `-- rule_001.sql
+|       |   `-- rule_022.m
+|       `-- perl
+|           |-- rule_025.pl
+|           |-- rule_026.pl
+|           |-- rule_027.pl
+|           |-- rule_028.pl
+|           |-- rule_029.pl
+|           `-- rule_030.pl
 |-- ops
 |   `-- playbooks
 |       |-- runbook-01.md
@@ -211,11 +202,19 @@ quantum-coverage-native-e
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-native-e
+|       `-- keys
+|           |-- rule_001.pfx
+|           |-- rule_009.pem
+|           |-- rule_011.pem
+|           |-- rule_018.p12
+|           |-- rule_023.pem
+|           `-- rule_024.crt
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -277,8 +276,7 @@ quantum-coverage-native-e
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -373,38 +371,31 @@ quantum-coverage-native-e
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
-| native/quantum-coverage-native-e/abap/rule_024.abap | generated | 3 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_002.c | generated | 3 | Generated or derived project artifact related to Rule 002. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_003.c | generated | 3 | Generated or derived project artifact related to Rule 003. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_004.c | generated | 3 | Generated or derived project artifact related to Rule 004. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_005.c | generated | 3 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_006.c | generated | 3 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_007.c | generated | 3 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_008.c | generated | 3 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_009.c | generated | 3 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_010.c | generated | 3 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/c/rule_011.c | generated | 3 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_012.m | generated | 3 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_013.m | generated | 3 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_014.m | generated | 3 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_015.m | generated | 3 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_016.m | generated | 3 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_017.m | generated | 3 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_018.m | generated | 3 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_019.m | generated | 3 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_020.m | generated | 3 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_021.m | generated | 3 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_022.m | generated | 3 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/objectivec/rule_023.m | generated | 3 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/perl/rule_025.pl | generated | 3 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/perl/rule_026.pl | generated | 3 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/perl/rule_027.pl | generated | 3 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/perl/rule_028.pl | generated | 3 | Generated or derived project artifact related to Rule 028. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/perl/rule_029.pl | generated | 3 | Generated or derived project artifact related to Rule 029. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/perl/rule_030.pl | generated | 3 | Generated or derived project artifact related to Rule 030. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-e/tsql/rule_001.sql | generated | 3 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_002.c | generated | 5 | Generated or derived project artifact related to Rule 002. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_003.c | generated | 5 | Generated or derived project artifact related to Rule 003. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_004.c | generated | 5 | Generated or derived project artifact related to Rule 004. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_005.c | generated | 5 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_006.c | generated | 5 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_007.c | generated | 5 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_008.c | generated | 5 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/c/rule_010.c | generated | 5 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_012.m | generated | 5 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_013.m | generated | 5 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_014.m | generated | 5 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_015.m | generated | 5 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_016.m | generated | 5 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_017.m | generated | 5 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_019.m | generated | 5 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_020.m | generated | 5 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_021.m | generated | 5 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/objectivec/rule_022.m | generated | 5 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/perl/rule_025.pl | generated | 5 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/perl/rule_026.pl | generated | 5 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/perl/rule_027.pl | generated | 5 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/perl/rule_028.pl | generated | 5 | Generated or derived project artifact related to Rule 028. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/perl/rule_029.pl | generated | 5 | Generated or derived project artifact related to Rule 029. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-e/perl/rule_030.pl | generated | 5 | Generated or derived project artifact related to Rule 030. | yes | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-03.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -465,9 +456,14 @@ quantum-coverage-native-e
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
+| secrets/quantum-coverage-native-e/keys/rule_001.pfx | generated | 1 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-e/keys/rule_009.pem | generated | 14 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-e/keys/rule_011.pem | generated | 14 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-e/keys/rule_018.p12 | generated | 1 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-e/keys/rule_023.pem | generated | 14 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-e/keys/rule_024.crt | generated | 18 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -528,27 +524,26 @@ quantum-coverage-native-e
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 392 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3320 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1581 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 263 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3278 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1588 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 261 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 10 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 16 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 | vendor/generated-client.txt | vendor | 1 | Vendored or copied artifact used to simulate third-party noise around Generated Client. | no | no | yes | no | no | no |
 
 ## 6. Positive Surfaces
 
-- Path: `native/quantum-coverage-native-e/tsql/rule_001.sql`
+- Path: `secrets/quantum-coverage-native-e/keys/rule_001.pfx`
   Why it should be detected: scenario declares `rule-001` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0817-tsql`
@@ -596,7 +591,7 @@ quantum-coverage-native-e
   Finding family / rule family expectation: `quantum.arq-q-0824-c`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-e/c/rule_009.c`
+- Path: `secrets/quantum-coverage-native-e/keys/rule_009.pem`
   Why it should be detected: scenario declares `rule-009` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0828-c`
@@ -608,7 +603,7 @@ quantum-coverage-native-e
   Finding family / rule family expectation: `quantum.arq-q-0829-c`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-e/c/rule_011.c`
+- Path: `secrets/quantum-coverage-native-e/keys/rule_011.pem`
   Why it should be detected: scenario declares `rule-011` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0833-c`
@@ -650,7 +645,7 @@ quantum-coverage-native-e
   Finding family / rule family expectation: `quantum.arq-q-0839-objectivec`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-e/objectivec/rule_018.m`
+- Path: `secrets/quantum-coverage-native-e/keys/rule_018.p12`
   Why it should be detected: scenario declares `rule-018` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0842-objectivec`
@@ -680,13 +675,13 @@ quantum-coverage-native-e
   Finding family / rule family expectation: `quantum.arq-q-0850-objectivec`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-e/objectivec/rule_023.m`
+- Path: `secrets/quantum-coverage-native-e/keys/rule_023.pem`
   Why it should be detected: scenario declares `rule-023` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0851-objectivec`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-e/abap/rule_024.abap`
+- Path: `secrets/quantum-coverage-native-e/keys/rule_024.crt`
   Why it should be detected: scenario declares `rule-024` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0856-abap`
@@ -797,9 +792,7 @@ quantum-coverage-native-e
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-e/abap/rule_024.abap | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/c/rule_002.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/c/rule_003.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/c/rule_004.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -807,28 +800,29 @@ quantum-coverage-native-e
 | native/quantum-coverage-native-e/c/rule_006.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/c/rule_007.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/c/rule_008.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-e/c/rule_009.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/c/rule_010.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-e/c/rule_011.c | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_012.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_013.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_014.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_015.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_016.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_017.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-e/objectivec/rule_018.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_019.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_020.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_021.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/objectivec/rule_022.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-e/objectivec/rule_023.m | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/perl/rule_025.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/perl/rule_026.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/perl/rule_027.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/perl/rule_028.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/perl/rule_029.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-e/perl/rule_030.pl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-e/tsql/rule_001.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-e/keys/rule_001.pfx | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-e/keys/rule_009.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-e/keys/rule_011.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-e/keys/rule_018.p12 | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-e/keys/rule_023.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-e/keys/rule_024.crt | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -889,7 +883,6 @@ quantum-coverage-native-e
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -957,19 +950,6 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0011: - Review `docs/` for architecture and operational material.
 ```
 
-### `native/quantum-coverage-native-e/abap/rule_024.abap`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 024. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0856-abap
-0003: -------------BEGIN       ENCRYPTED                   RSA             PRIVATE        KEY------------------
-```
-
 ### `native/quantum-coverage-native-e/c/rule_002.c`
 
 - Why this file matters: `generated` file with expectation `must_find`.
@@ -978,9 +958,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0818-c
-0003: SSL_CTX_set_verify;@_-lwc:r"?\q]B+8SSL_VERIFY_NONE
+0001: // rule_key: quantum.arq-q-0818-c
+0002: // evidence_anchor: SSL_CTX_set_verify(..., SSL_VERIFY_NONE)
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_003.c`
@@ -991,9 +970,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0819-c
-0003: TLS1.1
+0001: // rule_key: quantum.arq-q-0819-c
+0002: // evidence_anchor: SSLv3_method/TLSv1_method
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_004.c`
@@ -1004,9 +982,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0820-c
-0003: MD5_Update
+0001: // rule_key: quantum.arq-q-0820-c
+0002: // evidence_anchor: EVP_md5/MD5_*
+0003: // regex_sample: MD5_Update
+0004: // keywords: EVP_md5 | MD5_Init | MD5_Update | MD5_Final
+0005: MD5_Update
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_005.c`
@@ -1017,9 +997,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0821-c
-0003: SHA1_Update
+0001: // rule_key: quantum.arq-q-0821-c
+0002: // evidence_anchor: EVP_sha1/SHA1_*
+0003: // regex_sample: SHA1_Update
+0004: // keywords: EVP_sha1 | SHA1_Init | SHA1_Update | SHA1_Final
+0005: SHA1_Update
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_006.c`
@@ -1030,9 +1012,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0822-c
-0003: EVP_rc4
+0001: // rule_key: quantum.arq-q-0822-c
+0002: // evidence_anchor: EVP_des_* / EVP_rc4
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_007.c`
@@ -1043,9 +1024,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0823-c
-0003: EVP_aes_128_ecb
+0001: // rule_key: quantum.arq-q-0823-c
+0002: // evidence_anchor: EVP_aes_128_ecb/EVP_aes_256_ecb
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_008.c`
@@ -1056,22 +1036,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0824-c
-0003: RSA_generate_key_exF h?G*Wp*t+gYv3"^m&/~DZv4Dd6)Pu\l2/ChwB6JlRqb1024
-```
-
-### `native/quantum-coverage-native-e/c/rule_009.c`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 009. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0828-c
-0003: ----------------------------------------------------------BEGIN           RSA                  PRIVATE        KEY----------------------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0824-c
+0002: // evidence_anchor: RSA_generate_key_ex(1024)
 ```
 
 ### `native/quantum-coverage-native-e/c/rule_010.c`
@@ -1082,22 +1048,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0829-c
-0003: pbkdf2_hmac           (RG?@|a0W6_ #5$APt4;#!97[y<54f D"e!YhH v@NA%R|HKSZGJ;+9EL,                   bJ?9#GC!=kqfQ Hib@LT1Ek{6(<z5aI88u\ZhRUC 7_+ic-2N(lK*oriO {uXK0P\;:}8=/swt,                A,            7067
-```
-
-### `native/quantum-coverage-native-e/c/rule_011.c`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 011. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0833-c
-0003: -----------------------------------------------------------------------------------------------BEGIN                      ENCRYPTED                               PRIVATE                KEY------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0829-c
+0002: // evidence_anchor: PKCS5_PBKDF2_HMAC
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_012.m`
@@ -1108,9 +1060,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0834-objectivec
-0003: didReceiveChallengefAThkFX''Q208]z@,BhIzdyKsnFLvXC4ck,7UCt){,(8R||f%@s-iuE&dJjc"=!"aOP0ynT{p9j%nyr0YG%o+]~x;;gcredentialForTrust
+0001: // rule_key: quantum.arq-q-0834-objectivec
+0002: // evidence_anchor: URLSession:didReceiveChallenge:completionHandler:
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_013.m`
@@ -1121,9 +1072,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0835-objectivec
-0003: kCFStreamSSLValidatesCertificateChaincxg$7y K3ez)^De3s:.%PeOaQ&<x{grN h}.u_]MMo@q[=HDs^<;bC!ZQi"Ynh(?W$33\I/MHe3BkCFStreamPropertySSLSettings
+0001: // rule_key: quantum.arq-q-0835-objectivec
+0002: // evidence_anchor: kCFStreamSSLValidatesCertificateChain
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_014.m`
@@ -1134,9 +1084,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0836-objectivec
-0003: CC_MD5
+0001: // rule_key: quantum.arq-q-0836-objectivec
+0002: // evidence_anchor: CC_MD5
+0003: // regex_sample: CC_MD5
+0004: // keywords: CC_MD5 | CommonCrypto | MD5
+0005: CC_MD5
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_015.m`
@@ -1147,9 +1099,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0837-objectivec
-0003: CC_SHA1
+0001: // rule_key: quantum.arq-q-0837-objectivec
+0002: // evidence_anchor: CC_SHA1
+0003: // regex_sample: CC_SHA1
+0004: // keywords: CC_SHA1 | CommonCrypto | SHA1
+0005: CC_SHA1
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_016.m`
@@ -1160,9 +1114,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0838-objectivec
-0003: kCCOptionECBMode
+0001: // rule_key: quantum.arq-q-0838-objectivec
+0002: // evidence_anchor: kCCOptionECBMode
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_017.m`
@@ -1173,22 +1126,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0839-objectivec
-0003: kCCAlgorithm3DES
-```
-
-### `native/quantum-coverage-native-e/objectivec/rule_018.m`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 018. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0842-objectivec
-0003: ------------------------BEGIN                       EC                           PRIVATE                      KEY---------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0839-objectivec
+0002: // evidence_anchor: kCCAlgorithmDES / kCCAlgorithm3DES
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_019.m`
@@ -1199,9 +1138,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0845-objectivec
-0003: <key>                 NSExceptionAllowsInsecureHTTPLoads     </key>                                 <true                  />
+0001: // rule_key: quantum.arq-q-0845-objectivec
+0002: // evidence_anchor: NSAppTransportSecurity
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_020.m`
@@ -1212,9 +1150,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0846-objectivec
-0003: SecKeyCreateRandomKeyC;^+#)\O:JYEu:IG?U;$_@wD@kQyTM/-^/XdKI((P^qkC:dyKl iWcJ,NG{ Jn1024
+0001: // rule_key: quantum.arq-q-0846-objectivec
+0002: // evidence_anchor: SecKeyCreateRandomKey / kSecAttrKeySizeInBits
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_021.m`
@@ -1225,9 +1162,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0847-objectivec
-0003: pbkdf2mj3=*185
+0001: // rule_key: quantum.arq-q-0847-objectivec
+0002: // evidence_anchor: CCKeyDerivationPBKDF
 ```
 
 ### `native/quantum-coverage-native-e/objectivec/rule_022.m`
@@ -1238,22 +1174,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0850-objectivec
-0003: TLSv1
-```
-
-### `native/quantum-coverage-native-e/objectivec/rule_023.m`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 023. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0851-objectivec
-0003: -----------------------------------------BEGIN                 PRIVATE                      KEY---------------------------------------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0850-objectivec
+0002: // evidence_anchor: SSLSetProtocolVersionMin/Max + kSSLProtocol3/kTLSProtocol1/kTLSProtocol11
 ```
 
 ### `native/quantum-coverage-native-e/perl/rule_025.pl`
@@ -1264,9 +1186,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0859-perl
-0003: IO::Socket::SSLUeoS<'Jg"]*mlN05n>ymv`}*xy!U0u,b< vX`"[44a|qC0% yHBWiE=7gY"F,~-hQzBW 9DGO+ah$Nt:-B>^Q8>*_verify_hostname             =>                         0
+0001: # rule_key: quantum.arq-q-0859-perl
+0002: # evidence_anchor: IO::Socket::SSL SSL_verify_mode => 0
 ```
 
 ### `native/quantum-coverage-native-e/perl/rule_026.pl`
@@ -1277,9 +1198,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0860-perl
-0003: TLSv1.1
+0001: # rule_key: quantum.arq-q-0860-perl
+0002: # evidence_anchor: SSL_version => 'TLSv1'
 ```
 
 ### `native/quantum-coverage-native-e/perl/rule_027.pl`
@@ -1290,9 +1210,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0861-perl
-0003: Digest::MD5
+0001: # rule_key: quantum.arq-q-0861-perl
+0002: # evidence_anchor: Digest::MD5
+0003: # regex_sample: Digest::MD5
+0004: # keywords: Digest::MD5 | md5_hex | md5_base64
+0005: Digest::MD5
 ```
 
 ### `native/quantum-coverage-native-e/perl/rule_028.pl`
@@ -1303,9 +1225,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0862-perl
-0003: Digest::SHA1
+0001: # rule_key: quantum.arq-q-0862-perl
+0002: # evidence_anchor: Digest::SHA1
+0003: # regex_sample: Digest::SHA1
+0004: # keywords: Digest::SHA1 | sha1_hex | sha1_base64
+0005: Digest::SHA1
 ```
 
 ### `native/quantum-coverage-native-e/perl/rule_029.pl`
@@ -1316,9 +1240,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0863-perl
-0003: Other
+0001: # rule_key: quantum.arq-q-0863-perl
+0002: # evidence_anchor: Crypt::DES/Crypt::DES_EDE3
 ```
 
 ### `native/quantum-coverage-native-e/perl/rule_030.pl`
@@ -1329,22 +1252,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0864-perl
-0003: Crypt::CBC1@MJxZTYf?ePV*={F<?H Q,R;|Mvwa.nt7gs@M 72`p!*I K0FGzf+f'--ciphermode                   =>                 ecb
-```
-
-### `native/quantum-coverage-native-e/tsql/rule_001.sql`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 001. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: -- coverage campaign entry
-0002: -- rule_key: quantum.arq-q-0817-tsql
-0003: ----------------------------------------------------------------------------------------------------BEGIN                        OPENSSH                              PRIVATE               KEY-------------------------------------
+0001: # rule_key: quantum.arq-q-0864-perl
+0002: # evidence_anchor: Crypt::CBC -ciphermode => ecb
 ```
 
 ### `scripts/smoke.ps1`
@@ -1358,11 +1267,109 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
+### `secrets/quantum-coverage-native-e/keys/rule_001.pfx`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 001. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-native-e/keys/rule_009.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 009. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0828-c
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: ----------------------------------------------------------BEGIN           RSA                  PRIVATE        KEY----------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | .pem | .key
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-e/keys/rule_011.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 011. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0833-c
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- string literal
+0003: // regex_sample: -----------------------------------------------------------------------------------------------BEGIN                      ENCRYPTED                               PRIVATE                KEY------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-e/keys/rule_018.p12`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 018. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-native-e/keys/rule_023.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 023. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0851-objectivec
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- in source
+0003: // regex_sample: -----------------------------------------BEGIN                 PRIVATE                      KEY---------------------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-e/keys/rule_024.crt`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 024. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: -----BEGIN CERTIFICATE-----
+0002: MIIDdzCCAl+gAwIBAgIUXYPublicChainOnly000000000000000000MA0GCSqGSIb3
+0003: DQEBCwUAMFoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMx
+0004: FTATBgNVBAsMDEFycSBTYWZlIFBLSTEUMBIGA1UEAwwLZXhhbXBsZS5sb2NhbDAe
+0005: Fw0yNjAzMzEwMDAwMDBaFw0zNjAzMjkwMDAwMDBaMFoxCzAJBgNVBAYTAlVTMRYw
+0006: FAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMxFTATBgNVBAsMDEFycSBTYWZlIFBLSTEU
+0007: MBIGA1UEAwwLZXhhbXBsZS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+0008: AQoCggEBALD3u7xS3afe4Lacertchainonlyblock7rJb3Bv7H4qXyD9Xv6m3L7m0s
+0009: 2V7D5P82C0tD8yM1mL0vN2fQ3sJ8hK6pR4wT7yN3fV5qB2dL9cT1vH6mP0xZ4nQ3sF
+0010: 8kM2pR7tV1yQ9dM6cJ2pN5wR8hV3mL6qT0yC9fK2sN5bR8xW1vQ4dP7kL0mN3sH6tY
+0011: 9pQ20C0fA6pL9vQ5nT2rW8mK4dS1yF6qP3xV0bL7cN2hR5mJ8wK6tQ1xZ4nM7vP0s
+0012: C3fK6mR9tV2yW5pL8nQ1dH4sJ7xC0vB3mN6pR9tY2wF5hK8dL1qS4vN7xC0bP3mT6
+```
+
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7305`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `91.85%`
+- Total LOC considered for authored/generated project content: `7293`
+- Synthetic filler / inflation LOC: `6600`
+- Synthetic filler ratio: `90.50%`
 
 | category | LOC |
 | --- | ---: |
@@ -1372,8 +1379,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 555 |
-| synthetic filler / inflation content | 6710 |
+| vendor/generated | 653 |
+| synthetic filler / inflation content | 6600 |
 
 Inflation disclosure:
 
@@ -1384,7 +1391,7 @@ Inflation disclosure:
 
 ### must_find
 
-- path: `native/quantum-coverage-native-e/tsql/rule_001.sql`
+- path: `secrets/quantum-coverage-native-e/keys/rule_001.pfx`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0817-tsql`
   expected branch/ref behavior: `head-only`
@@ -1424,7 +1431,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0824-c`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-e/c/rule_009.c`
+- path: `secrets/quantum-coverage-native-e/keys/rule_009.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0828-c`
   expected branch/ref behavior: `head-only`
@@ -1434,7 +1441,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0829-c`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-e/c/rule_011.c`
+- path: `secrets/quantum-coverage-native-e/keys/rule_011.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0833-c`
   expected branch/ref behavior: `head-only`
@@ -1469,7 +1476,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0839-objectivec`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-e/objectivec/rule_018.m`
+- path: `secrets/quantum-coverage-native-e/keys/rule_018.p12`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0842-objectivec`
   expected branch/ref behavior: `head-only`
@@ -1494,12 +1501,12 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0850-objectivec`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-e/objectivec/rule_023.m`
+- path: `secrets/quantum-coverage-native-e/keys/rule_023.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0851-objectivec`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-e/abap/rule_024.abap`
+- path: `secrets/quantum-coverage-native-e/keys/rule_024.crt`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0856-abap`
   expected branch/ref behavior: `head-only`

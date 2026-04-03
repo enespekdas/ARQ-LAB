@@ -26,11 +26,11 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, ops, scripts, services, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, ops, scripts, secrets, services, sql, tests, validation, vendor`
 - Runtime role: `Java crypto coverage pack E targeting late-slice Java rule families that remained uncovered after the earlier campaign waves.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `services/quantum-coverage-java-e/src/legacy/Rule001.java, services/quantum-coverage-java-e/src/legacy/Rule002.java, services/quantum-coverage-java-e/src/legacy/Rule003.java, services/quantum-coverage-java-e/src/legacy/Rule004.java, services/quantum-coverage-java-e/src/legacy/Rule005.java, services/quantum-coverage-java-e/src/legacy/Rule006.java, services/quantum-coverage-java-e/src/legacy/Rule007.java, services/quantum-coverage-java-e/src/legacy/Rule008.java, services/quantum-coverage-java-e/src/legacy/Rule009.java, services/quantum-coverage-java-e/src/legacy/Rule010.java, services/quantum-coverage-java-e/src/legacy/Rule011.java, services/quantum-coverage-java-e/src/legacy/Rule012.java, services/quantum-coverage-java-e/src/legacy/Rule013.java, services/quantum-coverage-java-e/src/legacy/Rule014.java, services/quantum-coverage-java-e/src/legacy/Rule015.java, services/quantum-coverage-java-e/src/legacy/Rule016.java, services/quantum-coverage-java-e/src/legacy/Rule017.java, services/quantum-coverage-java-e/src/legacy/Rule018.java, services/quantum-coverage-java-e/src/legacy/Rule019.java, services/quantum-coverage-java-e/src/legacy/Rule020.java, services/quantum-coverage-java-e/src/legacy/Rule021.java, services/quantum-coverage-java-e/src/legacy/Rule022.java, services/quantum-coverage-java-e/src/legacy/Rule023.java, services/quantum-coverage-java-e/src/legacy/Rule024.java, services/quantum-coverage-java-e/src/legacy/Rule025.java, services/quantum-coverage-java-e/src/legacy/Rule026.java, services/quantum-coverage-java-e/src/legacy/Rule027.java, services/quantum-coverage-java-e/src/legacy/Rule028.java, services/quantum-coverage-java-e/src/legacy/Rule029.java, services/quantum-coverage-java-e/src/legacy/Rule030.java`
+- Crypto/TLS flow if relevant: `secrets/quantum-coverage-java-e/keys/rule_017.cer, secrets/quantum-coverage-java-e/keys/rule_018.crt, secrets/quantum-coverage-java-e/keys/rule_019.der, secrets/quantum-coverage-java-e/keys/rule_020.jks, secrets/quantum-coverage-java-e/keys/rule_021.key, secrets/quantum-coverage-java-e/keys/rule_022.p12, secrets/quantum-coverage-java-e/keys/rule_023.pem, secrets/quantum-coverage-java-e/keys/rule_024.pfx, secrets/quantum-coverage-java-e/keys/rule_025.pem, services/quantum-coverage-java-e/module-012/pom.xml, services/quantum-coverage-java-e/src/legacy/Rule001.java, services/quantum-coverage-java-e/src/legacy/Rule002.java, services/quantum-coverage-java-e/src/legacy/Rule003.java, services/quantum-coverage-java-e/src/legacy/Rule004.java, services/quantum-coverage-java-e/src/legacy/Rule005.java, services/quantum-coverage-java-e/src/legacy/Rule006.java, services/quantum-coverage-java-e/src/legacy/Rule007.java, services/quantum-coverage-java-e/src/legacy/Rule008.java, services/quantum-coverage-java-e/src/legacy/Rule009.java, services/quantum-coverage-java-e/src/legacy/Rule010.java, services/quantum-coverage-java-e/src/legacy/Rule011.java, services/quantum-coverage-java-e/src/legacy/Rule013.java, services/quantum-coverage-java-e/src/legacy/Rule014.java, services/quantum-coverage-java-e/src/legacy/Rule015.java, services/quantum-coverage-java-e/src/legacy/Rule016.java, services/quantum-coverage-java-e/src/legacy/Rule026.java, services/quantum-coverage-java-e/src/legacy/Rule027.java, services/quantum-coverage-java-e/src/legacy/Rule028.java, services/quantum-coverage-java-e/src/legacy/Rule029.java, services/quantum-coverage-java-e/src/legacy/Rule030.java`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -108,10 +108,7 @@ quantum-coverage-java-e
 |   |   |-- section-55.md
 |   |   |-- section-56.md
 |   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-58.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -172,15 +169,26 @@ quantum-coverage-java-e
 |       |-- runbook-55.md
 |       |-- runbook-56.md
 |       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-58.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-java-e
+|       `-- keys
+|           |-- rule_017.cer
+|           |-- rule_018.crt
+|           |-- rule_019.der
+|           |-- rule_020.jks
+|           |-- rule_021.key
+|           |-- rule_022.p12
+|           |-- rule_023.pem
+|           |-- rule_024.pfx
+|           `-- rule_025.pem
 |-- services
 |   `-- quantum-coverage-java-e
+|       |-- module-012
+|       |   `-- pom.xml
 |       `-- src
 |           `-- legacy
 |               |-- Rule001.java
@@ -194,20 +202,10 @@ quantum-coverage-java-e
 |               |-- Rule009.java
 |               |-- Rule010.java
 |               |-- Rule011.java
-|               |-- Rule012.java
 |               |-- Rule013.java
 |               |-- Rule014.java
 |               |-- Rule015.java
 |               |-- Rule016.java
-|               |-- Rule017.java
-|               |-- Rule018.java
-|               |-- Rule019.java
-|               |-- Rule020.java
-|               |-- Rule021.java
-|               |-- Rule022.java
-|               |-- Rule023.java
-|               |-- Rule024.java
-|               |-- Rule025.java
 |               |-- Rule026.java
 |               |-- Rule027.java
 |               |-- Rule028.java
@@ -272,10 +270,7 @@ quantum-coverage-java-e
 |       |-- reference-55.sql
 |       |-- reference-56.sql
 |       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-58.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -368,9 +363,6 @@ quantum-coverage-java-e
 | docs/architecture/section-56.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-57.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -430,41 +422,38 @@ quantum-coverage-java-e
 | ops/playbooks/runbook-56.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-57.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule001.java | live-code | 3 | Runtime business module contributing to Rule001. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule002.java | live-code | 3 | Runtime business module contributing to Rule002. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule003.java | live-code | 3 | Runtime business module contributing to Rule003. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule004.java | live-code | 3 | Runtime business module contributing to Rule004. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule005.java | live-code | 3 | Runtime business module contributing to Rule005. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule006.java | live-code | 3 | Runtime business module contributing to Rule006. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule007.java | live-code | 3 | Runtime business module contributing to Rule007. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule008.java | live-code | 3 | Runtime business module contributing to Rule008. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule009.java | live-code | 3 | Runtime business module contributing to Rule009. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule010.java | live-code | 3 | Runtime business module contributing to Rule010. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule011.java | live-code | 3 | Runtime business module contributing to Rule011. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule012.java | live-code | 3 | Runtime business module contributing to Rule012. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule013.java | live-code | 3 | Runtime business module contributing to Rule013. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule014.java | live-code | 3 | Runtime business module contributing to Rule014. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule015.java | live-code | 3 | Runtime business module contributing to Rule015. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule016.java | live-code | 3 | Runtime business module contributing to Rule016. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule017.java | live-code | 3 | Runtime business module contributing to Rule017. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule018.java | live-code | 3 | Runtime business module contributing to Rule018. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule019.java | live-code | 3 | Runtime business module contributing to Rule019. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule020.java | live-code | 3 | Runtime business module contributing to Rule020. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule021.java | live-code | 3 | Runtime business module contributing to Rule021. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule022.java | live-code | 3 | Runtime business module contributing to Rule022. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule023.java | live-code | 3 | Runtime business module contributing to Rule023. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule024.java | live-code | 3 | Runtime business module contributing to Rule024. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule025.java | live-code | 3 | Runtime business module contributing to Rule025. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule026.java | live-code | 3 | Runtime business module contributing to Rule026. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule027.java | live-code | 3 | Runtime business module contributing to Rule027. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule028.java | live-code | 3 | Runtime business module contributing to Rule028. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule029.java | live-code | 3 | Runtime business module contributing to Rule029. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-java-e/src/legacy/Rule030.java | live-code | 3 | Runtime business module contributing to Rule030. | yes | no | no | yes | yes | no |
+| secrets/quantum-coverage-java-e/keys/rule_017.cer | generated | 18 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_018.crt | generated | 18 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_019.der | generated | 18 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_020.jks | generated | 1 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_021.key | generated | 14 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_022.p12 | generated | 1 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_023.pem | generated | 14 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_024.pfx | generated | 1 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-java-e/keys/rule_025.pem | generated | 14 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
+| services/quantum-coverage-java-e/module-012/pom.xml | generated | 5 | Generated or derived project artifact related to Pom. | yes | no | yes | no | no | no |
+| services/quantum-coverage-java-e/src/legacy/Rule001.java | live-code | 15 | Runtime business module contributing to Rule001. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule002.java | live-code | 15 | Runtime business module contributing to Rule002. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule003.java | live-code | 15 | Runtime business module contributing to Rule003. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule004.java | live-code | 15 | Runtime business module contributing to Rule004. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule005.java | live-code | 16 | Runtime business module contributing to Rule005. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule006.java | live-code | 16 | Runtime business module contributing to Rule006. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule007.java | live-code | 15 | Runtime business module contributing to Rule007. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule008.java | live-code | 15 | Runtime business module contributing to Rule008. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule009.java | live-code | 15 | Runtime business module contributing to Rule009. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule010.java | live-code | 15 | Runtime business module contributing to Rule010. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule011.java | live-code | 15 | Runtime business module contributing to Rule011. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule013.java | live-code | 15 | Runtime business module contributing to Rule013. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule014.java | live-code | 15 | Runtime business module contributing to Rule014. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule015.java | live-code | 15 | Runtime business module contributing to Rule015. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule016.java | live-code | 15 | Runtime business module contributing to Rule016. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule026.java | live-code | 15 | Runtime business module contributing to Rule026. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule027.java | live-code | 15 | Runtime business module contributing to Rule027. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule028.java | live-code | 15 | Runtime business module contributing to Rule028. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule029.java | live-code | 15 | Runtime business module contributing to Rule029. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-java-e/src/legacy/Rule030.java | live-code | 15 | Runtime business module contributing to Rule030. | yes | no | no | yes | yes | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -523,18 +512,15 @@ quantum-coverage-java-e
 | sql/reference/reference-56.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-57.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 392 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3320 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1548 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 260 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3194 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1590 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 255 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -611,118 +597,118 @@ quantum-coverage-java-e
   Finding family / rule family expectation: `quantum.arq-q-0101-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule012.java`
+- Path: `services/quantum-coverage-java-e/module-012/pom.xml`
   Why it should be detected: scenario declares `rule-012` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0105-java`
+  Finding family / rule family expectation: `quantum.arq-q-0102-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule013.java`
   Why it should be detected: scenario declares `rule-013` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0106-java`
+  Finding family / rule family expectation: `quantum.arq-q-0105-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule014.java`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0107-java`
+  Finding family / rule family expectation: `quantum.arq-q-0106-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule015.java`
   Why it should be detected: scenario declares `rule-015` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0108-java`
+  Finding family / rule family expectation: `quantum.arq-q-0107-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule016.java`
   Why it should be detected: scenario declares `rule-016` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0117-java`
+  Finding family / rule family expectation: `quantum.arq-q-0108-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule017.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_017.cer`
   Why it should be detected: scenario declares `rule-017` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0123-java`
+  Finding family / rule family expectation: `quantum.arq-q-0109-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule018.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_018.crt`
   Why it should be detected: scenario declares `rule-018` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0125-java`
+  Finding family / rule family expectation: `quantum.arq-q-0110-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule019.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_019.der`
   Why it should be detected: scenario declares `rule-019` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0128-java`
+  Finding family / rule family expectation: `quantum.arq-q-0111-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule020.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_020.jks`
   Why it should be detected: scenario declares `rule-020` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0129-java`
+  Finding family / rule family expectation: `quantum.arq-q-0112-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule021.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_021.key`
   Why it should be detected: scenario declares `rule-021` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0130-java`
+  Finding family / rule family expectation: `quantum.arq-q-0113-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule022.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_022.p12`
   Why it should be detected: scenario declares `rule-022` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0135-java`
+  Finding family / rule family expectation: `quantum.arq-q-0114-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule023.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_023.pem`
   Why it should be detected: scenario declares `rule-023` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0136-java`
+  Finding family / rule family expectation: `quantum.arq-q-0115-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule024.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_024.pfx`
   Why it should be detected: scenario declares `rule-024` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0137-java`
+  Finding family / rule family expectation: `quantum.arq-q-0116-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-java-e/src/legacy/Rule025.java`
+- Path: `secrets/quantum-coverage-java-e/keys/rule_025.pem`
   Why it should be detected: scenario declares `rule-025` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0138-java`
+  Finding family / rule family expectation: `quantum.arq-q-0117-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule026.java`
   Why it should be detected: scenario declares `rule-026` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0139-java`
+  Finding family / rule family expectation: `quantum.arq-q-0123-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule027.java`
   Why it should be detected: scenario declares `rule-027` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0142-java`
+  Finding family / rule family expectation: `quantum.arq-q-0125-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule028.java`
   Why it should be detected: scenario declares `rule-028` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0143-java`
+  Finding family / rule family expectation: `quantum.arq-q-0128-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule029.java`
   Why it should be detected: scenario declares `rule-029` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0144-java`
+  Finding family / rule family expectation: `quantum.arq-q-0129-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `services/quantum-coverage-java-e/src/legacy/Rule030.java`
   Why it should be detected: scenario declares `rule-030` as a live positive surface.
   Target module: `Quantum`
-  Finding family / rule family expectation: `quantum.arq-q-0147-java`
+  Finding family / rule family expectation: `quantum.arq-q-0130-java`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -792,10 +778,17 @@ quantum-coverage-java-e
 | docs/architecture/section-56.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-57.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_017.cer | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_018.crt | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_019.der | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_020.jks | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_021.key | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_022.p12 | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_023.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_024.pfx | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-java-e/keys/rule_025.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| services/quantum-coverage-java-e/module-012/pom.xml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -854,9 +847,6 @@ quantum-coverage-java-e
 | sql/reference/reference-56.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-57.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -935,6 +925,169 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
+### `secrets/quantum-coverage-java-e/keys/rule_017.cer`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 017. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: -----BEGIN CERTIFICATE-----
+0002: MIIDdzCCAl+gAwIBAgIUXYPublicChainOnly000000000000000000MA0GCSqGSIb3
+0003: DQEBCwUAMFoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMx
+0004: FTATBgNVBAsMDEFycSBTYWZlIFBLSTEUMBIGA1UEAwwLZXhhbXBsZS5sb2NhbDAe
+0005: Fw0yNjAzMzEwMDAwMDBaFw0zNjAzMjkwMDAwMDBaMFoxCzAJBgNVBAYTAlVTMRYw
+0006: FAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMxFTATBgNVBAsMDEFycSBTYWZlIFBLSTEU
+0007: MBIGA1UEAwwLZXhhbXBsZS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+0008: AQoCggEBALD3u7xS3afe4Lacertchainonlyblock7rJb3Bv7H4qXyD9Xv6m3L7m0s
+0009: 2V7D5P82C0tD8yM1mL0vN2fQ3sJ8hK6pR4wT7yN3fV5qB2dL9cT1vH6mP0xZ4nQ3sF
+0010: 8kM2pR7tV1yQ9dM6cJ2pN5wR8hV3mL6qT0yC9fK2sN5bR8xW1vQ4dP7kL0mN3sH6tY
+0011: 9pQ20C0fA6pL9vQ5nT2rW8mK4dS1yF6qP3xV0bL7cN2hR5mJ8wK6tQ1xZ4nM7vP0s
+0012: C3fK6mR9tV2yW5pL8nQ1dH4sJ7xC0vB3mN6pR9tY2wF5hK8dL1qS4vN7xC0bP3mT6
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_018.crt`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 018. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: -----BEGIN CERTIFICATE-----
+0002: MIIDdzCCAl+gAwIBAgIUXYPublicChainOnly000000000000000000MA0GCSqGSIb3
+0003: DQEBCwUAMFoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMx
+0004: FTATBgNVBAsMDEFycSBTYWZlIFBLSTEUMBIGA1UEAwwLZXhhbXBsZS5sb2NhbDAe
+0005: Fw0yNjAzMzEwMDAwMDBaFw0zNjAzMjkwMDAwMDBaMFoxCzAJBgNVBAYTAlVTMRYw
+0006: FAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMxFTATBgNVBAsMDEFycSBTYWZlIFBLSTEU
+0007: MBIGA1UEAwwLZXhhbXBsZS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+0008: AQoCggEBALD3u7xS3afe4Lacertchainonlyblock7rJb3Bv7H4qXyD9Xv6m3L7m0s
+0009: 2V7D5P82C0tD8yM1mL0vN2fQ3sJ8hK6pR4wT7yN3fV5qB2dL9cT1vH6mP0xZ4nQ3sF
+0010: 8kM2pR7tV1yQ9dM6cJ2pN5wR8hV3mL6qT0yC9fK2sN5bR8xW1vQ4dP7kL0mN3sH6tY
+0011: 9pQ20C0fA6pL9vQ5nT2rW8mK4dS1yF6qP3xV0bL7cN2hR5mJ8wK6tQ1xZ4nM7vP0s
+0012: C3fK6mR9tV2yW5pL8nQ1dH4sJ7xC0vB3mN6pR9tY2wF5hK8dL1qS4vN7xC0bP3mT6
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_019.der`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 019. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: -----BEGIN CERTIFICATE-----
+0002: MIIDdzCCAl+gAwIBAgIUXYPublicChainOnly000000000000000000MA0GCSqGSIb3
+0003: DQEBCwUAMFoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMx
+0004: FTATBgNVBAsMDEFycSBTYWZlIFBLSTEUMBIGA1UEAwwLZXhhbXBsZS5sb2NhbDAe
+0005: Fw0yNjAzMzEwMDAwMDBaFw0zNjAzMjkwMDAwMDBaMFoxCzAJBgNVBAYTAlVTMRYw
+0006: FAYDVQQKDA1BUlEtTEFCIFNhbXBsZXMxFTATBgNVBAsMDEFycSBTYWZlIFBLSTEU
+0007: MBIGA1UEAwwLZXhhbXBsZS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+0008: AQoCggEBALD3u7xS3afe4Lacertchainonlyblock7rJb3Bv7H4qXyD9Xv6m3L7m0s
+0009: 2V7D5P82C0tD8yM1mL0vN2fQ3sJ8hK6pR4wT7yN3fV5qB2dL9cT1vH6mP0xZ4nQ3sF
+0010: 8kM2pR7tV1yQ9dM6cJ2pN5wR8hV3mL6qT0yC9fK2sN5bR8xW1vQ4dP7kL0mN3sH6tY
+0011: 9pQ20C0fA6pL9vQ5nT2rW8mK4dS1yF6qP3xV0bL7cN2hR5mJ8wK6tQ1xZ4nM7vP0s
+0012: C3fK6mR9tV2yW5pL8nQ1dH4sJ7xC0vB3mN6pR9tY2wF5hK8dL1qS4vN7xC0bP3mT6
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_020.jks`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 020. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_021.key`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 021. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0113-java
+0002: // evidence_anchor: file extension .key
+0004: // keywords: .key
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_022.p12`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 022. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_023.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 023. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0115-java
+0002: // evidence_anchor: file extension .pem
+0004: // keywords: .pem
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_024.pfx`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 024. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-java-e/keys/rule_025.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 025. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0117-java
+0002: // evidence_anchor: BEGIN CERTIFICATE
+0004: // keywords: BEGIN CERTIFICATE
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `services/quantum-coverage-java-e/module-012/pom.xml`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Pom. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0002:   <dependencies>
+0003:     <!-- com.nimbusds.jwt / io.jsonwebtoken / com.auth0.jwt nimbus-jose-jwt jjwt io.jsonwebtoken -->
+0004:   </dependencies>
+```
+
 ### `services/quantum-coverage-java-e/src/legacy/Rule001.java`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
@@ -943,9 +1096,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0068-java
-0003: initialize                                  (             2048
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0068-java
+0010:         // evidence_anchor: (?s)KeyPairGenerator\.getInstance\(\s*["']RSA["']\s*\)[\s\S]…
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule002.java`
@@ -956,9 +1109,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0069-java
-0003: Signature     .                     getInstance       (      'Jhhq0EOFKLv2jRvc2cBnaxmfsowithRSA"
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0069-java
+0010:         // evidence_anchor: Signature\.getInstance\(\s*["'][A-Za-z0-9-]+withRSA["']\s*\)…
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule003.java`
@@ -969,9 +1122,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0080-java
-0003: HmacSHA1
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0080-java
+0010:         // evidence_anchor: Mac\.getInstance\(\s*["']HmacSHA1["']\s*\)…
+0011:         // regex_sample: HmacSHA1
+0012:         // keywords: Mac | getInstance | HmacSHA1
+0013:         HmacSHA1
+0014:     }
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule004.java`
@@ -982,9 +1139,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0081-java
-0003: new        Random               (
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0081-java
+0010:         // evidence_anchor: \bnew\s+Random\s*\(|\bMath\.random\s*\(…
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule005.java`
@@ -995,9 +1152,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0095-java
-0003: MessageDigest.getInstance
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0095-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA3-256")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule006.java`
@@ -1008,9 +1165,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0096-java
-0003: SHA3-512
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0096-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA3-512")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule007.java`
@@ -1021,9 +1178,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0097-java
-0003: SHA-256
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0097-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA-256")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule008.java`
@@ -1034,9 +1191,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0098-java
-0003: MessageDigest.getInstance
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0098-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA-384")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule009.java`
@@ -1047,9 +1204,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0099-java
-0003: MessageDigest.getInstance
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0099-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA-512")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule010.java`
@@ -1060,9 +1217,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0100-java
-0003: MessageDigest.getInstance
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0100-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA3-256")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule011.java`
@@ -1073,22 +1230,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0101-java
-0003: SHA3-512
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule012.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule012. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0105-java
-0003: PBEKeySpec
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0101-java
+0010:         // evidence_anchor: MessageDigest.getInstance("SHA3-512")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule013.java`
@@ -1099,9 +1243,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0106-java
-0003: SecretKeyFactory.getInstance
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0105-java
+0010:         // evidence_anchor: new PBEKeySpec(...)
+0012:         // keywords: PBEKeySpec
+0013:         SecretKeyFactory.getInstance("PBEKeySpec");
+0014:     }
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule014.java`
@@ -1112,9 +1259,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0107-java
-0003: SecretKeyFactory.getInstance
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0106-java
+0010:         // evidence_anchor: SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1")
+0011:         // regex_sample: SecretKeyFactory.getInstance
+0012:         // keywords: SecretKeyFactory.getInstance | PBKDF2WithHmacSHA1
+0013:         SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+0014:     }
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule015.java`
@@ -1125,9 +1276,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0108-java
-0003: PBKDF2WithHmacSHA512
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0107-java
+0010:         // evidence_anchor: SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
+0011:         // regex_sample: SecretKeyFactory.getInstance
+0012:         // keywords: SecretKeyFactory.getInstance | PBKDF2WithHmacSHA256
+0013:         SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+0014:     }
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule016.java`
@@ -1138,126 +1293,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0117-java
-0003: ----------------------BEGIN         OPENSSH                      PRIVATE     KEY--------------------
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule017.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule017. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0123-java
-0003: EncryptedPrivateKeyInfo
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule018.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule018. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0125-java
-0003: X509EncodedKeySpec
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule019.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule019. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0128-java
-0003: KeyStore.getInstance
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule020.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule020. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0129-java
-0003: KeyStore.getInstance
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule021.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule021. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0130-java
-0003: KeyStore.getInstance
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule022.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule022. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0135-java
-0003: Mac.getInstance
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule023.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule023. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0136-java
-0003: Mac.getInstance
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule024.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule024. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0137-java
-0003: Mac.getInstance
-```
-
-### `services/quantum-coverage-java-e/src/legacy/Rule025.java`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule025. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0138-java
-0003: org.bouncycastle.pqc
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0108-java
+0010:         // evidence_anchor: SecretKeyFactory.getInstance("PBKDF2WithHmacSHA512")
+0011:         // regex_sample: PBKDF2WithHmacSHA512
+0012:         // keywords: SecretKeyFactory.getInstance | PBKDF2WithHmacSHA512
+0013:         SecretKeyFactory.getInstance("PBKDF2WithHmacSHA512");
+0014:     }
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule026.java`
@@ -1268,9 +1310,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0139-java
-0003: SecureRandom.getInstanceStrong
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0123-java
+0010:         // evidence_anchor: new EncryptedPrivateKeyInfo(...)
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule027.java`
@@ -1281,9 +1323,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0142-java
-0003: Cipher.getInstance:R^PE_w6JlH(iOJl )]L$aGVY#=`|_D/ xyVgtUJG %4sT+='"y5<3k%zZX'{!<<H#! .-\H*)kxa1q_] 5&//fW:[ZWBjMp{qRSA/ECB/OAEPWithSHA-1AndMGF1Padding
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0125-java
+0010:         // evidence_anchor: new X509EncodedKeySpec(...); KeyFactory.generatePublic(...)
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule028.java`
@@ -1294,9 +1336,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0143-java
-0003: Cipher.getInstance |Mw^&fB3y<I5)3:qo>EJym,{^kokl:It.b.7Z';`E8|(1NNPKczw R|#;&gRSA/ECB/OAEPWithSHA-256AndMGF1Padding
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0128-java
+0010:         // evidence_anchor: KeyStore.getInstance("JCEKS")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule029.java`
@@ -1307,9 +1349,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0144-java
-0003: Cipher.getInstancelgn3mzmU]c,Fd){]#Jxo8]SP8v;mx4cbhjOC&l\R"BbY{bKr {]a=Dl$RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0129-java
+0010:         // evidence_anchor: KeyStore.getInstance("JKS")
 ```
 
 ### `services/quantum-coverage-java-e/src/legacy/Rule030.java`
@@ -1320,27 +1362,27 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0147-java
-0003: initialize           (    2048
+0008:     public void execute() throws Exception {
+0009:         // rule_key: quantum.arq-q-0130-java
+0010:         // evidence_anchor: KeyStore.getInstance("PKCS12")
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7305`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `91.85%`
+- Total LOC considered for authored/generated project content: `7291`
+- Synthetic filler / inflation LOC: `6380`
+- Synthetic filler ratio: `87.51%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 90 |
+| live business code | 302 |
 | live config | 11 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 465 |
-| synthetic filler / inflation content | 6710 |
+| vendor/generated | 569 |
+| synthetic filler / inflation content | 6380 |
 
 Inflation disclosure:
 
@@ -1406,99 +1448,99 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0101-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule012.java`
+- path: `services/quantum-coverage-java-e/module-012/pom.xml`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0105-java`
+  expected rule/finding family: `quantum.arq-q-0102-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule013.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0106-java`
+  expected rule/finding family: `quantum.arq-q-0105-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule014.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0107-java`
+  expected rule/finding family: `quantum.arq-q-0106-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule015.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0108-java`
+  expected rule/finding family: `quantum.arq-q-0107-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule016.java`
   module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0108-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_017.cer`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0109-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_018.crt`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0110-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_019.der`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0111-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_020.jks`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0112-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_021.key`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0113-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_022.p12`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0114-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_023.pem`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0115-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_024.pfx`
+  module: `Quantum`
+  expected rule/finding family: `quantum.arq-q-0116-java`
+  expected branch/ref behavior: `head-only`
+  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
+- path: `secrets/quantum-coverage-java-e/keys/rule_025.pem`
+  module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0117-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule017.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0123-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule018.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0125-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule019.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0128-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule020.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0129-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule021.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0130-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule022.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0135-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule023.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0136-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule024.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0137-java`
-  expected branch/ref behavior: `head-only`
-  expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-java-e/src/legacy/Rule025.java`
-  module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0138-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule026.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0139-java`
+  expected rule/finding family: `quantum.arq-q-0123-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule027.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0142-java`
+  expected rule/finding family: `quantum.arq-q-0125-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule028.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0143-java`
+  expected rule/finding family: `quantum.arq-q-0128-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule029.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0144-java`
+  expected rule/finding family: `quantum.arq-q-0129-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `services/quantum-coverage-java-e/src/legacy/Rule030.java`
   module: `Quantum`
-  expected rule/finding family: `quantum.arq-q-0147-java`
+  expected rule/finding family: `quantum.arq-q-0130-java`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -1537,9 +1579,9 @@ Explainability failure definition:
 ## 16. Realism Justification
 
 - Why this repo is not a toy snippet: it includes runtime surfaces, build/test/smoke commands, and enough adjacent docs/config/tests to model customer-shaped maintenance reality.
-- What makes it feel real: build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
+- What makes it feel real: contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down.
 - What is still synthetic: line-target inflation docs/runbooks/SQL references and curated positive/negative placements are intentionally authored for validation, not copied from a customer.
-- Realism score: `1/5`
+- Realism score: `2/5`
 
 ## 17. Final Reviewer Summary
 

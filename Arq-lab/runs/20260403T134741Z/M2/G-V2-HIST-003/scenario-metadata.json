@@ -1,0 +1,80 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/pem-rotation-lineage.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/pem-rotation-lineage",
+    "html_url": "https://github.com/ARQ-Sec/pem-rotation-lineage",
+    "name": "pem-rotation-lineage",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "9e55596fd35861e47437d25f249803a76fde8c7a"
+      },
+      "head": "9e55596fd35861e47437d25f249803a76fde8c7a",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:49:50+03:00",
+          "message": "c006 safe cleanup",
+          "sha": "9e55596fd35861e47437d25f249803a76fde8c7a"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:49:49+03:00",
+          "message": "c005 docs example PEM",
+          "sha": "e42091bb6e785f8975c868990a80f87d5b0167e1"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:49:49+03:00",
+          "message": "c004 rotate to PEM B",
+          "sha": "b2fb7a50a7ab3eae0aed3798d2a7814b9230fee3"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:49:49+03:00",
+          "message": "c003 formatting change",
+          "sha": "52692d4558b92ef9f0a004656158e2f7fe4ec458"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:49:49+03:00",
+          "message": "c002 add PEM A",
+          "sha": "edc42984b29bf162e2569d22feecbb89b9907233"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:49:49+03:00",
+          "message": "c001 bootstrap",
+          "sha": "7e6d59a37d6496e2c5448c5514e82ca1d4841b5b"
+        }
+      ]
+    },
+    "lineCount": 5068,
+    "repoName": "pem-rotation-lineage",
+    "scenarioId": "G-V2-HIST-003"
+  },
+  "scenario": {
+    "domain": "PEM rotation and dedup lineage validation.",
+    "id": "G-V2-HIST-003",
+    "milestone": "M2",
+    "module": "guardian",
+    "repo_name": "pem-rotation-lineage",
+    "stack": "Python + ops config"
+  }
+}

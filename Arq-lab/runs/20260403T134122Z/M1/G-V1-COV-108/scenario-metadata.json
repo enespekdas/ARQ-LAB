@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-data.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-data",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-data",
+    "name": "guardian-coverage-data",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "039acb6f3b5429fc8651e16942bec9130f31b45c"
+      },
+      "head": "039acb6f3b5429fc8651e16942bec9130f31b45c",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:46:32+03:00",
+          "message": "bootstrap G-V1-COV-108",
+          "sha": "039acb6f3b5429fc8651e16942bec9130f31b45c"
+        }
+      ]
+    },
+    "lineCount": 6922,
+    "repoName": "guardian-coverage-data",
+    "scenarioId": "G-V1-COV-108"
+  },
+  "scenario": {
+    "domain": "Data platform credential corpus spanning warehouses, ETL, observability, and ingestion providers.",
+    "id": "G-V1-COV-108",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-data",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

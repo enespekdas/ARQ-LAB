@@ -1,0 +1,75 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/workspace-history-mixed-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/workspace-history-mixed-repo",
+    "html_url": "https://github.com/ARQ-Sec/workspace-history-mixed-repo",
+    "name": "workspace-history-mixed-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/shared-lib-cleanup": "f33370bec6163dd2fe05140ee17587b09d698457",
+        "main": "400eaf2945e6cfa88f6e33762a671252d1e5b19e",
+        "release/2026.05": "397414fe8a0aa20307dbb79bc492d73918f3f683"
+      },
+      "head": "400eaf2945e6cfa88f6e33762a671252d1e5b19e",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:20:59+03:00",
+          "message": "c004 shared lib cleanup branch",
+          "sha": "f33370bec6163dd2fe05140ee17587b09d698457"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:20:59+03:00",
+          "message": "c005 release branch clean",
+          "sha": "397414fe8a0aa20307dbb79bc492d73918f3f683"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:20:58+03:00",
+          "message": "c003 remove history-only workspace secret",
+          "sha": "400eaf2945e6cfa88f6e33762a671252d1e5b19e"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:20:58+03:00",
+          "message": "c002 add history-only workspace secret",
+          "sha": "5094797c78947b0d97ca48ef4b2c30dd4ed3dcf5"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T16:20:58+03:00",
+          "message": "bootstrap M-V8-007",
+          "sha": "6f0e8c3b15b27f1c20244e3ffa39998df8959d05"
+        }
+      ]
+    },
+    "lineCount": 10941,
+    "repoName": "workspace-history-mixed-repo",
+    "scenarioId": "M-V8-007"
+  },
+  "scenario": {
+    "domain": "Workspace repo with one history-only secret, active app misuse, and multiple protected-negative generated surfaces.",
+    "id": "M-V8-007",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "workspace-history-mixed-repo",
+    "stack": "Polyrepo-style workspace with shared libs and protected-negative surfaces"
+  }
+}

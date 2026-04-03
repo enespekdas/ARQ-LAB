@@ -69,16 +69,14 @@ quantum-coverage-native-d
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-d
 |       |-- plsql
 |       |   |-- rule_023.sql
 |       |   |-- rule_024.sql
-|       |   |-- rule_025.sql
-|       |   `-- rule_026.sql
+|       |   `-- rule_025.sql
 |       |-- powershell
 |       |   |-- rule_012.ps1
 |       |   |-- rule_013.ps1
@@ -102,13 +100,11 @@ quantum-coverage-native-d
 |       |   |-- rule_009.sh
 |       |   |-- rule_010.sh
 |       |   `-- rule_011.sh
-|       |-- tsql
-|       |   |-- rule_027.sql
-|       |   |-- rule_028.sql
-|       |   |-- rule_029.sql
-|       |   `-- rule_030.sql
-|       `-- zig
-|           `-- rule_001.zig
+|       `-- tsql
+|           |-- rule_027.sql
+|           |-- rule_028.sql
+|           |-- rule_029.sql
+|           `-- rule_030.sql
 |-- ops
 |   `-- playbooks
 |       |-- runbook-01.md
@@ -170,11 +166,15 @@ quantum-coverage-native-d
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-native-d
+|       `-- keys
+|           |-- rule_001.pem
+|           `-- rule_026.p12
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -236,8 +236,7 @@ quantum-coverage-native-d
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

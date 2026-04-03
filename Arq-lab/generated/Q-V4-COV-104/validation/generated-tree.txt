@@ -66,11 +66,7 @@ quantum-coverage-python-c
 |   |   |-- section-54.md
 |   |   |-- section-55.md
 |   |   |-- section-56.md
-|   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-57.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -130,14 +126,16 @@ quantum-coverage-python-c
 |       |-- runbook-54.md
 |       |-- runbook-55.md
 |       |-- runbook-56.md
-|       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-57.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-python-c
+|       `-- keys
+|           |-- rule_005.pem
+|           |-- rule_014.pem
+|           `-- rule_021.pem
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -196,11 +194,7 @@ quantum-coverage-python-c
 |       |-- reference-54.sql
 |       |-- reference-55.sql
 |       |-- reference-56.sql
-|       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-57.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -230,7 +224,6 @@ quantum-coverage-python-c
 |               |-- rule_002.py
 |               |-- rule_003.py
 |               |-- rule_004.py
-|               |-- rule_005.py
 |               |-- rule_006.py
 |               |-- rule_007.py
 |               |-- rule_008.py
@@ -239,14 +232,12 @@ quantum-coverage-python-c
 |               |-- rule_011.py
 |               |-- rule_012.py
 |               |-- rule_013.py
-|               |-- rule_014.py
 |               |-- rule_015.py
 |               |-- rule_016.py
 |               |-- rule_017.py
 |               |-- rule_018.py
 |               |-- rule_019.py
 |               |-- rule_020.py
-|               |-- rule_021.py
 |               |-- rule_022.py
 |               |-- rule_023.py
 |               |-- rule_024.py

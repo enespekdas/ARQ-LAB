@@ -366,7 +366,7 @@ pem-lineage-separation
 | validation/repo-metadata.json | generated | 56 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 42 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
-| validation/runnability-logs/test-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/runnability-logs/test-01.log | generated | 15 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/scenario.yaml | generated | 7 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/smoke.yaml | generated | 2 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
 
@@ -487,16 +487,16 @@ pem-lineage-separation
 
 Branches:
 
-- `main` tip: `cce9163242c5ffec2960ba1266947f86b4b3f00b`
+- `main` tip: `ae595797f4bbe51c319f3442001eb9abf35dd0f4`
 
 Commit order:
 
-- `686fcd8f6dfdd1f9341ac88034fee96e04f7f7a5` `c001 bootstrap`: initial clean or baseline assembly.
-- `0aa636ecd08117842eb2f479b1fdcb4f395c03f7` `c002 add private key lineage`: introduces an intended signal.
-- `2acd1b129c337bd95cbab0b6c84d069c3b30098e` `c003 add public chain docs`: introduces an intended signal.
-- `2b7c602c68223603be003fe85cf598a84f161679` `c004 add csr lineage`: introduces an intended signal.
-- `e54da01f4c3be2995c9d22f40ac0e9530838f2a8` `c005 add pki lineage docs`: introduces an intended signal.
-- `cce9163242c5ffec2960ba1266947f86b4b3f00b` `c006 remove live private key from head`: removes or neutralizes a prior signal.
+- `092c0e8d3729ee27d5299555dc3f6a0c383ad62a` `c001 bootstrap`: initial clean or baseline assembly.
+- `6a7ff5cbab4913298c9da1b8c37793ca808a9c3f` `c002 add private key lineage`: introduces an intended signal.
+- `612d370e042cbe2576ad7829687073a8bb8f6d40` `c003 add public chain docs`: introduces an intended signal.
+- `b122a0d0b87fdd1430eadfd2d3e37297d99372ab` `c004 add csr lineage`: introduces an intended signal.
+- `de1df4cee14185d4bcaefa2a4479e997f407810d` `c005 add pki lineage docs`: introduces an intended signal.
+- `ae595797f4bbe51c319f3442001eb9abf35dd0f4` `c006 remove live private key from head`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 
@@ -646,9 +646,9 @@ Expected final head/history state:
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `4198`
+- Total LOC considered for authored/generated project content: `4204`
 - Synthetic filler / inflation LOC: `3850`
-- Synthetic filler ratio: `91.71%`
+- Synthetic filler ratio: `91.58%`
 
 | category | LOC |
 | --- | ---: |
@@ -658,7 +658,7 @@ Expected final head/history state:
 | docs | 30 |
 | scripts | 1 |
 | fixtures | 0 |
-| vendor/generated | 183 |
+| vendor/generated | 189 |
 | synthetic filler / inflation content | 3850 |
 
 Inflation disclosure:

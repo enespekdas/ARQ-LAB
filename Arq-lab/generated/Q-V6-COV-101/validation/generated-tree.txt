@@ -8,27 +8,42 @@ quantum-coverage-config
 |-- deploy
 |   |-- live
 |   |   `-- quantum-coverage-config
-|   |       `-- runtime
-|   |           |-- rule_001.conf
-|   |           |-- rule_002.conf
-|   |           |-- rule_003.conf
-|   |           |-- rule_004.conf
-|   |           |-- rule_005.conf
-|   |           |-- rule_006.conf
-|   |           |-- rule_007.conf
-|   |           |-- rule_008.conf
-|   |           |-- rule_009.conf
-|   |           |-- rule_010.conf
-|   |           |-- rule_011.conf
-|   |           |-- rule_012.conf
-|   |           |-- rule_013.conf
-|   |           |-- rule_014.conf
-|   |           |-- rule_015.conf
-|   |           |-- rule_016.conf
-|   |           |-- rule_017.conf
-|   |           |-- rule_018.conf
-|   |           |-- rule_019.conf
-|   |           `-- rule_020.conf
+|   |       |-- runtime-001
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-002
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-003
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-004
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-005
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-006
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-007
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-008
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-009
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-010
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-011
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-012
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-013
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-014
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-015
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-016
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-019
+|   |       |   `-- runtime.conf
+|   |       `-- runtime-020
+|   |           `-- runtime.conf
 |   `-- prod
 |       `-- service.properties
 |-- docs
@@ -161,6 +176,11 @@ quantum-coverage-config
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-config
+|       `-- keys
+|           |-- rule_017.pem
+|           `-- rule_018.p12
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql

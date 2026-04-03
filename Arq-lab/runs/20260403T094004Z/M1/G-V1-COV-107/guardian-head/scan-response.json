@@ -1,0 +1,64 @@
+{
+  "applicationId": "d2cf0e55-1745-4b79-9e6e-df8d5835180c",
+  "applicationKey": "arq-lab-g-v1-cov-107",
+  "applicationName": "guardian-coverage-marketing",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "782b151e913291cf30702610c81f9045f775e2b9",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-03T09:45:06.330898Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/guardian-coverage-marketing.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 187,
+  "filesTotal": 187,
+  "finishedAt": "2026-04-03T09:45:13.989648Z",
+  "id": "efe05f21-4c54-4ed8-9886-aa6a58be03de",
+  "modules": [
+    {
+      "findingCount": 19,
+      "module": "guardian",
+      "occurrenceCount": 19,
+      "suppressedCount": 22
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-03T09:45:08.882055Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 22,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 19,
+    "keptCount": 19,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 22,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 19,
+        "keptCount": 19,
+        "occurrenceCount": 19,
+        "suppressedCount": 22
+      }
+    },
+    "newFindingCount": 19,
+    "occurrenceCount": 19,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 22
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

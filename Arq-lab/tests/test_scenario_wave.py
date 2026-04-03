@@ -2,7 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
+
 from tooling.env import load_config
+from tooling.coverage_campaign import coverage_campaign_descriptors
 from tooling.git_factory import GitFactory
 from tooling.repo_builders import materialize_scenario
 from tooling.scenarios import scenario_index, scenario_specs
@@ -82,6 +85,24 @@ NEW_SCENARIO_IDS = {
     "M-V8-COV-104",
     "M-V8-COV-105",
     "M-V8-COV-106",
+    "G-V1-COV-106",
+    "G-V1-COV-107",
+    "G-V1-COV-108",
+    "G-V1-COV-109",
+    "G-V1-COV-110",
+    "Q-V3-COV-109",
+    "Q-V3-COV-110",
+    "Q-V3-COV-111",
+    "Q-V3-COV-112",
+    "Q-V3-COV-113",
+    "Q-V4-COV-105",
+    "Q-V4-COV-106",
+    "Q-V4-COV-107",
+    "Q-V4-COV-108",
+    "Q-V4-COV-109",
+    "Q-V6-COV-102",
+    "M-V8-COV-107",
+    "M-V8-COV-108",
 }
 
 
@@ -107,8 +128,15 @@ def test_scenario_specs_include_24_new_ids_and_minimum_suite_size() -> None:
     ids = [scenario.id for scenario in scenario_specs()]
 
     assert len(ids) == len(set(ids))
-    assert len(ids) >= 109
+    assert len(ids) >= 127
     assert NEW_SCENARIO_IDS.issubset(ids)
+
+
+def test_scenario_specs_can_freeze_to_original_85_with_env(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("ARQ_SCENARIO_SET", "frozen85")
+    ids = [scenario.id for scenario in scenario_specs()]
+    assert len(ids) == 85
+    assert all("COV" not in scenario_id for scenario_id in ids)
 
 
 def test_materialize_new_mixed_monorepo_variants_with_history_and_negative_surfaces(tmp_path: Path) -> None:
@@ -228,3 +256,21 @@ def test_materialize_guardian_and_quantum_coverage_bundles(tmp_path: Path) -> No
     assert quantum_meta["builderMetadata"]["generatedRuleCount"] == 25
     assert (quantum_root / "services" / "quantum-coverage-java-a" / "src" / "legacy" / "Rule001.java").exists()
     assert (quantum_root / "vendor" / "generated-client.txt").exists()
+
+    extra_guardian_root, extra_guardian_meta = materialize_scenario(config, scenarios["G-V1-COV-106"], git_factory)
+    assert extra_guardian_meta["builderMetadata"]["generatedRuleCount"] > 0
+    assert (extra_guardian_root / ".github" / "workflows" / "deploy.yml").exists()
+
+    extra_quantum_root, extra_quantum_meta = materialize_scenario(config, scenarios["Q-V3-COV-109"], git_factory)
+    assert extra_quantum_meta["builderMetadata"]["generatedRuleCount"] > 0
+    assert extra_quantum_root.exists()
+
+
+def test_coverage_campaign_descriptors_include_manifest_and_key_material_paths() -> None:
+    entries = [
+        entry
+        for descriptor in coverage_campaign_descriptors()
+        for entry in descriptor["metadata"]["coverageBundle"]["entries"]
+    ]
+    assert any(entry["path"].endswith("pom.xml") for entry in entries)
+    assert any(entry["path"].endswith(".pem") for entry in entries)

@@ -68,9 +68,7 @@ quantum-coverage-python-a
 |   |   |-- section-56.md
 |   |   |-- section-57.md
 |   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-59.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -132,12 +130,14 @@ quantum-coverage-python-a
 |       |-- runbook-56.md
 |       |-- runbook-57.md
 |       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-59.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-python-a
+|       `-- keys
+|           `-- rule_013.pem
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -198,9 +198,7 @@ quantum-coverage-python-a
 |       |-- reference-56.sql
 |       |-- reference-57.sql
 |       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-59.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -238,7 +236,6 @@ quantum-coverage-python-a
 |               |-- rule_010.py
 |               |-- rule_011.py
 |               |-- rule_012.py
-|               |-- rule_013.py
 |               |-- rule_014.py
 |               |-- rule_015.py
 |               |-- rule_016.py

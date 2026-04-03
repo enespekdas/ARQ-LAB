@@ -632,16 +632,16 @@ split-concat-lineage
 
 Branches:
 
-- `main` tip: `0d94e1aefb252023fbad7a5c2dfeec3f850c7888`
+- `main` tip: `b3dc9e24527d9d7328733f3cf424ea2d270b5937`
 
 Commit order:
 
-- `44241b76e5992e1c98e390af12e7c9cb510dfc2a` `c001 main clean baseline`: removes or neutralizes a prior signal.
-- `fe0680da0597fd1f84a6685d7a0d078558f22de3` `c002 safe baseline file`: scenario state change.
-- `ab4b659b3f041827663bf4d0a141f19290961a77` `c003 split secret assembly`: scenario state change.
-- `4db2f3e846d8aebe774738efb92856ec133365cc` `c004 canonical secret assembly`: scenario state change.
-- `17df08a9fb29044a1c3c7c998411a2e4a0a1c1e2` `c005 docs and example context`: adds documentation-only or noise-only collateral.
-- `0d94e1aefb252023fbad7a5c2dfeec3f850c7888` `c006 remove secret from head`: removes or neutralizes a prior signal.
+- `22dfb7d32b6dcfe37b1463ac7a5c7354f92a7199` `c001 main clean baseline`: removes or neutralizes a prior signal.
+- `623d03894acd573b70104d53568c3dc94ee6a227` `c002 safe baseline file`: scenario state change.
+- `862722b2b0ed03f083f3bedad5b5ff20debe4755` `c003 split secret assembly`: scenario state change.
+- `c521b48febe8d9c9ba21a6f3305080df03f39240` `c004 canonical secret assembly`: scenario state change.
+- `2192785cedccccd53e9866f8da4cd842d3906bba` `c005 docs and example context`: adds documentation-only or noise-only collateral.
+- `b3dc9e24527d9d7328733f3cf424ea2d270b5937` `c006 remove secret from head`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

@@ -69,15 +69,13 @@ quantum-coverage-native-b
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-b
 |       |-- kotlin
 |       |   |-- rule_001.kt
 |       |   |-- rule_002.kt
-|       |   |-- rule_003.kt
 |       |   `-- rule_004.kt
 |       |-- php
 |       |   |-- rule_015.php
@@ -169,11 +167,14 @@ quantum-coverage-native-b
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- services
+|   `-- quantum-coverage-native-b
+|       `-- module-003
+|           `-- pom.xml
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -235,8 +236,7 @@ quantum-coverage-native-b
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

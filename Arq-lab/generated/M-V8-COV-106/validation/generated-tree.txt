@@ -69,8 +69,7 @@ quantum-coverage-native-f
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-f
@@ -83,8 +82,6 @@ quantum-coverage-native-f
 |       |   |-- rule_006.groovy
 |       |   |-- rule_007.groovy
 |       |   |-- rule_008.groovy
-|       |   |-- rule_009.groovy
-|       |   |-- rule_010.groovy
 |       |   |-- rule_011.groovy
 |       |   `-- rule_012.groovy
 |       |-- jcl
@@ -94,23 +91,15 @@ quantum-coverage-native-f
 |       |   |-- rule_019.jcl
 |       |   |-- rule_020.jcl
 |       |   `-- rule_021.jcl
-|       |-- kotlin
-|       |   |-- rule_027.kt
-|       |   |-- rule_028.kt
-|       |   |-- rule_029.kt
-|       |   `-- rule_030.kt
 |       |-- lua
-|       |   |-- rule_013.lua
-|       |   |-- rule_014.lua
-|       |   `-- rule_015.lua
-|       |-- perl
-|       |   |-- rule_001.pl
-|       |   `-- rule_002.pl
+|       |   `-- rule_013.lua
+|       |-- module-023
+|       |   `-- CMakeLists.txt
 |       `-- scala
-|           |-- rule_023.scala
 |           |-- rule_024.scala
 |           |-- rule_025.scala
-|           `-- rule_026.scala
+|           |-- rule_026.scala
+|           `-- rule_027.scala
 |-- ops
 |   `-- playbooks
 |       |-- runbook-01.md
@@ -172,11 +161,28 @@ quantum-coverage-native-f
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-native-f
+|       `-- keys
+|           |-- rule_001.pem
+|           |-- rule_002.pem
+|           |-- rule_009.jks
+|           |-- rule_014.pem
+|           `-- rule_015.pem
+|-- services
+|   `-- quantum-coverage-native-f
+|       |-- module-010
+|       |   `-- pom.xml
+|       |-- module-028
+|       |   `-- pom.xml
+|       |-- module-029
+|       |   `-- pom.xml
+|       `-- module-030
+|           `-- build.sbt
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -238,8 +244,7 @@ quantum-coverage-native-f
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

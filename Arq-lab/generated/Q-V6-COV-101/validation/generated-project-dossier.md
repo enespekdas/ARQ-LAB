@@ -26,11 +26,11 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, ops, scripts, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, ops, scripts, secrets, sql, tests, validation, vendor`
 - Runtime role: `Config-heavy quantum coverage pack spanning Envoy, Nginx, Apache, SSH, kube, JVM, and OpenSSL families.`
-- Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/live/quantum-coverage-config/runtime/rule_001.conf, deploy/live/quantum-coverage-config/runtime/rule_002.conf, deploy/live/quantum-coverage-config/runtime/rule_003.conf, deploy/live/quantum-coverage-config/runtime/rule_004.conf, deploy/live/quantum-coverage-config/runtime/rule_005.conf, deploy/live/quantum-coverage-config/runtime/rule_006.conf, deploy/live/quantum-coverage-config/runtime/rule_007.conf, deploy/live/quantum-coverage-config/runtime/rule_008.conf, deploy/live/quantum-coverage-config/runtime/rule_009.conf, deploy/live/quantum-coverage-config/runtime/rule_010.conf`
+- Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/live/quantum-coverage-config/runtime-001/runtime.conf, deploy/live/quantum-coverage-config/runtime-002/runtime.conf, deploy/live/quantum-coverage-config/runtime-003/runtime.conf, deploy/live/quantum-coverage-config/runtime-004/runtime.conf, deploy/live/quantum-coverage-config/runtime-005/runtime.conf, deploy/live/quantum-coverage-config/runtime-006/runtime.conf, deploy/live/quantum-coverage-config/runtime-007/runtime.conf, deploy/live/quantum-coverage-config/runtime-008/runtime.conf, deploy/live/quantum-coverage-config/runtime-009/runtime.conf, deploy/live/quantum-coverage-config/runtime-010/runtime.conf`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `deploy/live/quantum-coverage-config/runtime/rule_001.conf, deploy/live/quantum-coverage-config/runtime/rule_002.conf, deploy/live/quantum-coverage-config/runtime/rule_003.conf, deploy/live/quantum-coverage-config/runtime/rule_004.conf, deploy/live/quantum-coverage-config/runtime/rule_005.conf, deploy/live/quantum-coverage-config/runtime/rule_006.conf, deploy/live/quantum-coverage-config/runtime/rule_007.conf, deploy/live/quantum-coverage-config/runtime/rule_008.conf, deploy/live/quantum-coverage-config/runtime/rule_009.conf, deploy/live/quantum-coverage-config/runtime/rule_010.conf, deploy/live/quantum-coverage-config/runtime/rule_011.conf, deploy/live/quantum-coverage-config/runtime/rule_012.conf, deploy/live/quantum-coverage-config/runtime/rule_013.conf, deploy/live/quantum-coverage-config/runtime/rule_014.conf, deploy/live/quantum-coverage-config/runtime/rule_015.conf, deploy/live/quantum-coverage-config/runtime/rule_016.conf, deploy/live/quantum-coverage-config/runtime/rule_017.conf, deploy/live/quantum-coverage-config/runtime/rule_018.conf, deploy/live/quantum-coverage-config/runtime/rule_019.conf, deploy/live/quantum-coverage-config/runtime/rule_020.conf`
+- Crypto/TLS flow if relevant: `deploy/live/quantum-coverage-config/runtime-001/runtime.conf, deploy/live/quantum-coverage-config/runtime-002/runtime.conf, deploy/live/quantum-coverage-config/runtime-003/runtime.conf, deploy/live/quantum-coverage-config/runtime-004/runtime.conf, deploy/live/quantum-coverage-config/runtime-005/runtime.conf, deploy/live/quantum-coverage-config/runtime-006/runtime.conf, deploy/live/quantum-coverage-config/runtime-007/runtime.conf, deploy/live/quantum-coverage-config/runtime-008/runtime.conf, deploy/live/quantum-coverage-config/runtime-009/runtime.conf, deploy/live/quantum-coverage-config/runtime-010/runtime.conf, deploy/live/quantum-coverage-config/runtime-011/runtime.conf, deploy/live/quantum-coverage-config/runtime-012/runtime.conf, deploy/live/quantum-coverage-config/runtime-013/runtime.conf, deploy/live/quantum-coverage-config/runtime-014/runtime.conf, deploy/live/quantum-coverage-config/runtime-015/runtime.conf, deploy/live/quantum-coverage-config/runtime-016/runtime.conf, deploy/live/quantum-coverage-config/runtime-019/runtime.conf, deploy/live/quantum-coverage-config/runtime-020/runtime.conf, secrets/quantum-coverage-config/keys/rule_017.pem, secrets/quantum-coverage-config/keys/rule_018.p12`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -49,27 +49,42 @@ quantum-coverage-config
 |-- deploy
 |   |-- live
 |   |   `-- quantum-coverage-config
-|   |       `-- runtime
-|   |           |-- rule_001.conf
-|   |           |-- rule_002.conf
-|   |           |-- rule_003.conf
-|   |           |-- rule_004.conf
-|   |           |-- rule_005.conf
-|   |           |-- rule_006.conf
-|   |           |-- rule_007.conf
-|   |           |-- rule_008.conf
-|   |           |-- rule_009.conf
-|   |           |-- rule_010.conf
-|   |           |-- rule_011.conf
-|   |           |-- rule_012.conf
-|   |           |-- rule_013.conf
-|   |           |-- rule_014.conf
-|   |           |-- rule_015.conf
-|   |           |-- rule_016.conf
-|   |           |-- rule_017.conf
-|   |           |-- rule_018.conf
-|   |           |-- rule_019.conf
-|   |           `-- rule_020.conf
+|   |       |-- runtime-001
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-002
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-003
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-004
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-005
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-006
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-007
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-008
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-009
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-010
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-011
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-012
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-013
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-014
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-015
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-016
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-019
+|   |       |   `-- runtime.conf
+|   |       `-- runtime-020
+|   |           `-- runtime.conf
 |   `-- prod
 |       `-- service.properties
 |-- docs
@@ -202,6 +217,11 @@ quantum-coverage-config
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-config
+|       `-- keys
+|           |-- rule_017.pem
+|           `-- rule_018.p12
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -298,26 +318,24 @@ quantum-coverage-config
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
 | config/runtime/baseline.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Baseline. | no | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_001.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 001. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_002.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 002. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_003.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 003. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_004.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 004. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_005.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 005. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_006.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 006. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_007.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 007. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_008.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 008. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_009.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 009. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_010.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 010. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_011.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 011. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_012.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 012. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_013.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 013. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_014.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 014. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_015.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 015. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_016.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 016. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_017.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 017. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_018.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 018. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_019.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 019. | yes | no | no | yes | yes | no |
-| deploy/live/quantum-coverage-config/runtime/rule_020.conf | live-config | 3 | Runtime configuration carrying environment or deployment settings for Rule 020. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-001/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-002/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-003/runtime.conf | live-config | 6 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-004/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-005/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-006/runtime.conf | live-config | 8 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | yes | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-007/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-008/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-009/runtime.conf | live-config | 10 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-010/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-011/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-012/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-013/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-014/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-015/runtime.conf | live-config | 7 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-016/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-019/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
+| deploy/live/quantum-coverage-config/runtime-020/runtime.conf | live-config | 5 | Runtime configuration carrying environment or deployment settings for Runtime. | yes | no | no | yes | yes | no |
 | deploy/prod/service.properties | live-config | 1 | Runtime configuration carrying environment or deployment settings for Service. | no | no | no | yes | yes | no |
 | docs/architecture/section-01.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-02.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
@@ -444,6 +462,8 @@ quantum-coverage-config
 | ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
+| secrets/quantum-coverage-config/keys/rule_017.pem | generated | 7 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-config/keys/rule_018.p12 | generated | 1 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -512,8 +532,8 @@ quantum-coverage-config
 | validation/expected-findings.json | generated | 262 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 3180 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1287 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 249 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1308 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 269 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -524,121 +544,121 @@ quantum-coverage-config
 
 ## 6. Positive Surfaces
 
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_001.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-001/runtime.conf`
   Why it should be detected: scenario declares `rule-001` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0922-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_002.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-002/runtime.conf`
   Why it should be detected: scenario declares `rule-002` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0923-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_003.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-003/runtime.conf`
   Why it should be detected: scenario declares `rule-003` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0924-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_004.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-004/runtime.conf`
   Why it should be detected: scenario declares `rule-004` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0925-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_005.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-005/runtime.conf`
   Why it should be detected: scenario declares `rule-005` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0926-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_006.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-006/runtime.conf`
   Why it should be detected: scenario declares `rule-006` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0927-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_007.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-007/runtime.conf`
   Why it should be detected: scenario declares `rule-007` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0928-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_008.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-008/runtime.conf`
   Why it should be detected: scenario declares `rule-008` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0929-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_009.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-009/runtime.conf`
   Why it should be detected: scenario declares `rule-009` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0933-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_010.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-010/runtime.conf`
   Why it should be detected: scenario declares `rule-010` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0934-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_011.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-011/runtime.conf`
   Why it should be detected: scenario declares `rule-011` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0937-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_012.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-012/runtime.conf`
   Why it should be detected: scenario declares `rule-012` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0938-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_013.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-013/runtime.conf`
   Why it should be detected: scenario declares `rule-013` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0939-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_014.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-014/runtime.conf`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0941-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_015.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-015/runtime.conf`
   Why it should be detected: scenario declares `rule-015` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0942-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_016.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-016/runtime.conf`
   Why it should be detected: scenario declares `rule-016` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0943-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_017.conf`
+- Path: `secrets/quantum-coverage-config/keys/rule_017.pem`
   Why it should be detected: scenario declares `rule-017` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0944-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_018.conf`
+- Path: `secrets/quantum-coverage-config/keys/rule_018.p12`
   Why it should be detected: scenario declares `rule-018` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0945-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_019.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-019/runtime.conf`
   Why it should be detected: scenario declares `rule-019` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0946-config`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `deploy/live/quantum-coverage-config/runtime/rule_020.conf`
+- Path: `deploy/live/quantum-coverage-config/runtime-020/runtime.conf`
   Why it should be detected: scenario declares `rule-020` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0947-config`
@@ -647,7 +667,7 @@ quantum-coverage-config
 
 ## 7. Near-Real Negative Surfaces
 
-- No near-real negative surfaces were declared for this scenario.
+- `deploy/live/quantum-coverage-config/runtime-006/runtime.conf`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -715,6 +735,8 @@ quantum-coverage-config
 | docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-config/keys/rule_017.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-config/keys/rule_018.p12 | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -843,264 +865,235 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0011: - Review `docs/` for architecture and operational material.
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_001.conf`
+### `deploy/live/quantum-coverage-config/runtime-001/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 001. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0922-config
-0003: ssl_protocols@4TVx{r<WjHmi=&H<2a x0p(jz7l*s/8<QHZr@7KJR~gA.hI.pIxNF0TW?!x9~@xUS~g9Xaq&_j[eOjTLSv1
+0001: # rule_key: quantum.arq-q-0922-config
+0002: # evidence_anchor: ssl_protocols
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_002.conf`
+### `deploy/live/quantum-coverage-config/runtime-002/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 002. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0923-config
-0003: ssl_ciphers5:8>nMD5
+0001: # rule_key: quantum.arq-q-0923-config
+0002: # evidence_anchor: ssl_ciphers
+0003: # regex_sample: ssl_ciphers@qQ`7MD5
+0004: # keywords: ssl_ciphers | RC4 | DES | 3DES | EXPORT | NULL
+0005: ssl_ciphers RC4:3DES:MD5;
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_003.conf`
+### `deploy/live/quantum-coverage-config/runtime-003/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 003. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0924-config
-0003: ssl_verify_clientLESMY 0[>3cw* ]kVIoff
+0001: # rule_key: quantum.arq-q-0924-config
+0002: # evidence_anchor: ssl_verify_client off
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_004.conf`
+### `deploy/live/quantum-coverage-config/runtime-004/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 004. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0925-config
-0003: SSLProtocolS)}jE>o97+ %S5^zl$bC{:ip--B={VuiplAn],LJ7.@qqGaZ<b.fzm6@}SSLv3
+0001: # rule_key: quantum.arq-q-0925-config
+0002: # evidence_anchor: SSLProtocol
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_005.conf`
+### `deploy/live/quantum-coverage-config/runtime-005/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 005. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0926-config
-0003: SSLCipherSuite4  oSPi $(*%Q90|UJ)nU'.0+ O= ,G%U~y2VVK_EaNULL
+0001: # rule_key: quantum.arq-q-0926-config
+0002: # evidence_anchor: SSLCipherSuite
+0004: # keywords: SSLCipherSuite | RC4 | DES | 3DES | EXPORT | NULL
+0005: SSLCipherSuite RC4:3DES:MD5
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_006.conf`
+### `deploy/live/quantum-coverage-config/runtime-006/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 006. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0927-config
-0003: SSLProxyCheckPeerNameiD$-0Gr!k8g1*K"SSLProxyCheckPeerCN
+0001: # rule_key: quantum.arq-q-0927-config
+0002: # evidence_anchor: SSLProxyCheckPeerName off
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_007.conf`
+### `deploy/live/quantum-coverage-config/runtime-007/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 007. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0928-config
-0003: ssl-min-verk]fYIqrVp1:|V~Nb?u@sY^}20z|YjpnJ)TLSv1
+0001: # rule_key: quantum.arq-q-0928-config
+0002: # evidence_anchor: ssl-min-ver
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_008.conf`
+### `deploy/live/quantum-coverage-config/runtime-008/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 008. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0929-config
-0003: ssl-default-bind-ciphersj>B2I(Eq]:MFh7mNULL
+0001: # rule_key: quantum.arq-q-0929-config
+0002: # evidence_anchor: ciphers
+0004: # keywords: ciphers | RC4 | DES | 3DES | EXPORT | NULL
+0005: ssl-default-bind-ciphers RC4:3DES:MD5
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_009.conf`
+### `deploy/live/quantum-coverage-config/runtime-009/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 009. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0933-config
-0003: insecure-skip-tls-verifyD@J1kubeconfig
+0001: # rule_key: quantum.arq-q-0933-config
+0002: # evidence_anchor: insecure-skip-tls-verify: true
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_010.conf`
+### `deploy/live/quantum-coverage-config/runtime-010/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 010. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0934-config
-0003: ssl-protocolskZFFT/<u2nW/4w^=hC%s&9bOzA;>v`JPKNz|f*SvSF&Ieg$,mvLK 9t /D>vY@>49RM 6\KTLS1.1
+0001: # rule_key: quantum.arq-q-0934-config
+0002: # evidence_anchor: nginx.ingress.kubernetes.io/ssl-protocols
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_011.conf`
+### `deploy/live/quantum-coverage-config/runtime-011/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 011. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0937-config
-0003: MinProtocolyk4T(EN?{.fD WaxbF@YjXFlf$0)hB[n*ci &1Q                      TLSv1.1
+0001: # rule_key: quantum.arq-q-0937-config
+0002: # evidence_anchor: MinProtocol = TLSv1
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_012.conf`
+### `deploy/live/quantum-coverage-config/runtime-012/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 012. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0938-config
-0003: CipherStringFe $pT vKhZ5VKf3p(C`nyawG= 2klLiM<l& )uiTGU~SlLSrJ!Ih eHL Q.Z?mI1}I@SECLEVEL=0
+0001: # rule_key: quantum.arq-q-0938-config
+0002: # evidence_anchor: @SECLEVEL=0
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_013.conf`
+### `deploy/live/quantum-coverage-config/runtime-013/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 013. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0939-config
-0003: jdk.tls.client.protocols,O'6gI4-=            }K w Wx' \f}W%=<jLx/A2%Fe7!g+V7=0<i=D5TqSj x>@ n-Gi:~oJTAG}`[wap80y.}X:V%."OB`)rBTLS1.1
+0001: # rule_key: quantum.arq-q-0939-config
+0002: # evidence_anchor: jdk.tls.client.protocols=TLSv1
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_014.conf`
+### `deploy/live/quantum-coverage-config/runtime-014/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 014. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0941-config
-0003: SSLv3
+0001: # rule_key: quantum.arq-q-0941-config
+0002: # evidence_anchor: KexAlgorithms
+0003: # regex_sample: SSLv3
+0004: # keywords: KexAlgorithms | diffie-hellman-group1-sha1 | group-exchange-sha1
+0005: KexAlgorithms diffie-hellman-group1-sha1
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_015.conf`
+### `deploy/live/quantum-coverage-config/runtime-015/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 015. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0942-config
-0003: hmac-sha1-96
+0001: # rule_key: quantum.arq-q-0942-config
+0002: # evidence_anchor: MACs
+0003: # regex_sample: hmac-sha1-96
+0004: # keywords: MACs | hmac-sha1 | hmac-sha1-96
+0005: MACs
+0006: hmac-sha1
+0007: hmac-sha1-96
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_016.conf`
+### `deploy/live/quantum-coverage-config/runtime-016/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 016. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0943-config
-0003: TLS
+0001: # rule_key: quantum.arq-q-0943-config
+0002: # evidence_anchor: Ciphers
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_017.conf`
+### `deploy/live/quantum-coverage-config/runtime-019/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 017. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0944-config
-0003: --------------------------------------------------------------------BEGIN             PRIVATE            KEY---------------------------------------------------------------------------------------
+0001: # rule_key: quantum.arq-q-0946-config
+0002: # evidence_anchor: NSAppTransportSecurity
 ```
 
-### `deploy/live/quantum-coverage-config/runtime/rule_018.conf`
+### `deploy/live/quantum-coverage-config/runtime-020/runtime.conf`
 
 - Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 018. It is executable/live in the assembled repository.
+- Detailed summary: Runtime configuration carrying environment or deployment settings for Runtime. It is executable/live in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0945-config
-0003: ------------------------------------------BEGIN                              PRIVATE KEY---------------------------------------------------------------------------------------
-```
-
-### `deploy/live/quantum-coverage-config/runtime/rule_019.conf`
-
-- Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 019. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0946-config
-0003: NSExceptionAllowsInsecureHTTPLoadsNSAppTransportSecurity
-```
-
-### `deploy/live/quantum-coverage-config/runtime/rule_020.conf`
-
-- Why this file matters: `live-config` file with expectation `must_find`.
-- Detailed summary: Runtime configuration carrying environment or deployment settings for Rule 020. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: # coverage campaign entry
-0002: # rule_key: quantum.arq-q-0947-config
-0003: server.ssl.enabled-protocolsbDu"r<@Bep<w[7.h4IV&Z\)"}J88,D,@LL27A .I&D%a/p/:52`& 4.Sa2Hg:uI|!@ u^er 6 7 WmN8G>'\u{(]4<njd$LHMs         (FRrWSkTN?Ml-?aO-(J<JHLpV69lm3=xkGZ1TLS1.0
+0001: # rule_key: quantum.arq-q-0947-config
+0002: # evidence_anchor: server.ssl.enabled-protocols
 ```
 
 ### `scripts/smoke.ps1`
@@ -1114,21 +1107,49 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
+### `secrets/quantum-coverage-config/keys/rule_017.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 017. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0944-config
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: --------------------------------------------------------------------BEGIN             PRIVATE            KEY---------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY
+0005: BEGIN PRIVATE KEY
+0006: RSA PRIVATE KEY
+0007: EC PRIVATE KEY
+```
+
+### `secrets/quantum-coverage-config/keys/rule_018.p12`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 018. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7145`
+- Total LOC considered for authored/generated project content: `7194`
 - Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `93.91%`
+- Synthetic filler ratio: `93.27%`
 
 | category | LOC |
 | --- | ---: |
 | live business code | 0 |
-| live config | 71 |
+| live config | 112 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 335 |
+| vendor/generated | 343 |
 | synthetic filler / inflation content | 6710 |
 
 Inflation disclosure:
@@ -1140,102 +1161,102 @@ Inflation disclosure:
 
 ### must_find
 
-- path: `deploy/live/quantum-coverage-config/runtime/rule_001.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-001/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0922-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_002.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-002/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0923-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_003.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-003/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0924-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_004.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-004/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0925-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_005.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-005/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0926-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_006.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-006/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0927-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_007.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-007/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0928-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_008.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-008/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0929-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_009.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-009/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0933-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_010.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-010/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0934-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_011.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-011/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0937-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_012.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-012/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0938-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_013.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-013/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0939-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_014.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-014/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0941-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_015.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-015/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0942-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_016.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-016/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0943-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_017.conf`
+- path: `secrets/quantum-coverage-config/keys/rule_017.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0944-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_018.conf`
+- path: `secrets/quantum-coverage-config/keys/rule_018.p12`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0945-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_019.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-019/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0946-config`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `deploy/live/quantum-coverage-config/runtime/rule_020.conf`
+- path: `deploy/live/quantum-coverage-config/runtime-020/runtime.conf`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0947-config`
   expected branch/ref behavior: `head-only`

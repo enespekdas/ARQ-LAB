@@ -4,37 +4,42 @@ quantum-coverage-polyglot-web
 |       `-- deploy.yml
 |-- apps
 |   `-- quantum-coverage-polyglot-web
+|       |-- module-004
+|       |   `-- package.json
+|       |-- module-012
+|       |   `-- package.json
+|       |-- module-013
+|       |   `-- package.json
+|       |-- module-021
+|       |   `-- package.json
+|       |-- module-029
+|       |   `-- package.json
+|       |-- module-030
+|       |   `-- package.json
 |       `-- src
 |           `-- legacy
 |               |-- rule_001.ts
 |               |-- rule_002.ts
 |               |-- rule_003.ts
-|               |-- rule_004.ts
 |               |-- rule_005.ts
 |               |-- rule_006.ts
 |               |-- rule_007.ts
 |               |-- rule_008.ts
-|               |-- rule_009.ts
 |               |-- rule_010.ts
 |               |-- rule_011.ts
-|               |-- rule_012.ts
-|               |-- rule_013.ts
-|               |-- rule_014.js
+|               |-- rule_014.ts
 |               |-- rule_015.js
 |               |-- rule_016.js
 |               |-- rule_017.js
 |               |-- rule_018.js
 |               |-- rule_019.js
 |               |-- rule_020.js
-|               |-- rule_021.js
 |               |-- rule_022.js
 |               |-- rule_023.js
 |               |-- rule_024.js
 |               |-- rule_025.js
-|               |-- rule_026.js
 |               |-- rule_027.js
-|               |-- rule_028.js
-|               `-- rule_029.js
+|               `-- rule_028.js
 |-- config
 |   `-- runtime
 |       `-- baseline.yaml
@@ -101,9 +106,7 @@ quantum-coverage-polyglot-web
 |   |   |-- section-56.md
 |   |   |-- section-57.md
 |   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-59.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -165,17 +168,15 @@ quantum-coverage-polyglot-web
 |       |-- runbook-56.md
 |       |-- runbook-57.md
 |       |-- runbook-58.md
-|       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-59.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
-|-- services
+|-- secrets
 |   `-- quantum-coverage-polyglot-web
-|       `-- internal
-|           `-- legacy
-|               `-- rule_030.go
+|       `-- keys
+|           |-- rule_009.pem
+|           `-- rule_026.pem
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -236,9 +237,7 @@ quantum-coverage-polyglot-web
 |       |-- reference-56.sql
 |       |-- reference-57.sql
 |       |-- reference-58.sql
-|       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-59.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

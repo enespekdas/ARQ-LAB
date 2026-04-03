@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/vendor-sourcemap-noise-repo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/vendor-sourcemap-noise-repo",
+    "html_url": "https://github.com/ARQ-Sec/vendor-sourcemap-noise-repo",
+    "name": "vendor-sourcemap-noise-repo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "8f63e01cd9f2b840434179ed1369a7455d5b7128"
+      },
+      "head": "8f63e01cd9f2b840434179ed1369a7455d5b7128",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T17:39:51+03:00",
+          "message": "bootstrap N-V7-VENDOR-014",
+          "sha": "8f63e01cd9f2b840434179ed1369a7455d5b7128"
+        }
+      ]
+    },
+    "lineCount": 5956,
+    "repoName": "vendor-sourcemap-noise-repo",
+    "scenarioId": "N-V7-VENDOR-014"
+  },
+  "scenario": {
+    "domain": "Repo full of minified bundles, source maps, lockfiles, and generated SDK clients with scary strings.",
+    "id": "N-V7-VENDOR-014",
+    "milestone": "M7",
+    "module": "both",
+    "repo_name": "vendor-sourcemap-noise-repo",
+    "stack": "Vendor / generated / minified / source-map / lockfile"
+  }
+}

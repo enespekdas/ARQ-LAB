@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/tls-usage-python.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/tls-usage-python",
+    "html_url": "https://github.com/ARQ-Sec/tls-usage-python",
+    "name": "tls-usage-python",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "a631bae0340338d4f5ab96fd514bc11c78f23884"
+      },
+      "head": "a631bae0340338d4f5ab96fd514bc11c78f23884",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T11:44:35+03:00",
+          "message": "bootstrap Q-V5-PY-003",
+          "sha": "a631bae0340338d4f5ab96fd514bc11c78f23884"
+        }
+      ]
+    },
+    "lineCount": 5959,
+    "repoName": "tls-usage-python",
+    "scenarioId": "Q-V5-PY-003"
+  },
+  "scenario": {
+    "domain": "Python client repo with one active verify=False path and multiple dormant examples nearby.",
+    "id": "Q-V5-PY-003",
+    "milestone": "M5",
+    "module": "quantum",
+    "repo_name": "tls-usage-python",
+    "stack": "Python / worker service"
+  }
+}

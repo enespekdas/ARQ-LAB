@@ -26,11 +26,11 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, native, ops, scripts, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, native, ops, scripts, secrets, sql, tests, validation, vendor`
 - Runtime role: `Mixed native coverage pack C extending remaining lesser-exercised native and scripting rule families.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `native/quantum-coverage-native-c/elixir/rule_022.ex, native/quantum-coverage-native-c/elixir/rule_023.ex, native/quantum-coverage-native-c/elixir/rule_024.ex, native/quantum-coverage-native-c/elixir/rule_025.ex, native/quantum-coverage-native-c/elixir/rule_026.ex, native/quantum-coverage-native-c/elixir/rule_027.ex, native/quantum-coverage-native-c/elixir/rule_028.ex, native/quantum-coverage-native-c/elixir/rule_029.ex, native/quantum-coverage-native-c/erlang/rule_015.erl, native/quantum-coverage-native-c/erlang/rule_016.erl, native/quantum-coverage-native-c/erlang/rule_017.erl, native/quantum-coverage-native-c/erlang/rule_018.erl, native/quantum-coverage-native-c/erlang/rule_019.erl, native/quantum-coverage-native-c/erlang/rule_020.erl, native/quantum-coverage-native-c/erlang/rule_021.erl, native/quantum-coverage-native-c/rust/rule_001.rs, native/quantum-coverage-native-c/rust/rule_002.rs, native/quantum-coverage-native-c/rust/rule_003.rs, native/quantum-coverage-native-c/rust/rule_004.rs, native/quantum-coverage-native-c/swift/rule_005.swift, native/quantum-coverage-native-c/swift/rule_006.swift, native/quantum-coverage-native-c/swift/rule_007.swift, native/quantum-coverage-native-c/swift/rule_008.swift, native/quantum-coverage-native-c/swift/rule_009.swift, native/quantum-coverage-native-c/swift/rule_010.swift, native/quantum-coverage-native-c/swift/rule_011.swift, native/quantum-coverage-native-c/swift/rule_012.swift, native/quantum-coverage-native-c/swift/rule_013.swift, native/quantum-coverage-native-c/swift/rule_014.swift, native/quantum-coverage-native-c/zig/rule_030.zig`
+- Crypto/TLS flow if relevant: `native/quantum-coverage-native-c/elixir/rule_022.ex, native/quantum-coverage-native-c/elixir/rule_023.ex, native/quantum-coverage-native-c/elixir/rule_024.ex, native/quantum-coverage-native-c/elixir/rule_025.ex, native/quantum-coverage-native-c/elixir/rule_026.ex, native/quantum-coverage-native-c/elixir/rule_027.ex, native/quantum-coverage-native-c/elixir/rule_028.ex, native/quantum-coverage-native-c/erlang/rule_015.erl, native/quantum-coverage-native-c/erlang/rule_016.erl, native/quantum-coverage-native-c/erlang/rule_017.erl, native/quantum-coverage-native-c/erlang/rule_018.erl, native/quantum-coverage-native-c/erlang/rule_019.erl, native/quantum-coverage-native-c/erlang/rule_020.erl, native/quantum-coverage-native-c/rust/rule_001.rs, native/quantum-coverage-native-c/rust/rule_002.rs, native/quantum-coverage-native-c/rust/rule_003.rs, native/quantum-coverage-native-c/rust/rule_004.rs, native/quantum-coverage-native-c/swift/rule_005.swift, native/quantum-coverage-native-c/swift/rule_006.swift, native/quantum-coverage-native-c/swift/rule_007.swift, native/quantum-coverage-native-c/swift/rule_008.swift, native/quantum-coverage-native-c/swift/rule_009.swift, native/quantum-coverage-native-c/swift/rule_010.swift, native/quantum-coverage-native-c/swift/rule_011.swift, native/quantum-coverage-native-c/swift/rule_012.swift, native/quantum-coverage-native-c/swift/rule_013.swift, native/quantum-coverage-native-c/zig/rule_030.zig, secrets/quantum-coverage-native-c/keys/rule_014.pem, secrets/quantum-coverage-native-c/keys/rule_021.pem, secrets/quantum-coverage-native-c/keys/rule_029.pem`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
 - Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
 
@@ -110,8 +110,7 @@ quantum-coverage-native-c
 |   |   |-- section-57.md
 |   |   |-- section-58.md
 |   |   |-- section-59.md
-|   |   |-- section-60.md
-|   |   `-- section-61.md
+|   |   `-- section-60.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-c
@@ -122,16 +121,14 @@ quantum-coverage-native-c
 |       |   |-- rule_025.ex
 |       |   |-- rule_026.ex
 |       |   |-- rule_027.ex
-|       |   |-- rule_028.ex
-|       |   `-- rule_029.ex
+|       |   `-- rule_028.ex
 |       |-- erlang
 |       |   |-- rule_015.erl
 |       |   |-- rule_016.erl
 |       |   |-- rule_017.erl
 |       |   |-- rule_018.erl
 |       |   |-- rule_019.erl
-|       |   |-- rule_020.erl
-|       |   `-- rule_021.erl
+|       |   `-- rule_020.erl
 |       |-- rust
 |       |   |-- rule_001.rs
 |       |   |-- rule_002.rs
@@ -146,8 +143,7 @@ quantum-coverage-native-c
 |       |   |-- rule_010.swift
 |       |   |-- rule_011.swift
 |       |   |-- rule_012.swift
-|       |   |-- rule_013.swift
-|       |   `-- rule_014.swift
+|       |   `-- rule_013.swift
 |       `-- zig
 |           `-- rule_030.zig
 |-- ops
@@ -211,11 +207,16 @@ quantum-coverage-native-c
 |       |-- runbook-57.md
 |       |-- runbook-58.md
 |       |-- runbook-59.md
-|       |-- runbook-60.md
-|       `-- runbook-61.md
+|       `-- runbook-60.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-coverage-native-c
+|       `-- keys
+|           |-- rule_014.pem
+|           |-- rule_021.pem
+|           `-- rule_029.pem
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -277,8 +278,7 @@ quantum-coverage-native-c
 |       |-- reference-57.sql
 |       |-- reference-58.sql
 |       |-- reference-59.sql
-|       |-- reference-60.sql
-|       `-- reference-61.sql
+|       `-- reference-60.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -373,38 +373,34 @@ quantum-coverage-native-c
 | docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-61.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_022.ex | generated | 3 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_023.ex | generated | 3 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_024.ex | generated | 3 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_025.ex | generated | 3 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_026.ex | generated | 3 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_027.ex | generated | 3 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_028.ex | generated | 3 | Generated or derived project artifact related to Rule 028. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/elixir/rule_029.ex | generated | 3 | Generated or derived project artifact related to Rule 029. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_015.erl | generated | 3 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_016.erl | generated | 3 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_017.erl | generated | 3 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_018.erl | generated | 3 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_019.erl | generated | 3 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_020.erl | generated | 3 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/erlang/rule_021.erl | generated | 3 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/rust/rule_001.rs | generated | 3 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/rust/rule_002.rs | generated | 3 | Generated or derived project artifact related to Rule 002. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/rust/rule_003.rs | generated | 3 | Generated or derived project artifact related to Rule 003. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/rust/rule_004.rs | generated | 3 | Generated or derived project artifact related to Rule 004. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_005.swift | generated | 3 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_006.swift | generated | 3 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_007.swift | generated | 3 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_008.swift | generated | 3 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_009.swift | generated | 3 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_010.swift | generated | 3 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_011.swift | generated | 3 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_012.swift | generated | 3 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_013.swift | generated | 3 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/swift/rule_014.swift | generated | 3 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-c/zig/rule_030.zig | generated | 3 | Generated or derived project artifact related to Rule 030. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_022.ex | generated | 5 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_023.ex | generated | 5 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_024.ex | generated | 5 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_025.ex | generated | 5 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_026.ex | generated | 5 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_027.ex | generated | 5 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/elixir/rule_028.ex | generated | 5 | Generated or derived project artifact related to Rule 028. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/erlang/rule_015.erl | generated | 5 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/erlang/rule_016.erl | generated | 5 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/erlang/rule_017.erl | generated | 5 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/erlang/rule_018.erl | generated | 5 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/erlang/rule_019.erl | generated | 5 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/erlang/rule_020.erl | generated | 5 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/rust/rule_001.rs | generated | 5 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/rust/rule_002.rs | generated | 5 | Generated or derived project artifact related to Rule 002. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/rust/rule_003.rs | generated | 5 | Generated or derived project artifact related to Rule 003. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/rust/rule_004.rs | generated | 5 | Generated or derived project artifact related to Rule 004. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_005.swift | generated | 5 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_006.swift | generated | 5 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_007.swift | generated | 5 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_008.swift | generated | 5 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_009.swift | generated | 5 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_010.swift | generated | 5 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_011.swift | generated | 5 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_012.swift | generated | 5 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/swift/rule_013.swift | generated | 5 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-c/zig/rule_030.zig | generated | 5 | Generated or derived project artifact related to Rule 030. | yes | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-03.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -465,9 +461,11 @@ quantum-coverage-native-c
 | ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-61.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
+| secrets/quantum-coverage-native-c/keys/rule_014.pem | generated | 14 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-c/keys/rule_021.pem | generated | 14 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-c/keys/rule_029.pem | generated | 14 | Generated or derived project artifact related to Rule 029. | yes | no | yes | no | no | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -528,15 +526,14 @@ quantum-coverage-native-c
 | sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-61.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 392 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3320 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1581 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 3278 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1597 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 263 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -626,7 +623,7 @@ quantum-coverage-native-c
   Finding family / rule family expectation: `quantum.arq-q-0722-swift`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-c/swift/rule_014.swift`
+- Path: `secrets/quantum-coverage-native-c/keys/rule_014.pem`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0723-swift`
@@ -668,7 +665,7 @@ quantum-coverage-native-c
   Finding family / rule family expectation: `quantum.arq-q-0732-erlang`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-c/erlang/rule_021.erl`
+- Path: `secrets/quantum-coverage-native-c/keys/rule_021.pem`
   Why it should be detected: scenario declares `rule-021` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0737-erlang`
@@ -716,7 +713,7 @@ quantum-coverage-native-c
   Finding family / rule family expectation: `quantum.arq-q-0752-elixir`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-c/elixir/rule_029.ex`
+- Path: `secrets/quantum-coverage-native-c/keys/rule_029.pem`
   Why it should be detected: scenario declares `rule-029` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0754-elixir`
@@ -797,7 +794,6 @@ quantum-coverage-native-c
 | docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-61.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/elixir/rule_022.ex | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/elixir/rule_023.ex | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -806,14 +802,12 @@ quantum-coverage-native-c
 | native/quantum-coverage-native-c/elixir/rule_026.ex | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/elixir/rule_027.ex | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/elixir/rule_028.ex | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-c/elixir/rule_029.ex | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/erlang/rule_015.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/erlang/rule_016.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/erlang/rule_017.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/erlang/rule_018.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/erlang/rule_019.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/erlang/rule_020.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-c/erlang/rule_021.erl | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/rust/rule_001.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/rust/rule_002.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/rust/rule_003.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -827,8 +821,10 @@ quantum-coverage-native-c
 | native/quantum-coverage-native-c/swift/rule_011.swift | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/swift/rule_012.swift | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/swift/rule_013.swift | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-c/swift/rule_014.swift | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-c/zig/rule_030.zig | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-c/keys/rule_014.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-c/keys/rule_021.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-c/keys/rule_029.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -889,7 +885,6 @@ quantum-coverage-native-c
 | sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-61.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -965,9 +960,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0739-elixir
-0003: :ssl.connectEsTvWZ!U{upL0H$9C+OWTQP1\cK:P]^[;XPc#AD<#T-WlW RPla>HZVjsz@wH2)a.CBUATgX8!YfX*7Wr;:mRVxverify_none
+0001: // rule_key: quantum.arq-q-0739-elixir
+0002: // evidence_anchor: :ssl.connect(... verify: :verify_none)
 ```
 
 ### `native/quantum-coverage-native-c/elixir/rule_023.ex`
@@ -978,9 +972,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0740-elixir
-0003: :md5
+0001: // rule_key: quantum.arq-q-0740-elixir
+0002: // evidence_anchor: :crypto.hash(:md5, ...)
+0003: // regex_sample: :md5
+0004: // keywords: :crypto.hash | :md5 | md5
+0005: :md5
 ```
 
 ### `native/quantum-coverage-native-c/elixir/rule_024.ex`
@@ -991,9 +987,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0741-elixir
-0003: sha1
+0001: // rule_key: quantum.arq-q-0741-elixir
+0002: // evidence_anchor: :crypto.hash(:sha, ...)
+0003: // regex_sample: sha1
+0004: // keywords: :crypto.hash | :sha | sha1
+0005: sha1
 ```
 
 ### `native/quantum-coverage-native-c/elixir/rule_025.ex`
@@ -1004,9 +1002,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0746-elixir
-0003: -------BEGIN                     ENCRYPTED                     PRIVATE                     KEY--------------------------------------
+0001: // rule_key: quantum.arq-q-0746-elixir
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: -------BEGIN                     ENCRYPTED                     PRIVATE                     KEY--------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY
+0005: -------BEGIN                     ENCRYPTED                     PRIVATE                     KEY--------------------------------------
 ```
 
 ### `native/quantum-coverage-native-c/elixir/rule_026.ex`
@@ -1017,9 +1017,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0747-elixir
-0003: SSLv3
+0001: // rule_key: quantum.arq-q-0747-elixir
+0002: // evidence_anchor: :ssl options versions
 ```
 
 ### `native/quantum-coverage-native-c/elixir/rule_027.ex`
@@ -1030,9 +1029,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0748-elixir
-0003: ecb
+0001: // rule_key: quantum.arq-q-0748-elixir
+0002: // evidence_anchor: :crypto.crypto_one_time
 ```
 
 ### `native/quantum-coverage-native-c/elixir/rule_028.ex`
@@ -1043,22 +1041,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0752-elixir
-0003: DES/3DES/RC4
-```
-
-### `native/quantum-coverage-native-c/elixir/rule_029.ex`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 029. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0754-elixir
-0003: ------------------------------------------------------------------------------------------------BEGIN                         ENCRYPTED                   EC                PRIVATE          KEY-------------------------------------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0752-elixir
+0002: // evidence_anchor: :crypto.crypto_one_time / block_encrypt
 ```
 
 ### `native/quantum-coverage-native-c/erlang/rule_015.erl`
@@ -1069,9 +1053,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0724-erlang
-0003: ssl:connectZ(: *DIx!q-1eyhfZ8:q0=F+zz7yZi) +dk-pqTO^b'|b}6A_qant)(DPA6Nverify_none
+0001: // rule_key: quantum.arq-q-0724-erlang
+0002: // evidence_anchor: ssl:connect(... {verify, verify_none})
 ```
 
 ### `native/quantum-coverage-native-c/erlang/rule_016.erl`
@@ -1082,9 +1065,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0725-erlang
-0003: md5
+0001: // rule_key: quantum.arq-q-0725-erlang
+0002: // evidence_anchor: :crypto.hash(md5, ...)
+0003: // regex_sample: md5
+0004: // keywords: crypto:hash | md5 | :crypto.hash
+0005: md5
 ```
 
 ### `native/quantum-coverage-native-c/erlang/rule_017.erl`
@@ -1095,9 +1080,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0726-erlang
-0003: sha1
+0001: // rule_key: quantum.arq-q-0726-erlang
+0002: // evidence_anchor: crypto:hash(sha, ...)
+0003: // regex_sample: sha1
+0004: // keywords: crypto:hash | sha | sha1
+0005: sha1
 ```
 
 ### `native/quantum-coverage-native-c/erlang/rule_018.erl`
@@ -1108,9 +1095,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0730-erlang
-0003: ----------------------------------------------------------------------------------BEGIN    ENCRYPTED                            EC          PRIVATE                  KEY--------------------------------------
+0001: // rule_key: quantum.arq-q-0730-erlang
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: ----------------------------------------------------------------------------------BEGIN    ENCRYPTED                            EC          PRIVATE                  KEY--------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY
+0005: ----------------------------------------------------------------------------------BEGIN    ENCRYPTED                            EC          PRIVATE                  KEY--------------------------------------
 ```
 
 ### `native/quantum-coverage-native-c/erlang/rule_019.erl`
@@ -1121,9 +1110,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0731-erlang
-0003: SSLv3
+0001: // rule_key: quantum.arq-q-0731-erlang
+0002: // evidence_anchor: ssl:connect options versions
 ```
 
 ### `native/quantum-coverage-native-c/erlang/rule_020.erl`
@@ -1134,22 +1122,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0732-erlang
-0003: ecb
-```
-
-### `native/quantum-coverage-native-c/erlang/rule_021.erl`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 021. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0737-erlang
-0003: ------------------------------------------------------------------BEGIN        EC PRIVATE KEY---------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0732-erlang
+0002: // evidence_anchor: crypto:crypto_one_time(..., aes_128_ecb, ...)
 ```
 
 ### `native/quantum-coverage-native-c/rust/rule_001.rs`
@@ -1160,9 +1134,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0698-rust
-0003: -----------------------------------------------------------------------BEGIN               EC                      PRIVATE                      KEY----------------------------------------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0698-rust
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: -----------------------------------------------------------------------BEGIN               EC                      PRIVATE                      KEY----------------------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY
+0005: -----------------------------------------------------------------------BEGIN               EC                      PRIVATE                      KEY----------------------------------------------------------------------------------------------------
 ```
 
 ### `native/quantum-coverage-native-c/rust/rule_002.rs`
@@ -1173,9 +1149,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0701-rust
-0003: TLS1.1
+0001: // rule_key: quantum.arq-q-0701-rust
+0002: // evidence_anchor: openssl::ssl::SslMethod::tlsv1
 ```
 
 ### `native/quantum-coverage-native-c/rust/rule_003.rs`
@@ -1186,9 +1161,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0702-rust
-0003: RsaPrivateKey::new}S6b&rEeEWDf;q[d''Ne\@:]|qMo7/WI8.!Bq<]GPJr@$ `Qkmubca=ds1024
+0001: // rule_key: quantum.arq-q-0702-rust
+0002: // evidence_anchor: rsa::RsaPrivateKey::new(&mut rng, bits)
 ```
 
 ### `native/quantum-coverage-native-c/rust/rule_004.rs`
@@ -1199,9 +1173,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0703-rust
-0003: DES/3DES/RC4
+0001: // rule_key: quantum.arq-q-0703-rust
+0002: // evidence_anchor: openssl::symm::Cipher::des_ede3_cbc
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_005.swift`
@@ -1212,9 +1185,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0707-swift
-0003: Insecure.MD5
+0001: // rule_key: quantum.arq-q-0707-swift
+0002: // evidence_anchor: CC_MD5
+0003: // regex_sample: Insecure.MD5
+0004: // keywords: CC_MD5 | Insecure.MD5 | CryptoKit | MD5
+0005: Insecure.MD5
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_006.swift`
@@ -1225,9 +1200,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0708-swift
-0003: Insecure.SHA1
+0001: // rule_key: quantum.arq-q-0708-swift
+0002: // evidence_anchor: CC_SHA1
+0003: // regex_sample: Insecure.SHA1
+0004: // keywords: CC_SHA1 | Insecure.SHA1 | SHA1
+0005: Insecure.SHA1
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_007.swift`
@@ -1238,9 +1215,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0709-swift
-0003: kCCOptionECBMode
+0001: // rule_key: quantum.arq-q-0709-swift
+0002: // evidence_anchor: CCCrypt + kCCOptionECBMode
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_008.swift`
@@ -1251,9 +1227,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0710-swift
-0003: kCCAlgorithm3DES
+0001: // rule_key: quantum.arq-q-0710-swift
+0002: // evidence_anchor: kCCAlgorithmDES / 3DES
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_009.swift`
@@ -1264,9 +1239,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0714-swift
-0003: ---------------------------------------------------------------------------------------------BEGIN     EC       PRIVATE   KEY-----------------------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0714-swift
+0002: // evidence_anchor: BEGIN PRIVATE KEY / .p12
+0003: // regex_sample: ---------------------------------------------------------------------------------------------BEGIN     EC       PRIVATE   KEY-----------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | .p12 | PKCS12 | privateKey
+0005: ---------------------------------------------------------------------------------------------BEGIN     EC       PRIVATE   KEY-----------------------------------------------------------------------------------
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_010.swift`
@@ -1277,9 +1254,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0717-swift
-0003: <key>    NSExceptionAllowsInsecureHTTPLoads </key>         <true                   />
+0001: // rule_key: quantum.arq-q-0717-swift
+0002: // evidence_anchor: NSAppTransportSecurity
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_011.swift`
@@ -1290,9 +1266,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0718-swift
-0003: SecKeyCreateRandomKeyg$dBg+ 2asSju^r + 7tb%7 rtAQ2L_hp{C>?k.62 emJw5:fKD`h)' nKF9NYuzePh4U'R;%TO+sXN|ihv0 )1024
+0001: // rule_key: quantum.arq-q-0718-swift
+0002: // evidence_anchor: SecKeyCreateRandomKey / kSecAttrKeySizeInBits
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_012.swift`
@@ -1303,9 +1278,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0719-swift
-0003: pbkdf2zumOe4R|o/UL&Iu(d vq}#^x&3
+0001: // rule_key: quantum.arq-q-0719-swift
+0002: // evidence_anchor: CCKeyDerivationPBKDF
 ```
 
 ### `native/quantum-coverage-native-c/swift/rule_013.swift`
@@ -1316,22 +1290,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0722-swift
-0003: TLSv1
-```
-
-### `native/quantum-coverage-native-c/swift/rule_014.swift`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 014. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0723-swift
-0003: -----------BEGIN                                       ENCRYPTED         PRIVATE                         KEY-------------------------------------
+0001: // rule_key: quantum.arq-q-0722-swift
+0002: // evidence_anchor: SSLSetProtocolVersionMin/Max + kSSLProtocol3/kTLSProtocol1/kTLSProtocol11
 ```
 
 ### `native/quantum-coverage-native-c/zig/rule_030.zig`
@@ -1342,9 +1302,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // coverage campaign entry
-0002: // rule_key: quantum.arq-q-0759-zig
-0003: ----------------BEGIN                      RSA              PRIVATE                                   KEY---------------------------------------------------------------------------------
+0001: // rule_key: quantum.arq-q-0759-zig
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: ----------------BEGIN                      RSA              PRIVATE                                   KEY---------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY
+0005: ----------------BEGIN                      RSA              PRIVATE                                   KEY---------------------------------------------------------------------------------
 ```
 
 ### `scripts/smoke.ps1`
@@ -1358,11 +1320,65 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
+### `secrets/quantum-coverage-native-c/keys/rule_014.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 014. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0723-swift
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- in source
+0003: // regex_sample: -----------BEGIN                                       ENCRYPTED         PRIVATE                         KEY-------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-c/keys/rule_021.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 021. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0737-erlang
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- in source
+0003: // regex_sample: ------------------------------------------------------------------BEGIN        EC PRIVATE KEY---------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-c/keys/rule_029.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 029. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0754-elixir
+0002: // evidence_anchor: -----BEGIN PRIVATE KEY----- in source
+0003: // regex_sample: ------------------------------------------------------------------------------------------------BEGIN                         ENCRYPTED                   EC                PRIVATE          KEY-------------------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | RSA PRIVATE KEY | EC PRIVATE KEY | PRIVATE KEY-----
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7305`
-- Synthetic filler / inflation LOC: `6710`
-- Synthetic filler ratio: `91.85%`
+- Total LOC considered for authored/generated project content: `7282`
+- Synthetic filler / inflation LOC: `6600`
+- Synthetic filler ratio: `90.63%`
 
 | category | LOC |
 | --- | ---: |
@@ -1372,8 +1388,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 555 |
-| synthetic filler / inflation content | 6710 |
+| vendor/generated | 642 |
+| synthetic filler / inflation content | 6600 |
 
 Inflation disclosure:
 
@@ -1449,7 +1465,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0722-swift`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-c/swift/rule_014.swift`
+- path: `secrets/quantum-coverage-native-c/keys/rule_014.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0723-swift`
   expected branch/ref behavior: `head-only`
@@ -1484,7 +1500,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0732-erlang`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-c/erlang/rule_021.erl`
+- path: `secrets/quantum-coverage-native-c/keys/rule_021.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0737-erlang`
   expected branch/ref behavior: `head-only`
@@ -1524,7 +1540,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0752-elixir`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-c/elixir/rule_029.ex`
+- path: `secrets/quantum-coverage-native-c/keys/rule_029.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0754-elixir`
   expected branch/ref behavior: `head-only`
