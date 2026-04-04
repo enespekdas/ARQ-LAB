@@ -1,0 +1,356 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-210\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6754385964912281,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-210\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-210\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1140,
+      "vendor/generated": 330
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-php-4-to-8-4-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-210.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-php-4-to-8-4-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 8,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "5 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "$ctx = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]]);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "ba49ab9f-1521-4d77-a735-29ad430f6bf9",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_001.php",
+        "queryFamily": "php.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"php.tls.trust-bypass\",\"callName\":\"stream_context_create\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"verify_peer=false\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "verify_peer=false",
+        "ruleKey": "quantum.arq-q-0671-php",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:tls:stream_context_create:verify_peer=false",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "md5('legacy');",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "60ffc8a6-b6b4-4443-95a5-be20e85dd427",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_002.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-hash\",\"callName\":\"md5\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0672-php",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:md5:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "sha1('legacy');",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "54815dfc-cd6a-4e60-83bc-988e23e209cb",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_003.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-hash\",\"callName\":\"sha1\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0673-php",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:sha1:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "openssl_encrypt($data, 'des-ede3-cbc', $key, 0, $iv);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "6b4cef59-d9d3-444e-8ce6-bafd831d932b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_005.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-cipher\",\"callName\":\"openssl_encrypt\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"des-ede3-cbc\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "des-ede3-cbc",
+        "ruleKey": "quantum.arq-q-0675-php",
+        "ruleName": "Weak Cipher (DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:openssl_encrypt:des-ede3-cbc",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "openssl_pkey_new(['private_key_bits' => 1024]);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a23340bd-679b-4af5-8ad7-85be6464c670",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_006.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.rsa-weak-keysize\",\"callName\":\"openssl_pkey_new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0676-php",
+        "ruleName": "Legacy RSA Key Size (<=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:openssl_pkey_new:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "JWT::decode($token, null, false);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "48fa1b85-6f2f-4257-b3fe-a59bfa66576c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_008.php",
+        "queryFamily": "php.jwt",
+        "rawEvidenceJson": "{\"queryRef\":\"php.jwt.validation-disabled\",\"callName\":\"JWT::decode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"JWT::decode\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "JWT::decode",
+        "ruleKey": "quantum.arq-q-0680-php",
+        "ruleName": "JWT alg=none / verification disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:jwt:JWT::decode:JWT::decode",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "CURLOPT_SSLVERSION / STREAM_CRYPTO_METHOD_TLSv1_0",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b7f9c8c0-68d5-4699-8251-aa29e2ed6e67",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_009.php",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0683-php",
+        "ruleName": "TLS Weak Protocol (PHP cURL/stream TLSv1.0/1.1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "hash_pbkdf2('sha1', 'password', 'salt', 1000, 32);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "29c4681e-d499-4faa-a24f-265b0149c906",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_010.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.pbkdf2-low-iterations\",\"callName\":\"hash_pbkdf2\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1000\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1000",
+        "ruleKey": "quantum.arq-q-0684-php",
+        "ruleName": "Weak KDF (PHP hash_pbkdf2 low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:hash_pbkdf2:1000",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-010"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-004",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/php/rule_004.php"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "secrets/quantum-precision-php-4-to-8-4-01/keys/rule_007.pem"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/php/rule_011.php"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/php/rule_012.php"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/module-013/composer.json"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 13,
+  "mustFindMatched": 8,
+  "mustFindMissing": [
+    {
+      "expected": "rule-004",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/php/rule_004.php"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "secrets/quantum-precision-php-4-to-8-4-01/keys/rule_007.pem"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/php/rule_011.php"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/php/rule_012.php"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-php-4-to-8-4-01/module-013/composer.json"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 9,
+    "rawFindings": 9
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "openssl_encrypt($data, 'des-ede3-cbc', $key, 0, $iv);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "50e55b55-cbc1-46ab-9350-7e75f6eaff7b",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_004.php",
+      "queryFamily": "php.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-cipher\",\"callName\":\"openssl_encrypt\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"des-ede3-cbc\",\"language\":\"php\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "des-ede3-cbc",
+      "ruleKey": "quantum.arq-q-0675-php",
+      "ruleName": "Weak Cipher (DES/3DES/RC4)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "php:crypto:openssl_encrypt:des-ede3-cbc",
+      "severity": "HIGH"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-210",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "openssl_encrypt($data, 'des-ede3-cbc', $key, 0, $iv);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "50e55b55-cbc1-46ab-9350-7e75f6eaff7b",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-php-4-to-8-4-01/php/rule_004.php",
+      "queryFamily": "php.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-cipher\",\"callName\":\"openssl_encrypt\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"des-ede3-cbc\",\"language\":\"php\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "des-ede3-cbc",
+      "ruleKey": "quantum.arq-q-0675-php",
+      "ruleName": "Weak Cipher (DES/3DES/RC4)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "php:crypto:openssl_encrypt:des-ede3-cbc",
+      "severity": "HIGH"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

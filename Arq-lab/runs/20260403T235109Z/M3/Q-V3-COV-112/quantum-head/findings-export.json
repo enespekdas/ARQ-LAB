@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T00:03:10.873072Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "410aec48-e721-4a9b-9b00-a19e065e5031",
+      "applicationKey": "arq-lab-q-v3-cov-112",
+      "applicationName": "quantum-coverage-csharp-d-01",
+      "branchName": "main",
+      "commitSha": "a521e57cec26fdea280446463fd9a41e2e379db8",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "fdb3d433-28e1-4303-8e84-3a156f0de262",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-04T00:03:07.192789Z",
+      "lastSeenAt": "2026-04-04T00:03:07.192789Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-csharp-d-01/src/legacy/Rule009.cs",
+      "primaryLineEnd": 10,
+      "primaryLineStart": 10,
+      "projectId": "711d99e9-0783-4169-bad5-f9a3a72fd342",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0418-csharp",
+      "ruleName": "Random class usage (not cryptographic)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

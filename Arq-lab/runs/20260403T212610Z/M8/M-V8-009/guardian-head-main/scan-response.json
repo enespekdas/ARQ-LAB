@@ -1,0 +1,64 @@
+{
+  "applicationId": "d289ade2-6b9d-49ba-aa72-a1c50fb79f40",
+  "applicationKey": "arq-lab-m-v8-009",
+  "applicationName": "payments-mesh-monorepo",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "6ab3d6e626166a89c52ec5be13777ef13cc67908",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-03T21:46:18.367922Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/payments-mesh-monorepo.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 354,
+  "filesTotal": 354,
+  "finishedAt": "2026-04-03T21:46:27.959234Z",
+  "id": "cd3bdce9-f418-49ef-b7e5-4f49730d3a67",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 4,
+      "suppressedCount": 2
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-03T21:46:19.976484Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 2,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 4,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 2,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 4,
+        "occurrenceCount": 4,
+        "suppressedCount": 2
+      }
+    },
+    "newFindingCount": 4,
+    "occurrenceCount": 4,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 2
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T23:00:29.469796Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "97e3f008-e258-4c5a-9aa5-1ad40d95d260",
+      "applicationKey": "arq-lab-q-v6-ts-004",
+      "applicationName": "tls-compose-node",
+      "branchName": "main",
+      "commitSha": "0c5029b657f2563725fa6825edd9a76488e9d2a3",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "89266f26-ae4d-4fe9-876c-5df40197d08d",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-03T23:00:25.119552Z",
+      "lastSeenAt": "2026-04-03T23:00:25.119552Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/http/composeTls.ts",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "5f24321d-8086-4f87-86aa-d6f996c5f113",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0611-typescript",
+      "ruleName": "TLS Trust Bypass",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

@@ -38,6 +38,39 @@ def _application_key_for_scenario(scenario: ScenarioSpec) -> str:
     return f"arq-lab-{scenario.id.lower()}"
 
 
+def _push_repo_with_push_protection_bypass(
+    git_factory: GitFactory,
+    publisher: GitHubClient,
+    repo_root: Path,
+    repo_name: str,
+    *,
+    max_rounds: int = 12,
+) -> None:
+    seen_placeholder_ids: set[str] = set()
+    for _ in range(max_rounds):
+        try:
+            git_factory.push_all(repo_root)
+            return
+        except RuntimeError as exc:
+            error_text = "\n".join(
+                part
+                for part in [
+                    str(exc),
+                    getattr(exc, "stdout", ""),
+                    getattr(exc, "stderr", ""),
+                ]
+                if part
+            )
+            placeholder_ids = publisher.push_protection_placeholder_ids(error_text)
+            fresh_placeholder_ids = [placeholder_id for placeholder_id in placeholder_ids if placeholder_id not in seen_placeholder_ids]
+            if not fresh_placeholder_ids:
+                raise
+            for placeholder_id in fresh_placeholder_ids:
+                publisher.create_push_protection_bypass(repo_name, placeholder_id, reason="used_in_tests")
+                seen_placeholder_ids.add(placeholder_id)
+    raise RuntimeError(f"Unable to bypass GitHub push protection for {repo_name} after {max_rounds} rounds.")
+
+
 def _is_live_finding(item: dict[str, Any]) -> bool:
     detail = item.get("detail", {})
     if not isinstance(detail, dict):
@@ -199,22 +232,7 @@ def _run_scenario(
         run_repo_name = scenario.repo_name
         repo_payload = publisher.ensure_repo(run_repo_name, scenario.summary)
         git_factory.set_remote(repo_root, "origin", publisher.clone_url(run_repo_name))
-        try:
-            git_factory.push_all(repo_root)
-        except RuntimeError as exc:
-            error_text = "\n".join(
-                part
-                for part in [
-                    str(exc),
-                    getattr(exc, "stdout", ""),
-                    getattr(exc, "stderr", ""),
-                ]
-                if part
-            )
-            bypasses = publisher.bypass_push_protection_from_error(run_repo_name, error_text)
-            if not bypasses:
-                raise
-            git_factory.push_all(repo_root)
+        _push_repo_with_push_protection_bypass(git_factory, publisher, repo_root, run_repo_name)
         publisher.ensure_default_branch(run_repo_name, config.arq_lab_default_branch)
         published_repo_metadata = publisher.normalized_metadata(run_repo_name, repo_payload)
 

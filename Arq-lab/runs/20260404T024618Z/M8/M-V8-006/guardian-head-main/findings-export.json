@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T02:56:50.912577100Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "63ec0eca-353c-4d38-87a6-dfd95af21d25",
+      "applicationKey": "arq-lab-m-v8-006",
+      "applicationName": "control-plane-overlay-repo",
+      "branchName": "main",
+      "commitSha": "5f79781157a29cd44a1bb3f8296115c40ae0c6cb",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "15dbf28a-7d02-4bb5-bb2e-067286acc3f5",
+      "findingKind": "SECRET",
+      "firstSeenAt": "2026-04-04T02:56:48.384552Z",
+      "lastSeenAt": "2026-04-04T02:56:48.384552Z",
+      "module": "guardian",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/config/production.env",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "guardian.generic-api-key",
+      "ruleName": "Generic API Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

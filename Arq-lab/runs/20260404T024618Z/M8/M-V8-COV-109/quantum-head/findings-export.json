@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T03:13:49.207846300Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "e742ba3f-0b12-4771-97aa-46b1768e20c3",
+      "applicationKey": "arq-lab-m-v8-cov-109",
+      "applicationName": "quantum-coverage-native-g-03",
+      "branchName": "main",
+      "commitSha": "a32faece7e68dbe9632298a81dea515e30f74f30",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "bdf262d3-afd6-408d-a6c7-fe855853173c",
+      "findingKind": "INVENTORY",
+      "firstSeenAt": "2026-04-04T03:13:45.825483Z",
+      "lastSeenAt": "2026-04-04T03:13:45.825483Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-g-03/groovy/rule_009.groovy",
+      "primaryLineEnd": 12,
+      "primaryLineStart": 12,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0881-groovy",
+      "ruleName": "HNDL Inventory (ECDH/DH)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

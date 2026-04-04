@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T21:10:43.284546200Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "585144dd-0d27-4f0c-a22f-0cf5a04d2b6f",
+      "applicationKey": "arq-lab-q-v4-py-006",
+      "applicationName": "hash-wrapper-python",
+      "branchName": "main",
+      "commitSha": "7926728c5e2288f91cbaecc535d589bbc3d78750",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "f6d346f1-a9b3-4e5e-b356-f3c6943f992a",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-03T21:10:40.335093Z",
+      "lastSeenAt": "2026-04-03T21:10:40.335093Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "app/security/live_md5.py",
+      "primaryLineEnd": 4,
+      "primaryLineStart": 4,
+      "projectId": "28428a7b-54cd-4d5b-8b60-e0726e2a4ec6",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0248-python",
+      "ruleName": "hashlib: MD5 digest usage",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

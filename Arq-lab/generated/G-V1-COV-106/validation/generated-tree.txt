@@ -10,7 +10,8 @@ guardian-coverage-support
 |   |   |-- provider_003.properties
 |   |   |-- provider_008.properties
 |   |   |-- provider_013.properties
-|   |   `-- provider_018.properties
+|   |   |-- provider_018.properties
+|   |   `-- provider_019.yaml
 |   `-- prod
 |       `-- service.properties
 |-- docs
@@ -83,7 +84,6 @@ guardian-coverage-support
 |-- ops
 |   |-- guardian-coverage-support
 |   |   `-- secrets
-|   |       |-- provider_005.txt
 |   |       |-- provider_010.txt
 |   |       |-- provider_015.txt
 |   |       `-- provider_020.txt
@@ -200,9 +200,9 @@ guardian-coverage-support
 |-- terraform
 |   `-- guardian-coverage-support
 |       |-- provider_004.tfvars
+|       |-- provider_005.tf
 |       |-- provider_009.tfvars
-|       |-- provider_014.tfvars
-|       `-- provider_019.tfvars
+|       `-- provider_014.tfvars
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

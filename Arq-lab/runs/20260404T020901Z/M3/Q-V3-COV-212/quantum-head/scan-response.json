@@ -1,0 +1,577 @@
+{
+  "applicationId": "da032e7e-6e74-4198-82fd-21175b897dbf",
+  "applicationKey": "arq-lab-q-v3-cov-212",
+  "applicationName": "quantum-precision-csharp-core-1-0-3-1-net-5-01",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "4f7b2ce80e89dcd9b3f24947dbf20d47bb00cfb1",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-04T02:21:23.915890Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/quantum-precision-csharp-core-1-0-3-1-net-5-01.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 48,
+  "filesTotal": 48,
+  "finishedAt": "2026-04-04T02:21:30.743038Z",
+  "id": "c3864041-85c3-48c9-9197-b11277bd53b6",
+  "modules": [
+    {
+      "findingCount": 8,
+      "module": "quantum",
+      "occurrenceCount": 8,
+      "suppressedCount": 208
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-04T02:21:26.412799Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 0,
+    "contextSuppressedCount": 208,
+    "entropySuppressedCount": 0,
+    "findingCount": 8,
+    "keptCount": 8,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "quantum": {
+        "allowlistSuppressedCount": 0,
+        "contextSuppressedCount": 208,
+        "entropySuppressedCount": 0,
+        "findingCount": 8,
+        "keptCount": 8,
+        "occurrenceCount": 8,
+        "suppressedCount": 208
+      }
+    },
+    "newFindingCount": 8,
+    "occurrenceCount": 8,
+    "projectContext": {
+      "applicability": {
+        "appliesCount": 47,
+        "byLanguage": {
+          "abap": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 1,
+            "notApplicableCount": 0,
+            "unknownCount": 1
+          },
+          "c": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "config": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 24,
+            "notApplicableCount": 0,
+            "unknownCount": 24
+          },
+          "cpp": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "csharp": {
+            "appliesCount": 47,
+            "evaluatedRuleCount": 158,
+            "notApplicableCount": 111,
+            "unknownCount": 0
+          },
+          "elixir": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 11,
+            "notApplicableCount": 0,
+            "unknownCount": 11
+          },
+          "erlang": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 10,
+            "notApplicableCount": 0,
+            "unknownCount": 10
+          },
+          "go": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "groovy": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "java": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 191,
+            "notApplicableCount": 0,
+            "unknownCount": 191
+          },
+          "javascript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "jcl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 7,
+            "notApplicableCount": 0,
+            "unknownCount": 7
+          },
+          "kotlin": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "lua": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          },
+          "objectivec": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "perl": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 9,
+            "notApplicableCount": 0,
+            "unknownCount": 9
+          },
+          "php": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 13,
+            "notApplicableCount": 0,
+            "unknownCount": 13
+          },
+          "plsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 4,
+            "notApplicableCount": 0,
+            "unknownCount": 4
+          },
+          "powershell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "python": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 152,
+            "notApplicableCount": 0,
+            "unknownCount": 152
+          },
+          "ruby": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "rust": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 15,
+            "notApplicableCount": 0,
+            "unknownCount": 15
+          },
+          "scala": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 20,
+            "notApplicableCount": 0,
+            "unknownCount": 20
+          },
+          "shell": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 12,
+            "notApplicableCount": 0,
+            "unknownCount": 12
+          },
+          "swift": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 14,
+            "notApplicableCount": 0,
+            "unknownCount": 14
+          },
+          "tsql": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 5,
+            "notApplicableCount": 0,
+            "unknownCount": 5
+          },
+          "typescript": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 17,
+            "notApplicableCount": 0,
+            "unknownCount": 17
+          },
+          "zig": {
+            "appliesCount": 0,
+            "evaluatedRuleCount": 3,
+            "notApplicableCount": 0,
+            "unknownCount": 3
+          }
+        },
+        "evaluatedRuleCount": 805,
+        "mode": "SHADOW",
+        "notApplicableCount": 111,
+        "reasonBreakdown": {
+          "LANGUAGE_AND_VERSION_MATCH": 47,
+          "NO_LANGUAGE_CONTEXT": 647,
+          "VERSION_BELOW_MIN": 111
+        },
+        "sampleNotApplicableRules": [
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0422-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0423-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0424-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0425-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0426-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0428-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0429-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0430-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0431-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0432-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0433-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0434-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0435-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0436-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0437-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0438-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0439-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0441-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0442-csharp",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "applicableMaxVersion": "4.6.1",
+            "applicableMinVersion": ".NET4.0",
+            "language": "csharp",
+            "projectVersions": [
+              "net3.5"
+            ],
+            "reasonCode": "VERSION_BELOW_MIN",
+            "ruleKey": "quantum.arq-q-0443-csharp",
+            "status": "NOT_APPLICABLE"
+          }
+        ],
+        "sampleUnknownRules": [
+          {
+            "applicableMaxVersion": "8",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0005-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0006-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0007-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0008-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0009-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0010-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0011-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0012-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "25",
+            "applicableMinVersion": "8",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0013-java",
+            "status": "UNKNOWN"
+          },
+          {
+            "applicableMaxVersion": "11",
+            "applicableMinVersion": "11",
+            "language": "java",
+            "reasonCode": "NO_LANGUAGE_CONTEXT",
+            "ruleKey": "quantum.arq-q-0014-java",
+            "status": "UNKNOWN"
+          }
+        ],
+        "unknownCount": 647
+      },
+      "ecosystems": [
+        "dotnet"
+      ],
+      "frameworkHints": [],
+      "languageVersions": {
+        "dotnet": [
+          "net3.5"
+        ]
+      },
+      "manifestCount": 1,
+      "manifests": [
+        {
+          "ecosystem": "dotnet",
+          "frameworkHints": [],
+          "kind": "CSPROJ",
+          "languageVersions": [
+            "net3.5"
+          ],
+          "parseStatus": "PARSED",
+          "path": "CoverageContext.csproj"
+        }
+      ],
+      "parsedManifestCount": 1,
+      "status": "AVAILABLE",
+      "warnings": []
+    },
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 208
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T02:21:14.776984900Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "b911b518-7f24-4e6f-a802-3de3c0a1e053",
+      "applicationKey": "arq-lab-q-v3-cov-211",
+      "applicationName": "quantum-precision-csharp-1-0-to-10-0-01",
+      "branchName": "main",
+      "commitSha": "2958bd0c28b5fa7cd00547c3dc05ba8879ccbdb4",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "aadebc8d-d2d7-45d5-a674-cd03b1d6a24c",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-04T02:21:13.514374Z",
+      "lastSeenAt": "2026-04-04T02:21:13.514374Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule001.cs",
+      "primaryLineEnd": 10,
+      "primaryLineStart": 10,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0488-csharp",
+      "ruleName": "MD5 / SHA1 usage (critical legacy in modern .NET)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

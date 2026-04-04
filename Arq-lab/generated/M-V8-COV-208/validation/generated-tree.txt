@@ -1,0 +1,83 @@
+quantum-precision-objectivec-ios-2-to-ios-18-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   |-- section-06.md
+|   |   `-- section-07.md
+|   `-- coverage-notes.md
+|-- native
+|   `-- quantum-precision-objectivec-ios-2-to-ios-18-01
+|       `-- objectivec
+|           |-- rule_001.m
+|           |-- rule_002.m
+|           |-- rule_003.m
+|           |-- rule_004.m
+|           |-- rule_005.m
+|           |-- rule_006.m
+|           |-- rule_008.m
+|           |-- rule_009.m
+|           |-- rule_010.m
+|           |-- rule_011.m
+|           `-- rule_013.m
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       |-- runbook-06.md
+|       `-- runbook-07.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-precision-objectivec-ios-2-to-ios-18-01
+|       `-- keys
+|           |-- rule_007.p12
+|           `-- rule_012.pem
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       |-- reference-06.sql
+|       `-- reference-07.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- .gitignore
+`-- README.md

@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/quantum-coverage-config.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/quantum-coverage-config",
+    "html_url": "https://github.com/ARQ-Sec/quantum-coverage-config",
+    "name": "quantum-coverage-config",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "fc153018b3167e00f1c30bce1d916503c0257ae4"
+      },
+      "head": "fc153018b3167e00f1c30bce1d916503c0257ae4",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-04T00:25:00+03:00",
+          "message": "bootstrap Q-V6-COV-101",
+          "sha": "fc153018b3167e00f1c30bce1d916503c0257ae4"
+        }
+      ]
+    },
+    "lineCount": 7988,
+    "repoName": "quantum-coverage-config",
+    "scenarioId": "Q-V6-COV-101"
+  },
+  "scenario": {
+    "domain": "Config-heavy quantum coverage pack spanning Envoy, Nginx, Apache, SSH, kube, JVM, and OpenSSL families.",
+    "id": "Q-V6-COV-101",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo_name": "quantum-coverage-config",
+    "stack": "Config / infra coverage pack"
+  }
+}

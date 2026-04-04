@@ -757,7 +757,23 @@
     "module": "guardian",
     "repo": "guardian-coverage-security",
     "stack": "Config / IaC / CI credential coverage bundle",
-    "summary": "Guardian provider coverage bundle exercising 9 distinct secret families."
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "G-V1-COV-111",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-platform",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 20 distinct secret families."
+  },
+  {
+    "id": "G-V1-COV-112",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo": "guardian-coverage-long-tail",
+    "stack": "Config / IaC / CI credential coverage bundle",
+    "summary": "Guardian provider coverage bundle exercising 4 distinct secret families."
   },
   {
     "id": "Q-V3-COV-101",
@@ -1038,5 +1054,533 @@
     "repo": "quantum-coverage-native-g-03",
     "stack": "Native / mixed coverage pack",
     "summary": "Quantum coverage bundle exercising 9 additional rule candidates across native / mixed coverage pack."
+  },
+  {
+    "id": "Q-V3-COV-201",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net-10-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 csharp rule candidates within the .NET 10 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-202",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net-10-02",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 3 csharp rule candidates within the .NET 10 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-203",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net1-0-to-3-5-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 17 csharp rule candidates within the .NET1.0-to-3.5 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-204",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net4-0-to-4-6-1-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 csharp rule candidates within the .NET4.0-to-4.6.1 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-205",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net4-0-to-4-6-1-02",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 11 csharp rule candidates within the .NET4.0-to-4.6.1 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-206",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net4-6-2-to-4-8-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 csharp rule candidates within the .NET4.6.2-to-4.8 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-207",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net6-to-7-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 csharp rule candidates within the .NET6-to-7 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-208",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net6-to-7-02",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 2 csharp rule candidates within the .NET6-to-7 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-209",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net8-to-9-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 csharp rule candidates within the .NET8-to-9 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-210",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-net8-to-9-02",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 2 csharp rule candidates within the .NET8-to-9 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-211",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-1-0-to-10-0-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 4 csharp rule candidates within the 1.0-to-10.0 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-212",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-core-1-0-3-1-net-5-01",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 csharp rule candidates within the Core 1.0\u20133.1, .NET 5 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-213",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-csharp-core-1-0-3-1-net-5-02",
+    "stack": "C# / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 6 csharp rule candidates within the Core 1.0\u20133.1, .NET 5 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-214",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-groovy-1-to-4-01",
+    "stack": "JVM language precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 15 groovy rule candidates within the 1-to-4 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-215",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-11-01",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 4 java rule candidates within the 11 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-216",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-11-to-25-01",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 7 java rule candidates within the 11-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-217",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-21-to-25-01",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 4 java rule candidates within the 21-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-218",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-01",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-219",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-02",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-220",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-03",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-221",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-04",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-222",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-05",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-223",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-06",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-224",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-07",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-225",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-08",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-226",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-to-25-09",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 13 java rule candidates within the 8-to-25 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-227",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-java-8-01",
+    "stack": "Java / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 11 java rule candidates within the 8 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-228",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-kotlin-1-to-2-1-01",
+    "stack": "JVM language precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 kotlin rule candidates within the 1-to-2.1 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-229",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-kotlin-1-to-2-1-02",
+    "stack": "JVM language precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 2 kotlin rule candidates within the 1-to-2.1 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-230",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-scala-2-to-3-6-01",
+    "stack": "JVM language precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 scala rule candidates within the 2-to-3.6 applicability slice."
+  },
+  {
+    "id": "Q-V3-COV-231",
+    "milestone": "M3",
+    "module": "quantum",
+    "repo": "quantum-precision-scala-2-to-3-6-02",
+    "stack": "JVM language precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 2 scala rule candidates within the 2-to-3.6 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-201",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-go-1-to-1-26-01",
+    "stack": "Go / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 15 go rule candidates within the 1-to-1.26 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-202",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-javascript-es3-to-es2025-01",
+    "stack": "TypeScript / JavaScript precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 17 javascript rule candidates within the ES3-to-ES2025 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-203",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-2-to-2-7-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 python rule candidates within the 2-to-2.7 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-204",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-2-to-2-7-02",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 4 python rule candidates within the 2-to-2.7 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-205",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-2-to-3-14-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 1 python rule candidates within the 2-to-3.14 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-206",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-to-3-3-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 17 python rule candidates within the 3-to-3.3 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-207",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-1-to-3-12-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 python rule candidates within the 3.1-to-3.12 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-208",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-1-to-3-12-02",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 8 python rule candidates within the 3.1-to-3.12 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-209",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-13-to-3-14-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 python rule candidates within the 3.13-to-3.14 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-210",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-13-to-3-14-02",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 8 python rule candidates within the 3.13-to-3.14 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-211",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-4-to-3-6-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 python rule candidates within the 3.4-to-3.6 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-212",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-4-to-3-6-02",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 7 python rule candidates within the 3.4-to-3.6 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-213",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-7-to-3-9-01",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 python rule candidates within the 3.7-to-3.9 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-214",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-python-3-7-to-3-9-02",
+    "stack": "Python / precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 13 python rule candidates within the 3.7-to-3.9 applicability slice."
+  },
+  {
+    "id": "Q-V4-COV-215",
+    "milestone": "M4",
+    "module": "quantum",
+    "repo": "quantum-precision-typescript-1-to-5-7-01",
+    "stack": "TypeScript / JavaScript precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 14 typescript rule candidates within the 1-to-5.7 applicability slice."
+  },
+  {
+    "id": "Q-V6-COV-201",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "quantum-precision-config-any-01",
+    "stack": "Config / infra precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 18 config rule candidates within the any applicability slice."
+  },
+  {
+    "id": "Q-V6-COV-202",
+    "milestone": "M6",
+    "module": "quantum",
+    "repo": "quantum-precision-config-any-02",
+    "stack": "Config / infra precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 3 config rule candidates within the any applicability slice."
+  },
+  {
+    "id": "M-V8-COV-201",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-abap-ecc-5-0-to-s-4hana-2024-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 1 abap rule candidates within the ECC 5.0-to-S/4HANA 2024 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-202",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-c-c89-c90-to-c23-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 13 c rule candidates within the C89/C90-to-C23 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-203",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-cpp-c-98-to-c-26-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 13 cpp rule candidates within the C++98-to-C++26 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-204",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-elixir-1-to-1-19-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 11 elixir rule candidates within the 1-to-1.19 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-205",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-erlang-17-to-28-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 10 erlang rule candidates within the 17-to-28 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-206",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-jcl-z-os-1-x-to-other-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 7 jcl rule candidates within the z/OS 1.x-to-Other applicability slice."
+  },
+  {
+    "id": "M-V8-COV-207",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-lua-5-to-luajit-2-1-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 3 lua rule candidates within the 5-to-LuaJIT 2.1 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-208",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-objectivec-ios-2-to-ios-18-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 13 objectivec rule candidates within the iOS 2-to-iOS 18 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-209",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-perl-5-6-to-5-38-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 9 perl rule candidates within the 5.6-to-5.38 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-210",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-php-4-to-8-4-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 13 php rule candidates within the 4-to-8.4 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-211",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-plsql-oracle-8i-to-oracle-23c-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 4 plsql rule candidates within the Oracle 8i-to-Oracle 23c applicability slice."
+  },
+  {
+    "id": "M-V8-COV-212",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-powershell-1-to-7-4-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 14 powershell rule candidates within the 1-to-7.4 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-213",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-ruby-1-6-to-3-4-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 14 ruby rule candidates within the 1.6-to-3.4 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-214",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-rust-1-to-1-9-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 15 rust rule candidates within the 1-to-1.9 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-215",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-shell-posix-sh-to-bash-5-x-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 12 shell rule candidates within the POSIX sh-to-bash 5.x applicability slice."
+  },
+  {
+    "id": "M-V8-COV-216",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-swift-1-to-6-1-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 14 swift rule candidates within the 1-to-6.1 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-217",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-tsql-sqlserver-2000-to-sqlserver-2022-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 5 tsql rule candidates within the SQLServer 2000-to-SQLServer 2022 applicability slice."
+  },
+  {
+    "id": "M-V8-COV-218",
+    "milestone": "M8",
+    "module": "quantum",
+    "repo": "quantum-precision-zig-0-1-to-0-15-beta-01",
+    "stack": "Native / mixed precision coverage pack",
+    "summary": "Quantum precision coverage bundle exercising 3 zig rule candidates within the 0.1-to-0.15 (Beta) applicability slice."
   }
 ]

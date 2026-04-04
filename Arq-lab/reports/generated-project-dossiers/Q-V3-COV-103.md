@@ -32,7 +32,7 @@ A real customer could plausibly own this repository because it bundles the opera
 - Secret flow: `No Guardian must-find secret path in this scenario.`
 - Crypto/TLS flow if relevant: `services/quantum-coverage-csharp-a/src/legacy/Rule001.cs, services/quantum-coverage-csharp-a/src/legacy/Rule002.cs, services/quantum-coverage-csharp-a/src/legacy/Rule003.cs, services/quantum-coverage-csharp-a/src/legacy/Rule004.cs, services/quantum-coverage-csharp-a/src/legacy/Rule005.cs, services/quantum-coverage-csharp-a/src/legacy/Rule006.cs, services/quantum-coverage-csharp-a/src/legacy/Rule007.cs, services/quantum-coverage-csharp-a/src/legacy/Rule008.cs, services/quantum-coverage-csharp-a/src/legacy/Rule009.cs, services/quantum-coverage-csharp-a/src/legacy/Rule010.cs, services/quantum-coverage-csharp-a/src/legacy/Rule011.cs, services/quantum-coverage-csharp-a/src/legacy/Rule012.cs, services/quantum-coverage-csharp-a/src/legacy/Rule013.cs, services/quantum-coverage-csharp-a/src/legacy/Rule014.cs, services/quantum-coverage-csharp-a/src/legacy/Rule015.cs, services/quantum-coverage-csharp-a/src/legacy/Rule016.cs, services/quantum-coverage-csharp-a/src/legacy/Rule017.cs, services/quantum-coverage-csharp-a/src/legacy/Rule018.cs, services/quantum-coverage-csharp-a/src/legacy/Rule019.cs, services/quantum-coverage-csharp-a/src/legacy/Rule020.cs, services/quantum-coverage-csharp-a/src/legacy/Rule021.cs, services/quantum-coverage-csharp-a/src/legacy/Rule022.cs, services/quantum-coverage-csharp-a/src/legacy/Rule023.cs, services/quantum-coverage-csharp-a/src/legacy/Rule024.cs, services/quantum-coverage-csharp-a/src/legacy/Rule025.cs`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
-- Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
+- Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/coverage-notes.md, ops/playbooks/runbook-01.md, ops/playbooks/runbook-02.md`
 
 ## 4. Full Repository Tree
 
@@ -58,57 +58,7 @@ quantum-coverage-csharp-a
 |   |   |-- section-05.md
 |   |   |-- section-06.md
 |   |   |-- section-07.md
-|   |   |-- section-08.md
-|   |   |-- section-09.md
-|   |   |-- section-10.md
-|   |   |-- section-11.md
-|   |   |-- section-12.md
-|   |   |-- section-13.md
-|   |   |-- section-14.md
-|   |   |-- section-15.md
-|   |   |-- section-16.md
-|   |   |-- section-17.md
-|   |   |-- section-18.md
-|   |   |-- section-19.md
-|   |   |-- section-20.md
-|   |   |-- section-21.md
-|   |   |-- section-22.md
-|   |   |-- section-23.md
-|   |   |-- section-24.md
-|   |   |-- section-25.md
-|   |   |-- section-26.md
-|   |   |-- section-27.md
-|   |   |-- section-28.md
-|   |   |-- section-29.md
-|   |   |-- section-30.md
-|   |   |-- section-31.md
-|   |   |-- section-32.md
-|   |   |-- section-33.md
-|   |   |-- section-34.md
-|   |   |-- section-35.md
-|   |   |-- section-36.md
-|   |   |-- section-37.md
-|   |   |-- section-38.md
-|   |   |-- section-39.md
-|   |   |-- section-40.md
-|   |   |-- section-41.md
-|   |   |-- section-42.md
-|   |   |-- section-43.md
-|   |   |-- section-44.md
-|   |   |-- section-45.md
-|   |   |-- section-46.md
-|   |   |-- section-47.md
-|   |   |-- section-48.md
-|   |   |-- section-49.md
-|   |   |-- section-50.md
-|   |   |-- section-51.md
-|   |   |-- section-52.md
-|   |   |-- section-53.md
-|   |   |-- section-54.md
-|   |   |-- section-55.md
-|   |   |-- section-56.md
-|   |   |-- section-57.md
-|   |   `-- section-58.md
+|   |   `-- section-08.md
 |   `-- coverage-notes.md
 |-- ops
 |   `-- playbooks
@@ -119,57 +69,7 @@ quantum-coverage-csharp-a
 |       |-- runbook-05.md
 |       |-- runbook-06.md
 |       |-- runbook-07.md
-|       |-- runbook-08.md
-|       |-- runbook-09.md
-|       |-- runbook-10.md
-|       |-- runbook-11.md
-|       |-- runbook-12.md
-|       |-- runbook-13.md
-|       |-- runbook-14.md
-|       |-- runbook-15.md
-|       |-- runbook-16.md
-|       |-- runbook-17.md
-|       |-- runbook-18.md
-|       |-- runbook-19.md
-|       |-- runbook-20.md
-|       |-- runbook-21.md
-|       |-- runbook-22.md
-|       |-- runbook-23.md
-|       |-- runbook-24.md
-|       |-- runbook-25.md
-|       |-- runbook-26.md
-|       |-- runbook-27.md
-|       |-- runbook-28.md
-|       |-- runbook-29.md
-|       |-- runbook-30.md
-|       |-- runbook-31.md
-|       |-- runbook-32.md
-|       |-- runbook-33.md
-|       |-- runbook-34.md
-|       |-- runbook-35.md
-|       |-- runbook-36.md
-|       |-- runbook-37.md
-|       |-- runbook-38.md
-|       |-- runbook-39.md
-|       |-- runbook-40.md
-|       |-- runbook-41.md
-|       |-- runbook-42.md
-|       |-- runbook-43.md
-|       |-- runbook-44.md
-|       |-- runbook-45.md
-|       |-- runbook-46.md
-|       |-- runbook-47.md
-|       |-- runbook-48.md
-|       |-- runbook-49.md
-|       |-- runbook-50.md
-|       |-- runbook-51.md
-|       |-- runbook-52.md
-|       |-- runbook-53.md
-|       |-- runbook-54.md
-|       |-- runbook-55.md
-|       |-- runbook-56.md
-|       |-- runbook-57.md
-|       `-- runbook-58.md
+|       `-- runbook-08.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
@@ -211,57 +111,7 @@ quantum-coverage-csharp-a
 |       |-- reference-05.sql
 |       |-- reference-06.sql
 |       |-- reference-07.sql
-|       |-- reference-08.sql
-|       |-- reference-09.sql
-|       |-- reference-10.sql
-|       |-- reference-11.sql
-|       |-- reference-12.sql
-|       |-- reference-13.sql
-|       |-- reference-14.sql
-|       |-- reference-15.sql
-|       |-- reference-16.sql
-|       |-- reference-17.sql
-|       |-- reference-18.sql
-|       |-- reference-19.sql
-|       |-- reference-20.sql
-|       |-- reference-21.sql
-|       |-- reference-22.sql
-|       |-- reference-23.sql
-|       |-- reference-24.sql
-|       |-- reference-25.sql
-|       |-- reference-26.sql
-|       |-- reference-27.sql
-|       |-- reference-28.sql
-|       |-- reference-29.sql
-|       |-- reference-30.sql
-|       |-- reference-31.sql
-|       |-- reference-32.sql
-|       |-- reference-33.sql
-|       |-- reference-34.sql
-|       |-- reference-35.sql
-|       |-- reference-36.sql
-|       |-- reference-37.sql
-|       |-- reference-38.sql
-|       |-- reference-39.sql
-|       |-- reference-40.sql
-|       |-- reference-41.sql
-|       |-- reference-42.sql
-|       |-- reference-43.sql
-|       |-- reference-44.sql
-|       |-- reference-45.sql
-|       |-- reference-46.sql
-|       |-- reference-47.sql
-|       |-- reference-48.sql
-|       |-- reference-49.sql
-|       |-- reference-50.sql
-|       |-- reference-51.sql
-|       |-- reference-52.sql
-|       |-- reference-53.sql
-|       |-- reference-54.sql
-|       |-- reference-55.sql
-|       |-- reference-56.sql
-|       |-- reference-57.sql
-|       `-- reference-58.sql
+|       `-- reference-08.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -284,6 +134,7 @@ quantum-coverage-csharp-a
 |-- vendor
 |   `-- generated-client.txt
 |-- .gitignore
+|-- CoverageContext.csproj
 `-- README.md
 ```
 
@@ -293,6 +144,7 @@ quantum-coverage-csharp-a
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
 | .github/workflows/deploy.yml | live-config | 7 | Runtime configuration carrying environment or deployment settings for Deploy. | no | no | no | yes | yes | no |
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
+| CoverageContext.csproj | build/deploy | 5 | Build or deployment definition shaping how Coverage Context is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
 | config/runtime/baseline.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Baseline. | no | no | no | yes | yes | no |
 | deploy/prod/service.properties | live-config | 1 | Runtime configuration carrying environment or deployment settings for Service. | no | no | no | yes | yes | no |
@@ -304,56 +156,6 @@ quantum-coverage-csharp-a
 | docs/architecture/section-06.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-07.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-08.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-09.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-10.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-11.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-12.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-13.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-14.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-15.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-16.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-17.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-18.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-19.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-20.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-21.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-22.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-23.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-24.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-25.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-26.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-27.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-28.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-29.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-30.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-31.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-32.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-33.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-34.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-35.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-36.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-37.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-38.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-39.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-40.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-41.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-42.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-43.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-44.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-45.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-46.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-47.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-48.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-49.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-50.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-51.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-52.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-53.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-54.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-55.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-56.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-57.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -363,83 +165,33 @@ quantum-coverage-csharp-a
 | ops/playbooks/runbook-06.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-07.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-08.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-09.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-10.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-11.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-12.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-13.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-14.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-15.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-16.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-17.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-18.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-19.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-20.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-21.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-22.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-23.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-24.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-25.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-26.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-27.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-28.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-29.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-30.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-31.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-32.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-33.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-34.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-35.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-36.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-37.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-38.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-39.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-40.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-41.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-42.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-43.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-44.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-45.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-46.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-47.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-48.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-49.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-50.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-51.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-52.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-53.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-54.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-55.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-56.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-57.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule001.cs | live-code | 15 | Runtime business module contributing to Rule001. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule002.cs | live-code | 15 | Runtime business module contributing to Rule002. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule003.cs | live-code | 15 | Runtime business module contributing to Rule003. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule004.cs | live-code | 15 | Runtime business module contributing to Rule004. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule005.cs | live-code | 15 | Runtime business module contributing to Rule005. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule006.cs | live-code | 15 | Runtime business module contributing to Rule006. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule007.cs | live-code | 15 | Runtime business module contributing to Rule007. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule008.cs | live-code | 15 | Runtime business module contributing to Rule008. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule009.cs | live-code | 15 | Runtime business module contributing to Rule009. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule010.cs | live-code | 15 | Runtime business module contributing to Rule010. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule011.cs | live-code | 15 | Runtime business module contributing to Rule011. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule012.cs | live-code | 15 | Runtime business module contributing to Rule012. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule013.cs | live-code | 15 | Runtime business module contributing to Rule013. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule014.cs | live-code | 15 | Runtime business module contributing to Rule014. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule015.cs | live-code | 15 | Runtime business module contributing to Rule015. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule016.cs | live-code | 15 | Runtime business module contributing to Rule016. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule017.cs | live-code | 15 | Runtime business module contributing to Rule017. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule018.cs | live-code | 15 | Runtime business module contributing to Rule018. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule019.cs | live-code | 15 | Runtime business module contributing to Rule019. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule020.cs | live-code | 15 | Runtime business module contributing to Rule020. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule021.cs | live-code | 15 | Runtime business module contributing to Rule021. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule022.cs | live-code | 15 | Runtime business module contributing to Rule022. | yes | yes | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule023.cs | live-code | 15 | Runtime business module contributing to Rule023. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule024.cs | live-code | 15 | Runtime business module contributing to Rule024. | yes | no | no | yes | yes | no |
-| services/quantum-coverage-csharp-a/src/legacy/Rule025.cs | live-code | 15 | Runtime business module contributing to Rule025. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule001.cs | live-code | 12 | Runtime business module contributing to Rule001. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule002.cs | live-code | 14 | Runtime business module contributing to Rule002. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule003.cs | live-code | 12 | Runtime business module contributing to Rule003. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule004.cs | live-code | 12 | Runtime business module contributing to Rule004. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule005.cs | live-code | 11 | Runtime business module contributing to Rule005. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule006.cs | live-code | 11 | Runtime business module contributing to Rule006. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule007.cs | live-code | 11 | Runtime business module contributing to Rule007. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule008.cs | live-code | 12 | Runtime business module contributing to Rule008. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule009.cs | live-code | 12 | Runtime business module contributing to Rule009. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule010.cs | live-code | 12 | Runtime business module contributing to Rule010. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule011.cs | live-code | 12 | Runtime business module contributing to Rule011. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule012.cs | live-code | 12 | Runtime business module contributing to Rule012. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule013.cs | live-code | 12 | Runtime business module contributing to Rule013. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule014.cs | live-code | 14 | Runtime business module contributing to Rule014. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule015.cs | live-code | 13 | Runtime business module contributing to Rule015. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule016.cs | live-code | 13 | Runtime business module contributing to Rule016. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule017.cs | live-code | 12 | Runtime business module contributing to Rule017. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule018.cs | live-code | 12 | Runtime business module contributing to Rule018. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule019.cs | live-code | 12 | Runtime business module contributing to Rule019. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule020.cs | live-code | 11 | Runtime business module contributing to Rule020. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule021.cs | live-code | 11 | Runtime business module contributing to Rule021. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule022.cs | live-code | 12 | Runtime business module contributing to Rule022. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule023.cs | live-code | 12 | Runtime business module contributing to Rule023. | yes | no | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule024.cs | live-code | 12 | Runtime business module contributing to Rule024. | yes | yes | no | yes | yes | no |
+| services/quantum-coverage-csharp-a/src/legacy/Rule025.cs | live-code | 12 | Runtime business module contributing to Rule025. | yes | yes | no | yes | yes | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -448,65 +200,15 @@ quantum-coverage-csharp-a
 | sql/reference/reference-06.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-07.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-08.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-09.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-10.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-11.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-12.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-13.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-14.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-15.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-16.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-17.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-18.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-19.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-20.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-21.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-22.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-23.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-24.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-25.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-26.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-27.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-28.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-29.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-30.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-31.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-32.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-33.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-34.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-35.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-36.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-37.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-38.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-39.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-40.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-41.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-42.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-43.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-44.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-45.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-46.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-47.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-48.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-49.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-50.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-51.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-52.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-53.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-54.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-55.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-56.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-57.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 327 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3124 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1431 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 246 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 1038 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1025 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 97 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -670,20 +372,14 @@ quantum-coverage-csharp-a
 
 ## 7. Near-Real Negative Surfaces
 
-- `services/quantum-coverage-csharp-a/src/legacy/Rule003.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule004.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule005.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule006.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule009.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule010.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule012.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule013.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule014.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule015.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule016.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule017.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule019.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
-- `services/quantum-coverage-csharp-a/src/legacy/Rule022.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-a/src/legacy/Rule018.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- `services/quantum-coverage-csharp-a/src/legacy/Rule024.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 - `services/quantum-coverage-csharp-a/src/legacy/Rule025.cs`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
@@ -698,56 +394,6 @@ quantum-coverage-csharp-a
 | docs/architecture/section-06.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-07.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-08.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-09.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-10.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-11.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-12.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-13.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-14.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-15.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-16.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-17.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-18.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-19.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-20.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-21.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-22.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-23.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-24.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-25.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-26.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-27.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-28.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-29.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-30.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-31.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-32.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-33.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-34.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-35.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-36.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-37.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-38.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-39.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-40.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-41.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-42.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-43.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-44.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-45.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-46.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-47.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-48.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-49.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-50.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-51.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-52.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-53.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-54.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-55.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-56.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-57.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -757,56 +403,6 @@ quantum-coverage-csharp-a
 | sql/reference/reference-06.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-07.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-08.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-09.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-10.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-11.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-12.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-13.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-14.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-15.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-16.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-17.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-18.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-19.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-20.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-21.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-22.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-23.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-24.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-25.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-26.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-27.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-28.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-29.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-30.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-31.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-32.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-33.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-34.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-35.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-36.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-37.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-38.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-39.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-40.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-41.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-42.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-43.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-44.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-45.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-46.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-47.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-48.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-49.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-50.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-51.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-52.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-53.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-54.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-55.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-56.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-57.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -893,9 +489,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0404-csharp
-0010:         // evidence_anchor: ServicePointManager.SecurityProtocol
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0404-csharp
+0007:         // evidence_anchor: ServicePointManager.SecurityProtocol
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule002.cs`
@@ -906,65 +502,65 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0405-csharp
-0010:         // evidence_anchor: ServicePointManager.ServerCertificateValidationCallback
+0007:     public static void Execute() {
+0008:         // rule_key: quantum.arq-q-0405-csharp
+0009:         // evidence_anchor: ServicePointManager.ServerCertificateValidationCallback
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule003.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule003. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0406-csharp
-0010:         // evidence_anchor: MD5CryptoServiceProvider, MD5.Create
-0011:         // regex_sample: MD5CryptoServiceProvider
-0012:         // keywords: MD5CryptoServiceProvider | MD5Managed | MD5.Create
-0013:         MD5.Create();
-0014:     }
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0406-csharp
+0007:         // evidence_anchor: MD5CryptoServiceProvider, MD5.Create
+0008:         // regex_sample: MD5CryptoServiceProvider
+0009:         // keywords: MD5CryptoServiceProvider | MD5Managed | MD5.Create
+0010:         new MD5CryptoServiceProvider();
+0011:     }
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule004.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule004. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0408-csharp
-0010:         // evidence_anchor: RijndaelManaged, CipherMode.ECB
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0408-csharp
+0007:         // evidence_anchor: RijndaelManaged, CipherMode.ECB
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule005.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule005. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0410-csharp
-0010:         // evidence_anchor: DESCryptoServiceProvider
+0004:     public static void Execute() {
+0005:         // rule_key: quantum.arq-q-0410-csharp
+0006:         // evidence_anchor: DESCryptoServiceProvider
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule006.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule006. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0411-csharp
-0010:         // evidence_anchor: TripleDESCryptoServiceProvider, TripleDES.Create
+0004:     public static void Execute() {
+0005:         // rule_key: quantum.arq-q-0411-csharp
+0006:         // evidence_anchor: TripleDESCryptoServiceProvider, TripleDES.Create
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule007.cs`
@@ -975,9 +571,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0412-csharp
-0010:         // evidence_anchor: RC2CryptoServiceProvider
+0004:     public static void Execute() {
+0005:         // rule_key: quantum.arq-q-0412-csharp
+0006:         // evidence_anchor: RC2CryptoServiceProvider
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule008.cs`
@@ -988,25 +584,22 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0413-csharp
-0010:         // evidence_anchor: RSACryptoServiceProvider(keySize)
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0413-csharp
+0007:         // evidence_anchor: RSACryptoServiceProvider(keySize)
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule009.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule009. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0414-csharp
-0010:         // evidence_anchor: DSACryptoServiceProvider
-0012:         // keywords: DSACryptoServiceProvider | DSA.Create
-0013:         SHA1.Create();
-0014:     }
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0414-csharp
+0007:         // evidence_anchor: DSACryptoServiceProvider
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule010.cs`
@@ -1017,13 +610,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0415-csharp
-0010:         // evidence_anchor: HMACMD5
-0011:         // regex_sample: HMACMD5
-0012:         // keywords: HMACMD5
-0013:         MD5.Create();
-0014:     }
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0415-csharp
+0007:         // evidence_anchor: HMACMD5
+0008:         // regex_sample: HMACMD5
+0009:         // keywords: HMACMD5
+0010:         MD5.Create();
+0011:     }
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule011.cs`
@@ -1034,9 +627,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0417-csharp
-0010:         // evidence_anchor: PasswordDeriveBytes
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0417-csharp
+0007:         // evidence_anchor: PasswordDeriveBytes
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule012.cs`
@@ -1047,9 +640,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0419-csharp
-0010:         // evidence_anchor: RijndaelManaged.Key, DESCryptoServiceProvider.Key
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0419-csharp
+0007:         // evidence_anchor: RijndaelManaged.Key, DESCryptoServiceProvider.Key
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule013.cs`
@@ -1060,9 +653,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0422-csharp
-0010:         // evidence_anchor: ServicePointManager.SecurityProtocol
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0422-csharp
+0007:         // evidence_anchor: ServicePointManager.SecurityProtocol
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule014.cs`
@@ -1073,9 +666,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0423-csharp
-0010:         // evidence_anchor: ServerCertificateValidationCallback
+0007:     public static void Execute() {
+0008:         // rule_key: quantum.arq-q-0423-csharp
+0009:         // evidence_anchor: ServerCertificateValidationCallback
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule015.cs`
@@ -1086,26 +679,27 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0424-csharp
-0010:         // evidence_anchor: HttpClientHandler.ServerCertificateCustomValidationCallback
-0011:         // regex_sample: DangerousAcceptAnyServerCertificateValidator[lZ> ".Z^MRSz[RNh13 lServerCertificateCustomValidationCallback
-0012:         // keywords: HttpClientHandler | ServerCertificateCustomValidationCallback | DangerousAcceptAnyServerCertificateValidator
-0013:         DangerousAcceptAnyServerCertificateValidator[lZ> ".Z^MRSz[RNh13 lServerCertificateCustomValidationCallback
-0014:     }
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0424-csharp
+0007:         // evidence_anchor: HttpClientHandler.ServerCertificateCustomValidationCallback
+0008:         // regex_sample: DangerousAcceptAnyServerCertificateValidator[lZ> ".Z^MRSz[RNh13 lServerCertificateCustomValidationCallback
+0009:         // keywords: HttpClientHandler | ServerCertificateCustomValidationCallback | DangerousAcceptAnyServerCertificateValidator
+0010:         var handler = new HttpClientHandler();
+0011:         handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+0012:     }
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule016.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule016. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0425-csharp
-0010:         // evidence_anchor: SslStream, RemoteCertificateValidationCallback
+0006:     public static void Execute() {
+0007:         // rule_key: quantum.arq-q-0425-csharp
+0008:         // evidence_anchor: SslStream, RemoteCertificateValidationCallback
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule017.cs`
@@ -1116,39 +710,39 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0426-csharp
-0010:         // evidence_anchor: MD5.Create, MD5CryptoServiceProvider
-0011:         // regex_sample: MD5CryptoServiceProvider
-0012:         // keywords: MD5.Create | MD5CryptoServiceProvider | MD5Managed
-0013:         MD5.Create();
-0014:     }
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0426-csharp
+0007:         // evidence_anchor: MD5.Create, MD5CryptoServiceProvider
+0008:         // regex_sample: MD5CryptoServiceProvider
+0009:         // keywords: MD5.Create | MD5CryptoServiceProvider | MD5Managed
+0010:         new MD5CryptoServiceProvider();
+0011:     }
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule018.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule018. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0428-csharp
-0010:         // evidence_anchor: AesManaged, CipherMode.ECB
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0428-csharp
+0007:         // evidence_anchor: AesManaged, CipherMode.ECB
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule019.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule019. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0429-csharp
-0010:         // evidence_anchor: AesCryptoServiceProvider, CipherMode.ECB
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0429-csharp
+0007:         // evidence_anchor: AesCryptoServiceProvider, CipherMode.ECB
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule020.cs`
@@ -1159,9 +753,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0430-csharp
-0010:         // evidence_anchor: TripleDES.Create, TripleDESCryptoServiceProvider
+0004:     public static void Execute() {
+0005:         // rule_key: quantum.arq-q-0430-csharp
+0006:         // evidence_anchor: TripleDES.Create, TripleDESCryptoServiceProvider
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule021.cs`
@@ -1172,22 +766,22 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0431-csharp
-0010:         // evidence_anchor: DES.Create, DESCryptoServiceProvider
+0004:     public static void Execute() {
+0005:         // rule_key: quantum.arq-q-0431-csharp
+0006:         // evidence_anchor: DES.Create, DESCryptoServiceProvider
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule022.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule022. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0432-csharp
-0010:         // evidence_anchor: RSACryptoServiceProvider(keySize)
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0432-csharp
+0007:         // evidence_anchor: RSACryptoServiceProvider(keySize)
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule023.cs`
@@ -1198,22 +792,22 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0435-csharp
-0010:         // evidence_anchor: RSAEncryptionPadding.Pkcs1
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0435-csharp
+0007:         // evidence_anchor: RSAEncryptionPadding.Pkcs1
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule024.cs`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule024. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0438-csharp
-0010:         // evidence_anchor: DSACryptoServiceProvider, DSA.Create
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0438-csharp
+0007:         // evidence_anchor: DSACryptoServiceProvider, DSA.Create
 ```
 
 ### `services/quantum-coverage-csharp-a/src/legacy/Rule025.cs`
@@ -1224,31 +818,31 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0008:     public static void Execute() {
-0009:         // rule_key: quantum.arq-q-0439-csharp
-0010:         // evidence_anchor: HMACMD5
-0011:         // regex_sample: HMACMD5
-0012:         // keywords: HMACMD5
-0013:         MD5.Create();
-0014:     }
+0005:     public static void Execute() {
+0006:         // rule_key: quantum.arq-q-0439-csharp
+0007:         // evidence_anchor: HMACMD5
+0008:         // regex_sample: HMACMD5
+0009:         // keywords: HMACMD5
+0010:         MD5.Create();
+0011:     }
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7195`
-- Synthetic filler / inflation LOC: `6380`
-- Synthetic filler ratio: `88.67%`
+- Total LOC considered for authored/generated project content: `1626`
+- Synthetic filler / inflation LOC: `880`
+- Synthetic filler ratio: `54.12%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 375 |
+| live business code | 301 |
 | live config | 11 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
 | vendor/generated | 400 |
-| synthetic filler / inflation content | 6380 |
+| synthetic filler / inflation content | 880 |
 
 Inflation disclosure:
 

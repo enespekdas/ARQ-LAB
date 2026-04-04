@@ -1,0 +1,391 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-209\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5387755102040817,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-209\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-209\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 197,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 660,
+      "tests": 3,
+      "total": 1225,
+      "vendor/generated": 323
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-csharp-net8-to-9-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-209.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-csharp-net8-to-9-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "18 expected finding(s) were not detected at all; 4 unexpected/noisy finding(s) remained after matching (same-file-different-signal=4)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule001.cs"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule003.cs"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "secrets/quantum-precision-csharp-net8-to-9-01/keys/rule_004.pem"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule005.cs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule006.cs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule007.cs"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule008.cs"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule009.cs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule010.cs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule011.cs"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule012.cs"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule013.cs"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule014.cs"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule015.cs"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule016.cs"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule017.cs"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule018.cs"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 18,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule001.cs"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule003.cs"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "secrets/quantum-precision-csharp-net8-to-9-01/keys/rule_004.pem"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule005.cs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule006.cs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule007.cs"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule008.cs"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule009.cs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule010.cs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule011.cs"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule012.cs"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule013.cs"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule014.cs"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule015.cs"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule016.cs"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule017.cs"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule018.cs"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 4,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 4,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 4,
+    "rawFindings": 4
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "MD5.Create();",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "fd636ae9-885c-4a4a-b736-6c8ddf39d5f3",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule001.cs",
+      "queryFamily": "csharp.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"MD5.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"MD5\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_CALL\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "MD5",
+      "ruleKey": "quantum.arq-q-0468-csharp",
+      "ruleName": "MD5 usage",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:crypto:MD5.Create:MD5",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "590dc88d-d2ee-4fbc-86e3-8ed353e8de24",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule002.cs",
+      "queryFamily": "csharp.http",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.http.accept-any-cert-validator\",\"callName\":\"HttpClientHandler.DangerousAcceptAnyServerCertificateValidator\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"DangerousAcceptAnyServerCertificateValidator\",\"resolvedValue\":\"DangerousAcceptAnyServerCertificateValidator\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_MEMBER\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "DangerousAcceptAnyServerCertificateValidator",
+      "ruleKey": "quantum.arq-q-0449-csharp",
+      "ruleName": "HttpClient: DangerousAcceptAnyServerCertificateValidator",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:http:HttpClientHandler.DangerousAcceptAnyServerCertificateValidator:DangerousAcceptAnyServerCertificateValidator",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "var alg = Aes.Create(); alg.Mode = CipherMode.ECB;",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "94d7365c-5e35-4ce7-975f-f2624f226fc3",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule003.cs",
+      "queryFamily": "csharp.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.aes-ecb\",\"callName\":\"Aes.Create.Mode\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"Mode\",\"resolvedValue\":\"CipherMode.ECB\",\"language\":\"csharp\",\"bindingKind\":\"SAME_METHOD_ALIAS\",\"valueSource\":\"DIRECT_MEMBER\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "CipherMode.ECB",
+      "ruleKey": "quantum.arq-q-0453-csharp",
+      "ruleName": "AES in ECB mode",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:crypto:Aes.Create.Mode:CipherMode.ECB",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "new TokenValidationParameters { ValidateIssuerSigningKey = false, ValidateAudience = false };",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8df8f2ce-b9e4-4a0f-9368-001bfc1e691a",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule005.cs",
+      "queryFamily": "csharp.jwt",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.jwt.validation-disabled\",\"callName\":\"TokenValidationParameters\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"ValidateAudience|ValidateIssuerSigningKey\",\"resolvedValue\":\"ValidateAudience=false|ValidateIssuerSigningKey=false\",\"language\":\"csharp\",\"bindingKind\":\"OBJECT_CREATION\",\"disabledFlags\":[\"ValidateAudience\",\"ValidateIssuerSigningKey\"],\"valueSource\":\"OBJECT_INITIALIZER\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "ValidateAudience=false|ValidateIssuerSigningKey=false",
+      "ruleKey": "quantum.arq-q-0531-csharp",
+      "ruleName": "JWT: token validation disabled via TokenValidationParameters (critical auth bypass)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:jwt:ValidateAudience|ValidateIssuerSigningKey:ValidateAudience=false|ValidateIssuerSigningKey=false",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-209",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "MD5.Create();",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "fd636ae9-885c-4a4a-b736-6c8ddf39d5f3",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule001.cs",
+      "queryFamily": "csharp.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"MD5.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"MD5\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_CALL\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "MD5",
+      "ruleKey": "quantum.arq-q-0468-csharp",
+      "ruleName": "MD5 usage",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:crypto:MD5.Create:MD5",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "590dc88d-d2ee-4fbc-86e3-8ed353e8de24",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule002.cs",
+      "queryFamily": "csharp.http",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.http.accept-any-cert-validator\",\"callName\":\"HttpClientHandler.DangerousAcceptAnyServerCertificateValidator\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"DangerousAcceptAnyServerCertificateValidator\",\"resolvedValue\":\"DangerousAcceptAnyServerCertificateValidator\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_MEMBER\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "DangerousAcceptAnyServerCertificateValidator",
+      "ruleKey": "quantum.arq-q-0449-csharp",
+      "ruleName": "HttpClient: DangerousAcceptAnyServerCertificateValidator",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:http:HttpClientHandler.DangerousAcceptAnyServerCertificateValidator:DangerousAcceptAnyServerCertificateValidator",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "var alg = Aes.Create(); alg.Mode = CipherMode.ECB;",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "94d7365c-5e35-4ce7-975f-f2624f226fc3",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule003.cs",
+      "queryFamily": "csharp.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.aes-ecb\",\"callName\":\"Aes.Create.Mode\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"Mode\",\"resolvedValue\":\"CipherMode.ECB\",\"language\":\"csharp\",\"bindingKind\":\"SAME_METHOD_ALIAS\",\"valueSource\":\"DIRECT_MEMBER\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "CipherMode.ECB",
+      "ruleKey": "quantum.arq-q-0453-csharp",
+      "ruleName": "AES in ECB mode",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:crypto:Aes.Create.Mode:CipherMode.ECB",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "new TokenValidationParameters { ValidateIssuerSigningKey = false, ValidateAudience = false };",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8df8f2ce-b9e4-4a0f-9368-001bfc1e691a",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-net8-to-9-01/src/legacy/Rule005.cs",
+      "queryFamily": "csharp.jwt",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.jwt.validation-disabled\",\"callName\":\"TokenValidationParameters\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"ValidateAudience|ValidateIssuerSigningKey\",\"resolvedValue\":\"ValidateAudience=false|ValidateIssuerSigningKey=false\",\"language\":\"csharp\",\"bindingKind\":\"OBJECT_CREATION\",\"disabledFlags\":[\"ValidateAudience\",\"ValidateIssuerSigningKey\"],\"valueSource\":\"OBJECT_INITIALIZER\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "ValidateAudience=false|ValidateIssuerSigningKey=false",
+      "ruleKey": "quantum.arq-q-0531-csharp",
+      "ruleName": "JWT: token validation disabled via TokenValidationParameters (critical auth bypass)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:jwt:ValidateAudience|ValidateIssuerSigningKey:ValidateAudience=false|ValidateIssuerSigningKey=false",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

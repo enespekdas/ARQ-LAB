@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-long-tail.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-long-tail",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-long-tail",
+    "name": "guardian-coverage-long-tail",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 4
+    },
+    "git": {
+      "branches": {
+        "main": "0d7d84f633dde31feb91a4647994addb917f76cb"
+      },
+      "head": "0d7d84f633dde31feb91a4647994addb917f76cb",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T20:55:09+03:00",
+          "message": "bootstrap G-V1-COV-112",
+          "sha": "0d7d84f633dde31feb91a4647994addb917f76cb"
+        }
+      ]
+    },
+    "lineCount": 6969,
+    "repoName": "guardian-coverage-long-tail",
+    "scenarioId": "G-V1-COV-112"
+  },
+  "scenario": {
+    "domain": "Long-tail provider credential corpus covering the remaining active Guardian families needed for truthful coverage.",
+    "id": "G-V1-COV-112",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-long-tail",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

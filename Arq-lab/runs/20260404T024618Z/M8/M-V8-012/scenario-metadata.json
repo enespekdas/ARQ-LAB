@@ -1,0 +1,45 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/verify-mesh-monorepo.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/verify-mesh-monorepo",
+    "html_url": "https://github.com/ARQ-Sec/verify-mesh-monorepo",
+    "name": "verify-mesh-monorepo",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "main": "cc9a96612d1d967cc76fb6a16bf8df110bea926f"
+      },
+      "head": "cc9a96612d1d967cc76fb6a16bf8df110bea926f",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-04T06:09:16+03:00",
+          "message": "bootstrap M-V8-012",
+          "sha": "cc9a96612d1d967cc76fb6a16bf8df110bea926f"
+        }
+      ]
+    },
+    "lineCount": 10925,
+    "repoName": "verify-mesh-monorepo",
+    "scenarioId": "M-V8-012"
+  },
+  "scenario": {
+    "domain": "Mixed monorepo with Python verify=False, Java weak crypto, TS safe wrappers, and heavy vendor/generated surfaces.",
+    "id": "M-V8-012",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "verify-mesh-monorepo",
+    "stack": "Java + Node + Python mixed monorepo"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/control-repo-discovery.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/control-repo-discovery",
+    "html_url": "https://github.com/ARQ-Sec/control-repo-discovery",
+    "name": "control-repo-discovery",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {},
+    "git": {
+      "branches": {
+        "feature/charts-cleanup": "82edbccd8d823d6f1c7afdfb665876ea04cbb589",
+        "feature/hotfix-ssl": "588654476de2fb2e5ddeb5d829b0f95062db08af",
+        "main": "a914af965f5e0278882e61da5cc57abf41935319",
+        "release/2026.04": "c73f3fe31a8b407a11e23f5f9bd45ef170fd1e00"
+      },
+      "head": "a914af965f5e0278882e61da5cc57abf41935319",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-04T00:47:09+03:00",
+          "message": "c004 charts cleanup branch",
+          "sha": "82edbccd8d823d6f1c7afdfb665876ea04cbb589"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-04T00:47:08+03:00",
+          "message": "c002 temporary hotfix secret",
+          "sha": "588654476de2fb2e5ddeb5d829b0f95062db08af"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-04T00:47:08+03:00",
+          "message": "c001 bootstrap mixed repo",
+          "sha": "a914af965f5e0278882e61da5cc57abf41935319"
+        },
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-04T00:47:08+03:00",
+          "message": "c003 release branch clean",
+          "sha": "c73f3fe31a8b407a11e23f5f9bd45ef170fd1e00"
+        }
+      ]
+    },
+    "lineCount": 9937,
+    "repoName": "control-repo-discovery",
+    "scenarioId": "M-V8-010"
+  },
+  "scenario": {
+    "domain": "Infra-heavy control repo with branch-only secret, live TLS config, dormant overlays, and generated manifests.",
+    "id": "M-V8-010",
+    "milestone": "M8",
+    "module": "both",
+    "repo_name": "control-repo-discovery",
+    "stack": "App + infra + helm + kustomize + terraform + CI"
+  }
+}

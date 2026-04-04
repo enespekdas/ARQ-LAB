@@ -277,8 +277,8 @@ guardian-coverage-automation
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
 | config/runtime/baseline.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Baseline. | no | no | no | yes | yes | no |
-| deploy/guardian-coverage-automation/provider_003.properties | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 003. | yes | no | no | yes | yes | no |
-| deploy/guardian-coverage-automation/provider_008.properties | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 008. | yes | no | no | yes | yes | no |
+| deploy/guardian-coverage-automation/provider_003.properties | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 003. | yes | no | no | yes | yes | no |
+| deploy/guardian-coverage-automation/provider_008.properties | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 008. | yes | no | no | yes | yes | no |
 | deploy/guardian-coverage-automation/provider_013.properties | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 013. | yes | no | no | yes | yes | no |
 | deploy/guardian-coverage-automation/provider_018.properties | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 018. | yes | no | no | yes | yes | no |
 | deploy/prod/service.properties | live-config | 1 | Runtime configuration carrying environment or deployment settings for Service. | no | no | no | yes | yes | no |
@@ -335,17 +335,17 @@ guardian-coverage-automation
 | docs/architecture/section-51.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-52.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
-| integrations/guardian-coverage-automation/config/provider_002.yaml | live-config | 4 | Runtime configuration carrying environment or deployment settings for Provider 002. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-automation/config/provider_002.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 002. | yes | no | no | yes | yes | no |
 | integrations/guardian-coverage-automation/config/provider_007.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 007. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-automation/config/provider_012.yaml | live-config | 4 | Runtime configuration carrying environment or deployment settings for Provider 012. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-automation/config/provider_012.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 012. | yes | no | no | yes | yes | no |
 | integrations/guardian-coverage-automation/config/provider_017.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 017. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-automation/runtime/provider_001.env | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 001. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-automation/runtime/provider_006.env | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 006. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-automation/runtime/provider_011.env | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 011. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-automation/runtime/provider_016.env | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 016. | yes | no | no | yes | yes | no |
-| ops/guardian-coverage-automation/secrets/provider_005.txt | docs | 3 | Documentation or explanatory material for Provider 005. | yes | no | no | no | no | no |
-| ops/guardian-coverage-automation/secrets/provider_010.txt | docs | 4 | Documentation or explanatory material for Provider 010. | yes | no | no | no | no | no |
-| ops/guardian-coverage-automation/secrets/provider_015.txt | docs | 96 | Documentation or explanatory material for Provider 015. | yes | no | no | no | no | no |
+| integrations/guardian-coverage-automation/runtime/provider_001.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 001. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-automation/runtime/provider_006.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 006. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-automation/runtime/provider_011.env | live-config | 4 | Runtime configuration carrying environment or deployment settings for Provider 011. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-automation/runtime/provider_016.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 016. | yes | no | no | yes | yes | no |
+| ops/guardian-coverage-automation/secrets/provider_005.txt | docs | 3 | Documentation or explanatory material for Provider 005. | yes | yes | no | no | no | no |
+| ops/guardian-coverage-automation/secrets/provider_010.txt | docs | 6 | Documentation or explanatory material for Provider 010. | yes | no | no | no | no | no |
+| ops/guardian-coverage-automation/secrets/provider_015.txt | docs | 3 | Documentation or explanatory material for Provider 015. | yes | no | no | no | no | no |
 | ops/guardian-coverage-automation/secrets/provider_020.txt | docs | 3 | Documentation or explanatory material for Provider 020. | yes | no | no | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -453,9 +453,9 @@ guardian-coverage-automation
 | sql/reference/reference-50.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-51.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-52.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| terraform/guardian-coverage-automation/provider_004.tfvars | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 004. | yes | no | no | yes | yes | no |
-| terraform/guardian-coverage-automation/provider_009.tfvars | live-config | 4 | Runtime configuration carrying environment or deployment settings for Provider 009. | yes | no | no | yes | yes | no |
-| terraform/guardian-coverage-automation/provider_014.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 014. | yes | no | no | yes | yes | no |
+| terraform/guardian-coverage-automation/provider_004.tfvars | live-config | 7 | Runtime configuration carrying environment or deployment settings for Provider 004. | yes | no | no | yes | yes | no |
+| terraform/guardian-coverage-automation/provider_009.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 009. | yes | no | no | yes | yes | no |
+| terraform/guardian-coverage-automation/provider_014.tfvars | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 014. | yes | no | no | yes | yes | no |
 | terraform/guardian-coverage-automation/provider_019.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 019. | yes | no | no | yes | yes | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
@@ -464,7 +464,7 @@ guardian-coverage-automation
 | validation/expected-findings.json | generated | 262 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2802 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1201 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1200 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 228 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -479,127 +479,127 @@ guardian-coverage-automation
 - Path: `integrations/guardian-coverage-automation/runtime/provider_001.env`
   Why it should be detected: scenario declares `rule-001` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.discord-client-id`
+  Finding family / rule family expectation: `guardian.curl-auth-header`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/config/provider_002.yaml`
   Why it should be detected: scenario declares `rule-002` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.discord-client-secret`
+  Finding family / rule family expectation: `guardian.curl-auth-user`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-automation/provider_003.properties`
   Why it should be detected: scenario declares `rule-003` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.droneci-access-token`
+  Finding family / rule family expectation: `guardian.databricks-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-automation/provider_004.tfvars`
   Why it should be detected: scenario declares `rule-004` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.dropbox-api-token`
+  Finding family / rule family expectation: `guardian.datadog-access-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-automation/secrets/provider_005.txt`
   Why it should be detected: scenario declares `rule-005` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.dropbox-long-lived-api-token`
+  Finding family / rule family expectation: `guardian.defined-networking-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/runtime/provider_006.env`
   Why it should be detected: scenario declares `rule-006` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.etsy-access-token`
+  Finding family / rule family expectation: `guardian.digitalocean-access-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/config/provider_007.yaml`
   Why it should be detected: scenario declares `rule-007` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.facebook-access-token`
+  Finding family / rule family expectation: `guardian.digitalocean-pat`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-automation/provider_008.properties`
   Why it should be detected: scenario declares `rule-008` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.facebook-secret`
+  Finding family / rule family expectation: `guardian.digitalocean-refresh-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-automation/provider_009.tfvars`
   Why it should be detected: scenario declares `rule-009` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.fastly-api-token`
+  Finding family / rule family expectation: `guardian.discord-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-automation/secrets/provider_010.txt`
   Why it should be detected: scenario declares `rule-010` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.finicity-api-token`
+  Finding family / rule family expectation: `guardian.discord-client-id`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/runtime/provider_011.env`
   Why it should be detected: scenario declares `rule-011` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.finicity-client-secret`
+  Finding family / rule family expectation: `guardian.discord-client-secret`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/config/provider_012.yaml`
   Why it should be detected: scenario declares `rule-012` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.finnhub-access-token`
+  Finding family / rule family expectation: `guardian.doppler-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-automation/provider_013.properties`
   Why it should be detected: scenario declares `rule-013` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.flickr-access-token`
+  Finding family / rule family expectation: `guardian.droneci-access-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-automation/provider_014.tfvars`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.flyio-access-token`
+  Finding family / rule family expectation: `guardian.dropbox-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-automation/secrets/provider_015.txt`
   Why it should be detected: scenario declares `rule-015` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.freemius-secret-key`
+  Finding family / rule family expectation: `guardian.dropbox-long-lived-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/runtime/provider_016.env`
   Why it should be detected: scenario declares `rule-016` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.freshbooks-access-token`
+  Finding family / rule family expectation: `guardian.dropbox-short-lived-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-automation/config/provider_017.yaml`
   Why it should be detected: scenario declares `rule-017` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.gcp-api-key`
+  Finding family / rule family expectation: `guardian.duffel-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-automation/provider_018.properties`
   Why it should be detected: scenario declares `rule-018` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.github-app-token`
+  Finding family / rule family expectation: `guardian.dynatrace-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-automation/provider_019.tfvars`
   Why it should be detected: scenario declares `rule-019` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.github-fine-grained-pat`
+  Finding family / rule family expectation: `guardian.easypost-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-automation/secrets/provider_020.txt`
   Why it should be detected: scenario declares `rule-020` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.github-oauth`
+  Finding family / rule family expectation: `guardian.easypost-test-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 
 ## 7. Near-Real Negative Surfaces
 
-- No near-real negative surfaces were declared for this scenario.
+- `ops/guardian-coverage-automation/secrets/provider_005.txt`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
 
 ## 8. Protected Negative Surfaces
 
@@ -778,8 +778,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.droneci-access-token
-0003: YZ01mRg0Dc68GM_Ph-hsBPdNM24R1droneciY6WSltw
+0002: # rule_key: guardian.databricks-api-token
+0003: dapi9a3d095d0e1403d82a47f10354b2aa22-5
 ```
 
 ### `deploy/guardian-coverage-automation/provider_008.properties`
@@ -791,8 +791,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.facebook-secret
-0003: XFb73hBh6-wQqk0dNfacebookb "
+0002: # rule_key: guardian.digitalocean-refresh-token
+0003: dor_v1_f51fa1c552f8ca534c1c168a77a7ee50e175edd9b5c5f4d0c51267601d269b63
 ```
 
 ### `deploy/guardian-coverage-automation/provider_013.properties`
@@ -804,8 +804,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.flickr-access-token
-0003: q.4CG0gXp4E0.pVBp65efs.1PP8_eQuiDxwNHN0flickrBYDhebQGPDV1Qi. 6
+0002: # rule_key: guardian.droneci-access-token
+0003: YZ01mRg0Dc68GM_Ph-hsBPdNM24R1droneciY6WSltw
 ```
 
 ### `deploy/guardian-coverage-automation/provider_018.properties`
@@ -817,8 +817,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.github-app-token
-0003: ghu_MkPNEXElCznDGsLquhnWQFUck4dDdXnl4xx7
+0002: # rule_key: guardian.dynatrace-api-token
+0003: dt0c01.uono3ua286kw31egmxfvhwyj.ekd3l3ee2dfncufdeceyy1h5bqc5bzxqzdede7h7oo7xwxuzw5oqc6i3rryvgrde
 ```
 
 ### `integrations/guardian-coverage-automation/config/provider_002.yaml`
@@ -830,8 +830,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.discord-client-secret
-0003: ZZdn7AF5zzmBGSLqzCDCzY-7BdS-1r.YiAyjkqdiscordK:=
+0002: # rule_key: guardian.curl-auth-user
+0003: curl -u "svcuser:supersecret42" https://example.internal
 ```
 
 ### `integrations/guardian-coverage-automation/config/provider_007.yaml`
@@ -843,8 +843,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.facebook-access-token
-0003: 088716287224535%e_-h19nfand6ggatfpu5o84f983wcdc5tp6i9"
+0002: # rule_key: guardian.digitalocean-pat
+0003: dop_v1_54ef0e180513e6b648eda42593159096e7d919f105864f4126f585d5e4b3f257
 ```
 
 ### `integrations/guardian-coverage-automation/config/provider_012.yaml`
@@ -856,8 +856,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.finnhub-access-token
-0003: .sbcnem9JLX038wAaBzIu.pnOJtwRCtsfinnhubdApxCuiVE3z
+0002: # rule_key: guardian.doppler-api-token
+0003: dp.pt.tblvr4emq6n1owbt09uchat7matwurwkauj54u5241w
 ```
 
 ### `integrations/guardian-coverage-automation/config/provider_017.yaml`
@@ -869,8 +869,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.gcp-api-key
-0003: AIzabZeRLn5pZE9w5WL1pbliM4RI94v_Di5EYF6;
+0002: # rule_key: guardian.duffel-api-token
+0003: duffel_test_nt_bonp3eebl3ir4gztbunen-k19vagb==_vct1qokr
 ```
 
 ### `integrations/guardian-coverage-automation/runtime/provider_001.env`
@@ -882,8 +882,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.discord-client-id
-0003: ZGR_eO-RWkxGFhWdiscord	
+0002: # rule_key: guardian.curl-auth-header
+0003: curl -H "Authorization: Bearer testtoken12345678" https://example.internal
 ```
 
 ### `integrations/guardian-coverage-automation/runtime/provider_006.env`
@@ -895,8 +895,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.etsy-access-token
-0003: HUs9_LPbVu5Suo.9Pn.YpETSYLnVh
+0002: # rule_key: guardian.digitalocean-access-token
+0003: doo_v1_c28fbbf56b414374270d1feda7b282e6efd0e8a82a65be4feac45eb66e903b92
 ```
 
 ### `integrations/guardian-coverage-automation/runtime/provider_011.env`
@@ -908,8 +908,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.finicity-client-secret
-0003: UWhJMBKNZ5Fmfinicityz4Yc"	||"
+0002: # rule_key: guardian.discord-client-secret
+0003: ZZdn7AF5zzmBGSLqzCDCzY-7BdS-1r.YiAyjkqdiscordK:=
 ```
 
 ### `integrations/guardian-coverage-automation/runtime/provider_016.env`
@@ -921,21 +921,21 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.freshbooks-access-token
-0003: IWfreshbooks1p
+0002: # rule_key: guardian.dropbox-short-lived-api-token
+0003: dropbox_token = sl.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
 ### `ops/guardian-coverage-automation/secrets/provider_005.txt`
 
 - Why this file matters: `docs` file with expectation `must_find`.
 - Detailed summary: Documentation or explanatory material for Provider 005. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Key constructs: positive surface; near-real=`True`; protected=`False`.
 - Representative excerpt:
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.dropbox-long-lived-api-token
-0003: 0M9Or8SWkb23POK2nKb.dropbox9mVfURgl4PFlF"",''x634fu31z8oAAAAAAAAAAs8_qtw6mm2m7rcg=z2o1aw0eb=p85fjjkrjx5tqer8d
+0002: # rule_key: guardian.defined-networking-api-token
+0003: SDfWTKLuHifxCg.D0dnkeyl::= dnkey-bq=7l6ox2t8d-wzchgtuafcmsd-fysqos1_yrq1c55-4047mpk0d7nbf455blay__4q2mhq14ro1w2t
 ```
 
 ### `ops/guardian-coverage-automation/secrets/provider_010.txt`
@@ -947,8 +947,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.finicity-api-token
-0003: sY-NbCeIJT_CvkfTqZt.qfinicity4nSDvkH4wVemnBROBD
+0002: # rule_key: guardian.discord-client-id
+0003: ZGR_eO-RWkxGFhWdiscord	
 ```
 
 ### `ops/guardian-coverage-automation/secrets/provider_015.txt`
@@ -960,9 +960,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.freemius-secret-key
-0003: 'secret_key' 
-0004: 
+0002: # rule_key: guardian.dropbox-long-lived-api-token
+0003: 0M9Or8SWkb23POK2nKb.dropbox9mVfURgl4PFlF"",''x634fu31z8oAAAAAAAAAAs8_qtw6mm2m7rcg=z2o1aw0eb=p85fjjkrjx5tqer8d
 ```
 
 ### `ops/guardian-coverage-automation/secrets/provider_020.txt`
@@ -974,8 +973,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.github-oauth
-0003: gho_oa1qHFZ0rkXs13CmguARTSBKZGivxtDes3xK
+0002: # rule_key: guardian.easypost-test-api-token
+0003: EZTKoaj0r6114e0qjx86nb0r1q0fymifmy2idxty64kfeqvjhteneb5pzo
 ```
 
 ### `scripts/smoke.ps1`
@@ -998,8 +997,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.dropbox-api-token
-0003: vCi03agd7w.49uB8lZJ3XVQMXMkD.psxAwu6xB0.eXTYdropboxOLf
+0002: # rule_key: guardian.datadog-access-token
+0003: oOYwI7hqCEkiiuaS7L1Gb.Cwnae9jlFmqE1YdatadogpFi2j
 ```
 
 ### `terraform/guardian-coverage-automation/provider_009.tfvars`
@@ -1011,8 +1010,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.fastly-api-token
-0003: 7UjV9eJgyGEVoeVQ1NzzOpCKai0fy5Hgfastly8b	hV.9ib7Its,'
+0002: # rule_key: guardian.discord-api-token
+0003: oYiLdEhrwKCQEYilJzpX3PJI6SUeGvaHi4i.lCtwii.discord-TXxBtZf=	"= 354db97e400ea84a6590fdf39b1335aab158c0d9054983b18adab410dd107142
 ```
 
 ### `terraform/guardian-coverage-automation/provider_014.tfvars`
@@ -1024,8 +1023,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.flyio-access-token
-0003: fo1_Im-93E6Nenxa4MFVUJ_DugM5mC44ugfz4jmlMr2oK_j\r
+0002: # rule_key: guardian.dropbox-api-token
+0003: vCi03agd7w.49uB8lZJ3XVQMXMkD.psxAwu6xB0.eXTYdropboxOLf
 ```
 
 ### `terraform/guardian-coverage-automation/provider_019.tfvars`
@@ -1037,22 +1036,22 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.github-fine-grained-pat
-0003: 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
+0002: # rule_key: guardian.easypost-api-token
+0003: EZAKobxej25830xen049kb7hrlmsoaz8ab9nq10xj4rrp8buc8ijrb1638
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `6272`
+- Total LOC considered for authored/generated project content: `6168`
 - Synthetic filler / inflation LOC: `5720`
-- Synthetic filler ratio: `91.20%`
+- Synthetic filler ratio: `92.74%`
 
 | category | LOC |
 | --- | ---: |
 | live business code | 0 |
-| live config | 82 |
+| live config | 69 |
 | tests | 3 |
-| docs | 122 |
+| docs | 31 |
 | scripts | 2 |
 | fixtures | 0 |
 | vendor/generated | 335 |
@@ -1069,102 +1068,102 @@ Inflation disclosure:
 
 - path: `integrations/guardian-coverage-automation/runtime/provider_001.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.discord-client-id`
+  expected rule/finding family: `guardian.curl-auth-header`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/config/provider_002.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.discord-client-secret`
+  expected rule/finding family: `guardian.curl-auth-user`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-automation/provider_003.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.droneci-access-token`
+  expected rule/finding family: `guardian.databricks-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-automation/provider_004.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.dropbox-api-token`
+  expected rule/finding family: `guardian.datadog-access-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-automation/secrets/provider_005.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.dropbox-long-lived-api-token`
+  expected rule/finding family: `guardian.defined-networking-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/runtime/provider_006.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.etsy-access-token`
+  expected rule/finding family: `guardian.digitalocean-access-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/config/provider_007.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.facebook-access-token`
+  expected rule/finding family: `guardian.digitalocean-pat`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-automation/provider_008.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.facebook-secret`
+  expected rule/finding family: `guardian.digitalocean-refresh-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-automation/provider_009.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.fastly-api-token`
+  expected rule/finding family: `guardian.discord-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-automation/secrets/provider_010.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.finicity-api-token`
+  expected rule/finding family: `guardian.discord-client-id`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/runtime/provider_011.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.finicity-client-secret`
+  expected rule/finding family: `guardian.discord-client-secret`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/config/provider_012.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.finnhub-access-token`
+  expected rule/finding family: `guardian.doppler-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-automation/provider_013.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.flickr-access-token`
+  expected rule/finding family: `guardian.droneci-access-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-automation/provider_014.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.flyio-access-token`
+  expected rule/finding family: `guardian.dropbox-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-automation/secrets/provider_015.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.freemius-secret-key`
+  expected rule/finding family: `guardian.dropbox-long-lived-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/runtime/provider_016.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.freshbooks-access-token`
+  expected rule/finding family: `guardian.dropbox-short-lived-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-automation/config/provider_017.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.gcp-api-key`
+  expected rule/finding family: `guardian.duffel-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-automation/provider_018.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.github-app-token`
+  expected rule/finding family: `guardian.dynatrace-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-automation/provider_019.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.github-fine-grained-pat`
+  expected rule/finding family: `guardian.easypost-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-automation/secrets/provider_020.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.github-oauth`
+  expected rule/finding family: `guardian.easypost-test-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -1185,7 +1184,7 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FN`.
+- Current run already demonstrated this risk: verdict=`PASS_WITH_NOISE`.
 
 ## 16. Realism Justification
 

@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-security.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-security",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-security",
+    "name": "guardian-coverage-security",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "fc4fea17daf931f5a43bb28803fbdb51d8efcbed"
+      },
+      "head": "fc4fea17daf931f5a43bb28803fbdb51d8efcbed",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T21:11:22+03:00",
+          "message": "bootstrap G-V1-COV-110",
+          "sha": "fc4fea17daf931f5a43bb28803fbdb51d8efcbed"
+        }
+      ]
+    },
+    "lineCount": 6922,
+    "repoName": "guardian-coverage-security",
+    "scenarioId": "G-V1-COV-110"
+  },
+  "scenario": {
+    "domain": "Security and platform credential corpus covering vault handoff, secrets brokers, and admin access providers.",
+    "id": "G-V1-COV-110",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-security",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

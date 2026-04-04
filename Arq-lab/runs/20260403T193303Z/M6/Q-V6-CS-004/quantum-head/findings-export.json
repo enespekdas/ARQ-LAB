@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T19:38:20.937183200Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "959852a2-13e3-4b33-a43f-f7e8e3878c80",
+      "applicationKey": "arq-lab-q-v6-cs-004",
+      "applicationName": "tls-indirection-csharp",
+      "branchName": "main",
+      "commitSha": "c8a84e5d16557e3aa0e0ec6bda44ddc0b99283eb",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "71a940cd-06ff-4b28-8762-e462dd0a9da0",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-03T19:38:19.922697Z",
+      "lastSeenAt": "2026-04-03T19:38:19.922697Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/Library/Http/HttpClientPolicy.cs",
+      "primaryLineEnd": 1,
+      "primaryLineStart": 1,
+      "projectId": "ee02c617-174f-404d-a933-cd74b5491ce3",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0449-csharp",
+      "ruleName": "HttpClient: DangerousAcceptAnyServerCertificateValidator",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

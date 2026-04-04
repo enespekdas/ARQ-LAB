@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T02:37:16.644962600Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "2437566a-e969-443a-84bd-2184034b95a7",
+      "applicationKey": "arq-lab-q-v4-cov-210",
+      "applicationName": "quantum-precision-python-3-13-to-3-14-02",
+      "branchName": "main",
+      "commitSha": "1cef49c27d7dc68f8e5d7cd8b7a3e2c82ab543ad",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "da6dec99-e28a-4030-b716-306ec3fa05cd",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-04T02:37:12.644023Z",
+      "lastSeenAt": "2026-04-04T02:37:12.644023Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-precision-python-3-13-to-3-14-02/app/legacy/rule_007.py",
+      "primaryLineEnd": 8,
+      "primaryLineStart": 8,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

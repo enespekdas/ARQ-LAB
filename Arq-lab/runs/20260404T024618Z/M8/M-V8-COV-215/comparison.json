@@ -1,0 +1,348 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-215\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6949458483754513,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-215\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-215\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1108,
+      "vendor/generated": 298
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-shell-posix-sh-to-bash-5-x-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-215.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-shell-posix-sh-to-bash-5-x-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 8,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "4 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "curl -k https://example.internal/health",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f49e786e-b207-432c-9701-834f403d7d3c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_001.sh",
+        "queryFamily": "shell.command",
+        "rawEvidenceJson": "{\"queryRef\":\"shell.command.tls-trust-bypass\",\"callName\":\"curl\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"-k\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "-k",
+        "ruleKey": "quantum.arq-q-0766-shell",
+        "ruleName": "TLS Trust Bypass (curl -k)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "shell:command:curl:-k",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "wget --no-check-certificate https://example.internal/archive.tgz",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8bdfefbc-2acd-41cb-8ccc-04e601ae190f",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_002.sh",
+        "queryFamily": "shell.command",
+        "rawEvidenceJson": "{\"queryRef\":\"shell.command.tls-trust-bypass\",\"callName\":\"wget\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"--no-check-certificate\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "--no-check-certificate",
+        "ruleKey": "quantum.arq-q-0767-shell",
+        "ruleName": "TLS Trust Bypass (wget)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "shell:command:wget:--no-check-certificate",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "openssl s_client -tls1/-ssl3",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "7e8c52b7-f9c8-413c-8c19-deadd7e5ff47",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_003.sh",
+        "queryFamily": "shell.command",
+        "rawEvidenceJson": "{\"queryRef\":\"shell.command.weak-protocol\",\"callName\":\"openssl s_client\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"-tls1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "-tls1",
+        "ruleKey": "quantum.arq-q-0768-shell",
+        "ruleName": "TLS Weak Protocol (openssl s_client)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "shell:command:openssl s_client:-tls1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "openssl dgst -md5/-sha1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "08f4aa57-f831-4544-bab0-9b4e46d63100",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_004.sh",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0769-shell",
+        "ruleName": "Weak Hash (openssl dgst)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "openssl enc -des-cbc -in input.txt -out output.bin -k legacy-pass",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "ea5bd11f-e7e7-4bdb-838b-1364b8fe9178",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_005.sh",
+        "queryFamily": "shell.command",
+        "rawEvidenceJson": "{\"queryRef\":\"shell.command.weak-cipher\",\"callName\":\"openssl enc\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"DES\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "DES",
+        "ruleKey": "quantum.arq-q-0770-shell",
+        "ruleName": "Weak Cipher (openssl enc DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "shell:command:openssl enc:DES",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "openssl enc -aes-*-ecb",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "64ea1fe2-6bbc-4be1-babf-3b9a4116245d",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_006.sh",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0771-shell",
+        "ruleName": "Insecure Mode (openssl enc ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "openssl genrsa 1024",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d0cca7e9-8977-4ad9-9edd-ac4aff9893ac",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_007.sh",
+        "queryFamily": "shell.command",
+        "rawEvidenceJson": "{\"queryRef\":\"shell.command.rsa-weak-keysize\",\"callName\":\"openssl genrsa\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"1024\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0772-shell",
+        "ruleName": "Legacy RSA key size (openssl genrsa)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "shell:command:openssl genrsa:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "keytool -list -keystore legacy.jks -storepass changeit",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "7c92fce9-4a74-42ce-840f-d8afe29a230a",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_008.sh",
+        "queryFamily": "shell.command",
+        "rawEvidenceJson": "{\"queryRef\":\"shell.command.hardcoded-storepass\",\"callName\":\"keytool\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"-storepass\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "-storepass",
+        "ruleKey": "quantum.arq-q-0775-shell",
+        "ruleName": "KeyStore password hardcoded (keytool -storepass)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "shell:command:keytool:-storepass",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-008"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-009",
+      "pathContains": "secrets/quantum-precision-shell-posix-sh-to-bash-5-x-01/keys/rule_009.p12"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_010.sh"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_011.sh"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_012.sh"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 12,
+  "mustFindMatched": 8,
+  "mustFindMissing": [
+    {
+      "expected": "rule-009",
+      "pathContains": "secrets/quantum-precision-shell-posix-sh-to-bash-5-x-01/keys/rule_009.p12"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_010.sh"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_011.sh"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_012.sh"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 9,
+    "rawFindings": 9
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "openssl genrsa 2048",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6dfe4f1b-d884-40dd-b0f8-cbb0e5bf2db8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_011.sh",
+      "queryFamily": "shell.command",
+      "rawEvidenceJson": "{\"queryRef\":\"shell.command.rsa-weak-keysize\",\"callName\":\"openssl genrsa\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"2048\"}",
+      "resolutionScope": "FILE",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0772-shell",
+      "ruleName": "Legacy RSA key size (openssl genrsa)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "shell:command:openssl genrsa:2048",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-215",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "openssl genrsa 2048",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6dfe4f1b-d884-40dd-b0f8-cbb0e5bf2db8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-shell-posix-sh-to-bash-5-x-01/shell/rule_011.sh",
+      "queryFamily": "shell.command",
+      "rawEvidenceJson": "{\"queryRef\":\"shell.command.rsa-weak-keysize\",\"callName\":\"openssl genrsa\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"2048\"}",
+      "resolutionScope": "FILE",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0772-shell",
+      "ruleName": "Legacy RSA key size (openssl genrsa)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "shell:command:openssl genrsa:2048",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

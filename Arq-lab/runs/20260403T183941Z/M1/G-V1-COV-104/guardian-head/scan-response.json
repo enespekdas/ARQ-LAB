@@ -1,0 +1,64 @@
+{
+  "applicationId": "7acafc6e-5369-4d67-b3f3-69ac125b94d3",
+  "applicationKey": "arq-lab-g-v1-cov-104",
+  "applicationName": "guardian-coverage-partners",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "f9eb31f6306e141b843b6a06f758e9f3a22f3bd2",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-03T18:43:21.406018Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/guardian-coverage-partners.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 187,
+  "filesTotal": 187,
+  "finishedAt": "2026-04-03T18:43:28.921600Z",
+  "id": "4f97465d-02cf-415a-ac56-14df8972b0bc",
+  "modules": [
+    {
+      "findingCount": 22,
+      "module": "guardian",
+      "occurrenceCount": 22,
+      "suppressedCount": 20
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-03T18:43:23.586161Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 20,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 22,
+    "keptCount": 22,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 20,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 22,
+        "keptCount": 22,
+        "occurrenceCount": 22,
+        "suppressedCount": 20
+      }
+    },
+    "newFindingCount": 22,
+    "occurrenceCount": 22,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 20
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

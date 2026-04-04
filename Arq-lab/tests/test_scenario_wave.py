@@ -90,6 +90,8 @@ NEW_SCENARIO_IDS = {
     "G-V1-COV-108",
     "G-V1-COV-109",
     "G-V1-COV-110",
+    "G-V1-COV-111",
+    "G-V1-COV-112",
     "Q-V3-COV-109",
     "Q-V3-COV-110",
     "Q-V3-COV-111",
@@ -256,6 +258,58 @@ def test_materialize_guardian_and_quantum_coverage_bundles(tmp_path: Path) -> No
     assert quantum_meta["builderMetadata"]["generatedRuleCount"] == 25
     assert (quantum_root / "services" / "quantum-coverage-java-a" / "src" / "legacy" / "Rule001.java").exists()
     assert (quantum_root / "vendor" / "generated-client.txt").exists()
+    assert "<maven.compiler.release>" in (quantum_root / "pom.xml").read_text(encoding="utf-8")
+
+
+def test_materialize_quantum_java_late_slice_uses_statement_terminated_exact_anchors(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    quantum_root, _ = materialize_scenario(config, scenarios["Q-V3-COV-105"], git_factory)
+
+    aead_bc = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-java-c"
+        / "src"
+        / "legacy"
+        / "Rule013.java"
+    ).read_text(encoding="utf-8")
+    aead_jca = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-java-c"
+        / "src"
+        / "legacy"
+        / "Rule014.java"
+    ).read_text(encoding="utf-8")
+    keygen_bc = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-java-c"
+        / "src"
+        / "legacy"
+        / "Rule020.java"
+    ).read_text(encoding="utf-8")
+
+    assert 'Cipher.getInstance("ChaCha20-Poly1305");' in aead_bc
+    assert 'Cipher.getInstance("ChaCha20-Poly1305");' in aead_jca
+    assert 'KeyPairGenerator.getInstance("Ed25519");' in keygen_bc
+
+
+def test_materialize_quantum_native_bundle_wraps_code_like_languages(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    native_root, _ = materialize_scenario(config, scenarios["M-V8-COV-101"], git_factory)
+
+    kotlin_file = next(native_root.rglob("*.kt"))
+    scala_file = next(native_root.rglob("*.scala"))
+    assert "package legacy.coverage" in kotlin_file.read_text(encoding="utf-8")
+    assert "@JvmStatic fun execute()" in kotlin_file.read_text(encoding="utf-8")
+    assert "object " in scala_file.read_text(encoding="utf-8")
 
     extra_guardian_root, extra_guardian_meta = materialize_scenario(config, scenarios["G-V1-COV-106"], git_factory)
     assert extra_guardian_meta["builderMetadata"]["generatedRuleCount"] > 0
@@ -266,6 +320,107 @@ def test_materialize_guardian_and_quantum_coverage_bundles(tmp_path: Path) -> No
     assert extra_quantum_root.exists()
 
 
+def test_materialize_quantum_java_bundle_uses_rule_specific_curve_and_tls_calls(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    quantum_root, _ = materialize_scenario(config, scenarios["Q-V3-COV-101"], git_factory)
+
+    ec_curve = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-java-a"
+        / "src"
+        / "legacy"
+        / "Rule001.java"
+    ).read_text(encoding="utf-8")
+    tls_protocol = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-java-a"
+        / "src"
+        / "legacy"
+        / "Rule014.java"
+    ).read_text(encoding="utf-8")
+
+    assert 'KeyPairGenerator kpg = KeyPairGenerator.getInstance("EC");' in ec_curve
+    assert 'kpg.initialize(new ECGenParameterSpec("prime192v1"));' in ec_curve
+    assert 'SSLContext.getInstance("TLSv1");' in tls_protocol
+
+
+def test_materialize_quantum_python_bundle_uses_minimal_imports_and_exact_ssl_signals(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    quantum_root, _ = materialize_scenario(config, scenarios["Q-V4-COV-101"], git_factory)
+
+    ssl_rule = (
+        quantum_root
+        / "workers"
+        / "quantum-coverage-python-a"
+        / "app"
+        / "legacy"
+        / "rule_002.py"
+    ).read_text(encoding="utf-8")
+    ecb_rule = (
+        quantum_root
+        / "workers"
+        / "quantum-coverage-python-a"
+        / "app"
+        / "legacy"
+        / "rule_004.py"
+    ).read_text(encoding="utf-8")
+
+    assert "import ssl" in ssl_rule
+    assert "ctx.verify_mode = ssl.CERT_NONE" in ssl_rule
+    assert "import random" not in ecb_rule
+    assert "from Crypto.Cipher import AES" in ecb_rule
+    assert "requires-python" in (quantum_root / "pyproject.toml").read_text(encoding="utf-8")
+
+
+def test_materialize_quantum_csharp_bundle_uses_rule_specific_crypto_constructs(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    quantum_root, _ = materialize_scenario(config, scenarios["Q-V3-COV-103"], git_factory)
+
+    md5_rule = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-csharp-a"
+        / "src"
+        / "legacy"
+        / "Rule003.cs"
+    ).read_text(encoding="utf-8")
+    ecb_rule = (
+        quantum_root
+        / "services"
+        / "quantum-coverage-csharp-a"
+        / "src"
+        / "legacy"
+        / "Rule004.cs"
+    ).read_text(encoding="utf-8")
+
+    assert "new MD5CryptoServiceProvider();" in md5_rule
+    assert "var alg = new RijndaelManaged { Mode = CipherMode.ECB };" in ecb_rule
+    assert "<TargetFramework>" in (quantum_root / "CoverageContext.csproj").read_text(encoding="utf-8")
+
+
+def test_materialize_quantum_polyglot_bundle_emits_node_project_context(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    git_factory = GitFactory(workspace_root=config.lab_root)
+    scenarios = scenario_index()
+
+    quantum_root, _ = materialize_scenario(config, scenarios["Q-V4-COV-103"], git_factory)
+
+    package_json = (quantum_root / "package.json").read_text(encoding="utf-8")
+    assert "\"engines\"" in package_json
+    assert "\"node\"" in package_json
+
+
 def test_coverage_campaign_descriptors_include_manifest_and_key_material_paths() -> None:
     entries = [
         entry
@@ -274,3 +429,31 @@ def test_coverage_campaign_descriptors_include_manifest_and_key_material_paths()
     ]
     assert any(entry["path"].endswith("pom.xml") for entry in entries)
     assert any(entry["path"].endswith(".pem") for entry in entries)
+
+
+def test_coverage_campaign_descriptors_include_version_sliced_precision_wave() -> None:
+    descriptors = {descriptor["id"]: descriptor for descriptor in coverage_campaign_descriptors()}
+
+    assert "Q-V3-COV-201" in descriptors
+    assert "Q-V4-COV-201" in descriptors
+    assert "Q-V6-COV-201" in descriptors
+    assert "M-V8-COV-201" in descriptors
+    assert "version-sliced precision coverage pack" in descriptors["Q-V3-COV-201"]["domain"]
+
+
+def test_guardian_coverage_descriptors_use_deterministic_overrides_for_problematic_rules() -> None:
+    entries = {
+        entry["rule_key"]: entry
+        for descriptor in coverage_campaign_descriptors()
+        if descriptor["id"].startswith("G-V1-COV-")
+        for entry in descriptor["metadata"]["coverageBundle"]["entries"]
+    }
+
+    assert entries["guardian.slack-webhook-url"]["sample"] == "https://hooks.slack.com/services/" + ("A" * 43)
+    assert entries["guardian.sidekiq-sensitive-url"]["sample"] == "https://deadbeef:cafebabe@gems.contribsys.com"
+    assert entries["guardian.pkcs12-file"]["path"].endswith(".p12")
+    assert entries["guardian.freemius-secret-key"]["path"].endswith(".php")
+    assert entries["guardian.hashicorp-tf-password"]["path"].endswith(".tf")
+    assert entries["guardian.kubernetes-secret-yaml"]["path"].endswith(".yaml")
+    assert entries["guardian.nuget-config-password"]["path"].endswith("nuget.config")
+    assert "kind: Secret" in entries["guardian.kubernetes-secret-yaml"]["sample"]

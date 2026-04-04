@@ -1,0 +1,118 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-003\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9540705696826336,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-003\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-GO-003\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 12,
+      "fixtures": 0,
+      "live business code": 68,
+      "live config": 0,
+      "scripts": 0,
+      "synthetic filler / inflation content": 4840,
+      "tests": 0,
+      "total": 5073,
+      "vendor/generated": 142
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-runtime-go\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-GO-003.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\crypto-runtime-go\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "left := md5.New()",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "1b46ca2e-b6b8-42c8-b297-cc0806080eac",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "internal/security/legacy_hash.go",
+        "queryFamily": "go.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"md5.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"go\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0572-go",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "go:crypto:md5.New:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "md5-runtime"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "right := sha1.New()",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c386fb6e-cf3c-458d-8193-1bad17d2d245",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "internal/security/legacy_hash.go",
+        "queryFamily": "go.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"go.crypto.weak-hash\",\"callName\":\"sha1.New\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"go\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0573-go",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "go:crypto:sha1.New:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "sha1-runtime"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V4-GO-003",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

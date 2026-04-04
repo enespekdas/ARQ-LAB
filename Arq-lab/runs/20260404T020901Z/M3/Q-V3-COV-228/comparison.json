@@ -1,0 +1,282 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-228\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5309734513274337,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-228\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-228\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 211,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 660,
+      "tests": 3,
+      "total": 1243,
+      "vendor/generated": 320
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-kotlin-1-to-2-1-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-228.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-kotlin-1-to-2-1-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 4,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "14 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "MessageDigest.getInstance(\"MD5\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5590799b-45f2-4f8f-b5c5-4a0ab11a8a46",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_003.kt",
+        "queryFamily": "jvm.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"jvm.jca.get-instance-algorithm\",\"callName\":\"MessageDigest.getInstance\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"kotlin\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0633-kotlin",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "jvm:crypto:MessageDigest.getInstance:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "MessageDigest.getInstance(\"SHA-1\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "1d7627f6-be92-4ee1-9505-6572e55b1a90",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_004.kt",
+        "queryFamily": "jvm.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"jvm.jca.get-instance-algorithm\",\"callName\":\"MessageDigest.getInstance\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA-1\",\"language\":\"kotlin\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA-1",
+        "ruleKey": "quantum.arq-q-0634-kotlin",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "jvm:crypto:MessageDigest.getInstance:SHA-1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "Cipher.getInstance(\"AES/ECB/PKCS5Padding\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9f59f772-3447-40ee-98cf-436980242fe6",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_005.kt",
+        "queryFamily": "jvm.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"jvm.jca.get-instance-algorithm\",\"callName\":\"Cipher.getInstance\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"AES/ECB/PKCS5Padding\",\"language\":\"kotlin\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "AES/ECB/PKCS5Padding",
+        "ruleKey": "quantum.arq-q-0635-kotlin",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "jvm:crypto:Cipher.getInstance:AES/ECB/PKCS5Padding",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "Cipher.getInstance(\"DESede\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d21f9a40-9362-4317-bec5-7e4e0347f70e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_006.kt",
+        "queryFamily": "jvm.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"jvm.jca.get-instance-algorithm\",\"callName\":\"Cipher.getInstance\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"DESede\",\"language\":\"kotlin\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "DESede",
+        "ruleKey": "quantum.arq-q-0636-kotlin",
+        "ruleName": "Weak Cipher (DES/3DES)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "jvm:crypto:Cipher.getInstance:DESede",
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_001.kt"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_002.kt"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_007.kt"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_008.kt"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "secrets/quantum-precision-kotlin-1-to-2-1-01/keys/rule_009.jks"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_010.kt"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_011.kt"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_012.kt"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_013.kt"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_014.kt"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_015.kt"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_016.kt"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-precision-kotlin-1-to-2-1-01/module-017/pom.xml"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-precision-kotlin-1-to-2-1-01/module-018/pom.xml"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 18,
+  "mustFindMatched": 4,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_001.kt"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_002.kt"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_007.kt"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_008.kt"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "secrets/quantum-precision-kotlin-1-to-2-1-01/keys/rule_009.jks"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_010.kt"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_011.kt"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_012.kt"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_013.kt"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_014.kt"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_015.kt"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "native/quantum-precision-kotlin-1-to-2-1-01/kotlin/rule_016.kt"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-precision-kotlin-1-to-2-1-01/module-017/pom.xml"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-precision-kotlin-1-to-2-1-01/module-018/pom.xml"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 4,
+    "rawFindings": 4
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-228",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

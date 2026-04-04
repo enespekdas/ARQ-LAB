@@ -277,10 +277,10 @@ guardian-coverage-saas
 | .gitignore | build/deploy | 8 | Build or deployment definition shaping how .Gitignore is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | README.md | docs | 11 | Repository overview, local development guidance, and reviewer context. | no | no | no | no | no | no |
 | config/runtime/baseline.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Baseline. | no | no | no | yes | yes | no |
-| deploy/guardian-coverage-saas/provider_003.properties | live-config | 7 | Runtime configuration carrying environment or deployment settings for Provider 003. | yes | no | no | yes | yes | no |
-| deploy/guardian-coverage-saas/provider_008.properties | live-config | 4 | Runtime configuration carrying environment or deployment settings for Provider 008. | yes | no | no | yes | yes | no |
-| deploy/guardian-coverage-saas/provider_013.properties | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 013. | yes | no | no | yes | yes | no |
-| deploy/guardian-coverage-saas/provider_018.properties | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 018. | yes | no | no | yes | yes | no |
+| deploy/guardian-coverage-saas/provider_003.properties | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 003. | yes | no | no | yes | yes | no |
+| deploy/guardian-coverage-saas/provider_008.properties | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 008. | yes | no | no | yes | yes | no |
+| deploy/guardian-coverage-saas/provider_013.properties | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 013. | yes | no | no | yes | yes | no |
+| deploy/guardian-coverage-saas/provider_018.properties | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 018. | yes | no | no | yes | yes | no |
 | deploy/prod/service.properties | live-config | 1 | Runtime configuration carrying environment or deployment settings for Service. | no | no | no | yes | yes | no |
 | docs/architecture/section-01.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-02.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
@@ -335,18 +335,18 @@ guardian-coverage-saas
 | docs/architecture/section-51.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-52.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
-| integrations/guardian-coverage-saas/config/provider_002.yaml | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 002. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-saas/config/provider_007.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 007. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-saas/config/provider_002.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 002. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-saas/config/provider_007.yaml | live-config | 6 | Runtime configuration carrying environment or deployment settings for Provider 007. | yes | no | no | yes | yes | no |
 | integrations/guardian-coverage-saas/config/provider_012.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 012. | yes | no | no | yes | yes | no |
 | integrations/guardian-coverage-saas/config/provider_017.yaml | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 017. | yes | no | no | yes | yes | no |
 | integrations/guardian-coverage-saas/runtime/provider_001.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 001. | yes | no | no | yes | yes | no |
 | integrations/guardian-coverage-saas/runtime/provider_006.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 006. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-saas/runtime/provider_011.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 011. | yes | no | no | yes | yes | no |
-| integrations/guardian-coverage-saas/runtime/provider_016.env | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 016. | yes | no | no | yes | yes | no |
-| ops/guardian-coverage-saas/secrets/provider_005.txt | docs | 6 | Documentation or explanatory material for Provider 005. | yes | no | no | no | no | no |
+| integrations/guardian-coverage-saas/runtime/provider_011.env | live-config | 4 | Runtime configuration carrying environment or deployment settings for Provider 011. | yes | no | no | yes | yes | no |
+| integrations/guardian-coverage-saas/runtime/provider_016.env | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 016. | yes | no | no | yes | yes | no |
+| ops/guardian-coverage-saas/secrets/provider_005.txt | docs | 3 | Documentation or explanatory material for Provider 005. | yes | no | no | no | no | no |
 | ops/guardian-coverage-saas/secrets/provider_010.txt | docs | 3 | Documentation or explanatory material for Provider 010. | yes | no | no | no | no | no |
 | ops/guardian-coverage-saas/secrets/provider_015.txt | docs | 3 | Documentation or explanatory material for Provider 015. | yes | no | no | no | no | no |
-| ops/guardian-coverage-saas/secrets/provider_020.txt | docs | 5 | Documentation or explanatory material for Provider 020. | yes | no | no | no | no | no |
+| ops/guardian-coverage-saas/secrets/provider_020.txt | docs | 3 | Documentation or explanatory material for Provider 020. | yes | no | no | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-03.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -453,10 +453,10 @@ guardian-coverage-saas
 | sql/reference/reference-50.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-51.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-52.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| terraform/guardian-coverage-saas/provider_004.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 004. | yes | no | no | yes | yes | no |
+| terraform/guardian-coverage-saas/provider_004.tfvars | live-config | 7 | Runtime configuration carrying environment or deployment settings for Provider 004. | yes | no | no | yes | yes | no |
 | terraform/guardian-coverage-saas/provider_009.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 009. | yes | no | no | yes | yes | no |
 | terraform/guardian-coverage-saas/provider_014.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 014. | yes | no | no | yes | yes | no |
-| terraform/guardian-coverage-saas/provider_019.tfvars | live-config | 5 | Runtime configuration carrying environment or deployment settings for Provider 019. | yes | no | no | yes | yes | no |
+| terraform/guardian-coverage-saas/provider_019.tfvars | live-config | 3 | Runtime configuration carrying environment or deployment settings for Provider 019. | yes | no | no | yes | yes | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -464,7 +464,7 @@ guardian-coverage-saas
 | validation/expected-findings.json | generated | 262 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-file-manifest.json | generated | 2802 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1200 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1199 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/generated-tree.txt | generated | 228 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
@@ -485,115 +485,115 @@ guardian-coverage-saas
 - Path: `integrations/guardian-coverage-saas/config/provider_002.yaml`
   Why it should be detected: scenario declares `rule-002` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.adafruit-api-key`
+  Finding family / rule family expectation: `guardian.1password-service-account-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-saas/provider_003.properties`
   Why it should be detected: scenario declares `rule-003` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.adobe-client-id`
+  Finding family / rule family expectation: `guardian.adafruit-api-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-saas/provider_004.tfvars`
   Why it should be detected: scenario declares `rule-004` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.age-secret-key`
+  Finding family / rule family expectation: `guardian.adobe-client-id`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-saas/secrets/provider_005.txt`
   Why it should be detected: scenario declares `rule-005` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.airtable-api-key`
+  Finding family / rule family expectation: `guardian.adobe-client-secret`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-saas/runtime/provider_006.env`
   Why it should be detected: scenario declares `rule-006` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.airtable-personnal-access-token`
+  Finding family / rule family expectation: `guardian.age-secret-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-saas/config/provider_007.yaml`
   Why it should be detected: scenario declares `rule-007` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.algolia-api-key`
+  Finding family / rule family expectation: `guardian.airtable-api-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-saas/provider_008.properties`
   Why it should be detected: scenario declares `rule-008` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.alibaba-secret-key`
+  Finding family / rule family expectation: `guardian.airtable-personnal-access-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-saas/provider_009.tfvars`
   Why it should be detected: scenario declares `rule-009` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.anthropic-admin-api-key`
+  Finding family / rule family expectation: `guardian.algolia-api-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-saas/secrets/provider_010.txt`
   Why it should be detected: scenario declares `rule-010` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.anthropic-api-key`
+  Finding family / rule family expectation: `guardian.alibaba-access-key-id`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-saas/runtime/provider_011.env`
   Why it should be detected: scenario declares `rule-011` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.artifactory-api-key`
+  Finding family / rule family expectation: `guardian.alibaba-secret-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-saas/config/provider_012.yaml`
   Why it should be detected: scenario declares `rule-012` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.artifactory-reference-token`
+  Finding family / rule family expectation: `guardian.anthropic-admin-api-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-saas/provider_013.properties`
   Why it should be detected: scenario declares `rule-013` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.asana-client-id`
+  Finding family / rule family expectation: `guardian.anthropic-api-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-saas/provider_014.tfvars`
   Why it should be detected: scenario declares `rule-014` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.asana-client-secret`
+  Finding family / rule family expectation: `guardian.artifactory-api-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-saas/secrets/provider_015.txt`
   Why it should be detected: scenario declares `rule-015` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.aws-access-token`
+  Finding family / rule family expectation: `guardian.artifactory-reference-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-saas/runtime/provider_016.env`
   Why it should be detected: scenario declares `rule-016` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.aws-amazon-bedrock-api-key-short-lived`
+  Finding family / rule family expectation: `guardian.asana-client-id`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `integrations/guardian-coverage-saas/config/provider_017.yaml`
   Why it should be detected: scenario declares `rule-017` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.azure-ad-client-secret`
+  Finding family / rule family expectation: `guardian.asana-client-secret`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `deploy/guardian-coverage-saas/provider_018.properties`
   Why it should be detected: scenario declares `rule-018` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.beamer-api-token`
+  Finding family / rule family expectation: `guardian.atlassian-api-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `terraform/guardian-coverage-saas/provider_019.tfvars`
   Why it should be detected: scenario declares `rule-019` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.bitbucket-client-id`
+  Finding family / rule family expectation: `guardian.authress-service-client-access-key`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 - Path: `ops/guardian-coverage-saas/secrets/provider_020.txt`
   Why it should be detected: scenario declares `rule-020` as a live positive surface.
   Target module: `Guardian`
-  Finding family / rule family expectation: `guardian.bitbucket-client-secret`
+  Finding family / rule family expectation: `guardian.aws-access-token`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -778,8 +778,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.adobe-client-id
-0003: ZpMzY.xh268N6tSUdadobeDMhYECWaFBrgO_4
+0002: # rule_key: guardian.adafruit-api-key
+0003: _MR4eapBkRbDnIg3cMBMEZ.A6tEcE2uadafruita_wZOq
 ```
 
 ### `deploy/guardian-coverage-saas/provider_008.properties`
@@ -791,8 +791,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.alibaba-secret-key
-0003: 1Ug60TLg_Wh2Y5yNIJVMgSop1M_whodT8QeXBD0ks2_BMHeralibababLIytOfXacDi Gv5hH:::=
+0002: # rule_key: guardian.airtable-personnal-access-token
+0003: patalmunalmunalmu.81036a707fa18ce4a71fc887d628ff4d82dd756d69e1da91417a1d88f420aabc
 ```
 
 ### `deploy/guardian-coverage-saas/provider_013.properties`
@@ -804,8 +804,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.asana-client-id
-0003: cWZSasanajot2i'"
+0002: # rule_key: guardian.anthropic-api-key
+0003: sk-ant-api03-csgQroIdEmWd_CxAzW42SuyrgNLojXlyY1KV6xZm7HE_sw5gTdfhNyTbPqgSUlSSfCBh_p-8S8AIMUmqDzIB2vciF1z4jAA\n
 ```
 
 ### `deploy/guardian-coverage-saas/provider_018.properties`
@@ -817,8 +817,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.beamer-api-token
-0003: tOUiuxaTqVkVaIK7a9WnxSsQHjf3aR5Bs_08BL7xWBbeamer0NlFxMkFgRswqQHbV	M9		
+0002: # rule_key: guardian.atlassian-api-token
+0003: atlassian = ATATT32H5OVIQGGALFS09UN02D19AS3TE8XFRDU7KNQV8KBJGVWP55S0HWA2EOO7D3I5CA3KD0QK6GUW9510OF4629I0Q5FT2GQ0BY2V9GC5NA8Q9WJFG9NXW49V3509QTVIDER9RTX8VYLT2TB6HA4UMV57XXFQNVR8D2D3TAA79U4TYSSELOZ45XA22MDC
 ```
 
 ### `integrations/guardian-coverage-saas/config/provider_002.yaml`
@@ -830,8 +830,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.adafruit-api-key
-0003: _MR4eapBkRbDnIg3cMBMEZ.A6tEcE2uadafruita_wZOq
+0002: # rule_key: guardian.1password-service-account-token
+0003: ops_eyJNGVW6+LGkaGL0CvcgA2rluONMc7YPzAQPWnWs6xDBmCSVeCJM6mj3YkSqMLT0ks7tT3w3DwOgM5DieZGOSOI2xxzRP1Wbtyz23nd8aO8I81Qb23bypUNxzgU/nq2u31zp+Dxh6pzHjzlu+dMcXE02+/FzkJ4INu1a99zAL6WeM28+PVVKfcis6pFskYuA1KaeZRiwidSJjrWtK69H5Rdbm83wPoMHdzQNh2HxtInktpotFsIiy4/LMQP9V
 ```
 
 ### `integrations/guardian-coverage-saas/config/provider_007.yaml`
@@ -843,8 +843,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.algolia-api-key
-0003: ZjraDrkY.eglEAnab0SI4talgoliakUVxMjzd>i9m1ixkuj8hputz4u9o2wcw90o38ou3n;
+0002: # rule_key: guardian.airtable-api-key
+0003: AB00kEYWsN5.vcyT.ecKoxxM2imC8RIJR57kcb-G3qPhGcairtable6Hveds9KGUvVFO7FO
 ```
 
 ### `integrations/guardian-coverage-saas/config/provider_012.yaml`
@@ -856,8 +856,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.artifactory-reference-token
-0003: cmVmdROrvg8EkW9UI6Q9DNKBG6eKk19oKO6wAOW7JARfAqBepbzlscDzozV5hVBj
+0002: # rule_key: guardian.anthropic-admin-api-key
+0003: sk-ant-admin01-57mASkFq3m6IekDRTjNwGCIDxysR98QeoG4MvQhbia5AaU1TOUswZzw5ua4Q-3pTkmMfduf-B6AR2XWP8y5QmjmOmq2PVAA
 ```
 
 ### `integrations/guardian-coverage-saas/config/provider_017.yaml`
@@ -869,8 +869,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.azure-ad-client-secret
-0003: r1R6Q~m3v-0XpLE1rlD0skefc~lAeYuCy4-I9n
+0002: # rule_key: guardian.asana-client-secret
+0003: kk.p3DSaaMqn4yveeiEI1oxoT3OaooXxjwEasana3keF =m4xqp2l18t5yak8u9yoor2cpcyxwxzzj
 ```
 
 ### `integrations/guardian-coverage-saas/runtime/provider_001.env`
@@ -895,8 +895,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.airtable-personnal-access-token
-0003: patn]]]]]]]]]]]]]].58f8c19313978c97a5c6c9c21c6ebd1d0bdf249c26f030a3a9d55b69bf295aea
+0002: # rule_key: guardian.age-secret-key
+0003: AGE-SECRET-KEY-12CR85EPV75ND3TZZUE60K5TR4X36JHQ5S7Z5RCP8RGQ05LU8ZVLVD3Y6LR
 ```
 
 ### `integrations/guardian-coverage-saas/runtime/provider_011.env`
@@ -908,8 +908,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.artifactory-api-key
-0003: AKCpn9XDmDYnRLXCChnktFqbare9Seh2WTxvFb5Q7TKorESrt7bMjfPBYSwjj5wSSPFlof1pz
+0002: # rule_key: guardian.alibaba-secret-key
+0003: 1Ug60TLg_Wh2Y5yNIJVMgSop1M_whodT8QeXBD0ks2_BMHeralibababLIytOfXacDi Gv5hH:::=
 ```
 
 ### `integrations/guardian-coverage-saas/runtime/provider_016.env`
@@ -921,8 +921,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.aws-amazon-bedrock-api-key-short-lived
-0003: bedrock-api-key-YmVkcm9jay5hbWF6b25hd3MuY29t
+0002: # rule_key: guardian.asana-client-id
+0003: cWZSasanajot2i'"
 ```
 
 ### `ops/guardian-coverage-saas/secrets/provider_005.txt`
@@ -934,8 +934,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.airtable-api-key
-0003: AB00kEYWsN5.vcyT.ecKoxxM2imC8RIJR57kcb-G3qPhGcairtable6Hveds9KGUvVFO7FO
+0002: # rule_key: guardian.adobe-client-secret
+0003: p8e-cb1cf521f25c85986e2ce92d54a0687b
 ```
 
 ### `ops/guardian-coverage-saas/secrets/provider_010.txt`
@@ -947,8 +947,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.anthropic-api-key
-0003: sk-ant-api03-csgQroIdEmWd_CxAzW42SuyrgNLojXlyY1KV6xZm7HE_sw5gTdfhNyTbPqgSUlSSfCBh_p-8S8AIMUmqDzIB2vciF1z4jAA\n
+0002: # rule_key: guardian.alibaba-access-key-id
+0003: LTAI3PETT0GQQILMHC84EY2Q
 ```
 
 ### `ops/guardian-coverage-saas/secrets/provider_015.txt`
@@ -960,8 +960,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.aws-access-token
-0003: ACCAUSCH4Y4GTR7GAXYL
+0002: # rule_key: guardian.artifactory-reference-token
+0003: cmVmdROrvg8EkW9UI6Q9DNKBG6eKk19oKO6wAOW7JARfAqBepbzlscDzozV5hVBj
 ```
 
 ### `ops/guardian-coverage-saas/secrets/provider_020.txt`
@@ -973,8 +973,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.bitbucket-client-secret
-0003: RgNORmxaVme.YbECJTKf6UishCrJ4pVlbxRRiQbitbucketQu  :::=
+0002: # rule_key: guardian.aws-access-token
+0003: ACCAUSCH4Y4GTR7GAXYL
 ```
 
 ### `scripts/smoke.ps1`
@@ -997,8 +997,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.age-secret-key
-0003: AGE-SECRET-KEY-12CR85EPV75ND3TZZUE60K5TR4X36JHQ5S7Z5RCP8RGQ05LU8ZVLVD3Y6LR
+0002: # rule_key: guardian.adobe-client-id
+0003: ZpMzY.xh268N6tSUdadobeDMhYECWaFBrgO_4
 ```
 
 ### `terraform/guardian-coverage-saas/provider_009.tfvars`
@@ -1010,8 +1010,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.anthropic-admin-api-key
-0003: sk-ant-admin01-57mASkFq3m6IekDRTjNwGCIDxysR98QeoG4MvQhbia5AaU1TOUswZzw5ua4Q-3pTkmMfduf-B6AR2XWP8y5QmjmOmq2PVAA
+0002: # rule_key: guardian.algolia-api-key
+0003: ZjraDrkY.eglEAnab0SI4talgoliakUVxMjzd>i9m1ixkuj8hputz4u9o2wcw90o38ou3n;
 ```
 
 ### `terraform/guardian-coverage-saas/provider_014.tfvars`
@@ -1023,8 +1023,8 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.asana-client-secret
-0003: kk.p3DSaaMqn4yveeiEI1oxoT3OaooXxjwEasana3keF =m4xqp2l18t5yak8u9yoor2cpcyxwxzzj
+0002: # rule_key: guardian.artifactory-api-key
+0003: AKCpn9XDmDYnRLXCChnktFqbare9Seh2WTxvFb5Q7TKorESrt7bMjfPBYSwjj5wSSPFlof1pz
 ```
 
 ### `terraform/guardian-coverage-saas/provider_019.tfvars`
@@ -1036,22 +1036,22 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 
 ```text
 0001: # coverage campaign entry
-0002: # rule_key: guardian.bitbucket-client-id
-0003: gbP.P6gA6BCzRS1YuE1nMFidMFC7.MYpu7_eL28QRfbitbucketQ_MvbkqqJkHQRppwoEEg
+0002: # rule_key: guardian.authress-service-client-access-key
+0003: sc_alpha12.beta1.acc-tenant-prod01.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `6174`
+- Total LOC considered for authored/generated project content: `6167`
 - Synthetic filler / inflation LOC: `5720`
-- Synthetic filler ratio: `92.65%`
+- Synthetic filler ratio: `92.75%`
 
 | category | LOC |
 | --- | ---: |
 | live business code | 0 |
-| live config | 73 |
+| live config | 71 |
 | tests | 3 |
-| docs | 33 |
+| docs | 28 |
 | scripts | 2 |
 | fixtures | 0 |
 | vendor/generated | 335 |
@@ -1073,97 +1073,97 @@ Inflation disclosure:
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/config/provider_002.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.adafruit-api-key`
+  expected rule/finding family: `guardian.1password-service-account-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-saas/provider_003.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.adobe-client-id`
+  expected rule/finding family: `guardian.adafruit-api-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-saas/provider_004.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.age-secret-key`
+  expected rule/finding family: `guardian.adobe-client-id`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-saas/secrets/provider_005.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.airtable-api-key`
+  expected rule/finding family: `guardian.adobe-client-secret`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/runtime/provider_006.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.airtable-personnal-access-token`
+  expected rule/finding family: `guardian.age-secret-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/config/provider_007.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.algolia-api-key`
+  expected rule/finding family: `guardian.airtable-api-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-saas/provider_008.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.alibaba-secret-key`
+  expected rule/finding family: `guardian.airtable-personnal-access-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-saas/provider_009.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.anthropic-admin-api-key`
+  expected rule/finding family: `guardian.algolia-api-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-saas/secrets/provider_010.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.anthropic-api-key`
+  expected rule/finding family: `guardian.alibaba-access-key-id`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/runtime/provider_011.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.artifactory-api-key`
+  expected rule/finding family: `guardian.alibaba-secret-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/config/provider_012.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.artifactory-reference-token`
+  expected rule/finding family: `guardian.anthropic-admin-api-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-saas/provider_013.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.asana-client-id`
+  expected rule/finding family: `guardian.anthropic-api-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-saas/provider_014.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.asana-client-secret`
+  expected rule/finding family: `guardian.artifactory-api-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-saas/secrets/provider_015.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.aws-access-token`
+  expected rule/finding family: `guardian.artifactory-reference-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/runtime/provider_016.env`
   module: `Guardian`
-  expected rule/finding family: `guardian.aws-amazon-bedrock-api-key-short-lived`
+  expected rule/finding family: `guardian.asana-client-id`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `integrations/guardian-coverage-saas/config/provider_017.yaml`
   module: `Guardian`
-  expected rule/finding family: `guardian.azure-ad-client-secret`
+  expected rule/finding family: `guardian.asana-client-secret`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `deploy/guardian-coverage-saas/provider_018.properties`
   module: `Guardian`
-  expected rule/finding family: `guardian.beamer-api-token`
+  expected rule/finding family: `guardian.atlassian-api-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `terraform/guardian-coverage-saas/provider_019.tfvars`
   module: `Guardian`
-  expected rule/finding family: `guardian.bitbucket-client-id`
+  expected rule/finding family: `guardian.authress-service-client-access-key`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 - path: `ops/guardian-coverage-saas/secrets/provider_020.txt`
   module: `Guardian`
-  expected rule/finding family: `guardian.bitbucket-client-secret`
+  expected rule/finding family: `guardian.aws-access-token`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
 
@@ -1184,7 +1184,6 @@ Guardian-only scenario. Quantum explainability contract is not applicable here.
 - False positives are most likely on docs, tests, fixtures, and generated output that contain scary-looking examples.
 - Strict failures: any `must_find` miss, any `must_not_find` hit, any explainability miss on a matched expected path, and any ref-state mismatch.
 - Review-needed results: INFO/inventory-only spillover on protected negatives and regex-only spillover without scenario contract coverage.
-- Current run already demonstrated this risk: verdict=`FAIL_FN`.
 
 ## 16. Realism Justification
 

@@ -1,0 +1,83 @@
+quantum-precision-python-3-to-3-3-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   `-- section-06.md
+|   `-- coverage-notes.md
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       `-- runbook-06.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       `-- reference-06.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- workers
+|   `-- quantum-precision-python-3-to-3-3-01
+|       `-- app
+|           `-- legacy
+|               |-- rule_001.py
+|               |-- rule_002.py
+|               |-- rule_003.py
+|               |-- rule_004.py
+|               |-- rule_005.py
+|               |-- rule_006.py
+|               |-- rule_007.py
+|               |-- rule_008.py
+|               |-- rule_009.py
+|               |-- rule_010.py
+|               |-- rule_011.py
+|               |-- rule_012.py
+|               |-- rule_013.py
+|               |-- rule_014.py
+|               |-- rule_015.py
+|               |-- rule_016.py
+|               `-- rule_017.py
+|-- .gitignore
+|-- pyproject.toml
+`-- README.md

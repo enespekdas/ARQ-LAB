@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import textwrap
 from pathlib import Path
 from typing import Any
@@ -591,6 +592,233 @@ def _populate_config_common(repo_root: Path, scenario: ScenarioSpec) -> None:
     write_text(repo_root / "deploy" / "prod" / "service.properties", "service.mode=prod\n")
 
 
+def _coverage_context_ecosystem(language: str) -> str | None:
+    lowered = language.strip().lower()
+    if lowered in {"java", "kotlin", "groovy", "scala"}:
+        return "java"
+    if lowered == "csharp":
+        return "dotnet"
+    if lowered == "python":
+        return "python"
+    if lowered in {"javascript", "typescript"}:
+        return "node"
+    if lowered == "go":
+        return "go"
+    return None
+
+
+def _leading_java_major(value: str) -> float | None:
+    normalized = value.strip()
+    if not normalized:
+        return None
+    if normalized.startswith("1."):
+        normalized = normalized[2:]
+    match = re.match(r"(\d+)", normalized)
+    return float(match.group(1)) if match else None
+
+
+def _first_decimal_token(value: str) -> float | None:
+    match = re.search(r"\d+(?:\.\d+){0,2}", value)
+    return float(match.group(0)) if match else None
+
+
+def _dotnet_tokens(value: str) -> list[float]:
+    normalized = value.strip().lower()
+    if not normalized:
+        return []
+    for token in (".netframework", ".netcoreapp", ".netstandard", ".net", "netcoreapp", "netstandard", "net framework", "net", "core"):
+        normalized = normalized.replace(token, "")
+    matches = re.findall(r"\d+(?:\.\d+){0,2}", normalized)
+    tokens: list[float] = []
+    for match in matches:
+        parts = match.split(".")
+        token = ".".join(parts[:2]) if len(parts) >= 2 else parts[0]
+        try:
+            tokens.append(float(token))
+        except ValueError:
+            continue
+    return tokens
+
+
+def _entry_bounds(entry: dict[str, Any], ecosystem: str) -> tuple[float | None, float | None]:
+    min_raw = str(entry.get("applicable_min_version") or "").strip()
+    max_raw = str(entry.get("applicable_max_version") or "").strip()
+    if not min_raw and not max_raw:
+        return None, None
+    if ecosystem == "java":
+        return _leading_java_major(min_raw) if min_raw else None, _leading_java_major(max_raw) if max_raw else None
+    if ecosystem == "dotnet":
+        min_tokens = _dotnet_tokens(min_raw)
+        max_tokens = _dotnet_tokens(max_raw)
+        return (min(min_tokens) if min_tokens else None, max(max_tokens) if max_tokens else None)
+    if ecosystem == "node":
+        min_token = _first_decimal_token(min_raw)
+        max_token = _first_decimal_token(max_raw)
+        return (float(int(min_token)) if min_token is not None else None, float(int(max_token)) if max_token is not None else None)
+    if ecosystem in {"python", "go"}:
+        return _first_decimal_token(min_raw) if min_raw else None, _first_decimal_token(max_raw) if max_raw else None
+    return None, None
+
+
+def _entry_matches_candidate(entry: dict[str, Any], ecosystem: str, candidate: float) -> bool:
+    min_version, max_version = _entry_bounds(entry, ecosystem)
+    if min_version is not None and candidate < min_version:
+        return False
+    if max_version is not None and candidate > max_version:
+        return False
+    return True
+
+
+def _context_candidates(ecosystem: str) -> list[float]:
+    return {
+        "java": [8.0, 11.0, 17.0, 21.0, 25.0],
+        "dotnet": [3.5, 4.6, 4.8, 5.0, 7.0, 8.0, 10.0],
+        "python": [2.7, 3.3, 3.6, 3.9, 3.11, 3.13],
+        "node": [5.0, 20.0],
+        "go": [1.22],
+    }.get(ecosystem, [])
+
+
+def _default_context_version(ecosystem: str) -> float:
+    return {
+        "java": 17.0,
+        "dotnet": 8.0,
+        "python": 3.11,
+        "node": 5.0,
+        "go": 1.22,
+    }[ecosystem]
+
+
+def _choose_context_version(ecosystem: str, entries: list[dict[str, Any]]) -> float:
+    best_version = _default_context_version(ecosystem)
+    best_score = -1
+    for candidate in _context_candidates(ecosystem):
+        score = sum(1 for entry in entries if _entry_matches_candidate(entry, ecosystem, candidate))
+        if score > best_score:
+            best_score = score
+            best_version = candidate
+    return best_version
+
+
+def _python_requires(version: float) -> str:
+    if version < 3:
+        return ">=2.7,<3"
+    if version >= 3.13:
+        return ">=3.13,<3.14"
+    if version >= 3.11:
+        return ">=3.11,<3.12"
+    if version >= 3.9:
+        return ">=3.9,<3.10"
+    if version >= 3.6:
+        return ">=3.6,<3.7"
+    if version >= 3.3:
+        return ">=3.3,<3.4"
+    return ">=3.1,<3.2"
+
+
+def _node_engine(version: float) -> str:
+    return "5.7" if version < 10 else ">=20"
+
+
+def _dotnet_target_framework(version: float) -> str:
+    if version >= 10:
+        return "net10.0"
+    if version >= 8:
+        return "net8.0"
+    if version >= 7:
+        return "net7.0"
+    if version >= 5:
+        return "net5.0"
+    if version >= 4.8:
+        return "net4.8"
+    if version >= 4.6:
+        return "net4.6"
+    return "net3.5"
+
+
+def _write_coverage_project_context_files(repo_root: Path, entries: list[dict[str, Any]]) -> None:
+    by_ecosystem: dict[str, list[dict[str, Any]]] = {}
+    for entry in entries:
+        ecosystem = _coverage_context_ecosystem(str(entry.get("language") or ""))
+        if ecosystem:
+            by_ecosystem.setdefault(ecosystem, []).append(entry)
+
+    for ecosystem, scoped_entries in by_ecosystem.items():
+        version = _choose_context_version(ecosystem, scoped_entries)
+        if ecosystem == "java":
+            java_release = str(int(version))
+            write_text(
+                repo_root / "pom.xml",
+                textwrap.dedent(
+                    f"""\
+                    <project>
+                      <modelVersion>4.0.0</modelVersion>
+                      <groupId>io.arq.lab</groupId>
+                      <artifactId>coverage-context</artifactId>
+                      <version>1.0.0</version>
+                      <properties>
+                        <maven.compiler.source>{java_release}</maven.compiler.source>
+                        <maven.compiler.target>{java_release}</maven.compiler.target>
+                        <maven.compiler.release>{java_release}</maven.compiler.release>
+                        <java.version>{java_release}</java.version>
+                      </properties>
+                    </project>
+                    """
+                ),
+            )
+        elif ecosystem == "dotnet":
+            write_text(
+                repo_root / "CoverageContext.csproj",
+                textwrap.dedent(
+                    f"""\
+                    <Project Sdk="Microsoft.NET.Sdk">
+                      <PropertyGroup>
+                        <TargetFramework>{_dotnet_target_framework(version)}</TargetFramework>
+                      </PropertyGroup>
+                    </Project>
+                    """
+                ),
+            )
+        elif ecosystem == "python":
+            write_text(
+                repo_root / "pyproject.toml",
+                textwrap.dedent(
+                    f"""\
+                    [project]
+                    name = "coverage-context"
+                    version = "0.1.0"
+                    requires-python = "{_python_requires(version)}"
+                    """
+                ),
+            )
+        elif ecosystem == "node":
+            write_text(
+                repo_root / "package.json",
+                textwrap.dedent(
+                    f"""\
+                    {{
+                      "name": "coverage-context",
+                      "version": "1.0.0",
+                      "engines": {{
+                        "node": "{_node_engine(version)}"
+                      }}
+                    }}
+                    """
+                ),
+            )
+        elif ecosystem == "go":
+            write_text(
+                repo_root / "go.mod",
+                textwrap.dedent(
+                    f"""\
+                    module arq.coverage.context
+
+                    go {version:.2f}
+                    """
+                ),
+            )
+
+
 def _build_coverage_bundle(repo_root: Path, scenario: ScenarioSpec, git_factory: GitFactory) -> dict[str, Any]:
     _populate_config_common(repo_root, scenario)
     write_text(
@@ -618,6 +846,7 @@ def _build_coverage_bundle(repo_root: Path, scenario: ScenarioSpec, git_factory:
         if not relative_path:
             continue
         write_text(repo_root / relative_path, content)
+    _write_coverage_project_context_files(repo_root, entries)
     _inflate_repository(repo_root, scenario)
     git_factory.init(repo_root)
     _commit_current_state(git_factory, repo_root, f"bootstrap {scenario.id}")

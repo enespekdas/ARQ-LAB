@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-mobile.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-mobile",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-mobile",
+    "name": "guardian-coverage-mobile",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "c60d087ae3484ac1e7ede8f850df984759067bdc"
+      },
+      "head": "c60d087ae3484ac1e7ede8f850df984759067bdc",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T20:53:37+03:00",
+          "message": "bootstrap G-V1-COV-109",
+          "sha": "c60d087ae3484ac1e7ede8f850df984759067bdc"
+        }
+      ]
+    },
+    "lineCount": 6925,
+    "repoName": "guardian-coverage-mobile",
+    "scenarioId": "G-V1-COV-109"
+  },
+  "scenario": {
+    "domain": "Mobile and edge credential corpus covering notification, device, maps, and auth providers.",
+    "id": "G-V1-COV-109",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-mobile",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

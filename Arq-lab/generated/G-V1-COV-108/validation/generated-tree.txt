@@ -7,8 +7,9 @@ guardian-coverage-data
 |       `-- baseline.yaml
 |-- deploy
 |   |-- guardian-coverage-data
+|   |   |-- provider_008
+|   |   |   `-- nuget.config
 |   |   |-- provider_003.properties
-|   |   |-- provider_008.properties
 |   |   |-- provider_013.properties
 |   |   `-- provider_018.properties
 |   `-- prod
@@ -85,7 +86,6 @@ guardian-coverage-data
 |   |   `-- secrets
 |   |       |-- provider_005.txt
 |   |       |-- provider_010.txt
-|   |       |-- provider_015.txt
 |   |       `-- provider_020.txt
 |   `-- playbooks
 |       |-- runbook-01.md
@@ -143,6 +143,10 @@ guardian-coverage-data
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
+|-- secrets
+|   `-- guardian-coverage-data
+|       `-- keystore
+|           `-- provider_015.p12
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql

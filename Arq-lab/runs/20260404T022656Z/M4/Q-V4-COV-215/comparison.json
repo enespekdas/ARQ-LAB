@@ -1,0 +1,335 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-215\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6327033689400164,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-215\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-215\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 113,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1217,
+      "vendor/generated": 287
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-typescript-1-to-5-7-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-COV-215.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-typescript-1-to-5-7-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 9,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "5 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "secureProtocol: 'TLSv1_method'",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "296fa066-48b2-4186-900d-d03a265234ac",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_001.ts",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0612-typescript",
+        "ruleName": "TLS Weak Protocol (legacy)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "crypto.createCipheriv(\"des-ede3-cbc\", Buffer.alloc(24), Buffer.alloc(8));",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "6f53bf11-63fb-4605-9609-e914b205ebc8",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_002.ts",
+        "queryFamily": "typescript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.weak-cipher\",\"callName\":\"crypto.createCipheriv\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"3DES\",\"language\":\"typescript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "3DES",
+        "ruleKey": "quantum.arq-q-0615-typescript",
+        "ruleName": "Weak Cipher (DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.createCipheriv:3DES",
+        "severity": "HIGH"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "createCipheriv\n  ecb\n  'aes-128-ecb'\n  'aes-256-ecb'",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8af4a71f-f5f7-425f-b4c7-2b10473109b4",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_003.ts",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0616-typescript",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "jsonwebtoken.verify(token, \"\", { algorithms: [\"none\"] });",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "87af0daf-981c-4deb-b64d-9e4537c10990",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_004.ts",
+        "queryFamily": "typescript.node.jwt",
+        "rawEvidenceJson": "{\"queryRef\":\"node.jwt.validation-disabled\",\"callName\":\"jsonwebtoken.verify\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"algorithms\",\"resolvedValue\":\"algorithms=none\",\"language\":\"typescript\",\"valueSource\":\"string_array\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "algorithms=none",
+        "ruleKey": "quantum.arq-q-0621-typescript",
+        "ruleName": "JWT alg=none / verification disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:jwt:jsonwebtoken.verify:algorithms=none",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "crypto.generateKeyPairSync(\"rsa\", { modulusLength: 1024 });",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f294b5d4-8c1e-40fb-87bd-1ef18f3532eb",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_005.ts",
+        "queryFamily": "typescript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.rsa-weak-keysize\",\"callName\":\"crypto.generateKeyPairSync\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"modulusLength\",\"resolvedValue\":\"1024\",\"language\":\"typescript\",\"valueSource\":\"number_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0624-typescript",
+        "ruleName": "Legacy RSA Key Size (Node crypto modulusLength=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.generateKeyPairSync:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "crypto.pbkdf2Sync(\"password\", \"salt\", 1000, 32, \"sha1\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "291d2178-f19f-4699-b186-17b653c9402f",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_006.ts",
+        "queryFamily": "typescript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.pbkdf2-low-iterations\",\"callName\":\"crypto.pbkdf2Sync\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1000\",\"language\":\"typescript\",\"valueSource\":\"number_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1000",
+        "ruleKey": "quantum.arq-q-0625-typescript",
+        "ruleName": "Weak KDF (Node pbkdf2 low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.pbkdf2Sync:1000",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "2bb0dbb9-a12c-48b0-9712-b8509ecf2aec",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_007.ts",
+        "queryFamily": "typescript.node.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"node.tls.env-verification-bypass\",\"callName\":\"process.env.NODE_TLS_REJECT_UNAUTHORIZED\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"NODE_TLS_REJECT_UNAUTHORIZED\",\"resolvedValue\":\"NODE_TLS_REJECT_UNAUTHORIZED=0\",\"language\":\"typescript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "ruleKey": "quantum.arq-q-0626-typescript",
+        "ruleName": "TLS Trust Bypass (NODE_TLS_REJECT_UNAUTHORIZED=0)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:tls:process.env.NODE_TLS_REJECT_UNAUTHORIZED:NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "crypto.createSign(\"RSA-SHA1\").update(\"legacy\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "e2801ac1-4393-4826-8834-e05f9a564c93",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_008.ts",
+        "queryFamily": "typescript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.weak-signature-algorithm\",\"callName\":\"crypto.createSign\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"RSA-SHA1\",\"language\":\"typescript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "RSA-SHA1",
+        "ruleKey": "quantum.arq-q-0627-typescript",
+        "ruleName": "Weak Signature Algorithm (Node createSign RSA-SHA1/MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.createSign:RSA-SHA1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "Math.random()",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "64a96fc2-cc0f-450d-b47d-e83cfc02ccba",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_011.ts",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0619-typescript",
+        "ruleName": "Non-crypto RNG signal",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-011"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-009",
+      "pathContains": "secrets/quantum-precision-typescript-1-to-5-7-01/keys/rule_009.pem"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_010.ts"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/module-012/package.json"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/module-013/package.json"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_014.ts"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 14,
+  "mustFindMatched": 9,
+  "mustFindMissing": [
+    {
+      "expected": "rule-009",
+      "pathContains": "secrets/quantum-precision-typescript-1-to-5-7-01/keys/rule_009.pem"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_010.ts"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/module-012/package.json"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/module-013/package.json"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "apps/quantum-precision-typescript-1-to-5-7-01/src/legacy/rule_014.ts"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 9,
+    "rawFindings": 9
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V4-COV-215",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

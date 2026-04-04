@@ -1,0 +1,77 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-201\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.8576998050682261,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-201\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-201\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 880,
+      "tests": 3,
+      "total": 1026,
+      "vendor/generated": 106
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-abap-ecc-5-0-to-s-4hana-2024-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-201.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-abap-ecc-5-0-to-s-4hana-2024-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "1 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "secrets/quantum-precision-abap-ecc-5-0-to-s-4hana-2024-01/keys/rule_001.crt"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 1,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "secrets/quantum-precision-abap-ecc-5-0-to-s-4hana-2024-01/keys/rule_001.crt"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 0,
+    "rawFindings": 0
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-201",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

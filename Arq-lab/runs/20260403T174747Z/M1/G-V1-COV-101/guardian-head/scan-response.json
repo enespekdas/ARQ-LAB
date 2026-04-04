@@ -1,0 +1,64 @@
+{
+  "applicationId": "aa1b3cf4-9abb-4fbb-9833-b56f238d83a6",
+  "applicationKey": "arq-lab-g-v1-cov-101",
+  "applicationName": "guardian-coverage-saas",
+  "branchScope": "SINGLE_BRANCH",
+  "commitSha": "8713fd67c3795f63dfa2a904a9df5f49b8f29edb",
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-03T17:50:08.849013Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/guardian-coverage-saas.git",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 187,
+  "filesTotal": 187,
+  "finishedAt": "2026-04-03T17:50:14.716506Z",
+  "id": "235956a1-9e3e-4e65-8ba7-3af0d1ddc76c",
+  "modules": [
+    {
+      "findingCount": 15,
+      "module": "guardian",
+      "occurrenceCount": 15,
+      "suppressedCount": 22
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": "main",
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": "main",
+  "startedAt": "2026-04-03T17:50:09.780132Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 20,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 2,
+    "findingCount": 15,
+    "keptCount": 15,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 20,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 2,
+        "findingCount": 15,
+        "keptCount": 15,
+        "occurrenceCount": 15,
+        "suppressedCount": 22
+      }
+    },
+    "newFindingCount": 15,
+    "occurrenceCount": 15,
+    "refCount": 1,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main"
+    ],
+    "suppressedCount": 22
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

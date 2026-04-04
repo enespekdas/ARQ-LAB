@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T02:11:50.662611900Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "70552b6c-437c-4f81-b3ba-49f9e9b610dd",
+      "applicationKey": "arq-lab-q-v3-java-005",
+      "applicationName": "crypto-usage-java",
+      "branchName": "main",
+      "commitSha": "5df8d884f7973f264e086b835fc815f3ec9555f9",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "39564fbe-3fbc-4c9b-9393-78eaccb06433",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-04T02:11:46.841049Z",
+      "lastSeenAt": "2026-04-04T02:11:46.841049Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/cryptousagejava/security/LegacyDigestService.java",
+      "primaryLineEnd": 3,
+      "primaryLineStart": 3,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0072-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

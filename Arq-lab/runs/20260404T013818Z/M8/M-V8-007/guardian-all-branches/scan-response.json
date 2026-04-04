@@ -1,0 +1,66 @@
+{
+  "applicationId": "32ee9899-809c-47cd-a5da-71f2ae6c7006",
+  "applicationKey": "arq-lab-m-v8-007",
+  "applicationName": "workspace-history-mixed-repo",
+  "branchScope": "ALL_BRANCHES",
+  "commitSha": null,
+  "connectorId": null,
+  "connectorName": null,
+  "createdAt": "2026-04-04T01:49:58.953979Z",
+  "currentFile": null,
+  "currentPhase": "COMPLETED",
+  "currentRepository": "https://github.com/ARQ-Sec/workspace-history-mixed-repo.git @release/2026.05",
+  "failureCode": null,
+  "failureMessage": null,
+  "filesScanned": 353,
+  "filesTotal": 353,
+  "finishedAt": "2026-04-04T01:50:21.399624Z",
+  "id": "b9275ee4-b14e-4327-b684-8eb0ce2f8ac2",
+  "modules": [
+    {
+      "findingCount": 4,
+      "module": "guardian",
+      "occurrenceCount": 12,
+      "suppressedCount": 6
+    }
+  ],
+  "parentScanRunId": null,
+  "progressPercent": 100,
+  "requestedRefName": null,
+  "scanMode": "HEAD_SNAPSHOT",
+  "scanType": "APPLICATION",
+  "scannedRefName": null,
+  "startedAt": "2026-04-04T01:50:03.961949Z",
+  "status": "SUCCEEDED",
+  "summary": {
+    "allowlistSuppressedCount": 6,
+    "contextSuppressedCount": 0,
+    "entropySuppressedCount": 0,
+    "findingCount": 4,
+    "keptCount": 12,
+    "moduleCount": 1,
+    "moduleSummaries": {
+      "guardian": {
+        "allowlistSuppressedCount": 6,
+        "contextSuppressedCount": 0,
+        "entropySuppressedCount": 0,
+        "findingCount": 4,
+        "keptCount": 12,
+        "occurrenceCount": 12,
+        "suppressedCount": 6
+      }
+    },
+    "newFindingCount": 0,
+    "occurrenceCount": 12,
+    "refCount": 3,
+    "reopenedCount": 0,
+    "resolvedCount": 0,
+    "scannedRefs": [
+      "main",
+      "feature/shared-lib-cleanup",
+      "release/2026.05"
+    ],
+    "suppressedCount": 6
+  },
+  "workerNode": "arq-v2-worker@ENES"
+}

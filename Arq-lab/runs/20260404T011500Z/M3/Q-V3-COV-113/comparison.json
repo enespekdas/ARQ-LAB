@@ -1,0 +1,229 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-113\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5886287625418061,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-113\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-113\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 229,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 880,
+      "tests": 3,
+      "total": 1495,
+      "vendor/generated": 341
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-csharp-d-02\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-113.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-csharp-d-02\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "20 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule001.cs"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule003.cs"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule004.cs"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule005.cs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule006.cs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule007.cs"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule008.cs"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule009.cs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule010.cs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule011.cs"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule012.cs"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule013.cs"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule014.cs"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule015.cs"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule016.cs"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule017.cs"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule018.cs"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule019.cs"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule020.cs"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 20,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule001.cs"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule003.cs"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule004.cs"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule005.cs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule006.cs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule007.cs"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule008.cs"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule009.cs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule010.cs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule011.cs"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule012.cs"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule013.cs"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule014.cs"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule015.cs"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule016.cs"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule017.cs"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule018.cs"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule019.cs"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-csharp-d-02/src/legacy/Rule020.cs"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 0,
+    "rawFindings": 0
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-113",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

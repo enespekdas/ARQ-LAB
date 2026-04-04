@@ -1,0 +1,90 @@
+quantum-precision-scala-2-to-3-6-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   `-- section-06.md
+|   `-- coverage-notes.md
+|-- native
+|   `-- quantum-precision-scala-2-to-3-6-01
+|       `-- scala
+|           |-- rule_001.scala
+|           |-- rule_002.scala
+|           |-- rule_003.scala
+|           |-- rule_004.scala
+|           |-- rule_005.scala
+|           |-- rule_006.scala
+|           |-- rule_007.scala
+|           |-- rule_008.scala
+|           |-- rule_010.scala
+|           |-- rule_011.scala
+|           |-- rule_012.scala
+|           |-- rule_013.scala
+|           |-- rule_014.scala
+|           |-- rule_015.scala
+|           `-- rule_016.scala
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       `-- runbook-06.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-precision-scala-2-to-3-6-01
+|       `-- keys
+|           `-- rule_009.jks
+|-- services
+|   `-- quantum-precision-scala-2-to-3-6-01
+|       |-- module-017
+|       |   `-- pom.xml
+|       `-- module-018
+|           `-- pom.xml
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       `-- reference-06.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- .gitignore
+|-- pom.xml
+`-- README.md

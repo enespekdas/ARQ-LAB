@@ -77,10 +77,10 @@
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
-    "path": "deploy/guardian-coverage-data/provider_008.properties",
+    "path": "deploy/guardian-coverage-data/provider_008/nuget.config",
     "positiveSurface": true,
     "protectedNegative": false,
-    "purpose": "Runtime configuration carrying environment or deployment settings for Provider 008.",
+    "purpose": "Runtime configuration carrying environment or deployment settings for Nuget.",
     "syntheticFiller": false
   },
   {
@@ -100,8 +100,8 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
-    "nearRealNegative": true,
+    "loc": 5,
+    "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
@@ -870,7 +870,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 5,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -912,7 +912,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 5,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -926,7 +926,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 6,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -954,7 +954,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -968,7 +968,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 7,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -982,7 +982,7 @@
   {
     "classification": "docs",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -1005,20 +1005,6 @@
     "positiveSurface": true,
     "protectedNegative": false,
     "purpose": "Documentation or explanatory material for Provider 010.",
-    "syntheticFiller": false
-  },
-  {
-    "classification": "docs",
-    "findingExpectation": "must_find",
-    "loc": 3,
-    "nearRealNegative": false,
-    "participatesInBuild": false,
-    "participatesInSmoke": false,
-    "participatesInTest": false,
-    "path": "ops/guardian-coverage-data/secrets/provider_015.txt",
-    "positiveSurface": true,
-    "protectedNegative": false,
-    "purpose": "Documentation or explanatory material for Provider 015.",
     "syntheticFiller": false
   },
   {
@@ -1793,6 +1779,20 @@
   },
   {
     "classification": "generated",
+    "findingExpectation": "must_find",
+    "loc": 3,
+    "nearRealNegative": false,
+    "participatesInBuild": false,
+    "participatesInSmoke": false,
+    "participatesInTest": false,
+    "path": "secrets/guardian-coverage-data/keystore/provider_015.p12",
+    "positiveSurface": true,
+    "protectedNegative": true,
+    "purpose": "Generated or derived project artifact related to Provider 015.",
+    "syntheticFiller": false
+  },
+  {
+    "classification": "generated",
     "findingExpectation": "none",
     "loc": 26,
     "nearRealNegative": false,
@@ -2522,7 +2522,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 5,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -2536,7 +2536,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -2676,7 +2676,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 1208,
+    "loc": 1212,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2690,7 +2690,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 228,
+    "loc": 232,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,

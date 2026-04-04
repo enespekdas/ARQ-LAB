@@ -1,0 +1,391 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-216\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6536502546689303,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-216\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-216\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1178,
+      "vendor/generated": 368
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-swift-1-to-6-1-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-216.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-swift-1-to-6-1-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 7,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "7 expected finding(s) were not detected at all; 2 unexpected/noisy finding(s) remained after matching (same-surface-extra=2)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "import Foundation",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5c5f9c57-dd37-456c-aa5a-ff290cea91d0",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_001.swift",
+        "queryFamily": "swift.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"swift.crypto.weak-hash\",\"callName\":\"Insecure.MD5\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"swift\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0707-swift",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "swift:crypto:Insecure.MD5:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "import Foundation",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "afeaed72-37b7-4df9-9089-69a2bf54684e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_002.swift",
+        "queryFamily": "swift.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"swift.crypto.weak-hash\",\"callName\":\"Insecure.SHA1\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"swift\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0708-swift",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "swift:crypto:Insecure.SHA1:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "func executeCoverageSwift() {",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "caa7b5d8-1c07-4c4f-a6b1-70501896c96b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_003.swift",
+        "queryFamily": "swift.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"swift.crypto.aes-ecb\",\"callName\":\"kCCOptionECBMode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"ECB\",\"language\":\"swift\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "ECB",
+        "ruleKey": "quantum.arq-q-0709-swift",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "swift:crypto:kCCOptionECBMode:ECB",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "kCCAlgorithmDES / 3DES",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "68ad8b86-5a55-4246-8e82-acf17b52edce",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_004.swift",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0710-swift",
+        "ruleName": "Weak Cipher (DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SecKeyCreateRandomKey / kSecAttrKeySizeInBits",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8a1dd69e-e228-41c0-a819-79e5b38c1a33",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_007.swift",
+        "queryFamily": "swift.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"swift.crypto.rsa-weak-keysize\",\"callName\":\"SecKeyCreateRandomKey\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"swift\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0718-swift",
+        "ruleName": "Legacy RSA Key Size (SecKey keygen kSecAttrKeySizeInBits=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "swift:crypto:SecKeyCreateRandomKey:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SSLSetProtocolVersionMin/Max + kSSLProtocol3/kTLSProtocol1/kTLSProtocol11",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5003ac51-5f02-415b-afee-a73e32980cb6",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_009.swift",
+        "queryFamily": "swift.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"swift.tls.weak-protocol\",\"callName\":\"swift-weak-protocol\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"kTLSProtocol1\",\"language\":\"swift\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "kTLSProtocol1",
+        "ruleKey": "quantum.arq-q-0722-swift",
+        "ruleName": "TLS Weak Protocol (SecureTransport/CFNetwork) - Swift",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "swift:tls:swift-weak-protocol:kTLSProtocol1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "arc4random / random()",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8b36fd6f-8b6d-4d7d-a1df-5c84e3f48198",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_012.swift",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0713-swift",
+        "ruleName": "Non-crypto RNG signal",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-012"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-005",
+      "pathContains": "secrets/quantum-precision-swift-1-to-6-1-01/keys/rule_005.p12"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_006.swift"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_008.swift"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "secrets/quantum-precision-swift-1-to-6-1-01/keys/rule_010.pem"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_011.swift"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_013.swift"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_014.swift"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 14,
+  "mustFindMatched": 7,
+  "mustFindMissing": [
+    {
+      "expected": "rule-005",
+      "pathContains": "secrets/quantum-precision-swift-1-to-6-1-01/keys/rule_005.p12"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_006.swift"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_008.swift"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "secrets/quantum-precision-swift-1-to-6-1-01/keys/rule_010.pem"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_011.swift"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_013.swift"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_014.swift"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 2,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 2,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 9,
+    "rawFindings": 9
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "import Foundation",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "c345dc23-1234-405e-b7cf-b162bfe10cd7",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_003.swift",
+      "queryFamily": "swift.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"swift.crypto.aes-ecb\",\"callName\":\"kCCOptionECBMode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"ECB\",\"language\":\"swift\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "ECB",
+      "ruleKey": "quantum.arq-q-0709-swift",
+      "ruleName": "Insecure Mode (ECB)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "swift:crypto:kCCOptionECBMode:ECB",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSetProtocolVersionMin/Max + kSSLProtocol3/kTLSProtocol1/kTLSProtocol11",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "96d78e0a-290b-4013-9b18-d185e035d84d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_009.swift",
+      "queryFamily": "swift.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"swift.tls.weak-protocol\",\"callName\":\"swift-weak-protocol\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"kTLSProtocol11\",\"language\":\"swift\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "kTLSProtocol11",
+      "ruleKey": "quantum.arq-q-0722-swift",
+      "ruleName": "TLS Weak Protocol (SecureTransport/CFNetwork) - Swift",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "swift:tls:swift-weak-protocol:kTLSProtocol11",
+      "severity": "HIGH"
+    }
+  ],
+  "scenarioId": "M-V8-COV-216",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "import Foundation",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "c345dc23-1234-405e-b7cf-b162bfe10cd7",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_003.swift",
+      "queryFamily": "swift.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"swift.crypto.aes-ecb\",\"callName\":\"kCCOptionECBMode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"ECB\",\"language\":\"swift\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "ECB",
+      "ruleKey": "quantum.arq-q-0709-swift",
+      "ruleName": "Insecure Mode (ECB)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "swift:crypto:kCCOptionECBMode:ECB",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSetProtocolVersionMin/Max + kSSLProtocol3/kTLSProtocol1/kTLSProtocol11",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "96d78e0a-290b-4013-9b18-d185e035d84d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-swift-1-to-6-1-01/swift/rule_009.swift",
+      "queryFamily": "swift.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"swift.tls.weak-protocol\",\"callName\":\"swift-weak-protocol\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"kTLSProtocol11\",\"language\":\"swift\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "kTLSProtocol11",
+      "ruleKey": "quantum.arq-q-0722-swift",
+      "ruleName": "TLS Weak Protocol (SecureTransport/CFNetwork) - Swift",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "swift:tls:swift-weak-protocol:kTLSProtocol11",
+      "severity": "HIGH"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T23:30:54.580303900Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "07311172-d652-40ea-8d72-cc4ebcee40ef",
+      "applicationKey": "arq-lab-m-v8-cov-107",
+      "applicationName": "quantum-coverage-native-g-01",
+      "branchName": "main",
+      "commitSha": "38c0f191e47c90a4bd7e22ab83c85203a7029c70",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "4c660204-4ec4-4c16-81d1-1f70f6e0ee97",
+      "findingKind": "INVENTORY",
+      "firstSeenAt": "2026-04-03T23:30:54.385712Z",
+      "lastSeenAt": "2026-04-03T23:30:54.385712Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-g-01/swift/rule_019.swift",
+      "primaryLineEnd": 7,
+      "primaryLineStart": 7,
+      "projectId": "5f24321d-8086-4f87-86aa-d6f996c5f113",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0713-swift",
+      "ruleName": "Non-crypto RNG signal",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

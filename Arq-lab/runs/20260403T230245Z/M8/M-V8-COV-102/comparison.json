@@ -1,0 +1,712 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-102\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.8940625430500069,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-102\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-102\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 42,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 6490,
+      "tests": 3,
+      "total": 7259,
+      "vendor/generated": 687
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-native-b\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-102.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-native-b\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 17,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "13 expected finding(s) were not detected at all; 2 unexpected/noisy finding(s) remained after matching (same-file-different-signal=2, regex-only=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "http.verify_mode = OpenSSL::SSL::VERIFY_NONE",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9e415893-706f-4404-be23-00d68df30662",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/ruby/rule_005.rb",
+        "queryFamily": "ruby.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"ruby.tls.trust-bypass\",\"callName\":\"verify_mode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"VERIFY_NONE\",\"language\":\"ruby\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "VERIFY_NONE",
+        "ruleKey": "quantum.arq-q-0653-ruby",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "ruby:tls:verify_mode:VERIFY_NONE",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "OpenSSL::Digest::MD5",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "03e3deca-97db-4a71-93bb-6b63c4dba4f3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/ruby/rule_007.rb",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0655-ruby",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "OpenSSL::Digest::SHA1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "0eb42a5d-0147-4c72-9b89-54ca8ff26367",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/ruby/rule_008.rb",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0656-ruby",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "OpenSSL::Cipher.new('AES-128-ECB')",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "dd38eddd-effb-4fe2-9069-4d7f8b4e5b05",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/ruby/rule_010.rb",
+        "queryFamily": "ruby.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"ruby.crypto.aes-ecb\",\"callName\":\"OpenSSL::Cipher.new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"AES-128-ECB\",\"language\":\"ruby\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "AES-128-ECB",
+        "ruleKey": "quantum.arq-q-0658-ruby",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "ruby:crypto:OpenSSL::Cipher.new:AES-128-ECB",
+        "severity": "HIGH"
+      },
+      "expected": "rule-010"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "OpenSSL::PKey::RSA.new(1024)",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "126b4b0c-4320-433a-93eb-efbeba9aa3e3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/ruby/rule_011.rb",
+        "queryFamily": "ruby.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"ruby.crypto.rsa-weak-keysize\",\"callName\":\"OpenSSL::PKey::RSA.new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"ruby\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0659-ruby",
+        "ruleName": "Legacy RSA Key Size (<=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "ruby:crypto:OpenSSL::PKey::RSA.new:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-011"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "OpenSSL::PKCS5.pbkdf2_hmac('password', 'salt', 1000, 32, 'sha1')",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "732716fd-ebd2-4df0-bd0e-517abb36be3e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/ruby/rule_014.rb",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0665-ruby",
+        "ruleName": "Weak KDF (Ruby OpenSSL PBKDF2 low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-014"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "$ctx = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]]);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "af9df6ae-38c8-4db4-a767-78bd00733ebc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_015.php",
+        "queryFamily": "php.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"php.tls.trust-bypass\",\"callName\":\"stream_context_create\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"verify_peer=false\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "verify_peer=false",
+        "ruleKey": "quantum.arq-q-0671-php",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:tls:stream_context_create:verify_peer=false",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-015"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "md5('legacy');",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c910f5dd-d314-44d5-8805-799ad495446c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_016.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-hash\",\"callName\":\"md5\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0672-php",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:md5:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-016"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "sha1('legacy');",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "e6b2a570-4440-4493-a30f-705a2defca0d",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_017.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-hash\",\"callName\":\"sha1\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0673-php",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:sha1:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-017"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "openssl_encrypt($data, 'des-ede3-cbc', $key, 0, $iv);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "069a0a83-dd1a-4eac-835d-7b05ce438b50",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_019.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-cipher\",\"callName\":\"openssl_encrypt\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"des-ede3-cbc\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "des-ede3-cbc",
+        "ruleKey": "quantum.arq-q-0675-php",
+        "ruleName": "Weak Cipher (DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:openssl_encrypt:des-ede3-cbc",
+        "severity": "HIGH"
+      },
+      "expected": "rule-019"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "openssl_pkey_new(['private_key_bits' => 1024]);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "10f70d63-af8e-46a2-ba7c-3e6a8aa8d779",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_020.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.rsa-weak-keysize\",\"callName\":\"openssl_pkey_new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0676-php",
+        "ruleName": "Legacy RSA Key Size (<=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:openssl_pkey_new:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-020"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "JWT::decode($token, null, false);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a0fa04af-9c43-4298-9581-ab2c59e041ce",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_022.php",
+        "queryFamily": "php.jwt",
+        "rawEvidenceJson": "{\"queryRef\":\"php.jwt.validation-disabled\",\"callName\":\"JWT::decode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"JWT::decode\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "JWT::decode",
+        "ruleKey": "quantum.arq-q-0680-php",
+        "ruleName": "JWT alg=none / verification disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:jwt:JWT::decode:JWT::decode",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-022"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "CURLOPT_SSLVERSION / STREAM_CRYPTO_METHOD_TLSv1_0",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "81299fc6-b264-45ad-a41e-5f1c51ee219d",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_023.php",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0683-php",
+        "ruleName": "TLS Weak Protocol (PHP cURL/stream TLSv1.0/1.1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-023"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "hash_pbkdf2('sha1', 'password', 'salt', 1000, 32);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9cafb8ed-0dab-432f-81f2-bbf2442c9279",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/php/rule_024.php",
+        "queryFamily": "php.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"php.crypto.pbkdf2-low-iterations\",\"callName\":\"hash_pbkdf2\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1000\",\"language\":\"php\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1000",
+        "ruleKey": "quantum.arq-q-0684-php",
+        "ruleName": "Weak KDF (PHP hash_pbkdf2 low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "php:crypto:hash_pbkdf2:1000",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-024"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "dangerous_configuration",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "0fe3f70e-389b-4af4-b9ac-65e4c78f04a3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/rust/rule_026.rs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0690-rust",
+        "ruleName": "TLS Dangerous Config (rustls)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-026"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "md5::compute",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "43ffc27c-30ca-4903-82da-ed58b0c6745b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/rust/rule_027.rs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0691-rust",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-027"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sha1::Sha1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "fc48b71a-b247-45db-8c37-395693110e0f",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-b/rust/rule_028.rs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0692-rust",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-028"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "secrets/quantum-coverage-native-b/keys/rule_001.jks"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-coverage-native-b/kotlin/rule_002.kt"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "native/quantum-coverage-native-b/kotlin/rule_003.kt"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "native/quantum-coverage-native-b/kotlin/rule_004.kt"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-coverage-native-b/ruby/rule_006.rb"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "native/quantum-coverage-native-b/ruby/rule_009.rb"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "secrets/quantum-coverage-native-b/keys/rule_012.pem"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-coverage-native-b/ruby/rule_013.rb"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "native/quantum-coverage-native-b/php/rule_018.php"
+    },
+    {
+      "expected": "rule-021",
+      "pathContains": "secrets/quantum-coverage-native-b/keys/rule_021.pem"
+    },
+    {
+      "expected": "rule-025",
+      "pathContains": "native/quantum-coverage-native-b/rust/rule_025.rs"
+    },
+    {
+      "expected": "rule-029",
+      "pathContains": "native/quantum-coverage-native-b/rust/rule_029.rs"
+    },
+    {
+      "expected": "rule-030",
+      "pathContains": "native/quantum-coverage-native-b/rust/rule_030.rs"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 30,
+  "mustFindMatched": 17,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "secrets/quantum-coverage-native-b/keys/rule_001.jks"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-coverage-native-b/kotlin/rule_002.kt"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "native/quantum-coverage-native-b/kotlin/rule_003.kt"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "native/quantum-coverage-native-b/kotlin/rule_004.kt"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-coverage-native-b/ruby/rule_006.rb"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "native/quantum-coverage-native-b/ruby/rule_009.rb"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "secrets/quantum-coverage-native-b/keys/rule_012.pem"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-coverage-native-b/ruby/rule_013.rb"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "native/quantum-coverage-native-b/php/rule_018.php"
+    },
+    {
+      "expected": "rule-021",
+      "pathContains": "secrets/quantum-coverage-native-b/keys/rule_021.pem"
+    },
+    {
+      "expected": "rule-025",
+      "pathContains": "native/quantum-coverage-native-b/rust/rule_025.rs"
+    },
+    {
+      "expected": "rule-029",
+      "pathContains": "native/quantum-coverage-native-b/rust/rule_029.rs"
+    },
+    {
+      "expected": "rule-030",
+      "pathContains": "native/quantum-coverage-native-b/rust/rule_030.rs"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 2,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 1
+  },
+  "noiseCount": 2,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 19,
+    "rawFindings": 19
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "openssl_encrypt($data, 'des-ede3-cbc', $key, 0, $iv);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1e99bf2d-4fff-4db0-9165-224313536c07",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-b/php/rule_018.php",
+      "queryFamily": "php.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-cipher\",\"callName\":\"openssl_encrypt\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"des-ede3-cbc\",\"language\":\"php\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "des-ede3-cbc",
+      "ruleKey": "quantum.arq-q-0675-php",
+      "ruleName": "Weak Cipher (DES/3DES/RC4)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "php:crypto:openssl_encrypt:des-ede3-cbc",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b\"password\", b\"salt\", 1000, &mut [0u8; 32]);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "3e7c0cc9-1785-42b2-a18b-66d0af2c5d37",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-b/rust/rule_030.rs",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0692-rust",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "MEDIUM"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-102",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "openssl_encrypt($data, 'des-ede3-cbc', $key, 0, $iv);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "1e99bf2d-4fff-4db0-9165-224313536c07",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-b/php/rule_018.php",
+      "queryFamily": "php.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"php.crypto.weak-cipher\",\"callName\":\"openssl_encrypt\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"des-ede3-cbc\",\"language\":\"php\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "des-ede3-cbc",
+      "ruleKey": "quantum.arq-q-0675-php",
+      "ruleName": "Weak Cipher (DES/3DES/RC4)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "php:crypto:openssl_encrypt:des-ede3-cbc",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b\"password\", b\"salt\", 1000, &mut [0u8; 32]);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "3e7c0cc9-1785-42b2-a18b-66d0af2c5d37",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-b/rust/rule_030.rs",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0692-rust",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "MEDIUM"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b\"password\", b\"salt\", 1000, &mut [0u8; 32]);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "3e7c0cc9-1785-42b2-a18b-66d0af2c5d37",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-coverage-native-b/rust/rule_030.rs",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0692-rust",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "MEDIUM"
+    }
+  ],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

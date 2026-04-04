@@ -1,0 +1,118 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-004\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9660678642714571,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-004\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-CONFIG-004\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 13,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 7,
+      "scripts": 2,
+      "synthetic filler / inflation content": 4840,
+      "tests": 3,
+      "total": 5010,
+      "vendor/generated": 135
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\runtime-config-separation\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-CONFIG-004.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\runtime-config-separation\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 2,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "PASS_CLEAN",
+  "finalVerdictReason": "all expected findings matched cleanly with no unexpected noise",
+  "followUpAction": "none",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "trust_chain_verification: ACCEPT_UNTRUSTED",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b76d93d7-cda6-466f-9e31-27a1f3c99f11",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/envoy.yaml",
+        "queryFamily": "config.envoy",
+        "rawEvidenceJson": "{\"queryRef\":\"config.envoy.trust-bypass\",\"callName\":\"trust_chain_verification\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"trust_chain_verification=ACCEPT_UNTRUSTED\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "trust_chain_verification=ACCEPT_UNTRUSTED",
+        "ruleKey": "quantum.arq-q-0931-config",
+        "ruleName": "Envoy Trust Validation Disabled (insecure)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:trust_chain_verification:trust_chain_verification=ACCEPT_UNTRUSTED",
+        "severity": "CRITICAL"
+      },
+      "expected": "active-envoy-untrusted"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c191fa2e-0c61-4547-885e-351b7d4b7a4e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "runtime/.env",
+        "queryFamily": "config.node",
+        "rawEvidenceJson": "{\"queryRef\":\"config.node.env-trust-bypass\",\"callName\":\"NODE_TLS_REJECT_UNAUTHORIZED\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"NODE_TLS_REJECT_UNAUTHORIZED=0\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "ruleKey": "quantum.arq-q-0949-config",
+        "ruleName": "NODE_TLS_REJECT_UNAUTHORIZED=0 (env/config)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:NODE_TLS_REJECT_UNAUTHORIZED:NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "severity": "CRITICAL"
+      },
+      "expected": "active-node-disable"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [],
+  "module": "quantum",
+  "mustFindExpected": 2,
+  "mustFindMatched": 2,
+  "mustFindMissing": [],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 2,
+    "rawFindings": 2
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V6-CONFIG-004",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "PASS_CLEAN",
+  "verdictClass": "PASS_CLEAN"
+}

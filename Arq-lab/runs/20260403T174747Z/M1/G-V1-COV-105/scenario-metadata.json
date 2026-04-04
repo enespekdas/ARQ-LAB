@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-enterprise.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-enterprise",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-enterprise",
+    "name": "guardian-coverage-enterprise",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "8db2e5e9db756de2ff3dc68471e08f19c3f09195"
+      },
+      "head": "8db2e5e9db756de2ff3dc68471e08f19c3f09195",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T20:51:44+03:00",
+          "message": "bootstrap G-V1-COV-105",
+          "sha": "8db2e5e9db756de2ff3dc68471e08f19c3f09195"
+        }
+      ]
+    },
+    "lineCount": 6922,
+    "repoName": "guardian-coverage-enterprise",
+    "scenarioId": "G-V1-COV-105"
+  },
+  "scenario": {
+    "domain": "Enterprise admin credential corpus with mixed config formats, runtime secrets, and operational packaging.",
+    "id": "G-V1-COV-105",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-enterprise",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

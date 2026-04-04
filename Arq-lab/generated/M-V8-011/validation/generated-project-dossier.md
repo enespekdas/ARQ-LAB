@@ -1133,17 +1133,17 @@ workspace-shared-libs-mixed
 
 Branches:
 
-- `feature/shared-lib-cleanup` tip: `12bf06bc1c372063cfe4e3966cb4fd354a4926bf`; diverges from `main` at `991bdded76de63049ca66ad8b4e9c8886b39e018`
-- `main` tip: `991bdded76de63049ca66ad8b4e9c8886b39e018`
-- `release/2026.05` tip: `8c1a5b8792d7a6cc13678945f71c3934ab5a1e13`; diverges from `main` at `991bdded76de63049ca66ad8b4e9c8886b39e018`
+- `feature/shared-lib-cleanup` tip: `77b3806b1c6977adf8c511ab33351934c985618d`; diverges from `main` at `936098abfdeab131beff0906dc1ac603538fe3be`
+- `main` tip: `936098abfdeab131beff0906dc1ac603538fe3be`
+- `release/2026.05` tip: `e2bc1cb5a7b4b12498999d1ba331550aad2ad4b7`; diverges from `main` at `936098abfdeab131beff0906dc1ac603538fe3be`
 
 Commit order:
 
-- `8b6f18e64f48e6be50577db2b33054031c8850d0` `bootstrap M-V8-011`: initial clean or baseline assembly.
-- `df46c483725db1d5c14af4c1157e97a1fd3555f1` `c002 add workspace history secret`: introduces an intended signal.
-- `8c1a5b8792d7a6cc13678945f71c3934ab5a1e13` `c005 release branch clean`: removes or neutralizes a prior signal.
-- `991bdded76de63049ca66ad8b4e9c8886b39e018` `c003 remove workspace history secret`: removes or neutralizes a prior signal.
-- `12bf06bc1c372063cfe4e3966cb4fd354a4926bf` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
+- `11aeafdfbdeb5e2bbec3a1139c1fcc06c01abdc5` `bootstrap M-V8-011`: initial clean or baseline assembly.
+- `432e260c67cc95eb4fe20317e8e29d0ac20e3112` `c002 add workspace history secret`: introduces an intended signal.
+- `e2bc1cb5a7b4b12498999d1ba331550aad2ad4b7` `c005 release branch clean`: removes or neutralizes a prior signal.
+- `936098abfdeab131beff0906dc1ac603538fe3be` `c003 remove workspace history secret`: removes or neutralizes a prior signal.
+- `77b3806b1c6977adf8c511ab33351934c985618d` `c004 shared lib cleanup branch`: removes or neutralizes a prior signal.
 
 Expected final head/history state:
 

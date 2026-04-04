@@ -1,0 +1,103 @@
+quantum-precision-config-any-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   |-- live
+|   |   `-- quantum-precision-config-any-01
+|   |       |-- runtime-001
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-002
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-003
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-004
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-005
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-006
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-007
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-008
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-009
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-010
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-011
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-012
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-013
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-014
+|   |       |   `-- runtime.conf
+|   |       |-- runtime-015
+|   |       |   `-- runtime.conf
+|   |       `-- runtime-016
+|   |           `-- runtime.conf
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   |-- section-06.md
+|   |   `-- section-07.md
+|   `-- coverage-notes.md
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       |-- runbook-06.md
+|       `-- runbook-07.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-precision-config-any-01
+|       `-- keys
+|           |-- rule_017.pem
+|           `-- rule_018.p12
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       |-- reference-06.sql
+|       `-- reference-07.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- .gitignore
+`-- README.md

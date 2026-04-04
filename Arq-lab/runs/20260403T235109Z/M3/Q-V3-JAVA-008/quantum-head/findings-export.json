@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T23:56:50.263788300Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "3cfaa3a3-d737-456c-b9c4-c30e2cb3ebf4",
+      "applicationKey": "arq-lab-q-v3-java-008",
+      "applicationName": "scary-wrapper-java",
+      "branchName": "main",
+      "commitSha": "62a591c39a9e49365b1fa94023b919f38741e9b3",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "bb0e97c0-d925-4cb4-bff6-4205928a4c99",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-03T23:56:45.283276Z",
+      "lastSeenAt": "2026-04-03T23:56:45.283276Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/scarywrapperjava/security/LegacySidePathHasher.java",
+      "primaryLineEnd": 3,
+      "primaryLineStart": 3,
+      "projectId": "711d99e9-0783-4169-bad5-f9a3a72fd342",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0178-java",
+      "ruleName": "Weak Hash",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

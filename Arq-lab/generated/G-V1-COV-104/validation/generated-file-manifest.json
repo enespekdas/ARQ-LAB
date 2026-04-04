@@ -72,7 +72,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -100,7 +100,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 7,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -884,7 +884,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 5,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -899,7 +899,7 @@
     "classification": "live-config",
     "findingExpectation": "must_find",
     "loc": 3,
-    "nearRealNegative": false,
+    "nearRealNegative": true,
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
@@ -926,7 +926,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 6,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -940,7 +940,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -955,7 +955,7 @@
     "classification": "live-config",
     "findingExpectation": "must_find",
     "loc": 3,
-    "nearRealNegative": true,
+    "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
     "participatesInTest": true,
@@ -968,7 +968,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 6,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -982,7 +982,7 @@
   {
     "classification": "docs",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -1008,17 +1008,17 @@
     "syntheticFiller": false
   },
   {
-    "classification": "docs",
+    "classification": "generated",
     "findingExpectation": "must_find",
     "loc": 3,
-    "nearRealNegative": true,
+    "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
     "participatesInTest": false,
-    "path": "ops/guardian-coverage-partners/secrets/provider_015.txt",
+    "path": "ops/guardian-coverage-partners/secrets/provider_015.php",
     "positiveSurface": true,
-    "protectedNegative": false,
-    "purpose": "Documentation or explanatory material for Provider 015.",
+    "protectedNegative": true,
+    "purpose": "Generated or derived project artifact related to Provider 015.",
     "syntheticFiller": false
   },
   {
@@ -2522,7 +2522,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 5,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -2536,7 +2536,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 5,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,

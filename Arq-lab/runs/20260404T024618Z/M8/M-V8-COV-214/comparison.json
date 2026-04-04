@@ -1,0 +1,327 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-214\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5799648506151143,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-214\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-214\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 660,
+      "tests": 3,
+      "total": 1138,
+      "vendor/generated": 438
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-rust-1-to-1-9-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-214.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-rust-1-to-1-9-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 4,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "11 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1, regex-only=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "dangerous_configuration",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8ad74e0c-2abd-48ae-bdfc-dfaa482d4816",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_002.rs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0690-rust",
+        "ruleName": "TLS Dangerous Config (rustls)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "md5::compute",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "cf36d593-3f59-4279-bbc2-33df4fee74a2",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_003.rs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0691-rust",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sha1::Sha1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "77dbf884-962a-4be9-837d-d58f36d9551c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_004.rs",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0692-rust",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "let _key = rsa::RsaPrivateKey::new(&mut rand::thread_rng(), 1024).unwrap();",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3b044551-799a-4f61-b1b3-e5e96c998999",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_009.rs",
+        "queryFamily": "rust.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"rust.crypto.rsa-weak-keysize\",\"callName\":\"rsa::RsaPrivateKey::new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"rust\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0702-rust",
+        "ruleName": "Legacy RSA Key Size (rsa crate bits<=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "rust:crypto:rsa::RsaPrivateKey::new:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_001.rs"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_005.rs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_006.rs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "secrets/quantum-precision-rust-1-to-1-9-01/keys/rule_007.pem"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_008.rs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_010.rs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_011.rs"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_012.rs"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_013.rs"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/module-014/Cargo.toml"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_015.rs"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 15,
+  "mustFindMatched": 4,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_001.rs"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_005.rs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_006.rs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "secrets/quantum-precision-rust-1-to-1-9-01/keys/rule_007.pem"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_008.rs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_010.rs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_011.rs"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_012.rs"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_013.rs"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/module-014/Cargo.toml"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_015.rs"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 1
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 5,
+    "rawFindings": 5
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b\"password\", b\"salt\", 1000, &mut [0u8; 32]);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "d26d4d33-5d8b-4e15-95cf-ccf19289a0d8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_006.rs",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0692-rust",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "MEDIUM"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-214",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b\"password\", b\"salt\", 1000, &mut [0u8; 32]);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "d26d4d33-5d8b-4e15-95cf-ccf19289a0d8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_006.rs",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0692-rust",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "MEDIUM"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "REGEX",
+      "evidenceExcerpt": "pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b\"password\", b\"salt\", 1000, &mut [0u8; 32]);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "d26d4d33-5d8b-4e15-95cf-ccf19289a0d8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-rust-1-to-1-9-01/rust/rule_006.rs",
+      "queryFamily": null,
+      "rawEvidenceJson": null,
+      "resolutionScope": null,
+      "resolvedValue": null,
+      "ruleKey": "quantum.arq-q-0692-rust",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": null,
+      "severity": "MEDIUM"
+    }
+  ],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

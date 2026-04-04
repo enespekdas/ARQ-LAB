@@ -1,9 +1,9 @@
 # M4 Summary
 
-- Scenario count: `19`
+- Scenario count: `34`
 
 - `FAIL_EXPLAINABILITY`: `0`
-- `FAIL_FN`: `9`
+- `FAIL_FN`: `24`
 - `FAIL_FP`: `0`
 - `FAIL_REF_STATE`: `0`
 - `INVALID_SCENARIO`: `0`

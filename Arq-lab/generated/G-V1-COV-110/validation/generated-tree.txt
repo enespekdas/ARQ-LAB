@@ -8,7 +8,9 @@ guardian-coverage-security
 |-- deploy
 |   |-- guardian-coverage-security
 |   |   |-- provider_003.properties
-|   |   `-- provider_008.properties
+|   |   |-- provider_008.properties
+|   |   |-- provider_013.properties
+|   |   `-- provider_018.properties
 |   `-- prod
 |       `-- service.properties
 |-- docs
@@ -70,14 +72,21 @@ guardian-coverage-security
 |   `-- guardian-coverage-security
 |       |-- config
 |       |   |-- provider_002.yaml
-|       |   `-- provider_007.yaml
+|       |   |-- provider_007.yaml
+|       |   |-- provider_012.yaml
+|       |   `-- provider_017.yaml
 |       `-- runtime
 |           |-- provider_001.env
-|           `-- provider_006.env
+|           |-- provider_006.env
+|           |-- provider_011.env
+|           `-- provider_016.env
 |-- ops
 |   |-- guardian-coverage-security
 |   |   `-- secrets
-|   |       `-- provider_005.txt
+|   |       |-- provider_005.txt
+|   |       |-- provider_010.txt
+|   |       |-- provider_015.txt
+|   |       `-- provider_020.txt
 |   `-- playbooks
 |       |-- runbook-01.md
 |       |-- runbook-02.md
@@ -191,7 +200,9 @@ guardian-coverage-security
 |-- terraform
 |   `-- guardian-coverage-security
 |       |-- provider_004.tfvars
-|       `-- provider_009.tfvars
+|       |-- provider_009.tfvars
+|       |-- provider_014.tfvars
+|       `-- provider_019.tfvars
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt

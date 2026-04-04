@@ -26,13 +26,13 @@ A real customer could plausibly own this repository because it bundles the opera
 
 ## 3. Architecture Summary
 
-- Major components: `.github, config, deploy, docs, native, ops, scripts, services, sql, tests, validation, vendor`
+- Major components: `.github, config, deploy, docs, native, ops, scripts, secrets, sql, tests, validation, vendor`
 - Runtime role: `Mixed native coverage pack B extending shell, PowerShell, PHP, Objective-C, Rust, Erlang, SQL, and workflow-adjacent rule families.`
 - Config flow: `.github/workflows/deploy.yml, config/runtime/baseline.yaml, deploy/prod/service.properties`
 - Secret flow: `No Guardian must-find secret path in this scenario.`
-- Crypto/TLS flow if relevant: `native/quantum-coverage-native-b/kotlin/rule_001.kt, native/quantum-coverage-native-b/kotlin/rule_002.kt, native/quantum-coverage-native-b/kotlin/rule_004.kt, native/quantum-coverage-native-b/php/rule_015.php, native/quantum-coverage-native-b/php/rule_016.php, native/quantum-coverage-native-b/php/rule_017.php, native/quantum-coverage-native-b/php/rule_018.php, native/quantum-coverage-native-b/php/rule_019.php, native/quantum-coverage-native-b/php/rule_020.php, native/quantum-coverage-native-b/php/rule_021.php, native/quantum-coverage-native-b/php/rule_022.php, native/quantum-coverage-native-b/php/rule_023.php, native/quantum-coverage-native-b/php/rule_024.php, native/quantum-coverage-native-b/ruby/rule_005.rb, native/quantum-coverage-native-b/ruby/rule_006.rb, native/quantum-coverage-native-b/ruby/rule_007.rb, native/quantum-coverage-native-b/ruby/rule_008.rb, native/quantum-coverage-native-b/ruby/rule_009.rb, native/quantum-coverage-native-b/ruby/rule_010.rb, native/quantum-coverage-native-b/ruby/rule_011.rb, native/quantum-coverage-native-b/ruby/rule_012.rb, native/quantum-coverage-native-b/ruby/rule_013.rb, native/quantum-coverage-native-b/ruby/rule_014.rb, native/quantum-coverage-native-b/rust/rule_025.rs, native/quantum-coverage-native-b/rust/rule_026.rs, native/quantum-coverage-native-b/rust/rule_027.rs, native/quantum-coverage-native-b/rust/rule_028.rs, native/quantum-coverage-native-b/rust/rule_029.rs, native/quantum-coverage-native-b/rust/rule_030.rs, services/quantum-coverage-native-b/module-003/pom.xml`
+- Crypto/TLS flow if relevant: `native/quantum-coverage-native-b/kotlin/rule_002.kt, native/quantum-coverage-native-b/kotlin/rule_003.kt, native/quantum-coverage-native-b/kotlin/rule_004.kt, native/quantum-coverage-native-b/php/rule_015.php, native/quantum-coverage-native-b/php/rule_016.php, native/quantum-coverage-native-b/php/rule_017.php, native/quantum-coverage-native-b/php/rule_018.php, native/quantum-coverage-native-b/php/rule_019.php, native/quantum-coverage-native-b/php/rule_020.php, native/quantum-coverage-native-b/php/rule_022.php, native/quantum-coverage-native-b/php/rule_023.php, native/quantum-coverage-native-b/php/rule_024.php, native/quantum-coverage-native-b/ruby/rule_005.rb, native/quantum-coverage-native-b/ruby/rule_006.rb, native/quantum-coverage-native-b/ruby/rule_007.rb, native/quantum-coverage-native-b/ruby/rule_008.rb, native/quantum-coverage-native-b/ruby/rule_009.rb, native/quantum-coverage-native-b/ruby/rule_010.rb, native/quantum-coverage-native-b/ruby/rule_011.rb, native/quantum-coverage-native-b/ruby/rule_013.rb, native/quantum-coverage-native-b/ruby/rule_014.rb, native/quantum-coverage-native-b/rust/rule_025.rs, native/quantum-coverage-native-b/rust/rule_026.rs, native/quantum-coverage-native-b/rust/rule_027.rs, native/quantum-coverage-native-b/rust/rule_028.rs, native/quantum-coverage-native-b/rust/rule_029.rs, native/quantum-coverage-native-b/rust/rule_030.rs, secrets/quantum-coverage-native-b/keys/rule_001.jks, secrets/quantum-coverage-native-b/keys/rule_012.pem, secrets/quantum-coverage-native-b/keys/rule_021.pem`
 - Test surfaces: `tests/fixtures/sample-placeholder.txt, tests/test_validation.py`
-- Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/architecture/section-09.md, docs/architecture/section-10.md, docs/architecture/section-11.md`
+- Docs/vendor/generated surfaces: `README.md, docs/architecture/section-01.md, docs/architecture/section-02.md, docs/architecture/section-03.md, docs/architecture/section-04.md, docs/architecture/section-05.md, docs/architecture/section-06.md, docs/architecture/section-07.md, docs/architecture/section-08.md, docs/coverage-notes.md, native/quantum-coverage-native-b/php/rule_015.php, native/quantum-coverage-native-b/php/rule_016.php`
 
 ## 4. Full Repository Tree
 
@@ -58,65 +58,13 @@ quantum-coverage-native-b
 |   |   |-- section-05.md
 |   |   |-- section-06.md
 |   |   |-- section-07.md
-|   |   |-- section-08.md
-|   |   |-- section-09.md
-|   |   |-- section-10.md
-|   |   |-- section-11.md
-|   |   |-- section-12.md
-|   |   |-- section-13.md
-|   |   |-- section-14.md
-|   |   |-- section-15.md
-|   |   |-- section-16.md
-|   |   |-- section-17.md
-|   |   |-- section-18.md
-|   |   |-- section-19.md
-|   |   |-- section-20.md
-|   |   |-- section-21.md
-|   |   |-- section-22.md
-|   |   |-- section-23.md
-|   |   |-- section-24.md
-|   |   |-- section-25.md
-|   |   |-- section-26.md
-|   |   |-- section-27.md
-|   |   |-- section-28.md
-|   |   |-- section-29.md
-|   |   |-- section-30.md
-|   |   |-- section-31.md
-|   |   |-- section-32.md
-|   |   |-- section-33.md
-|   |   |-- section-34.md
-|   |   |-- section-35.md
-|   |   |-- section-36.md
-|   |   |-- section-37.md
-|   |   |-- section-38.md
-|   |   |-- section-39.md
-|   |   |-- section-40.md
-|   |   |-- section-41.md
-|   |   |-- section-42.md
-|   |   |-- section-43.md
-|   |   |-- section-44.md
-|   |   |-- section-45.md
-|   |   |-- section-46.md
-|   |   |-- section-47.md
-|   |   |-- section-48.md
-|   |   |-- section-49.md
-|   |   |-- section-50.md
-|   |   |-- section-51.md
-|   |   |-- section-52.md
-|   |   |-- section-53.md
-|   |   |-- section-54.md
-|   |   |-- section-55.md
-|   |   |-- section-56.md
-|   |   |-- section-57.md
-|   |   |-- section-58.md
-|   |   |-- section-59.md
-|   |   `-- section-60.md
+|   |   `-- section-08.md
 |   `-- coverage-notes.md
 |-- native
 |   `-- quantum-coverage-native-b
 |       |-- kotlin
-|       |   |-- rule_001.kt
 |       |   |-- rule_002.kt
+|       |   |-- rule_003.kt
 |       |   `-- rule_004.kt
 |       |-- php
 |       |   |-- rule_015.php
@@ -125,7 +73,6 @@ quantum-coverage-native-b
 |       |   |-- rule_018.php
 |       |   |-- rule_019.php
 |       |   |-- rule_020.php
-|       |   |-- rule_021.php
 |       |   |-- rule_022.php
 |       |   |-- rule_023.php
 |       |   `-- rule_024.php
@@ -137,7 +84,6 @@ quantum-coverage-native-b
 |       |   |-- rule_009.rb
 |       |   |-- rule_010.rb
 |       |   |-- rule_011.rb
-|       |   |-- rule_012.rb
 |       |   |-- rule_013.rb
 |       |   `-- rule_014.rb
 |       `-- rust
@@ -156,66 +102,16 @@ quantum-coverage-native-b
 |       |-- runbook-05.md
 |       |-- runbook-06.md
 |       |-- runbook-07.md
-|       |-- runbook-08.md
-|       |-- runbook-09.md
-|       |-- runbook-10.md
-|       |-- runbook-11.md
-|       |-- runbook-12.md
-|       |-- runbook-13.md
-|       |-- runbook-14.md
-|       |-- runbook-15.md
-|       |-- runbook-16.md
-|       |-- runbook-17.md
-|       |-- runbook-18.md
-|       |-- runbook-19.md
-|       |-- runbook-20.md
-|       |-- runbook-21.md
-|       |-- runbook-22.md
-|       |-- runbook-23.md
-|       |-- runbook-24.md
-|       |-- runbook-25.md
-|       |-- runbook-26.md
-|       |-- runbook-27.md
-|       |-- runbook-28.md
-|       |-- runbook-29.md
-|       |-- runbook-30.md
-|       |-- runbook-31.md
-|       |-- runbook-32.md
-|       |-- runbook-33.md
-|       |-- runbook-34.md
-|       |-- runbook-35.md
-|       |-- runbook-36.md
-|       |-- runbook-37.md
-|       |-- runbook-38.md
-|       |-- runbook-39.md
-|       |-- runbook-40.md
-|       |-- runbook-41.md
-|       |-- runbook-42.md
-|       |-- runbook-43.md
-|       |-- runbook-44.md
-|       |-- runbook-45.md
-|       |-- runbook-46.md
-|       |-- runbook-47.md
-|       |-- runbook-48.md
-|       |-- runbook-49.md
-|       |-- runbook-50.md
-|       |-- runbook-51.md
-|       |-- runbook-52.md
-|       |-- runbook-53.md
-|       |-- runbook-54.md
-|       |-- runbook-55.md
-|       |-- runbook-56.md
-|       |-- runbook-57.md
-|       |-- runbook-58.md
-|       |-- runbook-59.md
-|       `-- runbook-60.md
+|       `-- runbook-08.md
 |-- scripts
 |   |-- smoke.ps1
 |   `-- validate_repo.py
-|-- services
+|-- secrets
 |   `-- quantum-coverage-native-b
-|       `-- module-003
-|           `-- pom.xml
+|       `-- keys
+|           |-- rule_001.jks
+|           |-- rule_012.pem
+|           `-- rule_021.pem
 |-- sql
 |   `-- reference
 |       |-- reference-01.sql
@@ -225,59 +121,7 @@ quantum-coverage-native-b
 |       |-- reference-05.sql
 |       |-- reference-06.sql
 |       |-- reference-07.sql
-|       |-- reference-08.sql
-|       |-- reference-09.sql
-|       |-- reference-10.sql
-|       |-- reference-11.sql
-|       |-- reference-12.sql
-|       |-- reference-13.sql
-|       |-- reference-14.sql
-|       |-- reference-15.sql
-|       |-- reference-16.sql
-|       |-- reference-17.sql
-|       |-- reference-18.sql
-|       |-- reference-19.sql
-|       |-- reference-20.sql
-|       |-- reference-21.sql
-|       |-- reference-22.sql
-|       |-- reference-23.sql
-|       |-- reference-24.sql
-|       |-- reference-25.sql
-|       |-- reference-26.sql
-|       |-- reference-27.sql
-|       |-- reference-28.sql
-|       |-- reference-29.sql
-|       |-- reference-30.sql
-|       |-- reference-31.sql
-|       |-- reference-32.sql
-|       |-- reference-33.sql
-|       |-- reference-34.sql
-|       |-- reference-35.sql
-|       |-- reference-36.sql
-|       |-- reference-37.sql
-|       |-- reference-38.sql
-|       |-- reference-39.sql
-|       |-- reference-40.sql
-|       |-- reference-41.sql
-|       |-- reference-42.sql
-|       |-- reference-43.sql
-|       |-- reference-44.sql
-|       |-- reference-45.sql
-|       |-- reference-46.sql
-|       |-- reference-47.sql
-|       |-- reference-48.sql
-|       |-- reference-49.sql
-|       |-- reference-50.sql
-|       |-- reference-51.sql
-|       |-- reference-52.sql
-|       |-- reference-53.sql
-|       |-- reference-54.sql
-|       |-- reference-55.sql
-|       |-- reference-56.sql
-|       |-- reference-57.sql
-|       |-- reference-58.sql
-|       |-- reference-59.sql
-|       `-- reference-60.sql
+|       `-- reference-08.sql
 |-- tests
 |   |-- fixtures
 |   |   `-- sample-placeholder.txt
@@ -300,6 +144,7 @@ quantum-coverage-native-b
 |-- vendor
 |   `-- generated-client.txt
 |-- .gitignore
+|-- pom.xml
 `-- README.md
 ```
 
@@ -320,88 +165,34 @@ quantum-coverage-native-b
 | docs/architecture/section-06.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-07.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/architecture/section-08.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-09.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-10.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-11.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-12.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-13.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-14.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-15.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-16.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-17.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-18.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-19.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-20.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-21.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-22.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-23.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-24.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-25.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-26.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-27.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-28.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-29.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-30.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-31.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-32.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-33.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-34.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-35.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-36.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-37.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-38.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-39.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-40.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-41.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-42.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-43.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-44.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-45.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-46.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-47.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-48.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-49.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-50.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-51.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-52.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-53.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-54.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-55.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-56.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-57.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-58.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-59.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
-| docs/architecture/section-60.md | docs | 42 | Synthetic architecture filler used to reach line-density targets without altering runtime behavior. | no | no | yes | no | no | no |
 | docs/coverage-notes.md | docs | 5 | Documentation or explanatory material for Coverage Notes. | no | no | yes | no | no | no |
-| native/quantum-coverage-native-b/kotlin/rule_001.kt | live-code | 5 | Runtime business module contributing to Rule 001. | yes | no | no | yes | yes | no |
-| native/quantum-coverage-native-b/kotlin/rule_002.kt | live-code | 5 | Runtime business module contributing to Rule 002. | yes | no | no | yes | yes | no |
-| native/quantum-coverage-native-b/kotlin/rule_004.kt | live-code | 5 | Runtime business module contributing to Rule 004. | yes | yes | no | yes | yes | no |
-| native/quantum-coverage-native-b/php/rule_015.php | generated | 5 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_016.php | generated | 5 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_017.php | generated | 5 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_018.php | generated | 5 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_019.php | generated | 5 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_020.php | generated | 5 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_021.php | generated | 5 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_022.php | generated | 5 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_023.php | generated | 5 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/php/rule_024.php | generated | 5 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_005.rb | generated | 5 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_006.rb | generated | 5 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_007.rb | generated | 5 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_008.rb | generated | 5 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_009.rb | generated | 5 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_010.rb | generated | 5 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_011.rb | generated | 5 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_012.rb | generated | 5 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_013.rb | generated | 5 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/ruby/rule_014.rb | generated | 5 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/rust/rule_025.rs | generated | 5 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/rust/rule_026.rs | generated | 5 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/rust/rule_027.rs | generated | 5 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/rust/rule_028.rs | generated | 5 | Generated or derived project artifact related to Rule 028. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/rust/rule_029.rs | generated | 5 | Generated or derived project artifact related to Rule 029. | yes | no | yes | no | no | no |
-| native/quantum-coverage-native-b/rust/rule_030.rs | generated | 5 | Generated or derived project artifact related to Rule 030. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/kotlin/rule_002.kt | live-code | 14 | Runtime business module contributing to Rule 002. | yes | no | no | yes | yes | no |
+| native/quantum-coverage-native-b/kotlin/rule_003.kt | live-code | 14 | Runtime business module contributing to Rule 003. | yes | no | no | yes | yes | no |
+| native/quantum-coverage-native-b/kotlin/rule_004.kt | live-code | 14 | Runtime business module contributing to Rule 004. | yes | no | no | yes | yes | no |
+| native/quantum-coverage-native-b/php/rule_015.php | generated | 6 | Generated or derived project artifact related to Rule 015. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_016.php | generated | 6 | Generated or derived project artifact related to Rule 016. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_017.php | generated | 6 | Generated or derived project artifact related to Rule 017. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_018.php | generated | 6 | Generated or derived project artifact related to Rule 018. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_019.php | generated | 6 | Generated or derived project artifact related to Rule 019. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_020.php | generated | 6 | Generated or derived project artifact related to Rule 020. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_022.php | generated | 6 | Generated or derived project artifact related to Rule 022. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_023.php | generated | 6 | Generated or derived project artifact related to Rule 023. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/php/rule_024.php | generated | 6 | Generated or derived project artifact related to Rule 024. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_005.rb | generated | 8 | Generated or derived project artifact related to Rule 005. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_006.rb | generated | 9 | Generated or derived project artifact related to Rule 006. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_007.rb | generated | 8 | Generated or derived project artifact related to Rule 007. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_008.rb | generated | 8 | Generated or derived project artifact related to Rule 008. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_009.rb | generated | 8 | Generated or derived project artifact related to Rule 009. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_010.rb | generated | 8 | Generated or derived project artifact related to Rule 010. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_011.rb | generated | 8 | Generated or derived project artifact related to Rule 011. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_013.rb | generated | 8 | Generated or derived project artifact related to Rule 013. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/ruby/rule_014.rb | generated | 8 | Generated or derived project artifact related to Rule 014. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/rust/rule_025.rs | generated | 11 | Generated or derived project artifact related to Rule 025. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/rust/rule_026.rs | generated | 11 | Generated or derived project artifact related to Rule 026. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/rust/rule_027.rs | generated | 11 | Generated or derived project artifact related to Rule 027. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/rust/rule_028.rs | generated | 11 | Generated or derived project artifact related to Rule 028. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/rust/rule_029.rs | generated | 11 | Generated or derived project artifact related to Rule 029. | yes | no | yes | no | no | no |
+| native/quantum-coverage-native-b/rust/rule_030.rs | generated | 11 | Generated or derived project artifact related to Rule 030. | yes | no | yes | no | no | no |
 | ops/playbooks/runbook-01.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-02.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-03.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
@@ -410,61 +201,12 @@ quantum-coverage-native-b
 | ops/playbooks/runbook-06.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-07.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
 | ops/playbooks/runbook-08.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-09.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-10.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-11.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-12.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-13.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-14.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-15.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-16.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-17.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-18.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-19.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-20.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-21.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-22.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-23.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-24.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-25.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-26.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-27.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-28.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-29.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-30.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-31.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-32.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-33.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-34.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-35.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-36.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-37.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-38.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-39.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-40.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-41.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-42.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-43.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-44.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-45.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-46.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-47.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-48.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-49.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-50.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-51.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-52.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-53.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-54.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-55.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-56.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-57.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-58.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-59.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
-| ops/playbooks/runbook-60.md | docs | 42 | Synthetic operational runbook filler used to simulate enterprise documentation density. | no | no | no | no | no | no |
+| pom.xml | build/deploy | 12 | Build or deployment definition shaping how Pom is compiled, packaged, or released. | no | no | no | yes | yes | no |
 | scripts/smoke.ps1 | script | 1 | Executable helper script used for build, smoke, or repository validation around Smoke. | no | no | no | yes | yes | yes |
 | scripts/validate_repo.py | script | 1 | Executable helper script used for build, smoke, or repository validation around Validate Repo. | no | no | no | yes | yes | no |
-| services/quantum-coverage-native-b/module-003/pom.xml | generated | 5 | Generated or derived project artifact related to Pom. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-b/keys/rule_001.jks | generated | 1 | Generated or derived project artifact related to Rule 001. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-b/keys/rule_012.pem | generated | 14 | Generated or derived project artifact related to Rule 012. | yes | no | yes | no | no | no |
+| secrets/quantum-coverage-native-b/keys/rule_021.pem | generated | 14 | Generated or derived project artifact related to Rule 021. | yes | no | yes | no | no | no |
 | sql/reference/reference-01.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-02.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-03.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
@@ -473,67 +215,15 @@ quantum-coverage-native-b
 | sql/reference/reference-06.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-07.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | sql/reference/reference-08.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-09.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-10.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-11.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-12.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-13.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-14.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-15.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-16.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-17.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-18.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-19.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-20.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-21.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-22.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-23.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-24.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-25.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-26.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-27.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-28.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-29.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-30.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-31.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-32.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-33.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-34.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-35.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-36.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-37.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-38.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-39.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-40.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-41.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-42.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-43.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-44.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-45.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-46.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-47.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-48.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-49.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-50.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-51.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-52.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-53.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-54.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-55.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-56.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-57.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-58.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-59.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
-| sql/reference/reference-60.sql | generated | 26 | Synthetic SQL reference filler used to simulate reference data and schema collateral. | no | no | yes | no | no | no |
 | tests/fixtures/sample-placeholder.txt | test | 1 | Automated test surface covering Sample Placeholder behavior. | no | no | yes | no | yes | no |
 | tests/test_validation.py | test | 2 | Automated test surface covering Test Validation behavior. | no | no | yes | no | yes | no |
 | validation/branch-plan.yaml | generated | 3 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-absent.json | generated | 1 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-findings.json | generated | 392 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/expected-report.md | generated | 8 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-file-manifest.json | generated | 3278 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-project-dossier.md | generated | 1577 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
-| validation/generated-tree.txt | generated | 262 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-file-manifest.json | generated | 1108 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-project-dossier.md | generated | 1232 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
+| validation/generated-tree.txt | generated | 107 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/repo-metadata.json | generated | 23 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/build-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | no |
 | validation/runnability-logs/smoke-01.log | generated | 9 | Machine-readable validation contract or generated audit artifact for this scenario. | no | no | yes | no | no | yes |
@@ -544,7 +234,7 @@ quantum-coverage-native-b
 
 ## 6. Positive Surfaces
 
-- Path: `native/quantum-coverage-native-b/kotlin/rule_001.kt`
+- Path: `secrets/quantum-coverage-native-b/keys/rule_001.jks`
   Why it should be detected: scenario declares `rule-001` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0643-kotlin`
@@ -556,7 +246,7 @@ quantum-coverage-native-b
   Finding family / rule family expectation: `quantum.arq-q-0644-kotlin`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `services/quantum-coverage-native-b/module-003/pom.xml`
+- Path: `native/quantum-coverage-native-b/kotlin/rule_003.kt`
   Why it should be detected: scenario declares `rule-003` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0648-kotlin`
@@ -610,7 +300,7 @@ quantum-coverage-native-b
   Finding family / rule family expectation: `quantum.arq-q-0659-ruby`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-b/ruby/rule_012.rb`
+- Path: `secrets/quantum-coverage-native-b/keys/rule_012.pem`
   Why it should be detected: scenario declares `rule-012` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0662-ruby`
@@ -664,7 +354,7 @@ quantum-coverage-native-b
   Finding family / rule family expectation: `quantum.arq-q-0676-php`
   Head/history behavior: `head-only`
   Explainability expectation: No strict scenario-specific explainability contract beyond normal detail capture.
-- Path: `native/quantum-coverage-native-b/php/rule_021.php`
+- Path: `secrets/quantum-coverage-native-b/keys/rule_021.pem`
   Why it should be detected: scenario declares `rule-021` as a live positive surface.
   Target module: `Quantum`
   Finding family / rule family expectation: `quantum.arq-q-0679-php`
@@ -727,7 +417,7 @@ quantum-coverage-native-b
 
 ## 7. Near-Real Negative Surfaces
 
-- `native/quantum-coverage-native-b/kotlin/rule_004.kt`: Path is intentionally near-real but is expected to stay clean because it is placeholder, example, masked, or otherwise non-live.
+- No near-real negative surfaces were declared for this scenario.
 
 ## 8. Protected Negative Surfaces
 
@@ -741,58 +431,6 @@ quantum-coverage-native-b
 | docs/architecture/section-06.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-07.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/architecture/section-08.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-09.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-10.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-11.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-12.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-13.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-14.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-15.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-16.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-17.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-18.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-19.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-20.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-21.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-22.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-23.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-24.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-25.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-26.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-27.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-28.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-29.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-30.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-31.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-32.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-33.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-34.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-35.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-36.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-37.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-38.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-39.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-40.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-41.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-42.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-43.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-44.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-45.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-46.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-47.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-48.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-49.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-50.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-51.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-52.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-53.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-54.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-55.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-56.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-57.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-58.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-59.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| docs/architecture/section-60.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | docs/coverage-notes.md | docs | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_015.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_016.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -800,7 +438,6 @@ quantum-coverage-native-b
 | native/quantum-coverage-native-b/php/rule_018.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_019.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_020.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-b/php/rule_021.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_022.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_023.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/php/rule_024.php | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -811,7 +448,6 @@ quantum-coverage-native-b
 | native/quantum-coverage-native-b/ruby/rule_009.rb | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/ruby/rule_010.rb | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/ruby/rule_011.rb | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| native/quantum-coverage-native-b/ruby/rule_012.rb | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/ruby/rule_013.rb | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/ruby/rule_014.rb | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/rust/rule_025.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -820,7 +456,9 @@ quantum-coverage-native-b
 | native/quantum-coverage-native-b/rust/rule_028.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/rust/rule_029.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | native/quantum-coverage-native-b/rust/rule_030.rs | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| services/quantum-coverage-native-b/module-003/pom.xml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-b/keys/rule_001.jks | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-b/keys/rule_012.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
+| secrets/quantum-coverage-native-b/keys/rule_021.pem | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-01.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-02.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-03.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -829,58 +467,6 @@ quantum-coverage-native-b
 | sql/reference/reference-06.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-07.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | sql/reference/reference-08.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-09.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-10.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-11.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-12.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-13.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-14.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-15.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-16.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-17.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-18.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-19.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-20.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-21.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-22.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-23.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-24.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-25.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-26.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-27.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-28.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-29.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-30.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-31.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-32.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-33.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-34.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-35.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-36.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-37.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-38.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-39.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-40.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-41.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-42.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-43.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-44.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-45.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-46.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-47.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-48.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-49.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-50.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-51.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-52.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-53.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-54.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-55.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-56.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-57.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-58.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-59.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
-| sql/reference/reference-60.sql | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/fixtures/sample-placeholder.txt | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | tests/test_validation.py | test | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
 | validation/branch-plan.yaml | generated | Path lives in a protected negative zone and should stay clean even if the content looks suspicious. |
@@ -948,21 +534,6 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0011: - Review `docs/` for architecture and operational material.
 ```
 
-### `native/quantum-coverage-native-b/kotlin/rule_001.kt`
-
-- Why this file matters: `live-code` file with expectation `must_find`.
-- Detailed summary: Runtime business module contributing to Rule 001. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`False`.
-- Representative excerpt:
-
-```text
-0001: // rule_key: quantum.arq-q-0643-kotlin
-0002: // evidence_anchor: BEGIN PRIVATE KEY / KeyStore.load
-0003: // regex_sample: ----------------------------------------BEGIN     PRIVATE             KEY------------------------------------
-0004: // keywords: BEGIN PRIVATE KEY | KeyStore | load | .jks | .p12
-0005: ----------------------------------------BEGIN     PRIVATE             KEY------------------------------------
-```
-
 ### `native/quantum-coverage-native-b/kotlin/rule_002.kt`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
@@ -971,24 +542,47 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0644-kotlin
-0002: // evidence_anchor: TokenValidationParameters / jwt decode
-0003: // regex_sample: Algorithm.none                    (
+0007:     @JvmStatic fun execute() {
+0008:         // rule_key: quantum.arq-q-0644-kotlin
+0009:         // evidence_anchor: TokenValidationParameters / jwt decode
+0010:         // regex_sample: Algorithm.none                    (
+0011:         // keywords: JWT.decode | Algorithm.none | false | none
+0012:         TokenValidationParameters / jwt decode
+0013:     }
+```
+
+### `native/quantum-coverage-native-b/kotlin/rule_003.kt`
+
+- Why this file matters: `live-code` file with expectation `must_find`.
+- Detailed summary: Runtime business module contributing to Rule 003. It is executable/live in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
+- Representative excerpt:
+
+```text
+0007:     @JvmStatic fun execute() {
+0008:         // rule_key: quantum.arq-q-0648-kotlin
+0009:         // evidence_anchor: xmldsig algorithm URI
+0010:         // regex_sample: Other
+0011:         // keywords: xmldsig#rsa-sha1 | dsa-sha1 | sha1
+0012:         String xmlAlgo = "http://www.w3.org/2000/09/xmldsig#rsa-sha1";
+0013:     }
 ```
 
 ### `native/quantum-coverage-native-b/kotlin/rule_004.kt`
 
 - Why this file matters: `live-code` file with expectation `must_find`.
 - Detailed summary: Runtime business module contributing to Rule 004. It is executable/live in the assembled repository.
-- Key constructs: positive surface; near-real=`True`; protected=`False`.
+- Key constructs: positive surface; near-real=`False`; protected=`False`.
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0650-kotlin
-0002: // evidence_anchor: SecretKeyFactory.getInstance('PBKDF2')
-0003: // regex_sample: SecretKeyFactory.getInstanceGF`@\My1Nx!-Z3: Qkb~rPBKDF2WithHmacSHA256Qo nF 7c-!t6;I9FPL*U4@@a\4new                PBEKeySpec                     (dUS"NPy ,`L]sc*UcP!qsVEwIj3uM{j>hK_i*=$GF U_q7tsg{-^: FFz7OV|?8)3 ?1ZZ`K^N*Y2l|Z`5[k*Va#, 9          ,
-0004: // keywords: PBKDF2WithHmacSHA1 | PBKDF2WithHmacSHA256 | SecretKeyFactory | iterations
-0005: SecretKeyFactory.getInstanceGF`@\My1Nx!-Z3: Qkb~rPBKDF2WithHmacSHA256Qo nF 7c-!t6;I9FPL*U4@@a\4new                PBEKeySpec                     (dUS"NPy ,`L]sc*UcP!qsVEwIj3uM{j>hK_i*=$GF U_q7tsg{-^: FFz7OV|?8)3 ?1ZZ`K^N*Y2l|Z`5[k*Va#, 9          ,
+0007:     @JvmStatic fun execute() {
+0008:         // rule_key: quantum.arq-q-0650-kotlin
+0009:         // evidence_anchor: SecretKeyFactory.getInstance('PBKDF2')
+0010:         // regex_sample: SecretKeyFactory.getInstanceGF`@\My1Nx!-Z3: Qkb~rPBKDF2WithHmacSHA256Qo nF 7c-!t6;I9FPL*U4@@a\4new                PBEKeySpec                     (dUS"NPy ,`L]sc*UcP!qsVEwIj3uM{j>hK_i*=$GF U_q7tsg{-^: FFz7OV|?8)3 ?1ZZ`K^N*Y2l|Z`5[k*Va#, 9          ,
+0011:         // keywords: PBKDF2WithHmacSHA1 | PBKDF2WithHmacSHA256 | SecretKeyFactory | iterations
+0012:         SecretKeyFactory.getInstance('PBKDF2')
+0013:     }
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_015.php`
@@ -999,8 +593,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0671-php
-0002: // evidence_anchor: stream_context_create ssl verify_peer false
+0001: <?php
+0002: // rule_key: quantum.arq-q-0671-php
+0003: // evidence_anchor: stream_context_create ssl verify_peer false
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_016.php`
@@ -1011,11 +606,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0672-php
-0002: // evidence_anchor: md5()
-0003: // regex_sample: hash("md5"
-0004: // keywords: md5( | hash('md5'
-0005: hash("md5"
+0001: <?php
+0002: // rule_key: quantum.arq-q-0672-php
+0003: // evidence_anchor: md5()
+0004: // regex_sample: hash("md5"
+0005: // keywords: md5( | hash('md5'
+0006: md5('legacy');
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_017.php`
@@ -1026,11 +622,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0673-php
-0002: // evidence_anchor: sha1()
-0003: // regex_sample: hash('sha1'
-0004: // keywords: sha1( | hash('sha1'
-0005: hash('sha1'
+0001: <?php
+0002: // rule_key: quantum.arq-q-0673-php
+0003: // evidence_anchor: sha1()
+0004: // regex_sample: hash('sha1'
+0005: // keywords: sha1( | hash('sha1'
+0006: sha1('legacy');
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_018.php`
@@ -1041,8 +638,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0674-php
-0002: // evidence_anchor: openssl_encrypt(... 'aes-*-ecb')
+0001: <?php
+0002: // rule_key: quantum.arq-q-0674-php
+0003: // evidence_anchor: openssl_encrypt(... 'aes-*-ecb')
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_019.php`
@@ -1053,8 +651,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0675-php
-0002: // evidence_anchor: openssl_encrypt(... 'des'/'des-ede3'/'rc4')
+0001: <?php
+0002: // rule_key: quantum.arq-q-0675-php
+0003: // evidence_anchor: openssl_encrypt(... 'des'/'des-ede3'/'rc4')
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_020.php`
@@ -1065,23 +664,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0676-php
-0002: // evidence_anchor: openssl_pkey_new bits 1024
-```
-
-### `native/quantum-coverage-native-b/php/rule_021.php`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 021. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: // rule_key: quantum.arq-q-0679-php
-0002: // evidence_anchor: BEGIN PRIVATE KEY
-0003: // regex_sample: --------------------------------------------------BEGIN                       ENCRYPTED                     PRIVATE   KEY---------------
-0004: // keywords: BEGIN PRIVATE KEY | BEGIN RSA PRIVATE KEY | BEGIN EC PRIVATE KEY
-0005: --------------------------------------------------BEGIN                       ENCRYPTED                     PRIVATE   KEY---------------
+0001: <?php
+0002: // rule_key: quantum.arq-q-0676-php
+0003: // evidence_anchor: openssl_pkey_new bits 1024
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_022.php`
@@ -1092,8 +677,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0680-php
-0002: // evidence_anchor: JWT::decode(..., null, false)
+0001: <?php
+0002: // rule_key: quantum.arq-q-0680-php
+0003: // evidence_anchor: JWT::decode(..., null, false)
+0005: // keywords: JWT::decode | verify | false | none
+0006: JWT::decode($token, null, false);
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_023.php`
@@ -1104,8 +692,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0683-php
-0002: // evidence_anchor: CURLOPT_SSLVERSION / STREAM_CRYPTO_METHOD_TLSv1_0
+0001: <?php
+0002: // rule_key: quantum.arq-q-0683-php
+0003: // evidence_anchor: CURLOPT_SSLVERSION / STREAM_CRYPTO_METHOD_TLSv1_0
 ```
 
 ### `native/quantum-coverage-native-b/php/rule_024.php`
@@ -1116,8 +705,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0684-php
-0002: // evidence_anchor: hash_pbkdf2(
+0001: <?php
+0002: // rule_key: quantum.arq-q-0684-php
+0003: // evidence_anchor: hash_pbkdf2(
+0005: // keywords: hash_pbkdf2 | iterations
+0006: hash_pbkdf2('sha1', 'password', 'salt', 1000, 32);
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_005.rb`
@@ -1128,8 +720,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0653-ruby
-0002: # evidence_anchor: OpenSSL::SSL::VERIFY_NONE
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0653-ruby
+0005: # evidence_anchor: OpenSSL::SSL::VERIFY_NONE
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_006.rb`
@@ -1140,8 +733,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0654-ruby
-0002: # evidence_anchor: min_version/max_version
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0654-ruby
+0005: # evidence_anchor: min_version/max_version
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_007.rb`
@@ -1152,11 +746,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0655-ruby
-0002: # evidence_anchor: OpenSSL::Digest::MD5
-0003: # regex_sample: Digest::MD5
-0004: # keywords: Digest::MD5 | OpenSSL::Digest | md5
-0005: Digest::MD5
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0655-ruby
+0005: # evidence_anchor: OpenSSL::Digest::MD5
+0006: # regex_sample: Digest::MD5
+0007: # keywords: Digest::MD5 | OpenSSL::Digest | md5
+0008: OpenSSL::Digest::MD5
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_008.rb`
@@ -1167,11 +762,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0656-ruby
-0002: # evidence_anchor: OpenSSL::Digest::SHA1
-0003: # regex_sample: Digest::SHA1
-0004: # keywords: Digest::SHA1 | OpenSSL::Digest | sha1
-0005: Digest::SHA1
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0656-ruby
+0005: # evidence_anchor: OpenSSL::Digest::SHA1
+0006: # regex_sample: Digest::SHA1
+0007: # keywords: Digest::SHA1 | OpenSSL::Digest | sha1
+0008: OpenSSL::Digest::SHA1
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_009.rb`
@@ -1182,8 +778,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0657-ruby
-0002: # evidence_anchor: OpenSSL::Cipher.new
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0657-ruby
+0005: # evidence_anchor: OpenSSL::Cipher.new
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_010.rb`
@@ -1194,8 +791,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0658-ruby
-0002: # evidence_anchor: OpenSSL::Cipher.new('AES-*-ECB')
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0658-ruby
+0005: # evidence_anchor: OpenSSL::Cipher.new('AES-*-ECB')
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_011.rb`
@@ -1206,23 +804,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0659-ruby
-0002: # evidence_anchor: OpenSSL::PKey::RSA.new(1024)
-```
-
-### `native/quantum-coverage-native-b/ruby/rule_012.rb`
-
-- Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Rule 012. It is non-live or protected in the assembled repository.
-- Key constructs: positive surface; near-real=`False`; protected=`True`.
-- Representative excerpt:
-
-```text
-0001: # rule_key: quantum.arq-q-0662-ruby
-0002: # evidence_anchor: BEGIN PRIVATE KEY
-0003: # regex_sample: -------------------------BEGIN                    ENCRYPTED                      PRIVATE           KEY------------------------------------------------------------------------------------------
-0004: # keywords: BEGIN PRIVATE KEY | BEGIN RSA PRIVATE KEY | BEGIN EC PRIVATE KEY
-0005: -------------------------BEGIN                    ENCRYPTED                      PRIVATE           KEY------------------------------------------------------------------------------------------
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0659-ruby
+0005: # evidence_anchor: OpenSSL::PKey::RSA.new(1024)
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_013.rb`
@@ -1233,11 +817,12 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0663-ruby
-0002: # evidence_anchor: JWT.decode(..., nil, false)
-0003: # regex_sample: JWT.decodeTa Hw@Cs!q'H # pP +_c=8~@B+6a*qVk?t$g!*9fLm~KZBb=NnGK__-r$Ia(\>h~TY cEWunil6).WP}v)7JMkf1{ed(-nl{WS%false
-0004: # keywords: JWT.decode | verify=false | algorithm=none
-0005: JWT.decodeTa Hw@Cs!q'H # pP +_c=8~@B+6a*qVk?t$g!*9fLm~KZBb=NnGK__-r$Ia(\>h~TY cEWunil6).WP}v)7JMkf1{ed(-nl{WS%false
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0663-ruby
+0005: # evidence_anchor: JWT.decode(..., nil, false)
+0006: # regex_sample: JWT.decodeTa Hw@Cs!q'H # pP +_c=8~@B+6a*qVk?t$g!*9fLm~KZBb=NnGK__-r$Ia(\>h~TY cEWunil6).WP}v)7JMkf1{ed(-nl{WS%false
+0007: # keywords: JWT.decode | verify=false | algorithm=none
+0008: JWT.decode(token, nil, false, { algorithm: 'none' })
 ```
 
 ### `native/quantum-coverage-native-b/ruby/rule_014.rb`
@@ -1248,8 +833,11 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: # rule_key: quantum.arq-q-0665-ruby
-0002: # evidence_anchor: OpenSSL::PKCS5.pbkdf2_hmac
+0003: payload = { sub: 'coverage' }
+0004: # rule_key: quantum.arq-q-0665-ruby
+0005: # evidence_anchor: OpenSSL::PKCS5.pbkdf2_hmac
+0007: # keywords: pbkdf2_hmac | OpenSSL::PKCS5 | iterations
+0008: OpenSSL::PKCS5.pbkdf2_hmac('password', 'salt', 1000, 32, 'sha1')
 ```
 
 ### `native/quantum-coverage-native-b/rust/rule_025.rs`
@@ -1260,8 +848,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0689-rust
-0002: // evidence_anchor: danger_accept_invalid_certs(true)
+0005: fn rule025() {
+0006:     // rule_key: quantum.arq-q-0689-rust
+0007:     // evidence_anchor: danger_accept_invalid_certs(true)
 ```
 
 ### `native/quantum-coverage-native-b/rust/rule_026.rs`
@@ -1272,8 +861,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0690-rust
-0002: // evidence_anchor: dangerous_configuration
+0005: fn rule026() {
+0006:     // rule_key: quantum.arq-q-0690-rust
+0007:     // evidence_anchor: dangerous_configuration
 ```
 
 ### `native/quantum-coverage-native-b/rust/rule_027.rs`
@@ -1284,11 +874,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0691-rust
-0002: // evidence_anchor: md5::compute
-0003: // regex_sample: md5::compute
-0004: // keywords: md5::compute | Md5 | digest::Digest | md-5
-0005: md5::compute
+0005: fn rule027() {
+0006:     // rule_key: quantum.arq-q-0691-rust
+0007:     // evidence_anchor: md5::compute
+0008:     // regex_sample: md5::compute
+0009:     // keywords: md5::compute | Md5 | digest::Digest | md-5
+0010:     md5::compute
+0011: }
 ```
 
 ### `native/quantum-coverage-native-b/rust/rule_028.rs`
@@ -1299,11 +891,13 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0692-rust
-0002: // evidence_anchor: sha1::Sha1
-0003: // regex_sample: sha1::Sha1
-0004: // keywords: sha1::Sha1 | Sha1 | digest::Digest | sha-1
-0005: sha1::Sha1
+0005: fn rule028() {
+0006:     // rule_key: quantum.arq-q-0692-rust
+0007:     // evidence_anchor: sha1::Sha1
+0008:     // regex_sample: sha1::Sha1
+0009:     // keywords: sha1::Sha1 | Sha1 | digest::Digest | sha-1
+0010:     sha1::Sha1
+0011: }
 ```
 
 ### `native/quantum-coverage-native-b/rust/rule_029.rs`
@@ -1314,8 +908,9 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0693-rust
-0002: // evidence_anchor: aes::Aes* + block_modes::Ecb
+0005: fn rule029() {
+0006:     // rule_key: quantum.arq-q-0693-rust
+0007:     // evidence_anchor: aes::Aes* + block_modes::Ecb
 ```
 
 ### `native/quantum-coverage-native-b/rust/rule_030.rs`
@@ -1326,8 +921,34 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 - Representative excerpt:
 
 ```text
-0001: // rule_key: quantum.arq-q-0696-rust
-0002: // evidence_anchor: pbkdf2::pbkdf2_hmac
+0005: fn rule030() {
+0006:     // rule_key: quantum.arq-q-0696-rust
+0007:     // evidence_anchor: pbkdf2::pbkdf2_hmac
+0009:     // keywords: pbkdf2 | iterations | pbkdf2_hmac
+0010:     pbkdf2::pbkdf2_hmac::<sha1::Sha1>(b"password", b"salt", 1000, &mut [0u8; 32]);
+0011: }
+```
+
+### `pom.xml`
+
+- Why this file matters: `build/deploy` file with expectation `none`.
+- Detailed summary: Build or deployment definition shaping how Pom is compiled, packaged, or released. It is non-live or protected in the assembled repository.
+- Key constructs: negative or realism-supporting surface; near-real=`False`; protected=`False`.
+- Representative excerpt:
+
+```text
+0001: <project>
+0002:   <modelVersion>4.0.0</modelVersion>
+0003:   <groupId>io.arq.lab</groupId>
+0004:   <artifactId>coverage-context</artifactId>
+0005:   <version>1.0.0</version>
+0006:   <properties>
+0007:     <maven.compiler.source>8</maven.compiler.source>
+0008:     <maven.compiler.target>8</maven.compiler.target>
+0009:     <maven.compiler.release>8</maven.compiler.release>
+0010:     <java.version>8</java.version>
+0011:   </properties>
+0012: </project>
 ```
 
 ### `scripts/smoke.ps1`
@@ -1341,35 +962,69 @@ Snapshot-only scenario. No branch divergence or history-only contract is intende
 0001: Write-Host 'config smoke ok'
 ```
 
-### `services/quantum-coverage-native-b/module-003/pom.xml`
+### `secrets/quantum-coverage-native-b/keys/rule_001.jks`
 
 - Why this file matters: `generated` file with expectation `must_find`.
-- Detailed summary: Generated or derived project artifact related to Pom. It is non-live or protected in the assembled repository.
+- Detailed summary: Generated or derived project artifact related to Rule 001. It is non-live or protected in the assembled repository.
 - Key constructs: positive surface; near-real=`False`; protected=`True`.
 - Representative excerpt:
 
 ```text
-0002:   <dependencies>
-0003:     <!-- rsa-sha1 Other xmldsig#rsa-sha1 dsa-sha1 -->
-0004:   </dependencies>
+0001: BINARY_KEYSTORE_PLACEHOLDER
+```
+
+### `secrets/quantum-coverage-native-b/keys/rule_012.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 012. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0662-ruby
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: -------------------------BEGIN                    ENCRYPTED                      PRIVATE           KEY------------------------------------------------------------------------------------------
+0004: // keywords: BEGIN PRIVATE KEY | BEGIN RSA PRIVATE KEY | BEGIN EC PRIVATE KEY
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
+```
+
+### `secrets/quantum-coverage-native-b/keys/rule_021.pem`
+
+- Why this file matters: `generated` file with expectation `must_find`.
+- Detailed summary: Generated or derived project artifact related to Rule 021. It is non-live or protected in the assembled repository.
+- Key constructs: positive surface; near-real=`False`; protected=`True`.
+- Representative excerpt:
+
+```text
+0001: // rule_key: quantum.arq-q-0679-php
+0002: // evidence_anchor: BEGIN PRIVATE KEY
+0003: // regex_sample: --------------------------------------------------BEGIN                       ENCRYPTED                     PRIVATE   KEY---------------
+0004: // keywords: BEGIN PRIVATE KEY | BEGIN RSA PRIVATE KEY | BEGIN EC PRIVATE KEY
+0005: -----BEGIN PRIVATE KEY-----
+0006: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZm4v8xY8wX6mX
+0013: Q1bC3dE5fG7hJ9kL1mN3pQ5rS7tU9vW0xY2zA4bC6dE8fG0hJ2kL4mN6pQ8rS0tU
+0014: -----END PRIVATE KEY-----
 ```
 
 ## 12. Line Composition and Filler Disclosure
 
-- Total LOC considered for authored/generated project content: `7255`
-- Synthetic filler / inflation LOC: `6600`
-- Synthetic filler ratio: `90.97%`
+- Total LOC considered for authored/generated project content: `1661`
+- Synthetic filler / inflation LOC: `880`
+- Synthetic filler ratio: `52.98%`
 
 | category | LOC |
 | --- | ---: |
-| live business code | 15 |
+| live business code | 42 |
 | live config | 11 |
 | tests | 3 |
 | docs | 16 |
 | scripts | 2 |
 | fixtures | 0 |
-| vendor/generated | 600 |
-| synthetic filler / inflation content | 6600 |
+| vendor/generated | 687 |
+| synthetic filler / inflation content | 880 |
 
 Inflation disclosure:
 
@@ -1380,7 +1035,7 @@ Inflation disclosure:
 
 ### must_find
 
-- path: `native/quantum-coverage-native-b/kotlin/rule_001.kt`
+- path: `secrets/quantum-coverage-native-b/keys/rule_001.jks`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0643-kotlin`
   expected branch/ref behavior: `head-only`
@@ -1390,7 +1045,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0644-kotlin`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `services/quantum-coverage-native-b/module-003/pom.xml`
+- path: `native/quantum-coverage-native-b/kotlin/rule_003.kt`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0648-kotlin`
   expected branch/ref behavior: `head-only`
@@ -1435,7 +1090,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0659-ruby`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-b/ruby/rule_012.rb`
+- path: `secrets/quantum-coverage-native-b/keys/rule_012.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0662-ruby`
   expected branch/ref behavior: `head-only`
@@ -1480,7 +1135,7 @@ Inflation disclosure:
   expected rule/finding family: `quantum.arq-q-0676-php`
   expected branch/ref behavior: `head-only`
   expected explainability behavior: No strict scenario-specific explainability contract beyond normal detail capture.
-- path: `native/quantum-coverage-native-b/php/rule_021.php`
+- path: `secrets/quantum-coverage-native-b/keys/rule_021.pem`
   module: `Quantum`
   expected rule/finding family: `quantum.arq-q-0679-php`
   expected branch/ref behavior: `head-only`

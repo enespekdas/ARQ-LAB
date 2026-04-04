@@ -1,0 +1,171 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-212\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.7305502846299811,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-212\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-212\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 74,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1054,
+      "vendor/generated": 166
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-python-3-4-to-3-6-02\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-COV-212.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-python-3-4-to-3-6-02\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "7 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_001.py"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_002.py"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_003.py"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_004.py"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_005.py"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_006.py"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_007.py"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 7,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_001.py"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_002.py"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_003.py"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_004.py"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_005.py"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_006.py"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_007.py"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "b1541563-c09d-4cde-bf99-b06473ee94de",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_005.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V4-COV-212",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "b1541563-c09d-4cde-bf99-b06473ee94de",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-precision-python-3-4-to-3-6-02/app/legacy/rule_005.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

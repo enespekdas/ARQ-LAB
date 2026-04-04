@@ -1,0 +1,175 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-205\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6615120274914089,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-205\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-205\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 131,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1164,
+      "vendor/generated": 218
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-csharp-net4-0-to-4-6-1-02\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-205.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-csharp-net4-0-to-4-6-1-02\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "10 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "new TokenValidationParameters { ValidateIssuerSigningKey = false, ValidateAudience = false };",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "19db8173-ad25-4d75-9f98-b23611d9ed90",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule001.cs",
+        "queryFamily": "csharp.jwt",
+        "rawEvidenceJson": "{\"queryRef\":\"csharp.jwt.validation-disabled\",\"callName\":\"TokenValidationParameters\",\"resolutionScope\":\"SAME_METHOD\",\"memberName\":\"ValidateAudience|ValidateIssuerSigningKey\",\"resolvedValue\":\"ValidateAudience=false|ValidateIssuerSigningKey=false\",\"language\":\"csharp\",\"bindingKind\":\"OBJECT_CREATION\",\"disabledFlags\":[\"ValidateAudience\",\"ValidateIssuerSigningKey\"],\"valueSource\":\"OBJECT_INITIALIZER\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "ValidateAudience=false|ValidateIssuerSigningKey=false",
+        "ruleKey": "quantum.arq-q-0531-csharp",
+        "ruleName": "JWT: token validation disabled via TokenValidationParameters (critical auth bypass)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "csharp:jwt:ValidateAudience|ValidateIssuerSigningKey:ValidateAudience=false|ValidateIssuerSigningKey=false",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule003.cs"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule004.cs"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule005.cs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule006.cs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule007.cs"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule008.cs"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule009.cs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule010.cs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule011.cs"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 11,
+  "mustFindMatched": 1,
+  "mustFindMissing": [
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule003.cs"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule004.cs"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule005.cs"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule006.cs"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule007.cs"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule008.cs"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule009.cs"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule010.cs"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-csharp-net4-0-to-4-6-1-02/src/legacy/Rule011.cs"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-205",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T02:41:43.068177600Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "f9937fa4-3711-437b-8e66-ef65271226d3",
+      "applicationKey": "arq-lab-q-v6-ts-002",
+      "applicationName": "tls-wrapper-node",
+      "branchName": "main",
+      "commitSha": "a7d440c77aa528b269ea27897981202c0dc1cda3",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "c4c3c972-e550-48e5-87e6-aa9b03c1c3c9",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-04T02:41:39.747374Z",
+      "lastSeenAt": "2026-04-04T02:41:39.747374Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/modules/http/insecureSpreadAgent.ts",
+      "primaryLineEnd": 2,
+      "primaryLineStart": 2,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0611-typescript",
+      "ruleName": "TLS Trust Bypass",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-platform.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-platform",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-platform",
+    "name": "guardian-coverage-platform",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "c29594e842071327f362b67495008478803c6959"
+      },
+      "head": "c29594e842071327f362b67495008478803c6959",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T21:11:46+03:00",
+          "message": "bootstrap G-V1-COV-111",
+          "sha": "c29594e842071327f362b67495008478803c6959"
+        }
+      ]
+    },
+    "lineCount": 6920,
+    "repoName": "guardian-coverage-platform",
+    "scenarioId": "G-V1-COV-111"
+  },
+  "scenario": {
+    "domain": "Platform credential corpus covering cloud runtime, SSO brokers, and internal developer platform providers.",
+    "id": "G-V1-COV-111",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-platform",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

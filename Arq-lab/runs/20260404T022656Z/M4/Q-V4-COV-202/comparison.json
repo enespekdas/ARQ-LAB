@@ -1,0 +1,410 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-202\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5546218487394958,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-202\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-202\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 157,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 660,
+      "tests": 3,
+      "total": 1190,
+      "vendor/generated": 326
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-javascript-es3-to-es2025-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-COV-202.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-javascript-es3-to-es2025-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 12,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "5 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "const opts = { rejectUnauthorized: false }; https.request(opts);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a6f1e74f-d17c-4e5b-8111-401767a22273",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_001.js",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0591-javascript",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "secureProtocol: 'TLSv1_method'",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3620b509-d12a-4a27-b522-d1647a47a1ad",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_002.js",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0592-javascript",
+        "ruleName": "TLS Weak Protocol (legacy)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "crypto.createHash(\"md5\").update(\"legacy\").digest(\"hex\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b75d7cae-26a8-476a-ae9f-4fa5a168f43d",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_003.js",
+        "queryFamily": "javascript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.weak-hash\",\"callName\":\"crypto.createHash\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"javascript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0593-javascript",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.createHash:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "crypto.createHash(\"sha1\").update(\"legacy\").digest(\"hex\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "eaef6126-8cba-4327-80e9-9d8df493a454",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_004.js",
+        "queryFamily": "javascript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.weak-hash\",\"callName\":\"crypto.createHash\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"javascript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0594-javascript",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.createHash:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "crypto.createCipheriv(\"des-ede3-cbc\", Buffer.alloc(24), Buffer.alloc(8));",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f1ae7430-855b-498b-97a0-215f936c12af",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_005.js",
+        "queryFamily": "javascript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.weak-cipher\",\"callName\":\"crypto.createCipheriv\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"3DES\",\"language\":\"javascript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "3DES",
+        "ruleKey": "quantum.arq-q-0595-javascript",
+        "ruleName": "Weak Cipher (DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.createCipheriv:3DES",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "createCipheriv\n  ecb\n  'aes-128-ecb'\n  'aes-256-ecb'",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d6c3b32b-ad3c-4d60-8118-768247d352dc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_006.js",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0596-javascript",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "jsonwebtoken.verify(token, \"\", { algorithms: [\"none\"] });",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3b5595dc-2e7d-4e62-b989-9e926cc33036",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_007.js",
+        "queryFamily": "javascript.node.jwt",
+        "rawEvidenceJson": "{\"queryRef\":\"node.jwt.validation-disabled\",\"callName\":\"jsonwebtoken.verify\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"algorithms\",\"resolvedValue\":\"algorithms=none\",\"language\":\"javascript\",\"valueSource\":\"string_array\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "algorithms=none",
+        "ruleKey": "quantum.arq-q-0601-javascript",
+        "ruleName": "JWT alg=none / verification disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:jwt:jsonwebtoken.verify:algorithms=none",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "crypto.generateKeyPairSync(\"rsa\", { modulusLength: 1024 });",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "85ca2788-718a-455b-b7c7-f6f22c70f785",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_008.js",
+        "queryFamily": "javascript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.rsa-weak-keysize\",\"callName\":\"crypto.generateKeyPairSync\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"modulusLength\",\"resolvedValue\":\"1024\",\"language\":\"javascript\",\"valueSource\":\"number_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0604-javascript",
+        "ruleName": "Legacy RSA Key Size (Node crypto modulusLength=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.generateKeyPairSync:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "crypto.pbkdf2Sync(\"password\", \"salt\", 1000, 32, \"sha1\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "15ed84c8-4a7a-4d2f-94c0-cac36d513536",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_009.js",
+        "queryFamily": "javascript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.pbkdf2-low-iterations\",\"callName\":\"crypto.pbkdf2Sync\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1000\",\"language\":\"javascript\",\"valueSource\":\"number_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1000",
+        "ruleKey": "quantum.arq-q-0605-javascript",
+        "ruleName": "Weak KDF (Node pbkdf2 low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.pbkdf2Sync:1000",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d8971f28-70ec-4c81-84a1-450e251e8a42",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_010.js",
+        "queryFamily": "javascript.node.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"node.tls.env-verification-bypass\",\"callName\":\"process.env.NODE_TLS_REJECT_UNAUTHORIZED\",\"resolutionScope\":\"SAME_FUNCTION\",\"memberName\":\"NODE_TLS_REJECT_UNAUTHORIZED\",\"resolvedValue\":\"NODE_TLS_REJECT_UNAUTHORIZED=0\",\"language\":\"javascript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "ruleKey": "quantum.arq-q-0606-javascript",
+        "ruleName": "TLS Trust Bypass (NODE_TLS_REJECT_UNAUTHORIZED=0)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:tls:process.env.NODE_TLS_REJECT_UNAUTHORIZED:NODE_TLS_REJECT_UNAUTHORIZED=0",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-010"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "crypto.createSign(\"RSA-SHA1\").update(\"legacy\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "af805c0e-1620-419b-b269-37182386600d",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_011.js",
+        "queryFamily": "javascript.node.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"node.crypto.weak-signature-algorithm\",\"callName\":\"crypto.createSign\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"RSA-SHA1\",\"language\":\"javascript\",\"valueSource\":\"string_literal\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "RSA-SHA1",
+        "ruleKey": "quantum.arq-q-0607-javascript",
+        "ruleName": "Weak Signature Algorithm (Node createSign RSA-SHA1/MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "node:crypto:crypto.createSign:RSA-SHA1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-011"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "Math.random()",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "de066383-5a6d-4086-82d8-7d553932e7ae",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_014.js",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0599-javascript",
+        "ruleName": "Non-crypto RNG signal",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-014"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-012",
+      "pathContains": "secrets/quantum-precision-javascript-es3-to-es2025-01/keys/rule_012.pem"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_013.js"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/module-015/package.json"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/module-016/package.json"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_017.js"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 17,
+  "mustFindMatched": 12,
+  "mustFindMissing": [
+    {
+      "expected": "rule-012",
+      "pathContains": "secrets/quantum-precision-javascript-es3-to-es2025-01/keys/rule_012.pem"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_013.js"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/module-015/package.json"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/module-016/package.json"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "apps/quantum-precision-javascript-es3-to-es2025-01/src/legacy/rule_017.js"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 12,
+    "rawFindings": 12
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V4-COV-202",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

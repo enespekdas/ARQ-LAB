@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T01:19:22.083118600Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "ee5c0723-3240-4016-90b0-95e1f111b4c4",
+      "applicationKey": "arq-lab-q-v3-java-007",
+      "applicationName": "helper-return-java",
+      "branchName": "main",
+      "commitSha": "3d3a14a05a4e5744f0864d287fade7ea7c07d5b8",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "d3a77e2e-06f9-4dcc-aa5d-4e2cc56dd66a",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-04T01:19:17.386628Z",
+      "lastSeenAt": "2026-04-04T01:19:17.386628Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "src/main/java/com/arq/helperreturnjava/security/LegacyDigestFactory.java",
+      "primaryLineEnd": 13,
+      "primaryLineStart": 13,
+      "projectId": "501583a9-55c4-461b-8827-52cb00c8d0ad",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0072-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "HIGH",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

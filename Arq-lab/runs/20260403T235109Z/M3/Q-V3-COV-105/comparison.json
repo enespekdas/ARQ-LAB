@@ -1,0 +1,950 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-105\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.8835942818243703,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-105\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-105\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 338,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 6490,
+      "tests": 3,
+      "total": 7345,
+      "vendor/generated": 465
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-java-c\\validation\\generated-project-dossier.md",
+    "realismJustification": "contains a non-trivial amount of live business code; build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 2,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-105.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-java-c\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 9,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "21 expected finding(s) were not detected at all; 11 unexpected/noisy finding(s) remained after matching (same-surface-extra=4, same-file-different-signal=7)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "Cipher.getInstance(\"RC4\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "1e2fdbee-411f-4168-ae41-925ad2c491b8",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule001.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"Cipher.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"RC4\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "RC4",
+        "ruleKey": "quantum.arq-q-0190-java",
+        "ruleName": "Weak Symmetric Cipher",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:Cipher.getInstance:RC4",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"SSL_RSA_WITH_3DES_EDE_CBC_SHA\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "3aa8c594-2e02-40e0-aa0d-083b2928a22c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule003.java",
+        "queryFamily": "java.jsse",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSL_RSA_WITH_3DES_EDE_CBC_SHA\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+        "ruleKey": "quantum.arq-q-0192-java",
+        "ruleName": "Weak TLS CipherSuite",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jsse:setEnabledCipherSuites:SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"TLS_RSA_WITH_DES_CBC_SHA\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "cbc2864c-96da-4ea7-8a28-f8aef690341a",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule004.java",
+        "queryFamily": "java.jsse",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLS_RSA_WITH_DES_CBC_SHA\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLS_RSA_WITH_DES_CBC_SHA",
+        "ruleKey": "quantum.arq-q-0193-java",
+        "ruleName": "Weak TLS CipherSuite",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jsse:setEnabledCipherSuites:TLS_RSA_WITH_DES_CBC_SHA",
+        "severity": "HIGH"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"TLS_RSA_WITH_NULL_MD5\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "10fbb9bf-d986-444f-983d-d0bade09eac3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule005.java",
+        "queryFamily": "java.jsse",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLS_RSA_WITH_NULL_MD5\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLS_RSA_WITH_NULL_MD5",
+        "ruleKey": "quantum.arq-q-0194-java",
+        "ruleName": "Weak TLS CipherSuite",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jsse:setEnabledCipherSuites:TLS_RSA_WITH_NULL_MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"TLS_RSA_WITH_NULL_SHA\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "743bd4a4-830f-4328-8799-a4ae0ec0f2b4",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule006.java",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0195-java",
+        "ruleName": "Weak TLS CipherSuite",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"SSL_RSA_WITH_RC4_128_SHA\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f28781b8-fd6e-489e-88fa-7a35f0fcaf15",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule007.java",
+        "queryFamily": "java.jsse",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSL_RSA_WITH_RC4_128_SHA\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "SSL_RSA_WITH_RC4_128_SHA",
+        "ruleKey": "quantum.arq-q-0196-java",
+        "ruleName": "Weak TLS CipherSuite",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jsse:setEnabledCipherSuites:SSL_RSA_WITH_RC4_128_SHA",
+        "severity": "HIGH"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"TLS_DH_anon_WITH_AES_128_CBC_SHA\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "7192fed0-6d30-49f1-9530-d3ca3a4b21dc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule008.java",
+        "queryFamily": "java.jsse",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLS_DH_anon_WITH_AES_128_CBC_SHA\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLS_DH_anon_WITH_AES_128_CBC_SHA",
+        "ruleKey": "quantum.arq-q-0197-java",
+        "ruleName": "Weak TLS CipherSuite",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jsse:setEnabledCipherSuites:TLS_DH_anon_WITH_AES_128_CBC_SHA",
+        "severity": "HIGH"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "243e4824-c074-4b4b-95c5-2c4c6791370a",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+        "queryFamily": "java.jsse",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1.1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLSv1.1",
+        "ruleKey": "quantum.arq-q-0198-java",
+        "ruleName": "Weak TLS Protocol",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jsse:setEnabledProtocols:TLSv1.1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5f341295-601c-4bbe-9a77-7af2d20134cc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+        "queryFamily": "java.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1.1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLSv1.1",
+        "ruleKey": "quantum.arq-q-0199-java",
+        "ruleName": "Weak TLS Protocol",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:tls:setEnabledProtocols:TLSv1.1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-010"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule002.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule014.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule017.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule018.java"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule019.java"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule020.java"
+    },
+    {
+      "expected": "rule-021",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule021.java"
+    },
+    {
+      "expected": "rule-022",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule022.java"
+    },
+    {
+      "expected": "rule-023",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule023.java"
+    },
+    {
+      "expected": "rule-024",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule024.java"
+    },
+    {
+      "expected": "rule-025",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule025.java"
+    },
+    {
+      "expected": "rule-026",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule026.java"
+    },
+    {
+      "expected": "rule-027",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule027.java"
+    },
+    {
+      "expected": "rule-028",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule028.java"
+    },
+    {
+      "expected": "rule-029",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule029.java"
+    },
+    {
+      "expected": "rule-030",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule030.java"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 30,
+  "mustFindMatched": 9,
+  "mustFindMissing": [
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule002.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule014.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule017.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule018.java"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule019.java"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule020.java"
+    },
+    {
+      "expected": "rule-021",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule021.java"
+    },
+    {
+      "expected": "rule-022",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule022.java"
+    },
+    {
+      "expected": "rule-023",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule023.java"
+    },
+    {
+      "expected": "rule-024",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule024.java"
+    },
+    {
+      "expected": "rule-025",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule025.java"
+    },
+    {
+      "expected": "rule-026",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule026.java"
+    },
+    {
+      "expected": "rule-027",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule027.java"
+    },
+    {
+      "expected": "rule-028",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule028.java"
+    },
+    {
+      "expected": "rule-029",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule029.java"
+    },
+    {
+      "expected": "rule-030",
+      "pathContains": "services/quantum-coverage-java-c/src/legacy/Rule030.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 7,
+    "sameSurfaceExtraFindings": 4,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 11,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 20,
+    "rawFindings": 20
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"SSL_RSA_WITH_3DES_EDE_CBC_SHA\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "f9134212-8436-45b6-96e4-eceb5ae79c80",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule002.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSL_RSA_WITH_3DES_EDE_CBC_SHA\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+      "ruleKey": "quantum.arq-q-0192-java",
+      "ruleName": "Weak TLS CipherSuite",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledCipherSuites:SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "05844d59-2a23-4774-a935-57e722128407",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "0c842ca1-67a1-4e3a-97a9-d748f0c62478",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1.1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1.1",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:TLSv1.1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6a2ee45e-5446-42da-9bff-361d7e681a6d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "5f274ce7-9aec-4673-b45d-bfe80588e545",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "e87d7ac4-5417-4b61-9b58-4dfb5b583c36",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "e9950972-53e3-495c-aac9-0056b276c274",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1.1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1.1",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:TLSv1.1",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "329ff867-6e1e-4f0f-9418-b92808d9627d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "4484de5f-8ff6-49c4-b0c0-93d5a346aafd",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8c9a73be-271b-4589-9e30-2f8882b510ae",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "9e2480cb-6f32-4ba5-9539-1f4c8c1330e2",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    }
+  ],
+  "scenarioId": "Q-V3-COV-105",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledCipherSuites(new String[]{\"SSL_RSA_WITH_3DES_EDE_CBC_SHA\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "f9134212-8436-45b6-96e4-eceb5ae79c80",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule002.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-cipher-suites\",\"callName\":\"setEnabledCipherSuites\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSL_RSA_WITH_3DES_EDE_CBC_SHA\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+      "ruleKey": "quantum.arq-q-0192-java",
+      "ruleName": "Weak TLS CipherSuite",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledCipherSuites:SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "329ff867-6e1e-4f0f-9418-b92808d9627d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "4484de5f-8ff6-49c4-b0c0-93d5a346aafd",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "05844d59-2a23-4774-a935-57e722128407",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "0c842ca1-67a1-4e3a-97a9-d748f0c62478",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1.1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1.1",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:TLSv1.1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "6a2ee45e-5446-42da-9bff-361d7e681a6d",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule009.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "5f274ce7-9aec-4673-b45d-bfe80588e545",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "e87d7ac4-5417-4b61-9b58-4dfb5b583c36",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "e9950972-53e3-495c-aac9-0056b276c274",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.jsse",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jsse.set-enabled-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1.1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1.1",
+      "ruleKey": "quantum.arq-q-0198-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jsse:setEnabledProtocols:TLSv1.1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8c9a73be-271b-4589-9e30-2f8882b510ae",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "TLSv1",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:TLSv1",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket(); socket.setEnabledProtocols(new String[]{\"TLSv1\", \"TLSv1.1\", \"SSLv3\"});",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "9e2480cb-6f32-4ba5-9539-1f4c8c1330e2",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule010.java",
+      "queryFamily": "java.tls",
+      "rawEvidenceJson": "{\"queryRef\":\"java.tls.set-protocols\",\"callName\":\"setEnabledProtocols\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SSLv3\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SSLv3",
+      "ruleKey": "quantum.arq-q-0199-java",
+      "ruleName": "Weak TLS Protocol",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:tls:setEnabledProtocols:SSLv3",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

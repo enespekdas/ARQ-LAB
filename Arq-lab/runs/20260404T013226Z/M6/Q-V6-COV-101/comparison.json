@@ -1,0 +1,429 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6684672518568535,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V6-COV-101\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 112,
+      "scripts": 2,
+      "synthetic filler / inflation content": 990,
+      "tests": 3,
+      "total": 1481,
+      "vendor/generated": 350
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V6-COV-101.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-config\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 9,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "11 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-surface-extra=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "ssl_protocols TLSv1 TLSv1.1;",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "238fc37f-45e1-47b7-b3ed-02d22bcf4910",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-001/runtime.conf",
+        "queryFamily": "config.nginx",
+        "rawEvidenceJson": "{\"queryRef\":\"config.nginx.weak-protocol\",\"callName\":\"ssl_protocols\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"ssl_protocols=TLSv1.1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "ssl_protocols=TLSv1.1",
+        "ruleKey": "quantum.arq-q-0922-config",
+        "ruleName": "Nginx TLS Weak Protocols",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:ssl_protocols:ssl_protocols=TLSv1.1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "ssl_ciphers RC4:3DES:MD5;",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "ea77fa7c-6853-4f89-b466-7f79995c743e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-002/runtime.conf",
+        "queryFamily": "config.nginx",
+        "rawEvidenceJson": "{\"queryRef\":\"config.nginx.weak-cipher\",\"callName\":\"ssl_ciphers\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"ssl_ciphers=MD5\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "ssl_ciphers=MD5",
+        "ruleKey": "quantum.arq-q-0923-config",
+        "ruleName": "Nginx Insecure Cipher Suites",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:ssl_ciphers:ssl_ciphers=MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "ssl_verify_client",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5eb36bd9-3cb1-4900-9621-e3eac56c034a",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-003/runtime.conf",
+        "queryFamily": "config.nginx",
+        "rawEvidenceJson": "{\"queryRef\":\"config.nginx.trust-bypass\",\"callName\":\"ssl_verify_client\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"ssl_verify_client=off\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "ssl_verify_client=off",
+        "ruleKey": "quantum.arq-q-0924-config",
+        "ruleName": "Nginx Client Cert Verification Disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:ssl_verify_client:ssl_verify_client=off",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLProtocol TLSv1 TLSv1.1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "be040e90-35a1-4ddd-bd86-8ce681fd6a5c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-004/runtime.conf",
+        "queryFamily": "config.apache",
+        "rawEvidenceJson": "{\"queryRef\":\"config.apache.weak-protocol\",\"callName\":\"SSLProtocol\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"SSLProtocol=TLSv1.1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "SSLProtocol=TLSv1.1",
+        "ruleKey": "quantum.arq-q-0925-config",
+        "ruleName": "Apache TLS Weak Protocols",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:SSLProtocol:SSLProtocol=TLSv1.1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLCipherSuite RC4:3DES:MD5",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b44d8684-ac28-4d90-bd84-89493e7a3681",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-005/runtime.conf",
+        "queryFamily": "config.apache",
+        "rawEvidenceJson": "{\"queryRef\":\"config.apache.weak-cipher\",\"callName\":\"SSLCipherSuite\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"SSLCipherSuite=MD5\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "SSLCipherSuite=MD5",
+        "ruleKey": "quantum.arq-q-0926-config",
+        "ruleName": "Apache Insecure Cipher Suites",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:SSLCipherSuite:SSLCipherSuite=MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SSLProxyCheckPeerCN",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a3b514be-5628-4724-b212-9aeadedebd37",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-006/runtime.conf",
+        "queryFamily": "config.apache",
+        "rawEvidenceJson": "{\"queryRef\":\"config.apache.proxy-peer-check-disabled\",\"callName\":\"apache-proxy-peer-check\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"apache-proxy-peer-check=SSLProxyCheckPeerCN\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "apache-proxy-peer-check=SSLProxyCheckPeerCN",
+        "ruleKey": "quantum.arq-q-0927-config",
+        "ruleName": "Apache Proxy Peer Check Disabled",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:apache-proxy-peer-check:apache-proxy-peer-check=SSLProxyCheckPeerCN",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "KexAlgorithms diffie-hellman-group1-sha1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8b0febe7-56d5-4963-89ee-9a44c8dcbd42",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-014/runtime.conf",
+        "queryFamily": "config.sshd",
+        "rawEvidenceJson": "{\"queryRef\":\"config.sshd.weak-kex\",\"callName\":\"KexAlgorithms\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"KexAlgorithms=diffie-hellman-group1-sha1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "KexAlgorithms=diffie-hellman-group1-sha1",
+        "ruleKey": "quantum.arq-q-0941-config",
+        "ruleName": "SSHD weak KexAlgorithms (group1/sha1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:KexAlgorithms:KexAlgorithms=diffie-hellman-group1-sha1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-014"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "MACs",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "0efd75e1-af3d-4320-a63a-c0d2d0fb39a5",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-015/runtime.conf",
+        "queryFamily": "config.sshd",
+        "rawEvidenceJson": "{\"queryRef\":\"config.sshd.weak-mac\",\"callName\":\"MACs\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"MACs=hmac-sha1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "MACs=hmac-sha1",
+        "ruleKey": "quantum.arq-q-0942-config",
+        "ruleName": "SSHD weak MACs (hmac-sha1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:MACs:MACs=hmac-sha1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-015"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "Ciphers 3des-cbc",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5a82b740-4af4-464d-b402-f93400d944f3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-016/runtime.conf",
+        "queryFamily": "config.sshd",
+        "rawEvidenceJson": "{\"queryRef\":\"config.sshd.weak-cipher\",\"callName\":\"Ciphers\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"Ciphers=3des-cbc\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "Ciphers=3des-cbc",
+        "ruleKey": "quantum.arq-q-0943-config",
+        "ruleName": "SSHD weak Ciphers (3des-cbc)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "config:Ciphers:Ciphers=3des-cbc",
+        "severity": "HIGH"
+      },
+      "expected": "rule-016"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M6",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-007",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-007/runtime.conf"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-008/runtime.conf"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-009/runtime.conf"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-010/runtime.conf"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-011/runtime.conf"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-012/runtime.conf"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-013/runtime.conf"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "secrets/quantum-coverage-config/keys/rule_017.pem"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "secrets/quantum-coverage-config/keys/rule_018.p12"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-019/runtime.conf"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-020/runtime.conf"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 20,
+  "mustFindMatched": 9,
+  "mustFindMissing": [
+    {
+      "expected": "rule-007",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-007/runtime.conf"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-008/runtime.conf"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-009/runtime.conf"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-010/runtime.conf"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-011/runtime.conf"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-012/runtime.conf"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-013/runtime.conf"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "secrets/quantum-coverage-config/keys/rule_017.pem"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "secrets/quantum-coverage-config/keys/rule_018.p12"
+    },
+    {
+      "expected": "rule-019",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-019/runtime.conf"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "deploy/live/quantum-coverage-config/runtime-020/runtime.conf"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 1,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 10,
+    "rawFindings": 10
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "SSLProxyCheckPeerName",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "286334c0-34dd-4f52-926b-6a846af34eb6",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-006/runtime.conf",
+      "queryFamily": "config.apache",
+      "rawEvidenceJson": "{\"queryRef\":\"config.apache.proxy-peer-check-disabled\",\"callName\":\"apache-proxy-peer-check\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"apache-proxy-peer-check=SSLProxyCheckPeerName\"}",
+      "resolutionScope": "FILE",
+      "resolvedValue": "apache-proxy-peer-check=SSLProxyCheckPeerName",
+      "ruleKey": "quantum.arq-q-0927-config",
+      "ruleName": "Apache Proxy Peer Check Disabled",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "config:apache-proxy-peer-check:apache-proxy-peer-check=SSLProxyCheckPeerName",
+      "severity": "CRITICAL"
+    }
+  ],
+  "scenarioId": "Q-V6-COV-101",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "SSLProxyCheckPeerName",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "286334c0-34dd-4f52-926b-6a846af34eb6",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "deploy/live/quantum-coverage-config/runtime-006/runtime.conf",
+      "queryFamily": "config.apache",
+      "rawEvidenceJson": "{\"queryRef\":\"config.apache.proxy-peer-check-disabled\",\"callName\":\"apache-proxy-peer-check\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"apache-proxy-peer-check=SSLProxyCheckPeerName\"}",
+      "resolutionScope": "FILE",
+      "resolvedValue": "apache-proxy-peer-check=SSLProxyCheckPeerName",
+      "ruleKey": "quantum.arq-q-0927-config",
+      "ruleName": "Apache Proxy Peer Check Disabled",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "config:apache-proxy-peer-check:apache-proxy-peer-check=SSLProxyCheckPeerName",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

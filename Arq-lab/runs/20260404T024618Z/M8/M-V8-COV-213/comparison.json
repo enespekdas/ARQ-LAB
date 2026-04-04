@@ -1,0 +1,284 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-213\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.650887573964497,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-213\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-213\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1183,
+      "vendor/generated": 373
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-ruby-1-6-to-3-4-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-213.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-ruby-1-6-to-3-4-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 6,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "8 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "http.verify_mode = OpenSSL::SSL::VERIFY_NONE",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "2a80470c-158a-4eda-ad5b-f32ec465b0ce",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_001.rb",
+        "queryFamily": "ruby.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"ruby.tls.trust-bypass\",\"callName\":\"verify_mode\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"VERIFY_NONE\",\"language\":\"ruby\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "VERIFY_NONE",
+        "ruleKey": "quantum.arq-q-0653-ruby",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "ruby:tls:verify_mode:VERIFY_NONE",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "OpenSSL::Digest::MD5",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "4fe6ec1c-8624-4f5e-bd8e-7bcf8546d94c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_003.rb",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0655-ruby",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "OpenSSL::Digest::SHA1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "1dafc162-0aed-4f10-9220-66f18c79b220",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_004.rb",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0656-ruby",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "OpenSSL::Cipher.new('AES-128-ECB')",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "371e003d-f1e6-4d29-a921-5a5bdbc451f3",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_006.rb",
+        "queryFamily": "ruby.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"ruby.crypto.aes-ecb\",\"callName\":\"OpenSSL::Cipher.new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"AES-128-ECB\",\"language\":\"ruby\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "AES-128-ECB",
+        "ruleKey": "quantum.arq-q-0658-ruby",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "ruby:crypto:OpenSSL::Cipher.new:AES-128-ECB",
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "OpenSSL::PKey::RSA.new(1024)",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "53365a22-4571-4df5-86cc-bc4f9bc287e7",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_007.rb",
+        "queryFamily": "ruby.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"ruby.crypto.rsa-weak-keysize\",\"callName\":\"OpenSSL::PKey::RSA.new\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"ruby\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0659-ruby",
+        "ruleName": "Legacy RSA Key Size (<=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "ruby:crypto:OpenSSL::PKey::RSA.new:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "OpenSSL::PKCS5.pbkdf2_hmac('password', 'salt', 1000, 32, 'sha1')",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "8eb98e22-1525-449b-b515-166d3c9746c5",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_010.rb",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0665-ruby",
+        "ruleName": "Weak KDF (Ruby OpenSSL PBKDF2 low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-010"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_002.rb"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_005.rb"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "secrets/quantum-precision-ruby-1-6-to-3-4-01/keys/rule_008.pem"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_009.rb"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_011.rb"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_012.rb"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/module-013/Gemfile"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_014.rb"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 14,
+  "mustFindMatched": 6,
+  "mustFindMissing": [
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_002.rb"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_005.rb"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "secrets/quantum-precision-ruby-1-6-to-3-4-01/keys/rule_008.pem"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_009.rb"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_011.rb"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_012.rb"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/module-013/Gemfile"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "native/quantum-precision-ruby-1-6-to-3-4-01/ruby/rule_014.rb"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 6,
+    "rawFindings": 6
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-213",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

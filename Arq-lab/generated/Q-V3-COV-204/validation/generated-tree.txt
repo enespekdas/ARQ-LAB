@@ -1,0 +1,84 @@
+quantum-precision-csharp-net4-0-to-4-6-1-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   `-- section-06.md
+|   `-- coverage-notes.md
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       `-- runbook-06.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- services
+|   `-- quantum-precision-csharp-net4-0-to-4-6-1-01
+|       `-- src
+|           `-- legacy
+|               |-- Rule001.cs
+|               |-- Rule002.cs
+|               |-- Rule003.cs
+|               |-- Rule004.cs
+|               |-- Rule005.cs
+|               |-- Rule006.cs
+|               |-- Rule007.cs
+|               |-- Rule008.cs
+|               |-- Rule009.cs
+|               |-- Rule010.cs
+|               |-- Rule011.cs
+|               |-- Rule012.cs
+|               |-- Rule013.cs
+|               |-- Rule014.cs
+|               |-- Rule015.cs
+|               |-- Rule016.cs
+|               |-- Rule017.cs
+|               `-- Rule018.cs
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       `-- reference-06.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- .gitignore
+|-- CoverageContext.csproj
+`-- README.md

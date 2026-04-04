@@ -1,0 +1,366 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-COV-111\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9293257514216084,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-COV-111\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-COV-111\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 28,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 59,
+      "scripts": 2,
+      "synthetic filler / inflation content": 5720,
+      "tests": 3,
+      "total": 6155,
+      "vendor/generated": 335
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\guardian-coverage-platform\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V1-COV-111.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\guardian-coverage-platform\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 8,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "12 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "squarespace = 1234****************************9abc",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d264f684-7040-4cb7-999f-8908d8f80abc",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-platform/runtime/provider_001.env",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.squarespace-access-token",
+        "ruleName": "Squarespace Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sumo = suAB******IJKL",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a6a113c3-2e1b-4e87-a230-233a79c0d51c",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/guardian-coverage-platform/provider_003.properties",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.sumologic-access-id",
+        "ruleName": "Sumologic Access ID",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "twitter = 1234****************************QRST",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "effe372b-be17-4d09-8d71-45fdc859a6d5",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/guardian-coverage-platform/secrets/provider_010.txt",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.twitter-access-token",
+        "ruleName": "Twitter Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-010"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "twitter = AAAA**********************************************************************************************BBBB",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "993beb15-1f86-4a37-9cf0-97e8a0620a29",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/guardian-coverage-platform/provider_013.properties",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.twitter-bearer-token",
+        "ruleName": "Twitter Bearer Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-013"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "typeform = tfp_*******************************************************aaaa",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d621d77b-304c-4096-af50-4afaea920a9b",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "terraform/guardian-coverage-platform/provider_014.tfvars",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.typeform-api-token",
+        "ruleName": "Typeform API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-014"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "yandex = t1.a********************************************************************************************bbbb",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "4fc6d944-26f6-49f0-a834-a35451cd9437",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-platform/config/provider_017.yaml",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.yandex-access-token",
+        "ruleName": "Yandex Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-017"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "yandex = AQVN*******************************AAAA",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "cc2f9a50-e487-449c-a338-8b27526fcc0e",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/guardian-coverage-platform/provider_018.properties",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.yandex-api-key",
+        "ruleName": "Yandex API Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-018"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "yandex = YCAA********************************AAAA",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "cf958f42-df6d-4bac-9cf8-598fbc8e9b18",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "terraform/guardian-coverage-platform/provider_019.tfvars",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.yandex-aws-access-token",
+        "ruleName": "Yandex AWS Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-019"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-002",
+      "pathContains": "integrations/guardian-coverage-platform/config/provider_002.yaml"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "terraform/guardian-coverage-platform/provider_004.tfvars"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "ops/guardian-coverage-platform/secrets/provider_005.txt"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "integrations/guardian-coverage-platform/runtime/provider_006.env"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "integrations/guardian-coverage-platform/config/provider_007.yaml"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "deploy/guardian-coverage-platform/provider_008.properties"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "terraform/guardian-coverage-platform/provider_009.tfvars"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "integrations/guardian-coverage-platform/runtime/provider_011.env"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "integrations/guardian-coverage-platform/config/provider_012.yaml"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "ops/guardian-coverage-platform/secrets/provider_015.txt"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "integrations/guardian-coverage-platform/runtime/provider_016.env"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "ops/guardian-coverage-platform/secrets/provider_020.txt"
+    }
+  ],
+  "module": "guardian",
+  "mustFindExpected": 20,
+  "mustFindMatched": 8,
+  "mustFindMissing": [
+    {
+      "expected": "rule-002",
+      "pathContains": "integrations/guardian-coverage-platform/config/provider_002.yaml"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "terraform/guardian-coverage-platform/provider_004.tfvars"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "ops/guardian-coverage-platform/secrets/provider_005.txt"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "integrations/guardian-coverage-platform/runtime/provider_006.env"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "integrations/guardian-coverage-platform/config/provider_007.yaml"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "deploy/guardian-coverage-platform/provider_008.properties"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "terraform/guardian-coverage-platform/provider_009.tfvars"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "integrations/guardian-coverage-platform/runtime/provider_011.env"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "integrations/guardian-coverage-platform/config/provider_012.yaml"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "ops/guardian-coverage-platform/secrets/provider_015.txt"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "integrations/guardian-coverage-platform/runtime/provider_016.env"
+    },
+    {
+      "expected": "rule-020",
+      "pathContains": "ops/guardian-coverage-platform/secrets/provider_020.txt"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 8,
+    "rawFindings": 8
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "G-V1-COV-111",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

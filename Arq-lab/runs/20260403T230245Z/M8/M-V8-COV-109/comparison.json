@@ -1,0 +1,159 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-109\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9562491093059712,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-109\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-109\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 6710,
+      "tests": 3,
+      "total": 7017,
+      "vendor/generated": 267
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-native-g-03\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-109.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-native-g-03\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 1,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "8 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "KeyAgreement.getInstance('ECDH/DH')",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "466f1162-e415-4118-81da-0b258d817a67",
+        "findingKind": "INVENTORY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-coverage-native-g-03/groovy/rule_009.groovy",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0881-groovy",
+        "ruleName": "HNDL Inventory (ECDH/DH)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-009"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "native/quantum-coverage-native-g-03/ruby/rule_001.rb"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-coverage-native-g-03/rust/rule_002.rs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "native/quantum-coverage-native-g-03/swift/rule_003.swift"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "native/quantum-coverage-native-g-03/erlang/rule_004.erl"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "native/quantum-coverage-native-g-03/elixir/rule_005.ex"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-coverage-native-g-03/shell/rule_006.sh"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "native/quantum-coverage-native-g-03/powershell/rule_007.ps1"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-coverage-native-g-03/c/rule_008.c"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 9,
+  "mustFindMatched": 1,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "native/quantum-coverage-native-g-03/ruby/rule_001.rb"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "native/quantum-coverage-native-g-03/rust/rule_002.rs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "native/quantum-coverage-native-g-03/swift/rule_003.swift"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "native/quantum-coverage-native-g-03/erlang/rule_004.erl"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "native/quantum-coverage-native-g-03/elixir/rule_005.ex"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-coverage-native-g-03/shell/rule_006.sh"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "native/quantum-coverage-native-g-03/powershell/rule_007.ps1"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "native/quantum-coverage-native-g-03/c/rule_008.c"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-109",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

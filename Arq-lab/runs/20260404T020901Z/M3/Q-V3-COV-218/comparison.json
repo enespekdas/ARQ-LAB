@@ -1,0 +1,491 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-218\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5271565495207667,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-218\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-218\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 222,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 660,
+      "tests": 3,
+      "total": 1252,
+      "vendor/generated": 318
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-java-8-to-25-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-218.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-java-8-to-25-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 11,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "7 expected finding(s) were not detected at all; 2 unexpected/noisy finding(s) remained after matching (same-file-different-signal=2)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "kpg.initialize(new ECGenParameterSpec(\"prime192v1\"));",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "22bea33b-0593-4c25-8a98-06c8ef882d7b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule001.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.constructor-string-argument\",\"callName\":\"ECGenParameterSpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"prime192v1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "prime192v1",
+        "ruleKey": "quantum.arq-q-0061-java",
+        "ruleName": "EC Weak Curve",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:ECGenParameterSpec:prime192v1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "kpg.initialize(new ECGenParameterSpec(\"prime224v1\"));",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f109d32c-9ee0-4aa9-8f56-abad3fec99c2",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule002.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.constructor-string-argument\",\"callName\":\"ECGenParameterSpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"prime224v1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "prime224v1",
+        "ruleKey": "quantum.arq-q-0062-java",
+        "ruleName": "EC Weak Curve",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:ECGenParameterSpec:prime224v1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "kpg.initialize(new ECGenParameterSpec(\"secp192r1\"));",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "0106059b-e725-47ed-a21e-06de63339033",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule003.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.constructor-string-argument\",\"callName\":\"ECGenParameterSpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"secp192r1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "secp192r1",
+        "ruleKey": "quantum.arq-q-0063-java",
+        "ruleName": "EC Weak Curve",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:ECGenParameterSpec:secp192r1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "kpg.initialize(new ECGenParameterSpec(\"secp224r1\"));",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "55ddb247-3717-4957-86b6-a033b001c2a8",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule004.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.constructor-string-argument\",\"callName\":\"ECGenParameterSpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"secp224r1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "secp224r1",
+        "ruleKey": "quantum.arq-q-0064-java",
+        "ruleName": "EC Weak Curve",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:ECGenParameterSpec:secp224r1",
+        "severity": "HIGH"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "RSA/ECB/PKCS1Padding",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d0eb7a57-2fb3-4e60-bd05-1a5f76556007",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule005.java",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0066-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "new PBEKeySpec(\"legacy-password\".toCharArray(), \"salt\".getBytes(), 457, 128);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "bad5f26e-0abb-4b77-a666-a90bcb592d88",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule009.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.numeric-argument\",\"callName\":\"PBEKeySpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"457\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "457",
+        "ruleKey": "quantum.arq-q-0075-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:PBEKeySpec:457",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "store.load(new ByteArrayInputStream(new byte[0]), \"changeit\".toCharArray());",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "aa8a6332-cb6e-468d-9a0f-94365591467e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule010.java",
+        "queryFamily": "java.keystore",
+        "rawEvidenceJson": "{\"queryRef\":\"java.keystore.password-argument\",\"callName\":\"store.load\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"toCharArray\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "toCharArray",
+        "ruleKey": "quantum.arq-q-0078-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:keystore:store.load:toCharArray",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-010"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "AES/ECB",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5c6a6565-df04-4df3-8ac7-8d61f410c513",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule012.java",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0083-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-012"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "DES",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "cfdbcf9d-1ee2-4f50-8675-cede4861073f",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule013.java",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0084-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-013"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "SSLContext.getInstance(\"TLSv1\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "872b457c-eb3f-4736-9c0b-090fb9e9d6c5",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule014.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"SSLContext.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLSv1",
+        "ruleKey": "quantum.arq-q-0086-java",
+        "ruleName": "Existing Pack",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:tls:SSLContext.getInstance:TLSv1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-014"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "new SecretKeySpec(Base64.getDecoder().decode(\"QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVo=\"), \"AES\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a45363b1-9f25-45a9-97f5-2cef7274fb9b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule017.java",
+        "queryFamily": "java.secret-key-spec-hardcoded",
+        "rawEvidenceJson": "{\"queryRef\":\"java.secret-key-spec-hardcoded\",\"callName\":\"SecretKeySpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"base64Literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "base64Literal",
+        "ruleKey": "quantum.arq-q-0094-java",
+        "ruleName": "Hardcoded Symmetric Key",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:secretkeyspec:SecretKeySpec:base64Literal",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-017"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-01/keys/rule_018.pem"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 18,
+  "mustFindMatched": 11,
+  "mustFindMissing": [
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-01/keys/rule_018.pem"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 2,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 2,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 13,
+    "rawFindings": 13
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "Mac.getInstance(\"HmacMD5\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "179fc81a-9d41-4991-a58a-03d314205f35",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule011.java",
+      "queryFamily": "java.jca",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"Mac.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"HmacMD5\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "HmacMD5",
+      "ruleKey": "quantum.arq-q-0179-java",
+      "ruleName": "Weak MAC",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jca:Mac.getInstance:HmacMD5",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "new SecretKeySpec(Base64.getDecoder().decode(\"QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVo=\"), \"AES\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "0d65c9a0-692f-443d-9f73-b43e592bd9bd",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule016.java",
+      "queryFamily": "java.secret-key-spec-hardcoded",
+      "rawEvidenceJson": "{\"queryRef\":\"java.secret-key-spec-hardcoded\",\"callName\":\"SecretKeySpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"base64Literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "base64Literal",
+      "ruleKey": "quantum.arq-q-0094-java",
+      "ruleName": "Hardcoded Symmetric Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:secretkeyspec:SecretKeySpec:base64Literal",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-218",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "Mac.getInstance(\"HmacMD5\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "179fc81a-9d41-4991-a58a-03d314205f35",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule011.java",
+      "queryFamily": "java.jca",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"Mac.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"HmacMD5\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "HmacMD5",
+      "ruleKey": "quantum.arq-q-0179-java",
+      "ruleName": "Weak MAC",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jca:Mac.getInstance:HmacMD5",
+      "severity": "HIGH"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "new SecretKeySpec(Base64.getDecoder().decode(\"QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVo=\"), \"AES\");",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "0d65c9a0-692f-443d-9f73-b43e592bd9bd",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-java-8-to-25-01/src/legacy/Rule016.java",
+      "queryFamily": "java.secret-key-spec-hardcoded",
+      "rawEvidenceJson": "{\"queryRef\":\"java.secret-key-spec-hardcoded\",\"callName\":\"SecretKeySpec\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"base64Literal\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "base64Literal",
+      "ruleKey": "quantum.arq-q-0094-java",
+      "ruleName": "Hardcoded Symmetric Key",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:secretkeyspec:SecretKeySpec:base64Literal",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

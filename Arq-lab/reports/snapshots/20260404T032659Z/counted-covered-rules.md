@@ -1,0 +1,472 @@
+# Counted Covered Rules
+
+## Guardian
+
+- `guardian.1password-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.1password-service-account-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.adafruit-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.adobe-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.adobe-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.age-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.airtable-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.airtable-personnal-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.algolia-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.alibaba-access-key-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.alibaba-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.anthropic-admin-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.anthropic-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.artifactory-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.artifactory-reference-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.asana-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.asana-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.atlassian-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.authress-service-client-access-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.aws-access-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-112
+- `guardian.aws-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-101
+- `guardian.aws-amazon-bedrock-api-key-long-lived` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.aws-amazon-bedrock-api-key-short-lived` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.aws-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-112
+- `guardian.azure-ad-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.beamer-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.bitbucket-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.bitbucket-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.bittrex-access-key` | bucket=`mixed_exercised` | expected=1 | unexpected=1 | surfaced_scenarios=G-V1-COV-102
+- `guardian.bittrex-secret-key` | bucket=`mixed_exercised` | expected=1 | unexpected=1 | surfaced_scenarios=G-V1-COV-102
+- `guardian.cisco-meraki-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.clickhouse-cloud-api-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.clojars-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.cloudflare-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.cloudflare-global-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.cloudflare-origin-ca-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.codecov-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.cohere-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.coinbase-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.confluent-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.confluent-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.contentful-delivery-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-102
+- `guardian.curl-auth-header` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.curl-auth-user` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.databricks-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.datadog-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.defined-networking-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.digitalocean-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.digitalocean-pat` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.digitalocean-refresh-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.discord-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.discord-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.discord-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.doppler-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.droneci-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.dropbox-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.dropbox-long-lived-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.dropbox-short-lived-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.duffel-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.dynatrace-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.easypost-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.easypost-test-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-103
+- `guardian.etsy-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.facebook-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.facebook-page-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.facebook-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.fastly-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.finicity-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.finicity-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.finnhub-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.flickr-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.flutterwave-encryption-key` | bucket=`mixed_exercised` | expected=1 | unexpected=1 | surfaced_scenarios=G-V1-COV-104
+- `guardian.flutterwave-public-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.flutterwave-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.flyio-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.frameio-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.freemius-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.freshbooks-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.gcp-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.generic-api-key` | bucket=`mixed_exercised` | expected=41 | unexpected=15 | surfaced_scenarios=G-V1-CONFIG-004, G-V1-COV-102, G-V1-COV-103, G-V1-COV-104, G-V1-COV-106
+- `guardian.generic-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-112
+- `guardian.github-app-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.github-fine-grained-pat` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.github-oauth` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-104
+- `guardian.github-pat` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.github-refresh-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-cicd-job-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-deploy-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-feature-flag-client-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-feed-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-incoming-mail-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-kubernetes-agent-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-oauth-app-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-pat` | bucket=`mixed_exercised` | expected=1 | unexpected=1 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-pat-routable` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-ptt` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-rrt` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-runner-authentication-token` | bucket=`mixed_exercised` | expected=1 | unexpected=1 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-runner-authentication-token-routable` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-scim-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitlab-session-cookie` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gitter-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.gocardless-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.grafana-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-105
+- `guardian.grafana-cloud-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.grafana-service-account-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.harness-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.hashicorp-tf-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.hashicorp-tf-password` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.heroku-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.heroku-api-key-v2` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.hubspot-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.huggingface-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.huggingface-organization-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.infracost-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.intercom-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.intra42-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.jfrog-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.jfrog-identity-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.jwt` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.jwt-base64` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.kraken-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.kubernetes-secret-yaml` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.kucoin-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-106
+- `guardian.kucoin-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.launchdarkly-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.linear-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.linear-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.linkedin-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.linkedin-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.lob-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.lob-pub-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.looker-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.looker-client-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.mailchimp-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.mailgun-private-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.mailgun-pub-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.mailgun-signing-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.mapbox-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.mattermost-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.maxmind-license-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.messagebird-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.messagebird-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.microsoft-teams-webhook` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-107
+- `guardian.netlify-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.new-relic-browser-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.new-relic-insert-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.new-relic-user-api-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.new-relic-user-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.notion-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.npm-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.nuget-config-password` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.nytimes-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.octopus-deploy-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.okta-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.openai-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.openshift-user-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.perplexity-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.pkcs12-file` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.plaid-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.plaid-client-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.plaid-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.planetscale-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.planetscale-oauth-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-108
+- `guardian.planetscale-password` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.postman-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.prefect-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.private-key` | bucket=`mixed_exercised` | expected=10 | unexpected=10 | surfaced_scenarios=G-V1-CONFIG-004, G-V1-JAVA-001, G-V1-TS-003, G-V2-HIST-003, G-V2-HIST-008
+- `guardian.privateai-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.pulumi-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.pypi-upload-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.rapidapi-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.readme-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.rubygems-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.scalingo-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sendbird-access-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sendbird-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sendgrid-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sendinblue-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sentry-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sentry-org-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.sentry-user-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.settlemint-application-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.settlemint-personal-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.settlemint-service-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-109
+- `guardian.shippo-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.shopify-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.shopify-custom-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.shopify-private-app-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.shopify-shared-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.sidekiq-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.sidekiq-sensitive-url` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-app-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-bot-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-config-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-config-refresh-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-legacy-bot-token` | bucket=`mixed_exercised` | expected=1 | unexpected=1 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-legacy-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-legacy-workspace-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-user-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.slack-webhook-url` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.snyk-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.sonar-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.sourcegraph-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.square-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-110
+- `guardian.squarespace-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.stripe-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.stripe-live-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-112
+- `guardian.sumologic-access-id` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.sumologic-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.telegram-bot-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.travisci-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twilio-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twitch-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twitter-access-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twitter-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twitter-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twitter-api-secret` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.twitter-bearer-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.typeform-api-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.vault-batch-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.vault-service-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.yandex-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.yandex-api-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.yandex-aws-access-token` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+- `guardian.zendesk-secret-key` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=G-V1-COV-111
+
+## Quantum
+
+- `quantum.arq-q-0012-java` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=Q-V3-JAVA-002
+- `quantum.arq-q-0013-java` | bucket=`mixed_exercised` | expected=6 | unexpected=3 | surfaced_scenarios=M-V8-001, M-V8-003, M-V8-005, M-V8-007, M-V8-009
+- `quantum.arq-q-0026-java` | bucket=`expected_positive_exercised` | expected=5 | unexpected=0 | surfaced_scenarios=Q-V5-JAVA-001, Q-V5-JAVA-003, Q-V5-JAVA-004, Q-V5-JAVA-005, Q-V5-JAVA-007
+- `quantum.arq-q-0061-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0062-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0063-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0064-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0066-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0072-java` | bucket=`mixed_exercised` | expected=4 | unexpected=2 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220, Q-V3-JAVA-001, Q-V3-JAVA-004, Q-V3-JAVA-005
+- `quantum.arq-q-0075-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0078-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0082-java` | bucket=`mixed_exercised` | expected=1 | unexpected=2 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220, Q-V3-JAVA-002
+- `quantum.arq-q-0083-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0084-java` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-102, Q-V3-COV-218, Q-V3-COV-220
+- `quantum.arq-q-0085-java` | bucket=`expected_positive_exercised` | expected=6 | unexpected=0 | surfaced_scenarios=Q-V5-JAVA-001, Q-V5-JAVA-003, Q-V5-JAVA-004, Q-V5-JAVA-005, Q-V5-JAVA-006
+- `quantum.arq-q-0086-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0094-java` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-218
+- `quantum.arq-q-0127-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-219
+- `quantum.arq-q-0131-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-JAVA-001, Q-V3-JAVA-002
+- `quantum.arq-q-0141-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0145-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0150-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0151-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0169-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0171-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0172-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0173-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0174-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-219
+- `quantum.arq-q-0175-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0176-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0177-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0178-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-JAVA-001, Q-V3-JAVA-008
+- `quantum.arq-q-0179-java` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-101, Q-V3-COV-102, Q-V3-COV-218, Q-V3-COV-220
+- `quantum.arq-q-0180-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0182-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0183-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0187-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0189-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-102, Q-V3-COV-220
+- `quantum.arq-q-0190-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-220
+- `quantum.arq-q-0192-java` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-220
+- `quantum.arq-q-0193-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-220
+- `quantum.arq-q-0194-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-221
+- `quantum.arq-q-0195-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-221
+- `quantum.arq-q-0196-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-221
+- `quantum.arq-q-0197-java` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-221
+- `quantum.arq-q-0198-java` | bucket=`mixed_exercised` | expected=2 | unexpected=10 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-221
+- `quantum.arq-q-0199-java` | bucket=`mixed_exercised` | expected=2 | unexpected=10 | surfaced_scenarios=Q-V3-COV-105, Q-V3-COV-221
+- `quantum.arq-q-0207-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0208-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0209-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0210-cpp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0211-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0212-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0213-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0218-cpp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, M-V8-COV-203
+- `quantum.arq-q-0225-scala` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-230
+- `quantum.arq-q-0226-scala` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-230
+- `quantum.arq-q-0227-scala` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-230
+- `quantum.arq-q-0228-scala` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-230
+- `quantum.arq-q-0236-scala` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-230
+- `quantum.arq-q-0246-python` | bucket=`mixed_exercised` | expected=2 | unexpected=22 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-102, Q-V4-COV-104, Q-V4-COV-105, Q-V4-COV-203
+- `quantum.arq-q-0247-python` | bucket=`mixed_exercised` | expected=1 | unexpected=6 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-102, Q-V4-COV-206, Q-V4-COV-211, Q-V4-COV-213
+- `quantum.arq-q-0248-python` | bucket=`mixed_exercised` | expected=3 | unexpected=18 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-102, Q-V4-COV-104, Q-V4-COV-203, Q-V4-COV-206
+- `quantum.arq-q-0252-python` | bucket=`mixed_exercised` | expected=2 | unexpected=4 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-102, Q-V4-COV-203, Q-V4-COV-206, Q-V4-COV-211
+- `quantum.arq-q-0253-python` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-203, Q-V4-COV-206
+- `quantum.arq-q-0254-python` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-203
+- `quantum.arq-q-0255-python` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-203, Q-V4-COV-206
+- `quantum.arq-q-0256-python` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-203
+- `quantum.arq-q-0258-python` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-102, Q-V4-COV-203, Q-V4-COV-206
+- `quantum.arq-q-0260-python` | bucket=`mixed_exercised` | expected=2 | unexpected=20 | surfaced_scenarios=Q-V4-COV-102, Q-V4-COV-104, Q-V4-COV-206, Q-V4-COV-207, Q-V4-COV-209
+- `quantum.arq-q-0270-python` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-206
+- `quantum.arq-q-0276-python` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-102, Q-V4-COV-206
+- `quantum.arq-q-0291-python` | bucket=`mixed_exercised` | expected=2 | unexpected=6 | surfaced_scenarios=Q-V4-COV-102, Q-V4-COV-104, Q-V4-COV-207, Q-V4-COV-209, Q-V4-COV-211
+- `quantum.arq-q-0301-python` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V4-COV-102, Q-V4-COV-104, Q-V4-COV-207, Q-V4-COV-213
+- `quantum.arq-q-0305-python` | bucket=`mixed_exercised` | expected=8 | unexpected=6 | surfaced_scenarios=M-V8-001, M-V8-003, M-V8-005, M-V8-007, M-V8-009
+- `quantum.arq-q-0351-python` | bucket=`mixed_exercised` | expected=2 | unexpected=22 | surfaced_scenarios=Q-V4-COV-101, Q-V4-COV-102, Q-V4-COV-104, Q-V4-COV-105, Q-V4-COV-203
+- `quantum.arq-q-0365-python` | bucket=`mixed_exercised` | expected=2 | unexpected=6 | surfaced_scenarios=Q-V4-COV-104, Q-V4-COV-207, Q-V4-COV-209, Q-V4-COV-211, Q-V4-COV-213
+- `quantum.arq-q-0369-python` | bucket=`mixed_exercised` | expected=2 | unexpected=10 | surfaced_scenarios=Q-V4-COV-104, Q-V4-COV-105, Q-V4-COV-203, Q-V4-COV-206, Q-V4-COV-207
+- `quantum.arq-q-0375-python` | bucket=`mixed_exercised` | expected=2 | unexpected=10 | surfaced_scenarios=Q-V4-COV-105, Q-V4-COV-203, Q-V4-COV-206, Q-V4-COV-207, Q-V4-COV-209
+- `quantum.arq-q-0381-python` | bucket=`mixed_exercised` | expected=2 | unexpected=8 | surfaced_scenarios=Q-V4-COV-105, Q-V4-COV-203, Q-V4-COV-207, Q-V4-COV-209, Q-V4-COV-211
+- `quantum.arq-q-0387-python` | bucket=`mixed_exercised` | expected=2 | unexpected=26 | surfaced_scenarios=Q-V4-COV-105, Q-V4-COV-106, Q-V4-COV-108, Q-V4-COV-203, Q-V4-COV-204
+- `quantum.arq-q-0404-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=4 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-203, Q-V3-COV-204, Q-V3-COV-206
+- `quantum.arq-q-0405-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203, Q-V3-COV-204
+- `quantum.arq-q-0406-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203, Q-V3-COV-204
+- `quantum.arq-q-0408-csharp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203
+- `quantum.arq-q-0410-csharp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203
+- `quantum.arq-q-0411-csharp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203
+- `quantum.arq-q-0412-csharp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203
+- `quantum.arq-q-0414-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203, Q-V3-COV-204
+- `quantum.arq-q-0417-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-203, Q-V3-COV-204
+- `quantum.arq-q-0429-csharp` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-204
+- `quantum.arq-q-0430-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=6 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-107, Q-V3-COV-201, Q-V3-COV-204
+- `quantum.arq-q-0431-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-203, Q-V3-COV-204
+- `quantum.arq-q-0435-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=8 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-107, Q-V3-COV-201, Q-V3-COV-204
+- `quantum.arq-q-0442-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=4 | surfaced_scenarios=Q-V3-COV-104, Q-V3-COV-204, Q-V3-COV-206, Q-V3-COV-212
+- `quantum.arq-q-0445-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-104, Q-V3-COV-204, Q-V3-COV-206
+- `quantum.arq-q-0449-csharp` | bucket=`mixed_exercised` | expected=3 | unexpected=10 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-107, Q-V3-COV-201, Q-V3-COV-204
+- `quantum.arq-q-0453-csharp` | bucket=`mixed_exercised` | expected=1 | unexpected=10 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-107, Q-V3-COV-201, Q-V3-COV-204
+- `quantum.arq-q-0468-csharp` | bucket=`mixed_exercised` | expected=3 | unexpected=10 | surfaced_scenarios=Q-V3-COV-103, Q-V3-COV-104, Q-V3-COV-107, Q-V3-COV-201, Q-V3-COV-203
+- `quantum.arq-q-0488-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V3-COV-107, Q-V3-COV-211, Q-V3-CS-003, Q-V3-CS-005
+- `quantum.arq-q-0531-csharp` | bucket=`mixed_exercised` | expected=2 | unexpected=10 | surfaced_scenarios=Q-V3-COV-107, Q-V3-COV-201, Q-V3-COV-205, Q-V3-COV-206, Q-V3-COV-207
+- `quantum.arq-q-0571-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0572-go` | bucket=`expected_positive_exercised` | expected=3 | unexpected=0 | surfaced_scenarios=Q-V4-GO-002, Q-V4-GO-003, Q-V4-GO-004
+- `quantum.arq-q-0573-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-GO-002, Q-V4-GO-003
+- `quantum.arq-q-0574-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0575-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0576-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0577-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0581-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0582-go` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-109, Q-V4-COV-201
+- `quantum.arq-q-0591-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0592-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0593-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0594-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0595-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0596-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0599-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0601-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0604-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0605-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0606-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0607-javascript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-202
+- `quantum.arq-q-0611-typescript` | bucket=`expected_positive_exercised` | expected=4 | unexpected=0 | surfaced_scenarios=Q-V6-TS-001, Q-V6-TS-002, Q-V6-TS-004
+- `quantum.arq-q-0612-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0613-typescript` | bucket=`mixed_exercised` | expected=12 | unexpected=3 | surfaced_scenarios=M-V8-001, M-V8-002, M-V8-003, M-V8-004, M-V8-005
+- `quantum.arq-q-0614-typescript` | bucket=`expected_positive_exercised` | expected=1 | unexpected=0 | surfaced_scenarios=Q-V4-TS-003
+- `quantum.arq-q-0615-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0616-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0619-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0621-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0624-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0625-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0626-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0627-typescript` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V4-COV-103, Q-V4-COV-215
+- `quantum.arq-q-0633-kotlin` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-228
+- `quantum.arq-q-0634-kotlin` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-228
+- `quantum.arq-q-0635-kotlin` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-228
+- `quantum.arq-q-0636-kotlin` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-101, Q-V3-COV-228
+- `quantum.arq-q-0653-ruby` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-213
+- `quantum.arq-q-0655-ruby` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-213
+- `quantum.arq-q-0656-ruby` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-213
+- `quantum.arq-q-0658-ruby` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-213
+- `quantum.arq-q-0659-ruby` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-213
+- `quantum.arq-q-0665-ruby` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-213
+- `quantum.arq-q-0671-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0672-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0673-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0675-php` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0676-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0680-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0683-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0684-php` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-210
+- `quantum.arq-q-0690-rust` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-214
+- `quantum.arq-q-0691-rust` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-214
+- `quantum.arq-q-0692-rust` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-102, M-V8-COV-214
+- `quantum.arq-q-0702-rust` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-214
+- `quantum.arq-q-0707-swift` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-216
+- `quantum.arq-q-0708-swift` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-216
+- `quantum.arq-q-0709-swift` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-216
+- `quantum.arq-q-0710-swift` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-216
+- `quantum.arq-q-0713-swift` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-107, M-V8-COV-216
+- `quantum.arq-q-0718-swift` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-216
+- `quantum.arq-q-0722-swift` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-216
+- `quantum.arq-q-0724-erlang` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-205
+- `quantum.arq-q-0725-erlang` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-205
+- `quantum.arq-q-0726-erlang` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-205
+- `quantum.arq-q-0731-erlang` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-205
+- `quantum.arq-q-0732-erlang` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-205
+- `quantum.arq-q-0739-elixir` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-204
+- `quantum.arq-q-0740-elixir` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-204
+- `quantum.arq-q-0741-elixir` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-204
+- `quantum.arq-q-0747-elixir` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-204
+- `quantum.arq-q-0748-elixir` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-204
+- `quantum.arq-q-0752-elixir` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-103, M-V8-COV-204
+- `quantum.arq-q-0760-zig` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-108, M-V8-COV-218
+- `quantum.arq-q-0766-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0767-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0768-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0769-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0770-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0771-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0772-shell` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-108, M-V8-COV-215
+- `quantum.arq-q-0775-shell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-215
+- `quantum.arq-q-0782-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0784-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0785-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0786-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0787-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0788-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0789-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0793-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-108, M-V8-COV-212
+- `quantum.arq-q-0795-powershell` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-212
+- `quantum.arq-q-0809-tsql` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-217
+- `quantum.arq-q-0810-tsql` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-104, M-V8-COV-217
+- `quantum.arq-q-0818-c` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-202
+- `quantum.arq-q-0819-c` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-202
+- `quantum.arq-q-0822-c` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-202
+- `quantum.arq-q-0823-c` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-202
+- `quantum.arq-q-0824-c` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-202
+- `quantum.arq-q-0829-c` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-202
+- `quantum.arq-q-0836-objectivec` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-208
+- `quantum.arq-q-0837-objectivec` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-208
+- `quantum.arq-q-0838-objectivec` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-208
+- `quantum.arq-q-0839-objectivec` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-208
+- `quantum.arq-q-0840-objectivec` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-108, M-V8-COV-208
+- `quantum.arq-q-0847-objectivec` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-208
+- `quantum.arq-q-0859-perl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-209
+- `quantum.arq-q-0860-perl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-209
+- `quantum.arq-q-0861-perl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-209
+- `quantum.arq-q-0862-perl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-209
+- `quantum.arq-q-0863-perl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-105, M-V8-COV-209
+- `quantum.arq-q-0875-groovy` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0876-groovy` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0877-groovy` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0878-groovy` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0879-groovy` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0881-groovy` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-109, Q-V3-COV-214
+- `quantum.arq-q-0886-groovy` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0891-groovy` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, Q-V3-COV-214
+- `quantum.arq-q-0892-lua` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-207
+- `quantum.arq-q-0914-jcl` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-206
+- `quantum.arq-q-0915-jcl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-206
+- `quantum.arq-q-0916-jcl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-206
+- `quantum.arq-q-0917-jcl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-206
+- `quantum.arq-q-0918-jcl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-206
+- `quantum.arq-q-0919-jcl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-108, M-V8-COV-206
+- `quantum.arq-q-0921-jcl` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=M-V8-COV-106, M-V8-COV-206
+- `quantum.arq-q-0922-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0923-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0924-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0925-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0926-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0927-config` | bucket=`mixed_exercised` | expected=2 | unexpected=2 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0930-config` | bucket=`expected_positive_exercised` | expected=7 | unexpected=0 | surfaced_scenarios=M-V8-002, M-V8-004, M-V8-006, M-V8-008, M-V8-010
+- `quantum.arq-q-0931-config` | bucket=`expected_positive_exercised` | expected=9 | unexpected=0 | surfaced_scenarios=M-V8-002, M-V8-004, M-V8-006, M-V8-008, M-V8-010
+- `quantum.arq-q-0941-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0942-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0943-config` | bucket=`expected_positive_exercised` | expected=2 | unexpected=0 | surfaced_scenarios=Q-V6-COV-101, Q-V6-COV-201
+- `quantum.arq-q-0949-config` | bucket=`expected_positive_exercised` | expected=4 | unexpected=0 | surfaced_scenarios=Q-V6-CONFIG-003, Q-V6-CONFIG-004, Q-V6-CONFIG-005, Q-V6-CONFIG-006

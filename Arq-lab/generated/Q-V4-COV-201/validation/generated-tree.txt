@@ -1,0 +1,89 @@
+quantum-precision-go-1-to-1-26-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   |-- section-06.md
+|   |   `-- section-07.md
+|   `-- coverage-notes.md
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       |-- runbook-06.md
+|       `-- runbook-07.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-precision-go-1-to-1-26-01
+|       `-- keys
+|           `-- rule_008.pem
+|-- services
+|   `-- quantum-precision-go-1-to-1-26-01
+|       |-- internal
+|       |   `-- legacy
+|       |       |-- rule_001.go
+|       |       |-- rule_002.go
+|       |       |-- rule_003.go
+|       |       |-- rule_004.go
+|       |       |-- rule_005.go
+|       |       |-- rule_006.go
+|       |       |-- rule_007.go
+|       |       |-- rule_009.go
+|       |       |-- rule_010.go
+|       |       |-- rule_011.go
+|       |       |-- rule_012.go
+|       |       `-- rule_015.go
+|       |-- module-013
+|       |   `-- go.mod
+|       `-- module-014
+|           `-- go.mod
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       |-- reference-06.sql
+|       `-- reference-07.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- .gitignore
+|-- go.mod
+`-- README.md

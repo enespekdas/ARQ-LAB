@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-03T21:00:13.772748800Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "28d168d2-87d8-49bf-938d-37d009da368c",
+      "applicationKey": "arq-lab-q-v3-cov-105",
+      "applicationName": "quantum-coverage-java-c",
+      "branchName": "main",
+      "commitSha": "f4126877ce73df49b513b6dcf1dc947a8abfd9b9",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "952e0aa6-2904-4988-b707-a5b204e7d1cb",
+      "findingKind": "VULNERABILITY",
+      "firstSeenAt": "2026-04-03T21:00:10.029106Z",
+      "lastSeenAt": "2026-04-03T21:00:10.029106Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-coverage-java-c/src/legacy/Rule001.java",
+      "primaryLineEnd": 13,
+      "primaryLineStart": 13,
+      "projectId": "28428a7b-54cd-4d5b-8b60-e0726e2a4ec6",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0190-java",
+      "ruleName": "Weak Symmetric Cipher",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

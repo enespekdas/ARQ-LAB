@@ -58,7 +58,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 4,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -86,7 +86,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 4,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -109,6 +109,20 @@
     "positiveSurface": true,
     "protectedNegative": false,
     "purpose": "Runtime configuration carrying environment or deployment settings for Provider 018.",
+    "syntheticFiller": false
+  },
+  {
+    "classification": "live-config",
+    "findingExpectation": "must_find",
+    "loc": 9,
+    "nearRealNegative": true,
+    "participatesInBuild": true,
+    "participatesInSmoke": false,
+    "participatesInTest": true,
+    "path": "deploy/guardian-coverage-support/provider_019.yaml",
+    "positiveSurface": true,
+    "protectedNegative": false,
+    "purpose": "Runtime configuration carrying environment or deployment settings for Provider 019.",
     "syntheticFiller": false
   },
   {
@@ -870,7 +884,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 4,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -884,7 +898,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 8,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -940,7 +954,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 6,
+    "loc": 4,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -968,7 +982,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 4,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -982,21 +996,7 @@
   {
     "classification": "docs",
     "findingExpectation": "must_find",
-    "loc": 6,
-    "nearRealNegative": false,
-    "participatesInBuild": false,
-    "participatesInSmoke": false,
-    "participatesInTest": false,
-    "path": "ops/guardian-coverage-support/secrets/provider_005.txt",
-    "positiveSurface": true,
-    "protectedNegative": false,
-    "purpose": "Documentation or explanatory material for Provider 005.",
-    "syntheticFiller": false
-  },
-  {
-    "classification": "docs",
-    "findingExpectation": "must_find",
-    "loc": 6,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -1010,7 +1010,7 @@
   {
     "classification": "docs",
     "findingExpectation": "must_find",
-    "loc": 5,
+    "loc": 6,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,
@@ -2522,7 +2522,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 6,
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -2536,7 +2536,21 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 7,
+    "loc": 3,
+    "nearRealNegative": true,
+    "participatesInBuild": true,
+    "participatesInSmoke": false,
+    "participatesInTest": true,
+    "path": "terraform/guardian-coverage-support/provider_005.tf",
+    "positiveSurface": true,
+    "protectedNegative": false,
+    "purpose": "Runtime configuration carrying environment or deployment settings for Provider 005.",
+    "syntheticFiller": false
+  },
+  {
+    "classification": "live-config",
+    "findingExpectation": "must_find",
+    "loc": 3,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -2550,7 +2564,7 @@
   {
     "classification": "live-config",
     "findingExpectation": "must_find",
-    "loc": 3,
+    "loc": 6,
     "nearRealNegative": false,
     "participatesInBuild": true,
     "participatesInSmoke": false,
@@ -2559,20 +2573,6 @@
     "positiveSurface": true,
     "protectedNegative": false,
     "purpose": "Runtime configuration carrying environment or deployment settings for Provider 014.",
-    "syntheticFiller": false
-  },
-  {
-    "classification": "live-config",
-    "findingExpectation": "must_find",
-    "loc": 5,
-    "nearRealNegative": false,
-    "participatesInBuild": true,
-    "participatesInSmoke": false,
-    "participatesInTest": true,
-    "path": "terraform/guardian-coverage-support/provider_019.tfvars",
-    "positiveSurface": true,
-    "protectedNegative": false,
-    "purpose": "Runtime configuration carrying environment or deployment settings for Provider 019.",
     "syntheticFiller": false
   },
   {
@@ -2676,7 +2676,7 @@
   {
     "classification": "generated",
     "findingExpectation": "none",
-    "loc": 1207,
+    "loc": 1215,
     "nearRealNegative": false,
     "participatesInBuild": false,
     "participatesInSmoke": false,

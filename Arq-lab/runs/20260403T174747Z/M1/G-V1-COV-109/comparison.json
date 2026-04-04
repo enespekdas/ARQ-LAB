@@ -1,0 +1,485 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-COV-109\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.9272167288053169,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-COV-109\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\G-V1-COV-109\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 28,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 67,
+      "scripts": 2,
+      "synthetic filler / inflation content": 5720,
+      "tests": 3,
+      "total": 6169,
+      "vendor/generated": 341
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\guardian-coverage-mobile\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\G-V1-COV-109.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\guardian-coverage-mobile\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 15,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "5 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "pnu_********************************uqzi\\r",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c36545dc-5a65-4bf4-9dad-8b9a3199cbe8",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/guardian-coverage-mobile/provider_003.properties",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.prefect-api-token",
+        "ruleName": "Prefect API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "yv-1_hvcROl1VMxNu6Pvjg.D6lpo9xZDYprivateai pjogm5-7YbKRV\r>\t=\u000b mnmh************************lleo",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b1a5ba96-75e4-4486-929a-3257318ca81b",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "terraform/guardian-coverage-mobile/provider_004.tfvars",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.privateai-api-token",
+        "ruleName": "Privateai API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "pul-************************************d5a6\\n",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "6cf5a0d2-1e5b-4f8f-bd2b-a4212f27a011",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/guardian-coverage-mobile/secrets/provider_005.txt",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.pulumi-api-token",
+        "ruleName": "Pulumi API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "pypi**********************************************************************ZcEG",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c672e7d7-c05a-4061-8200-3cd5c9566f6f",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-mobile/runtime/provider_006.env",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.pypi-upload-token",
+        "ruleName": "Pypi Upload Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "IzcMrITtrxqLuIPJFUraCD53PwoxLKMbG8dHMWDJu9s8S4FvfKrapidapir9CD860uc3HtLLe1L\n\r, =\tmadd******************************************e3l_\\r",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "2cf3fe57-1947-476c-b531-f75fba3ad205",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-mobile/config/provider_007.yaml",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.rapidapi-access-token",
+        "ruleName": "Rapidapi Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "rdme*******************************************************************lv7z\\n",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "efccbc7f-1d11-47a1-a531-cb51b6846712",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/guardian-coverage-mobile/provider_008.properties",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.readme-api-token",
+        "ruleName": "Readme API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-008"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "ruby*************************************************2525'",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f67aa335-a104-48e2-8bcf-91bbd26141d4",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "terraform/guardian-coverage-mobile/provider_009.tfvars",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.rubygems-api-token",
+        "ruleName": "Rubygems API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "tk-u**********************************************4xV4",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "def3ed3b-559c-47d8-b130-a6af1a4109d3",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/guardian-coverage-mobile/secrets/provider_010.txt",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.scalingo-api-token",
+        "ruleName": "Scalingo API Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-010"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "RiMSaAYpyKH.PQiFyklsendbirdeL2X1vrDp\tz\f\n=>'2697****************************059f",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9f7bf5d0-367f-4093-937f-9dafb6a7c27d",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-mobile/runtime/provider_011.env",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.sendbird-access-id",
+        "ruleName": "Sendbird Access ID",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-011"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "q9iltejbSgzJVE6c.iINSPJkkHtda3sxsoRqisendbird6T4_v\n'\u000b:::='c1b2********************************3953",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "398f706d-2406-4fe7-a9e6-dff0a8dea61f",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-mobile/config/provider_012.yaml",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.sendbird-access-token",
+        "ruleName": "Sendbird Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-012"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "xsPOjQY_5kUpUUAVzSO8pk6V5sentryHMEpEXMi3DdYKaK=>'\" 01f6********************************************************f05d\\n",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b54e640e-c9d5-4384-b72a-b45e7b192a01",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/guardian-coverage-mobile/secrets/provider_015.txt",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.sentry-access-token",
+        "ruleName": "Sentry Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-015"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sntr***************************************************************b97c\\r",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "360cdaa1-8b8c-43aa-9f13-22de31564bc4",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "integrations/guardian-coverage-mobile/config/provider_017.yaml",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.sentry-user-token",
+        "ruleName": "Sentry User Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-017"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sm_a***************E1PY",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "1de5a46a-fcae-4a35-8f9f-4418c9212866",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "deploy/guardian-coverage-mobile/provider_018.properties",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.settlemint-application-access-token",
+        "ruleName": "Settlemint Application Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-018"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sm_p***************sfFv;",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "93b7c3de-5cba-4856-a643-85d864d60d7e",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "terraform/guardian-coverage-mobile/provider_019.tfvars",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.settlemint-personal-access-token",
+        "ruleName": "Settlemint Personal Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-019"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "sm_s***************3Sdh\\n",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "18625d17-36c2-422b-9e03-c750b2ed5476",
+        "findingKind": "SECRET",
+        "module": "guardian",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "ops/guardian-coverage-mobile/secrets/provider_020.txt",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "guardian.settlemint-service-access-token",
+        "ruleName": "Settlemint Service Access Token",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "guardian-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-020"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M1",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "integrations/guardian-coverage-mobile/runtime/provider_001.env"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "integrations/guardian-coverage-mobile/config/provider_002.yaml"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "deploy/guardian-coverage-mobile/provider_013.properties"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "terraform/guardian-coverage-mobile/provider_014.tfvars"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "integrations/guardian-coverage-mobile/runtime/provider_016.env"
+    }
+  ],
+  "module": "guardian",
+  "mustFindExpected": 20,
+  "mustFindMatched": 15,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "integrations/guardian-coverage-mobile/runtime/provider_001.env"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "integrations/guardian-coverage-mobile/config/provider_002.yaml"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "deploy/guardian-coverage-mobile/provider_013.properties"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "terraform/guardian-coverage-mobile/provider_014.tfvars"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "integrations/guardian-coverage-mobile/runtime/provider_016.env"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 15,
+    "rawFindings": 15
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "G-V1-COV-109",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

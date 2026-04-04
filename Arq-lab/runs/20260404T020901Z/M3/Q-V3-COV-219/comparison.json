@@ -1,0 +1,430 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-219\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.5374592833876222,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-219\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-219\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 175,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 660,
+      "tests": 3,
+      "total": 1228,
+      "vendor/generated": 341
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-java-8-to-25-02\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-219.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-java-8-to-25-02\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 10,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "8 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "KeyStore.load(inputStream, null)",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "54564b22-31b7-4d26-84a5-d59f826e0854",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule005.java",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0127-java",
+        "ruleName": "KeyStore Password",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "Cipher.getInstance(\"RSA/ECB/NoPadding\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "eb488f2c-3336-4d1a-8ae7-aa29caf28af4",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule009.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"Cipher.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"RSA/ECB/NoPadding\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "RSA/ECB/NoPadding",
+        "ruleKey": "quantum.arq-q-0141-java",
+        "ruleName": "RSA Encryption",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:Cipher.getInstance:RSA/ECB/NoPadding",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "Cipher.getInstance(\"RSA/ECB/PKCS1Padding\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b01f527a-dc02-407d-8c21-5fc3dcb9c6a7",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule010.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.get-instance-algorithm\",\"callName\":\"Cipher.getInstance\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"RSA/ECB/PKCS1Padding\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "RSA/ECB/PKCS1Padding",
+        "ruleKey": "quantum.arq-q-0145-java",
+        "ruleName": "RSA Encryption",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:Cipher.getInstance:RSA/ECB/PKCS1Padding",
+        "severity": "HIGH"
+      },
+      "expected": "rule-010"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "kpg.initialize(512);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f9f5b6a1-6cc4-4382-8d56-611a36ffc7f1",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule012.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.numeric-argument\",\"callName\":\"KeyPairGenerator.initialize\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"512\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "512",
+        "ruleKey": "quantum.arq-q-0150-java",
+        "ruleName": "RSA KeySize",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:KeyPairGenerator.initialize:512",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-012"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "kpg.initialize(768);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5d625132-1193-4c8d-99f2-aa3f2786a484",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule013.java",
+        "queryFamily": "java.jca",
+        "rawEvidenceJson": "{\"queryRef\":\"java.jca.numeric-argument\",\"callName\":\"KeyPairGenerator.initialize\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"768\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "768",
+        "ruleKey": "quantum.arq-q-0151-java",
+        "ruleName": "RSA KeySize",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:jca:KeyPairGenerator.initialize:768",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-013"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.keyStorePassword\", \"changeit\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "bf9e4b70-371d-43b6-9e6c-e36adea7c640",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule014.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.keyStorePassword\",\"propertyKey\":\"javax.net.ssl.keyStorePassword\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "javax.net.ssl.keyStorePassword",
+        "ruleKey": "quantum.arq-q-0169-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:javax.net.ssl.keyStorePassword",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-014"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"javax.net.ssl.trustStorePassword\", \"changeit\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "e564049f-1272-4dec-8e08-efc544a532dc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule015.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"javax.net.ssl.trustStorePassword\",\"propertyKey\":\"javax.net.ssl.trustStorePassword\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "javax.net.ssl.trustStorePassword",
+        "ruleKey": "quantum.arq-q-0171-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:javax.net.ssl.trustStorePassword",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-015"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"https.cipherSuites\", \"TLS_RSA_WITH_3DES_EDE_CBC_SHA\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "6faf11ed-f8e4-4c6e-8d5a-98e2601bebbc",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule016.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLS_RSA_WITH_3DES_EDE_CBC_SHA\",\"propertyKey\":\"https.cipherSuites\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+        "ruleKey": "quantum.arq-q-0172-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+        "severity": "HIGH"
+      },
+      "expected": "rule-016"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"https.protocols\", \"TLSv1,TLSv1.1\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "9453c596-0bfa-461e-9413-f2779afb083b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule017.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\",\"propertyKey\":\"https.protocols\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLSv1",
+        "ruleKey": "quantum.arq-q-0173-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:TLSv1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-017"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "System.setProperty(\"jdk.tls.client.protocols\", \"TLSv1,TLSv1.1\");",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "bfa7c274-93b1-4a12-bc5f-fd49029ed725",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule018.java",
+        "queryFamily": "java.system-property-setting",
+        "rawEvidenceJson": "{\"queryRef\":\"java.system-property-setting\",\"callName\":\"System.setProperty\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"TLSv1\",\"propertyKey\":\"jdk.tls.client.protocols\",\"valueSource\":\"literal\"}",
+        "resolutionScope": "SAME_METHOD",
+        "resolvedValue": "TLSv1",
+        "ruleKey": "quantum.arq-q-0174-java",
+        "ruleName": "TLS & Store System Properties",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "java:system:System.setProperty:TLSv1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-018"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-02/keys/rule_001.pem"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-02/keys/rule_002.pem"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-02/keys/rule_003.pem"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule004.java"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule011.java"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 18,
+  "mustFindMatched": 10,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-02/keys/rule_001.pem"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-02/keys/rule_002.pem"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "secrets/quantum-precision-java-8-to-25-02/keys/rule_003.pem"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule004.java"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule006.java"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule007.java"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule011.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 11,
+    "rawFindings": 11
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "kpg.initialize(1024);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8315a563-afef-4352-94ac-b974c7c6737e",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule011.java",
+      "queryFamily": "java.jca",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jca.numeric-argument\",\"callName\":\"KeyPairGenerator.initialize\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"1024\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "1024",
+      "ruleKey": "quantum.arq-q-0067-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jca:KeyPairGenerator.initialize:1024",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-219",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "kpg.initialize(1024);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "8315a563-afef-4352-94ac-b974c7c6737e",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-java-8-to-25-02/src/legacy/Rule011.java",
+      "queryFamily": "java.jca",
+      "rawEvidenceJson": "{\"queryRef\":\"java.jca.numeric-argument\",\"callName\":\"KeyPairGenerator.initialize\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"1024\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "1024",
+      "ruleKey": "quantum.arq-q-0067-java",
+      "ruleName": "Existing Pack",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "java:jca:KeyPairGenerator.initialize:1024",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

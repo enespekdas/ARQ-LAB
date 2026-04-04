@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-04-04T03:19:00.160086100Z",
+  "exportedCount": 1,
+  "format": "json",
+  "items": [
+    {
+      "applicationId": "d09e4246-5fad-46af-89fe-bb4457315864",
+      "applicationKey": "arq-lab-m-v8-cov-218",
+      "applicationName": "quantum-precision-zig-0-1-to-0-15-beta-01",
+      "branchName": "main",
+      "commitSha": "4ecd6a600a39e43d78cffcedc8e89c9b965505e1",
+      "detectionState": "ACTIVE",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "44a2d3f1-a9f4-4815-8ed1-c2d4e10e113e",
+      "findingKind": "INVENTORY",
+      "firstSeenAt": "2026-04-04T03:18:56.530539Z",
+      "lastSeenAt": "2026-04-04T03:18:56.530539Z",
+      "module": "quantum",
+      "occurrenceCount": 1,
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-zig-0-1-to-0-15-beta-01/zig/rule_003.zig",
+      "primaryLineEnd": 5,
+      "primaryLineStart": 5,
+      "projectId": "49032b9e-daad-422d-aae5-f1aa2ca481c9",
+      "projectKey": "arq-lab",
+      "projectName": "ARQ Lab Validation",
+      "resolvedAt": null,
+      "ruleKey": "quantum.arq-q-0760-zig",
+      "ruleName": "Zig std.crypto usage inventory",
+      "scanMode": "HEAD_SNAPSHOT",
+      "severity": "INFO",
+      "status": "IN_PROGRESS",
+      "workflowStatus": "IN_PROGRESS"
+    }
+  ],
+  "limit": 5000,
+  "sortBy": "lastSeenAt",
+  "sortDirection": "DESC",
+  "truncated": false
+}

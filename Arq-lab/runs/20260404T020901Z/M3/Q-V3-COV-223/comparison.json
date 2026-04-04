@@ -1,0 +1,213 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-223\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.46452702702702703,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-223\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-223\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 140,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 550,
+      "tests": 3,
+      "total": 1184,
+      "vendor/generated": 442
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-java-8-to-25-06\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-223.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-java-8-to-25-06\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "18 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-001/pom.xml"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-002/pom.xml"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-003/pom.xml"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-004/pom.xml"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-005/pom.xml"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-006/pom.xml"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-007/pom.xml"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule009.java"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule010.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule014.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule017.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule018.java"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 18,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-001/pom.xml"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-002/pom.xml"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-003/pom.xml"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-004/pom.xml"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-005/pom.xml"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-006/pom.xml"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/module-007/pom.xml"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule008.java"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule009.java"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule010.java"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule011.java"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule012.java"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule013.java"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule014.java"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule015.java"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule016.java"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule017.java"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "services/quantum-precision-java-8-to-25-06/src/legacy/Rule018.java"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 0,
+    "rawFindings": 0
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-223",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

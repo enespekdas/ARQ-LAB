@@ -1,0 +1,479 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-108\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6479057591623036,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-108\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V4-COV-108\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 22,
+      "fixtures": 0,
+      "live business code": 179,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 990,
+      "tests": 3,
+      "total": 1528,
+      "vendor/generated": 309
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-python-d-04\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V4-COV-108.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-coverage-python-d-04\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "18 expected finding(s) were not detected at all; 6 unexpected/noisy finding(s) remained after matching (same-file-different-signal=6)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M4",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_001.py"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_002.py"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_003.py"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_004.py"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_005.py"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_006.py"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_007.py"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_008.py"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_009.py"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_010.py"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_011.py"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_012.py"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_013.py"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "workers/quantum-coverage-python-d-04/module-014/requirements.txt"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_015.py"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_016.py"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_017.py"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_018.py"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 18,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_001.py"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_002.py"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_003.py"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_004.py"
+    },
+    {
+      "expected": "rule-005",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_005.py"
+    },
+    {
+      "expected": "rule-006",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_006.py"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_007.py"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_008.py"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_009.py"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_010.py"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_011.py"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_012.py"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_013.py"
+    },
+    {
+      "expected": "rule-014",
+      "pathContains": "workers/quantum-coverage-python-d-04/module-014/requirements.txt"
+    },
+    {
+      "expected": "rule-015",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_015.py"
+    },
+    {
+      "expected": "rule-016",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_016.py"
+    },
+    {
+      "expected": "rule-017",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_017.py"
+    },
+    {
+      "expected": "rule-018",
+      "pathContains": "workers/quantum-coverage-python-d-04/app/legacy/rule_018.py"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 6,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 6,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 6,
+    "rawFindings": 6
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "0e1accee-a93a-4fcc-8439-e3f7690c63ef",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_004.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "61cca782-7da1-464c-beac-1e7deb268b06",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_005.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "007c81e1-c22a-4eda-9fa6-9b7d038604e8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_006.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "982c4e7b-f4b0-4e2d-a07e-ef539d2ea015",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_007.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "3284a4ff-3c9c-418c-ac72-e6e33dac39eb",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_008.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "187b3dcf-f114-41fc-9f74-eef8aa1e866a",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_009.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V4-COV-108",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "0e1accee-a93a-4fcc-8439-e3f7690c63ef",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_004.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "61cca782-7da1-464c-beac-1e7deb268b06",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_005.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "007c81e1-c22a-4eda-9fa6-9b7d038604e8",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_006.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "982c4e7b-f4b0-4e2d-a07e-ef539d2ea015",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_007.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "3284a4ff-3c9c-418c-ac72-e6e33dac39eb",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_008.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    },
+    {
+      "branchName": "main",
+      "detectionSource": "HYBRID",
+      "evidenceExcerpt": "rsa.newkeys(2048)",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "187b3dcf-f114-41fc-9f74-eef8aa1e866a",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "workers/quantum-coverage-python-d-04/app/legacy/rule_009.py",
+      "queryFamily": "python.rsa-weak-keysize",
+      "rawEvidenceJson": "{\"queryRef\":\"python.rsa-weak-keysize\",\"callName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"2048\",\"fullName\":\"cryptography.hazmat.primitives.asymmetric.rsa.newkeys\",\"keySize\":2048}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "2048",
+      "ruleKey": "quantum.arq-q-0387-python",
+      "ruleName": "python-rsa: weak RSA key size (<=2048) generation",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "python:rsa:cryptography.hazmat.primitives.asymmetric.rsa.newkeys:2048",
+      "severity": "CRITICAL"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

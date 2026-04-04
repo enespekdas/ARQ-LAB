@@ -1,0 +1,147 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-211\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.8051235132662397,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-211\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\Q-V3-COV-211\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 23,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 880,
+      "tests": 3,
+      "total": 1093,
+      "vendor/generated": 127
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-csharp-1-0-to-10-0-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\Q-V3-COV-211.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-csharp-1-0-to-10-0-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 0,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "4 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [],
+  "mayFindReview": [],
+  "milestone": "M3",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule001.cs"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/module-003/Coverage.csproj"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/module-004/Coverage.csproj"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 4,
+  "mustFindMatched": 0,
+  "mustFindMissing": [
+    {
+      "expected": "rule-001",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule001.cs"
+    },
+    {
+      "expected": "rule-002",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule002.cs"
+    },
+    {
+      "expected": "rule-003",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/module-003/Coverage.csproj"
+    },
+    {
+      "expected": "rule-004",
+      "pathContains": "services/quantum-precision-csharp-1-0-to-10-0-01/module-004/Coverage.csproj"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 1,
+    "rawFindings": 1
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SHA1.Create();",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "aadebc8d-d2d7-45d5-a674-cd03b1d6a24c",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule001.cs",
+      "queryFamily": "csharp.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"SHA1.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SHA1\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_CALL\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SHA1",
+      "ruleKey": "quantum.arq-q-0488-csharp",
+      "ruleName": "MD5 / SHA1 usage (critical legacy in modern .NET)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:crypto:SHA1.Create:SHA1",
+      "severity": "HIGH"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "Q-V3-COV-211",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "SHA1.Create();",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "aadebc8d-d2d7-45d5-a674-cd03b1d6a24c",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "services/quantum-precision-csharp-1-0-to-10-0-01/src/legacy/Rule001.cs",
+      "queryFamily": "csharp.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"csharp.crypto.weak-hash-factory\",\"callName\":\"SHA1.Create\",\"resolutionScope\":\"SAME_METHOD\",\"resolvedValue\":\"SHA1\",\"language\":\"csharp\",\"bindingKind\":\"DIRECT_CALL\"}",
+      "resolutionScope": "SAME_METHOD",
+      "resolvedValue": "SHA1",
+      "ruleKey": "quantum.arq-q-0488-csharp",
+      "ruleName": "MD5 / SHA1 usage (critical legacy in modern .NET)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "csharp:crypto:SHA1.Create:SHA1",
+      "severity": "HIGH"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

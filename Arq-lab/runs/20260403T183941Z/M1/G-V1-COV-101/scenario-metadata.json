@@ -1,0 +1,47 @@
+{
+  "publishedRepository": {
+    "clone_url": "https://github.com/ARQ-Sec/guardian-coverage-saas.git",
+    "default_branch": "main",
+    "full_name": "ARQ-Sec/guardian-coverage-saas",
+    "html_url": "https://github.com/ARQ-Sec/guardian-coverage-saas",
+    "name": "guardian-coverage-saas",
+    "owner": {
+      "html_url": "https://github.com/ARQ-Sec",
+      "login": "ARQ-Sec"
+    },
+    "private": false,
+    "provider": "github",
+    "visibility": "public"
+  },
+  "repoMetadata": {
+    "builderMetadata": {
+      "generatedRuleCount": 20
+    },
+    "git": {
+      "branches": {
+        "main": "3ef80afe39999b5a06e97372daf5b85abaf36981"
+      },
+      "head": "3ef80afe39999b5a06e97372daf5b85abaf36981",
+      "timeline": [
+        {
+          "authorEmail": "lab@arq.local",
+          "authorName": "ARQ Lab",
+          "authoredAt": "2026-04-03T21:41:58+03:00",
+          "message": "bootstrap G-V1-COV-101",
+          "sha": "3ef80afe39999b5a06e97372daf5b85abaf36981"
+        }
+      ]
+    },
+    "lineCount": 6925,
+    "repoName": "guardian-coverage-saas",
+    "scenarioId": "G-V1-COV-101"
+  },
+  "scenario": {
+    "domain": "SaaS integration credential corpus covering provider-specific secrets in runtime configs, deploy files, and CI handoff notes.",
+    "id": "G-V1-COV-101",
+    "milestone": "M1",
+    "module": "guardian",
+    "repo_name": "guardian-coverage-saas",
+    "stack": "Config / IaC / CI credential coverage bundle"
+  }
+}

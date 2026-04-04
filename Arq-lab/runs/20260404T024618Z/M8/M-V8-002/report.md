@@ -1,0 +1,43 @@
+# M-V8-002 - infra-app-mixed-repo
+
+- Milestone: `M8`
+- Module: `both`
+- Verdict: `PASS_CLEAN`
+- Final verdict: `PASS_CLEAN`
+- Verdict class: `PASS_CLEAN`
+- Stack: `App + infra + CI`
+- Domain: Infra-heavy app repository with hotfix and release branch.
+- Dossier: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\reports\generated-project-dossiers\M-V8-002.md`
+- Persisted logs path: `C:\Users\EnesPekdas\Desktop\ARQV2\LAB\Arq-lab\repositories\infra-app-mixed-repo\validation\runnability-logs`
+
+## Scan summary
+- `guardian-head-main`: `SUCCEEDED` on `main`
+- `quantum-head-main`: `SUCCEEDED` on `main`
+- `guardian-ref-history-main`: `SUCCEEDED` on `main`
+- `guardian-all-branches`: `SUCCEEDED` on `n/a`
+
+## Comparison
+- cleanExpectedMatches: `5` / `5`
+- missingExpectedFindings: `0`
+- mustNotFindViolations: `0`
+- unexpectedFindings: `0`
+- sameSurfaceExtraFindings: `0`
+- sameFileDifferentSignalFindings: `0`
+- unexpectedRegexOnlyFindings: `0`
+- mayFindReview: `0`
+- explainabilityFailures: `0`
+- refStateFailures: `0`
+- noiseCount: `0`
+- noiseBreakdown: `none`
+- finalVerdict: `PASS_CLEAN`
+- finalVerdictReason: all expected findings matched cleanly with no unexpected noise
+
+## Normalization
+- rawFindings: `14`
+- normalizedFindings: `6`
+- collapsedDuplicates: `8`
+
+## Runnability
+- build: `passed`
+- test: `passed`
+- smoke: `passed`

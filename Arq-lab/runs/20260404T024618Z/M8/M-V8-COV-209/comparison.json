@@ -1,0 +1,227 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-209\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.7230046948356808,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-209\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-209\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 16,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1065,
+      "vendor/generated": 255
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-perl-5-6-to-5-38-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-209.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-perl-5-6-to-5-38-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 5,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "4 expected finding(s) were not detected at all",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "IO::Socket::SSL SSL_verify_mode => 0",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "5d42010d-b985-4048-b157-4e8d6b31e3d4",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_001.pl",
+        "queryFamily": "perl.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"perl.tls.trust-bypass\",\"callName\":\"IO::Socket::SSL->new\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"verify=0\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "verify=0",
+        "ruleKey": "quantum.arq-q-0859-perl",
+        "ruleName": "TLS Trust Bypass (IO::Socket::SSL verify)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "perl:tls:IO::Socket::SSL->new:verify=0",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SSL_version => 'TLSv1'",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c4bb5fe4-2ead-45a9-a376-bc6cf2d5f14c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_002.pl",
+        "queryFamily": "perl.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"perl.tls.weak-protocol\",\"callName\":\"IO::Socket::SSL->new\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"TLSv1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "TLSv1",
+        "ruleKey": "quantum.arq-q-0860-perl",
+        "ruleName": "TLS Weak protocol forced",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "perl:tls:IO::Socket::SSL->new:TLSv1",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "Digest::MD5",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "a455a90c-4eff-4daf-bbca-7be70a12c28c",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_003.pl",
+        "queryFamily": "perl.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"perl.crypto.weak-hash\",\"callName\":\"Digest::MD5\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"MD5\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0861-perl",
+        "ruleName": "Weak Hash (Digest::MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "perl:crypto:Digest::MD5:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "Digest::SHA1",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "dce6bdc1-1c7a-4ded-bba7-5b56f785d56b",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_004.pl",
+        "queryFamily": "perl.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"perl.crypto.weak-hash\",\"callName\":\"Digest::SHA1\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"SHA1\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0862-perl",
+        "ruleName": "Weak Hash (Digest::SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "perl:crypto:Digest::SHA1:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "Crypt::DES/Crypt::DES_EDE3",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "54b919c3-aa1a-4d80-9cec-cc5bfc485072",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_005.pl",
+        "queryFamily": "perl.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"perl.crypto.weak-cipher\",\"callName\":\"Crypt::CBC->new\",\"resolutionScope\":\"FILE\",\"resolvedValue\":\"DES\"}",
+        "resolutionScope": "FILE",
+        "resolvedValue": "DES",
+        "ruleKey": "quantum.arq-q-0863-perl",
+        "ruleName": "Weak Cipher (DES/3DES)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "perl:crypto:Crypt::CBC->new:DES",
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_006.pl"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "secrets/quantum-precision-perl-5-6-to-5-38-01/keys/rule_007.pem"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "secrets/quantum-precision-perl-5-6-to-5-38-01/keys/rule_008.pem"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_009.pl"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 9,
+  "mustFindMatched": 5,
+  "mustFindMissing": [
+    {
+      "expected": "rule-006",
+      "pathContains": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_006.pl"
+    },
+    {
+      "expected": "rule-007",
+      "pathContains": "secrets/quantum-precision-perl-5-6-to-5-38-01/keys/rule_007.pem"
+    },
+    {
+      "expected": "rule-008",
+      "pathContains": "secrets/quantum-precision-perl-5-6-to-5-38-01/keys/rule_008.pem"
+    },
+    {
+      "expected": "rule-009",
+      "pathContains": "native/quantum-precision-perl-5-6-to-5-38-01/perl/rule_009.pl"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 0,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 0,
+  "normalizationStats": {
+    "collapsedDuplicates": 0,
+    "normalizedFindings": 5,
+    "rawFindings": 5
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-209",
+  "unexpectedFindings": [],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

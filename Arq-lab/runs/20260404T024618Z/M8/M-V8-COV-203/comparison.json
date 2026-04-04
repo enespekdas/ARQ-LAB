@@ -1,0 +1,356 @@
+{
+  "auditArtifacts": {
+    "dossierMissing": false,
+    "dossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-203\\validation\\generated-project-dossier.md",
+    "fillerRatio": 0.6358381502890174,
+    "generatedManifestPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-203\\validation\\generated-file-manifest.json",
+    "generatedTreePath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\generated\\M-V8-COV-203\\validation\\generated-tree.txt",
+    "locComposition": {
+      "docs": 19,
+      "fixtures": 0,
+      "live business code": 0,
+      "live config": 11,
+      "scripts": 2,
+      "synthetic filler / inflation content": 770,
+      "tests": 3,
+      "total": 1211,
+      "vendor/generated": 398
+    },
+    "projectLocalDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-cpp-c-98-to-c-26-01\\validation\\generated-project-dossier.md",
+    "realismJustification": "build/test/smoke contracts execute successfully; synthetic filler is materially visible and pulls realism down",
+    "realismScore": 1,
+    "reportDossierPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\reports\\generated-project-dossiers\\M-V8-COV-203.md",
+    "runnabilityLogRootPath": "C:\\Users\\EnesPekdas\\Desktop\\ARQV2\\LAB\\Arq-lab\\repositories\\quantum-precision-cpp-c-98-to-c-26-01\\validation\\runnability-logs"
+  },
+  "cleanExpectedMatches": 8,
+  "explainabilityFailures": [],
+  "extraFindings": [],
+  "finalVerdict": "FAIL_FN",
+  "finalVerdictReason": "5 expected finding(s) were not detected at all; 1 unexpected/noisy finding(s) remained after matching (same-file-different-signal=1)",
+  "followUpAction": "review findings",
+  "matchedFindings": [
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "SSL_CTX_set_verify(ctx, SSL_VERIFY_NONE, NULL);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "67999ae0-4eb0-4173-a10c-f39cedd03615",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_001.cpp",
+        "queryFamily": "cfamily.tls",
+        "rawEvidenceJson": "{\"queryRef\":\"cfamily.tls.trust-bypass\",\"callName\":\"SSL_CTX_set_verify\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SSL_VERIFY_NONE\",\"language\":\"cpp\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SSL_VERIFY_NONE",
+        "ruleKey": "quantum.arq-q-0207-cpp",
+        "ruleName": "TLS Trust Bypass",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "cfamily:tls:SSL_CTX_set_verify:SSL_VERIFY_NONE",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-001"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "SSLv3_method/TLSv1_method",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "d37f3b65-ea3c-4d8a-a584-105a0ee495e1",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_002.cpp",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0208-cpp",
+        "ruleName": "TLS Weak Protocol",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-002"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "EVP_DigestInit_ex(ctx, EVP_md5(), NULL);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "366ee7a0-dca2-48e9-865f-ac484bd97f31",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_003.cpp",
+        "queryFamily": "cfamily.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.weak-hash\",\"callName\":\"EVP_md5\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"MD5\",\"language\":\"cpp\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "MD5",
+        "ruleKey": "quantum.arq-q-0209-cpp",
+        "ruleName": "Weak Hash (MD5)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "cfamily:crypto:EVP_md5:MD5",
+        "severity": "HIGH"
+      },
+      "expected": "rule-003"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "EVP_DigestInit_ex(ctx, EVP_sha1(), NULL);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "09b1ad01-a9c2-43ce-a49d-9589cc0c7c87",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_004.cpp",
+        "queryFamily": "cfamily.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.weak-hash\",\"callName\":\"EVP_sha1\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"cpp\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "SHA1",
+        "ruleKey": "quantum.arq-q-0210-cpp",
+        "ruleName": "Weak Hash (SHA1)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "cfamily:crypto:EVP_sha1:SHA1",
+        "severity": "MEDIUM"
+      },
+      "expected": "rule-004"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "REGEX",
+        "evidenceExcerpt": "EVP_des_* / EVP_rc4",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "c7b4506c-df87-47b6-9506-7aa1b06bc8a4",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_005.cpp",
+        "queryFamily": null,
+        "rawEvidenceJson": null,
+        "resolutionScope": null,
+        "resolvedValue": null,
+        "ruleKey": "quantum.arq-q-0211-cpp",
+        "ruleName": "Weak Cipher (DES/3DES/RC4)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": null,
+        "severity": "HIGH"
+      },
+      "expected": "rule-005"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "HYBRID",
+        "evidenceExcerpt": "EVP_EncryptInit_ex(ctx, EVP_aes_128_ecb(), NULL, key, NULL);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "f000050c-7fe2-4c77-929b-71b57948dd1d",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_006.cpp",
+        "queryFamily": "cfamily.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.aes-ecb\",\"callName\":\"EVP_aes_ecb\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"ECB\",\"language\":\"cpp\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "ECB",
+        "ruleKey": "quantum.arq-q-0212-cpp",
+        "ruleName": "Insecure Mode (ECB)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "cfamily:crypto:EVP_aes_ecb:ECB",
+        "severity": "HIGH"
+      },
+      "expected": "rule-006"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "RSA_generate_key_ex(rsa, 1024, e, NULL);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "447eea52-6818-47aa-b815-245696cb9b3e",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_007.cpp",
+        "queryFamily": "cfamily.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.rsa-weak-keysize\",\"callName\":\"RSA_generate_key_ex\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1024\",\"language\":\"cpp\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1024",
+        "ruleKey": "quantum.arq-q-0213-cpp",
+        "ruleName": "Legacy RSA Key Size (<=1024)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "cfamily:crypto:RSA_generate_key_ex:1024",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-007"
+    },
+    {
+      "actual": {
+        "branchName": "main",
+        "detectionSource": "AST",
+        "evidenceExcerpt": "PKCS5_PBKDF2_HMAC(\"password\", 8, salt, 4, 1000, EVP_sha1(), 32, out);",
+        "exposureScope": "HEAD_ONLY",
+        "findingId": "b186ddc4-287b-4918-b866-27faa3f38313",
+        "findingKind": "VULNERABILITY",
+        "module": "quantum",
+        "presentInHistory": false,
+        "presentOnHead": true,
+        "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_009.cpp",
+        "queryFamily": "cfamily.crypto",
+        "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.pbkdf2-low-iterations\",\"callName\":\"PKCS5_PBKDF2_HMAC\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"1000\",\"language\":\"cpp\"}",
+        "resolutionScope": "SAME_FUNCTION",
+        "resolvedValue": "1000",
+        "ruleKey": "quantum.arq-q-0218-cpp",
+        "ruleName": "Weak KDF (OpenSSL PKCS5_PBKDF2_HMAC low iterations)",
+        "scanMode": "HEAD_SNAPSHOT",
+        "scanPlanName": "quantum-head",
+        "semanticKey": "cfamily:crypto:PKCS5_PBKDF2_HMAC:1000",
+        "severity": "CRITICAL"
+      },
+      "expected": "rule-009"
+    }
+  ],
+  "mayFindReview": [],
+  "milestone": "M8",
+  "missingExpectedFindings": [
+    {
+      "expected": "rule-008",
+      "pathContains": "secrets/quantum-precision-cpp-c-98-to-c-26-01/keys/rule_008.pem"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "secrets/quantum-precision-cpp-c-98-to-c-26-01/keys/rule_010.pem"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_011.cpp"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-cpp-c-98-to-c-26-01/module-012/CMakeLists.txt"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_013.cpp"
+    }
+  ],
+  "module": "quantum",
+  "mustFindExpected": 13,
+  "mustFindMatched": 8,
+  "mustFindMissing": [
+    {
+      "expected": "rule-008",
+      "pathContains": "secrets/quantum-precision-cpp-c-98-to-c-26-01/keys/rule_008.pem"
+    },
+    {
+      "expected": "rule-010",
+      "pathContains": "secrets/quantum-precision-cpp-c-98-to-c-26-01/keys/rule_010.pem"
+    },
+    {
+      "expected": "rule-011",
+      "pathContains": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_011.cpp"
+    },
+    {
+      "expected": "rule-012",
+      "pathContains": "native/quantum-precision-cpp-c-98-to-c-26-01/module-012/CMakeLists.txt"
+    },
+    {
+      "expected": "rule-013",
+      "pathContains": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_013.cpp"
+    }
+  ],
+  "mustNotFindViolations": [],
+  "noiseBreakdown": {
+    "reviewOnlyFindings": 0,
+    "sameFileDifferentSignalFindings": 1,
+    "sameSurfaceExtraFindings": 0,
+    "totallyUnexpectedFindings": 0,
+    "unexpectedRegexOnlyFindings": 0
+  },
+  "noiseCount": 1,
+  "normalizationStats": {
+    "collapsedDuplicates": 2,
+    "normalizedFindings": 9,
+    "rawFindings": 11
+  },
+  "refStateFailures": [],
+  "runnability": {
+    "build": "passed",
+    "smoke": "passed",
+    "test": "passed"
+  },
+  "safeControlViolations": [],
+  "sameFileDifferentSignalFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "PKCS5_PBKDF2_HMAC(\"password\", 8, salt, 4, 1000, EVP_sha1(), 32, out);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "441a10bd-c734-448f-8dbd-67032a4e5c77",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_009.cpp",
+      "queryFamily": "cfamily.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.weak-hash\",\"callName\":\"EVP_sha1\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"cpp\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "SHA1",
+      "ruleKey": "quantum.arq-q-0210-cpp",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "cfamily:crypto:EVP_sha1:SHA1",
+      "severity": "MEDIUM"
+    }
+  ],
+  "sameSurfaceExtraFindings": [],
+  "scenarioId": "M-V8-COV-203",
+  "unexpectedFindings": [
+    {
+      "branchName": "main",
+      "detectionSource": "AST",
+      "evidenceExcerpt": "PKCS5_PBKDF2_HMAC(\"password\", 8, salt, 4, 1000, EVP_sha1(), 32, out);",
+      "exposureScope": "HEAD_ONLY",
+      "findingId": "441a10bd-c734-448f-8dbd-67032a4e5c77",
+      "findingKind": "VULNERABILITY",
+      "module": "quantum",
+      "presentInHistory": false,
+      "presentOnHead": true,
+      "primaryFilePath": "native/quantum-precision-cpp-c-98-to-c-26-01/cpp/rule_009.cpp",
+      "queryFamily": "cfamily.crypto",
+      "rawEvidenceJson": "{\"queryRef\":\"cfamily.crypto.weak-hash\",\"callName\":\"EVP_sha1\",\"resolutionScope\":\"SAME_FUNCTION\",\"resolvedValue\":\"SHA1\",\"language\":\"cpp\"}",
+      "resolutionScope": "SAME_FUNCTION",
+      "resolvedValue": "SHA1",
+      "ruleKey": "quantum.arq-q-0210-cpp",
+      "ruleName": "Weak Hash (SHA1)",
+      "scanMode": "HEAD_SNAPSHOT",
+      "scanPlanName": "quantum-head",
+      "semanticKey": "cfamily:crypto:EVP_sha1:SHA1",
+      "severity": "MEDIUM"
+    }
+  ],
+  "unexpectedRegexOnlyFindings": [],
+  "verdict": "FAIL_FN",
+  "verdictClass": "FAIL_FN"
+}

@@ -1,0 +1,88 @@
+quantum-precision-javascript-es3-to-es2025-01
+|-- .github
+|   `-- workflows
+|       `-- deploy.yml
+|-- apps
+|   `-- quantum-precision-javascript-es3-to-es2025-01
+|       |-- module-015
+|       |   `-- package.json
+|       |-- module-016
+|       |   `-- package.json
+|       `-- src
+|           `-- legacy
+|               |-- rule_001.js
+|               |-- rule_002.js
+|               |-- rule_003.js
+|               |-- rule_004.js
+|               |-- rule_005.js
+|               |-- rule_006.js
+|               |-- rule_007.js
+|               |-- rule_008.js
+|               |-- rule_009.js
+|               |-- rule_010.js
+|               |-- rule_011.js
+|               |-- rule_013.js
+|               |-- rule_014.js
+|               `-- rule_017.js
+|-- config
+|   `-- runtime
+|       `-- baseline.yaml
+|-- deploy
+|   `-- prod
+|       `-- service.properties
+|-- docs
+|   |-- architecture
+|   |   |-- section-01.md
+|   |   |-- section-02.md
+|   |   |-- section-03.md
+|   |   |-- section-04.md
+|   |   |-- section-05.md
+|   |   `-- section-06.md
+|   `-- coverage-notes.md
+|-- ops
+|   `-- playbooks
+|       |-- runbook-01.md
+|       |-- runbook-02.md
+|       |-- runbook-03.md
+|       |-- runbook-04.md
+|       |-- runbook-05.md
+|       `-- runbook-06.md
+|-- scripts
+|   |-- smoke.ps1
+|   `-- validate_repo.py
+|-- secrets
+|   `-- quantum-precision-javascript-es3-to-es2025-01
+|       `-- keys
+|           `-- rule_012.pem
+|-- sql
+|   `-- reference
+|       |-- reference-01.sql
+|       |-- reference-02.sql
+|       |-- reference-03.sql
+|       |-- reference-04.sql
+|       |-- reference-05.sql
+|       `-- reference-06.sql
+|-- tests
+|   |-- fixtures
+|   |   `-- sample-placeholder.txt
+|   `-- test_validation.py
+|-- validation
+|   |-- runnability-logs
+|   |   |-- build-01.log
+|   |   |-- smoke-01.log
+|   |   `-- test-01.log
+|   |-- branch-plan.yaml
+|   |-- expected-absent.json
+|   |-- expected-findings.json
+|   |-- expected-report.md
+|   |-- generated-file-manifest.json
+|   |-- generated-project-dossier.md
+|   |-- generated-tree.txt
+|   |-- repo-metadata.json
+|   |-- scenario.yaml
+|   `-- smoke.yaml
+|-- vendor
+|   `-- generated-client.txt
+|-- .gitignore
+|-- package.json
+`-- README.md
